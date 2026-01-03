@@ -1,0 +1,56 @@
+[27-Dec-2022 18:00:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE dbwkecfj99piaj.SP_LISTAR_CONTRATOS_CLIENTES_SELECCIONADO_PYMES; expected 3, got 2 in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php:48
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php(48): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(24): Modelo_Contrato_Cliente_Empresarial->listar_contrato_cliente_seleccionado('126', '5', '2022-12-19')
+#2 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(66): Lista_contrato_cliente_seleccionado->mostrar_lista_contrato_cliente_seleccionado()
+#3 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php on line 48
+[27-Dec-2022 18:00:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE dbwkecfj99piaj.SP_LISTAR_CONTRATOS_CLIENTES_SELECCIONADO_PYMES; expected 3, got 2 in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php:48
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php(48): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(24): Modelo_Contrato_Cliente_Empresarial->listar_contrato_cliente_seleccionado('126', '5', '2022-12-19')
+#2 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(66): Lista_contrato_cliente_seleccionado->mostrar_lista_contrato_cliente_seleccionado()
+#3 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php on line 48
+[27-Dec-2022 18:00:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE dbwkecfj99piaj.SP_LISTAR_CONTRATOS_CLIENTES_SELECCIONADO_PYMES; expected 3, got 2 in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php:48
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php(48): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(24): Modelo_Contrato_Cliente_Empresarial->listar_contrato_cliente_seleccionado('126', '5', '2022-12-27')
+#2 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(66): Lista_contrato_cliente_seleccionado->mostrar_lista_contrato_cliente_seleccionado()
+#3 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php on line 48
+[27-Dec-2022 18:02:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE dbwkecfj99piaj.SP_LISTAR_CONTRATOS_CLIENTES_SELECCIONADO_PYMES; expected 3, got 2 in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php:48
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php(48): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(24): Modelo_Contrato_Cliente_Empresarial->listar_contrato_cliente_seleccionado('126', '5', '2022-12-19')
+#2 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(66): Lista_contrato_cliente_seleccionado->mostrar_lista_contrato_cliente_seleccionado()
+#3 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php on line 48
+[27-Dec-2022 20:01:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE dbwkecfj99piaj.SP_LISTAR_CONTRATOS_CLIENTES_SELECCIONADO_PYMES; expected 3, got 2 in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php:48
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php(48): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(24): Modelo_Contrato_Cliente_Empresarial->listar_contrato_cliente_seleccionado('126', '5', '2022-12-27')
+#2 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(66): Lista_contrato_cliente_seleccionado->mostrar_lista_contrato_cliente_seleccionado()
+#3 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php on line 48
+[27-Dec-2022 20:01:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE dbwkecfj99piaj.SP_LISTAR_CONTRATOS_CLIENTES_SELECCIONADO_PYMES; expected 3, got 2 in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php:48
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php(48): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(24): Modelo_Contrato_Cliente_Empresarial->listar_contrato_cliente_seleccionado('126', '5', '2022-12-27')
+#2 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(66): Lista_contrato_cliente_seleccionado->mostrar_lista_contrato_cliente_seleccionado()
+#3 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php on line 48
+[27-Dec-2022 20:03:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE dbwkecfj99piaj.SP_LISTAR_CONTRATOS_CLIENTES_SELECCIONADO_PYMES; expected 3, got 2 in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php:48
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php(48): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(24): Modelo_Contrato_Cliente_Empresarial->listar_contrato_cliente_seleccionado('126', '5', '2022-12-27')
+#2 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(66): Lista_contrato_cliente_seleccionado->mostrar_lista_contrato_cliente_seleccionado()
+#3 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php on line 48
+[27-Dec-2022 20:05:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE dbwkecfj99piaj.SP_LISTAR_CONTRATOS_CLIENTES_SELECCIONADO_PYMES; expected 3, got 2 in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php:48
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php(48): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(24): Modelo_Contrato_Cliente_Empresarial->listar_contrato_cliente_seleccionado('126', '5', '2022-12-27')
+#2 /home/customer/www/crm.mqpseguros.com/public_html/controller/contratos-clientes-empresariales/controlador_contrato_cliente_asistencia_medica_individual_listar_seleccionar.php(66): Lista_contrato_cliente_seleccionado->mostrar_lista_contrato_cliente_seleccionado()
+#3 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_contrato_cliente_empresarial.php on line 48

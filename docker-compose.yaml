@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  apache-php:
+    image: php:7.4-apache
+    container_name: apache-php74
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./html:/var/www/html
+    restart: unless-stopped

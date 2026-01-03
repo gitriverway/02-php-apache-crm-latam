@@ -1,0 +1,12 @@
+[09-Aug-2022 15:05:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE dbhxkqugusobnn.SP_UNICO_PROVEEDOR does not exist in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_proveedor.php:113
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_proveedor.php(113): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/proveedores/controlador_traerdatos_proveedor.php(7): Modelo_Proveedor->TraerDatosProveedor('1')
+#2 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_proveedor.php on line 113
+[09-Aug-2022 15:05:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE dbhxkqugusobnn.SP_UNICO_PROVEEDOR does not exist in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_proveedor.php:113
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_proveedor.php(113): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/proveedores/controlador_traerdatos_proveedor.php(7): Modelo_Proveedor->TraerDatosProveedor('1')
+#2 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_proveedor.php on line 113

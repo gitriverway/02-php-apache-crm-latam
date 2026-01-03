@@ -1,0 +1,40 @@
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="small-box color-palette" style="background-color: #fcb7af;">
+        <div class="inner">
+            <h3 id="contadorContratoTransportePymes1" class="contadorContratoTransportePymes">0</h3>
+            <p>Transporte</p>
+        </div>
+        <div class="icon">
+            <i class="fa fa-truck"></i>
+        </div>
+        <a class="small-box-footer" href="#" data-toggle="modal" data-target="#modal-transporte-pymes">
+            Más info <i class="fa fa-bars"></i>
+        </a>
+
+        <div class="modal fade" id="modal-transporte-pymes">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Transporte</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <?php
+                            include "transporte-pymes/caja-emision.php";
+                            if ($_SESSION["S_ROL"] == 'GERENTE') {
+                                include "transporte-pymes/caja-siniestro.php";
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </div>
+</div>

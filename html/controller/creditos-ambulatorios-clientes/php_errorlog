@@ -1,0 +1,7 @@
+[30-Aug-2022 14:19:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE dbhxkqugusobnn.SP_LISTAR_CREDITOS_AMBULATORIOS_ASISTENCIA_MEDICA does not exist in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_credito_ambulatorio_cliente.php:20
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_credito_ambulatorio_cliente.php(20): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/creditos-ambulatorios-clientes/controlador_credito_ambulatorio_asistencia_medica_individual_listar.php(19): Modelo_Credito_Ambulatorio_Cliente->listar_credito_ambulatorio_asistencia_medica('3')
+#2 /home/customer/www/crm.mqpseguros.com/public_html/controller/creditos-ambulatorios-clientes/controlador_credito_ambulatorio_asistencia_medica_individual_listar.php(134): Lista_credito_ambulatorio_cliente->mostrar_lista_credito_ambulatorio_cliente()
+#3 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_credito_ambulatorio_cliente.php on line 20

@@ -1,0 +1,16 @@
+<?php
+
+require '../../model/modelo_contador.php';
+
+class ControladorContadorCreditoAmbulatorioAsistenciaMedica{
+
+	static public function traer_contador_creditos_ambulatorios_asistencia_medica(){
+
+    $MU = new Modelo_Contador();
+    $consulta = $MU->listar_contador_creditos_ambulatorios_asistencia_medica_empresarial();
+    echo json_encode($consulta);
+	}
+}
+
+$fecha_actual = new ControladorContadorCreditoAmbulatorioAsistenciaMedica();
+$fecha_actual -> traer_contador_creditos_ambulatorios_asistencia_medica();

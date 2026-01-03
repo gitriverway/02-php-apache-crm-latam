@@ -1,0 +1,30 @@
+[28-Aug-2022 23:49:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categorias.categoria_tipo' in 'field list' in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php:19
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php(19): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/categorias/controlador_combo_categoria_empresarial_listar.php(9): Modelo_Categoria->listar_combo_categoria('E')
+#2 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php on line 19
+[29-Aug-2022 20:40:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categorias.categoria_tipo' in 'field list' in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php:19
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php(19): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/categorias/controlador_combo_categoria_individual_listar.php(9): Modelo_Categoria->listar_combo_categoria('I')
+#2 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php on line 19
+[29-Aug-2022 20:47:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categorias.categoria_tipo' in 'field list' in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php:19
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php(19): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/categorias/controlador_combo_categoria_individual_listar.php(9): Modelo_Categoria->listar_combo_categoria('I')
+#2 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php on line 19
+[29-Aug-2022 20:47:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categorias.categoria_tipo' in 'field list' in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php:19
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php(19): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/categorias/controlador_combo_categoria_individual_listar.php(9): Modelo_Categoria->listar_combo_categoria('I')
+#2 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php on line 19
+[29-Aug-2022 20:47:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categorias.categoria_tipo' in 'field list' in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php:19
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php(19): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/categorias/controlador_combo_categoria_individual_listar.php(9): Modelo_Categoria->listar_combo_categoria('I')
+#2 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_categoria.php on line 19

@@ -1,0 +1,28 @@
+[27-Dec-2022 20:09:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE dbwkecfj99piaj.SP_LISTAR_DEPENDIENTES_ASISTENCIA_MEDICA_PYMES; expected 2, got 1 in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_bayer_persona_empresarial.php:481
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_bayer_persona_empresarial.php(481): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/bayer-persona-empresarial/controlador_combo_dependientes_listar.php(14): Modelo_Bayer_Persona_Empresarial->listar_dependientes_asistencia_medica('408', '133')
+#2 /home/customer/www/crm.mqpseguros.com/public_html/controller/bayer-persona-empresarial/controlador_combo_dependientes_listar.php(29): Lista_dependientes->mostrar_lista_dependientes()
+#3 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_bayer_persona_empresarial.php on line 481
+[27-Dec-2022 20:09:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE dbwkecfj99piaj.SP_LISTAR_DEPENDIENTES_ASISTENCIA_MEDICA_PYMES; expected 2, got 1 in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_bayer_persona_empresarial.php:481
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_bayer_persona_empresarial.php(481): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/bayer-persona-empresarial/controlador_combo_dependientes_listar.php(14): Modelo_Bayer_Persona_Empresarial->listar_dependientes_asistencia_medica('408', '133')
+#2 /home/customer/www/crm.mqpseguros.com/public_html/controller/bayer-persona-empresarial/controlador_combo_dependientes_listar.php(29): Lista_dependientes->mostrar_lista_dependientes()
+#3 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_bayer_persona_empresarial.php on line 481
+[27-Dec-2022 20:11:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE dbwkecfj99piaj.SP_LISTAR_DEPENDIENTES_ASISTENCIA_MEDICA_PYMES; expected 2, got 1 in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_bayer_persona_empresarial.php:481
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_bayer_persona_empresarial.php(481): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/bayer-persona-empresarial/controlador_combo_dependientes_listar.php(14): Modelo_Bayer_Persona_Empresarial->listar_dependientes_asistencia_medica('408', '133')
+#2 /home/customer/www/crm.mqpseguros.com/public_html/controller/bayer-persona-empresarial/controlador_combo_dependientes_listar.php(29): Lista_dependientes->mostrar_lista_dependientes()
+#3 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_bayer_persona_empresarial.php on line 481
+[27-Dec-2022 20:12:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE dbwkecfj99piaj.SP_LISTAR_DEPENDIENTES_ASISTENCIA_MEDICA_PYMES; expected 2, got 1 in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_bayer_persona_empresarial.php:481
+Stack trace:
+#0 /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_bayer_persona_empresarial.php(481): PDOStatement->execute()
+#1 /home/customer/www/crm.mqpseguros.com/public_html/controller/bayer-persona-empresarial/controlador_combo_dependientes_listar.php(14): Modelo_Bayer_Persona_Empresarial->listar_dependientes_asistencia_medica('408', '133')
+#2 /home/customer/www/crm.mqpseguros.com/public_html/controller/bayer-persona-empresarial/controlador_combo_dependientes_listar.php(29): Lista_dependientes->mostrar_lista_dependientes()
+#3 {main}
+  thrown in /home/customer/www/crm.mqpseguros.com/public_html/model/modelo_bayer_persona_empresarial.php on line 481
