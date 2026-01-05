@@ -157,8 +157,7 @@
     "observaciones": "OBSERVACIONES",
     "fecha_seguimiento_observacion_adicional": "FECHA SEGUIMIENTO OBSERVACION ADICIONAL",
     "observaciones_adicionales_seguimiento": "OBSERVACIONES ADICIONALES SEGUIMIENTO"
-  }
-},
+  },
   "datatable": {
     "select": {
       "cells": {

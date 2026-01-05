@@ -23,11 +23,10 @@ class conexionBD
 
         try {
 
-            $pdo = new PDO("mysql:host=$host;port=$puerto;dbname=$dbname;", $usuario, $contrasena);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $pdo->exec("set names utf8");
-            $this->pdo = $pdo;
-            return $pdo;
+            $this->pdo = new PDO("mysql:host=$host;port=$puerto;dbname=$dbname;", $usuario, $contrasena);
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->pdo->exec("set names utf8");
+            return $this->pdo;
         } catch (PDOException $e) {
             echo 'La conexión ha fallado';
         }
