@@ -144,20 +144,6 @@
                             <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="" class="nav-link">
-                                    <i class="fa fa-heart nav-icon"></i>
-                                    <p>Vida Individual<i class="fas fa-angle-left right"></i></p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="clientes-vida-individual" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Emisiones y Renovaciones</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link">
                                     <i class="fa fa-medkit nav-icon"></i>
                                     <p>Asistencia Medica<i class="fas fa-angle-left right"></i></p>
                                 </a>
@@ -188,76 +174,6 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link">
-                                    <i class="fa fa-car nav-icon"></i>
-                                    <p>Vehiculos<i class="fas fa-angle-left right"></i></p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="clientes-vehiculo-individual" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Emisiones y Renovaciones</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="siniestros-vehiculo-individual" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Siniestros</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link">
-                                    <i class="fa fa-plus-square nav-icon"></i>
-                                    <p>Accidentes Personales<i class="fas fa-angle-left right"></i></p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="clientes-accidentes-personales-individual" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Emisiones y Renovaciones</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link">
-                                    <i class="fa fa-home nav-icon"></i>
-                                    <p>Hogares<i class="fas fa-angle-left right"></i></p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="clientes-hogar-individual" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Emisiones y Renovaciones</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="siniestros-hogar-individual" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Siniestros</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link">
-                                    <i class="fa fa-plus-square nav-icon"></i>
-                                    <p>Responsabilidad Civil<i class="fas fa-angle-left right"></i></p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="clientes-responsabilidad-civil-individual" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Emisiones y Renovaciones</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-
                         </ul>
                             </li>
 
@@ -270,21 +186,6 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                        
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <i class="fa fa-heart nav-icon"></i>
-                                        <p>Vida Colectiva<i class="fas fa-angle-left right"></i></p>
-                                    </a>
-                                    <ul class="nav nav-treeview">
-                                        <li class="nav-item">
-                                            <a href="clientes-vida-individual-empresarial" class="nav-link">
-                                                <i class="far fa-circle nav-icon"></i>
-                                                <p>Emisiones y Renovaciones</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
                                 <li class="nav-item">
                                     <a href="" class="nav-link">
                                         <i class="fa fa-medkit nav-icon"></i>
@@ -316,45 +217,10 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </li>
-                                <li class="nav-item">
-                                <a href="" class="nav-link">
-                                    <i class="fa fa-plus-square nav-icon"></i>
-                                    <p>Accidentes Personales<i class="fas fa-angle-left right"></i></p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="clientes-accidentes-personales-individual-empresarial" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Emisiones y Renovaciones</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link">
-                                    <i class="fa fa-plus-square nav-icon"></i>
-                                    <p>Responsabilidad Civil<i class="fas fa-angle-left right"></i></p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="clientes-responsabilidad-civil-empresarial" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Emisiones y Renovaciones</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            
+                                </li>                            
                         </ul>
                         </li>
 
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="descragr_respaldo_bayer_persona()">
-                            <i class="fa fa-plus-square nav-icon"></i>
-                            <p>Respaldo Bayer Persona</p>
-                        </a>
                     </li>';
                 ?>
