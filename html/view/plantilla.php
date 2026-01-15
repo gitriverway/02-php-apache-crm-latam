@@ -26,7 +26,7 @@ $htmlLang = isset($langMap[$currentLang]) ? $langMap[$currentLang] : 'en';
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MQP Seguros | CRM</title>
 
-  <link rel="icon" type="image/png" href="https://mqpseguros.com/vistas/img/favicon.ico">
+  <link rel="icon" type="image/png" href="https://mqpseguros.com/vistas/img/riverway-solutions.ico">
 
   <!--=====================================
   PLUGINS DE CSS
