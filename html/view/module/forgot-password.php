@@ -12,6 +12,10 @@ if (!isset($_SESSION['S_IDIOMA'])) {
 <div class="login-box">
     <div class="card card-outline card-primary" id="card-forgot-password">
         <div class="card-header text-center">
+            <a href="" class="h1"><img src="view/dist/img/riverway-solutions.png" alt="Riverway Solutions"
+                    style="width: 150px; height: auto;"></a>
+        </div>
+        <div class="card-header text-center">
             <a href="" class="h1"><b><?php echo $t('common.recover_password'); ?></b></a>
         </div>
         <div class="card-body">
