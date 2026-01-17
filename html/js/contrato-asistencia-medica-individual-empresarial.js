@@ -58,8 +58,8 @@ function listar_contrato_cliente(){
         $($(nRow).find("td")[12]).css('text-align', 'center' );
         $($(nRow).find("td")[13]).css('text-align', 'center' );
        },
-       "language":idioma_espanol
-   } );
+       "language": translations.datatable || {}
+    } );
 }
 
 $("#tabla-contrato-cliente").on("click", ".btnVerDocumento", function(){

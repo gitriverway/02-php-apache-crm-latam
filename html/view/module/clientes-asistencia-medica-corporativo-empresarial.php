@@ -1,15 +1,19 @@
 <?php
 
-if($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE"){
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
 
-echo '<script>
+if ($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE") {
+
+    echo '<script>
 
   window.location = "inicio";
 
 </script>';
 
-return;
-
+    return;
 }
 
 ?>
@@ -20,13 +24,14 @@ return;
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Emisiones Asistencia Medica Corporativo
-                    </h1>
+                    <h1><?php echo $t("common.emisions_medical_assistance_pymes"); ?></h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
-                        <li class="breadcrumb-item active">Emisiones Asistencia Medica Corporativo</li>
+                        <li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
+                        <li class="breadcrumb-item active"><?php echo $t("common.emisions_medical_assistance_pymes"); ?>
+                            </h1>
+                        </li>
                     </ol>
                 </div>
             </div>
@@ -44,18 +49,22 @@ return;
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-                            <th style="text-align:center; width:10px">Origen</th>
-                            <th style="text-align:center; width:10px">Acci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Estado</th>
-                            <th style="text-align:center; width:10px">Fecha Vigencia</th>
-                            <th style="text-align:center; width:10px">Fecha Aniversario</th>
-                            <th style="text-align:center; width:10px">Titular</th>
-                            <th style="text-align:center; width:10px">Cédula</th>
-                            <th style="text-align:center; width:10px">Provincia</th>
-                            <th style="text-align:center; width:10px">Telefono</th>
-                            <th style="text-align:center; width:10px">Proveedor/Planes</th>
-                            <th style="text-align:center; width:10px">Vendedor</th>
-                            <th style="text-align:center; width:10px">Fecha Seguimiento</th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.origin'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.action'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.status'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.effective_date'); ?>
+                            </th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.anniversary_date'); ?>
+                            </th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.holder'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.id_card'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.province'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.phone'); ?></th>
+                            <th style="text-align:center; width:10px">
+                                <?php echo $t('list_tables.provider'); ?>/<?php echo $t('list_tables.branch'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.seller'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.follow_up_date'); ?>
+                            </th>
                         </tr>
                     </thead>
                 </table>
@@ -89,9 +98,9 @@ MODAL ASIGNAR VENDEDOR
                         <thead>
                             <tr>
                                 <th style="text-align:center; width:10px">#</th>
-                                <th style="text-align:center; width:10px">Vendedor</th>
-                                <th style="text-align:center; width:10px">Cargo</th>
-                                <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                                <th style="text-align:center; width:10px"><?php echo $t('list_tables.seller'); ?></th>
+                                <th style="text-align:center; width:10px"><?php echo $t('list_tables.cargo'); ?></th>
+                                <th style="text-align:center; width:10px"><?php echo $t('list_tables.action'); ?></th>
                             </tr>
                         </thead>
                     </table>
@@ -121,10 +130,11 @@ MODAL LISTAR CONTRATOS
                         <thead>
                             <tr>
                                 <th style="text-align:center; width:10px">#</th>
-                                <th style="text-align:center; width:10px">Documento</th>
-                                <th style="text-align:center; width:10px">Fecha Registro</th>
-                                <th style="text-align:center; width:10px">Estado</th>
-                                <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                                <th style="text-align:center; width:10px"><?php echo $t('list_tables.document'); ?></th>
+                                <th style="text-align:center; width:10px">
+                                    <?php echo $t('list_tables.registration_date'); ?></th>
+                                <th style="text-align:center; width:10px"> <?php echo $t('list_tables.status'); ?> </th>
+                                <th style="text-align:center; width:10px"><?php echo $t('list_tables.action'); ?></th>
                             </tr>
                         </thead>
                     </table>
@@ -134,10 +144,10 @@ MODAL LISTAR CONTRATOS
     </div>
 </div>
 
-<script src="js/clientes-asistencia-medica-corporativo-empresarial.js?rev=<?php echo time();?>"></script>
+<script src="js/clientes-asistencia-medica-corporativo-empresarial.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_cliente_pymes();
-    listar_vendedores();
-});
+    $(document).ready(function() {
+        listar_cliente_pymes();
+        listar_vendedores();
+    });
 </script>

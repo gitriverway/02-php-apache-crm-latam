@@ -1,15 +1,14 @@
 <?php
 
-if($_SESSION["S_ROL"] != "ADMINISTRADOR"){
+if ($_SESSION["S_ROL"] != "ADMINISTRADOR") {
 
-  echo '<script>
+    echo '<script>
 
     window.location = "inicio";
 
   </script>';
 
-  return;
-
+    return;
 }
 
 ?>
@@ -17,11 +16,11 @@ if($_SESSION["S_ROL"] != "ADMINISTRADOR"){
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-    <div class="container-fluid">
+        <div class="container-fluid">
             <div class="row mb-2">
                 <?php
                 require_once __DIR__ . '/../../model/modelo_idioma.php';
-                $t = function($key) {
+                $t = function ($key) {
                     return Modelo_Idioma::t($key);
                 };
                 ?>
@@ -42,26 +41,26 @@ if($_SESSION["S_ROL"] != "ADMINISTRADOR"){
     <section class="content">
 
 
-    <!-- Default box -->
-    <div class="card">
+        <!-- Default box -->
+        <div class="card">
             <div class="card-header">
                 <h3 class="card-title"><?php echo $t('messages.welcome_employee_content'); ?></h3>
                 <div class="card-tools pull-right">
-                <button class="btn btn-primary" style="width:100%" onclick="AbrirModalRegistro()"><i
+                    <button class="btn btn-primary" style="width:100%" onclick="AbrirModalRegistro()"><i
                             class="fa fa-plus"><b>&nbsp;<?php echo $t('messages.new_record'); ?>
                         </i></b></button>
                 </div>
             </div>
             <div class="card-body">
-            <table id="tabla_empleado" class="table table-bordered table-striped dt-responsive" style="width:100%">
+                <table id="tabla_empleado" class="table table-bordered table-striped dt-responsive" style="width:100%">
                     <thead>
                         <tr>
                             <th style="width:10px">#</th>
-                            <th style="text-align:center">Nombre</th>
-                            <th style="text-align:center">Direcci&oacute;n</th>
-                            <th style="text-align:center">Provincia</th>
-                            <th style="text-align:center">Estado</th>
-                            <th style="text-align:center">Acciones</th>
+                            <th style="text-align:center"><?php echo $t('messages.name'); ?></th>
+                            <th style="text-align:center"><?php echo $t('messages.direction'); ?></th>
+                            <th style="text-align:center"><?php echo $t('messages.province'); ?></th>
+                            <th style="text-align:center"><?php echo $t('messages.status'); ?></th>
+                            <th style="text-align:center"><?php echo $t('messages.actions'); ?></th>
                         </tr>
                     </thead>
                 </table>
@@ -84,18 +83,18 @@ MODAL REGISTRO USUARIO
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
 
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">Registro De Empleado</h5>
+                    <h5 class="modal-title"><?php echo $t('messages.employee_registration'); ?></h5>
                 </div>
                 <div class="modal-body">
                     <div class="box-body">
                         <!-- ENTRADA PARA EL NOMBRE DE EMPLEADO -->
                         <div class="form-group">
-                            <label for="txt_nombre_empleado" class="control-label" style="text-align: right;">NOMBRE
+                            <label for="txt_nombre_empleado" class="control-label" style="text-align: right;"><?php echo $t('messages.name'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control validarNumerosLetras" id="txt_nombre_empleado"
-                                    placeholder="INGRESAR NOMBRES" maxlength="100" autocomplete="off"
+                                    placeholder="<?php echo $t('form.enter_name'); ?>" maxlength="100" autocomplete="off"
                                     style="text-transform: uppercase">
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>
@@ -103,12 +102,12 @@ MODAL REGISTRO USUARIO
 
                         <!-- ENTRADA PARA EL APELLIDO DE EMPLEADO -->
                         <div class="form-group">
-                            <label for="txt_apellido_empleado" class="control-label" style="text-align: right;">APELLIDO
+                            <label for="txt_apellido_empleado" class="control-label" style="text-align: right;"><?php echo $t('messages.last_name'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control validarNumerosLetras" id="txt_apellido_empleado"
-                                    placeholder="INGRESAR APELLIDOS" maxlength="100" autocomplete="off"
+                                    placeholder="<?php echo $t('form.enter_name'); ?>" maxlength="100" autocomplete="off"
                                     style="text-transform: uppercase">
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>
@@ -116,7 +115,7 @@ MODAL REGISTRO USUARIO
 
                         <!-- ENTRADA PARA SELECCIONAR PROVINCIA -->
                         <div class="form-group">
-                            <label for="cbm_provincia" class="control-label" style="text-align: right;">PROVINCIA
+                            <label for="cbm_provincia" class="control-label" style="text-align: right;"><?php echo $t('messages.province'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -126,21 +125,21 @@ MODAL REGISTRO USUARIO
                             </div>
                         </div>
 
-                        <!-- ENTRADA PARA DIRECCION -->
+                        <!-- ENTRADA PARA <?php echo strtoupper($t('messages.direction')); ?> -->
                         <div class="form-group">
-                            <label for="txt_direccion_empleado" class="control-label" style="text-align: right;">DIRECCI&Oacute;N
+                            <label for="txt_direccion_empleado" class="control-label" style="text-align: right;"><?php echo strtoupper($t('messages.direction')); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
                                 <textarea class="form-control validarNumerosLetrasDecimal" id="txt_direccion_empleado" name="txt_direccion_empleado"
-                            cols="20" rows="3" placeholder="Ingresar Dirección"></textarea>
+                                    cols="20" rows="3" placeholder="Ingresar Dirección"></textarea>
                                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                <button class="btn btn-info pull-left" onclick="Registrar_Empleado()"><i
+                    <button class="btn btn-info pull-left" onclick="Registrar_Empleado()"><i
                             class="fa fa-save"><b>&nbsp;REGISTRAR</b></i></button>
                     <button type="button" class="btn btn-default" data-dismiss="modal"><i
                             class="fa fa-times"><b>&nbsp;CERRAR</b></i></button>
@@ -163,7 +162,7 @@ MODAL EDITAR EMPLEADO
 CABEZA DEL MODAL
 ======================================-->
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h4 class="modal-title"><b>Editar Datos Del Empleado</b></h4>
+                    <h4 class="modal-title"><b><?php echo $t('messages.edit_employee_data'); ?></b></h4>
                 </div>
                 <!--=====================================
 CUERPO DEL MODAL
@@ -178,7 +177,7 @@ CUERPO DEL MODAL
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control validarNumerosLetras" id="txt_nombre_editar"
-                                    placeholder="INGRESAR NOMBRE" autocomplete="off" style="text-transform: uppercase">
+                                    placeholder="<?php echo $t('form.enter_name'); ?>" autocomplete="off" style="text-transform: uppercase">
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>
                         </div>
@@ -190,7 +189,7 @@ CUERPO DEL MODAL
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control validarNumerosLetras" id="txt_apellido_editar"
-                                    placeholder="INGRESAR APELLIDO" autocomplete="off" style="text-transform: uppercase">
+                                    placeholder="<?php echo $t('form.enter_name'); ?>" autocomplete="off" style="text-transform: uppercase">
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>
                         </div>
@@ -214,7 +213,7 @@ CUERPO DEL MODAL
                             </label>
                             <div class="input-group">
                                 <textarea class="form-control validarNumerosLetrasDecimal" id="txt_direccion_empleado_editar" name="txt_direccion_empleado_editar"
-                            cols="20" rows="3" placeholder="Ingresar Dirección"></textarea>
+                                    cols="20" rows="3" placeholder="<?php echo $t('messages.enter_direction'); ?>"></textarea>
                                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                             </div>
                         </div>
@@ -232,14 +231,14 @@ CUERPO DEL MODAL
     </div>
 </form>
 
-<script src="js/validaciones.js?rev=<?php echo time();?>"></script>
-<script src="js/empleado.js?rev=<?php echo time();?>"></script>
+<script src="js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script src="js/empleado.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_empleado();
-    listar_combo_provincia();
-    $("#modal_registro").on('shown.bs.modal', function() {
-        $("#txt_nombre_empleado").focus();
+    $(document).ready(function() {
+        listar_empleado();
+        listar_combo_provincia();
+        $("#modal_registro").on('shown.bs.modal', function() {
+            $("#txt_nombre_empleado").focus();
+        });
     });
-});
 </script>

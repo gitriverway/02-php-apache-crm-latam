@@ -1,3 +1,11 @@
+// Helper function para traducciones en JavaScript
+function t(key, defaultValue) {
+  if (typeof translations !== 'undefined' && translations.form && translations.form[key]) {
+    return translations.form[key];
+  }
+  return defaultValue || key;
+}
+
 // function lista1(){
 
 //     $.ajax({
@@ -101,7 +109,7 @@ function listar_cliente() {
         $($(nRow).find("td")[i]).css("text-align", "center");
       }
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 
@@ -123,9 +131,9 @@ function listar_vendedores() {
     fnRowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
       $($(nRow).find("td")[1]).css("text-align", "center");
       $($(nRow).find("td")[2]).css("text-align", "center");
-    },
-    language: idioma_espanol,
-  });
+     },
+     language: translations.datatable || {},
+   });
 }
 
 var table_documentos;
@@ -151,9 +159,9 @@ function listar_documentos(idCliente) {
       $($(nRow).find("td")[2]).css("text-align", "center");
       $($(nRow).find("td")[3]).css("text-align", "center");
       $($(nRow).find("td")[4]).css("text-align", "center");
-    },
-    language: idioma_espanol,
-  });
+     },
+     language: translations.datatable || {},
+   });
 }
 /*********************************
  ABRI MODAL LISTAR CONTRATOS
@@ -517,7 +525,7 @@ $(".listaAdicional").on("click", "button.btnAgregarDependiente", function () {
         numProspecto +
         '" name="nombreFamiliar' +
         numProspecto +
-        '" placeholder="INGRESE NOMBRE" autocomplete="off" style="text-transform: uppercase"></input>' +
+          ' placeholder="' + t('enter_name', 'INGRESE NOMBRE') + '" autocomplete="off" style="text-transform: uppercase"></input>' +
         "</div>" +
         "</div>" +
         "<!-- Genero -->" +
@@ -576,7 +584,7 @@ $(".listaAdicional").on("click", "button.btnAgregarDependiente", function () {
         numProspecto +
         '" name="deducibleFamiliar' +
         numProspecto +
-        '" placeholder="INGRESE DEDUCIBLE" autocomplete="off" value = "0"></input>' +
+        ' placeholder="' + t('enter_deductible', 'INGRESE DEDUCIBLE') + '" autocomplete="off" value = "0"></input>' +
         "</div>" +
         "</div>" +
         "<!-- Acciones -->" +
@@ -2028,7 +2036,7 @@ function agregar_auto_familiares(idValor) {
           numProspecto +
           '" name="nombreFamiliar' +
           numProspecto +
-          '" placeholder="INGRESE NOMBRE" autocomplete="off" style="text-transform: uppercase"></input>' +
+        ' placeholder="' + t('enter_name', 'INGRESE NOMBRE') + '" autocomplete="off" style="text-transform: uppercase"></input>' +
           "</div>" +
           "</div>" +
           "<!-- Genero -->" +
@@ -2677,9 +2685,9 @@ function listar_clientes_para_seleccionar() {
       $($(nRow).find("td")[1]).css("text-align", "center");
       $($(nRow).find("td")[2]).css("text-align", "center");
       $($(nRow).find("td")[3]).css("text-align", "center");
-    },
-    language: idioma_espanol,
-  });
+     },
+     language: translations.datatable || {},
+   });
 }
 
 $("#tabla_lista_clientes").on("click", ".btnSeleccionarCliente", function () {
@@ -2780,9 +2788,9 @@ function listar_empleados_para_seleccionar() {
       $($(nRow).find("td")[0]).css("text-align", "center");
       $($(nRow).find("td")[1]).css("text-align", "center");
       $($(nRow).find("td")[2]).css("text-align", "center");
-    },
-    language: idioma_espanol,
-  });
+     },
+     language: translations.datatable || {},
+   });
 }
 
 $("#tabla_lista_empleados").on("click", ".btnSeleccionarEmpleado", function () {

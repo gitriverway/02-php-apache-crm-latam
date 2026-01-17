@@ -176,7 +176,7 @@ MODAL EDITAR USUARIO
 CABEZA DEL MODAL
 ======================================-->
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">Editar Datos Del Usuario</h5>
+                    <h5 class="modal-title"><?php echo $t('messages.edit_user_data'); ?></h5>
                 </div>
                 <!--=====================================
 CUERPO DEL MODAL
@@ -190,7 +190,7 @@ CUERPO DEL MODAL
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
-                                <input type="text" class="form-control validarNumerosLetras" id="txtusu_editar" placeholder="INGRESAR USUARIO" autocomplete="off" style="text-transform: uppercase" disabled>
+                                <input type="text" class="form-control validarNumerosLetras" id="txtusu_editar" placeholder="<?php echo $t('messages.enter_user', 'INGRESAR USUARIO'); ?>" autocomplete="off" style="text-transform: uppercase" disabled>
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>
                         </div>

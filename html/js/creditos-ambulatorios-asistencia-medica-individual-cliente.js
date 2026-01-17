@@ -97,7 +97,7 @@ function listar_creditos_ambulatorios_cliente_asistencia_medica_individual() {
       $($(nRow).find("td")[9]).css("text-align", "center");
       $($(nRow).find("td")[10]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 
@@ -162,7 +162,7 @@ function listar_contratos_para_seleccionar() {
       $($(nRow).find("td")[3]).css("text-align", "center");
       $($(nRow).find("td")[4]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 

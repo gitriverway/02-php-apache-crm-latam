@@ -1,13 +1,19 @@
+<?php
+require_once __DIR__ . '/../../../../../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+?>
 <div class="col-6">
     <div class=" small-box" style="background-color: #fdfd96;">
         <div class="inner">
             <h3 id="contadorContratoVehiculos2" class="contadorContratoVehiculos">0</h3>
-            <p>Emisiones</p>
+            <p><?php echo $t('common.emisions'); ?></p>
         </div>
         <div class="icon">
             <i class="fa fa-car"></i>
         </div>
-        <a href="clientes-vehiculo-individual" class="small-box-footer">Más
+        <a href="clientes-vehiculo-individual" class="small-box-footer"><?php echo $t('common.more_info'); ?>
             info <i class="fas fa-arrow-circle-right"></i></a>
     </div>
 </div>

@@ -1,3 +1,11 @@
+// Helper function para traducciones en JavaScript
+function t(key, defaultValue) {
+  if (typeof translations !== 'undefined' && translations.form && translations.form[key]) {
+    return translations.form[key];
+  }
+  return defaultValue || key;
+}
+
 // function lista1(){
 
 //     $.ajax({
@@ -110,7 +118,7 @@ function listar_cliente_pymes() {
       $($(nRow).find("td")[11]).css("text-align", "center");
       $($(nRow).find("td")[12]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 
@@ -133,7 +141,7 @@ function listar_vendedores() {
       $($(nRow).find("td")[1]).css("text-align", "center");
       $($(nRow).find("td")[2]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 
@@ -161,7 +169,7 @@ function listar_documentos(idCliente) {
       $($(nRow).find("td")[3]).css("text-align", "center");
       $($(nRow).find("td")[4]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 /*********************************
@@ -485,7 +493,7 @@ $(".btnAgregarColaborador").click(function () {
       numProspecto +
       '" name="nombreColaborador' +
       numProspecto +
-      '" placeholder="INGRESE NOMBRE" autocomplete="off" style="text-transform: uppercase"></input>' +
+      ' placeholder="' + t('enter_name', 'INGRESE NOMBRE') + '" autocomplete="off" style="text-transform: uppercase"></input>' +
       "</div>" +
       "</div>" +
       "<!-- Genero -->" +
@@ -675,7 +683,7 @@ function auto_agregar_familiares_dependientes(lista) {
         numSubProspecto +
         '" name="nombreFamiliar' +
         numSubProspecto +
-        '" placeholder="INGRESE NOMBRE" autocomplete="off" style="text-transform: uppercase" value = "' +
+          ' placeholder="' + t('enter_name', 'INGRESE NOMBRE') + '" autocomplete="off" style="text-transform: uppercase" value = "' +
         data[i]["nombre"] +
         '"></input>' +
         "</div>" +
@@ -732,7 +740,7 @@ function auto_agregar_familiares_dependientes(lista) {
         numSubProspecto +
         '" name="deducibleFamiliar' +
         numSubProspecto +
-        '" placeholder="INGRESE DEDUCIBLE" autocomplete="off"></input>' +
+        ' placeholder="' + t('enter_deductible', 'INGRESE DEDUCIBLE') + '" autocomplete="off"></input>' +
         "</div>" +
         "</div>" +
         "<!-- Eliminar -->" +
@@ -825,7 +833,7 @@ $("#modalListarDependientesColaborador").on(
         numSubProspecto +
         '" name="nombreFamiliar' +
         numSubProspecto +
-        '" placeholder="INGRESE NOMBRE" autocomplete="off" style="text-transform: uppercase"></input>' +
+      ' placeholder="' + t('enter_name', 'INGRESE NOMBRE') + '" autocomplete="off" style="text-transform: uppercase"></input>' +
         "</div>" +
         "</div>" +
         "<!-- Genero -->" +
@@ -878,7 +886,7 @@ $("#modalListarDependientesColaborador").on(
         numSubProspecto +
         '" name="deducibleFamiliar' +
         numSubProspecto +
-        '" placeholder="INGRESE DEDUCIBLE" autocomplete="off" value = "0"></input>' +
+      ' placeholder="' + t('enter_deductible', 'INGRESE DEDUCIBLE') + '" autocomplete="off" value = "0"></input>' +
         "</div>" +
         "</div>" +
         "<!-- Eliminar -->" +
@@ -1454,7 +1462,7 @@ function agregar_auto_Colaboradores() {
           numProspecto +
           '" name="nombreColaborador' +
           numProspecto +
-          '" placeholder="INGRESE NOMBRE" autocomplete="off" style="text-transform: uppercase" value = "' +
+        ' placeholder="' + t('enter_name', 'INGRESE NOMBRE') + '" autocomplete="off" style="text-transform: uppercase" value = "' +
           data[i]["nombre"] +
           '"></input>' +
           "</div>" +
@@ -2059,7 +2067,7 @@ function listar_clientes_para_seleccionar() {
       $($(nRow).find("td")[2]).css("text-align", "center");
       $($(nRow).find("td")[3]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 

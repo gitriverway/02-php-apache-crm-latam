@@ -2,12 +2,12 @@
     <div class=" small-box" style="background-color: #77dd77;">
         <div class="inner">
             <h3 id="contadorReembolsosPymes">0</h3>
-            <p>Reembolsos</p>
+            <p><?php echo $t('common.reimbursements'); ?></p>
         </div>
         <div class="icon">
             <i class="ion ion-stats-bars"></i>
         </div>
-        <a href="reembolsos-asistencia-medica-individual-empresarial" class="small-box-footer">Más info <i
-                class="fas fa-arrow-circle-right"></i></a>
+        <a href="reembolsos-asistencia-medica-individual-empresarial"
+            class="small-box-footer"><?php echo $t('common.more_info'); ?> <i class="fas fa-arrow-circle-right"></i></a>
     </div>
 </div>

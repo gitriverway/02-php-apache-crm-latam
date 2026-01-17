@@ -47,7 +47,7 @@ function listar_contrato_cliente() {
         $($(nRow).find("td")[i]).css("text-align", "center");
       }
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 

@@ -1,7 +1,13 @@
+<?php
+require_once __DIR__ . '/../../../../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+?>
 <div class="col-12">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Seguros de Asistencia Medica Pymes</h3>
+            <h3 class="card-title"><?php echo $t('common.medical_assistance_pymes'); ?></h3>
         </div>
         <div class="card-body">
             <div class="row">
@@ -12,12 +18,14 @@
                             <div class="inner">
                                 <h3 id="contadorContratosClienteAsistenciaMedicaPymes" style="color:black">0</h3>
 
-                                <p style="color:black">Contratos Asistencia Medica Pymes</p>
+                                <p style="color:black"><?php echo $t('common.medical_assistance_contracts_pymes'); ?>
+                                </p>
                             </div>
                             <div class="icon">
                                 <i class="fa fa-medkit"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>
@@ -28,12 +36,13 @@
                             <div class="inner">
                                 <h3 id="contadorFormulariosClienteAsistenciaMedicaPymes" style="color:black">0</h3>
 
-                                <p style="color:black">Formularios Asistencia Medica Pymes</p>
+                                <p style="color:black"><?php echo $t('common.medical_assistance_forms_pymes'); ?></p>
                             </div>
                             <div class="icon">
                                 <i class="fa fa-medkit"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>
@@ -44,12 +53,14 @@
                             <div class="inner">
                                 <h3 id="contadorReembolsosClientes" style="color:black">0</h3>
 
-                                <p style="color:black">Reembolsos Asistencia Medica Pymes</p>
+                                <p style="color:black">
+                                    <?php echo $t('common.medical_assistance_reimbursements_pymes'); ?></p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-stats-bars"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>
@@ -60,12 +71,15 @@
                             <div class="inner">
                                 <h3 id="contadorCreditosHospitalariosClientesPymes" style="color:black">0</h3>
 
-                                <p style="color:black">Creditos Hospitalarios Asistencia Medica Pymes</p>
+                                <p style="color:black">
+                                    <?php echo $t('common.hospital_credits_medical_assistance_pymes'); ?>
+                                </p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-stats-bars"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>
@@ -77,12 +91,15 @@
                             <div class="inner">
                                 <h3 id="contadorCreditosAmbulatoriosClientesPymes" style="color:black">0</h3>
 
-                                <p style="color:black">Creditos Ambulatorios Asistencia Medica Pymes</p>
+                                <p style="color:black">
+                                    <?php echo $t('common.outpatient_credits_medical_assistance_pymes'); ?>
+                                </p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-stats-bars"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>

@@ -1,3 +1,11 @@
+// Helper function para traducciones en JavaScript
+function t(key, defaultValue) {
+  if (typeof translations !== 'undefined' && translations.form && translations.form[key]) {
+    return translations.form[key];
+  }
+  return defaultValue || key;
+}
+
 // function lista1(){
 
 //     $.ajax({
@@ -101,7 +109,7 @@ function listar_cliente_pymes() {
         $($(nRow).find("td")[i]).css("text-align", "center");
       }
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 
@@ -124,7 +132,7 @@ function listar_vendedores() {
       $($(nRow).find("td")[1]).css("text-align", "center");
       $($(nRow).find("td")[2]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 
@@ -152,7 +160,7 @@ function listar_documentos(idCliente) {
       $($(nRow).find("td")[3]).css("text-align", "center");
       $($(nRow).find("td")[4]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 /*********************************
@@ -3113,7 +3121,7 @@ function listar_clientes_para_seleccionar() {
       $($(nRow).find("td")[2]).css("text-align", "center");
       $($(nRow).find("td")[3]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 
@@ -3204,7 +3212,7 @@ function listar_empleados_para_seleccionar() {
       $($(nRow).find("td")[1]).css("text-align", "center");
       $($(nRow).find("td")[2]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 

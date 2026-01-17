@@ -1,7 +1,13 @@
+<?php
+require_once __DIR__ . '/../../../../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+?>
 <div class="col-12">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Seguros de Incendios</h3>
+            <h3 class="card-title"><?php echo $t('common.fire_insurance'); ?></h3>
         </div>
         <div class="card-body">
             <div class="row">
@@ -12,12 +18,13 @@
                             <div class="inner">
                                 <h3 id="contadorContratosClienteIncendiosPymes" style="color:black">0</h3>
 
-                                <p style="color:black">Contratos Incendios Pymes</p>
+                                <p style="color:black"><?php echo $t('common.fire_insurance_contracts_pymes'); ?></p>
                             </div>
                             <div class="icon">
                                 <i class="fa fa-home"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>
@@ -27,12 +34,13 @@
                         <div class="inner">
                             <h3 id="contadorFormulariosClienteIncendiosPymes" style="color:black">0</h3>
 
-                            <p style="color:black">Formularios Incendios Pymes</p>
+                            <p style="color:black"><?php echo $t('common.fire_insurance_forms_pymes'); ?></p>
                         </div>
                         <div class="icon">
                             <i class="fa fa-home"></i>
                         </div>
-                        <a href="documento-incendios-pymes" class="small-box-footer">Más info <i
+                        <a href="documento-incendios-pymes"
+                            class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
@@ -43,12 +51,13 @@
                             <div class="inner">
                                 <h3 id="contadorSiniestrosIncendiosPymes" style="color:black">0</h3>
 
-                                <p style="color:black">Siniestros Incendios Pymes</p>
+                                <p style="color:black"><?php echo $t('common.fire_insurance_claims_pymes'); ?></p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-stats-bars"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>

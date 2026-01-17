@@ -1,7 +1,13 @@
+<?php
+require_once __DIR__ . '/../../../../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+?>
 <div class="col-12">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Seguros de Accidentes Personales</h3>
+            <h3 class="card-title"><?php echo $t('common.personal_accidents'); ?></h3>
         </div>
         <div class="card-body">
             <div class="row">
@@ -12,12 +18,13 @@
                             <div class="inner">
                                 <h3 id="contadorContratosClienteAccidentesPersonales" style="color:black">0</h3>
 
-                                <p style="color:black">Contratos Accidentes Personales</p>
+                                <p style="color:black"><?php echo $t('common.personal_accident_contracts'); ?></p>
                             </div>
                             <div class="icon">
                                 <i class="fa fa-plus-square"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>

@@ -1,7 +1,13 @@
+<?php
+require_once __DIR__ . '/../../../../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+?>
 <div class="col-12">
     <div class="card">
         <div class="card-header" style="background-color: #007bff; color:#fff">
-            <h3 class="card-title">Seguros de Vehiculo</h3>
+            <h3 class="card-title"><?php echo $t('common.vehicles'); ?></h3>
         </div>
         <div class="card-body">
             <div class="row">
@@ -12,12 +18,13 @@
                             <div class="inner">
                                 <h3 id="contadorContratosClienteVehiculo" style="color:black">0</h3>
 
-                                <p style="color:black">Contratos Vehiculo</p>
+                                <p style="color:black"><?php echo $t('common.vehicle_contracts'); ?> </p>
                             </div>
                             <div class="icon">
                                 <i class="fa fa-car"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>
@@ -28,12 +35,13 @@
                             <div class="inner">
                                 <h3 id="contadorFormulariosClienteVehiculo" style="color:black">0</h3>
 
-                                <p style="color:black">Formularios Vehiculo</p>
+                                <p style="color:black"><?php echo $t('common.vehicle_forms'); ?></p>
                             </div>
                             <div class="icon">
                                 <i class="fa fa-car"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>
@@ -44,12 +52,13 @@
                             <div class="inner">
                                 <h3 id="contadorSiniestrosClienteVehiculo" style="color:black">0</h3>
 
-                                <p style="color:black">Reportar Siniestros</p>
+                                <p style="color:black"><?php echo $t('common.report_vehicle_accidents'); ?></p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-stats-bars"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>

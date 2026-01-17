@@ -12,6 +12,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
 }
 
 ?>
+<link rel="stylesheet" href="../css/table-responsive.css">
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -20,7 +21,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
             <div class="row mb-2">
                 <?php
                 require_once __DIR__ . '/../../model/modelo_idioma.php';
-                $t = function($key) {
+                $t = function ($key) {
                     return Modelo_Idioma::t($key);
                 };
                 ?>
@@ -46,19 +47,16 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
             <div class="card-body">
                 <table id="tabla_asignacion" class="table table-bordered table-striped">
                     <thead>
-                        <?php
+                        <?php if ($_SESSION["S_ROL"] === "GERENTE") : ?>
+                            <tr>
+                                <th colspan="18">
+                                    <button style="width:100%" id="btnListaVendedor" class="form-control btn btn-primary">
+                                        <?= $t('messages.assign'); ?>
+                                    </button>
+                                </th>
+                            </tr>
+                        <?php endif; ?>
 
-                        if ($_SESSION["S_ROL"] == "GERENTE") {
-
-                            echo '<tr>
-                            <th colspan="18">
-                                <button style="width:100%" id="btnListaVendedor"
-                                    class="form-control btn btn-primary"><?php echo $t('messages.assign'); ?></button>
-                            </th>
-                        </tr>';
-                        }
-
-                        ?>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
                             <th style="text-align:center; width:10px">Acci&oacute;n</th>
@@ -67,24 +65,25 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                     <!-- <input class="form-check-input chkSeleccionarTodoAsignar"
                                         id="chkSeleccionarTodoAsignar" name="chkSeleccionarTodoAsignar"
                                         type="checkbox"> -->
-                                    <label class="form-check-label">Seleccionar Todo</label>
+                                    <label class="form-check-label"><?php echo $t('messages.select_all'); ?></label>
                                 </div>
                             </th>
-                            <th style="text-align:center; width:10px">Estado Bayer</th>
-                            <th style="text-align:center; width:10px">Vendedor</th>
-                            <th style="text-align:center; width:10px">Prospecto</th>
-                            <th style="text-align:center; width:10px">Chat</th>
-                            <th style="text-align:center; width:10px">Cédula</th>
-                            <th style="text-align:center; width:150px">Ramos</th>
-                            <th style="text-align:center; width:150px">Productos</th>
-                            <th style="text-align:center; width:10px">Provincia</th>
-                            <th style="text-align:center; width:10px">Telefono</th>
-                            <th style="text-align:center; width:10px">Proveedor</th>
-                            <th style="text-align:center; width:10px">Planes</th>
-                            <th style="text-align:center; width:10px">Origen</th>
-                            <th style="text-align:center; width:10px">Año</th>
-                            <th style="text-align:center; width:10px">Mes</th>
-                            <th style="text-align:center; width:10px">F.Registro</th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.bayer_status'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.seller'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.prospect'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.chat'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.id_card_table'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.branches'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.products'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.province_table'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.phone_table'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.provider_table'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.plans'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.origin_table'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.year'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.month_table'); ?></th>
+                            <th style="text-align:center; width:10px">
+                                <?php echo $t('messages.registration_date_table'); ?></th>
                         </tr>
                     </thead>
                 </table>
@@ -106,7 +105,7 @@ MODAL ASIGNAR VENDEDOR
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
 
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">Lista de Vendedores</h5>
+                    <h5 class="modal-title"><?php echo $t('messages.seller_list'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -117,9 +116,9 @@ MODAL ASIGNAR VENDEDOR
                         <thead>
                             <tr>
                                 <th style="width:10px">#</th>
-                                <th>Vendedor</th>
-                                <th>Cargo</th>
-                                <th>Acci&oacute;n</th>
+                                <th><?php echo $t('messages.seller'); ?></th>
+                                <th><?php echo $t('messages.position'); ?></th>
+                                <th><?php echo $t('messages.action_table'); ?></th>
                             </tr>
                         </thead>
                     </table>
@@ -136,7 +135,7 @@ MODAL LISTAR CHAT PROSPECTO WEB
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Chat Web</h4>
+                <h4 class="modal-title"><?php echo $t('messages.web_chat'); ?></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

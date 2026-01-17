@@ -88,18 +88,26 @@
         <?php
         require_once __DIR__ . '/../../model/modelo_idioma.php';
         $currentLang = Modelo_Idioma::getCurrentLanguage();
+        $t = function ($key) {
+            return Modelo_Idioma::t($key);
+        };
         ?>
         <li class="nav-item">
-            <select id="selector_idioma" class="form-control form-control-sm" style="margin-top: 5px; width: auto; display: inline-block;">
-                <option value="en" <?php echo $currentLang == 'en' ? 'selected' : ''; ?>>🇺🇸 English</option>
-                <option value="es" <?php echo $currentLang == 'es' ? 'selected' : ''; ?>>🇪🇸 Español</option>
-                <option value="pt-BR" <?php echo $currentLang == 'pt-BR' ? 'selected' : ''; ?>>🇧🇷 Português</option>
+            <select id="selector_idioma" class="form-control form-control-sm"
+                style="margin-top: 5px; width: auto; display: inline-block;">
+                <option value="en" <?php echo $currentLang == 'en' ? 'selected' : ''; ?>>🇺🇸
+                    <?php echo $t('common.english'); ?></option>
+                <option value="es" <?php echo $currentLang == 'es' ? 'selected' : ''; ?>>🇪🇸
+                    <?php echo $t('common.spanish'); ?></option>
+                <option value="pt-BR" <?php echo $currentLang == 'pt-BR' ? 'selected' : ''; ?>>🇧🇷
+                    <?php echo $t('common.portuguese'); ?></option>
             </select>
         </li>
 
         <li class="nav-item dropdown user-menu">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                <img src="view/dist/img/avatar5.png" class="user-image img-circle elevation-2" alt="User Image">
+                <img src="view/dist/img/avatar5.png" class="user-image img-circle elevation-2"
+                    alt="<?php echo $t('common.user_image'); ?>">
                 <span class="d-none d-md-inline">
                     <?php
                     if ($_SESSION['S_EMPLEADO'] == null) {
@@ -125,15 +133,10 @@
                     </p>
                 </li>
                 <!-- Menu Footer-->
-                <?php
-                require_once __DIR__ . '/../../model/modelo_idioma.php';
-                $t = function($key) {
-                    return Modelo_Idioma::t($key);
-                };
-                ?>
                 <li class="user-footer">
                     <a href="perfil" class="btn btn-default btn-flat"><b><?php echo $t('common.profile'); ?></b></a>
-                    <a href="salir" class="btn btn-default btn-flat float-right"><b><?php echo $t('common.close_session'); ?></b></a>
+                    <a href="salir"
+                        class="btn btn-default btn-flat float-right"><b><?php echo $t('common.close_session'); ?></b></a>
                 </li>
             </ul>
         </li>

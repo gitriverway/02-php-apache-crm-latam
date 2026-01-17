@@ -15,6 +15,10 @@ switch ($_SESSION["S_ROL"]) {
         break;
 }
 
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
 ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -75,10 +79,10 @@ switch ($_SESSION["S_ROL"]) {
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen">
                                         <option value="">Seleccione...</option>
-                                        <option value="MQP">MQP</option>
-                                        <option value="AMIGO">AMIGO</option>
-                                        <option value="CHAT">CHAT</option>
-                                        <option value="OTROS">OTROS</option>
+                                        <option value="MQP"><?php echo $t('list_tables.origin_mqp'); ?></option>
+                                        <option value="AMIGO"><?php echo $t('list_tables.origin_friend'); ?></option>
+                                        <option value="CHAT"><?php echo $t('list_tables.origin_chat'); ?></option>
+                                        <option value="OTROS"><?php echo $t('list_tables.origin_others'); ?></option>
                                     </select>
                                 </div>
                             </div>
@@ -130,7 +134,7 @@ switch ($_SESSION["S_ROL"]) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_valor_asegurado" placeholder="INGRESOS VALOR ASEGURADO" min="0"
+                                            id="txt_valor_asegurado" placeholder="<?php echo $t('form.enter_sum_insured'); ?> min=" 0"
                                             maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
@@ -148,7 +152,7 @@ switch ($_SESSION["S_ROL"]) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_prima_neta" placeholder="INGRESOS PRIMA NETA" min="0" maxlength="30"
+                                            id="txt_prima_neta" placeholder="<?php echo $t('form.enter_net_premium'); ?>" min="0" maxlength="30"
                                             autocomplete="off">
                                     </div>
                                 </div>
@@ -165,7 +169,7 @@ switch ($_SESSION["S_ROL"]) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_prima_comisionable" placeholder="INGRESOS PRIMA COMISIONABLE"
+                                            id="txt_prima_comisionable" placeholder="<?php echo $t('form.enter_commissionable_premium'); ?>"
                                             min="0" maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
@@ -182,7 +186,7 @@ switch ($_SESSION["S_ROL"]) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_prima_total" placeholder="INGRESOS PRIMA TOTAL" min="0"
+                                            id="txt_prima_total" placeholder="<?php echo $t('form.enter_total_premium'); ?> min=" 0"
                                             maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
@@ -240,7 +244,7 @@ switch ($_SESSION["S_ROL"]) {
                                     </label>
                                     <div class="input-group">
                                         <input type="text" class="form-control validarNumerosLetras" id="txt_documento"
-                                            placeholder="INGRESAR CEDULA/RUC" autocomplete="off"
+                                            placeholder="<?php echo $t('form.enter_id_card'); ?>" autocomplete="off"
                                             style="text-transform: uppercase">
                                         <input type="hidden" id="txt_idCliente">
                                         <!-- <div class="input-group-append">
@@ -257,7 +261,7 @@ switch ($_SESSION["S_ROL"]) {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_nombre"
-                                        placeholder="INGRESE NOMBRE" maxlength="50" autocomplete="off"
+                                        placeholder="<?php echo $t('form.enter_name'); ?>" maxlength="50" autocomplete="off"
                                         style="text-transform: uppercase">
                                 </div>
                             </div>
@@ -320,7 +324,7 @@ switch ($_SESSION["S_ROL"]) {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetrasDecimal" id="txt_email"
-                                        placeholder="INGRESE EMAIL" maxlength="50" autocomplete="off">
+                                        placeholder="<?php echo $t('form.enter_email'); ?>" maxlength="50" autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -330,7 +334,7 @@ switch ($_SESSION["S_ROL"]) {
                                         style="text-align: right;">EMAIL (OPCIONAL)
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetrasDecimal"
-                                        id="txt_email_opcional" placeholder="INGRESE EMAIL" maxlength="50"
+                                        id="txt_email_opcional" placeholder="<?php echo $t('form.enter_email'); ?>" maxlength="50"
                                         autocomplete="off">
                                 </div>
                             </div>
@@ -341,7 +345,7 @@ switch ($_SESSION["S_ROL"]) {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_telefono"
-                                        placeholder="INGRESE TELEFONO" maxlength="50" autocomplete="off">
+                                        placeholder="<?php echo $t('form.enter_phone'); ?>" maxlength="50" autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -351,7 +355,7 @@ switch ($_SESSION["S_ROL"]) {
                                         style="text-align: right;">TELEFONO(OPCIONAL)
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras"
-                                        id="txt_telefono_opcional" placeholder="INGRESE TELEFONO" maxlength="50"
+                                        id="txt_telefono_opcional" placeholder="<?php echo $t('form.enter_phone'); ?>" maxlength="50"
                                         autocomplete="off">
                                 </div>
                             </div>
@@ -371,7 +375,7 @@ switch ($_SESSION["S_ROL"]) {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
-                                        placeholder="INGRESE CIUDAD" maxlength="100" autocomplete="off">
+                                        placeholder="<?php echo $t('form.enter_city'); ?>" maxlength="100" autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12">
@@ -382,7 +386,7 @@ switch ($_SESSION["S_ROL"]) {
                                         DOMICILIO<font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_direccion"
-                                        placeholder="INGRESE DIRECCION" autocomplete="off"
+                                        placeholder="<?php echo $t('form.enter_address'); ?>" autocomplete="off"
                                         style="text-transform: uppercase">
                                 </div>
                             </div>
@@ -394,7 +398,7 @@ switch ($_SESSION["S_ROL"]) {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ocupacion"
-                                        placeholder="INGRESE OCUPACI&Oacute;N" maxlength="50" autocomplete="off"
+                                        placeholder="<?php echo $t('form.enter_occupation'); ?>" maxlength="50" autocomplete="off"
                                         style="text-transform: uppercase">
                                 </div>
                             </div>
@@ -651,10 +655,10 @@ switch ($_SESSION["S_ROL"]) {
                         </label>
                         <textarea class="form-control validarNumerosLetrasDecimal" id="txt_observacion"
                             name="txt_observacion" cols="20" rows="5"
-                            placeholder="Ingresar Observaci&oacute;n"></textarea>
+                            placeholder="<?php echo $t('messages.enter_observation'); ?>></textarea>
                     </div>
                 </div>
-                <div class="modal-footer">
+                <div class=" modal-footer">
                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
                     <button type="submit" class="btn btn-primary" onclick="agregarNuevaObservacion()">AGREGAR</button>

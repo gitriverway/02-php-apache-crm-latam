@@ -75,7 +75,7 @@ $t = function($key) {
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen"
                                         <?php echo $retVal = ($_SESSION["S_ROL"] == "VENDEDOR") ? "disabled" : ""; ?>>
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
                                         <option value="MQP">MQP</option>
                                         <option value="AMIGO">AMIGO</option>
                                         <option value="CHAT">CHAT</option>
@@ -215,7 +215,7 @@ $t = function($key) {
                                         PAGO</label>
                                     <select class="form-control cbm_tipo_pago" name="state" id="cbm_tipo_pago"
                                         style="width:100%;">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
                                         <option value="MENSUAL">MENSUAL</option>
                                         <option value="TRIMESTRAL">TRIMESTRAL</option>
                                         <option value="SEMESTRAL">SEMESTRAL</option>
@@ -231,7 +231,7 @@ $t = function($key) {
                                         PAGO</label>
                                     <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                         style="width:100%;">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
                                         <option value="DEBITO BANCARIO">DEBITO BANCARIO</option>
                                         <option value="TRANSFERENCIA BANCARIO">TRANSFERENCIA BANCARIO</option>
                                         <option value="TARJETA DE CREDITO">TARJETA DE CREDITO</option>
@@ -275,7 +275,7 @@ $t = function($key) {
                                     <label for="txt_nombre" class="control-label" style="text-align: right;">NOMBRE
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_nombre"
-                                        placeholder="INGRESE NOMBRE" maxlength="50" autocomplete="off"
+                                        placeholder="<?php echo $t('form.enter_name'); ?>" maxlength="50" autocomplete="off"
                                         style="text-transform: uppercase">
                                 </div>
                             </div>
@@ -285,7 +285,7 @@ $t = function($key) {
                                     <label class="control-label" style="text-align: right;">GENERO
                                     </label>
                                     <select id="genero" name="genero" class="form-control genero" required>
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
                                         <option value="masculino">Masculino</option>
                                         <option value="femenino">Femenino</option>
                                     </select>
@@ -299,7 +299,7 @@ $t = function($key) {
                                         </font>
                                     </label>
                                     <select id="estado_civil" name="estado_civil" class="form-control" required>
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
                                         <option value="SOLTERO">SOLTERO/A</option>
                                         <option value="CASADO">CASADO/A</option>
                                         <option value="DIVORCIADO">DIVORCIADO/A</option>
@@ -398,7 +398,7 @@ $t = function($key) {
                                     </label>
                                     <select class="form-control cbm_ingreso_mensual" name="state"
                                         id="cbm_ingreso_mensual" style="width:100%;">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
                                         <option value="0 a 1000">0 a 1000</option>
                                         <option value="1000 a 3000">1000 a 3000</option>
                                         <option value="3000 a 5000">3000 a 5000</option>
@@ -511,7 +511,7 @@ $t = function($key) {
                                             </label>
                                             <select class="form-control cbm_estado_bayer" name="state"
                                                 id="cbm_estado_bayer" style="width:100%;">
-                                                <option value="">Seleccione...</option>
+                                                <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
                                                 <option value="ABIERTO">ABIERTO</option>
                                                 <!-- <option value="NO CONTESTA">NO CONTESTA</option> -->
                                                 <option value="NO INTERESADO">NO INTERESADO</option>

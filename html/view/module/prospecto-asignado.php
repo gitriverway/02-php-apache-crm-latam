@@ -61,7 +61,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             echo '<tr>
                             <th colspan="19">
                                 <button style="width:100%" id="btnListaVendedor"
-                                    class="form-control btn btn-primary">Asignar</button>
+                                    class="form-control btn btn-primary">' . $t('messages.assign') . '</button>
                             </th>
                         </tr>';
                         }
@@ -73,25 +73,25 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <th style="text-align:center; width:10px">
                                 <div class="form-check">
                                     <!-- <input class="form-check-input chkSeleccionarTodoAsignar" id="chkSeleccionarTodoAsignar" name="chkSeleccionarTodoAsignar" type="checkbox"> -->
-                                    <label class="form-check-label">Seleccionar Todo</label>
+                                    <label class="form-check-label"><?php echo $t('messages.select_all'); ?></label>
                                 </div>
                             </th>
-                            <th style="text-align:center; width:10px">Estado Bayer</th>
-                            <th style="text-align:center; width:10px">Vendedor</th>
-                            <th style="text-align:center; width:10px">Prospecto</th>
-                            <th style="text-align:center; width:10px">Chat</th>
-                            <th style="text-align:center; width:10px">Cédula</th>
-                            <th style="text-align:center; width:10px">Fecha Seguimiento</th>
-                            <th style="text-align:center; width:150px">Ramos</th>
-                            <th style="text-align:center; width:150px">Productos</th>
-                            <th style="text-align:center; width:10px">Provincia</th>
-                            <th style="text-align:center; width:10px">Telefono</th>
-                            <th style="text-align:center; width:10px">Proveedor</th>
-                            <th style="text-align:center; width:10px">Planes</th>
-                            <th style="text-align:center; width:10px">Origen</th>
-                            <th style="text-align:center; width:10px">Año</th>
-                            <th style="text-align:center; width:10px">Mes</th>
-                            <th style="text-align:center; width:10px">Fecha Registro</th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.bayer_status'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.seller'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.prospect'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.chat'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.id_card_table'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.follow_up_date'); ?></th>
+                            <th style="text-align:center; width:150px"><?php echo $t('messages.branches'); ?></th>
+                            <th style="text-align:center; width:150px"><?php echo $t('messages.products'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.province_table'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.phone_table'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.provider_table'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.plans'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.origin_table'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.year'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.month_table'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.registration_date_table'); ?></th>
                         </tr>
                     </thead>
                 </table>
@@ -114,7 +114,7 @@ MODAL ASIGNAR VENDEDOR
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
 
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">Lista de Vendedores</h5>
+                    <h5 class="modal-title"><?php echo $t('messages.seller_list'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -125,9 +125,9 @@ MODAL ASIGNAR VENDEDOR
                         <thead>
                             <tr>
                                 <th style="width:10px">#</th>
-                                <th>Vendedor</th>
-                                <th>Cargo</th>
-                                <th>Acci&oacute;n</th>
+                                <th><?php echo $t('messages.seller'); ?></th>
+                                <th><?php echo $t('messages.position'); ?></th>
+                                <th><?php echo $t('messages.action_table'); ?></th>
                             </tr>
                         </thead>
                     </table>
@@ -147,7 +147,7 @@ MODAL MODIFICAR ESTADO BAYER PERSONA
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
 
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">Modifcar estado Bayer</h5>
+                    <h5 class="modal-title"><?php echo $t('messages.modify_bayer_status'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -156,8 +156,7 @@ MODAL MODIFICAR ESTADO BAYER PERSONA
                     <div class="box-body">
                         <!-- ENTRADA PARA SELECCIONAR EMPLEADO -->
                         <div class="form-group">
-                            <label for="cbm_estado_bayer" class="control-label" style="text-align: right;">ESTADO
-                                BAYER
+                            <label for="cbm_estado_bayer" class="control-label" style="text-align: right;"><?php echo $t('messages.bayer_status_label'); ?>
                             </label>
                             <select class="form-control cbm_estado_bayer js-example-basic-single" name="state"
                                 id="cbm_estado_bayer" style="width:100%;">
@@ -178,9 +177,9 @@ MODAL MODIFICAR ESTADO BAYER PERSONA
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-info pull-left" onclick="Modificar_Estado_Bayer_Cliente()"><i
-                            class="fa fa-save"><b>&nbsp;ACTUALIZAR</b></i></button>
+                            class="fa fa-save"><b>&nbsp;<?php echo $t('messages.update_button'); ?></b></i></button>
                     <button type="button" class="btn btn-default" data-dismiss="modal"><i
-                            class="fa fa-times"><b>&nbsp;CERRAR</b></i></button>
+                            class="fa fa-times"><b>&nbsp;<?php echo $t('messages.close_button'); ?></b></i></button>
                 </div>
             </form>
         </div>
@@ -194,7 +193,7 @@ MODAL LISTAR CHAT PROSPECTO WEB
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Chat Web</h4>
+                <h4 class="modal-title"><?php echo $t('messages.web_chat'); ?></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

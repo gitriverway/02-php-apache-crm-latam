@@ -14,9 +14,9 @@ $currentLang = Modelo_Idioma::getCurrentLanguage();
   <!-- Language Selector -->
   <div style="position: absolute; top: 10px; right: 10px;">
     <select id="selector_idioma_login" class="form-control form-control-sm" style="width: auto;">
-      <option value="en" <?php echo $currentLang == 'en' ? 'selected' : ''; ?>>🇺🇸 English</option>
-      <option value="es" <?php echo $currentLang == 'es' ? 'selected' : ''; ?>>🇪🇸 Español</option>
-      <option value="pt-BR" <?php echo $currentLang == 'pt-BR' ? 'selected' : ''; ?>>🇧🇷 Português</option>
+      <option value="en" <?php echo $currentLang == 'en' ? 'selected' : ''; ?>>🇺🇸 <?php echo $t('common.english'); ?></option>
+      <option value="es" <?php echo $currentLang == 'es' ? 'selected' : ''; ?>>🇪🇸 <?php echo $t('common.spanish'); ?></option>
+      <option value="pt-BR" <?php echo $currentLang == 'pt-BR' ? 'selected' : ''; ?>>🇧🇷 <?php echo $t('common.portuguese'); ?></option>
     </select>
   </div>
   <!-- /.login-logo -->
@@ -67,14 +67,8 @@ $currentLang = Modelo_Idioma::getCurrentLanguage();
   <!-- /.card -->
 </div>
 <!-- /.login-box -->
-<script src=" js/login.js?rev=<?php echo time(); ?>"></script>
+<script src="js/login.js?rev=<?php echo time(); ?>"></script>
 <script>
   $("#usuario").val();
   usuario.focus();
-  
-  // Manejar cambio de idioma en login
-  $('#selector_idioma_login').on('change', function() {
-    var nuevoIdioma = $(this).val();
-    cambiarIdioma(nuevoIdioma);
-  });
 </script>

@@ -97,7 +97,7 @@ function listar_prospecto() {
         $($(nRow).find("td")[i]).css("text-align", "center");
       }
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 
   $("#btnListaVendedor").removeClass("btnListaVendedor");
@@ -123,7 +123,7 @@ function listar_vendedores() {
       $($(nRow).find("td")[1]).css("text-align", "center");
       $($(nRow).find("td")[2]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 
@@ -2534,7 +2534,7 @@ function listar_clientes_para_seleccionar() {
       $($(nRow).find("td")[2]).css("text-align", "center");
       $($(nRow).find("td")[3]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 
@@ -2708,7 +2708,7 @@ function listar_empleados_para_seleccionar() {
       $($(nRow).find("td")[1]).css("text-align", "center");
       $($(nRow).find("td")[2]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 

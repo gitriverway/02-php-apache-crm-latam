@@ -104,6 +104,8 @@ class Lista_asignar_cliente
                 $botones =  "<div class='btn-group'><button style='font-size:13px;' type='button' class='btnListaContratos btn btn-success' idCliente='" . $consulta[$i]["bayer_id"] . "'><i class='fa fa-eye'></i></button>&nbsp;<button style='font-size:13px;' type='button' class='btnBayerPersona btn btn-primary' idCliente='" . $consulta[$i]["bayer_id"] . "'><i class='fa fa-edit'></i></button></div>";
 
 
+                $cliente_origen = $consulta[$i]["cliente_origen"] == "MQP" ? "RIVERWAY" : $consulta[$i]["cliente_origen"];
+
                 $anio = $fecha->format("Y");
 
                 $meses = [
@@ -128,7 +130,7 @@ class Lista_asignar_cliente
 
                 $datosJson .= '[
                             "' . $consulta[$i]["posicion"] . '",
-                            "' . $consulta[$i]["cliente_origen"] . '",
+                            "' . $cliente_origen . '",
                             "' . $botones . '",
                             "' . $estado_bayer . '",
                             "' . $consulta[$i]["contrato_fecha_inicio"] . '",

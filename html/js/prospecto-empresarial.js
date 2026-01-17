@@ -101,7 +101,7 @@ function listar_prospecto_empresarial() {
         $($(nRow).find("td")[i]).css("text-align", "center");
       }
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 
   $("#btnListaVendedor").removeClass("btnListaVendedor");
@@ -127,7 +127,7 @@ function listar_vendedores() {
       $($(nRow).find("td")[1]).css("text-align", "center");
       $($(nRow).find("td")[2]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 
@@ -159,9 +159,9 @@ $("#tabla_lista_vendedores").on("click", ".btnAsignarVendedor", function () {
   } else {
     Swal.fire({
       icon: "error",
-      title: "Error al actualizar",
-      text: "¡No hay prospectos seleccionados para asignar vendedor!",
-      confirmButtonText: "¡Cerrar!",
+      title: t('messages.error_updating', 'Error updating'),
+      text: t('messages.no_prospects_selected', 'No prospects selected to assign a seller'),
+      confirmButtonText: t('messages.close', 'Close'),
     });
   }
 });
@@ -587,7 +587,7 @@ function auto_agregar_familiares_dependientes(lista) {
         '" name="tipoFamiliar' +
         numSubProspecto +
         '" required>' +
-        '<option value= "">Seleccione...</option>' +
+        '<option value= "">' + t('messages.select_option', 'Select..') + '</option>' +
         '<option value= "Conyuge">Conyuge</option>' +
         '<option value= "Hijo/a">Hijo/a</option>' +
         '<option value= "Otro">Otro</option>' +
@@ -609,7 +609,7 @@ function auto_agregar_familiares_dependientes(lista) {
         numSubProspecto +
         '" name="nombreFamiliar' +
         numSubProspecto +
-        '" placeholder="INGRESE NOMBRE" autocomplete="off" style="text-transform: uppercase" value = "' +
+        '" placeholder="' + t('form.enter_name', 'ENTER NAME') + '" autocomplete="off" style="text-transform: uppercase" value = "' +
         data[i]["nombre"] +
         '"></input>' +
         "</div>" +
@@ -724,7 +724,7 @@ $("#modalListarDependientesColaborador").on(
         '" name="tipoFamiliar' +
         numSubProspecto +
         '" required>' +
-        '<option value= "">Seleccione...</option>' +
+        '<option value= "">' + t('messages.select_option', 'Select..') + '</option>' +
         '<option value= "Conyuge">Conyuge</option>' +
         '<option value= "Hijo/a">Hijo/a</option>' +
         '<option value= "Otro">Otro</option>' +
@@ -1705,7 +1705,7 @@ function agregar_auto_Colaboradores() {
           numProspecto +
           '" name="nombreColaborador' +
           numProspecto +
-          '" placeholder="INGRESE NOMBRE" autocomplete="off" style="text-transform: uppercase" value = "' +
+          '" placeholder="' + t('form.enter_name', 'ENTER NAME') + '" autocomplete="off" style="text-transform: uppercase" value = "' +
           data[i]["nombre"] +
           '"></input>' +
           "</div>" +
@@ -2193,7 +2193,7 @@ function listar_clientes_para_seleccionar() {
       $($(nRow).find("td")[2]).css("text-align", "center");
       $($(nRow).find("td")[3]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 
@@ -2343,7 +2343,7 @@ function listar_empleados_para_seleccionar() {
       $($(nRow).find("td")[1]).css("text-align", "center");
       $($(nRow).find("td")[2]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 

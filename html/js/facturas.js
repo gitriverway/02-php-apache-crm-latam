@@ -42,7 +42,7 @@ function listar_factura_cliente() {
       $($(nRow).find("td")[7]).css("text-align", "center");
       $($(nRow).find("td")[8]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 /*********************************
@@ -190,18 +190,18 @@ $("#tabla-factura-cliente").on(
     var facturaRuta = $(this).attr("facturaRuta");
 
     Swal.fire({
-      title: "Estas Seguro?",
-      text: "No podrás revertir esto!",
+      title: t('messages.are_you_sure', 'Are you sure?'),
+      text: t('messages.cannot_revert', 'You won\'t be able to revert this!'),
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Si, eliminarlo!",
+      confirmButtonText: t('messages.yes_delete', 'Yes, delete it!'),
     }).then((result) => {
       if (result.isConfirmed) {
         eliminar_factura_cliente(idFactura, facturaRuta);
 
-        Swal.fire("Eliminado!", "La Factura ha sido eliminado.", "success");
+        Swal.fire(t('messages.deleted', 'Deleted!'), t('messages.invoice_deleted', 'The Invoice has been deleted.'), "success");
       }
     });
   }

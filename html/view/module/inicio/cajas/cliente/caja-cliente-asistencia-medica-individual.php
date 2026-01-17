@@ -1,7 +1,13 @@
+<?php
+require_once __DIR__ . '/../../../../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+?>
 <div class="col-12">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Seguros de Asistencia Medica</h3>
+            <h3 class="card-title"><?php echo $t('common.medical_assistance'); ?></h3>
         </div>
         <div class="card-body">
             <div class="row">
@@ -13,12 +19,13 @@
                             <div class="inner">
                                 <h3 id="contadorContratosClienteAsistenciaMedica" style="color:black">0</h3>
 
-                                <p style="color:black">Contratos Asistencia Medica</p>
+                                <p style="color:black"><?php echo $t('common.medical_assistance_contracts'); ?></p>
                             </div>
                             <div class="icon">
                                 <i class="fa fa-medkit"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
 
@@ -30,12 +37,13 @@
                             <div class="inner">
                                 <h3 id="contadorFormulariosClienteAsistenciaMedica" style="color:black">0</h3>
 
-                                <p style="color:black">Formularios Asistencia Medica</p>
+                                <p style="color:black"><?php echo $t('common.medical_assistance_forms'); ?></p>
                             </div>
                             <div class="icon">
                                 <i class="fa fa-medkit"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>
@@ -46,12 +54,13 @@
                             <div class="inner">
                                 <h3 id="contadorReembolsosClientes" style="color:black">0</h3>
 
-                                <p style="color:black">Reembolsos Asistencia Medica</p>
+                                <p style="color:black"><?php echo $t('common.medical_assistance_reimbursements'); ?></p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-stats-bars"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?><i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>
@@ -63,12 +72,14 @@
                             <div class="inner">
                                 <h3 id="contadorCreditosHospitalariosClientes" style="color:black">0</h3>
 
-                                <p style="color:black">Creditos Hospitalarios Asistencia Medica</p>
+                                <p style="color:black"><?php echo $t('common.hospital_credits_medical_assistance'); ?>
+                                </p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-stats-bars"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                         </a>
                     </div>
                 </div>
@@ -79,12 +90,14 @@
                             <div class="inner">
                                 <h3 id="contadorCreditosAmbulatoriosClientes" style="color:black">0</h3>
 
-                                <p style="color:black">Creditos Ambulatorios Asistencia Medica</p>
+                                <p style="color:black"><?php echo $t('common.outpatient_credits_medical_assistance'); ?>
+                                </p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-stats-bars"></i>
                             </div>
-                            <span class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></span>
+                            <span class="small-box-footer"><?php echo $t('common.more_info'); ?> <i
+                                    class="fas fa-arrow-circle-right"></i></span>
                             <a>
                     </div>
                 </div>

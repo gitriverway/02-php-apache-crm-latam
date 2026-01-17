@@ -273,7 +273,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_nombre"
-                                        placeholder="INGRESE NOMBRE" autocomplete="off"
+                                        placeholder="<?php echo $t('form.enter_name'); ?>" autocomplete="off"
                                         style="text-transform: uppercase">
                                 </div>
                             </div>
@@ -284,7 +284,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetrasDecimal" id="txt_email"
-                                        placeholder="INGRESE EMAIL" maxlength="50" autocomplete="off">
+                                        placeholder="<?php echo $t('form.enter_email'); ?>" maxlength="50" autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -294,7 +294,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_telefono"
-                                        placeholder="INGRESE TELEFONO" maxlength="50" autocomplete="off">
+                                        placeholder="<?php echo $t('form.enter_phone'); ?>" maxlength="50" autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -313,7 +313,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
-                                        placeholder="INGRESE CIUDAD" maxlength="100" autocomplete="off"
+                                        placeholder="<?php echo $t('form.enter_city'); ?>" maxlength="100" autocomplete="off"
                                         style="text-transform: uppercase">
                                 </div>
                             </div>
@@ -325,7 +325,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         DOMICILIO
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_direccion"
-                                        placeholder="INGRESE DIRECCION" autocomplete="off"
+                                        placeholder="<?php echo $t('form.enter_address'); ?>" autocomplete="off"
                                         style="text-transform: uppercase">
                                 </div>
                             </div>

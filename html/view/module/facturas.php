@@ -134,7 +134,7 @@ MODAL NUEVA FACTURA
                             </label>
                             <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                 style="width:100%;">
-                                <option value="">Seleccione...</option>
+                                <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
                                 <option value="DEBITO BANCARIO">DEBITO BANCARIO</option>
                                 <option value="TRANSFERENCIA BANCARIO">TRANSFERENCIA BANCARIO</option>
                                 <option value="TARJETA DE CREDITO">TARJETA DE CREDITO</option>

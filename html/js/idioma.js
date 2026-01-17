@@ -53,12 +53,23 @@ function obtenerIdiomaActual() {
 $(document).ready(function() {
     // Establecer el idioma seleccionado en el dropdown si existe
     var idiomaActual = obtenerIdiomaActual();
-    $('#selector_idioma').val(idiomaActual);
     
-    // Manejar cambio de idioma
-    $('#selector_idioma').on('change', function() {
-        var nuevoIdioma = $(this).val();
-        cambiarIdioma(nuevoIdioma);
-    });
+    // Inicializar selector principal (cabezote)
+    if ($('#selector_idioma').length > 0) {
+        $('#selector_idioma').val(idiomaActual);
+        $('#selector_idioma').on('change', function() {
+            var nuevoIdioma = $(this).val();
+            cambiarIdioma(nuevoIdioma);
+        });
+    }
+    
+    // Inicializar selector de login
+    if ($('#selector_idioma_login').length > 0) {
+        $('#selector_idioma_login').val(idiomaActual);
+        $('#selector_idioma_login').on('change', function() {
+            var nuevoIdioma = $(this).val();
+            cambiarIdioma(nuevoIdioma);
+        });
+    }
 });
 

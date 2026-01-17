@@ -36,7 +36,7 @@ function listar_empleado(){
            $($(nRow).find("td")[4]).css('text-align', 'center' );
            $($(nRow).find("td")[5]).css('text-align', 'center' );
        },
-       "language":idioma_espanol
+        "language": translations.datatable || {}
    } );
 }
 

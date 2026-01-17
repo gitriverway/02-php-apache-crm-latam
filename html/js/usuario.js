@@ -53,7 +53,7 @@ function listar_usuario() {
       $($(nRow).find("td")[6]).css("text-align", "center");
       $($(nRow).find("td")[7]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 

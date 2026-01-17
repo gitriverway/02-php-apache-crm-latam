@@ -52,7 +52,7 @@ function listar_bloqueo_ip(){
         $($(nRow).find("td")[3]).css('text-align', 'center' );
         $($(nRow).find("td")[4]).css('text-align', 'center' );
         },
-        "language":idioma_espanol
+        "language": translations.datatable || {}
     } );
 }
 

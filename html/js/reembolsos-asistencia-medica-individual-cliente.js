@@ -119,7 +119,7 @@ function listar_reembolsos_cliente_asistencia_medica_individual() {
       $($(nRow).find("td")[19]).css("text-align", "center");
       $($(nRow).find("td")[20]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 
@@ -292,7 +292,7 @@ function listar_contratos_para_seleccionar() {
       $($(nRow).find("td")[5]).css("text-align", "center");
       $($(nRow).find("td")[6]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 

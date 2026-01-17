@@ -1,25 +1,17 @@
 /*********************************
  CARGAR LISTA DE CLIENTES ASIGNADOS EN TABLA
  *********************************/
-// function lista1() {
-//   $.ajax({
-//     url: "controller/prospectos_web/controlador_prospecto_listar.php",
-//     method: "POST",
-//     cache: false,
-//     contentType: false,
-//     processData: false,
-//     success: function (respuesta) {
-//       console.log(respuesta);
-//     },
-//   });
-// }
-
-if (window.matchMedia("(max-width:767px)").matches) {
-  $("#tabla_asignacion").removeClass("nowrap");
-  $("#tabla_asignacion").addClass("dt-responsive");
-} else {
-  $("#tabla_asignacion").removeClass("dt-responsive");
-  $("#tabla_asignacion").addClass("nowrap");
+function lista1() {
+  $.ajax({
+    url: "controller/prospectos_web/controlador_prospecto_listar.php",
+    method: "POST",
+    cache: false,
+    contentType: false,
+    processData: false,
+    success: function (respuesta) {
+      console.log(respuesta);
+    },
+  });
 }
 
 var table;
@@ -31,9 +23,8 @@ function listar_asignacion() {
     destroy: true,
     processing: true,
     pageLength: 5,
-    //     // "dom": "Plfrtip",
-    dom: "PBfrtip", // 'P' para SearchPanes
-    select: true, // Activa Select
+    dom: "PBfrtip", // Simplificado para mejor rendimiento
+    select: true,
     ajax: "controller/prospectos_web/controlador_prospecto_listar.php",
     searchPanes: {
       cascadePanes: true,
@@ -57,10 +48,10 @@ function listar_asignacion() {
     buttons: ["copyHtml5", "excelHtml5", "csvHtml5", "pdfHtml5"],
     fnRowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
       for (var i = 0; i <= 17; i++) {
-        $($(nRow).find("td")[i]).css("text-align", "center");
+        $($(nRow).find("td")[i]).css("text-align", "center", "width", "10px");
       }
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 
   $("#btnListaVendedor").removeClass("btnListaVendedor");
@@ -101,7 +92,7 @@ function listar_vendedores() {
       $($(nRow).find("td")[1]).css("text-align", "center");
       $($(nRow).find("td")[2]).css("text-align", "center");
     },
-    language: idioma_espanol,
+    language: translations.datatable || {},
   });
 }
 
@@ -129,8 +120,8 @@ $("#tabla_lista_vendedores").on("click", ".btnAsignarVendedor", function () {
     }
     listarCheckAsignar = [];
     Swal.fire(
-      t('messages.confirmation', 'Confirmation Message'),
-      t('messages.seller_assigned', 'The seller has been assigned'),
+      t("messages.confirmation", "Confirmation Message"),
+      t("messages.seller_assigned", "The seller has been assigned"),
       "success"
     ).then((value) => {
       table.ajax.reload();
@@ -139,9 +130,12 @@ $("#tabla_lista_vendedores").on("click", ".btnAsignarVendedor", function () {
   } else {
     Swal.fire({
       icon: "error",
-      title: "Error al actualizar",
-      text: "¡No hay prospectos seleccionados para asignar vendedor!",
-      confirmButtonText: "¡Cerrar!",
+      title: t("messages.error_updating", "Error updating"),
+      text: t(
+        "messages.no_prospects_selected",
+        "No prospects selected to assign a seller"
+      ),
+      confirmButtonText: t("messages.close", "Close"),
     });
   }
 });
@@ -168,13 +162,13 @@ $("#tabla_asignacion").on("click", ".btnEliminarProspectoWeb", function () {
   var idProspecto = $(this).attr("idProspecto");
 
   Swal.fire({
-    title: "Estas Seguro?",
-    text: "No podrás revertir esto!",
+    title: t("messages.are_you_sure", "Are you sure?"),
+    text: t("messages.cannot_revert", "You won't be able to revert this!"),
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Si, eliminarlo!",
+    confirmButtonText: t("messages.yes_delete", "Yes, delete it!"),
   }).then((result) => {
     if (result.isConfirmed) {
       eliminar_prospecto_web(idProspecto);
@@ -195,10 +189,21 @@ function eliminar_prospecto_web(idProspecto) {
     processData: false,
     success: function (respuesta) {
       if (respuesta == 1) {
-        Swal.fire("Eliminado!", "El Prospecto ha sido eliminado.", "success");
+        Swal.fire(
+          t("messages.deleted", "Deleted!"),
+          t("messages.prospect_deleted", "The Prospect has been deleted."),
+          "success"
+        );
         table.ajax.reload();
       } else {
-        Swal.fire("Oops...!", "El Prospecto no pudo ser eliminado.", "error");
+        Swal.fire(
+          t("messages.error", "Error"),
+          t(
+            "messages.prospect_not_deleted",
+            "The Prospect could not be deleted."
+          ),
+          "error"
+        );
       }
       return respuesta;
     },
@@ -251,7 +256,9 @@ $("#tabla_asignacion").on("click", ".btnChatWeb", function () {
               numObservacion +
               '" name="pregunta' +
               numObservacion +
-              '">Pregunta: ' +
+              '">' +
+              t("messages.question", "Question:") +
+              " " +
               data1[i]["pregunta"] +
               "</label>" +
               "</div>" +
@@ -262,7 +269,9 @@ $("#tabla_asignacion").on("click", ".btnChatWeb", function () {
               numObservacion +
               '" name="respuesta' +
               numObservacion +
-              '">Respuesta: ' +
+              '">' +
+              t("messages.answer", "Answer:") +
+              " " +
               data1[i]["respuesta"] +
               "</label>" +
               "</div>" +
@@ -272,7 +281,11 @@ $("#tabla_asignacion").on("click", ".btnChatWeb", function () {
         }
       } else {
         $("#todoChats").append(
-          '<div class="col-12 my-1">' + "<p>SIN REGISTROS</p>" + '</div">'
+          '<div class="col-12 my-1">' +
+            "<p>" +
+            t("messages.no_records", "NO RECORDS") +
+            "</p>" +
+            '</div">'
         );
       }
     },
