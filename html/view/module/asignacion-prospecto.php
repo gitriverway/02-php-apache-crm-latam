@@ -59,7 +59,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
 
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-                            <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.action'); ?></th>
                             <th style="text-align:center; width:10px">
                                 <div class="form-check">
                                     <!-- <input class="form-check-input chkSeleccionarTodoAsignar"
@@ -97,7 +97,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
 <!-- /.content-wrapper -->
 
 <!--=====================================
-MODAL ASIGNAR VENDEDOR
+<?php echo $t('modal.assign_seller'); ?>
 ======================================-->
 <div id="modal_asignar_vendedor" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg">

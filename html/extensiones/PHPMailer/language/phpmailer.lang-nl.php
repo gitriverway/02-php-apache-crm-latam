@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 
 /**
  * Dutch PHPMailer language file: refer to PHPMailer.php for definitive list.

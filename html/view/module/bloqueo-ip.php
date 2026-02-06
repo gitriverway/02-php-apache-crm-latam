@@ -1,15 +1,14 @@
 <?php
 
-if($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE"){
+if ($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE") {
 
-  echo '<script>
+    echo '<script>
 
     window.location = "inicio";
 
   </script>';
 
-  return;
-
+    return;
 }
 
 ?>
@@ -21,7 +20,7 @@ if($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE"){
             <div class="row mb-2">
                 <?php
                 require_once __DIR__ . '/../../model/modelo_idioma.php';
-                $t = function($key) {
+                $t = function ($key) {
                     return Modelo_Idioma::t($key);
                 };
                 ?>
@@ -48,20 +47,22 @@ if($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE"){
                 <h3 class="card-title"><?php echo $t('messages.welcome_ip_blocking_content'); ?></h3>
                 <div class="card-tools pull-right">
                     <!-- <a href="crear-prospecto">
-                        <button class="btn btn-primary" style="width:100%"><i class="glyphicon glyphicon-plus"></i>Nuevo
-                            Registro</button>
+<button class="btn btn-primary" style="width:100%"><i class="glyphicon glyphicon-plus"></i><?php echo $t('messages.new_record'); ?></button>
                     </a> -->
                 </div>
             </div>
             <div class="card-body">
-                <table id="tabla_bloqueo_ip" class="table table-bordered table-striped dt-responsive" style="width:100%">
+                <table id="tabla_bloqueo_ip" class="table table-bordered table-striped dt-responsive"
+                    style="width:100%">
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-                            <th style="text-align:center; width:10px">Estado</th>
-                            <th style="text-align:center; width:10px">Direcci&oacute;n Ip</th>
-                            <th style="text-align:center; width:10px">Contador</th>
-                            <th style="text-align:center; width:10px">Descripci&oacute;n</th>
+                            <th style="text-align:center; width:10px">
+                                <?php echo $t('list_tables.ip_blocking_status'); ?>
+                            </th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.ip_address'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.counter'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.description'); ?></th>
                         </tr>
                     </thead>
                 </table>
@@ -74,9 +75,9 @@ if($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE"){
 </div>
 <!-- /.content-wrapper -->
 
-<script src="js/bloqueo_ip.js?rev=<?php echo time();?>"></script>
+<script src="js/bloqueo_ip.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_bloqueo_ip();
-});
+    $(document).ready(function() {
+        listar_bloqueo_ip();
+    });
 </script>

@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 //============================================================+
 // File name   : example_041.php
 // Begin       : 2008-12-07

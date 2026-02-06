@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 
 if ($_SESSION["S_ROL"] == "CLIENTE") {
 
@@ -20,13 +25,13 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
-                    <h1>Editar Prospecto Pymes
+                    <h1><?php echo $t('form.edit_prospect_pymes'); ?>
                     </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
-                        <li class="breadcrumb-item active">Editar Prospecto Pymes</li>
+                        <li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
+                        <li class="breadcrumb-item active"><?php echo $t('form.edit_prospect_pymes'); ?></li>
                     </ol>
                 </div>
             </div>
@@ -39,7 +44,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
             <div class="col-md-6">
                 <div class="card card-primary" id="cardBayer">
                     <div class="card-header">
-                        <h3 class="card-title">Datos Bayer Persona</h3>
+                        <h3 class="card-title"><?php echo $t('form.bayer_person_data'); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -47,7 +52,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <!-- ENTRADA VENDEDOR -->
                                 <div class="form-group">
                                     <label for="txt_vendedor" class="control-label"
-                                        style="text-align: right;">VENDEDOR</label>
+                                        style="text-align: right;"><?php echo $t('form.seller'); ?></label>
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="txt_vendedor" autocomplete="off"
                                             style="text-transform: uppercase" readonly>
@@ -66,23 +71,23 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <input type="hidden" id="txt_idProspecto" value="<?php echo $_GET["idProspecto"]; ?>">
                                 <!-- ENTRADA PARA EL ORIGEN CLIENTE -->
                                 <div class="form-group">
-                                    <label for="cbm_origen" class=" control-label" style="text-align: right;">ORIGEN
+                                    <label for="cbm_origen" class=" control-label" style="text-align: right;"><?php echo $t('form.origin'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen"
                                         <?php echo $retVal = ($_SESSION["S_ROL"] == "VENDEDOR") ? "disabled" : ""; ?>>
-                                        <option value="">Seleccione...</option>
-                                        <option value="MQP">MQP</option>
-                                        <option value="AMIGO">AMIGO</option>
-                                        <option value="CHAT">CHAT</option>
-                                        <option value="OTROS">OTROS</option>
+                                        <option value=""><?php echo $t('messages.select_option'); ?></option>
+                                        <option value="MQP"><?php echo $t('options.mqp'); ?></option>
+                                        <option value="AMIGO"><?php echo $t('options.friend'); ?></option>
+                                        <option value="CHAT"><?php echo $t('options.chat'); ?></option>
+                                        <option value="OTROS"><?php echo $t('options.others'); ?></option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA EL NUEVO RAMO -->
                                 <div class="form-group">
-                                    <label for="txt_origen_web" class="control-label" style="text-align: right;">ORIGEN
+                                    <label for="txt_origen_web" class="control-label" style="text-align: right;"><?php echo $t('form.origin'); ?>
                                         WEB
                                         <font color="red"> *</font>
                                     </label>
@@ -93,7 +98,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA LOS RAMOS -->
                                 <div class="form-group">
-                                    <label for="cbm_categoria" class=" control-label" style="text-align: right;">RAMOS
+                                    <label for="cbm_categoria" class=" control-label" style="text-align: right;"><?php echo $t('form.categories'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_categoria" name="state" id="cbm_categoria">
@@ -211,7 +216,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         PAGO</label>
                                     <select class="form-control cbm_tipo_pago" name="state" id="cbm_tipo_pago"
                                         style="width:100%;">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('messages.select_option'); ?></option>
                                         <option value="MENSUAL">MENSUAL</option>
                                         <option value="TRIMESTRAL">TRIMESTRAL</option>
                                         <option value="SEMESTRAL">SEMESTRAL</option>
@@ -227,7 +232,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         PAGO</label>
                                     <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                         style="width:100%;">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('messages.select_option'); ?></option>
                                         <option value="DEBITO BANCARIO">DEBITO BANCARIO</option>
                                         <option value="TRANSFERENCIA BANCARIO">TRANSFERENCIA BANCARIO</option>
                                         <option value="TARJETA DE CREDITO">TARJETA DE CREDITO</option>
@@ -349,7 +354,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                     </label>
                                     <select class="form-control cbm_ingreso_mensual" name="state"
                                         id="cbm_ingreso_mensual" style="width:100%;">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('messages.select_option'); ?></option>
                                         <option value="0 a 1000">0 a 1000</option>
                                         <option value="1000 a 3000">1000 a 3000</option>
                                         <option value="3000 a 5000">3000 a 5000</option>
@@ -444,7 +449,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                             </label>
                                             <select class="form-control cbm_estado_bayer" name="state"
                                                 id="cbm_estado_bayer" style="width:100%;">
-                                                <option value="">Seleccione...</option>
+                                                <option value=""><?php echo $t('messages.select_option'); ?></option>
                                                 <option value="ABIERTO">ABIERTO</option>
                                                 <!-- <option value="NO CONTESTA">NO CONTESTA</option> -->
                                                 <option value="NO INTERESADO">NO INTERESADO</option>

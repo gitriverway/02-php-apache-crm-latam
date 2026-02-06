@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 
@@ -96,7 +101,7 @@ class Envio_correo_notificacion_liquidacion_reembolso_empresarial
 
             //Conten
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'LIQUIDACIÓN APROBADA - REEMBOLSO Nº ' . $Ticket . ' FINALIZADO';
+            $mail->Subject = 'LIQUIDACIÓN APROBADA - REEMBOLSO Número ' . $Ticket . ' FINALIZADO';
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -105,7 +110,7 @@ class Envio_correo_notificacion_liquidacion_reembolso_empresarial
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
                 <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Estimado Cliente: ' . $nombre . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Se adjunta la liquidación emitida por la Compañia de Seguros ' . $aseguradora . ', ticket interno: Nº ' . $Ticket . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Se adjunta la liquidación emitida por la Compañia de Seguros ' . $aseguradora . ', ticket interno: Número ' . $Ticket . '</h3>
                 <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Número de Contrato: </strong>' . $numero_contrato . '</h3>
                 <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Nombre del Titular: </strong> ' . $nombre . '</h3>
                 <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Nombre del Paciente: </strong> ' . $nombre_paciente . '</h3>

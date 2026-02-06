@@ -1,5 +1,10 @@
 <?php
 
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 if ($_SESSION["S_ROL"] != "CLIENTE") {
 
     echo '<script>
@@ -9,6 +14,7 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
 </script>';
 
     return;
+
 }
 
 ?>
@@ -19,13 +25,13 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Crédito Ambulatorio Asistencia Medica Individual Pymes
+<h1><?php echo $t('titles.ambulatory_credit_medical_assistance_pymes'); ?>
                     </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
-                        <li class="breadcrumb-item active">Crédito Ambulatorio Asistencia Medica Individual Pymes</li>
+<li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
+                        <li class="breadcrumb-item active"><?php echo $t('titles.ambulatory_credit_medical_assistance_pymes'); ?></li>
                     </ol>
                 </div>
             </div>
@@ -40,9 +46,9 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
             <div class="card-header">
                 <!-- <h3 class="card-title">BIENVENIDO AL CONTENIDO DE CREDITOS AMBULATORIO - ASISTENCIA MEDICA INDIVIDUAL</h3> -->
                 <div class="card-tools pull-right">
-                    <button class="btn btn-primary" style="width:100%" onclick="AbrirModalRegistro()"><i
-                            class="fa fa-plus"><b>&nbsp;Nuevo
-                                Registro</i></b></button>
+<button class="btn btn-primary" style="width:100%" onclick="AbrirModalRegistro()"><i
+                            class="fa fa-plus"><b>&nbsp;<?php echo $t('buttons.new_record'); ?>
+                                </i></b></button>
                 </div>
             </div>
             <div class="card-body">
@@ -51,16 +57,16 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-                            <th style="text-align:center; width:10px">N° Solicitud Ambulatorio</th>
-                            <th style="text-align:center; width:10px">Paciente</th>
-                            <th style="text-align:center; width:10px">Diagnostico</th>
-                            <th style="text-align:center; width:10px">Fecha Creaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Gasto Presentado</th>
-                            <th style="text-align:center; width:10px">Estado</th>
-                            <th style="text-align:center; width:10px">Documento Inicial</th>
-                            <th style="text-align:center; width:10px">Observaciones</th>
-                            <th style="text-align:center; width:10px">Fecha Modificaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Documento Autorizaci&oacute;n</th>
+<th style="text-align:center; width:10px"><?php echo $t('titles.request_number_ambulatory'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('titles.patient'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('titles.diagnosis'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('titles.creation_date'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('titles.presented_expense'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('titles.state'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('titles.initial_document'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('titles.observations'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('titles.modification_date'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('titles.authorization_document'); ?></th>
                         </tr>
                     </thead>
                 </table>
@@ -80,7 +86,7 @@ MODAL MOSTRAR LAS OBSERVACIONES DEL REEMBOLSO
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Observaciones</h4>
+                <h4 class="modal-title"><?php echo $t('titles.observations'); ?></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -107,7 +113,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
         <div class="modal-content" id="modalNuevoCreditoAmbulatorio">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">NUEVO CRÉDITO AMBULATORIO</h5>
+                    <h5 class="modal-title"><?php echo $t('titles.new_ambulatory_credit'); ?></h5>
                 </div>
                 <div class="modal-body">
                     <div class="row nuevoDatosCreditoAmbulatorio">
@@ -120,7 +126,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                                 id="txt_fecha_credito_ambulatorio" name="txt_fecha_credito_ambulatorio">
                         </div>
                         <div class="form-group col-12 col-lg-4">
-                            <label for="txt_contrato_aplicar" class="control-label" style="text-align: right;">CONTRATO
+                            <label for="txt_contrato_aplicar" class="control-label" style="text-align: right;"><?php echo $t('form.contract'); ?>
                                 APLICAR
                                 <font color="red"> *</font>
                             </label>
@@ -137,24 +143,24 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                             </div>
                         </div>
                         <div class="form-group col-12 col-lg-4">
-                            <label for="cbm_nombre_colaborador" class="control-label" style="text-align: right;">NOMBRE
+                            <label for="cbm_nombre_colaborador" class="control-label" style="text-align: right;"><?php echo $t('form.name'); ?>
                                 COLABORADOR
                                 <font color="red"> *</font>
                             </label>
                             <select class="form-control cbm_nombre_colaborador js-example-basic-single" name="state"
                                 id="cbm_nombre_colaborador" style="width:100%;">
-                                <option value="">SIN REGISTROS</option>
+                                <option value=""><?php echo $t('titles.no_records'); ?></option>
                             </select>
                             <input type="hidden" id="lista_colaboradores" name="lista_colaboradores">
                         </div>
                         <div class="form-group col-12 col-lg-4">
-                            <label for="txt_nombre_paciente" class="control-label" style="text-align: right;">NOMBRE
+                            <label for="txt_nombre_paciente" class="control-label" style="text-align: right;"><?php echo $t('form.patient_name'); ?>
                                 PACIENTE
                                 <font color="red"> *</font>
                             </label>
                             <select class="form-control cbm_nombre_paciente js-example-basic-single" name="state"
                                 id="cbm_nombre_paciente" style="width:100%;">
-                                <option value="">SIN REGISTROS</option>
+                                <option value=""><?php echo $t('titles.no_records'); ?></option>
                             </select>
                         </div>
                         <!-- <div class="form-group col-12 col-lg-6">
@@ -216,7 +222,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                             </label>
                             <input type="file" class="form-control" id="txt_documento_credito_ambulatorio"
                                 name="txt_documento_credito_ambulatorio" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_25'); ?></p>
                         </div>
                         <input type="hidden" id="listaDatosCreditoAmbulatorio">
                     </div>
@@ -242,7 +248,7 @@ MODAL LISTAR CONTRATOS CLIENTE
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">LISTA CONTRATOS</h5>
+                    <h5 class="modal-title"><?php echo $t('titles.contracts_list'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -254,12 +260,12 @@ MODAL LISTAR CONTRATOS CLIENTE
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-                                    <th style="text-align:center; width:10px">Proveedor</th>
-                                    <th style="text-align:center; width:10px">Plan</th>
-                                    <th style="text-align:center; width:10px">Cedula/Ruc</th>
-                                    <th style="text-align:center; width:10px">Cliente</th>
-                                    <th style="text-align:center; width:10px">Contrato</th>
-                                    <th style="text-align:center; width:10px">Acci&oacute;n</th>
+<th style="text-align:center; width:10px"><?php echo $t('list_tables.provider'); ?></th>
+                                    <th style="text-align:center; width:10px"><?php echo $t('list_tables.plan'); ?></th>
+                                    <th style="text-align:center; width:10px"><?php echo $t('list_tables.id_card'); ?></th>
+                                    <th style="text-align:center; width:10px"><?php echo $t('list_tables.customer'); ?></th>
+                                    <th style="text-align:center; width:10px"><?php echo $t('list_tables.contract_number'); ?></th>
+                                    <th style="text-align:center; width:10px"><?php echo $t('list_tables.action'); ?></th>
                                 </tr>
                             </thead>
                         </table>

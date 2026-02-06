@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
     require '../../model/modelo_contrato_cliente_empresarial.php';
 
     class Lista_contrato_cliente_seleccionado{

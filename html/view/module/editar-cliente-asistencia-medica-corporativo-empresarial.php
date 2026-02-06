@@ -28,7 +28,7 @@ $t = function ($key) {
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
                         <li class="breadcrumb-item active">Editar Emisi&oacute;n Asistencia Medica Corporativo</li>
                     </ol>
                 </div>
@@ -43,7 +43,7 @@ $t = function ($key) {
                 <!-- Default box -->
                 <div class="card card-primary" id="cardBayer">
                     <div class="card-header">
-                        <h3 class="card-title">Datos Bayer Persona</h3>
+                        <h3 class="card-title"><?php echo $t('form.bayer_person_data'); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -51,11 +51,11 @@ $t = function ($key) {
                                 <input type="hidden" id="txt_idBayer" value="<?php echo $_GET["idCliente"]; ?>">
                                 <!-- ENTRADA PARA EL ORIGEN CLIENTE -->
                                 <div class="form-group">
-                                    <label for="cbm_origen" class=" control-label" style="text-align: right;">ORIGEN
+                                    <label for="cbm_origen" class=" control-label" style="text-align: right;"><?php echo $t('form.origin'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('messages.select_option'); ?></option>
                                         <option value="MQP"><?php echo $t('list_tables.origin_mqp'); ?></option>
                                         <option value="AMIGO"><?php echo $t('list_tables.origin_friend'); ?></option>
                                         <option value="OTROS"><?php echo $t('list_tables.origin_others'); ?></option>
@@ -64,7 +64,7 @@ $t = function ($key) {
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                    <label for="txt_categoria" class="control-label" style="text-align: right;">RAMOS
+                                    <label for="txt_categoria" class="control-label" style="text-align: right;"><?php echo $t('form.categories'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_categoria"
@@ -174,7 +174,7 @@ $t = function ($key) {
                                         PAGO<font color="red"> *</font></label>
                                     <select class="form-control cbm_tipo_pago" name="state" id="cbm_tipo_pago"
                                         style="width:100%;">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('messages.select_option'); ?></option>
                                         <option value="MENSUAL">MENSUAL</option>
                                         <option value="TRIMESTRAL">TRIMESTRAL</option>
                                         <option value="SEMESTRAL">SEMESTRAL</option>
@@ -190,7 +190,7 @@ $t = function ($key) {
                                         PAGO<font color="red"> *</font></label>
                                     <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                         style="width:100%;">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('messages.select_option'); ?></option>
                                         <option value="DEBITO BANCARIO">DEBITO BANCARIO</option>
                                         <option value="TRANSFERENCIA BANCARIO">TRANSFERENCIA BANCARIO</option>
                                         <option value="TARJETA DE CREDITO">TARJETA DE CREDITO</option>
@@ -313,7 +313,7 @@ $t = function ($key) {
                                     </label>
                                     <select class="form-control cbm_ingreso_mensual" name="state"
                                         id="cbm_ingreso_mensual" style="width:100%;">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('messages.select_option'); ?></option>
                                         <option value="0 a 1000">0 a 1000</option>
                                         <option value="1000 a 3000">1000 a 3000</option>
                                         <option value="3000 a 5000">3000 a 5000</option>
@@ -410,7 +410,7 @@ $t = function ($key) {
                                             </label>
                                             <select class="form-control cbm_estado_bayer" name="state"
                                                 id="cbm_estado_bayer" style="width:100%;">
-                                                <option value="">Seleccione...</option>
+                                                <option value=""><?php echo $t('messages.select_option'); ?></option>
                                                 <option value="ABIERTO">ABIERTO</option>
                                                 <option value="NO INTERESADO">NO INTERESADO</option>
                                                 <option value="INTERESADO">INTERESADO</option>
@@ -437,7 +437,7 @@ $t = function ($key) {
                         <div class="row">
                             <div class="col-sm-6 col-md-4">
                                 <div class="form-group">
-                                    <label for="txt_numero_contrato" class="control-label" style="text-align: right;">Nº
+                                    <label for="txt_numero_contrato" class="control-label" style="text-align: right;">Número
                                         CONTRATO
                                         <font color="red"> *</font>
                                     </label>

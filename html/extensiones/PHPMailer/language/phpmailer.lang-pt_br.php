@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 
 /**
  * Brazilian Portuguese PHPMailer language file: refer to English translation for definitive list

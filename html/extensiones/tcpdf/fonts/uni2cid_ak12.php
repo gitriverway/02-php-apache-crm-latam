@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 // unicode to cid conversion table is from
 // ftp://ftp.oreilly.com/pub/examples/nutshell/cjkv/adobe/
 // cid2code.txt in ak12.tar.Z

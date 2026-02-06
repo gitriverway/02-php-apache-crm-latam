@@ -1,4 +1,8 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
 
 if($_SESSION["S_ROL"] != "CLIENTE"){
 
@@ -20,13 +24,13 @@ if($_SESSION["S_ROL"] != "CLIENTE"){
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Facturas Clientes
+<h1><?php echo $t('messages.client_invoices'); ?>
                     </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
-                        <li class="breadcrumb-item active">Administrar Facturas Clientes</li>
+<li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
+                        <li class="breadcrumb-item active"><?php echo $t('messages.manage_client_invoices'); ?></li>
                     </ol>
                 </div>
             </div>
@@ -39,7 +43,7 @@ if($_SESSION["S_ROL"] != "CLIENTE"){
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">BIENVENIDO AL CONTENIDO DE FACTURAS CLIENTES</h3>
+                <h3 class="card-title"><?php echo $t('messages.welcome_client_invoices_content'); ?></h3>
             </div>
             <div class="card-body">
                 <table id="tabla-factura-cliente" class="table table-bordered table-striped"
@@ -47,14 +51,14 @@ if($_SESSION["S_ROL"] != "CLIENTE"){
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-                            <th style="text-align:center; width:10px">Nº Documento</th>
-                            <th style="text-align:center; width:10px">Nombre</th>
-                            <th style="text-align:center; width:10px">N° Factura</th>
-                            <th style="text-align:center; width:10px">Fecha Emision</th>
-                            <th style="text-align:center; width:10px">Valor Factura</th>
-                            <th style="text-align:center; width:10px">Saldo Factura</th>
-                            <th style="text-align:center; width:10px">Estado</th>
-                            <th style="text-align:center; width:10px">Acci&oacute;n</th>
+<th style="text-align:center; width:10px"><?php echo $t('list_tables.document_number'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.name'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.invoice_number'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.emission_date'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.invoice_value'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.invoice_balance'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.status'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.action'); ?></th>
                         </tr>
                     </thead>
                 </table>

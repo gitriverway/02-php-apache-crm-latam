@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 require '../../extensiones/PHPMailer/src/Exception.php';
 require '../../extensiones/PHPMailer/src/PHPMailer.php';
 require '../../extensiones/PHPMailer/src/SMTP.php';
@@ -110,7 +115,7 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_operatorio_empr
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'IMPORTANTE: DOCUMENTOS SOLICITADOS POR ASEGURADORA PARA CRÉDITO HOSPITALARIO Nº ' . $Ticket . ' - ASISTENCIA MÉDICA';
+            $mail->Subject = 'IMPORTANTE: DOCUMENTOS SOLICITADOS POR ASEGURADORA PARA CRÉDITO HOSPITALARIO Número ' . $Ticket . ' - ASISTENCIA MÉDICA';
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -149,7 +154,7 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_operatorio_empr
                 </center>
                 <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Observación: </strong> ' . $observacion_final . '</h3>
                 <h3 style="font-weight:100; color:#999; padding:0px 20px;">Favor enviar los documento en un solo
-                    <strong>PDF</strong>, Tiempo limite 72 Horas, al siguiente correo <strong>creditohospitalario@mqpseguros.com</strong> con numero de Ticket: Nº <strong>' . $Ticket . '</strong>
+                    <strong>PDF</strong>, Tiempo limite 72 Horas, al siguiente correo <strong>creditohospitalario@mqpseguros.com</strong> con numero de Ticket: Número <strong>' . $Ticket . '</strong>
                 </h3>
 
                 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">

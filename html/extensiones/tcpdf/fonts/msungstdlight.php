@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 $type = 'cidfont0';
 $name = 'MSungStd-Light-Acro';
 $displayname = 'MSung Light (Trad. Chinese)';

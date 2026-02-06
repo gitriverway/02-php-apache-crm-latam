@@ -55,12 +55,12 @@ if ($_SESSION["S_ROL"] != "ADMINISTRADOR") {
                     <thead>
                         <tr>
                             <th style="width:10px">#</th>
-                            <th style="text-align:center">Imagen</th>
-                            <th style="text-align:center">Usuario</th>
-                            <th style="text-align:center">Rol</th>
-                            <th style="text-align:center">Empleado</th>
-                            <th style="text-align:center">Estado</th>
-                            <th style="text-align:center">Acciones</th>
+<th style="text-align:center"><?php echo $t('messages.user_image'); ?></th>
+                            <th style="text-align:center"><?php echo $t('common.user'); ?></th>
+                            <th style="text-align:center"><?php echo $t('list_tables.cargo'); ?></th>
+                            <th style="text-align:center"><?php echo $t('list_tables.employee'); ?></th>
+                            <th style="text-align:center"><?php echo $t('list_tables.status'); ?></th>
+                            <th style="text-align:center"><?php echo $t('list_tables.actions'); ?></th>
                         </tr>
                     </thead>
                 </table>
@@ -83,7 +83,7 @@ MODAL REGISTRO USUARIO
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
 
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">Registro De Usuario</h5>
+                    <h5 class="modal-title"><?php echo $t('messages.manage_users'); ?></h5>
                 </div>
                 <div class="modal-body">
                     <div class="box-body">
@@ -197,7 +197,7 @@ CUERPO DEL MODAL
 
                         <!-- ENTRADA PARA CONTRASEÑA -->
                         <div class="form-group">
-                            <label for="txt_con_editar" class="control-label" style="text-align: right;">CONTRASE&Ntilde;A NUEVA</label>
+                            <label for="txt_con_editar" class="control-label" style="text-align: right;"><?php echo $t('common.new_password'); ?></label>
                             <div class="input-group">
                                 <input type="password" class="form-control validarNumerosLetras" id="txt_con_editar" placeholder="<?php echo $t('messages.new_password'); ?>" maxlength="30">
                                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
@@ -218,7 +218,7 @@ CUERPO DEL MODAL
 
                         <!-- ENTRADA PARA SELECCIONAR EMPLEADO -->
                         <div class="form-group">
-                            <label for="cbm_empleado_editar" class="control-label" style="text-align: right;">EMPLEADO</label>
+                            <label for="cbm_empleado_editar" class="control-label" style="text-align: right;"><?php echo $t('list_tables.employee'); ?></label>
                             <div class="input-group">
                                 <select class="form-control cbm_empleado js-example-basic-single" name="state" id="cbm_empleado_editar" style="width:100%;">
                                 </select>

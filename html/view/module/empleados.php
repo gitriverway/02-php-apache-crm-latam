@@ -87,52 +87,57 @@ MODAL REGISTRO USUARIO
                 </div>
                 <div class="modal-body">
                     <div class="box-body">
-                        <!-- ENTRADA PARA EL NOMBRE DE EMPLEADO -->
+                        <!-- ENTRADA PARA EL NOMBRE -->
                         <div class="form-group">
-                            <label for="txt_nombre_empleado" class="control-label" style="text-align: right;"><?php echo $t('messages.name'); ?>
+                            <label for="txt_nombre_empleado" class="control-label"
+                                style="text-align: right;"><?php echo $t('messages.name'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
-                                <input type="text" class="form-control validarNumerosLetras" id="txt_nombre_empleado"
-                                    placeholder="<?php echo $t('form.enter_name'); ?>" maxlength="100" autocomplete="off"
-                                    style="text-transform: uppercase">
+                                <input type="text" class="form-control validateAlpha" id="txt_nombre_empleado"
+                                    placeholder="<?php echo $t('form.enter_name'); ?>" maxlength="100"
+                                    autocomplete="off" style="text-transform: uppercase">
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>
                         </div>
 
-                        <!-- ENTRADA PARA EL APELLIDO DE EMPLEADO -->
+                        <!-- ENTRADA PARA EL APELLIDO -->
                         <div class="form-group">
-                            <label for="txt_apellido_empleado" class="control-label" style="text-align: right;"><?php echo $t('messages.last_name'); ?>
+                            <label for="txt_apellido_empleado" class="control-label"
+                                style="text-align: right;"><?php echo $t('messages.last_name'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
-                                <input type="text" class="form-control validarNumerosLetras" id="txt_apellido_empleado"
-                                    placeholder="<?php echo $t('form.enter_name'); ?>" maxlength="100" autocomplete="off"
-                                    style="text-transform: uppercase">
+                                <input type="text" class="form-control validateAlpha" id="txt_apellido_empleado"
+                                    placeholder="<?php echo $t('form.enter_last_name'); ?>" maxlength="100"
+                                    autocomplete="off" style="text-transform: uppercase">
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>
                         </div>
 
                         <!-- ENTRADA PARA SELECCIONAR PROVINCIA -->
                         <div class="form-group">
-                            <label for="cbm_provincia" class="control-label" style="text-align: right;"><?php echo $t('messages.province'); ?>
+                            <label for="cbm_provincia" class="control-label"
+                                style="text-align: right;"><?php echo $t('messages.province'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
-                                <select class="form-control cbm_provincia js-example-basic-single" name="state" id="cbm_provincia"
-                                    style="width:100%;">
+                                <select class="form-control cbm_provincia js-example-basic-single" name="state"
+                                    id="cbm_provincia" style="width:100%;">
                                 </select>
                             </div>
                         </div>
 
                         <!-- ENTRADA PARA <?php echo strtoupper($t('messages.direction')); ?> -->
                         <div class="form-group">
-                            <label for="txt_direccion_empleado" class="control-label" style="text-align: right;"><?php echo strtoupper($t('messages.direction')); ?>
+                            <label for="txt_direccion_empleado" class="control-label"
+                                style="text-align: right;"><?php echo strtoupper($t('messages.direction')); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
-                                <textarea class="form-control validarNumerosLetrasDecimal" id="txt_direccion_empleado" name="txt_direccion_empleado"
-                                    cols="20" rows="3" placeholder="Ingresar Dirección"></textarea>
+                                <textarea class="form-control validateAlphaNumeric" id="txt_direccion_empleado"
+                                    name="txt_direccion_empleado" cols="20" rows="3"
+                                    placeholder="<?php echo $t('form.enter_address'); ?>"></textarea>
                                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                             </div>
                         </div>
@@ -140,9 +145,9 @@ MODAL REGISTRO USUARIO
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-info pull-left" onclick="Registrar_Empleado()"><i
-                            class="fa fa-save"><b>&nbsp;REGISTRAR</b></i></button>
+                            class="fa fa-save"><b>&nbsp;<?php echo $t('buttons.register'); ?></b></i></button>
                     <button type="button" class="btn btn-default" data-dismiss="modal"><i
-                            class="fa fa-times"><b>&nbsp;CERRAR</b></i></button>
+                            class="fa fa-times"><b>&nbsp;<?php echo $t('buttons.close'); ?></b></i></button>
                 </div>
             </form>
         </div>
@@ -159,44 +164,48 @@ MODAL EDITAR EMPLEADO
         <div class="modal-dialog">
             <div class="modal-content">
                 <!--=====================================
-CABEZA DEL MODAL
+HEADER DEL MODAL
 ======================================-->
                 <div class="modal-header" style="background:#3c8dbc; color:white">
                     <h4 class="modal-title"><b><?php echo $t('messages.edit_employee_data'); ?></b></h4>
                 </div>
                 <!--=====================================
-CUERPO DEL MODAL
+BODY DEL MODAL
 ======================================-->
                 <div class="modal-body">
                     <div class="box-body">
                         <input type="hidden" id="txtidempleado">
                         <!-- ENTRADA PARA EL NOMBRE -->
                         <div class="form-group">
-                            <label for="txt_nombre_editar" class="control-label" style="text-align: right;">NOMBRE
+                            <label for="txt_nombre_editar" class="control-label"
+                                style="text-align: right;"><?php echo $t('messages.name'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
-                                <input type="text" class="form-control validarNumerosLetras" id="txt_nombre_editar"
-                                    placeholder="<?php echo $t('form.enter_name'); ?>" autocomplete="off" style="text-transform: uppercase">
+                                <input type="text" class="form-control validateAlpha" id="txt_nombre_editar"
+                                    placeholder="<?php echo $t('form.enter_name'); ?>" autocomplete="off"
+                                    style="text-transform: uppercase">
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>
                         </div>
 
                         <!-- ENTRADA PARA EL APELLIDO -->
                         <div class="form-group">
-                            <label for="txt_apellido_editar" class="control-label" style="text-align: right;">APELLIDO
+                            <label for="txt_apellido_editar" class="control-label"
+                                style="text-align: right;"><?php echo $t('messages.last_name'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
-                                <input type="text" class="form-control validarNumerosLetras" id="txt_apellido_editar"
-                                    placeholder="<?php echo $t('form.enter_name'); ?>" autocomplete="off" style="text-transform: uppercase">
+                                <input type="text" class="form-control validateAlpha" id="txt_apellido_editar"
+                                    placeholder="<?php echo $t('form.enter_last_name'); ?>" autocomplete="off"
+                                    style="text-transform: uppercase">
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>
                         </div>
 
                         <!-- ENTRADA PARA SELECCIONAR PROVINCIA -->
                         <div class="form-group">
-                            <label for="cbm_provincia_editar" class="control-label" style="text-align: right;">PROVINCIA
+                            <label for="cbm_provincia_editar" class="control-label" style="text-align: right;"><?php echo $t('messages.province'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -206,14 +215,16 @@ CUERPO DEL MODAL
                             </div>
                         </div>
 
-                        <!-- ENTRADA PARA DIRECCION -->
+                        <!-- ENTRADA PARA DIRECCIÓN -->
                         <div class="form-group">
-                            <label for="txt_direccion_empleado_editar" class="control-label" style="text-align: right;">DIRECCI&Oacute;N
+                            <label for="txt_direccion_empleado_editar" class="control-label"
+                                style="text-align: right;"><?php echo $t('messages.direction'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
-                                <textarea class="form-control validarNumerosLetrasDecimal" id="txt_direccion_empleado_editar" name="txt_direccion_empleado_editar"
-                                    cols="20" rows="3" placeholder="<?php echo $t('messages.enter_direction'); ?>"></textarea>
+                                <textarea class="form-control validateAlphaNumeric"
+                                    id="txt_direccion_empleado_editar" name="txt_direccion_empleado_editar" cols="20"
+                                    rows="3" placeholder="<?php echo $t('messages.enter_direction'); ?>"></textarea>
                                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                             </div>
                         </div>
@@ -222,9 +233,9 @@ CUERPO DEL MODAL
 
                 <div class="modal-footer">
                     <button class="btn btn-info pull-left" onclick="Modificar_Empleado()"><i
-                            class="fa fa-save"><b>&nbsp;ACTUALIZAR</b></i></button>
+                            class="fa fa-save"><b>&nbsp;<?php echo $t('buttons.update'); ?></b></i></button>
                     <button type="button" class="btn btn-default" data-dismiss="modal"><i
-                            class="fa fa-times"><b>&nbsp;CERRAR</b></i></button>
+                            class="fa fa-times"><b>&nbsp;<?php echo $t('buttons.close'); ?></b></i></button>
                 </div>
             </div>
         </div>

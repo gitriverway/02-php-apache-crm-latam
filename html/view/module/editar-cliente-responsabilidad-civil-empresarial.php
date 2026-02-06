@@ -27,13 +27,13 @@ $t = function ($key) {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
-                    <h1>Editar Emisi&oacute;n Responsabilidad Civil Pymes
+                    <h1><?php echo $t('common.edit_emission_civil_liability_empresarial'); ?>
                     </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
-                        <li class="breadcrumb-item active">Editar Emisi&oacute;n Responsabilidad Civil Pymes</li>
+                        <li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
+                        <li class="breadcrumb-item active"><?php echo $t('common.edit_emission_civil_liability_empresarial'); ?></li>
                     </ol>
                 </div>
             </div>
@@ -47,7 +47,7 @@ $t = function ($key) {
                 <!-- Default box -->
                 <div class="card card-primary" id="cardBayer">
                     <div class="card-header">
-                        <h3 class="card-title">Datos Bayer Persona</h3>
+                        <h3 class="card-title"><?php echo $t('form.bayer_person_data'); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -55,7 +55,7 @@ $t = function ($key) {
                                 <!-- ENTRADA VENDEDOR -->
                                 <div class="form-group">
                                     <label for="txt_vendedor" class="control-label"
-                                        style="text-align: right;">VENDEDOR</label>
+                                        style="text-align: right;"><?php echo $t('list_tables.seller'); ?></label>
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="txt_vendedor" autocomplete="off"
                                             style="text-transform: uppercase" readonly>
@@ -74,11 +74,11 @@ $t = function ($key) {
                                 <input type="hidden" id="txt_idBayer" value="<?php echo $_GET["idCliente"]; ?>">
                                 <!-- ENTRADA PARA EL ORIGEN CLIENTE -->
                                 <div class="form-group">
-                                    <label for="cbm_origen" class=" control-label" style="text-align: right;">ORIGEN
+                                    <label for="cbm_origen" class=" control-label" style="text-align: right;"><?php echo $t('form.origin'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('form.select_option'); ?></option>
                                         <option value="MQP"><?php echo $t('list_tables.origin_mqp'); ?></option>
                                         <option value="AMIGO"><?php echo $t('list_tables.origin_friend'); ?></option>
                                         <option value="CHAT"><?php echo $t('list_tables.origin_chat'); ?></option>
@@ -88,7 +88,7 @@ $t = function ($key) {
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                    <label for="txt_categoria" class="control-label" style="text-align: right;">RAMOS
+                                    <label for="txt_categoria" class="control-label" style="text-align: right;"><?php echo $t('form.categories'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_categoria"
@@ -198,7 +198,7 @@ $t = function ($key) {
                                         PAGO<font color="red"> *</font></label>
                                     <select class="form-control cbm_tipo_pago" name="state" id="cbm_tipo_pago"
                                         style="width:100%;">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('form.select_option'); ?></option>
                                         <option value="MENSUAL">MENSUAL</option>
                                         <option value="TRIMESTRAL">TRIMESTRAL</option>
                                         <option value="SEMESTRAL">SEMESTRAL</option>
@@ -214,7 +214,7 @@ $t = function ($key) {
                                         PAGO<font color="red"> *</font></label>
                                     <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                         style="width:100%;">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('form.select_option'); ?></option>
                                         <option value="DEBITO BANCARIO">DEBITO BANCARIO</option>
                                         <option value="TRANSFERENCIA BANCARIO">TRANSFERENCIA BANCARIO</option>
                                         <option value="TARJETA DE CREDITO">TARJETA DE CREDITO</option>
@@ -231,7 +231,7 @@ $t = function ($key) {
                 <!-- Default box -->
                 <div class="card card-primary" id="cardPersonal">
                     <div class="card-header">
-                        <h3 class="card-title">Informaci&oacute;n Personal</h3>
+                        <h3 class="card-title"><?php echo $t('titles.information_personal'); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -359,7 +359,7 @@ $t = function ($key) {
                                     </label>
                                     <select class="form-control cbm_ingreso_mensual" name="state"
                                         id="cbm_ingreso_mensual" style="width:100%;">
-                                        <option value="">Seleccione...</option>
+                                        <option value=""><?php echo $t('form.select_option'); ?></option>
                                         <option value="0 a 1000">0 a 1000</option>
                                         <option value="1000 a 3000">1000 a 3000</option>
                                         <option value="3000 a 5000">3000 a 5000</option>
@@ -386,7 +386,7 @@ $t = function ($key) {
                 <!-- Default box -->
                 <div class="card card-primary" id="cardDocumento">
                     <div class="card-header">
-                        <h3 class="card-title">Informaci&oacute;n Documentos</h3>
+                        <h3 class="card-title"><?php echo $t('titles.information_documents'); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -409,7 +409,7 @@ $t = function ($key) {
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_1"
                                                     name="txt_documento_1" class="subirDocumento" accept=".pdf">
-                                                <p class="help-block">Peso máximo del documento 50MB</p>
+                                                <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_50'); ?></p>
                                             </div>
                                             <div class="form-group col-12 col-md-4">
                                                 <label for="txt_documento_11" class="control-label"
@@ -418,7 +418,7 @@ $t = function ($key) {
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_11"
                                                     name="txt_documento_11" class="subirDocumento" accept=".pdf">
-                                                <p class="help-block">Peso máximo del documento 50MB</p>
+                                                <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_50'); ?></p>
                                             </div>
                                             <div class="form-group col-12 col-md-4">
                                                 <label for="txt_documento_2" class="control-label"
@@ -426,7 +426,7 @@ $t = function ($key) {
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_2"
                                                     name="txt_documento_2" class="subirDocumento" accept=".pdf">
-                                                <p class="help-block">Peso máximo del documento 50MB</p>
+                                                <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_50'); ?></p>
                                             </div>
                                             <div class="form-group col-12 col-md-4">
                                                 <label for="txt_documento_3" class="control-label"
@@ -434,7 +434,7 @@ $t = function ($key) {
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_3"
                                                     name="txt_documento_3" class="subirDocumento" accept=".pdf">
-                                                <p class="help-block">Peso máximo del documento 50MB</p>
+                                                <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_50'); ?></p>
                                             </div>
 
                                             <div class="form-group col-12 col-md-4 d-none">
@@ -444,7 +444,7 @@ $t = function ($key) {
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_4"
                                                     name="txt_documento_4" class="subirDocumento" accept=".pdf">
-                                                <p class="help-block">Peso máximo del documento 50MB</p>
+                                                <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_50'); ?></p>
                                             </div>
                                             <div class="form-group col-12 col-md-4" hidden>
                                                 <label for="txt_documento_5" class="control-label"
@@ -453,7 +453,7 @@ $t = function ($key) {
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_5"
                                                     name="txt_documento_5" class="subirDocumento" accept=".pdf">
-                                                <p class="help-block">Peso máximo del documento 50MB</p>
+                                                <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_50'); ?></p>
                                             </div>
                                             <div class="form-group col-12 col-md-4 d-none" hidden>
                                                 <label for="txt_documento_6" class="control-label"
@@ -462,7 +462,7 @@ $t = function ($key) {
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_6"
                                                     name="txt_documento_6" class="subirDocumento" accept=".pdf">
-                                                <p class="help-block">Peso máximo del documento 50MB</p>
+                                                <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_50'); ?></p>
                                             </div>
                                             <div class="form-group col-12 col-md-4 d-none" hidden>
                                                 <label for="txt_documento_7" class="control-label"
@@ -471,7 +471,7 @@ $t = function ($key) {
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_7"
                                                     name="txt_documento_7" class="subirDocumento" accept=".pdf">
-                                                <p class="help-block">Peso máximo del documento 50MB</p>
+                                                <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_50'); ?></p>
                                             </div>
                                             <div class="form-group col-12 col-md-4 d-none" hidden>
                                                 <label for="txt_documento_8" class="control-label"
@@ -480,7 +480,7 @@ $t = function ($key) {
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_8"
                                                     name="txt_documento_8" class="subirDocumento" accept=".pdf">
-                                                <p class="help-block">Peso máximo del documento 50MB</p>
+                                                <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_50'); ?></p>
                                             </div>
                                             <div class="form-group col-12 col-md-4 d-none" hidden>
                                                 <label for="txt_documento_12" class="control-label"
@@ -489,7 +489,7 @@ $t = function ($key) {
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_12"
                                                     name="txt_documento_12" class="subirDocumento" accept=".pdf">
-                                                <p class="help-block">Peso máximo del documento 50MB</p>
+                                                <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_50'); ?></p>
                                             </div>
                                             <div class="form-group col-12 col-md-4 d-none" hidden>
                                                 <label for="txt_documento_9" class="control-label"
@@ -498,7 +498,7 @@ $t = function ($key) {
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_9"
                                                     name="txt_documento_9" class="subirDocumento" accept=".pdf">
-                                                <p class="help-block">Peso máximo del documento 50MB</p>
+                                                <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_50'); ?></p>
                                             </div>
                                             <div class="form-group col-12 col-md-4 d-none" hidden>
                                                 <label for="txt_documento_10" class="control-label"
@@ -507,7 +507,7 @@ $t = function ($key) {
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_10"
                                                     name="txt_documento_10" class="subirDocumento" accept=".pdf">
-                                                <p class="help-block">Peso máximo del documento 50MB</p>
+                                                <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_50'); ?></p>
                                             </div>
                                             <input type="hidden" id="cantidadDocumentos" name="cantidadDocumentos">
                                         </div>
@@ -525,7 +525,7 @@ $t = function ($key) {
                 <!-- Default box -->
                 <div class="card card-primary" id="cardSeguimiento">
                     <div class="card-header">
-                        <h3 class="card-title">Informaci&oacute;n Seguimiento</h3>
+                        <h3 class="card-title"><?php echo $t('titles.information_follow_up'); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -566,7 +566,7 @@ $t = function ($key) {
                                             </label>
                                             <select class="form-control cbm_estado_bayer" name="state"
                                                 id="cbm_estado_bayer" style="width:100%;">
-                                                <option value="">Seleccione...</option>
+                                                <option value=""><?php echo $t('form.select_option'); ?></option>
                                                 <option value="ABIERTO">ABIERTO</option>
                                                 <option value="NO INTERESADO">NO INTERESADO</option>
                                                 <option value="INTERESADO">INTERESADO</option>
@@ -607,7 +607,7 @@ $t = function ($key) {
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">LISTA CLIENTES</h5>
+                    <h5 class="modal-title"><?php echo $t('titles.clients_list'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -619,9 +619,9 @@ $t = function ($key) {
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-                                    <th style="text-align:center; width:10px">Cliente</th>
-                                    <th style="text-align:center; width:10px">Cedula/Ruc</th>
-                                    <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                                    <th style="text-align:center; width:10px"><?php echo $t('list_tables.customer'); ?></th>
+                                    <th style="text-align:center; width:10px"><?php echo $t('list_tables.id_card'); ?></th>
+                                    <th style="text-align:center; width:10px"><?php echo $t('list_tables.action'); ?></th>
                                 </tr>
                             </thead>
                         </table>
@@ -638,7 +638,7 @@ $t = function ($key) {
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">LISTA DEPENDIENTES</h5>
+                    <h5 class="modal-title"><?php echo $t('titles.dependents_list'); ?></h5>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
@@ -661,7 +661,7 @@ $t = function ($key) {
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">CANCELAR</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $t('buttons.cancel'); ?></button>
 
                     <button type="submit" class="btn btn-primary float-right"><i class="fa fa-save"
                             onclick="Registrar_Dependientes_Colaborador()"><b>&nbsp;GUARDAR</b></i></button>
@@ -677,7 +677,7 @@ $t = function ($key) {
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR OBSERVACI&Oacute;N</h5>
+                    <h5 class="modal-title"><?php echo $t('titles.add_observation'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -694,9 +694,9 @@ $t = function ($key) {
                     </div>
                 </div>
                 <div class=" modal-footer">
-                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal"><?php echo $t('buttons.exit'); ?></button>
 
-                    <button type="submit" class="btn btn-primary" onclick="agregarNuevaObservacion()">AGREGAR</button>
+                    <button type="submit" class="btn btn-primary" onclick="agregarNuevaObservacion()"><?php echo $t('buttons.save'); ?></button>
                 </div>
             </form>
         </div>
@@ -712,7 +712,7 @@ MODAL LISTAR CONTRATOS
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
 
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">Lista de Documentos</h5>
+                    <h5 class="modal-title"><?php echo $t('titles.documents_list'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -723,10 +723,10 @@ MODAL LISTAR CONTRATOS
                         <thead>
                             <tr>
                                 <th style="text-align:center; width:10px">#</th>
-                                <th style="text-align:center; width:10px">Documento</th>
-                                <th style="text-align:center; width:10px">Fecha Registro</th>
-                                <th style="text-align:center; width:10px">Estado</th>
-                                <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                                <th style="text-align:center; width:10px"><?php echo $t('list_tables.document'); ?></th>
+                                <th style="text-align:center; width:10px"><?php echo $t('list_tables.registration_date'); ?></th>
+                                <th style="text-align:center; width:10px"><?php echo $t('list_tables.status'); ?></th>
+                                <th style="text-align:center; width:10px"><?php echo $t('list_tables.action'); ?></th>
                             </tr>
                         </thead>
                     </table>
@@ -741,7 +741,7 @@ MODAL LISTAR CONTRATOS
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">LISTA EMPLEADOS</h5>
+                    <h5 class="modal-title"><?php echo $t('titles.employees_list'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -753,8 +753,8 @@ MODAL LISTAR CONTRATOS
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-                                    <th style="text-align:center; width:10px">Empleado</th>
-                                    <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                                    <th style="text-align:center; width:10px"><?php echo $t('list_tables.employee'); ?></th>
+                                    <th style="text-align:center; width:10px"><?php echo $t('list_tables.action'); ?></th>
                                 </tr>
                             </thead>
                         </table>

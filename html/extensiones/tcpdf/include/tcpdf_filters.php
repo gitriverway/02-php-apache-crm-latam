@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 //============================================================+
 // File name   : tcpdf_filters.php
 // Version     : 1.0.001

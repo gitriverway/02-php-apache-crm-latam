@@ -106,7 +106,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
 <!-- /.content-wrapper -->
 
 <!--=====================================
-MODAL ASIGNAR VENDEDOR
+<?php echo $t('modal.assign_seller'); ?>
 ======================================-->
 <div id="modal_asignar_vendedor" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg">

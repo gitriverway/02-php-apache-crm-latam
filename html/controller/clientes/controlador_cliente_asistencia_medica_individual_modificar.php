@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 require '../../extensiones/PHPMailer/src/Exception.php';
 require '../../extensiones/PHPMailer/src/PHPMailer.php';
 require '../../extensiones/PHPMailer/src/SMTP.php';

@@ -1,5 +1,5 @@
 {
-  "common": {
+    "common": {
     "welcome": "Bem-vindo",
     "login": "Entrar",
     "logout": "Sair",
@@ -7,6 +7,10 @@
     "close_session": "Encerrar Sessão",
     "user": "Usuário",
     "password": "Senha",
+    "sales": "Vendas",
+    "providers": "Provedores",
+    "marketing": "Marketing",
+    "dashboard": "Painel",
     "change_password": "Atualizar Senha",
     "change_password_message": "Atualize sua senha facilmente aqui.",
     "new_password": "Nova Senha",
@@ -119,13 +123,103 @@
     "edit_emission_fire_empresarial": "Editar Emissão Seguro Incêndio PMEs",
     "edit_emission_civil_liability_individual": "Editar Emissão Responsabilidade Civil Individual",
     "edit_emission_civil_liability_empresarial": "Editar Emissão Responsabilidade Civil PMEs",
+    "edit_emission_fire_empresarial": "Editar Emissão Incêndio PMEs",
+    "edit_emission_home_individual": "Editar Emissão Residencial Individual",
     "edit_emission_transport_empresarial": "Editar Emissão Transporte PMEs",
     "edit_emission_vehicle_individual": "Editar Emissão Veículos Individual",
     "edit_emission_life_individual": "Editar Emissão Vida Individual",
     "edit_emission_life_individual_empresarial": "Editar Emissão Vida Individual PMEs",
     "edit_prospect": "Editar Prospecto",
-    "edit_prospect_pymes": "Editar Prospecto PMEs"
+    "edit_prospect_pymes": "Editar Prospecto PMEs",
+    "employees": "Funcionários"
   },
+
+  "menu": {
+    "dashboard": "Dashboard",
+    "providers": "Provedores",
+    "marketing": "Marketing",
+    "web_assignment": "Atribuição Web",
+    "carteira": "Carteira",
+    "individual": "Clientes",
+    "assigned_prospects": "Prospectos Atribuídos",
+    "create_prospect": "Criar Prospecto",
+    "customer_service": "Atendimento ao Cliente",
+    "medical_assistance": "Assistência Médica",
+    "emissions": "Emissões",
+    "renewals": "Renovações",
+    "reimbursements": "Reembolsos",
+    "hospital_credit": "Crédito Hospitalar",
+    "outpatient_credit": "Crédito Ambulatorial",
+    "vehicles": "Veículos",
+    "pymes": "PMEs",
+    "employees": "Funcionários",
+    "sales": "Vendas",
+    "corporate_assigned_prospects": "Prospectos Atribuídos",
+    "create_corporate_prospect": "Criar Prospecto",
+    "claims": "Sinistros",
+    "vehicle_claims": "Sinistros Veículos",
+    "medical_claims": "Sinistros Médicos",
+    "reports": "Relatórios",
+    "sales_report": "Relatório Vendas",
+    "monthly_sales": "Vendas Mensais",
+    "policy_management": "Gestão Apólices",
+    "policy_list": "Lista Apólices",
+    "user_management": "Gestão Usuários",
+    "user_list": "Lista Usuários",
+    "configuration": "Configuração",
+    "system_settings": "Configuração Sistema"
+  },
+
+  "edit_forms": {
+    "edit_life_individual": "Editar Cliente Vida Individual",
+    "edit_vehicle_individual": "Editar Emissão Veículo Individual",
+    "edit_home_individual": "Editar Emissão Residencial Individual", 
+    "edit_medical_assistance_individual": "Editar Emissão Assistência Médica Individual",
+    "personal_information": "Informação Pessoal",
+    "documents_information": "Informação Documentos",
+    "follow_up_information": "Informação Acompanhamento",
+    "list_documents": "Listar Documentos",
+    "add_observation": "Adicionar Observação",
+    "insurer": "SEGURADORA",
+    "insurance_plan": "PLANO DE SEGURO",
+    "insured_value": "VALOR SEGURADO",
+    "net_premium": "PRÊMIO LÍQUIDO",
+    "commissionable_premium": "PRÊMIO COMISSIONÁVEL",
+    "total_premium": "PRÊMIO TOTAL",
+    "payment_frequency": "FREQUÊNCIA DE PAGAMENTO",
+    "payment_method": "FORMA DE PAGAMENTO",
+    "monthly": "MENSAL",
+    "quarterly": "TRIMESTRAL",
+    "semi_annual": "SEMESTRAL",
+    "annual": "ANUAL",
+    "bank_debit": "DÉBITO BANCÁRIO",
+    "bank_transfer": "TRANSFERÊNCIA BANCÁRIA", 
+    "credit_card": "CARTÃO DE CRÉDITO",
+    "id_card": "CARTEIRA DE IDENTIDADE",
+    "name": "NOME",
+    "gender": "GÊNERO",
+    "male": "Masculino",
+    "female": "Feminino",
+    "civil_status": "ESTADO CIVIL",
+    "single": "SOLTEIRO/A",
+    "married": "CASADO/A",
+    "divorced": "DIVORCIADO/A",
+    "widowed": "VIÚVO/A",
+    "free_union": "UNIÃO LIVRE",
+    "birth_date": "DATA DE NASCIMENTO",
+    "age": "IDADE",
+    "email_optional": "EMAIL (OPCIONAL)",
+    "phone_optional": "TELEFONE (OPCIONAL)",
+    "province": "PROVÍNCIA",
+    "city": "CIDADE",
+    "home_address": "ENDEREÇO RESIDENCIAL",
+    "profession": "PROFISSÃO",
+    "income": "RENDIMENTOS",
+    "cancel": "CANCELAR",
+    "save": "SALVAR"
+  },
+
+  "list_modal": {
 
   "list_modal": {
     "list_sellers": "Lista de Vendedores",
@@ -135,6 +229,12 @@
   },
 
   "list_tables": {
+    "ip_blocking_status": "Status de Bloqueio de IP",
+    "ip_address": "Endereço IP",
+    "counter": "Contador",
+    "description": "Descrição",
+    "send_access": "Enviar Acesso",
+    "reset_password": "Resetar Senha",
     "origin": "Origem",
     "action": "Ação",
     "status": "Status",
@@ -191,6 +291,9 @@
     "name": "NOME",
     "razon_social": "RAZÃO SOCIAL",
     "enter_name": "INFORMAR NOME",
+    "enter_last_name": "INFORMAR SOBRENOME",
+    "enter_address": "INFORMAR ENDEREÇO",
+    "enter_direction": "INFORMAR ENDEREÇO",
     "gender": "GÊNERO",
     "male": "MASCULINO",
     "female": "FEMININO",
@@ -247,6 +350,9 @@
     "credit_card": "CARTÃO DE CRÉDITO",
     "personal_information": "INFORMAÇÕES PESSOAIS",
     "collaborators_information": "INFORMAÇÕES DOS COLABORADORES",
+    "add_dependence": "AGREGAR DEPENDÊNCIA",
+    "add_vehicle": "AGREGAR VEÍCULO",
+    "add_home": "AGREGAR HOGAR",
     "add_collaborators": "ADICIONAR COLABORADORES",
     "add_observation": "ADICIONAR OBSERVAÇÃO",
     "follow_up": "ACOMPANHAMENTO",
@@ -490,6 +596,70 @@
     "email_address_label": "ENDEREÇO DE E-MAIL"
   },
 
+  "titles": {
+    "ambulatory_credit_medical_assistance_pymes": "Crédito Ambulatorial Assistência Médica Individual Pymes",
+    "observations": "Observações",
+    "new_ambulatory_credit": "NOVO CRÉDITO AMBULATORIAL",
+    "contracts_list": "LISTA DE CONTRATOS",
+    "clients_list": "LISTA DE CLIENTES",
+    "dependents_list": "LISTA DE DEPENDENTES",
+    "add_observation": "ADICIONAR OBSERVAÇÃO",
+    "documents_list": "LISTA DE DOCUMENTOS",
+    "employees_list": "LISTA DE FUNCIONÁRIOS",
+    "information_personal": "Informação Pessoal",
+    "information_documents": "Informação de Documentos", 
+    "information_follow_up": "Informação de Acompanhamento",
+    "request_number_ambulatory": "Número Solicitação Ambulatorial",
+    "patient": "Paciente",
+    "diagnosis": "Diagnóstico",
+    "creation_date": "Data Criação",
+    "presented_expense": "Despesa Apresentada",
+    "state": "Estado",
+    "initial_document": "Documento Inicial",
+    "modification_date": "Data Modificação",
+    "authorization_document": "Documento Autorização",
+    "no_records": "SEM REGISTROS"
+  },
+
+  "buttons": {
+    "add": "ADICIONAR",
+    "cancel": "CANCELAR",
+    "exit": "Sair",
+    "save": "SALVAR",
+    "new_record": "Novo Registro",
+    "register": "REGISTRAR",
+    "close": "FECHAR",
+    "update": "ATUALIZAR"
+  },
+
+  "form": {
+    "patient_name": "NOME DO PACIENTE",
+    "origin": "ORIGEM",
+    "branch": "RAMOS",
+    "plan": "PLANO",
+    "net_premium": "PRÊMIO LÍQUIDO",
+    "commissionable_premium": "PRÊMIO COMISSIONÁVEL", 
+    "total_premium": "PRÊMIO TOTAL",
+    "payment_method": "FORMA DE PAGAMENTO",
+    "id_card": "CEDULA",
+    "name": "NOME",
+    "email": "EMAIL",
+    "phone": "TELEFONE",
+    "city": "CIDADE",
+    "address": "ENDEREÇO",
+    "gender": "GÊNERO",
+    "civil_status": "ESTADO CIVIL",
+    "observation": "OBSERVAÇÃO",
+    "observations": "OBSERVAÇÕES",
+    "status": "STATUS",
+    "select_option": "Selecione...",
+    "male": "Masculino",
+    "female": "Feminino",
+    "max_document_size": "Tamanho máximo do documento",
+    "document_mb_50": "50MB",
+    "document_mb_25": "25MB"
+  },
+
   "datatable": {
     "select": {
       "cells": {
@@ -541,5 +711,20 @@
       "showMessage": "Mostrar Tudo",
       "collapseMessage": "Colapsar Tudo"
     }
+  },
+
+  "modal": {
+    "client_list": "LISTA CLIENTES",
+    "add_observation": "ADICIONAR OBSERVAÇÃO",
+    "document_list": "Lista de Documentos",
+    "employee_list": "LISTA FUNCIONÁRIOS"
+  },
+
+  "status": {
+    "open": "ABERTO",
+    "not_interested": "NÃO INTERESSADO",
+    "interested": "INTERESSADO",
+    "contracted": "CONTRATADO",
+    "cancelled": "CANCELADO"
   }
 }

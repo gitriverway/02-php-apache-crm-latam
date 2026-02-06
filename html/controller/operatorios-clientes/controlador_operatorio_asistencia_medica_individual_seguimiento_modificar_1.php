@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 require '../../model/modelo_operatorio_cliente.php';
 require '../../model/modelo_operatorio_cliente_documento.php';
 require 'controlador_operatorio_enviar_correo_notificacion_documentos_faltantes_seguimiento_cliente_1.php';

@@ -91,7 +91,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
 <!-- /.content-wrapper -->
 
 <!--=====================================
-MODAL ASIGNAR VENDEDOR
+<?php echo $t('modal.assign_seller'); ?>
 ======================================-->
 <div id="modal_asignar_vendedor" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg">
@@ -131,7 +131,7 @@ MODAL LISTAR CONTRATOS
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
 
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">Lista de Documentos</h5>
+                    <h5 class="modal-title"><?php echo $t('list_modal.list_documents'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

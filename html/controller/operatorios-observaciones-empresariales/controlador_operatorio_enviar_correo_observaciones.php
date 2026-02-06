@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 require '../../extensiones/PHPMailer/src/Exception.php';
 require '../../extensiones/PHPMailer/src/PHPMailer.php';
 require '../../extensiones/PHPMailer/src/SMTP.php';
@@ -73,7 +78,7 @@ class Envio_correo_observaciones_operatorio_empresarial
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'CRÉDITO HOSPITALARIO Nº ' . $Ticket . ' - HA SIDO MODIFICADO';
+            $mail->Subject = 'CRÉDITO HOSPITALARIO Número ' . $Ticket . ' - HA SIDO MODIFICADO';
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -82,7 +87,7 @@ class Envio_correo_observaciones_operatorio_empresarial
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
                 <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Estimado/a cliente: <strong>' . $nombre . '</strong></h3>
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Queremos informarle que hay nueva información disponible sobre el seguimiento de su solicitud. Crédito Hospitalario con el Ticket Nº <strong>' . $Ticket . '</strong></h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Queremos informarle que hay nueva información disponible sobre el seguimiento de su solicitud. Crédito Hospitalario con el Ticket Número <strong>' . $Ticket . '</strong></h3>
             <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Observación: </strong> ' . $observacion_final . '</h3>
             <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Favor ingresar al link </strong><a href="https://crm.mqpseguros.com">https://crm.mqpseguros.com</a></h3>
 

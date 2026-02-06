@@ -50,10 +50,11 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.id_card'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.birth_date'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.gender'); ?></th>
-                            <th style="text-align:center; width:10px">Email</th>
-                            <th style="text-align:center; width:10px">Enviar Acceso</th>
-                            <th style="text-align:center; width:10px">Recuperar Contrase&ntilde;a</th>
-                            <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.email'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.send_access'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.reset_password'); ?>
+                            </th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.action'); ?></th>
                         </tr>
                     </thead>
                 </table>
@@ -69,7 +70,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
 
 
 <!--=====================================
-MODAL ASIGNAR VENDEDOR
+<?php echo $t('modal.assign_seller'); ?>
 ======================================-->
 <div id="modal_editar_cliente" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg">
@@ -237,8 +238,8 @@ MODAL ASIGNAR VENDEDOR
 
 <script src="js/clientes.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_cliente();
-    listar_combo_provincia();
-});
+    $(document).ready(function() {
+        listar_cliente();
+        listar_combo_provincia();
+    });
 </script>

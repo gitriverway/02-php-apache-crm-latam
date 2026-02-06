@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 
 if ($_SESSION["S_ROL"] == "CLIENTE") {
 
@@ -19,13 +24,13 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Crédito Ambulatorio Asistencia Medica Individual
+                    <h1><?php echo $t('medical_credits.ambulatory_medical_assistance_individual'); ?>
                     </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
-                        <li class="breadcrumb-item active">Crédito Ambulatorio Asistencia Medica Individual</li>
+                        <li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
+                        <li class="breadcrumb-item active"><?php echo $t('medical_credits.ambulatory_medical_assistance_individual'); ?></li>
                     </ol>
                 </div>
             </div>
@@ -40,8 +45,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                 <!-- <h3 class="card-title">BIENVENIDO AL CONTENIDO DE CREDITOS AMBULATORIO - ASISTENCIA MEDICA INDIVIDUAL</h3> -->
                 <div class="card-tools pull-right">
                     <button class="btn btn-primary" style="width:100%" onclick="AbrirModalRegistro()"><i
-                            class="fa fa-plus"><b>&nbsp;Nuevo
-                                Registro</i></b></button>
+                            class="fa fa-plus"><b>&nbsp;<?php echo $t('common.new_record'); ?></i></b></button>
                 </div>
             </div>
             <div class="card-body">
@@ -50,23 +54,23 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-                            <th style="text-align:center; width:10px">N° Solicitud Credito Ambulatorio</th>
-                            <th style="text-align:center; width:10px">Fecha Creaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Paciente</th>
-                            <th style="text-align:center; width:10px">Diagnostico</th>
-                            <th style="text-align:center; width:10px">Gasto Presentado</th>
-                            <th style="text-align:center; width:10px">Documento Inicial</th>
-                            <th style="text-align:center; width:10px">Envio Aseguradora</th>
-                            <th style="text-align:center; width:10px">Observaciones</th>
-                            <th style="text-align:center; width:10px">Estado</th>
-                            <th style="text-align:center; width:10px">Fecha Seguimiento</th>
-                            <th style="text-align:center; width:10px">Seguimiento Aseguradora</th>
-                            <th style="text-align:center; width:10px">Requerimiento por la aseguradora</th>
-                            <th style="text-align:center; width:10px">Requerimiento por la aseguradora 2</th>
-                            <th style="text-align:center; width:10px">Envio Requerimiento Aseguradora</th>
-                            <th style="text-align:center; width:10px">Envio Requerimiento Aseguradora 2</th>
-                            <th style="text-align:center; width:10px">Fecha Autorizaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Documento Autorizaci&oacute;n</th>
+                            <th style="text-align:center; width:10px"><?php echo $t('medical_credits.application_number'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('common.creation_date'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('common.patient'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('medical_credits.diagnosis'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('medical_credits.expense_presented'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('medical_credits.initial_document'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('medical_credits.insurance_submission'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('common.observations'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('common.status'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('medical_credits.follow_up_date'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('medical_credits.insurance_follow_up'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('medical_credits.insurance_requirement'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('medical_credits.insurance_requirement_2'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('medical_credits.requirement_submission'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('medical_credits.requirement_submission_2'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('medical_credits.authorization_date'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('medical_credits.authorization_document'); ?></th>
                         </tr>
                     </thead>
                 </table>
@@ -88,7 +92,7 @@ MODAL LISTAR OBSERVACIONES CREDITO AMBULATORIO
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Observaciones - <span id="ObservacionesPaciente"></span></h4>
+                <h4 class="modal-title"><?php echo $t('common.observations'); ?> - <span id="ObservacionesPaciente"></span></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -114,13 +118,13 @@ MODAL VALIDAR MODIFICAR CREDITO AMBULATORIO
         <div class="modal-content" id="modalValidarDocumentosCreditoAmbulatorio">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">VALIDAR DOCUMENTOS CRÉDITO AMBULATORIOS - <span
+                    <h5 class="modal-title"><?php echo $t('medical_credits.validate_ambulatory_credit_documents'); ?> - <span
                             id="modificarCreditoAmbulatorioPaciente"></span></h5>
                 </div>
                 <div class="modal-body">
                     <div class="row validarDatosCreditoAmbulatorio">
                         <div class="form-group col-12 col-lg-4 col-md-6">
-                            <label for="radio_solicitud" class="control-label">SOLICITUD AMBULATORIO
+                            <label for="radio_solicitud" class="control-label"><?php echo $t('medical_credits.ambulatory_request'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="form-check">
@@ -142,7 +146,7 @@ MODAL VALIDAR MODIFICAR CREDITO AMBULATORIO
                                 value="SOLICITUD AMBULATORIO">
                         </div>
                         <div class="form-group col-12 col-lg-4 col-md-6">
-                            <label for="radio_pedido_examenes" class="control-label">PEDIDOS DE EXAMENES<font
+                            <label for="radio_pedido_examenes" class="control-label"><?php echo $t('medical_credits.exam_requests'); ?><font
                                     color="red"> *</font>
                             </label>
                             <div class="form-check">
@@ -164,8 +168,7 @@ MODAL VALIDAR MODIFICAR CREDITO AMBULATORIO
                                 value="PEDIDOS DE EXÁMENES">
                         </div>
                         <div class="form-group col-12 col-lg-4 col-md-6">
-                            <label for="radio_pedido_rehabilitacion" class="control-label">PEDIDOS DE
-                                REHABILITACI&Oacute;N<font color="red"> *</font>
+                            <label for="radio_pedido_rehabilitacion" class="control-label"><?php echo $t('medical_credits.rehabilitation_requests'); ?><font color="red"> *</font>
                             </label>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_3"

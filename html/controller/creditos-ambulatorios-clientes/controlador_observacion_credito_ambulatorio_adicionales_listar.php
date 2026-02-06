@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
     require '../../model/modelo_credito_ambulatorio_cliente.php';
 
     class Lista_observacion_creditos_ambulatorios{

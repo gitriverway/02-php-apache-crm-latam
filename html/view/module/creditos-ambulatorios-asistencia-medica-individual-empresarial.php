@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 
 if ($_SESSION["S_ROL"] == "CLIENTE") {
 
@@ -24,7 +29,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
                         <li class="breadcrumb-item active">Crédito Ambulatorio Asistencia Medica Individual Pymes</li>
                     </ol>
                 </div>
@@ -50,7 +55,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-                            <th style="text-align:center; width:10px">N° Solicitud Credito Ambulatorio</th>
+                            <th style="text-align:center; width:10px">Número Solicitud Credito Ambulatorio</th>
                             <th style="text-align:center; width:10px">Fecha Creaci&oacute;n</th>
                             <th style="text-align:center; width:10px">Paciente</th>
                             <th style="text-align:center; width:10px">Diagnostico</th>

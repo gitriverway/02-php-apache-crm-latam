@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 // require '../../extensiones/PHPMailer/src/Exception.php';
 // require '../../extensiones/PHPMailer/src/PHPMailer.php';
 // require '../../extensiones/PHPMailer/src/SMTP.php';
@@ -110,7 +115,7 @@ class Envio_correo_notificacion_documentos_faltantes_operatorio_empresarial
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'IMPORTANTE: DOCUMENTOS FALTANTES EN CRÉDITO HOSPITALARIO Nº ' . $Ticket . ' - ASISTENCIA MÉDICA';
+            $mail->Subject = 'IMPORTANTE: DOCUMENTOS FALTANTES EN CRÉDITO HOSPITALARIO Número ' . $Ticket . ' - ASISTENCIA MÉDICA';
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 

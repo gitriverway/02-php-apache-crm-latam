@@ -1,4 +1,9 @@
 <?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
     require '../../model/modelo_prospecto_web.php';
 
     class Lista_chat_prospecto_web{

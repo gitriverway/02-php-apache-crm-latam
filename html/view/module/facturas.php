@@ -58,14 +58,14 @@ if($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE" && $
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-                            <th style="text-align:center; width:10px">Nº Documento</th>
-                            <th style="text-align:center; width:10px">Nombre</th>
-                            <th style="text-align:center; width:10px">N° Factura</th>
-                            <th style="text-align:center; width:10px">Fecha Emision</th>
-                            <th style="text-align:center; width:10px">Valor Factura</th>
-                            <th style="text-align:center; width:10px">Saldo Factura</th>
-                            <th style="text-align:center; width:10px">Estado</th>
-                            <th style="text-align:center; width:10px">Acci&oacute;n</th>
+<th style="text-align:center; width:10px"><?php echo $t('list_tables.document_number'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.name'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.invoice_number'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.emission_date'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.invoice_value'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.invoice_balance'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.status'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.action'); ?></th>
                         </tr>
                     </thead>
                 </table>
@@ -87,7 +87,7 @@ MODAL NUEVA FACTURA
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">NUEVA FACTURA</h5>
+                    <h5 class="modal-title"><?php echo $t('buttons.new_invoice'); ?></h5>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -135,9 +135,9 @@ MODAL NUEVA FACTURA
                             <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                 style="width:100%;">
                                 <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
-                                <option value="DEBITO BANCARIO">DEBITO BANCARIO</option>
-                                <option value="TRANSFERENCIA BANCARIO">TRANSFERENCIA BANCARIO</option>
-                                <option value="TARJETA DE CREDITO">TARJETA DE CREDITO</option>
+<option value="DEBITO BANCARIO"><?php echo $t('form.bank_debit'); ?></option>
+                                <option value="TRANSFERENCIA BANCARIO"><?php echo $t('form.bank_transfer'); ?></option>
+                                <option value="TARJETA DE CREDITO"><?php echo $t('form.credit_card'); ?></option>
                             </select>
                         </div>
                         <div class="form-group col-12">
@@ -147,7 +147,7 @@ MODAL NUEVA FACTURA
                             </label>
                             <input type="file" class="form-control" id="txt_factura_documento"
                                 name="txt_factura_documento" accept=".pdf">
-                                <p class="help-block">Peso máximo de la imagen 5MB</p>
+                                <p class="help-block"><?php echo $t('form.max_image_size'); ?> <?php echo $t('form.image_mb_5'); ?></p>
                         </div>
                     </div>
                 </div>

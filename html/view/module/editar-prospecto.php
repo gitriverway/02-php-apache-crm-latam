@@ -51,7 +51,7 @@ $t = function($key) {
                                 <!-- ENTRADA VENDEDOR -->
                                 <div class="form-group">
                                     <label for="txt_vendedor" class="control-label"
-                                        style="text-align: right;">VENDEDOR</label>
+                                        style="text-align: right;"><?php echo $t('form.seller'); ?></label>
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="txt_vendedor" autocomplete="off"
                                             style="text-transform: uppercase" readonly>
@@ -70,23 +70,23 @@ $t = function($key) {
                                 <input type="hidden" id="txt_idProspecto" value="<?php echo $_GET["idProspecto"]; ?>">
                                 <!-- ENTRADA PARA EL ORIGEN CLIENTE -->
                                 <div class="form-group">
-                                    <label for="cbm_origen" class=" control-label" style="text-align: right;">ORIGEN
+                                    <label for="cbm_origen" class=" control-label" style="text-align: right;"><?php echo $t('form.origin'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen"
                                         <?php echo $retVal = ($_SESSION["S_ROL"] == "VENDEDOR") ? "disabled" : ""; ?>>
                                         <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
-                                        <option value="MQP">MQP</option>
-                                        <option value="AMIGO">AMIGO</option>
-                                        <option value="CHAT">CHAT</option>
-                                        <option value="OTROS">OTROS</option>
+                                        <option value="MQP"><?php echo $t('options.mqp'); ?></option>
+                                        <option value="AMIGO"><?php echo $t('options.friend'); ?></option>
+                                        <option value="CHAT"><?php echo $t('options.chat'); ?></option>
+                                        <option value="OTROS"><?php echo $t('options.others'); ?></option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA EL NUEVO RAMO -->
                                 <div class="form-group">
-                                    <label for="txt_origen_web" class="control-label" style="text-align: right;">ORIGEN
+                                    <label for="txt_origen_web" class="control-label" style="text-align: right;"><?php echo $t('form.origin'); ?>
                                         WEB
                                         <font color="red"> *</font>
                                     </label>
@@ -97,7 +97,7 @@ $t = function($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA LOS RAMOS -->
                                 <div class="form-group">
-                                    <label for="cbm_categoria" class=" control-label" style="text-align: right;">RAMOS
+                                    <label for="cbm_categoria" class=" control-label" style="text-align: right;"><?php echo $t('form.categories'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_categoria" name="state" id="cbm_categoria">
