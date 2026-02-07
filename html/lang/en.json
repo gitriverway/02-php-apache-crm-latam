@@ -36,7 +36,6 @@
     "english": "English",
     "spanish": "Spanish",
     "portuguese": "Portuguese (Brazil)",
-    "dashboard": "Dashboard",
     "more_info": "More info",
     "control_panel": "Control Panel",
     "home": "Home",
@@ -307,9 +306,6 @@
   },
 
   "modal": {
-    "list_sellers": "Seller List",
-    "list_documents": "Document List",
-    "list_clients": "Client List",
     "list_sellers": "Seller List",
     "list_documents": "Document List",
     "list_clients": "Client List",
@@ -721,7 +717,7 @@
     "update": "UPDATE"
   },
 
-  "form": {
+  "form_2": {
     "patient_name": "PATIENT NAME",
     "origin": "ORIGIN",
     "branch": "BRANCH",
@@ -763,10 +759,11 @@
       "rows": {
         "1": "1 row selected",
         "_": "%d rows selected"
+      }
     }
   },
 
-  "modal": {
+  "modal_2": {
     "client_list": "Client List",
     "add_observation": "Add Observation",
     "document_list": "Document List",

@@ -1,3 +1,9 @@
+<?php
+require_once __DIR__ . '/../../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+?>
 <div class="col-12 col-lg-6">
     <div class=" small-box" style="background-color: #77dd77;">
         <div class="inner">

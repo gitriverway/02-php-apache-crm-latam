@@ -1,7 +1,13 @@
+<?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+?>
 <div class="col-12">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Individual</h3>
+            <h3 class="card-title"><?php echo $t('common.individual'); ?></h3>
         </div>
         <div class="card-body">
             <div class="row">

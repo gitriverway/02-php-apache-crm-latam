@@ -1,3 +1,9 @@
+<?php
+require_once __DIR__ . '/../../model/modelo_idioma.php';
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+?>
 <!-- right col (We are only adding the ID to make the widgets sortable)-->
 <section class="col-lg-12 connectedSortable">
     <!-- solid sales graph -->
@@ -5,7 +11,7 @@
         <div class="card-header border-0">
             <h3 class="card-title">
                 <i class="fas fa-th mr-1"></i>
-                Sales Graph
+                <?php echo $t('dashboard.sales_graph'); ?>
             </h3>
         </div>
         <div class="card-body">

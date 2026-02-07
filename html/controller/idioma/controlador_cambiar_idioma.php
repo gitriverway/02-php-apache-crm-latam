@@ -1,7 +1,11 @@
 <?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    if (!headers_sent()) {
+        session_start();
+    }
+}
 
 $idioma = isset($_POST['idioma']) ? htmlspecialchars($_POST['idioma'], ENT_QUOTES, 'UTF-8') : 'en';
 

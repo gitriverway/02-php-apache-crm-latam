@@ -11,7 +11,9 @@ class Modelo_Idioma
     public static function getCurrentLanguage()
     {
         if (session_status() === PHP_SESSION_NONE) {
-            session_start();
+            if (!headers_sent()) {
+                session_start();
+            }
         }
 
         if (isset($_SESSION['S_IDIOMA'])) {
@@ -27,7 +29,9 @@ class Modelo_Idioma
     public static function setLanguage($lang)
     {
         if (session_status() === PHP_SESSION_NONE) {
-            session_start();
+            if (!headers_sent()) {
+                session_start();
+            }
         }
 
         $allowedLanguages = ['en', 'es', 'pt-BR'];

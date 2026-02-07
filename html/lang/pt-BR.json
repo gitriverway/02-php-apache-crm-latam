@@ -36,7 +36,6 @@
     "english": "Inglês",
     "spanish": "Espanhol",
     "portuguese": "Português (Brasil)",
-    "dashboard": "Painel",
     "more_info": "Mais informações",
     "control_panel": "Painel de Controle",
     "home": "Início",
@@ -218,8 +217,6 @@
     "cancel": "CANCELAR",
     "save": "SALVAR"
   },
-
-  "list_modal": {
 
   "list_modal": {
     "list_sellers": "Lista de Vendedores",
@@ -578,14 +575,14 @@
     "add_email": "Adicionar E-mail",
     "register": "REGISTRAR",
     "confirmation": "Mensagem De Confirmação",
-    "data_updated_successfully": "Dados Atualizados Corretamente",
+    "provider_data_updated_successfully": "Dados Atualizados Corretamente",
     "provider_already_exists": "Desculpe, provedor já está em nossa base de dados",
     "could_not_complete_registration": "Desculpe, não foi possível completar o registro",
-    "fill_empty_email_fields": "Preencha os campos de e-mail vazios",
-    "must_create_reimbursement_email": "Deve criar e-mail para reembolsos",
-    "must_create_hospital_credit_email": "Deve criar e-mail para crédito hospitalario",
-    "must_create_ambulatory_credit_email": "Deve criar e-mail para crédito ambulatorial",
-    "must_create_home_claims_email": "Deve criar e-mail para sinistros residenciais",
+    "provider_fill_empty_email_fields": "Preencha os campos de e-mail vazios",
+    "provider_must_create_reimbursement_email": "Deve criar e-mail para reembolsos",
+    "provider_must_create_hospital_credit_email": "Deve criar e-mail para crédito hospitalario",
+    "provider_must_create_ambulatory_credit_email": "Deve criar e-mail para crédito ambulatorial",
+    "provider_must_create_home_claims_email": "Deve criar e-mail para sinistros residenciais",
     "refund_email_option": "E-MAIL REEMBOLSOS",
     "claims_email_option": "E-MAIL SINISTROS",
     "hospital_credit_email_option": "E-MAIL CRÉDITO HOSPITALAR",
@@ -632,7 +629,7 @@
     "update": "ATUALIZAR"
   },
 
-  "form": {
+  "patient_form": {
     "patient_name": "NOME DO PACIENTE",
     "origin": "ORIGEM",
     "branch": "RAMOS",

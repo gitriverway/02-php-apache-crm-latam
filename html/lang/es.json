@@ -35,9 +35,8 @@
     "language": "Idioma",
     "english": "Inglés",
     "spanish": "Español",
-    "portuguese": "Portugués (Brasil)",
-    "dashboard": "Tablero",
-    "more_info": "Más info",
+     "portuguese": "Portugués (Brasil)",
+     "more_info": "Más info",
     "control_panel": "Panel de Control",
     "home": "Inicio",
     "single": "Individual",
@@ -731,7 +730,7 @@
     "update": "ACTUALIZAR"
   },
 
-  "form": {
+  "form_fields": {
     "patient_name": "NOMBRE PACIENTE",
     "origin": "ORIGEN",
     "branch": "RAMOS",
@@ -816,53 +815,6 @@
       "showMessage": "Mostrar Todo",
       "collapseMessage": "Colapsar Todo"
     }
-  }
-}
-    "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
-    "sInfoPostFix": "",
-    "sSearch": "Buscar:",
-    "sUrl": "",
-    "sInfoThousands": ",",
-    "sLoadingRecords": "<b>No se encontraron datos</b>",
-    "oPaginate": {
-      "sFirst": "Primero",
-      "sLast": "Último",
-      "sNext": "Siguiente",
-      "sPrevious": "Anterior"
-    },
-    "oAria": {
-      "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
-      "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-    },
-    "searchPanes": {
-      "clearMessage": "Borrar todo",
-      "collapse": {
-        "0": "Paneles de búsqueda",
-        "_": "Paneles de búsqueda (%d)"
-      },
-      "count": "{total}",
-      "countFiltered": "{shown} ({total})",
-      "emptyPanes": "Sin paneles de búsqueda",
-      "loadMessage": "Cargando paneles de búsqueda",
-      "title": "Filtros Activos - %d",
-      "showMessage": "Mostrar Todo",
-      "collapseMessage": "Colapsar Todo"
-    }
-  },
-
-  "modal": {
-    "client_list": "LISTA CLIENTES",
-    "add_observation": "AGREGAR OBSERVACIÓN",
-    "document_list": "Lista de Documentos",
-    "employee_list": "LISTA EMPLEADOS"
-  },
-
-  "status": {
-    "open": "ABIERTO",
-    "not_interested": "NO INTERESADO",
-    "interested": "INTERESADO",
-    "contracted": "CONTRATADO",
-    "cancelled": "CANCELADO"
   }
 }
 
