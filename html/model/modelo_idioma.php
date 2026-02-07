@@ -91,7 +91,7 @@ class Modelo_Idioma
     }
 
     /**
-     * Obtie todas las traducciones del idioma actual
+     * Obtiene todas las traducciones del idioma actual
      */
     public static function getAllTranslations($lang = null)
     {
