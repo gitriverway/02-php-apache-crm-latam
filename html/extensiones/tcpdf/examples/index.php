@@ -1,8 +1,4 @@
 <?php
-require_once __DIR__ . '/../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
-};
 
 echo '<'.'?'.'xml version="1.0" encoding="UTF-8"'.'?'.'>';
 ?>

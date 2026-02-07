@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
-};
+// require_once __DIR__ . '/../model/modelo_idioma.php';
+// $t = function ($key) {
+//     return Modelo_Idioma::t($key);
+// };
 
 
 require_once "controller/controlador_plantilla.php";

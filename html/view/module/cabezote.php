@@ -86,7 +86,7 @@
     <ul class="navbar-nav ml-auto">
         <!-- Language Selector -->
         <?php
-        require_once __DIR__ . '/../model/modelo_idioma.php';
+        require_once __DIR__ . '/../../model/modelo_idioma.php';
         $currentLang = Modelo_Idioma::getCurrentLanguage();
         $t = function ($key) {
             return Modelo_Idioma::t($key);

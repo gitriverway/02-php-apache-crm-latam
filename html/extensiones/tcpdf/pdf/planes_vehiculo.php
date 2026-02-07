@@ -1,8 +1,4 @@
 <?php
-require_once __DIR__ . '/../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
-};
 
 
 	require '../../../controladores/vehiculo/controlador_planes_listar_vehiculo_seleccionados.php';

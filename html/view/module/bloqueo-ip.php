@@ -19,7 +19,7 @@ if ($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE") {
         <div class="container-fluid">
             <div class="row mb-2">
                 <?php
-                require_once __DIR__ . '/../model/modelo_idioma.php';
+                require_once __DIR__ . '/../../model/modelo_idioma.php';
                 $t = function ($key) {
                     return Modelo_Idioma::t($key);
                 };

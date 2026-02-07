@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../model/modelo_idioma.php';
+require_once __DIR__ . '/../../model/modelo_idioma.php';
 
 session_start();
 
