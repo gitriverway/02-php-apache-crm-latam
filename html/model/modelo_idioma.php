@@ -91,11 +91,10 @@ class Modelo_Idioma
     }
 
     /**
-     * Obtiene todas las traducciones del idioma actual
+     * Obtie todas las traducciones del idioma actual
      */
     public static function getAllTranslations($lang = null)
     {
         return self::loadTranslations($lang);
     }
 }
-
