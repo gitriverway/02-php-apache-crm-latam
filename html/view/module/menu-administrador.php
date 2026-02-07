@@ -1,11 +1,11 @@
 <?php
-require_once __DIR__ . '/../../model/modelo_idioma.php';
+require_once __DIR__ . '/../model/modelo_idioma.php';
 $t = function ($key) {
     return Modelo_Idioma::t($key);
 };
 ?>
 <?php
-require_once __DIR__ . '/../../model/modelo_idioma.php';
+require_once __DIR__ . '/../model/modelo_idioma.php';
 $t = function ($key) {
     return Modelo_Idioma::t($key);
 };
@@ -30,7 +30,7 @@ if (isset($_GET["ruta"])) {
     </a>
 </li>
 <?php
-require_once __DIR__ . '/../../model/modelo_idioma.php';
+require_once __DIR__ . '/../model/modelo_idioma.php';
 $t = function ($key) {
     return Modelo_Idioma::t($key);
 };
