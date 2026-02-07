@@ -1,21 +1,18 @@
 /*********************************
  CARGAR LISTA DE EMPLEADO EN TABLA
  *********************************/
-//  function lista1(){
-//     $.ajax({
-
-//         url:"controller/proveedores/controlador_proveedor_listar.php",
-//         method: "POST",
-//         cache: false,
-//         contentType: false,
-//         processData: false,
-//         success: function(respuesta){
-
-//             console.log("respuesta",respuesta);
-
-//         }
-//     });
-//  }
+function lista1() {
+  $.ajax({
+    url: "controller/proveedores/controlador_proveedor_listar.php",
+    method: "POST",
+    cache: false,
+    contentType: false,
+    processData: false,
+    success: function (respuesta) {
+      console.log("respuesta", respuesta);
+    },
+  });
+}
 
 if (window.matchMedia("(max-width:767px)").matches) {
   $("#tabla_proveedor").removeClass("nowrap");
@@ -63,9 +60,12 @@ $(".listaNuevosCorreos").on("change", ".ingresar_correo", function () {
   if (email.length > 0) {
     if (validarEmail(email) == 0) {
       return Swal.fire(
-        t('messages.warning', 'Warning Message'),
-        t('messages.check_email_format', 'Please check, email incorrectly entered'),
-        "warning"
+        t("messages.warning", "Warning Message"),
+        t(
+          "messages.check_email_format",
+          "Please check, email incorrectly entered",
+        ),
+        "warning",
       );
     }
   }
@@ -92,38 +92,58 @@ $(".btnAgregarNuevoCorreo").click(function () {
       '<div class="form-group col-12 col-md-3 order-1 my-1 ' +
       estado +
       '">' +
-          '<label for="cbm_tipo_correo" class="control-label" style="text-align: right;">' + t('messages.email_type_label') + '</label>' +
+      '<label for="cbm_tipo_correo" class="control-label" style="text-align: right;">' +
+      t("messages.email_type_label") +
+      "</label>" +
       "</div>" +
       '<div class="form-group col-12 col-md-3 order-5 my-1">' +
       '<select class="form-control cbm_tipo_correo js-example-basic-single" name="state" id="cbm_tipo_correo' +
       numNuevoCorreo +
       '" style="width:100%;">' +
-        '<option value="REEMBOLSOS">' + t('messages.refund_email_option') + '</option>' +
-        '<option value="SINIESTROS">' + t('messages.claims_email_option') + '</option>' +
-        '<option value="CREDITO HOSPITALARIO">' + t('messages.hospital_credit_email_option') + '</option>' +
-        '<option value="CREDITO AMBULATORIO">' + t('messages.ambulatory_credit_email_option') + '</option>' +
-        '<option value="SINIESTROS HOGAR">' + t('messages.home_claims_email_option') + '</option>' +
+      '<option value="REEMBOLSOS">' +
+      t("messages.refund_email_option") +
+      "</option>" +
+      '<option value="SINIESTROS">' +
+      t("messages.claims_email_option") +
+      "</option>" +
+      '<option value="CREDITO HOSPITALARIO">' +
+      t("messages.hospital_credit_email_option") +
+      "</option>" +
+      '<option value="CREDITO AMBULATORIO">' +
+      t("messages.ambulatory_credit_email_option") +
+      "</option>" +
+      '<option value="SINIESTROS HOGAR">' +
+      t("messages.home_claims_email_option") +
+      "</option>" +
       "</select>" +
       "</div>" +
       '<div class="form-group col-12 col-md-4 order-2 my-1 ' +
       estado +
       '">' +
-          '<label for="txt_destinatario" class="control-label" style="text-align: right;">' + t('messages.recipient_label') + '</label>' +
+      '<label for="txt_destinatario" class="control-label" style="text-align: right;">' +
+      t("messages.recipient_label") +
+      "</label>" +
       "</div>" +
       '<div class="form-group col-12 col-md-4 order-6 my-1">' +
       '<input type="text" class="form-control validarNumerosLetras ingresar_destinatario" id="txt_destinatario' +
       numNuevoCorreo +
-      '" placeholder="' + t('messages.enter_recipient', 'ENTER RECIPIENT') + '" autocomplete="off">' +
+      '" placeholder="' +
+      t("messages.enter_recipient", "ENTER RECIPIENT") +
+      '" autocomplete="off">' +
       "</div>" +
       '<div class="form-group col-12 col-md-4 order-3 my-1 ' +
       estado +
       '">' +
-          '<label for="txt_correo" class="control-label" style="text-align: right;">' + t('messages.email_address_label') + '</label>' +
+      '<label for="txt_correo" class="control-label" style="text-align: right;">' +
+      t("messages.email_address_label") +
+      "</label>" +
       "</div>" +
       '<div class="form-group col-12 col-md-4 order-7 my-1">' +
       '<input type="text" class="form-control validarNumerosLetras ingresar_correo" id="txt_correo' +
       numNuevoCorreo +
-      '" placeholder="' + t('messages.enter_email_address', 'ENTER EMAIL') + '" autocomplete="off">' +
+      '" placeholder="' +
+      t("messages.enter_email_address", "ENTER EMAIL") +
+      '" autocomplete="off">' +
       "</div>" +
       '<div class="my-1 col-12 col-md-1 order-4 my-1 ' +
       estado +
@@ -136,7 +156,7 @@ $(".btnAgregarNuevoCorreo").click(function () {
       '"><i class=" fa fa-times"></i></button>' +
       "</div>" +
       "</div>" +
-      "</div>"
+      "</div>",
   );
 
   numNuevoCorreo++;
@@ -265,7 +285,7 @@ function listarNuevoCorreo() {
     $("#listaCorreoCreditoAmbulatorio").val("");
   } else {
     $("#listaCorreoCreditoAmbulatorio").val(
-      JSON.stringify(listaCorreoCreditosAmbulatorios)
+      JSON.stringify(listaCorreoCreditosAmbulatorios),
     );
   }
 
@@ -273,7 +293,7 @@ function listarNuevoCorreo() {
     $("#listaCorreoSiniestrosHogar").val("");
   } else {
     $("#listaCorreoSiniestrosHogar").val(
-      JSON.stringify(listaCorreoSiniestroHogares)
+      JSON.stringify(listaCorreoSiniestroHogares),
     );
   }
 }
@@ -407,49 +427,49 @@ function Registrar_Proveedor() {
 
   if (nombre.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_empty_fields', 'Fill in the empty fields'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_empty_fields", "Fill in the empty fields"),
+      "warning",
     );
   }
 
   if (listaCorreoReembolsos.length == 0) {
-     return Swal.fire(
-       t('messages.warning'),
-       t('messages.must_create_reimbursement_email'),
-       "warning"
-     );
+    return Swal.fire(
+      t("messages.warning"),
+      t("messages.must_create_reimbursement_email"),
+      "warning",
+    );
   }
 
   if (listaCorreoSiniestros.length == 0) {
-     return Swal.fire(
-       t('messages.warning'),
-       t('messages.must_create_claims_email'),
-       "warning"
-     );
+    return Swal.fire(
+      t("messages.warning"),
+      t("messages.must_create_claims_email"),
+      "warning",
+    );
   }
 
   if (listaCorreoOperatorios.length == 0) {
-     return Swal.fire(
-       t('messages.warning'),
-       t('messages.must_create_hospital_credit_email'),
-       "warning"
-     );
+    return Swal.fire(
+      t("messages.warning"),
+      t("messages.must_create_hospital_credit_email"),
+      "warning",
+    );
   }
 
   if (listaCorreoCreditoAmbulatorio.length == 0) {
-     return Swal.fire(
-       t('messages.warning'),
-       t('messages.must_create_ambulatory_credit_email'),
-       "warning"
-     );
+    return Swal.fire(
+      t("messages.warning"),
+      t("messages.must_create_ambulatory_credit_email"),
+      "warning",
+    );
   }
   if (listaCorreoSiniestrosHogar.length == 0) {
-     return Swal.fire(
-       t('messages.warning'),
-       t('messages.must_create_home_claims_email'),
-       "warning"
-     );
+    return Swal.fire(
+      t("messages.warning"),
+      t("messages.must_create_home_claims_email"),
+      "warning",
+    );
   }
 
   if (
@@ -459,11 +479,11 @@ function Registrar_Proveedor() {
     cont_credito_ambulatorio > 0 ||
     cont_siniestro_hogar > 0
   ) {
-     return Swal.fire(
-       t('messages.warning'),
-       t('messages.fill_empty_email_fields'),
-       "warning"
-     );
+    return Swal.fire(
+      t("messages.warning"),
+      t("messages.fill_empty_email_fields"),
+      "warning",
+    );
   }
 
   var datos = new FormData();
@@ -488,25 +508,25 @@ function Registrar_Proveedor() {
         if (data["valor"] == 1) {
           $("#modal_registro").modal("hide");
           Swal.fire(
-            t('messages.confirmation'),
-            t('messages.data_updated_successfully'),
-            "success"
+            t("messages.confirmation"),
+            t("messages.data_updated_successfully"),
+            "success",
           ).then((value) => {
             LimpiarRegistro();
             table.ajax.reload();
           });
         } else {
-           return Swal.fire(
-             t('messages.warning'),
-             t('messages.provider_already_exists'),
-             "warning"
-           );
+          return Swal.fire(
+            t("messages.warning"),
+            t("messages.provider_already_exists"),
+            "warning",
+          );
         }
       } else {
         Swal.fire(
-          t('messages.warning'),
-          t('messages.could_not_complete_registration'),
-          "error"
+          t("messages.warning"),
+          t("messages.could_not_complete_registration"),
+          "error",
         );
       }
     },
@@ -538,19 +558,19 @@ $("#tabla_proveedor").on("click", ".btnEditar", function () {
       $("#txt_proveedor_editar").val(data[0]["proveedor_descripcion"]);
       $("#txt_direccion_proveedor_editar").val(data[0]["proveedor_direccion"]);
       $("#listaCorreoEditarReembolsos").val(
-        data[0]["proveedor_correo_reembolsos"]
+        data[0]["proveedor_correo_reembolsos"],
       );
       $("#listaCorreoEditarSiniestros").val(
-        data[0]["proveedor_correo_siniestros"]
+        data[0]["proveedor_correo_siniestros"],
       );
       $("#listaCorreoEditarOperatorios").val(
-        data[0]["proveedor_correo_operatorios"]
+        data[0]["proveedor_correo_operatorios"],
       );
       $("#listaCorreoEditarCreditoAmbulatorio").val(
-        data[0]["proveedor_correo_creditos_ambulatorios"]
+        data[0]["proveedor_correo_creditos_ambulatorios"],
       );
       $("#listaCorreoEditarSiniestrosHogar").val(
-        data[0]["proveedor_correo_siniestros_hogar"]
+        data[0]["proveedor_correo_siniestros_hogar"],
       );
       $(".listaEditarCorreos").empty();
       agregar_correo_auto($("#listaCorreoEditarReembolsos").val());
@@ -567,9 +587,9 @@ $(".listaEditarCorreos").on("change", ".ingresar_correo_editar", function () {
   if (email.length > 0) {
     if (validarEmail(email) == 0) {
       return Swal.fire(
-        t('messages.warning'),
-        t('messages.check_email_format'),
-        "warning"
+        t("messages.warning"),
+        t("messages.check_email_format"),
+        "warning",
       );
     }
   }
@@ -600,38 +620,58 @@ function agregar_correo_auto($lista) {
           '<div class="form-group col-12 col-md-3 order-1 my-1 ' +
           estado +
           '">' +
-          '<label for="cbm_tipo_correo_editar" class="control-label" style="text-align: right;">' + t('messages.email_type_label') + '</label>' +
+          '<label for="cbm_tipo_correo_editar" class="control-label" style="text-align: right;">' +
+          t("messages.email_type_label") +
+          "</label>" +
           "</div>" +
           '<div class="form-group col-12 col-md-3 order-5 my-1">' +
           '<select class="form-control cbm_tipo_correo_editar js-example-basic-single" name="state" id="cbm_tipo_correo_editar' +
           numEditarCorreo +
           '" style="width:100%;">' +
-        '<option value="REEMBOLSOS">' + t('messages.refund_email_option') + '</option>' +
-        '<option value="SINIESTROS">' + t('messages.claims_email_option') + '</option>' +
-        '<option value="CREDITO HOSPITALARIO">' + t('messages.hospital_credit_email_option') + '</option>' +
-        '<option value="CREDITO AMBULATORIO">' + t('messages.ambulatory_credit_email_option') + '</option>' +
-        '<option value="SINIESTROS HOGAR">' + t('messages.home_claims_email_option') + '</option>' +
+          '<option value="REEMBOLSOS">' +
+          t("messages.refund_email_option") +
+          "</option>" +
+          '<option value="SINIESTROS">' +
+          t("messages.claims_email_option") +
+          "</option>" +
+          '<option value="CREDITO HOSPITALARIO">' +
+          t("messages.hospital_credit_email_option") +
+          "</option>" +
+          '<option value="CREDITO AMBULATORIO">' +
+          t("messages.ambulatory_credit_email_option") +
+          "</option>" +
+          '<option value="SINIESTROS HOGAR">' +
+          t("messages.home_claims_email_option") +
+          "</option>" +
           "</select>" +
           "</div>" +
           '<div class="form-group col-12 col-md-4 order-2 my-1 ' +
           estado +
           '">' +
-          '<label for="txt_destinatario_editar" class="control-label" style="text-align: right;">' + t('messages.recipient_label') + '</label>' +
+          '<label for="txt_destinatario_editar" class="control-label" style="text-align: right;">' +
+          t("messages.recipient_label") +
+          "</label>" +
           "</div>" +
           '<div class="form-group col-12 col-md-4 order-6 my-1">' +
           '<input type="text" class="form-control validarNumerosLetras ingresar_destinatario_editar" id="txt_destinatario_editar' +
           numEditarCorreo +
-          '" placeholder="' + t('messages.enter_recipient', 'ENTER RECIPIENT') + '" autocomplete="off">' +
+          '" placeholder="' +
+          t("messages.enter_recipient", "ENTER RECIPIENT") +
+          '" autocomplete="off">' +
           "</div>" +
           '<div class="form-group col-12 col-md-4 order-3 my-1 ' +
           estado +
           '">' +
-          '<label for="txt_correo_editar" class="control-label" style="text-align: right;">' + t('messages.email_address_label') + '</label>' +
+          '<label for="txt_correo_editar" class="control-label" style="text-align: right;">' +
+          t("messages.email_address_label") +
+          "</label>" +
           "</div>" +
           '<div class="form-group col-12 col-md-4 order-7 my-1">' +
           '<input type="text" class="form-control validarNumerosLetras ingresar_correo_editar" id="txt_correo_editar' +
           numEditarCorreo +
-          '" placeholder="' + t('messages.enter_email_address', 'ENTER EMAIL') + '" autocomplete="off">' +
+          '" placeholder="' +
+          t("messages.enter_email_address", "ENTER EMAIL") +
+          '" autocomplete="off">' +
           "</div>" +
           '<div class="my-1 col-12 col-md-1 order-4 my-1 ' +
           estado +
@@ -644,14 +684,14 @@ function agregar_correo_auto($lista) {
           '"><i class=" fa fa-times"></i></button>' +
           "</div>" +
           "</div>" +
-          "</div>"
+          "</div>",
       );
 
       $("#cbm_tipo_correo_editar" + numEditarCorreo)
         .val(data[i]["tipo"])
         .change();
       $("#txt_destinatario_editar" + numEditarCorreo).val(
-        data[i]["destinatario"]
+        data[i]["destinatario"],
       );
       $("#txt_correo_editar" + numEditarCorreo).val(data[i]["correo"]);
 
@@ -696,7 +736,9 @@ $(".btnAgregarEditarCorreo").click(function () {
       '<div class="form-group col-12 col-md-4 order-6 my-1">' +
       '<input type="text" class="form-control validarNumerosLetras ingresar_destinatario_editar" id="txt_destinatario_editar' +
       numEditarCorreo +
-      '" placeholder="' + t('messages.enter_recipient', 'ENTER RECIPIENT') + '" autocomplete="off">' +
+      '" placeholder="' +
+      t("messages.enter_recipient", "ENTER RECIPIENT") +
+      '" autocomplete="off">' +
       "</div>" +
       '<div class="form-group col-12 col-md-4 order-3 my-1 ' +
       estado +
@@ -706,7 +748,9 @@ $(".btnAgregarEditarCorreo").click(function () {
       '<div class="form-group col-12 col-md-4 order-7 my-1">' +
       '<input type="text" class="form-control validarNumerosLetras ingresar_correo_editar" id="txt_correo_editar' +
       numEditarCorreo +
-      '" placeholder="' + t('messages.enter_email_address', 'ENTER EMAIL') + '" autocomplete="off">' +
+      '" placeholder="' +
+      t("messages.enter_email_address", "ENTER EMAIL") +
+      '" autocomplete="off">' +
       "</div>" +
       '<div class="my-1 col-12 col-md-1 order-4 my-1 ' +
       estado +
@@ -719,7 +763,7 @@ $(".btnAgregarEditarCorreo").click(function () {
       '"><i class=" fa fa-times"></i></button>' +
       "</div>" +
       "</div>" +
-      "</div>"
+      "</div>",
   );
 
   numEditarCorreo++;
@@ -756,7 +800,7 @@ $(".listaEditarCorreos").on("click", "button.quitarEditarCorreo", function () {
 
   localStorage.setItem(
     "quitarEditarCorreo",
-    JSON.stringify(idQuitarEditarCorreo)
+    JSON.stringify(idQuitarEditarCorreo),
   );
 
   numNuevoCorreo--;
@@ -833,7 +877,7 @@ function listarEditarCorreo() {
     $("#listaCorreoEditarReembolsos").val("");
   } else {
     $("#listaCorreoEditarReembolsos").val(
-      JSON.stringify(listaCorreoReembolsos)
+      JSON.stringify(listaCorreoReembolsos),
     );
   }
 
@@ -841,7 +885,7 @@ function listarEditarCorreo() {
     $("#listaCorreoEditarSiniestros").val("");
   } else {
     $("#listaCorreoEditarSiniestros").val(
-      JSON.stringify(listaCorreoSiniestros)
+      JSON.stringify(listaCorreoSiniestros),
     );
   }
 
@@ -849,7 +893,7 @@ function listarEditarCorreo() {
     $("#listaCorreoEditarOperatorios").val("");
   } else {
     $("#listaCorreoEditarOperatorios").val(
-      JSON.stringify(listaCorreoOperatorios)
+      JSON.stringify(listaCorreoOperatorios),
     );
   }
 
@@ -857,7 +901,7 @@ function listarEditarCorreo() {
     $("#listaCorreoEditarCreditoAmbulatorio").val("");
   } else {
     $("#listaCorreoEditarCreditoAmbulatorio").val(
-      JSON.stringify(listaCorreoCreditoAmbulatorio)
+      JSON.stringify(listaCorreoCreditoAmbulatorio),
     );
   }
 
@@ -865,7 +909,7 @@ function listarEditarCorreo() {
     $("#listaCorreoEditarSiniestrosHogar").val("");
   } else {
     $("#listaCorreoEditarSiniestrosHogar").val(
-      JSON.stringify(listaCorreoSiniestrosHogares)
+      JSON.stringify(listaCorreoSiniestrosHogares),
     );
   }
 }
@@ -882,7 +926,7 @@ function Modificar_Proveedor() {
   var listaCorreoSiniestros = $("#listaCorreoEditarSiniestros").val();
   var listaCorreoOperatorios = $("#listaCorreoEditarOperatorios").val();
   var listaCorreoCreditoAmbulatorio = $(
-    "#listaCorreoEditarCreditoAmbulatorio"
+    "#listaCorreoEditarCreditoAmbulatorio",
   ).val();
   var listaCorreoSiniestrosHogar = $("#listaCorreoEditarSiniestrosHogar").val();
 
@@ -983,18 +1027,18 @@ function Modificar_Proveedor() {
   }
 
   if (nombre.length == 0) {
-     return Swal.fire(
-       t('messages.warning'),
-       t('messages.fill_empty_fields'),
-       "warning"
-     );
+    return Swal.fire(
+      t("messages.warning"),
+      t("messages.fill_empty_fields"),
+      "warning",
+    );
   }
 
   if (listaCorreoReembolsos.length == 0) {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Debe crear correo para reembolsos",
-      "warning"
+      "warning",
     );
   }
 
@@ -1002,7 +1046,7 @@ function Modificar_Proveedor() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Debe crear correo para siniestros",
-      "warning"
+      "warning",
     );
   }
 
@@ -1010,7 +1054,7 @@ function Modificar_Proveedor() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Debe crear correo para credito hospitalario",
-      "warning"
+      "warning",
     );
   }
 
@@ -1018,7 +1062,7 @@ function Modificar_Proveedor() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Debe crear correo para credito ambulatorio",
-      "warning"
+      "warning",
     );
   }
 
@@ -1026,7 +1070,7 @@ function Modificar_Proveedor() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Debe crear correo para siniestros hogar",
-      "warning"
+      "warning",
     );
   }
 
@@ -1040,7 +1084,7 @@ function Modificar_Proveedor() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos de correo vacios",
-      "warning"
+      "warning",
     );
   }
 
@@ -1070,7 +1114,7 @@ function Modificar_Proveedor() {
           Swal.fire(
             "Mensaje De Confirmacion",
             "Datos Actualizados Correctamente",
-            "success"
+            "success",
           ).then((value) => {
             table.ajax.reload();
           });
@@ -1078,14 +1122,14 @@ function Modificar_Proveedor() {
           return Swal.fire(
             "Mensaje De Advertencia",
             "Lo sentimos, el proveedor ya se encuentra en nuestra base de datos",
-            "warning"
+            "warning",
           );
         }
       } else {
         Swal.fire(
           "Mensaje De Error",
           "Lo sentimos, no se pudo completar el registro",
-          "error"
+          "error",
         );
       }
     },

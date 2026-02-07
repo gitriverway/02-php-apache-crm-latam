@@ -232,6 +232,7 @@ CUERPO DEL MODAL
 <script>
     $(document).ready(function() {
         listar_proveedores();
+        lista1();
         $("#modal_registro").on('shown.bs.modal', function() {
             $("#txt_proveedor").focus();
         });
