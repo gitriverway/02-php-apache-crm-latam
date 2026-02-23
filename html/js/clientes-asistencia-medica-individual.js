@@ -1384,6 +1384,7 @@ function cargar_datos_cliente() {
     contentType: false,
     processData: false,
     success: function (respuesta) {
+      console.log(respuesta);
       var data = JSON.parse(respuesta);
 
       if (data.length > 0) {
