@@ -159,9 +159,12 @@ $("#tabla_lista_vendedores").on("click", ".btnAsignarVendedor", function () {
   } else {
     Swal.fire({
       icon: "error",
-      title: t('messages.error_updating', 'Error updating'),
-      text: t('messages.no_prospects_selected', 'No prospects selected to assign a seller'),
-      confirmButtonText: t('messages.close', 'Close'),
+      title: t("messages.error_updating", "Error updating"),
+      text: t(
+        "messages.no_prospects_selected",
+        "No prospects selected to assign a seller",
+      ),
+      confirmButtonText: t("messages.close", "Close"),
     });
   }
 });
@@ -181,9 +184,9 @@ function modificarVendedor(idProspecto, idEmpleado) {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          t('messages.confirmation', 'Confirmation Message'),
-          t('messages.seller_assigned', 'The seller has been assigned'),
-          "success"
+          t("messages.confirmation", "Confirmation Message"),
+          t("messages.seller_assigned", "The seller has been assigned"),
+          "success",
         ).then((value) => {
           $("#modal_asignar_vendedor").modal("hide");
           table_prospecto_empresarial.ajax.reload();
@@ -262,7 +265,10 @@ function listar_combo_categoria() {
       var data = JSON.parse(respuesta);
       var cadena = "";
       if (data.length > 0) {
-        cadena += "<option value=''>" + t('messages.select_option', 'Select..') + "</option>";
+        cadena +=
+          "<option value=''>" +
+          t("messages.select_option", "Select..") +
+          "</option>";
         for (var i = 0; i < data.length; i++) {
           cadena +=
             "<option  value='" +
@@ -273,7 +279,10 @@ function listar_combo_categoria() {
         }
         // cadena += "<option value='0'>OTROS</option>";
       } else {
-        cadena += "<option value=''>" + t('messages.no_records_found', 'NO RECORDS FOUND') + "</option>";
+        cadena +=
+          "<option value=''>" +
+          t("messages.no_records_found", "NO RECORDS FOUND") +
+          "</option>";
       }
       $(".cbm_categoria").html(cadena);
     },
@@ -294,7 +303,10 @@ function listar_combo_aseguradora() {
       var data = JSON.parse(respuesta);
       var cadena = "";
       if (data.length > 0) {
-        cadena += "<option value='0'>" + t('messages.select_option', 'Select..') + "</option>";
+        cadena +=
+          "<option value='0'>" +
+          t("messages.select_option", "Select..") +
+          "</option>";
         for (var i = 0; i < data.length; i++) {
           cadena +=
             "<option  value='" +
@@ -304,7 +316,10 @@ function listar_combo_aseguradora() {
             "</option>";
         }
       } else {
-        cadena += "<option value=''>" + t('messages.no_records_found', 'NO RECORDS FOUND') + "</option>";
+        cadena +=
+          "<option value=''>" +
+          t("messages.no_records_found", "NO RECORDS FOUND") +
+          "</option>";
       }
       $(".cbm_proveedor").html(cadena);
     },
@@ -325,7 +340,10 @@ function listar_combo_provincia() {
       var data = JSON.parse(respuesta);
       var cadena = "";
       if (data.length > 0) {
-        cadena += "<option value='0'>" + t('messages.select_option', 'Select..') + "</option>";
+        cadena +=
+          "<option value='0'>" +
+          t("messages.select_option", "Select..") +
+          "</option>";
         for (var i = 0; i < data.length; i++) {
           cadena +=
             "<option value='" +
@@ -335,7 +353,10 @@ function listar_combo_provincia() {
             "</option>";
         }
       } else {
-        cadena += "<option value=''>" + t('messages.no_records_found', 'NO RECORDS FOUND') + "</option>";
+        cadena +=
+          "<option value=''>" +
+          t("messages.no_records_found", "NO RECORDS FOUND") +
+          "</option>";
       }
       $(".cbm_provincia").html(cadena);
     },
@@ -373,7 +394,7 @@ $(".nuevoColaborador").on(
   "input.fecha_nacimiento_colaborador",
   function () {
     listarColaboradores();
-  }
+  },
 );
 
 /*=============================================
@@ -430,7 +451,9 @@ $(".btnAgregarColaborador").click(function () {
       numProspecto +
       '" name="nombreColaborador' +
       numProspecto +
-      '" placeholder="' + t('messages.enter_name', 'ENTER NAME') + '" autocomplete="off" style="text-transform: uppercase"></input>' +
+      '" placeholder="' +
+      t("messages.enter_name", "ENTER NAME") +
+      '" autocomplete="off" style="text-transform: uppercase"></input>' +
       "</div>" +
       "</div>" +
       "<!-- Genero -->" +
@@ -447,7 +470,9 @@ $(".btnAgregarColaborador").click(function () {
       '" name="generoColaborador' +
       numProspecto +
       '" required>' +
-      '<option value="">' + t('messages.select_option_uppercase', 'SELECT...') + '</option>' +
+      '<option value="">' +
+      t("messages.select_option_uppercase", "SELECT...") +
+      "</option>" +
       '<option value="masculino">Masculino</option>' +
       '<option value="femenino">Femenino</option>' +
       "</select>" +
@@ -511,7 +536,7 @@ $(".btnAgregarColaborador").click(function () {
       '"><i class="fa fa-times"></i></button>' +
       "</div>" +
       "</div>" +
-      "</div>"
+      "</div>",
   );
 });
 
@@ -587,7 +612,9 @@ function auto_agregar_familiares_dependientes(lista) {
         '" name="tipoFamiliar' +
         numSubProspecto +
         '" required>' +
-        '<option value= "">' + t('messages.select_option', 'Select..') + '</option>' +
+        '<option value= "">' +
+        t("messages.select_option", "Select..") +
+        "</option>" +
         '<option value= "Conyuge">Conyuge</option>' +
         '<option value= "Hijo/a">Hijo/a</option>' +
         '<option value= "Otro">Otro</option>' +
@@ -609,7 +636,9 @@ function auto_agregar_familiares_dependientes(lista) {
         numSubProspecto +
         '" name="nombreFamiliar' +
         numSubProspecto +
-        '" placeholder="' + t('form.enter_name', 'ENTER NAME') + '" autocomplete="off" style="text-transform: uppercase" value = "' +
+        '" placeholder="' +
+        t("form.enter_name", "ENTER NAME") +
+        '" autocomplete="off" style="text-transform: uppercase" value = "' +
         data[i]["nombre"] +
         '"></input>' +
         "</div>" +
@@ -628,7 +657,9 @@ function auto_agregar_familiares_dependientes(lista) {
         '" name="generoFamiliar' +
         numSubProspecto +
         '" required>' +
-        '<option value="">' + t('messages.select_option_uppercase', 'SELECT...') + '</option>' +
+        '<option value="">' +
+        t("messages.select_option_uppercase", "SELECT...") +
+        "</option>" +
         '<option value="masculino">Masculino</option>' +
         '<option value="femenino">Femenino</option>' +
         "</select>" +
@@ -671,7 +702,7 @@ function auto_agregar_familiares_dependientes(lista) {
         '"><i class="fa fa-times"></i></button>' +
         "</div>" +
         "</div>" +
-        "</div>"
+        "</div>",
     );
 
     $("#tipoFamiliar" + numSubProspecto)
@@ -724,7 +755,9 @@ $("#modalListarDependientesColaborador").on(
         '" name="tipoFamiliar' +
         numSubProspecto +
         '" required>' +
-        '<option value= "">' + t('messages.select_option', 'Select..') + '</option>' +
+        '<option value= "">' +
+        t("messages.select_option", "Select..") +
+        "</option>" +
         '<option value= "Conyuge">Conyuge</option>' +
         '<option value= "Hijo/a">Hijo/a</option>' +
         '<option value= "Otro">Otro</option>' +
@@ -746,7 +779,9 @@ $("#modalListarDependientesColaborador").on(
         numSubProspecto +
         '" name="nombreFamiliar' +
         numSubProspecto +
-        '" placeholder="' + t('messages.enter_name', 'ENTER NAME') + '" autocomplete="off" style="text-transform: uppercase"></input>' +
+        '" placeholder="' +
+        t("messages.enter_name", "ENTER NAME") +
+        '" autocomplete="off" style="text-transform: uppercase"></input>' +
         "</div>" +
         "</div>" +
         "<!-- Genero -->" +
@@ -763,7 +798,9 @@ $("#modalListarDependientesColaborador").on(
         '" name="generoFamiliar' +
         numSubProspecto +
         '" required>' +
-        '<option value="">' + t('messages.select_option_uppercase', 'SELECT...') + '</option>' +
+        '<option value="">' +
+        t("messages.select_option_uppercase", "SELECT...") +
+        "</option>" +
         '<option value="masculino">Masculino</option>' +
         '<option value="femenino">Femenino</option>' +
         "</select>" +
@@ -804,9 +841,9 @@ $("#modalListarDependientesColaborador").on(
         '"><i class="fa fa-times"></i></button>' +
         "</div>" +
         "</div>" +
-        "</div>"
+        "</div>",
     );
-  }
+  },
 );
 
 /*=============================================
@@ -1003,7 +1040,7 @@ function Registrar_Dependientes_Colaborador() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de familiares",
-      "warning"
+      "warning",
     );
   } else {
     $("#modalListarDependientesColaborador").modal("hide");
@@ -1026,9 +1063,9 @@ function agregarNuevaObservacion() {
   var observacion = $("#txt_observacion").val();
   if (observacion.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_observation', 'Fill in the observation'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_observation", "Fill in the observation"),
+      "warning",
     );
   }
   numObservacion++;
@@ -1098,7 +1135,7 @@ function agregarNuevaObservacion() {
       '"><i class="fa fa-times"></i></button>' +
       "</div>" +
       "</div>" +
-      "</div>"
+      "</div>",
   );
 
   $("#txt_observacion").val("");
@@ -1189,7 +1226,7 @@ $(".nuevaObservacion").on("click", "button.quitarObservacion", function () {
 
   localStorage.setItem(
     "quitarObservacion",
-    JSON.stringify(idQuitarObservacion)
+    JSON.stringify(idQuitarObservacion),
   );
 
   numProspecto--;
@@ -1227,13 +1264,13 @@ function LimpiarRegistro() {
 
 function crear_overlay_prospecto() {
   $("#cardBayer").append(
-    '<div class="overlay dark" id="overlayBayer"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlayBayer"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
   $("#cardPersonal").append(
-    '<div class="overlay dark" id="overlayPersonal"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlayPersonal"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
   $("#cardDependientes").append(
-    '<div class="overlay dark" id="overlayDependientes"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlayDependientes"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
 }
 function eliminar_overlay_prospecto() {
@@ -1284,65 +1321,65 @@ function Registrar_Cliente() {
 
   if (origen.length == 0 || origen == null) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_origin', 'Fill in the origin field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_origin", "Fill in the origin field"),
+      "warning",
     );
   }
 
   if (categoria.length == 0 || categoria == null) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_branch', 'Fill in the Branch field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_branch", "Fill in the Branch field"),
+      "warning",
     );
   }
 
   if (categoria == 0 && nuevo_categoria.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_new_branch', 'Fill in the new Branch field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_new_branch", "Fill in the new Branch field"),
+      "warning",
     );
   }
 
   if (nombre_prospecto.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_prospect_name', 'Fill in the prospect name field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_prospect_name", "Fill in the prospect name field"),
+      "warning",
     );
   }
 
   if (provincia < 1) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_province', 'Fill in the province field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_province", "Fill in the province field"),
+      "warning",
     );
   }
 
-  if (cedula.length < 10 && estado_bayer == "CONTRATADO") {
-    return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.enter_valid_id', 'Enter valid ID Card and/or RUC number'),
-      "warning"
-    );
-  }
+  // if (cedula.length < 10 && estado_bayer == "CONTRATADO") {
+  //   return Swal.fire(
+  //     t('messages.warning', 'Warning Message'),
+  //     t('messages.enter_valid_id', 'Enter valid ID Card and/or RUC number'),
+  //     "warning"
+  //   );
+  // }
 
   if (telefono.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_phone', 'Fill in the prospect phone field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_phone", "Fill in the prospect phone field"),
+      "warning",
     );
   }
 
   if (estado_bayer.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_prospect_status', 'Fill in the prospect status'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_prospect_status", "Fill in the prospect status"),
+      "warning",
     );
   }
 
@@ -1419,7 +1456,7 @@ function Registrar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios",
-      "warning"
+      "warning",
     );
   }
 
@@ -1427,7 +1464,7 @@ function Registrar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de familiares",
-      "warning"
+      "warning",
     );
   }
 
@@ -1435,7 +1472,7 @@ function Registrar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de vehiculos",
-      "warning"
+      "warning",
     );
   }
 
@@ -1484,9 +1521,12 @@ function Registrar_Cliente() {
 
       if (data.length > 0) {
         Swal.fire(
-          t('messages.confirmation', 'Confirmation Message'),
-          t('messages.new_prospect_registered', 'Data correctly, New Prospect Registered'),
-          "success"
+          t("messages.confirmation", "Confirmation Message"),
+          t(
+            "messages.new_prospect_registered",
+            "Data correctly, New Prospect Registered",
+          ),
+          "success",
         ).then((value) => {
           window.location = "prospecto-asignado-empresarial";
         });
@@ -1494,7 +1534,7 @@ function Registrar_Cliente() {
         Swal.fire(
           "Mensaje De Error",
           "Lo sentimos, no se pudo completar el registro",
-          "error"
+          "error",
         );
       }
       eliminar_overlay_prospecto();
@@ -1705,7 +1745,9 @@ function agregar_auto_Colaboradores() {
           numProspecto +
           '" name="nombreColaborador' +
           numProspecto +
-          '" placeholder="' + t('form.enter_name', 'ENTER NAME') + '" autocomplete="off" style="text-transform: uppercase" value = "' +
+          '" placeholder="' +
+          t("form.enter_name", "ENTER NAME") +
+          '" autocomplete="off" style="text-transform: uppercase" value = "' +
           data[i]["nombre"] +
           '"></input>' +
           "</div>" +
@@ -1724,7 +1766,9 @@ function agregar_auto_Colaboradores() {
           '" name="generoColaborador' +
           numProspecto +
           '" required>' +
-          '<option value="">' + t('messages.select_option_uppercase', 'SELECT...') + '</option>' +
+          '<option value="">' +
+          t("messages.select_option_uppercase", "SELECT...") +
+          "</option>" +
           '<option value="masculino">Masculino</option>' +
           '<option value="femenino">Femenino</option>' +
           "</select>" +
@@ -1787,7 +1831,7 @@ function agregar_auto_Colaboradores() {
           '"><i class="fa fa-times"></i></button>' +
           "</div>" +
           "</div>" +
-          "</div>"
+          "</div>",
       );
 
       $("#tipoColaborador" + numProspecto)
@@ -1887,7 +1931,7 @@ function agregar_auto_observaciones() {
               // '<button type="button" class="form-control btn btn-default btn-xs idObservacion="' + numObservacion + '"><i class="fa fa-times"></i></button>'+
               "</div>" +
               "</div>" +
-              "</div>"
+              "</div>",
           );
         }
       }
@@ -1940,65 +1984,65 @@ function Modificar_Prospecto() {
 
   if (origen.length == 0 || origen == null) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_origin', 'Fill in the origin field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_origin", "Fill in the origin field"),
+      "warning",
     );
   }
 
   if (categoria.length == 0 || categoria == null) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_branch', 'Fill in the Branch field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_branch", "Fill in the Branch field"),
+      "warning",
     );
   }
 
   if (categoria == 0 && nuevo_categoria.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_new_branch', 'Fill in the new Branch field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_new_branch", "Fill in the new Branch field"),
+      "warning",
     );
   }
 
   if (nombre_prospecto.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_prospect_name', 'Fill in the prospect name field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_prospect_name", "Fill in the prospect name field"),
+      "warning",
     );
   }
 
   if (provincia.length < 1) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_province', 'Fill in the province field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_province", "Fill in the province field"),
+      "warning",
     );
   }
 
-  if (cedula.length < 10 && estado_bayer == "CONTRATADO") {
-    return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.enter_valid_id', 'Enter valid ID Card and/or RUC number'),
-      "warning"
-    );
-  }
+  // if (cedula.length < 10 && estado_bayer == "CONTRATADO") {
+  //   return Swal.fire(
+  //     t('messages.warning', 'Warning Message'),
+  //     t('messages.enter_valid_id', 'Enter valid ID Card and/or RUC number'),
+  //     "warning"
+  //   );
+  // }
 
   if (telefono.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_phone', 'Fill in the prospect phone field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_phone", "Fill in the prospect phone field"),
+      "warning",
     );
   }
 
   if (estado_bayer.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_prospect_status', 'Fill in the prospect status'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_prospect_status", "Fill in the prospect status"),
+      "warning",
     );
   }
 
@@ -2075,7 +2119,7 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios",
-      "warning"
+      "warning",
     );
   }
 
@@ -2083,7 +2127,7 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de familiares",
-      "warning"
+      "warning",
     );
   }
 
@@ -2091,7 +2135,7 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de vehiculos",
-      "warning"
+      "warning",
     );
   }
 
@@ -2144,9 +2188,9 @@ function Modificar_Prospecto() {
 
       if (data[0]["valor"] == 1) {
         Swal.fire(
-          t('messages.confirmation', 'Confirmation Message'),
-          t('messages.prospect_updated', 'Data correctly, Prospect Updated'),
-          "success"
+          t("messages.confirmation", "Confirmation Message"),
+          t("messages.prospect_updated", "Data correctly, Prospect Updated"),
+          "success",
         ).then((value) => {
           window.location = "prospecto-asignado-empresarial";
         });
@@ -2154,7 +2198,7 @@ function Modificar_Prospecto() {
         Swal.fire(
           "Mensaje De Error",
           "Lo sentimos, no se pudo completar el registro",
-          "error"
+          "error",
         );
       }
       eliminar_overlay_prospecto();
@@ -2371,7 +2415,7 @@ function buscar_empleado_id(idEmpleado) {
       if (data.length > 0) {
         $("#txt_idEmpleado").val(data[0]["empleado_id"]);
         $("#txt_vendedor").val(
-          data[0]["empleado_nombre"] + " " + data[0]["empleado_apellido"]
+          data[0]["empleado_nombre"] + " " + data[0]["empleado_apellido"],
         );
       } else {
         $("#txt_idEmpleado").val("0");
@@ -2397,12 +2441,12 @@ $("#tabla_prospecto_empresarial").on(
       listarCheckAsignar.push(idProspecto);
     } else {
       listarCheckAsignar = listarCheckAsignar.filter(
-        (lista) => lista != idProspecto
+        (lista) => lista != idProspecto,
       );
     }
 
     console.log(listarCheckAsignar);
-  }
+  },
 );
 
 $("#tabla_prospecto_empresarial").on(
@@ -2420,7 +2464,7 @@ $("#tabla_prospecto_empresarial").on(
     }
 
     seleccionarActivarODesactivarAsignar(estado);
-  }
+  },
 );
 
 function seleccionarActivarODesactivarAsignar(estado) {

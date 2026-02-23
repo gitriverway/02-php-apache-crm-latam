@@ -151,9 +151,9 @@ $("#tabla_lista_vendedores").on("click", ".btnAsignarVendedor", function () {
     listarCheckAsignar = [];
 
     Swal.fire(
-      t('messages.confirmation', 'Confirmation Message'),
-      t('messages.seller_assigned', 'The seller has been assigned'),
-      "success"
+      t("messages.confirmation", "Confirmation Message"),
+      t("messages.seller_assigned", "The seller has been assigned"),
+      "success",
     ).then((value) => {
       table_prospecto.ajax.reload();
       $("#modal_asignar_vendedor").modal("hide");
@@ -161,9 +161,12 @@ $("#tabla_lista_vendedores").on("click", ".btnAsignarVendedor", function () {
   } else {
     Swal.fire({
       icon: "error",
-      title: t('messages.error_updating', 'Error updating'),
-      text: t('messages.no_prospects_selected', 'No prospects selected to assign seller!'),
-      confirmButtonText: t('messages.close', 'Close'),
+      title: t("messages.error_updating", "Error updating"),
+      text: t(
+        "messages.no_prospects_selected",
+        "No prospects selected to assign seller!",
+      ),
+      confirmButtonText: t("messages.close", "Close"),
     });
   }
 });
@@ -288,12 +291,12 @@ $("#tabla_prospecto").on("click", ".btnChatWeb", function () {
               "</label>" +
               "</div>" +
               "</div>" +
-              "</div>"
+              "</div>",
           );
         }
       } else {
         $("#todoChats").append(
-          '<div class="col-12 my-1">' + "<p>SIN REGISTROS</p>" + '</div">'
+          '<div class="col-12 my-1">' + "<p>SIN REGISTROS</p>" + '</div">',
         );
       }
     },
@@ -441,7 +444,7 @@ $(".nuevoDependiente").on(
   "input.fecha_nacimiento_Familiar",
   function () {
     listarFamiliares();
-  }
+  },
 );
 
 /*=============================================
@@ -563,7 +566,7 @@ $(".btnAgregarDependiente").click(function () {
       '"><i class="fa fa-times"></i></button>' +
       "</div>" +
       "</div>" +
-      "</div>"
+      "</div>",
   );
 });
 
@@ -851,7 +854,7 @@ $(".btnAgregarVehiculo").click(function () {
       '"><i class="fa fa-times"></i></button>' +
       "</div>" +
       "</div>" +
-      "</div>"
+      "</div>",
   );
 });
 
@@ -1015,9 +1018,9 @@ function agregarNuevaObservacion() {
   var observacion = $("#txt_observacion").val();
   if (observacion.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_observation', 'Fill in the observation'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_observation", "Fill in the observation"),
+      "warning",
     );
   }
   numObservacion++;
@@ -1087,7 +1090,7 @@ function agregarNuevaObservacion() {
       '"><i class="fa fa-times"></i></button>' +
       "</div>" +
       "</div>" +
-      "</div>"
+      "</div>",
   );
 
   $("#txt_observacion").val("");
@@ -1178,7 +1181,7 @@ $(".nuevaObservacion").on("click", "button.quitarObservacion", function () {
 
   localStorage.setItem(
     "quitarObservacion",
-    JSON.stringify(idQuitarObservacion)
+    JSON.stringify(idQuitarObservacion),
   );
 
   numProspecto--;
@@ -1218,13 +1221,13 @@ function LimpiarRegistro() {
 
 function crear_overlay_prospecto() {
   $("#cardBayer").append(
-    '<div class="overlay dark" id="overlayBayer"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlayBayer"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
   $("#cardPersonal").append(
-    '<div class="overlay dark" id="overlayPersonal"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlayPersonal"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
   $("#cardDependientes").append(
-    '<div class="overlay dark" id="overlayDependientes"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlayDependientes"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
 }
 function eliminar_overlay_prospecto() {
@@ -1283,73 +1286,76 @@ function Registrar_Cliente() {
 
   if (origen.length == 0 || origen == null) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_origin', 'Fill in the origin field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_origin", "Fill in the origin field"),
+      "warning",
     );
   }
 
   if (categoria.length == 0 || categoria == null) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_branch', 'Fill in the Branch field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_branch", "Fill in the Branch field"),
+      "warning",
     );
   }
 
   if (categoria == 0 && nuevo_categoria.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_new_branch', 'Fill in the new Branch field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_new_branch", "Fill in the new Branch field"),
+      "warning",
     );
   }
 
   if (nombre_prospecto.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_prospect_name', 'Fill in the prospect name field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_prospect_name", "Fill in the prospect name field"),
+      "warning",
     );
   }
 
   if (genero.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_prospect_gender', 'Fill in the prospect gender field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t(
+        "messages.fill_field_prospect_gender",
+        "Fill in the prospect gender field",
+      ),
+      "warning",
     );
   }
 
   if (provincia < 1) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_province', 'Fill in the province field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_province", "Fill in the province field"),
+      "warning",
     );
   }
 
-  if (cedula.length < 10 && estado_bayer == "CONTRATADO") {
-    return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.enter_valid_id', 'Enter valid ID Card and/or RUC number'),
-      "warning"
-    );
-  }
+  // if (cedula.length < 10 && estado_bayer == "CONTRATADO") {
+  //   return Swal.fire(
+  //     t("messages.warning", "Warning Message"),
+  //     t("messages.enter_valid_id", "Enter valid ID Card and/or RUC number"),
+  //     "warning",
+  //   );
+  // }
 
   if (telefono.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_field_phone', 'Fill in the prospect phone field'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_field_phone", "Fill in the prospect phone field"),
+      "warning",
     );
   }
 
   if (estado_bayer.length == 0) {
     return Swal.fire(
-      t('messages.warning', 'Warning Message'),
-      t('messages.fill_prospect_status', 'Fill in the prospect status'),
-      "warning"
+      t("messages.warning", "Warning Message"),
+      t("messages.fill_prospect_status", "Fill in the prospect status"),
+      "warning",
     );
   }
 
@@ -1459,7 +1465,7 @@ function Registrar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios",
-      "warning"
+      "warning",
     );
   }
 
@@ -1467,7 +1473,7 @@ function Registrar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de familiares",
-      "warning"
+      "warning",
     );
   }
 
@@ -1475,7 +1481,7 @@ function Registrar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de vehiculos",
-      "warning"
+      "warning",
     );
   }
 
@@ -1483,7 +1489,7 @@ function Registrar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de Hogares",
-      "warning"
+      "warning",
     );
   }
 
@@ -1538,7 +1544,7 @@ function Registrar_Cliente() {
         Swal.fire(
           "Mensaje De Confirmacion",
           "Datos correctamente, Nuevo Prospecto Registrado",
-          "success"
+          "success",
         ).then((value) => {
           window.location = "prospecto-asignado";
         });
@@ -1546,7 +1552,7 @@ function Registrar_Cliente() {
         Swal.fire(
           "Mensaje De Error",
           "Lo sentimos, no se pudo completar el registro",
-          "error"
+          "error",
         );
       }
       eliminar_overlay_prospecto();
@@ -1663,7 +1669,7 @@ function mensaje_cedula_duplicada(contador) {
     "Cedula ya registrada en " +
       contador +
       " contrato(s). Los campos de informaci&oacute;n personal han sido deshabilitados para evitar modificaciones.",
-    "warning"
+    "warning",
   ).then((value) => {
     setFieldsDisabled(existeCliente);
   });
@@ -1855,7 +1861,7 @@ function agregar_auto_familiares() {
           '"><i class="fa fa-times"></i></button>' +
           "</div>" +
           "</div>" +
-          "</div>"
+          "</div>",
       );
 
       $("#tipoFamiliar" + numProspecto)
@@ -2056,7 +2062,7 @@ function agregar_auto_vehiculos() {
           '"><i class="fa fa-times"></i></button>' +
           "</div>" +
           "</div>" +
-          "</div>"
+          "</div>",
       );
 
       $("#tipoVehiculo" + numVehiculo)
@@ -2065,7 +2071,7 @@ function agregar_auto_vehiculos() {
 
       $("#estadoCivil" + numVehiculo)
         .val(
-          data[i]["estado_civil"] ? data[i]["estado_civil"].toUpperCase() : ""
+          data[i]["estado_civil"] ? data[i]["estado_civil"].toUpperCase() : "",
         )
         .change();
     }
@@ -2158,7 +2164,7 @@ function agregar_auto_observaciones() {
               // '<button type="button" class="form-control btn btn-default btn-xs idObservacion="' + numObservacion + '"><i class="fa fa-times"></i></button>'+
               "</div>" +
               "</div>" +
-              "</div>"
+              "</div>",
           );
         }
       }
@@ -2222,7 +2228,7 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el campo origen",
-      "warning"
+      "warning",
     );
   }
 
@@ -2230,7 +2236,7 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el campo de Ramo",
-      "warning"
+      "warning",
     );
   }
 
@@ -2238,7 +2244,7 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el campo de nuevo Ramo",
-      "warning"
+      "warning",
     );
   }
 
@@ -2246,7 +2252,7 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el campo  nombre prospecto",
-      "warning"
+      "warning",
     );
   }
 
@@ -2254,7 +2260,7 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el campo genero prospecto",
-      "warning"
+      "warning",
     );
   }
 
@@ -2262,23 +2268,23 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el campo de provincia",
-      "warning"
+      "warning",
     );
   }
 
-  if (cedula.length < 10 && estado_bayer == "CONTRATADO") {
-    return Swal.fire(
-      "Mensaje De Advertencia",
-      "Ingrese numero de Cedula y/o Ruc valido",
-      "warning"
-    );
-  }
+  // if (cedula.length < 10 && estado_bayer == "CONTRATADO") {
+  //   return Swal.fire(
+  //     "Mensaje De Advertencia",
+  //     "Ingrese numero de Cedula y/o Ruc valido",
+  //     "warning"
+  //   );
+  // }
 
   if (telefono.length == 0) {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el campo telefono prospecto",
-      "warning"
+      "warning",
     );
   }
 
@@ -2286,7 +2292,7 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el estado del prospecto",
-      "warning"
+      "warning",
     );
   }
 
@@ -2407,7 +2413,7 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios",
-      "warning"
+      "warning",
     );
   }
 
@@ -2415,7 +2421,7 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de familiares",
-      "warning"
+      "warning",
     );
   }
 
@@ -2423,7 +2429,7 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de vehiculos",
-      "warning"
+      "warning",
     );
   }
 
@@ -2431,7 +2437,7 @@ function Modificar_Prospecto() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de Hogares",
-      "warning"
+      "warning",
     );
   }
 
@@ -2487,7 +2493,7 @@ function Modificar_Prospecto() {
         Swal.fire(
           "Mensaje De Confirmacion",
           "Datos correctamente, Actualizado Prospecto",
-          "success"
+          "success",
         ).then((value) => {
           window.location = "prospecto-asignado";
         });
@@ -2495,7 +2501,7 @@ function Modificar_Prospecto() {
         Swal.fire(
           "Mensaje De Error",
           "Lo sentimos, no se pudo completar el registro",
-          "error"
+          "error",
         );
       }
       eliminar_overlay_prospecto();
@@ -2571,7 +2577,7 @@ function buscar_cliente_id(idCliente) {
           .val(
             data[0]["cliente_estado_civil"]
               ? data[0]["cliente_estado_civil"]
-              : ""
+              : "",
           )
           .change();
         $("#txt_fecha_nacimiento").val(data[0]["cliente_fecha_nacimiento"]);
@@ -2647,7 +2653,7 @@ function buscar_cliente_cedula(cedula) {
           .val(
             data[0]["cliente_estado_civil"]
               ? data[0]["cliente_estado_civil"]
-              : ""
+              : "",
           )
           .change();
         $("#txt_fecha_nacimiento").val(data[0]["cliente_fecha_nacimiento"]);
@@ -2736,7 +2742,7 @@ function buscar_empleado_id(idEmpleado) {
       if (data.length > 0) {
         $("#txt_idEmpleado").val(data[0]["empleado_id"]);
         $("#txt_vendedor").val(
-          data[0]["empleado_nombre"] + " " + data[0]["empleado_apellido"]
+          data[0]["empleado_nombre"] + " " + data[0]["empleado_apellido"],
         );
       } else {
         $("#txt_idEmpleado").val("0");
@@ -2759,7 +2765,7 @@ $("#tabla_prospecto").on("click", ".chkSeleccionarAsignar", function () {
     listarCheckAsignar.push(idProspecto);
   } else {
     listarCheckAsignar = listarCheckAsignar.filter(
-      (lista) => lista != idProspecto
+      (lista) => lista != idProspecto,
     );
   }
 
@@ -2938,7 +2944,7 @@ $(".btnAgregarHogar").click(function () {
       '"><i class="fa fa-times"></i></button>' +
       "</div>" +
       "</div>" +
-      "</div>"
+      "</div>",
   );
 });
 
@@ -3241,7 +3247,7 @@ function agregar_auto_hogares() {
           '"><i class="fa fa-times"></i></button>' +
           "</div>" +
           "</div>" +
-          "</div>"
+          "</div>",
       );
 
       $("#tipoHogar" + numHogar)

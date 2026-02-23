@@ -1,6 +1,10 @@
 // Helper function para traducciones en JavaScript
 function t(key, defaultValue) {
-  if (typeof translations !== 'undefined' && translations.form && translations.form[key]) {
+  if (
+    typeof translations !== "undefined" &&
+    translations.form &&
+    translations.form[key]
+  ) {
     return translations.form[key];
   }
   return defaultValue || key;
@@ -195,7 +199,7 @@ $(".listaAdicional").on("click", ".btnVerDocumentoCondiciones", function () {
   window.open(
     documentoRuta,
     "Documento Condiciones Renovacion",
-    "width=1024,height=1024"
+    "width=1024,height=1024",
   );
 });
 
@@ -222,18 +226,18 @@ $("#tabla_lista_contratos").on(
           idCliente,
           idDocumentoEmision,
           carpetaDocumento,
-          documentoRuta
+          documentoRuta,
         );
       }
     });
-  }
+  },
 );
 
 function eliminar_documento_emision(
   idCliente,
   idDocumentoEmision,
   carpetaDocumento,
-  documentoRuta
+  documentoRuta,
 ) {
   var datos = new FormData();
   datos.append("idCliente", idCliente);
@@ -291,7 +295,7 @@ $("#tabla_lista_vendedores").on("click", ".btnAsignarVendedor", function () {
         Swal.fire(
           "Mensaje De Confirmacion",
           "El vendedor a sido asignado",
-          "success"
+          "success",
         ).then((value) => {
           $("#modal_asignar_vendedor").modal("hide");
           tabla_cliente_pymes.ajax.reload();
@@ -613,7 +617,7 @@ $(".listaAdicional").on("click", "button.btnAgregarColaborador", function () {
         '"><i class="fa fa-times"></i></button>' +
         "</div>" +
         "</div>" +
-        "</div>"
+        "</div>",
     );
 });
 
@@ -784,7 +788,7 @@ function auto_agregar_familiares_dependientes(lista) {
         '"><i class="fa fa-times"></i></button>' +
         "</div>" +
         "</div>" +
-        "</div>"
+        "</div>",
     );
 
     $("#tipoFamiliar" + numSubProspecto)
@@ -935,9 +939,9 @@ $("#modalListarDependientesColaborador").on(
         '"><i class="fa fa-times"></i></button>' +
         "</div>" +
         "</div>" +
-        "</div>"
+        "</div>",
     );
-  }
+  },
 );
 
 /*=============================================
@@ -1201,7 +1205,7 @@ function Registrar_Dependientes_Colaborador() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de familiares",
-      "warning"
+      "warning",
     );
   } else {
     $("#modalListarDependientesColaborador").modal("hide");
@@ -1226,7 +1230,7 @@ function agregarNuevaObservacion() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene la observaci&oacute;n",
-      "warning"
+      "warning",
     );
   }
   numObservacion++;
@@ -1296,7 +1300,7 @@ function agregarNuevaObservacion() {
       '"><i class="fa fa-times"></i></button>' +
       "</div>" +
       "</div>" +
-      "</div>"
+      "</div>",
   );
 
   $("#txt_observacion").val("");
@@ -1387,7 +1391,7 @@ $(".nuevaObservacion").on("click", "button.quitarObservacion", function () {
 
   localStorage.setItem(
     "quitarObservacion",
-    JSON.stringify(idQuitarObservacion)
+    JSON.stringify(idQuitarObservacion),
   );
 
   numProspecto--;
@@ -1474,9 +1478,9 @@ $(".listaAdicional").on(
           '"><i class="fa fa-times"></i></button>' +
           "</div>" +
           "</div>" +
-          "</div>"
+          "</div>",
       );
-  }
+  },
 );
 
 /*=============================================
@@ -1505,14 +1509,14 @@ $(".listaAdicional").on(
       idQuitarDocumento = [];
     } else {
       idQuitarDocumento.concat(
-        localStorage.getItem("quitarCondicionRenovacion")
+        localStorage.getItem("quitarCondicionRenovacion"),
       );
     }
 
     idQuitarDocumento.push({
       idDocumento: idDocumento,
     });
-  }
+  },
 );
 
 /*=============================================
@@ -1561,7 +1565,7 @@ function listarCondiciones() {
     }
 
     $("#listaCondicionesRenovacion" + j).val(
-      JSON.stringify(listaCondicionesRenovacion)
+      JSON.stringify(listaCondicionesRenovacion),
     );
 
     // console.log($("#listaCondicionesRenovacion"+j).val());
@@ -1578,7 +1582,7 @@ $(".listaAdicional").on(
     $(this).removeClass("btn-primary");
     $(this).addClass("btn-default");
     $(".cardCondicionesRenovacion").removeClass("d-none");
-  }
+  },
 );
 
 $(".listaAdicional").on("click", "button.btnAgregarRenovacion", function (e) {
@@ -1775,14 +1779,14 @@ $(".listaAdicional").on("click", "button.btnAgregarRenovacion", function (e) {
       "</div>" +
       "</div>" +
       "</div>" +
-      "</div>"
+      "</div>",
   );
 
   /******************************************************
    *********** Cargar el ultimo listado de dependientes
    *******************************************************/
   $("#listaColaboradores" + num_lista_dependiente).val(
-    $("#listaColaboradores" + (num_lista_dependiente - 1)).val()
+    $("#listaColaboradores" + (num_lista_dependiente - 1)).val(),
   );
   agregar_auto_Colaboradores(num_lista_dependiente);
 });
@@ -1835,7 +1839,7 @@ function cargar_datos_cliente() {
           $("#txt_valor_asegurado").val(data[0]["cliente_valor_asegurado"]);
           $("#txt_prima_neta").val(data[0]["cliente_prima_neta"]);
           $("#txt_prima_comisionable").val(
-            data[0]["cliente_prima_comisionable"]
+            data[0]["cliente_prima_comisionable"],
           );
           $("#txt_prima_total").val(data[0]["cliente_prima_total"]);
           $("#cbm_tipo_pago").val(data[0]["cliente_tipo_pago"]).change();
@@ -1924,7 +1928,7 @@ function agregar_auto_lista_dependientes(data) {
           data[i]["cliente_condiciones"],
           data[i]["cliente_condiciones_envio"],
           data[i]["cliente_ruta_condiciones_documento"],
-          data[i]["contrato_estatus"]
+          data[i]["contrato_estatus"],
         );
         estado = "d-none";
       } else {
@@ -1937,7 +1941,7 @@ function agregar_auto_lista_dependientes(data) {
         data[i]["cliente_condiciones"],
         data[i]["cliente_condiciones_envio"],
         data[i]["cliente_ruta_condiciones_documento"],
-        data[i]["contrato_estatus"]
+        data[i]["contrato_estatus"],
       );
     }
 
@@ -2119,11 +2123,11 @@ function agregar_auto_lista_dependientes(data) {
         "</div>" +
         "</div>" +
         "</div>" +
-        "</div>"
+        "</div>",
     );
 
     $("#listaColaboradores" + num_lista_dependiente).val(
-      data[i]["cliente_familiares"]
+      data[i]["cliente_familiares"],
     );
 
     agregar_auto_Colaboradores(num_lista_dependiente);
@@ -2133,13 +2137,13 @@ function agregar_auto_lista_dependientes(data) {
     }
 
     $("#txt_numero_contrato" + num_lista_dependiente).val(
-      data[i]["contrato_numero"]
+      data[i]["contrato_numero"],
     );
     $("#txt_fecha_inicio_contrato" + num_lista_dependiente).val(
-      data[i]["contrato_fecha_inicio"]
+      data[i]["contrato_fecha_inicio"],
     );
     $("#txt_fecha_fin_contrato" + num_lista_dependiente).val(
-      data[i]["contrato_fecha_fin"]
+      data[i]["contrato_fecha_fin"],
     );
   }
 }
@@ -2148,7 +2152,7 @@ function cargar_condiciones_renovacion(
   listaCondiciones,
   condiciones_envio,
   ruta_condiciones_documento,
-  contrato_estatus
+  contrato_estatus,
 ) {
   num_condiciones_renovacion++;
 
@@ -2237,7 +2241,7 @@ function cargar_condiciones_renovacion(
 
   var condiciones = agregar_auto_cargar_condiciones_renovacion(
     listaCondiciones,
-    num_condiciones_renovacion
+    num_condiciones_renovacion,
   );
 
   var dato =
@@ -2554,7 +2558,7 @@ function agregar_auto_Colaboradores(idValor) {
           '"><i class="fa fa-times"></i></button>' +
           "</div>" +
           "</div>" +
-          "</div>"
+          "</div>",
       );
 
       $("#tipoColaborador" + numProspecto).val(data[i]["tipo"]);
@@ -2653,7 +2657,7 @@ function agregar_auto_observaciones() {
               // '<button type="button" class="form-control btn btn-default btn-xs idObservacion="' + numObservacion + '"><i class="fa fa-times"></i></button>'+
               "</div>" +
               "</div>" +
-              "</div>"
+              "</div>",
           );
         }
       }
@@ -2715,19 +2719,19 @@ function listarDocumentos() {
 
 function crear_overlay_asistencia_medica() {
   $("#cardBayer").append(
-    '<div class="overlay dark" id="overlayBayer"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlayBayer"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
   $("#cardPersonal").append(
-    '<div class="overlay dark" id="overlayPersonal"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlayPersonal"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
   $(".cardAdicional").append(
-    '<div class="overlay dark overlayDependientes"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark overlayDependientes"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
   $("#cardDocumento").append(
-    '<div class="overlay dark" id="overlayDocumentos"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlayDocumentos"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
   $("#cardSeguimiento").append(
-    '<div class="overlay dark" id="overlaySeguimiento"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlaySeguimiento"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
 }
 function eliminar_overlay_asistencia_medica() {
@@ -2812,7 +2816,7 @@ function Modificar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el campo origen",
-      "warning"
+      "warning",
     );
   }
 
@@ -2820,7 +2824,7 @@ function Modificar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el campo de Ramo",
-      "warning"
+      "warning",
     );
   }
 
@@ -2828,7 +2832,7 @@ function Modificar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el campo de nuevo Ramo",
-      "warning"
+      "warning",
     );
   }
 
@@ -2836,7 +2840,7 @@ function Modificar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el campo  nombre cliente",
-      "warning"
+      "warning",
     );
   }
 
@@ -2844,23 +2848,23 @@ function Modificar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el campo de provincia",
-      "warning"
+      "warning",
     );
   }
 
-  if (cedula.length < 10 && estado_bayer == "CONTRATADO") {
-    return Swal.fire(
-      "Mensaje De Advertencia",
-      "Ingrese numero de Cedula y/o Ruc valido",
-      "warning"
-    );
-  }
+  // if (cedula.length < 10 && estado_bayer == "CONTRATADO") {
+  //   return Swal.fire(
+  //     "Mensaje De Advertencia",
+  //     "Ingrese numero de Cedula y/o Ruc valido",
+  //     "warning"
+  //   );
+  // }
 
   if (estado_bayer.length == 0) {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene el estado del cliente",
-      "warning"
+      "warning",
     );
   }
 
@@ -2889,7 +2893,7 @@ function Modificar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios",
-      "warning"
+      "warning",
     );
   }
 
@@ -2959,7 +2963,7 @@ function Modificar_Cliente() {
 
   if ($("#txt_documento_condiciones_renovacion").length > 0) {
     nombre_documento_condiciones = $(
-      "#txt_nombre_documento_condiciones_renovacion"
+      "#txt_nombre_documento_condiciones_renovacion",
     ).val();
     archivo_condiciones = $("#txt_documento_condiciones_renovacion").val();
     extension_condiciones = archivo_condiciones.split(".").pop();
@@ -3066,7 +3070,7 @@ function Modificar_Cliente() {
           Swal.fire(
             "Mensaje De Confirmacion",
             "Datos correctamente, Actualizado Cliente",
-            "success"
+            "success",
           ).then((value) => {
             window.location =
               "clientes-asistencia-medica-individual-empresarial";
@@ -3075,14 +3079,14 @@ function Modificar_Cliente() {
           return Swal.fire(
             "Mensaje De Advertencia",
             "Lo sentimos, la cedula ya esta registrada en otro cliente",
-            "warning"
+            "warning",
           );
         }
       } else {
         Swal.fire(
           "Mensaje De Error",
           "Lo sentimos, no se pudo completar el registro",
-          "error"
+          "error",
         );
       }
       eliminar_overlay_asistencia_medica();
@@ -3240,7 +3244,7 @@ function buscar_empleado_id(idEmpleado) {
       if (data.length > 0) {
         $("#txt_idEmpleado").val(data[0]["empleado_id"]);
         $("#txt_vendedor").val(
-          data[0]["empleado_nombre"] + " " + data[0]["empleado_apellido"]
+          data[0]["empleado_nombre"] + " " + data[0]["empleado_apellido"],
         );
       } else {
         $("#txt_idEmpleado").val("0");
@@ -3290,7 +3294,7 @@ $(".listaAdicional").on(
     } else {
       leer_archivo_excel(documento, num_actualizar_dependiente);
     }
-  }
+  },
 );
 
 function leer_archivo_excel(documento, num_actualizar_dependiente) {
@@ -3324,7 +3328,7 @@ $(".listaAdicional").on("change", ".txt_fecha_inicio_contrato", function () {
       .split("-")
       .map(Number);
     var fechaInicioObj = new Date(
-      Date.UTC(yearInicio, monthInicio - 1, dayInicio)
+      Date.UTC(yearInicio, monthInicio - 1, dayInicio),
     );
 
     // Sumar 1 año
