@@ -3,7 +3,7 @@
  *********************************/
 function lista1() {
   $.ajax({
-    url: "controller/proveedores/controlador_proveedor_listar.php",
+    url: "/controller/proveedores/controlador_proveedor_listar.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -496,7 +496,7 @@ function Registrar_Proveedor() {
   datos.append("listaCorreoSiniestrosHogar", listaCorreoSiniestrosHogar);
 
   $.ajax({
-    url: "controller/proveedores/controlador_proveedor_registro.php",
+    url: "/controller/proveedores/controlador_proveedor_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -545,7 +545,7 @@ $("#tabla_proveedor").on("click", ".btnEditar", function () {
   var datos = new FormData();
   datos.append("idProveedor", idProveedor);
   $.ajax({
-    url: "controller/proveedores/controlador_traerdatos_proveedor.php",
+    url: "/controller/proveedores/controlador_traerdatos_proveedor.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1099,7 +1099,7 @@ function Modificar_Proveedor() {
   datos.append("listaCorreoSiniestrosHogar", listaCorreoSiniestrosHogar);
 
   $.ajax({
-    url: "controller/proveedores/controlador_proveedor_modificar.php",
+    url: "/controller/proveedores/controlador_proveedor_modificar.php",
     method: "POST",
     data: datos,
     cache: false,

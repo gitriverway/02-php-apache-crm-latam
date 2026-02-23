@@ -1,6 +1,6 @@
 // function lista1() {
 //   $.ajax({
-//     url: "controller/reembolsos-clientes/controlador_reembolsos_asistencia_medica_individual_listar.php",
+//     url: "/controller/reembolsos-clientes/controlador_reembolsos_asistencia_medica_individual_listar.php",
 //     method: "POST",
 //     cache: false,
 //     contentType: false,
@@ -107,7 +107,7 @@ function fecha_actual() {
   var fecha_actual_obervacion;
 
   $.ajax({
-    url: "controller/controlador_fecha_actual_zona_horario.php",
+    url: "/controller/controlador_fecha_actual_zona_horario.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -251,7 +251,7 @@ $("#tabla-listar-reembolsos-asistencia-medica-individual").on(
     datos.append("idReembolso", idReembolso);
 
     $.ajax({
-      url: "controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
+      url: "/controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
       method: "POST",
       data: datos,
       cache: false,
@@ -367,7 +367,7 @@ function reactivarReembolsoAnulado(idReembolso, estado) {
       datos.append("estado", estado);
 
       $.ajax({
-        url: "controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_reactivar.php",
+        url: "/controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_reactivar.php",
         method: "POST",
         data: datos,
         cache: false,
@@ -528,7 +528,7 @@ function Modificar_Validar_Reembolso() {
   datos.append("contar_validar", cont);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_validar_modificar.php",
+    url: "/controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_validar_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -586,7 +586,7 @@ function Cargar_Observaciones_Adicionales_Seguimientos_Reembolsos() {
   datos.append("idReembolso", idReembolso);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
+    url: "/controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -696,7 +696,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Reembolso() {
   );
 
   $.ajax({
-    url: "controller/reembolsos-observaciones/controlador_reembolso_asistencia_medica_individual_observaciones_adicionales_modificar.php",
+    url: "/controller/reembolsos-observaciones/controlador_reembolso_asistencia_medica_individual_observaciones_adicionales_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -725,7 +725,7 @@ function Cargar_lista_documentos_Solictados_Aseguradora_Seguimientos() {
   datos.append("idReembolso", idReembolso);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_documentos_adicionales_solictados_aseguradora_listar.php",
+    url: "/controller/reembolsos-clientes/controlador_documentos_adicionales_solictados_aseguradora_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -753,7 +753,7 @@ function Cargar_lista_documentos_Solictados_Aseguradora_Seguimientos_1() {
   datos.append("idReembolso", idReembolso);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_documentos_adicionales_solictados_aseguradora_listar.php",
+    url: "/controller/reembolsos-clientes/controlador_documentos_adicionales_solictados_aseguradora_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -781,7 +781,7 @@ function Cargar_Observaciones_Seguimientos() {
   datos.append("idReembolso", idReembolso);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
+    url: "/controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -808,7 +808,7 @@ function Cargar_Observaciones_Seguimientos_1() {
   datos.append("idReembolso", idReembolso);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
+    url: "/controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1673,7 +1673,7 @@ function Modificar_Seguimiento_Reembolso() {
   datos.append("extension", extension);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_seguimiento_modificar.php",
+    url: "/controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_seguimiento_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1825,7 +1825,7 @@ function Modificar_Seguimiento_Reembolso_1() {
   datos.append("extension", extension);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_seguimiento_modificar_1.php",
+    url: "/controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_seguimiento_modificar_1.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1915,7 +1915,7 @@ function Cargar_Observaciones_Documentos_Seguimientos() {
   datos.append("idReembolso", idReembolso);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
+    url: "/controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1946,7 +1946,7 @@ function Cargar_Observaciones_Documentos_Seguimientos_1() {
   datos.append("idReembolso", idReembolso);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
+    url: "/controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2155,7 +2155,7 @@ function Registrar_Documento_Seguimiento_Reembolso() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_documento_seguimiento_registro.php",
+    url: "/controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_documento_seguimiento_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2265,7 +2265,7 @@ function Registrar_Documento_Seguimiento_Reembolso_1() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_documento_seguimiento_1_registro.php",
+    url: "/controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_documento_seguimiento_1_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2349,7 +2349,7 @@ function cargar_deducible_dependiente_reembolso() {
   datos.append("idContrato", idContrato);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_traer_reembolso_asistencia_medica_individual.php",
+    url: "/controller/reembolsos-clientes/controlador_traer_reembolso_asistencia_medica_individual.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2393,7 +2393,7 @@ function Cargar_Observaciones_Liquidacion_Seguimientos() {
   datos.append("idReembolso", idReembolso);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
+    url: "/controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2622,7 +2622,7 @@ function Registrar_Documento_Liquidacion_Reembolso() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_documento_liquidacion_registro.php",
+    url: "/controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_documento_liquidacion_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2682,7 +2682,7 @@ function Cargar_Observaciones_Anulacion_Reembolsos() {
   datos.append("idReembolso", idReembolso);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
+    url: "/controller/reembolsos-clientes/controlador_observacion_reembolso_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2766,7 +2766,7 @@ function Modificar_Observaciones_Anulacion_Reembolso() {
   datos.append("lista_observaciones_anulacion", lista_observaciones_anulacion);
 
   $.ajax({
-    url: "controller/reembolsos-observaciones/controlador_reembolso_asistencia_medica_individual_observaciones_anulacion_modificar.php",
+    url: "/controller/reembolsos-observaciones/controlador_reembolso_asistencia_medica_individual_observaciones_anulacion_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2891,7 +2891,7 @@ function listar_combo_dependientes() {
   datos.append("idContrato", idContrato);
 
   $.ajax({
-    url: "controller/bayer_persona/controlador_combo_dependientes_listar.php",
+    url: "/controller/bayer_persona/controlador_combo_dependientes_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -3051,7 +3051,7 @@ function Registrar_Reembolso() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_registro.php",
+    url: "/controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_registro.php",
     method: "POST",
     data: datos,
     cache: false,

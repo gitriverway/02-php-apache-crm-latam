@@ -3,7 +3,7 @@
  *********************************/
 function lista1() {
   $.ajax({
-    url: "controller/prospectos_web/controlador_prospecto_listar.php",
+    url: "/controller/prospectos_web/controlador_prospecto_listar.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -146,7 +146,7 @@ function modificarVendedor(idProspecto, idEmpleado) {
   datos.append("idEmpleado", idEmpleado);
 
   $.ajax({
-    url: "controller/prospectos_web/controlador_modificar_vendedor_asignado_a_prospecto.php",
+    url: "/controller/prospectos_web/controlador_modificar_vendedor_asignado_a_prospecto.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -181,7 +181,7 @@ function eliminar_prospecto_web(idProspecto) {
   datos.append("idProspecto", idProspecto);
 
   $.ajax({
-    url: "controller/prospectos_web/controlador_prospecto_eliminar.php",
+    url: "/controller/prospectos_web/controlador_prospecto_eliminar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -229,7 +229,7 @@ $("#tabla_asignacion").on("click", ".btnChatWeb", function () {
   datos.append("idProspecto", idProspecto);
 
   $.ajax({
-    url: "controller/prospectos_web/controlador_prospecto_web_chat.php",
+    url: "/controller/prospectos_web/controlador_prospecto_web_chat.php",
     method: "POST",
     data: datos,
     cache: false,

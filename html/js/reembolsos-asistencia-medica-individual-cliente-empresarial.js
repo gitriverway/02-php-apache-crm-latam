@@ -346,7 +346,7 @@ function listar_combo_dependientes() {
   datos.append("idContrato", idContrato);
 
   $.ajax({
-    url: "controller/bayer-persona-empresarial/controlador_combo_dependientes_listar.php",
+    url: "/controller/bayer-persona-empresarial/controlador_combo_dependientes_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -526,7 +526,7 @@ function Registrar_Reembolso() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_registro.php",
+    url: "/controller/reembolsos-clientes/controlador_reembolso_asistencia_medica_individual_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -578,7 +578,7 @@ $("#tabla-listar-reembolsos-asistencia-medica-individual").on(
     datos.append("idReembolso", idReembolso);
 
     $.ajax({
-      url: "controller/reembolsos-clientes-empresariales/controlador_observacion_reembolso_adicionales_listar.php",
+      url: "/controller/reembolsos-clientes-empresariales/controlador_observacion_reembolso_adicionales_listar.php",
       method: "POST",
       data: datos,
       cache: false,

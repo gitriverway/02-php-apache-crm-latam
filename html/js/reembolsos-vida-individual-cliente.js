@@ -233,7 +233,7 @@ function Registrar_Reembolso() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/reembolsos-clientes/controlador_reembolso_vida_individual_registro.php",
+    url: "/controller/reembolsos-clientes/controlador_reembolso_vida_individual_registro.php",
     method: "POST",
     data: datos,
     cache: false,

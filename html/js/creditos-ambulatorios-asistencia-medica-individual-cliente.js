@@ -196,7 +196,7 @@ function listar_combo_dependientes() {
   datos.append("idContrato", idContrato);
 
   $.ajax({
-    url: "controller/bayer_persona/controlador_combo_dependientes_listar.php",
+    url: "/controller/bayer_persona/controlador_combo_dependientes_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -451,7 +451,7 @@ function Registrar_Credito_Ambulatorio() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/creditos-ambulatorios-clientes/controlador_credito_ambulatorio_asistencia_medica_individual_registro.php",
+    url: "/controller/creditos-ambulatorios-clientes/controlador_credito_ambulatorio_asistencia_medica_individual_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -504,7 +504,7 @@ $("#tabla-listar-creditos-ambulatorios-asistencia-medica-individual").on(
     datos.append("idCreditoAmbulatorio", idCreditoAmbulatorio);
 
     $.ajax({
-      url: "controller/creditos-ambulatorios-clientes/controlador_observacion_credito_ambulatorio_adicionales_listar.php",
+      url: "/controller/creditos-ambulatorios-clientes/controlador_observacion_credito_ambulatorio_adicionales_listar.php",
       method: "POST",
       data: datos,
       cache: false,

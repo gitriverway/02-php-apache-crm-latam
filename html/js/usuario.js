@@ -73,7 +73,7 @@ LISTAR COMBO ROLES
 *********************************/
 function listar_combo_rol() {
   $.ajax({
-    url: "controller/usuarios/controlador_combo_rol_listar.php",
+    url: "/controller/usuarios/controlador_combo_rol_listar.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -105,7 +105,7 @@ LISTAR COMBO EMPLEADOS
 *********************************/
 function listar_combo_empleado() {
   $.ajax({
-    url: "controller/usuarios/controlador_combo_empleado_listar.php",
+    url: "/controller/usuarios/controlador_combo_empleado_listar.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -147,7 +147,7 @@ function Modificar_Estatus(idUsuario, estatus) {
   datos.append("activarEstatus", estatus);
 
   $.ajax({
-    url: "controller/usuarios/controlador_modificar_estatus_usuario.php",
+    url: "/controller/usuarios/controlador_modificar_estatus_usuario.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -210,7 +210,7 @@ function Registrar_Usuario() {
   datos.append("rol", rol);
 
   $.ajax({
-    url: "controller/usuarios/controlador_usuario_registro.php",
+    url: "/controller/usuarios/controlador_usuario_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -269,7 +269,7 @@ $("#tabla_usuario").on("click", ".btnEditar", function () {
   var datos = new FormData();
   datos.append("idUsuario", idUsuario);
   $.ajax({
-    url: "controller/usuarios/controlador_traerdatos_usuario.php",
+    url: "/controller/usuarios/controlador_traerdatos_usuario.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -326,7 +326,7 @@ function Modificar_Usuario() {
   datos.append("rol", rol);
 
   $.ajax({
-    url: "controller/usuarios/controlador_usuario_modificar.php",
+    url: "/controller/usuarios/controlador_usuario_modificar.php",
     method: "POST",
     data: datos,
     cache: false,

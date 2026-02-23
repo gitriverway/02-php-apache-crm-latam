@@ -18,7 +18,7 @@ function Actualizar_password() {
 
     $.ajax({
 
-        url: "controller/usuarios/controlador_usuario_actualizar_password.php",
+        url: "/controller/usuarios/controlador_usuario_actualizar_password.php",
         method: "POST",
         data: datos,
         cache: false,

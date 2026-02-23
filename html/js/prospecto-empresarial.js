@@ -1,7 +1,7 @@
 // function lista1(){
 
 //     $.ajax({
-//         url: "controller/prospectos-empresariales/controlador_prospecto_listar.php",
+//         url: "/controller/prospectos-empresariales/controlador_prospecto_listar.php",
 //         method: "POST",
 //         cache: false,
 //         contentType: false,
@@ -18,7 +18,7 @@ function fecha_actual() {
   var fecha_actual_obervacion;
 
   $.ajax({
-    url: "controller/controlador_fecha_zona_horario.php",
+    url: "/controller/controlador_fecha_zona_horario.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -175,7 +175,7 @@ function modificarVendedor(idProspecto, idEmpleado) {
   datos.append("idEmpleado", idEmpleado);
 
   $.ajax({
-    url: "controller/prospectos-empresariales/controlador_modificar_vendedor_asignado_a_prospecto.php",
+    url: "/controller/prospectos-empresariales/controlador_modificar_vendedor_asignado_a_prospecto.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -217,7 +217,7 @@ function Modificar_Estado_Bayer_Cliente() {
   datos.append("estadoBayer", estadoBayer);
 
   $.ajax({
-    url: "controller/prospectos-empresariales/controlador_modificar_estado_bayer_prospecto.php",
+    url: "/controller/prospectos-empresariales/controlador_modificar_estado_bayer_prospecto.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -256,7 +256,7 @@ LISTAR COMBO CATEGORIA
 *********************************/
 function listar_combo_categoria() {
   $.ajax({
-    url: "controller/categorias/controlador_combo_categoria_empresarial_listar.php",
+    url: "/controller/categorias/controlador_combo_categoria_empresarial_listar.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -294,7 +294,7 @@ function listar_combo_categoria() {
   *********************************/
 function listar_combo_aseguradora() {
   $.ajax({
-    url: "controller/proveedores/controlador_combo_proveedor_listar.php",
+    url: "/controller/proveedores/controlador_combo_proveedor_listar.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -331,7 +331,7 @@ function listar_combo_aseguradora() {
   *********************************/
 function listar_combo_provincia() {
   $.ajax({
-    url: "controller/provincias/controlador_combo_provincia_listar.php",
+    url: "/controller/provincias/controlador_combo_provincia_listar.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -1508,7 +1508,7 @@ function Registrar_Cliente() {
   datos.append("fecha_seguimiento", fecha_seguimiento);
 
   $.ajax({
-    url: "controller/prospectos-empresariales/controlador_prospecto_registro.php",
+    url: "/controller/prospectos-empresariales/controlador_prospecto_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1556,7 +1556,7 @@ function cargar_datos_prospecto() {
   datos.append("idProspecto", idProspecto);
 
   $.ajax({
-    url: "controller/prospectos-empresariales/controlador_traer_datos_prospecto.php",
+    url: "/controller/prospectos-empresariales/controlador_traer_datos_prospecto.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1643,7 +1643,7 @@ function contador_cliente_contrato(cedula, callback) {
   datos.append("cedula", cedula);
 
   $.ajax({
-    url: "controller/bayer_persona/controlador_contador_cliente_existente.php",
+    url: "/controller/bayer_persona/controlador_contador_cliente_existente.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1853,7 +1853,7 @@ function agregar_auto_observaciones() {
   datos.append("idProspecto", idProspecto);
 
   $.ajax({
-    url: "controller/prospectos/controlador_observacion_prospecto_listar.php",
+    url: "/controller/prospectos/controlador_observacion_prospecto_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2174,7 +2174,7 @@ function Modificar_Prospecto() {
   datos.append("idEmpleado", idEmpleado);
 
   $.ajax({
-    url: "controller/prospectos-empresariales/controlador_prospecto_modificar.php",
+    url: "/controller/prospectos-empresariales/controlador_prospecto_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2253,7 +2253,7 @@ function buscar_cliente_id(idCliente) {
   datos.append("idCliente", idCliente);
 
   $.ajax({
-    url: "controller/clientes/controlador_traer_datos_cliente.php",
+    url: "/controller/clientes/controlador_traer_datos_cliente.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2318,7 +2318,7 @@ function buscar_cliente_cedula(cedula) {
   datos.append("cedula", cedula);
 
   $.ajax({
-    url: "controller/clientes/controlador_traer_datos_cliente_cedula.php",
+    url: "/controller/clientes/controlador_traer_datos_cliente_cedula.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2403,7 +2403,7 @@ function buscar_empleado_id(idEmpleado) {
   datos.append("idEmpleado", idEmpleado);
 
   $.ajax({
-    url: "controller/empleados/controlador_traerdatos_empleado.php",
+    url: "/controller/empleados/controlador_traerdatos_empleado.php",
     method: "POST",
     data: datos,
     cache: false,

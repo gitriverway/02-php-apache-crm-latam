@@ -9,7 +9,7 @@ function t(key, defaultValue) {
 // function lista1(){
 
 //     $.ajax({
-//         url: "controller/clientes/controlador_cliente_listar_asistencia_medica_corporativo_empresarial.php",
+//         url: "/controller/clientes/controlador_cliente_listar_asistencia_medica_corporativo_empresarial.php",
 //         method: "POST",
 //         cache: false,
 //         contentType: false,
@@ -25,7 +25,7 @@ function fecha_actual() {
   var fecha_actual_obervacion;
 
   $.ajax({
-    url: "controller/controlador_fecha_zona_horario.php",
+    url: "/controller/controlador_fecha_zona_horario.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -231,7 +231,7 @@ function eliminar_documento_emision(
   datos.append("documentoRuta", documentoRuta);
 
   $.ajax({
-    url: "controller/contratos-clientes-empresariales/controlador_documento_emision_eliminar.php",
+    url: "/controller/contratos-clientes-empresariales/controlador_documento_emision_eliminar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -269,7 +269,7 @@ $("#tabla_lista_vendedores").on("click", ".btnAsignarVendedor", function () {
   datos.append("idEmpleado", idEmpleado);
 
   $.ajax({
-    url: "controller/clientes/controlador_modificar_vendedor_asignado_a_cliente.php",
+    url: "/controller/clientes/controlador_modificar_vendedor_asignado_a_cliente.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -308,7 +308,7 @@ LISTAR COMBO CATEGORIA
 *********************************/
 function listar_combo_categoria() {
   $.ajax({
-    url: "controller/categorias/controlador_combo_categoria_individual_listar.php",
+    url: "/controller/categorias/controlador_combo_categoria_individual_listar.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -340,7 +340,7 @@ LISTAR COMBO ASEGURADORAS
 *********************************/
 function listar_combo_aseguradora() {
   $.ajax({
-    url: "controller/proveedores/controlador_combo_proveedor_listar.php",
+    url: "/controller/proveedores/controlador_combo_proveedor_listar.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -371,7 +371,7 @@ LISTAR COMBO PROVINCIAS
 *********************************/
 function listar_combo_provincia() {
   $.ajax({
-    url: "controller/provincias/controlador_combo_provincia_listar.php",
+    url: "/controller/provincias/controlador_combo_provincia_listar.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -1326,7 +1326,7 @@ function cargar_datos_cliente() {
   datos.append("idCliente", idCliente);
 
   $.ajax({
-    url: "controller/bayer-persona-empresarial/controlador_traer_datos_cliente.php",
+    url: "/controller/bayer-persona-empresarial/controlador_traer_datos_cliente.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1575,7 +1575,7 @@ function agregar_auto_observaciones() {
   datos.append("idCliente", idCliente);
 
   $.ajax({
-    url: "controller/clientes/controlador_observacion_cliente_listar.php",
+    url: "/controller/clientes/controlador_observacion_cliente_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1998,7 +1998,7 @@ function Modificar_Cliente() {
   datos.append("cantidad", cantidad);
 
   $.ajax({
-    url: "controller/clientes/controlador_cliente_asistencia_medica_corporativo_empresarial_modificar.php",
+    url: "/controller/clientes/controlador_cliente_asistencia_medica_corporativo_empresarial_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2080,7 +2080,7 @@ $("#tabla_lista_clientes").on("click", ".btnSeleccionarCliente", function () {
   datos.append("idCliente", idCliente);
 
   $.ajax({
-    url: "controller/clientes/controlador_traer_datos_cliente.php",
+    url: "/controller/clientes/controlador_traer_datos_cliente.php",
     method: "POST",
     data: datos,
     cache: false,

@@ -48,7 +48,7 @@ function listar_combo_provincia() {
 
     $.ajax({
   
-      url: "controller/provincias/controlador_combo_provincia_listar.php",
+      url: "/controller/provincias/controlador_combo_provincia_listar.php",
       method: "POST",
       cache: false,
       contentType: false,

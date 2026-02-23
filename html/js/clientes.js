@@ -1,7 +1,7 @@
 // function lista1(){
 
 //     $.ajax({
-//         url: "controller/clientes/controlador_cliente_listar.php",
+//         url: "/controller/clientes/controlador_cliente_listar.php",
 //         method: "POST",
 //         cache: false,
 //         contentType: false,
@@ -75,7 +75,7 @@ function listar_cliente(){
   
     $.ajax({
   
-      url: "controller/provincias/controlador_combo_provincia_listar.php",
+      url: "/controller/provincias/controlador_combo_provincia_listar.php",
       method: "POST",
       cache: false,
       contentType: false,

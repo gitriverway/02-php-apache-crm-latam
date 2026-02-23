@@ -92,7 +92,7 @@ function Verificar_Usuario() {
   datos.append("pass", pass);
 
   $.ajax({
-    url: "controller/usuarios/controlador_verificar_usuario.php",
+    url: "/controller/usuarios/controlador_verificar_usuario.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -152,7 +152,7 @@ function Crear_Sesion(data) {
   datos1.append("empleado", data[0]["empleado_nombre"]);
 
   $.ajax({
-    url: "controller/usuarios/controlador_crear_session.php",
+    url: "/controller/usuarios/controlador_crear_session.php",
     method: "POST",
     data: datos1,
     cache: false,
@@ -250,7 +250,7 @@ function actualizar_contrasena() {
   datos.append("pass", pass);
 
   $.ajax({
-    url: "controller/usuarios/controlador_usuario_cambiar_password.php",
+    url: "/controller/usuarios/controlador_usuario_cambiar_password.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -293,7 +293,7 @@ function recuperar_contrasena() {
   datos.append("usuario", usu);
 
   $.ajax({
-    url: "controller/usuarios/controlador_recuperar_usuario.php",
+    url: "/controller/usuarios/controlador_recuperar_usuario.php",
     method: "POST",
     data: datos,
     cache: false,

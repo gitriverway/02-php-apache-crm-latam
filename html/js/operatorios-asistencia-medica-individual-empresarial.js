@@ -94,7 +94,7 @@ function fecha_actual() {
   var fecha_actual_obervacion;
 
   $.ajax({
-    url: "controller/controlador_fecha_actual_zona_horario.php",
+    url: "/controller/controlador_fecha_actual_zona_horario.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -133,7 +133,7 @@ $("#tabla-listar-operatorios-asistencia-medica-individual").on(
     datos.append("idOperatorio", idOperatorio);
 
     $.ajax({
-      url: "controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
+      url: "/controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
       method: "POST",
       data: datos,
       cache: false,
@@ -495,7 +495,7 @@ function Modificar_Validar_Operatorio() {
   datos.append("contar_validar", cont);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_validar_modificar.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_validar_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -553,7 +553,7 @@ function Cargar_Observaciones_Adicionales_Seguimientos_Operatorios() {
   datos.append("idOperatorio", idOperatorio);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -666,7 +666,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Operatorio() {
   );
 
   $.ajax({
-    url: "controller/operatorios-observaciones-empresariales/controlador_operatorio_asistencia_medica_individual_observaciones_adicionales_modificar.php",
+    url: "/controller/operatorios-observaciones-empresariales/controlador_operatorio_asistencia_medica_individual_observaciones_adicionales_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -726,7 +726,7 @@ function Cargar_lista_documentos_Solictados_Aseguradora_Seguimientos() {
   datos.append("idOperatorio", idOperatorio);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_documentos_adicionales_solictados_aseguradora_listar.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_documentos_adicionales_solictados_aseguradora_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -882,7 +882,7 @@ function Cargar_Observaciones_Seguimientos() {
   datos.append("idOperatorio", idOperatorio);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1239,7 +1239,7 @@ function Modificar_Seguimiento_Operatorio() {
   datos.append("extension", extension);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_seguimiento_modificar.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_seguimiento_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1299,7 +1299,7 @@ function Cargar_Observaciones_Documentos_Seguimientos() {
   datos.append("idOperatorio", idOperatorio);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1453,7 +1453,7 @@ function Registrar_Documento_Seguimiento_Operatorio() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_documento_seguimiento_registro.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_documento_seguimiento_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1526,7 +1526,7 @@ function cargar_datos_dependiente_operatorio() {
   datos.append("idContrato", idContrato);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_traer_operatorio_asistencia_medica_individual.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_traer_operatorio_asistencia_medica_individual.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1557,7 +1557,7 @@ function Cargar_Observaciones_Autorizacion_Seguimientos() {
   datos.append("idOperatorio", idOperatorio);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1680,7 +1680,7 @@ function Registrar_Documento_Autorizacion_Operatorio() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_documento_autorizacion_registro.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_documento_autorizacion_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1742,7 +1742,7 @@ function Cargar_Observaciones_Anulacion_Seguimientos_Operatorios() {
   datos.append("idOperatorio", idOperatorio);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1832,7 +1832,7 @@ function Modificar_Observaciones_Anulacion_Operatorio() {
   datos.append("lista_observaciones_anulacion", lista_observaciones_anulacion);
 
   $.ajax({
-    url: "controller/operatorios-observaciones-empresariales/controlador_operatorio_asistencia_medica_individual_observaciones_anulacion_modificar.php",
+    url: "/controller/operatorios-observaciones-empresariales/controlador_operatorio_asistencia_medica_individual_observaciones_anulacion_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1959,7 +1959,7 @@ function listar_combo_dependientes() {
   datos.append("idContrato", idContrato);
 
   $.ajax({
-    url: "controller/bayer-persona-empresarial/controlador_combo_dependientes_listar.php",
+    url: "/controller/bayer-persona-empresarial/controlador_combo_dependientes_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2197,7 +2197,7 @@ function Registrar_Operatorio() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_registro.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2267,7 +2267,7 @@ function Cargar_lista_documentos_Solictados_Aseguradora_Seguimientos_1() {
   datos.append("idOperatorio", idOperatorio);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_documentos_adicionales_solictados_aseguradora_listar.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_documentos_adicionales_solictados_aseguradora_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2468,7 +2468,7 @@ function Cargar_Observaciones_Seguimientos_1() {
   datos.append("idOperatorio", idOperatorio);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2776,7 +2776,7 @@ function Modificar_Seguimiento_Operatorio_1() {
   datos.append("extension", extension);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_seguimiento_modificar_1.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_seguimiento_modificar_1.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2833,7 +2833,7 @@ function Cargar_Observaciones_Documentos_Seguimientos_1() {
   datos.append("idOperatorio", idOperatorio);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_observacion_operatorio_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2991,7 +2991,7 @@ function Registrar_Documento_Seguimiento_Operatorio_1() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_documento_seguimiento_registro_1.php",
+    url: "/controller/operatorios-clientes-empresariales/controlador_operatorio_asistencia_medica_individual_documento_seguimiento_registro_1.php",
     method: "POST",
     data: datos,
     cache: false,

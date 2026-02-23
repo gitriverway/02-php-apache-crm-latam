@@ -1,7 +1,7 @@
 // function lista1(){
 
 //     $.ajax({
-//         url: "controller/bloqueo_ip/controlador_bloqueo_ip_listar.php",
+//         url: "/controller/bloqueo_ip/controlador_bloqueo_ip_listar.php",
 //         method: "POST",
 //         cache: false,
 //         contentType: false,

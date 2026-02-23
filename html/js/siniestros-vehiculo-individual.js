@@ -6,7 +6,7 @@ $(document).on("hidden.bs.modal", function (event) {
 
 // function lista1() {
 //   $.ajax({
-//     url: "controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_listar.php",
+//     url: "/controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_listar.php",
 //     method: "POST",
 //     cache: false,
 //     contentType: false,
@@ -88,7 +88,7 @@ function fecha_actual() {
   var fecha_actual_obervacion;
 
   $.ajax({
-    url: "controller/controlador_fecha_actual_zona_horario.php",
+    url: "/controller/controlador_fecha_actual_zona_horario.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -301,7 +301,7 @@ $("#tabla-listar-siniestros-vehiculo-individual").on(
     datos.append("idSiniestro", idSiniestro);
 
     $.ajax({
-      url: "controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
+      url: "/controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
       method: "POST",
       data: datos,
       cache: false,
@@ -517,7 +517,7 @@ function Modificar_Validar_Siniestro() {
   datos.append("contar_validar", cont);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_validar_modificar.php",
+    url: "/controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_validar_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -578,7 +578,7 @@ function Cargar_Observaciones_Adicionales_Seguimientos_Siniestros() {
   datos.append("idSiniestro", idSiniestro);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
+    url: "/controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -691,7 +691,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Siniestro() {
   );
 
   $.ajax({
-    url: "controller/siniestros-observaciones/controlador_siniestro_vehiculo_individual_observaciones_adicionales_modificar.php",
+    url: "/controller/siniestros-observaciones/controlador_siniestro_vehiculo_individual_observaciones_adicionales_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -720,7 +720,7 @@ function Cargar_lista_documentos_Solictados_Aseguradora_Seguimientos() {
   datos.append("idSiniestro", idSiniestro);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_documentos_adicionales_solictados_aseguradora_listar.php",
+    url: "/controller/siniestros-clientes/controlador_documentos_adicionales_solictados_aseguradora_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -748,7 +748,7 @@ function Cargar_Observaciones_Seguimientos() {
   datos.append("idSiniestro", idSiniestro);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
+    url: "/controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1259,7 +1259,7 @@ function Modificar_Seguimiento_Siniestro() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_seguimiento_modificar.php",
+    url: "/controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_seguimiento_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1322,7 +1322,7 @@ function Cargar_Observaciones_Documentos_Seguimientos() {
   datos.append("idSiniestro", idSiniestro);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
+    url: "/controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1476,7 +1476,7 @@ function Registrar_Documento_Seguimiento_Siniestro() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_documento_seguimiento_registro.php",
+    url: "/controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_documento_seguimiento_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1560,7 +1560,7 @@ function cargar_deducible_dependiente_siniestro() {
   datos.append("idContrato", idContrato);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_traer_siniestro_vehiculo_individual.php",
+    url: "/controller/siniestros-clientes/controlador_traer_siniestro_vehiculo_individual.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1593,7 +1593,7 @@ function Cargar_Observaciones_Liquidacion_Seguimientos() {
   datos.append("idSiniestro", idSiniestro);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
+    url: "/controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1772,7 +1772,7 @@ function Registrar_Documento_Liquidacion_Siniestro() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_documento_liquidacion_registro.php",
+    url: "/controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_documento_liquidacion_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1838,7 +1838,7 @@ function Cargar_Observaciones_Anulacion_Siniestros() {
   datos.append("idSiniestro", idSiniestro);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
+    url: "/controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -1928,7 +1928,7 @@ function Modificar_Observaciones_Anulacion_Siniestro() {
   datos.append("lista_observaciones_anulacion", lista_observaciones_anulacion);
 
   $.ajax({
-    url: "controller/siniestros-observaciones/controlador_siniestro_vehiculo_individual_observaciones_anulacion_modificar.php",
+    url: "/controller/siniestros-observaciones/controlador_siniestro_vehiculo_individual_observaciones_anulacion_modificar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2076,7 +2076,7 @@ function listar_combo_vehiculos() {
   datos.append("idContrato", idContrato);
 
   $.ajax({
-    url: "controller/bayer_persona/controlador_combo_vehiculos_listar.php",
+    url: "/controller/bayer_persona/controlador_combo_vehiculos_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2282,7 +2282,7 @@ function Registrar_Siniestro() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_registro.php",
+    url: "/controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2349,7 +2349,7 @@ function Cargar_Observaciones_Ajuste_Autorizacion() {
   datos.append("idSiniestro", idSiniestro);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
+    url: "/controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2487,7 +2487,7 @@ function Modificar_Ajuste_Autorizacion_Siniestro() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_ajuste_autorizacion.php",
+    url: "/controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_ajuste_autorizacion.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2546,7 +2546,7 @@ function Cargar_Observaciones_Ajuste_Autorizacion_Terceros() {
   datos.append("idSiniestro", idSiniestro);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
+    url: "/controller/siniestros-clientes/controlador_observacion_siniestro_adicionales_listar.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -2698,7 +2698,7 @@ function Modificar_Ajuste_Autorizacion_Terceros_Siniestro() {
   datos.append("documento", documento);
 
   $.ajax({
-    url: "controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_ajuste_autorizacion_terceros.php",
+    url: "/controller/siniestros-clientes/controlador_siniestro_vehiculo_individual_ajuste_autorizacion_terceros.php",
     method: "POST",
     data: datos,
     cache: false,

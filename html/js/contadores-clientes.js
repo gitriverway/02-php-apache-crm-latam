@@ -4,7 +4,7 @@
 
 function contarContratosClienteAsistenciaMedica() {
   $.ajax({
-    url: "controller/contadores/controlador_contador_contratos_cliente_asistencia_medica.php",
+    url: "/controller/contadores/controlador_contador_contratos_cliente_asistencia_medica.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -19,7 +19,7 @@ function contarContratosClienteAsistenciaMedica() {
 
 function contarContratosClienteVehiculo() {
   $.ajax({
-    url: "controller/contadores/controlador_contador_contratos_cliente_vehiculo.php",
+    url: "/controller/contadores/controlador_contador_contratos_cliente_vehiculo.php",
     method: "POST",
     cache: false,
     contentType: false,
@@ -34,7 +34,7 @@ function contarContratosClienteVehiculo() {
 
 function contarReembolsosCliente() {
   $.ajax({
-    url: "controller/contadores/controlador_contador_reembolsos_cliente.php",
+    url: "/controller/contadores/controlador_contador_reembolsos_cliente.php",
     method: "POST",
     cache: false,
     contentType: false,

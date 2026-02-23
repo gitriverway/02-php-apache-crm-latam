@@ -11,7 +11,7 @@ function cambiarIdioma(idioma) {
     datos.append("idioma", idioma);
 
     $.ajax({
-        url: "controller/idioma/controlador_cambiar_idioma.php",
+        url: "/controller/idioma/controlador_cambiar_idioma.php",
         method: "POST",
         data: datos,
         cache: false,

@@ -140,7 +140,7 @@ function agregarNuevaFactura() {
   datos.append("extension", extension);
 
   $.ajax({
-    url: "controller/facturas/controlador_factura_registro.php",
+    url: "/controller/facturas/controlador_factura_registro.php",
     method: "POST",
     data: datos,
     cache: false,
@@ -214,7 +214,7 @@ function eliminar_factura_cliente(idFactura, facturaRuta) {
   datos.append("facturaRuta", facturaRuta);
 
   $.ajax({
-    url: "controller/facturas/controlador_factura_eliminar.php",
+    url: "/controller/facturas/controlador_factura_eliminar.php",
     method: "POST",
     data: datos,
     cache: false,
