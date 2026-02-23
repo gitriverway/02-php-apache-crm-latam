@@ -86,8 +86,8 @@ class Envio_correo_recuperacion_acceso
 
                 $mail->addAddress($correo, $nombre);
 
-                $mail->addCC('info@mqpseguros.com', 'Info MQP Seguros');     //Add a recipient
-                $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
+                // $mail->addCC('info@mqpseguros.com', 'Info MQP Seguros');     //Add a recipient
+                // $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
                 $mail->addCC('faustoochoa@mqpseguros.com', 'Info MQP Seguros');     //Add a recipient
 
                 //Attachments
