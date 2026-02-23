@@ -33,7 +33,8 @@ $t = function ($key) {
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
-                        <li class="breadcrumb-item active"><?php echo $t('edit_forms.edit_medical_assistance_individual'); ?></li>
+                        <li class="breadcrumb-item active">
+                            <?php echo $t('edit_forms.edit_medical_assistance_individual'); ?></li>
                     </ol>
                 </div>
             </div>
@@ -74,7 +75,8 @@ $t = function ($key) {
                                 <input type="hidden" id="txt_idBayer" value="<?php echo $_GET["idCliente"]; ?>">
                                 <!-- ENTRADA PARA EL ORIGEN CLIENTE -->
                                 <div class="form-group">
-                                    <label for="cbm_origen" class=" control-label" style="text-align: right;"><?php echo $t('form.origin'); ?>
+                                    <label for="cbm_origen" class=" control-label"
+                                        style="text-align: right;"><?php echo $t('form.origin'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen">
@@ -88,7 +90,8 @@ $t = function ($key) {
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                    <label for="txt_categoria" class="control-label" style="text-align: right;"><?php echo $t('form.categories'); ?>
+                                    <label for="txt_categoria" class="control-label"
+                                        style="text-align: right;"><?php echo $t('form.categories'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_categoria"
@@ -134,7 +137,8 @@ $t = function ($key) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_valor_asegurado" placeholder="<?php echo $t('form.enter_sum_insured'); ?> min=" 0"
+                                            id="txt_valor_asegurado"
+                                            placeholder="<?php echo $t('form.enter_sum_insured'); ?> min=" 0"
                                             maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
@@ -151,8 +155,9 @@ $t = function ($key) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_prima_neta" placeholder="<?php echo $t('form.enter_net_premium'); ?>" min="0" maxlength="30"
-                                            autocomplete="off">
+                                            id="txt_prima_neta"
+                                            placeholder="<?php echo $t('form.enter_net_premium'); ?>" min="0"
+                                            maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
                             </div>
@@ -168,8 +173,9 @@ $t = function ($key) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_prima_comisionable" placeholder="<?php echo $t('form.enter_commissionable_premium'); ?>"
-                                            min="0" maxlength="30" autocomplete="off">
+                                            id="txt_prima_comisionable"
+                                            placeholder="<?php echo $t('form.enter_commissionable_premium'); ?>" min="0"
+                                            maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
                             </div>
@@ -185,7 +191,8 @@ $t = function ($key) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_prima_total" placeholder="<?php echo $t('form.enter_total_premium'); ?> min=" 0"
+                                            id="txt_prima_total"
+                                            placeholder="<?php echo $t('form.enter_total_premium'); ?> min=" 0"
                                             maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
@@ -260,8 +267,8 @@ $t = function ($key) {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_nombre"
-                                        placeholder="<?php echo $t('form.enter_name'); ?>" maxlength="50" autocomplete="off"
-                                        style="text-transform: uppercase">
+                                        placeholder="<?php echo $t('form.enter_name'); ?>" maxlength="50"
+                                        autocomplete="off" style="text-transform: uppercase">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -323,7 +330,8 @@ $t = function ($key) {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetrasDecimal" id="txt_email"
-                                        placeholder="<?php echo $t('form.enter_email'); ?>" maxlength="50" autocomplete="off">
+                                        placeholder="<?php echo $t('form.enter_email'); ?>" maxlength="50"
+                                        autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -333,8 +341,8 @@ $t = function ($key) {
                                         style="text-align: right;">EMAIL (OPCIONAL)
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetrasDecimal"
-                                        id="txt_email_opcional" placeholder="<?php echo $t('form.enter_email'); ?>" maxlength="50"
-                                        autocomplete="off">
+                                        id="txt_email_opcional" placeholder="<?php echo $t('form.enter_email'); ?>"
+                                        maxlength="50" autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -344,7 +352,8 @@ $t = function ($key) {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_telefono"
-                                        placeholder="<?php echo $t('form.enter_phone'); ?>" maxlength="50" autocomplete="off">
+                                        placeholder="<?php echo $t('form.enter_phone'); ?>" maxlength="50"
+                                        autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -354,8 +363,8 @@ $t = function ($key) {
                                         style="text-align: right;">TELEFONO(OPCIONAL)
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras"
-                                        id="txt_telefono_opcional" placeholder="<?php echo $t('form.enter_phone'); ?>" maxlength="50"
-                                        autocomplete="off">
+                                        id="txt_telefono_opcional" placeholder="<?php echo $t('form.enter_phone'); ?>"
+                                        maxlength="50" autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -374,7 +383,8 @@ $t = function ($key) {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
-                                        placeholder="<?php echo $t('form.enter_city'); ?>" maxlength="100" autocomplete="off">
+                                        placeholder="<?php echo $t('form.enter_city'); ?>" maxlength="100"
+                                        autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12">
@@ -397,8 +407,8 @@ $t = function ($key) {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ocupacion"
-                                        placeholder="<?php echo $t('form.enter_occupation'); ?>" maxlength="50" autocomplete="off"
-                                        style="text-transform: uppercase">
+                                        placeholder="<?php echo $t('form.enter_occupation'); ?>" maxlength="50"
+                                        autocomplete="off" style="text-transform: uppercase">
                                 </div>
                             </div>
 
@@ -683,8 +693,7 @@ $t = function ($key) {
                             <font color="red"> *</font>
                         </label>
                         <textarea class="form-control validarNumerosLetrasDecimal" id="txt_observacion"
-                            name="txt_observacion" cols="20" rows="5"
-                            placeholder="<?php echo $t('messages.enter_observation'); ?>></textarea>
+                            name="txt_observacion" cols="20" rows="5" placeholder="<?php echo $t('messages.enter_observation'); ?>></textarea>
                     </div>
                 </div>
                 <div class=" modal-footer">
@@ -763,6 +772,7 @@ MODAL LISTAR CONTRATOS
 <script src="js/clientes-asistencia-medica-individual.js?rev=<?php echo time(); ?>"></script>
 <script>
 $(document).ready(function() {
+    console.log("Documento listo");
     listar_empleados_para_seleccionar();
     listar_clientes_para_seleccionar();
     listar_combo_categoria();
