@@ -259,8 +259,8 @@ MODAL LISTAR CONTRATOS CLIENTE
     </div>
 </div>
 
-<script src="js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="js/operatorios-asistencia-medica-individual-cliente.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/operatorios-asistencia-medica-individual-cliente.js?rev=<?php echo time(); ?>"></script>
 <script>
     $(document).ready(function() {
         listar_operatorios_cliente_asistencia_medica_individual();

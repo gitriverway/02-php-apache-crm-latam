@@ -836,8 +836,8 @@ MODAL LISTAR CONTRATOS CLIENTE
     </div>
 </div>
 
-<script src="js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="js/creditos-ambulatorios-asistencia-medica-individual.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/creditos-ambulatorios-asistencia-medica-individual.js?rev=<?php echo time(); ?>"></script>
 <script>
     $(document).ready(function() {
 

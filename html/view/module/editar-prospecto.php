@@ -640,8 +640,8 @@ $t = function($key) {
     </div>
 </div>
 
-<script src="js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="js/prospecto.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/prospecto.js?rev=<?php echo time(); ?>"></script>
 
 <script>
 $(document).ready(function() {

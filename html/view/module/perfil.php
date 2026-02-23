@@ -100,4 +100,4 @@
     <!-- /.content -->
 </div>
 
-<script src="js/perfil.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/perfil.js?rev=<?php echo time(); ?>"></script>

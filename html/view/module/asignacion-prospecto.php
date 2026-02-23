@@ -153,7 +153,7 @@ MODAL LISTAR CHAT PROSPECTO WEB
 </div>
 <!-- /.modal -->
 
-<script src="js/asignacion.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/asignacion.js?rev=<?php echo time(); ?>"></script>
 <script>
     $(document).ready(function() {
         listar_asignacion();

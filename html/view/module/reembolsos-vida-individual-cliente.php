@@ -208,7 +208,7 @@ MODAL INGRESAR NUEVO REEMBOLSO
     </div>
 </div>
 
-<script src="js/reembolsos-vida-individual-cliente.js?rev=<?php echo time();?>"></script>
+<script src="/js/reembolsos-vida-individual-cliente.js?rev=<?php echo time();?>"></script>
 <script>
 $(document).ready(function() {
     listar_reembolsos_cliente_vida_individual();

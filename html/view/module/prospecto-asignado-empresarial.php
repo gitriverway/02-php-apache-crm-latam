@@ -182,7 +182,7 @@ MODAL MODIFICAR ESTADO BAYER PERSONA
     </div>
 </div>
 
-<script src="js/prospecto-empresarial.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/prospecto-empresarial.js?rev=<?php echo time(); ?>"></script>
 <script>
 $(document).ready(function() {
     listar_prospecto_empresarial();

@@ -75,7 +75,7 @@ if ($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE") {
 </div>
 <!-- /.content-wrapper -->
 
-<script src="js/bloqueo_ip.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/bloqueo_ip.js?rev=<?php echo time(); ?>"></script>
 <script>
     $(document).ready(function() {
         listar_bloqueo_ip();

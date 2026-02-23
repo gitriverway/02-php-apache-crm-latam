@@ -158,7 +158,7 @@ MODAL LISTAR CONTRATOS
     </div>
 </div>
 
-<script src="js/clientes-accidentes-personales-individual-empresarial.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/clientes-accidentes-personales-individual-empresarial.js?rev=<?php echo time(); ?>"></script>
 <script>
     $(document).ready(function() {
         listar_cliente_pymes();

@@ -236,7 +236,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
 </div>
 
 
-<script src="js/clientes.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/clientes.js?rev=<?php echo time(); ?>"></script>
 <script>
     $(document).ready(function() {
         listar_cliente();

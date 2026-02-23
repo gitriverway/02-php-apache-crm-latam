@@ -296,8 +296,8 @@ MODAL LISTAR CONTRATOS CLIENTE
     </div>
 </div>
 
-<script src="js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="js/siniestros-vehiculo-individual-cliente.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/siniestros-vehiculo-individual-cliente.js?rev=<?php echo time(); ?>"></script>
 <script>
     $(document).ready(function() {
         listar_siniestros_cliente_vehiculo_individual();

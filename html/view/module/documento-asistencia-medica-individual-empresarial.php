@@ -68,8 +68,8 @@ if($_SESSION["S_ROL"] != "CLIENTE"){
 </div>
 <!-- /.content-wrapper -->
 
-<script src="js/validaciones.js?rev=<?php echo time();?>"></script>
-<script src="js/documento-asistencia-medica-individual-empresarial.js?rev=<?php echo time();?>"></script>
+<script src="/js/validaciones.js?rev=<?php echo time();?>"></script>
+<script src="/js/documento-asistencia-medica-individual-empresarial.js?rev=<?php echo time();?>"></script>
 <script>
 $(document).ready(function() {
     listar_contrato_documento_cliente();

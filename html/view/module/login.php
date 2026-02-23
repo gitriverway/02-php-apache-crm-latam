@@ -77,7 +77,7 @@ $currentLang = Modelo_Idioma::getCurrentLanguage();
   <!-- /.card -->
 </div>
 <!-- /.login-box -->
-<script src="js/login.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/login.js?rev=<?php echo time(); ?>"></script>
 <script>
   $("#usuario").val();
   usuario.focus();

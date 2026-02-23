@@ -98,5 +98,5 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-<script src="js/contadores-administradores.js?rev=<?php echo time(); ?>"></script>
-<script src="js/contadores-clientes.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/contadores-administradores.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/contadores-clientes.js?rev=<?php echo time(); ?>"></script>

@@ -242,8 +242,8 @@ BODY DEL MODAL
     </div>
 </form>
 
-<script src="js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="js/empleado.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/empleado.js?rev=<?php echo time(); ?>"></script>
 <script>
     $(document).ready(function() {
         listar_empleado();

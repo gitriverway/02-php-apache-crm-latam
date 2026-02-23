@@ -227,8 +227,8 @@ CUERPO DEL MODAL
     </div>
 </form>
 
-<script src="js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="js/proveedor.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/proveedor.js?rev=<?php echo time(); ?>"></script>
 <script>
     $(document).ready(function() {
         listar_proveedores();

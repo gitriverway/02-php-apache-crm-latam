@@ -79,8 +79,8 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
 <!-- /.content-wrapper -->
 
 
-<script src="js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="js/contrato-transporte-pymes.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/contrato-transporte-pymes.js?rev=<?php echo time(); ?>"></script>
 <script>
 $(document).ready(function() {
     listar_cliente();

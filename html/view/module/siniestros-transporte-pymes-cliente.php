@@ -239,8 +239,8 @@ MODAL LISTAR CONTRATOS CLIENTE
     </div>
 </div>
 
-<script src="js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="js/siniestros-transporte-empresarial-cliente.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/siniestros-transporte-empresarial-cliente.js?rev=<?php echo time(); ?>"></script>
 <script>
 $(document).ready(function() {
     listar_siniestros_cliente_transporte_individual();

@@ -211,7 +211,7 @@ MODAL LISTAR CHAT PROSPECTO WEB
 </div>
 <!-- /.modal -->
 
-<script src="js/prospecto.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/prospecto.js?rev=<?php echo time(); ?>"></script>
 <script>
 $(document).ready(function() {
     listar_prospecto();

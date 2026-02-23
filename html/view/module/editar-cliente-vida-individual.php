@@ -771,8 +771,8 @@ MODAL LISTAR CONTRATOS
     </div>
 </div>
 
-<script src="js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="js/clientes-vida-individual.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script src="/js/clientes-vida-individual.js?rev=<?php echo time(); ?>"></script>
 <script>
 $(document).ready(function() {
     listar_empleados_para_seleccionar();
