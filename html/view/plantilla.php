@@ -231,16 +231,16 @@ $htmlLang = isset($langMap[$currentLang]) ? $langMap[$currentLang] : 'en';
   }
   ?>
 
-  <script src="/js/idioma.js?rev=<?php echo time(); ?>"></script>
-  <script src="/js/plantilla.js?rev=<?php echo time(); ?>"></script>
-  <script src="/js/notificaciones/utils.js?rev=<?php echo time(); ?>"></script>
-  <script src="/js/notificaciones/prospectos.js?rev=<?php echo time(); ?>"></script>
-  <script src="/js/notificaciones/clientes.js?rev=<?php echo time(); ?>"></script>
-  <script src="/js/notificaciones/renovaciones.js?rev=<?php echo time(); ?>"></script>
-  <script src="/js/notificaciones/reembolsos.js?rev=<?php echo time(); ?>"></script>
-  <script src="/js/notificaciones/creditos.js?rev=<?php echo time(); ?>"></script>
-  <script src="/js/notificaciones/siniestros.js?rev=<?php echo time(); ?>"></script>
-  <script src="/js/notificaciones/main.js?rev=<?php echo time(); ?>"></script>
+  <script src="js/idioma.js?rev=<?php echo time(); ?>"></script>
+  <script src="js/plantilla.js?rev=<?php echo time(); ?>"></script>
+  <script src="js/notificaciones/utils.js?rev=<?php echo time(); ?>"></script>
+  <script src="js/notificaciones/prospectos.js?rev=<?php echo time(); ?>"></script>
+  <script src="js/notificaciones/clientes.js?rev=<?php echo time(); ?>"></script>
+  <script src="js/notificaciones/renovaciones.js?rev=<?php echo time(); ?>"></script>
+  <script src="js/notificaciones/reembolsos.js?rev=<?php echo time(); ?>"></script>
+  <script src="js/notificaciones/creditos.js?rev=<?php echo time(); ?>"></script>
+  <script src="js/notificaciones/siniestros.js?rev=<?php echo time(); ?>"></script>
+  <script src="js/notificaciones/main.js?rev=<?php echo time(); ?>"></script>
   <script>
     $(document).ready(function() {
       listar_notificaciones();
