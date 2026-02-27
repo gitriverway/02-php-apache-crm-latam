@@ -944,11 +944,11 @@ MODAL LISTAR CONTRATOS CLIENTE
     </div>
 </div>
 
-<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="/js/siniestros-transporte-empresarial.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/siniestros-transporte-empresarial.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    // lista1();
-    listar_siniestros_transporte_empresarial();
-});
+    $(document).ready(function() {
+        // lista1();
+        listar_siniestros_transporte_empresarial();
+    });
 </script>

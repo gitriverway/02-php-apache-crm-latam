@@ -233,9 +233,9 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-5">
                                 <!-- ENTRADA PARA EL DOCUMENTO -->
                                 <div class="form-group">
-                                     <label for="txt_documento" class="control-label" style="text-align: right;"><?php echo $t('edit_forms.id_card'); ?>
-                                         <font color="red"> *</font>
-                                     </label>
+                                    <label for="txt_documento" class="control-label" style="text-align: right;"><?php echo $t('edit_forms.id_card'); ?>
+                                        <font color="red"> *</font>
+                                    </label>
                                     <div class="input-group">
                                         <input type="text" class="form-control validarNumerosLetras" id="txt_documento"
                                             placeholder="<?php echo $t('form.enter_id_card'); ?> autocomplete=" off"
@@ -251,9 +251,9 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-7">
                                 <!-- ENTRADA PARA NOMBRE -->
                                 <div class="form-group">
-                                     <label for="txt_nombre" class="control-label" style="text-align: right;"><?php echo $t('edit_forms.name'); ?>
-                                         <font color="red"> *</font>
-                                     </label>
+                                    <label for="txt_nombre" class="control-label" style="text-align: right;"><?php echo $t('edit_forms.name'); ?>
+                                        <font color="red"> *</font>
+                                    </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_nombre"
                                         placeholder="<?php echo $t('form.enter_name'); ?>" maxlength="50" autocomplete="off"
                                         style="text-transform: uppercase">
@@ -262,9 +262,9 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA GENERO-->
                                 <div class="form-group">
-                                     <label class="control-label" style="text-align: right;"><?php echo $t('edit_forms.gender'); ?>
+                                    <label class="control-label" style="text-align: right;"><?php echo $t('edit_forms.gender'); ?>
                                         <font color="red"> *</font>
-                                     </label>
+                                    </label>
                                     <select id="genero" name="genero" class="form-control genero" required>
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
                                         <option value="masculino"><?php echo $t('edit_forms.male'); ?></option>
@@ -293,7 +293,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA FECHA DE NACIMIENTO -->
                                 <div class="form-group">
                                     <label for="txt_fecha_nacimiento" class="control-label"
-                                         style="text-align: right;"><?php echo $t('edit_forms.birth_date'); ?>
+                                        style="text-align: right;"><?php echo $t('edit_forms.birth_date'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="date" class="form-control" id="txt_fecha_nacimiento"
@@ -610,7 +610,7 @@ $t = function ($key) {
                                             <label for="cbm_estado_bayer" class="control-label"
                                                 style="text-align: right;">ESTATUS<font color="red"> *</font>
                                             </label>
-                                             <select class="form-control cbm_estado_bayer" name="state"
+                                            <select class="form-control cbm_estado_bayer" name="state"
                                                 id="cbm_estado_bayer" style="width:100%;">
                                                 <option value=""><?php echo $t('messages.select_option'); ?></option>
                                                 <option value="ABIERTO"><?php echo $t('status.open'); ?></option>
@@ -771,8 +771,8 @@ MODAL LISTAR CONTRATOS
     </div>
 </div>
 
-<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="/js/clientes-vida-individual.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/clientes-vida-individual.js?rev=<?php echo time(); ?>"></script>
 <script>
 $(document).ready(function() {
     listar_empleados_para_seleccionar();

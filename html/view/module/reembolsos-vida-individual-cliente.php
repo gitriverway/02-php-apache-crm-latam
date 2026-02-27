@@ -5,16 +5,15 @@ $t = function ($key) {
 };
 
 
-if($_SESSION["S_ROL"] != "CLIENTE"){
+if ($_SESSION["S_ROL"] != "CLIENTE") {
 
-echo '<script>
+    echo '<script>
 
   window.location = "inicio";
 
 </script>';
 
-return;
-
+    return;
 }
 
 ?>
@@ -208,10 +207,10 @@ MODAL INGRESAR NUEVO REEMBOLSO
     </div>
 </div>
 
-<script src="/js/reembolsos-vida-individual-cliente.js?rev=<?php echo time();?>"></script>
+<script type="text/javascript" src="/js/reembolsos-vida-individual-cliente.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_reembolsos_cliente_vida_individual();
-    listar_contratos_para_seleccionar();
-});
+    $(document).ready(function() {
+        listar_reembolsos_cliente_vida_individual();
+        listar_contratos_para_seleccionar();
+    });
 </script>

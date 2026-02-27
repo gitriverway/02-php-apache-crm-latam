@@ -730,8 +730,8 @@ MODAL LISTAR CONTRATOS
     </div>
 </div>
 
-<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="/js/clientes-vehiculo-individual.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/clientes-vehiculo-individual.js?rev=<?php echo time(); ?>"></script>
 <script>
 $(document).ready(function() {
     listar_empleados_para_seleccionar();

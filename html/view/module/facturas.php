@@ -1,16 +1,15 @@
 <?php
 
-if($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE" && $_SESSION["S_ROL"] != "VENDEDOR"){
+if ($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE" && $_SESSION["S_ROL"] != "VENDEDOR") {
 
     echo '<script>
     
       window.location = "inicio";
     
     </script>';
-    
+
     return;
-    
-    }
+}
 
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -21,7 +20,7 @@ if($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE" && $
             <div class="row mb-2">
                 <?php
                 require_once __DIR__ . '/../../model/modelo_idioma.php';
-                $t = function($key) {
+                $t = function ($key) {
                     return Modelo_Idioma::t($key);
                 };
                 ?>
@@ -58,7 +57,7 @@ if($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE" && $
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-<th style="text-align:center; width:10px"><?php echo $t('list_tables.document_number'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.document_number'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.name'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.invoice_number'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.emission_date'); ?></th>
@@ -135,7 +134,7 @@ MODAL NUEVA FACTURA
                             <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                 style="width:100%;">
                                 <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
-<option value="DEBITO BANCARIO"><?php echo $t('form.bank_debit'); ?></option>
+                                <option value="DEBITO BANCARIO"><?php echo $t('form.bank_debit'); ?></option>
                                 <option value="TRANSFERENCIA BANCARIO"><?php echo $t('form.bank_transfer'); ?></option>
                                 <option value="TARJETA DE CREDITO"><?php echo $t('form.credit_card'); ?></option>
                             </select>
@@ -147,7 +146,7 @@ MODAL NUEVA FACTURA
                             </label>
                             <input type="file" class="form-control" id="txt_factura_documento"
                                 name="txt_factura_documento" accept=".pdf">
-                                <p class="help-block"><?php echo $t('form.max_image_size'); ?> <?php echo $t('form.image_mb_5'); ?></p>
+                            <p class="help-block"><?php echo $t('form.max_image_size'); ?> <?php echo $t('form.image_mb_5'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -163,13 +162,13 @@ MODAL NUEVA FACTURA
     </div>
 </div>
 
-<script src="/js/validaciones.js?rev=<?php echo time();?>"></script>
-<script src="/js/facturas.js?rev=<?php echo time();?>"></script>
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/facturas.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_factura_cliente();
-    $("#modalAgregarFactura").on('shown.bs.modal', function() {
-        $("#txt_documento").focus();
+    $(document).ready(function() {
+        listar_factura_cliente();
+        $("#modalAgregarFactura").on('shown.bs.modal', function() {
+            $("#txt_documento").focus();
+        });
     });
-});
 </script>

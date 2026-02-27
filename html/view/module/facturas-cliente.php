@@ -4,17 +4,16 @@ $t = function ($key) {
     return Modelo_Idioma::t($key);
 };
 
-if($_SESSION["S_ROL"] != "CLIENTE"){
+if ($_SESSION["S_ROL"] != "CLIENTE") {
 
     echo '<script>
     
       window.location = "inicio";
     
     </script>';
-    
+
     return;
-    
-    }
+}
 
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -24,12 +23,12 @@ if($_SESSION["S_ROL"] != "CLIENTE"){
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-<h1><?php echo $t('messages.client_invoices'); ?>
+                    <h1><?php echo $t('messages.client_invoices'); ?>
                     </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-<li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
+                        <li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
                         <li class="breadcrumb-item active"><?php echo $t('messages.manage_client_invoices'); ?></li>
                     </ol>
                 </div>
@@ -51,7 +50,7 @@ if($_SESSION["S_ROL"] != "CLIENTE"){
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-<th style="text-align:center; width:10px"><?php echo $t('list_tables.document_number'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.document_number'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.name'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.invoice_number'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.emission_date'); ?></th>
@@ -71,10 +70,10 @@ if($_SESSION["S_ROL"] != "CLIENTE"){
 </div>
 <!-- /.content-wrapper -->
 
-<script src="/js/validaciones.js?rev=<?php echo time();?>"></script>
-<script src="/js/factura-cliente.js?rev=<?php echo time();?>"></script>
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/factura-cliente.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_factura_cliente();
-});
+    $(document).ready(function() {
+        listar_factura_cliente();
+    });
 </script>

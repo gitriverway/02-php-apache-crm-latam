@@ -77,10 +77,10 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
 <!-- /.content-wrapper -->
 
 
-<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="/js/contrato-vehiculo-individual.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/contrato-vehiculo-individual.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_cliente();
-});
+    $(document).ready(function() {
+        listar_cliente();
+    });
 </script>

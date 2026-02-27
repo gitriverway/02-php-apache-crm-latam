@@ -6,7 +6,7 @@
             <div class="row mb-2">
                 <?php
                 require_once __DIR__ . '/../../model/modelo_idioma.php';
-                $t = function($key) {
+                $t = function ($key) {
                     return Modelo_Idioma::t($key);
                 };
                 ?>
@@ -98,5 +98,5 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-<script src="/js/contadores-administradores.js?rev=<?php echo time(); ?>"></script>
-<script src="/js/contadores-clientes.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/contadores-administradores.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/contadores-clientes.js?rev=<?php echo time(); ?>"></script>

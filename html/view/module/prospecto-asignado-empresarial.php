@@ -12,7 +12,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
 }
 
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-$t = function($key) {
+$t = function ($key) {
     return Modelo_Idioma::t($key);
 };
 ?>
@@ -182,10 +182,10 @@ MODAL MODIFICAR ESTADO BAYER PERSONA
     </div>
 </div>
 
-<script src="/js/prospecto-empresarial.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/prospecto-empresarial.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_prospecto_empresarial();
-    listar_vendedores();
-});
+    $(document).ready(function() {
+        listar_prospecto_empresarial();
+        listar_vendedores();
+    });
 </script>

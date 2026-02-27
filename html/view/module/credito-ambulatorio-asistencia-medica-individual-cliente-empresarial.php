@@ -14,7 +14,6 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
 </script>';
 
     return;
-
 }
 
 ?>
@@ -25,12 +24,12 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-<h1><?php echo $t('titles.ambulatory_credit_medical_assistance_pymes'); ?>
+                    <h1><?php echo $t('titles.ambulatory_credit_medical_assistance_pymes'); ?>
                     </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-<li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
+                        <li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
                         <li class="breadcrumb-item active"><?php echo $t('titles.ambulatory_credit_medical_assistance_pymes'); ?></li>
                     </ol>
                 </div>
@@ -46,9 +45,9 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
             <div class="card-header">
                 <!-- <h3 class="card-title">BIENVENIDO AL CONTENIDO DE CREDITOS AMBULATORIO - ASISTENCIA MEDICA INDIVIDUAL</h3> -->
                 <div class="card-tools pull-right">
-<button class="btn btn-primary" style="width:100%" onclick="AbrirModalRegistro()"><i
+                    <button class="btn btn-primary" style="width:100%" onclick="AbrirModalRegistro()"><i
                             class="fa fa-plus"><b>&nbsp;<?php echo $t('buttons.new_record'); ?>
-                                </i></b></button>
+                        </i></b></button>
                 </div>
             </div>
             <div class="card-body">
@@ -57,7 +56,7 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-<th style="text-align:center; width:10px"><?php echo $t('titles.request_number_ambulatory'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('titles.request_number_ambulatory'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('titles.patient'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('titles.diagnosis'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('titles.creation_date'); ?></th>
@@ -260,7 +259,7 @@ MODAL LISTAR CONTRATOS CLIENTE
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-<th style="text-align:center; width:10px"><?php echo $t('list_tables.provider'); ?></th>
+                                    <th style="text-align:center; width:10px"><?php echo $t('list_tables.provider'); ?></th>
                                     <th style="text-align:center; width:10px"><?php echo $t('list_tables.plan'); ?></th>
                                     <th style="text-align:center; width:10px"><?php echo $t('list_tables.id_card'); ?></th>
                                     <th style="text-align:center; width:10px"><?php echo $t('list_tables.customer'); ?></th>
@@ -276,8 +275,8 @@ MODAL LISTAR CONTRATOS CLIENTE
     </div>
 </div>
 
-<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="/js/credito-ambulatorio-asistencia-medica-individual-cliente-empresarial.js?rev=<?php echo time(); ?>">
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/credito-ambulatorio-asistencia-medica-individual-cliente-empresarial.js?rev=<?php echo time(); ?>">
 </script>
 <script>
     $(document).ready(function() {

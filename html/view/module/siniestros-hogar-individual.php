@@ -739,8 +739,8 @@ MODAL AGREGAR OBSERVACION ANULACION SINIESTRO
     </div>
 </div>
 
-<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="/js/siniestros-hogar-individual.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/siniestros-hogar-individual.js?rev=<?php echo time(); ?>"></script>
 <script>
     $(document).ready(function() {
         listar_siniestros_hogar_individual();

@@ -80,10 +80,10 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
 </div>
 <!-- /.content-wrapper -->
 
-<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="/js/contrato-responsabilidad-civil-individual.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/contrato-responsabilidad-civil-individual.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_contrato_cliente();
-});
+    $(document).ready(function() {
+        listar_contrato_cliente();
+    });
 </script>

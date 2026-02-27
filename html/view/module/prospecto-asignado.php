@@ -20,7 +20,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
             <div class="row mb-2">
                 <?php
                 require_once __DIR__ . '/../../model/modelo_idioma.php';
-                $t = function($key) {
+                $t = function ($key) {
                     return Modelo_Idioma::t($key);
                 };
                 ?>
@@ -47,7 +47,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                 <div class="card-tools pull-right">
                     <a href="crear-prospecto">
                         <button class="btn btn-primary" style="width:100%"><i class="fa fa-plus"><b>&nbsp;<?php echo $t('messages.new_record'); ?>
-                                    </i></b></button>
+                            </i></b></button>
                     </a>
                 </div>
             </div>
@@ -211,10 +211,10 @@ MODAL LISTAR CHAT PROSPECTO WEB
 </div>
 <!-- /.modal -->
 
-<script src="/js/prospecto.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/prospecto.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_prospecto();
-    listar_vendedores();
-});
+    $(document).ready(function() {
+        listar_prospecto();
+        listar_vendedores();
+    });
 </script>

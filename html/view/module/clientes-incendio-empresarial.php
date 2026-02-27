@@ -156,7 +156,7 @@ MODAL LISTAR CONTRATOS
     </div>
 </div>
 
-<script src="/js/clientes-incendio-empresarial.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/clientes-incendio-empresarial.js?rev=<?php echo time(); ?>"></script>
 <script>
     $(document).ready(function() {
         listar_cliente();

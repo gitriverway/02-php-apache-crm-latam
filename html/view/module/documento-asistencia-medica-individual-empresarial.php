@@ -5,17 +5,16 @@ $t = function ($key) {
 };
 
 
-if($_SESSION["S_ROL"] != "CLIENTE"){
+if ($_SESSION["S_ROL"] != "CLIENTE") {
 
     echo '<script>
     
       window.location = "inicio";
     
     </script>';
-    
+
     return;
-    
-    }
+}
 
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -68,10 +67,10 @@ if($_SESSION["S_ROL"] != "CLIENTE"){
 </div>
 <!-- /.content-wrapper -->
 
-<script src="/js/validaciones.js?rev=<?php echo time();?>"></script>
-<script src="/js/documento-asistencia-medica-individual-empresarial.js?rev=<?php echo time();?>"></script>
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/documento-asistencia-medica-individual-empresarial.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_contrato_documento_cliente();
-});
+    $(document).ready(function() {
+        listar_contrato_documento_cliente();
+    });
 </script>

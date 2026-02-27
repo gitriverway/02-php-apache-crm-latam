@@ -20,7 +20,7 @@ if ($_SESSION["S_ROL"] != "ADMINISTRADOR") {
             <div class="row mb-2">
                 <?php
                 require_once __DIR__ . '/../../model/modelo_idioma.php';
-                $t = function($key) {
+                $t = function ($key) {
                     return Modelo_Idioma::t($key);
                 };
                 ?>
@@ -47,7 +47,7 @@ if ($_SESSION["S_ROL"] != "ADMINISTRADOR") {
                 <h3 class="card-title"><?php echo $t('messages.welcome_user_content'); ?></h3>
                 <div class="card-tools pull-right">
                     <button class="btn btn-primary" style="width:100%" onclick="AbrirModalRegistro()"><i class="fa fa-plus"><b>&nbsp;<?php echo $t('messages.new_record'); ?>
-                                </i></b></button>
+                        </i></b></button>
                 </div>
             </div>
             <div class="card-body">
@@ -55,7 +55,7 @@ if ($_SESSION["S_ROL"] != "ADMINISTRADOR") {
                     <thead>
                         <tr>
                             <th style="width:10px">#</th>
-<th style="text-align:center"><?php echo $t('messages.user_image'); ?></th>
+                            <th style="text-align:center"><?php echo $t('messages.user_image'); ?></th>
                             <th style="text-align:center"><?php echo $t('common.user'); ?></th>
                             <th style="text-align:center"><?php echo $t('list_tables.cargo'); ?></th>
                             <th style="text-align:center"><?php echo $t('list_tables.employee'); ?></th>
@@ -247,8 +247,8 @@ CUERPO DEL MODAL
     </div>
 </form>
 
-<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="/js/usuario.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/usuario.js?rev=<?php echo time(); ?>"></script>
 <script>
     $(document).ready(function() {
         listar_usuario();

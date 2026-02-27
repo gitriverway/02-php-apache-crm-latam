@@ -5,7 +5,7 @@
             <div class="row mb-2">
                 <?php
                 require_once __DIR__ . '/../../model/modelo_idioma.php';
-                $t = function($key) {
+                $t = function ($key) {
                     return Modelo_Idioma::t($key);
                 };
                 ?>
@@ -100,4 +100,4 @@
     <!-- /.content -->
 </div>
 
-<script src="/js/perfil.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/perfil.js?rev=<?php echo time(); ?>"></script>

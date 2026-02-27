@@ -623,17 +623,17 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
     </div>
 </div>
 
-<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="/js/prospecto.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/prospecto.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_clientes_para_seleccionar();
-    listar_combo_categoria();
-    listar_combo_aseguradora();
-    listar_combo_provincia();
-    $("#modalAgregarObservacion").on('shown.bs.modal', function() {
-        $("#txt_observacion").focus();
-    });
+    $(document).ready(function() {
+        listar_clientes_para_seleccionar();
+        listar_combo_categoria();
+        listar_combo_aseguradora();
+        listar_combo_provincia();
+        $("#modalAgregarObservacion").on('shown.bs.modal', function() {
+            $("#txt_observacion").focus();
+        });
 
-});
+    });
 </script>

@@ -583,8 +583,8 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
     </div>
 </div>
 
-<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="/js/prospecto-empresarial.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/prospecto-empresarial.js?rev=<?php echo time(); ?>"></script>
 <script>
     $(document).ready(function() {
         listar_clientes_para_seleccionar();

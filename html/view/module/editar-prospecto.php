@@ -12,7 +12,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
 }
 
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-$t = function($key) {
+$t = function ($key) {
     return Modelo_Idioma::t($key);
 };
 ?>
@@ -640,21 +640,21 @@ $t = function($key) {
     </div>
 </div>
 
-<script src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
-<script src="/js/prospecto.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/prospecto.js?rev=<?php echo time(); ?>"></script>
 
 <script>
-$(document).ready(function() {
-    listar_clientes_para_seleccionar();
-    listar_combo_categoria();
-    listar_combo_aseguradora();
-    listar_combo_provincia();
-    listar_empleados_para_seleccionar();
-    $("#modalAgregarObservacion").on('shown.bs.modal', function() {
-        $("#txt_observacion").focus();
+    $(document).ready(function() {
+        listar_clientes_para_seleccionar();
+        listar_combo_categoria();
+        listar_combo_aseguradora();
+        listar_combo_provincia();
+        listar_empleados_para_seleccionar();
+        $("#modalAgregarObservacion").on('shown.bs.modal', function() {
+            $("#txt_observacion").focus();
+        });
+        setTimeout(function() {
+            cargar_datos_prospecto();
+        }, 2000);
     });
-    setTimeout(function() {
-        cargar_datos_prospecto();
-    }, 2000);
-});
 </script>
