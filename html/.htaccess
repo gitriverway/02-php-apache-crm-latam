@@ -7,5 +7,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 # Si el directorio existe físicamente, no redirigir
 RewriteCond %{REQUEST_FILENAME} !-d
 
+AddType application/javascript .js
+
 # Solo redirigir si el archivo NO existe
 RewriteRule ^([-a-zA-Z0-9]+)$ index.php?ruta=$1 [L,QSA]

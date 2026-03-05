@@ -7,11 +7,16 @@ $t = function ($key) {
 
 use PHPMailer\PHPMailer\PHPMailer;
 
+$t = function ($key, $params = null) {
+    return Modelo_Idioma::t($key, $params);
+};
+
 class Envio_correo_notificacion_liquidacion_reembolso
 {
 
     function realizar_envio_correo_notificacion_liquidacion_reembolso($idReembolso, $idContrato)
     {
+        global $t;
 
         $MU = new Modelo_Reembolso_Cliente();
 
@@ -99,7 +104,7 @@ class Envio_correo_notificacion_liquidacion_reembolso
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = '¡LIQUIDACIÓN APROBADA! REEMBOLSO Número ' . $Ticket . ' FINALIZADO';
+            $mail->Subject = $t('email.reembolso_liquidacion.subject', ['ticket' => $Ticket]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -107,66 +112,66 @@ class Envio_correo_notificacion_liquidacion_reembolso
 
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Estimado Cliente: ' . $nombre . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Se adjunta la liquidación emitida por la Compañia de Seguros ' . $aseguradora . ', ticket interno: Número ' . $Ticket . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Número de Contrato: </strong>' . $numero_contrato . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Nombre del Titular: </strong> ' . $nombre . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Nombre del Paciente: </strong> ' . $nombre_paciente . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Diagnóstico: </strong> ' . $diagnostico . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Valor Presentado: </strong> ' . $valor_presentado . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Observación: </strong> ' . $observacion_final . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_liquidacion.dear_client') . ': ' . $nombre . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . str_replace('{aseguradora}', $aseguradora, str_replace('{ticket}', $Ticket, $t('email.reembolso_liquidacion.settlement_attached'))) . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_liquidacion.contract_number') . ': </strong>' . $numero_contrato . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_liquidacion.holder_name') . ': </strong> ' . $nombre . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_liquidacion.patient_name') . ': </strong> ' . $nombre_paciente . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_liquidacion.diagnosis') . ': </strong> ' . $diagnostico . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_liquidacion.presented_value') . ': </strong> ' . $valor_presentado . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_liquidacion.observation') . ': </strong> ' . $observacion_final . '</h3>
 
                 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                    <strong>Nota:</strong> Declaramos contar con el consentimiento explícito para llevar a cabo el trámite en beneficio del cliente.
+                    <strong>' . $t('email.reembolso_liquidacion.note') . '</strong>
                 </p>
                 
         
                 <div class=WordSection1>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Saludos cordiales,<o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.reembolso_liquidacion.regards') . ',<o:p>
                                 </o:p></span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Departamento Servicio al Cliente<o:p></o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.reembolso_liquidacion.department') . '<o:p></o:p>
                                 </span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Dirección:</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.address') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">Centro Empresarial Qworks - Quicentro Shopping, oficina 303
                                 <o:p></o:p></span></span></p>
                     <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Código
                                 postal:</span></b><span style="font-family:Arial,sans-serif;color:#2F5496"> 170311</span><span
                             style="font-family:Arial,sans-serif">
-                            <o:p></o:p>
+                            <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Celular:</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.phone') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">59398 940 9581</span>
-                            <o:p></o:p>
+                            <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Web:</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.web') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">https://<a
                                     href=http://www.mqpseguros.com><span
                                         style="color:#2F5496">www.mqpseguros.com</span></a></span>
-                            <o:p></o:p>
+                            <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Credencial:</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.credential') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">1793190</span>
-                            <o:p></o:p>
+                            <o:p>&nbsp;</o:p>
                         </span></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><span style="font-size:12.0pt;font-family:Script MT Bold;color:#1F3864">“Su visión será
-                            clara solo cuando mira a su corazón. El que mira hacia afuera, sueña.  El que mira hacia dentro,
-                            despierta”<o:p></o:p></span></p>
+                    <p class=MsoNormal><span style="font-size:12.0pt;font-family:Script MT Bold;color:#1F3864">"Su visión será
+                            clara solo cuando mira a su corazón. El que mira hacia afuera, sueña.  El que mira hacia dentro,
+                            despierta"<o:p></o:p></span></p>
                     <p class=MsoNormal><span style="font-size:12.0pt;font-family:Script MT Bold;color:#1F3864">Carl Jung<o:p>
                             </o:p></span></p>
                     <p class=MsoNormal><span style="font-size:10.0pt;font-family:Verdana,sans-serif"><img border=0 width=200
                                 height=87 style="width:2.0833in;height:.9062in" id=Imagen_x0020_1
                                 src=cid:image001.png@01D88E03.4839E730></span><span
                             style="font-family:Script MT Bold;color:#1F3864">
-                            <o:p></o:p>
+                            <o:p>&nbsp;</o:p>
                         </span></p>
                 </div>
         

@@ -1,7 +1,8 @@
 <?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
+$t = function ($key, $params = null) {
+    global $t;
+    return Modelo_Idioma::t($key, $params);
 };
 
 
@@ -12,6 +13,7 @@ class Envio_correo_documentos_seguimiento_credito_ambulatorio_1
 
     function realizar_envio_correo_documentos_seguimiento_credito_ambulatorio_1($idCreditoAmbulatorio, $idContrato)
     {
+        global $t;
 
         $MU = new Modelo_Credito_Ambulatorio_Cliente();
 
@@ -129,7 +131,7 @@ class Envio_correo_documentos_seguimiento_credito_ambulatorio_1
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'PEDIDO DE CRÉDITO AMBULATORIO - ' . $fechaActual . ' - ' . $nombre . ' - DOCUMENTOS ADICIONALES REQUERIDOS';
+            $mail->Subject = $t('email_credito_ambulatorio_documentos_seguimiento_aseguradora.subject', ['fecha' => $fechaActual, 'nombre' => $nombre]);
 
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
@@ -138,30 +140,30 @@ class Envio_correo_documentos_seguimiento_credito_ambulatorio_1
 
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Estimados Colegas,</h3>
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Adjunto sírvase encontrar, documentos adicionales solicitados para el credito ambulatorio:</h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_credito_ambulatorio_documentos_seguimiento_aseguradora.dear_colleagues') . '</h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_credito_ambulatorio_documentos_seguimiento_aseguradora.additional_documents') . '</h3>
     
             <!-- <center> -->
-            <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Número de Contrato: ' . $numero_contrato . '
+            <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_credito_ambulatorio_aseguradora.contract_number') . ': ' . $numero_contrato . '
                 </h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Nombre del Titular: ' . $nombre . '
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_credito_ambulatorio_aseguradora.holder_name') . ': ' . $nombre . '
                 </h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Nombre Paciente: ' . $nombre_paciente . '</h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Diagnóstico: ' . $diagnostico . '</h4>
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_credito_ambulatorio_aseguradora.patient_name') . ': ' . $nombre_paciente . '</h4>
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_credito_ambulatorio_aseguradora.diagnosis') . ': ' . $diagnostico . '</h4>
                 <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Tipo de Examen: ' . $tipo_examen_credito_ambulatorio . '</h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Lugar del Procedimiento: ' . $lugar_procedimiento_credito_ambulatorio . '</h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Fecha del Procedimiento: ' . $fecha_procedimiento_credito_ambulatorio . '</h4>
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_credito_ambulatorio_aseguradora.procedure_place') . ': ' . $lugar_procedimiento_credito_ambulatorio . '</h4>
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_credito_ambulatorio_aseguradora.procedure_date') . ': ' . $fecha_procedimiento_credito_ambulatorio . '</h4>
             
                 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                    <strong>Nota:</strong> Declaramos contar con el consentimiento explícito para llevar a cabo el trámite en beneficio del cliente.
+                    <strong>' . $t('email_credito_ambulatorio_aseguradora.note') . '</strong>
                 </p>
                 <div class=WordSection1>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Saludos cordiales,<o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email_credito_ambulatorio_aseguradora.regards') . ',<o:p>
                                 </o:p></span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Departamento Servicio al Cliente<o:p></o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email_credito_ambulatorio_aseguradora.customer_service_dept') . '<o:p></o:p>
                                 </span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>

@@ -1,3 +1,22 @@
+// Helper function para traducciones en JavaScript
+function t(key, defaultValue) {
+  if (
+    typeof translations !== "undefined" &&
+    translations.form &&
+    translations.form[key]
+  ) {
+    return translations.form[key];
+  }
+  if (
+    typeof translations !== "undefined" &&
+    translations.form_labels &&
+    translations.form_labels[key]
+  ) {
+    return translations.form_labels[key];
+  }
+  return defaultValue || key;
+}
+
 // function lista1() {
 //   $.ajax({
 //     url: "/controller/empleados/controlador_empleados_listar_seleccionar.php",
@@ -476,7 +495,7 @@ $(".btnAgregarDependiente").click(function () {
       ' etiquetaTipoFamiliar" id = "etiquetaTipoFamiliar' +
       numProspecto +
       '" style="padding-right:0px">' +
-      "<label>Parentesco</label>" +
+      "<label>" + t('form_labels.parentesco', 'Parentesco') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-6 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
@@ -500,7 +519,7 @@ $(".btnAgregarDependiente").click(function () {
       ' etiquetaNombreFamiliar" id = "etiquetaNombreFamiliar' +
       numProspecto +
       '">' +
-      "<label>Nombre</label>" +
+      "<label>" + t('form_labels.nombre', 'Nombre') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-7 my-1">' +
       '<div class="input-group">' +
@@ -517,7 +536,7 @@ $(".btnAgregarDependiente").click(function () {
       ' etiquetaGeneroFamiliar" id = "etiquetaGeneroFamiliar' +
       numProspecto +
       '">' +
-      "<label>Genero</label>" +
+      "<label>" + t('form_labels.genero', 'Género') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-8 my-1">' +
       '<select class="form-control generoFamiliar" id="generoFamiliar' +
@@ -536,7 +555,7 @@ $(".btnAgregarDependiente").click(function () {
       ' etiquetaFechaNacimiento" id = "etiquetaFechaNacimiento' +
       numProspecto +
       '" style="padding-left:0px">' +
-      "<label>Fecha Nacimiento</label>" +
+      "<label>" + t('form_labels.fecha_nacimiento', 'Fecha Nacimiento') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-left:0px">' +
       '<div class="input-group">' +
@@ -716,7 +735,7 @@ $(".btnAgregarVehiculo").click(function () {
       ' etiquetaTipoVehiculo" id = "etiquetaTipoVehiculo' +
       numVehiculo +
       '" style="padding-right:0px">' +
-      "<label>Tipo Vehiculo</label>" +
+      "<label>" + t('form_labels.tipo_vehiculo', 'Tipo Vehículo') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
@@ -741,7 +760,7 @@ $(".btnAgregarVehiculo").click(function () {
       ' etiquetaMarcaVehiculo" id = "etiquetaMarcaVehiculo' +
       numVehiculo +
       '">' +
-      "<label>Marca</label>" +
+      "<label>" + t('form_labels.marca', 'Marca') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-10 my-1">' +
       '<div class="input-group">' +
@@ -758,7 +777,7 @@ $(".btnAgregarVehiculo").click(function () {
       ' etiquetaModeloVehiculo" id = "etiquetaModeloVehiculo' +
       numVehiculo +
       '">' +
-      "<label>Modelo</label>" +
+      "<label>" + t('form_labels.modelo', 'Modelo') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-11 my-1">' +
       '<input type="text" class="form-control validarNumerosLetrasDecimal modeloVehiculo" id="modeloVehiculo' +
@@ -773,7 +792,7 @@ $(".btnAgregarVehiculo").click(function () {
       ' etiquetaColorVehiculo" id = "etiquetaColorVehiculo' +
       numVehiculo +
       '" style="padding-left:0px">' +
-      "<label>Color</label>" +
+      "<label>" + t('form_labels.color', 'Color') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-12 my-1" style="padding-left:0px">' +
       '<div class="input-group">' +
@@ -790,7 +809,7 @@ $(".btnAgregarVehiculo").click(function () {
       ' etiquetaAnoVehiculo" id = "etiquetaAnoVehiculo' +
       numVehiculo +
       '" style="padding-left:0px">' +
-      "<label>Año</label>" +
+      "<label>" + t('form_labels.anno', 'Año') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-1 order-md-13 my-1" style="padding-left:0px">' +
       '<div class="input-group">' +
@@ -807,7 +826,7 @@ $(".btnAgregarVehiculo").click(function () {
       ' etiquetaPlacaVehiculo" id = "etiquetaPlacaVehiculo' +
       numVehiculo +
       '" style="padding-left:0px">' +
-      "<label>Placa</label>" +
+      "<label>" + t('form_labels.placa', 'Placa') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-1 order-md-14 my-1" style="padding-left:0px">' +
       '<div class="input-group">' +
@@ -824,7 +843,7 @@ $(".btnAgregarVehiculo").click(function () {
       ' etiquetaMontoVehiculo" id = "etiquetaMontoVehiculo' +
       numVehiculo +
       '" style="padding-left:0px">' +
-      "<label>Monto</label>" +
+      "<label>" + t('form_labels.monto', 'Monto') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-1 order-md-15 my-1" style="padding-left:0px">' +
       '<div class="input-group">' +
@@ -1047,7 +1066,7 @@ function agregarNuevaObservacion() {
       ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
       numObservacion +
       '" style="padding-right:0px">' +
-      "<label>Fecha Registro</label>" +
+      "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-4 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
@@ -1066,7 +1085,7 @@ function agregarNuevaObservacion() {
       ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
       numObservacion +
       '">' +
-      "<label>Observaci&oacute;n</label>" +
+      "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-5 my-1">' +
       '<label class="observacion" id="observacion' +
@@ -1765,7 +1784,7 @@ function agregar_auto_familiares() {
           ' etiquetaTipoFamiliar" id = "etiquetaTipoFamiliar' +
           numProspecto +
           '" style="padding-right:0px">' +
-          "<label>Parentesco</label>" +
+          "<label>" + t('form_labels.parentesco', 'Parentesco') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-6 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
@@ -1789,7 +1808,7 @@ function agregar_auto_familiares() {
           ' etiquetaNombreFamiliar" id = "etiquetaNombreFamiliar' +
           numProspecto +
           '">' +
-          "<label>Nombre</label>" +
+          "<label>" + t('form_labels.nombre', 'Nombre') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-4 order-md-7 my-1">' +
           '<div class="input-group">' +
@@ -1808,7 +1827,7 @@ function agregar_auto_familiares() {
           ' etiquetaGeneroFamiliar" id = "etiquetaGeneroFamiliar' +
           numProspecto +
           '">' +
-          "<label>Genero</label>" +
+          "<label>" + t('form_labels.genero', 'Género') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-8 my-1">' +
           '<select class="form-control generoFamiliar" id="generoFamiliar' +
@@ -1827,7 +1846,7 @@ function agregar_auto_familiares() {
           ' etiquetaFechaNacimiento" id = "etiquetaFechaNacimiento' +
           numProspecto +
           '" style="padding-left:0px">' +
-          "<label>Fecha Nacimiento</label>" +
+          "<label>" + t('form_labels.fecha_nacimiento', 'Fecha Nacimiento') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -1910,7 +1929,7 @@ function agregar_auto_vehiculos() {
           ' etiquetaTipoVehiculos" id = "etiquetaTipoVehiculos' +
           numVehiculo +
           '" style="padding-right:0px">' +
-          "<label>Tipo Vehiculo</label>" +
+          "<label>" + t('form_labels.tipo_vehiculo', 'Tipo Vehículo') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
@@ -1935,7 +1954,7 @@ function agregar_auto_vehiculos() {
           ' etiquetaMarcaVehiculo" id = "etiquetaMarcaVehiculo' +
           numVehiculo +
           '">' +
-          "<label>Marca</label>" +
+          "<label>" + t('form_labels.marca', 'Marca') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-10 my-1">' +
           '<div class="input-group">' +
@@ -1954,7 +1973,7 @@ function agregar_auto_vehiculos() {
           ' etiquetaModeloVehiculo" id = "etiquetaModeloVehiculo' +
           numVehiculo +
           '">' +
-          "<label>Modelo</label>" +
+          "<label>" + t('form_labels.modelo', 'Modelo') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-11 my-1">' +
           '<input type="text" class="form-control validarNumerosLetras modeloVehiculo" id="modeloVehiculo' +
@@ -1971,7 +1990,7 @@ function agregar_auto_vehiculos() {
           ' etiquetaColorVehiculo" id = "etiquetaColorVehiculo' +
           numVehiculo +
           '" style="padding-left:0px">' +
-          "<label>Color</label>" +
+          "<label>" + t('form_labels.color', 'Color') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-12 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -1990,7 +2009,7 @@ function agregar_auto_vehiculos() {
           ' etiquetaAnoVehiculo" id = "etiquetaAnoVehiculo' +
           numVehiculo +
           '" style="padding-left:0px">' +
-          "<label>Año</label>" +
+          "<label>" + t('form_labels.anno', 'Año') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-13 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -2009,7 +2028,7 @@ function agregar_auto_vehiculos() {
           ' etiquetaPlacaVehiculo" id = "etiquetaPlacaVehiculo' +
           numVehiculo +
           '" style="padding-left:0px">' +
-          "<label>Placa</label>" +
+          "<label>" + t('form_labels.placa', 'Placa') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-14 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -2028,7 +2047,7 @@ function agregar_auto_vehiculos() {
           ' etiquetaMontoVehiculo" id = "etiquetaMontoVehiculo' +
           numVehiculo +
           '" style="padding-left:0px">' +
-          "<label>Monto</label>" +
+          "<label>" + t('form_labels.monto', 'Monto') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-15 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -2123,7 +2142,7 @@ function agregar_auto_observaciones() {
               ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
               numObservacion +
               '" style="padding-right:0px">' +
-              "<label>Fecha Registro</label>" +
+              "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
               "</div>" +
               '<div class="col-6 col-md-4 order-md-4 my-1" style="padding-right:0px">' +
               '<div class="input-group">' +
@@ -2142,7 +2161,7 @@ function agregar_auto_observaciones() {
               ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
               numObservacion +
               '">' +
-              "<label>Observaci&oacute;n</label>" +
+              "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
               "</div>" +
               '<div class="col-6 col-md-4 order-md-5 my-1">' +
               '<label class="observacion" id="observacion' +
@@ -2827,7 +2846,7 @@ $(".btnAgregarHogar").click(function () {
       ' etiquetaTipoHogar" id = "etiquetaTipoHogar' +
       numHogar +
       '" style="padding-right:0px">' +
-      "<label>Tipo Hogar</label>" +
+      "<label>" + t('form_labels.tipo_hogar', 'Tipo Hogar') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-8 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
@@ -2848,7 +2867,7 @@ $(".btnAgregarHogar").click(function () {
       ' etiquetaDireccionHogar" id = "etiquetaDireccionHogar' +
       numHogar +
       '">' +
-      "<label>Dirección</label>" +
+      "<label>" + t('form_labels.direccion', 'Dirección') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-9 my-1">' +
       '<div class="input-group">' +
@@ -2865,7 +2884,7 @@ $(".btnAgregarHogar").click(function () {
       ' etiquetaAnoConstruccionHogar" id = "etiquetaAnoConstruccionHogar' +
       numHogar +
       '">' +
-      "<label>Año Construcción</label>" +
+      "<label>" + t('form_labels.anno_construccion', 'Año Construcción') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-10 my-1">' +
       '<input type="text" class="form-control validarNumerosLetrasDecimal anoConstruccionHogar" id="anoConstruccionHogar' +
@@ -2880,7 +2899,7 @@ $(".btnAgregarHogar").click(function () {
       ' etiquetaValorViviendaHogar" id = "etiquetaValorViviendaHogar' +
       numHogar +
       '" style="padding-left:0px">' +
-      "<label>Valor Vivienda</label>" +
+      "<label>" + t('form_labels.valor_vivienda', 'Valor Vivienda') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-1 order-md-11 my-1" style="padding-left:0px">' +
       '<div class="input-group">' +
@@ -2897,7 +2916,7 @@ $(".btnAgregarHogar").click(function () {
       ' etiquetaValorOtrasCosas" id = "etiquetaValorOtrasCosas' +
       numHogar +
       '" style="padding-left:0px">' +
-      "<label>Valor Interior Contenido Vivienda</label>" +
+      "<label>" + t('form_labels.valor_interior_contenido', 'Valor Interior Contenido') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-12 my-1" style="padding-left:0px">' +
       '<div class="input-group">' +
@@ -2914,7 +2933,7 @@ $(".btnAgregarHogar").click(function () {
       ' etiquetaMontoHogar" id = "etiquetaMontoHogar' +
       numHogar +
       '" style="padding-left:0px">' +
-      "<label>Monto</label>" +
+      "<label>" + t('form_labels.monto', 'Monto') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-13 my-1" style="padding-left:0px">' +
       '<div class="input-group">' +
@@ -3118,7 +3137,7 @@ function agregar_auto_hogares() {
           ' etiquetaTipoHogares" id = "etiquetaTipoHogares' +
           numHogar +
           '" style="padding-right:0px">' +
-          "<label>Tipo Hogar</label>" +
+          "<label>" + t('form_labels.tipo_hogar', 'Tipo Hogar') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-8 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
@@ -3139,7 +3158,7 @@ function agregar_auto_hogares() {
           ' etiquetaDireccionHogar" id = "etiquetaDireccionHogar' +
           numHogar +
           '">' +
-          "<label>Direccion</label>" +
+          "<label>" + t('form_labels.direccion', 'Dirección') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-9 my-1">' +
           '<div class="input-group">' +
@@ -3158,7 +3177,7 @@ function agregar_auto_hogares() {
           ' etiquetaAnoConstruccion" id = "etiquetaAnoConstruccion' +
           numHogar +
           '">' +
-          "<label>Año Construcción</label>" +
+          "<label>" + t('form_labels.anno_construccion', 'Año Construcción') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-10 my-1">' +
           '<input type="text" class="form-control validarNumerosLetras anoConstruccionHogar" id="anoConstruccionHogar' +
@@ -3175,7 +3194,7 @@ function agregar_auto_hogares() {
           ' etiquetaValorVivienda" id = "etiquetaValorVivienda' +
           numHogar +
           '" style="padding-left:0px">' +
-          "<label>Valor Vivienda</label>" +
+          "<label>" + t('form_labels.valor_vivienda', 'Valor Vivienda') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-11 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -3194,7 +3213,7 @@ function agregar_auto_hogares() {
           ' etiquetaValorOtrasCosasHogar" id = "etiquetaValorOtrasCosasHogar' +
           numHogar +
           '" style="padding-left:0px">' +
-          "<label>Valor Interior Contenido Vivienda</label>" +
+          "<label>" + t('form_labels.valor_interior_contenido', 'Valor Interior Contenido') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-12 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -3213,7 +3232,7 @@ function agregar_auto_hogares() {
           ' etiquetaMontoHogar" id = "etiquetaMontoHogar' +
           numHogar +
           '" style="padding-left:0px">' +
-          "<label>Monto</label>" +
+          "<label>" + t('form_labels.monto', 'Monto') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-13 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +

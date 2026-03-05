@@ -12,11 +12,16 @@ require '../../model/modelo_usuario.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 
+$t = function ($key) {
+    return Modelo_Idioma::t($key);
+};
+
 class Envio_correo_recuperacion_acceso
 {
 
     function realizar_envio_correo_recuperacion_acceso()
     {
+        global $t;
         date_default_timezone_set("America/Guayaquil");
 
         $cedula = $_POST['usuario'];
@@ -98,7 +103,7 @@ class Envio_correo_recuperacion_acceso
 
                 //Content
                 $mail->isHTML(true);                                  //Set email format to HTML
-                $mail->Subject = 'RECUPERACIÓN DE CONTRASEÑAS PARA ACCESO AL PORTAL MQP ASESORES DE SEGUROS';
+                $mail->Subject = $t('email.recuperar_password.subject');
                 //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
                 //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -109,19 +114,17 @@ class Envio_correo_recuperacion_acceso
                                 <img style="padding:20px; width:15%" src="https://crm.mqpseguros.com/view/img/icon-email.png">
                             </center>
 
-                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">Estimado Cliente: ' . $nombre . '</h4>
-                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">Te damos la bienvenida a MQP Asesores de Seguros, la plataforma que te ayudará administrar tus seguros.
+                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.recuperar_password.welcome') . ' ' . $nombre . '</h4>
+                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.recuperar_password.credentials_title') . '
                             </h4>
-                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">A continuación tus credenciales.
+                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.recuperar_password.link') . ': <a href="' . $t('email.recuperar_password.portal_url') . '"><strong>' . $t('email.recuperar_password.portal_url') . '</strong></a>
                             </h4>
-                            <h4 style="font-weight:100; color:#999; padding:0px 20px;"> Link: <a href="https://crm.mqpseguros.com"><strong>https://crm.mqpseguros.com</strong></a>
+                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.recuperar_password.username_label') . ': <strong>' . $cedula . '</strong>
                             </h4>
-                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">Usuario: <strong>' . $cedula . '</strong>
-                            </h4>
-                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">Contrase&ntilde;a: <strong>' . $cadena . '</strong>
+                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.recuperar_password.password_label') . ': <strong>' . $cadena . '</strong>
                             </h4>
 
-                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">Adjuntamos nuestros canales de información y los siguientes mails.
+                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.recuperar_password.channels_info') . '
                             </h4>
 
                             <center>
@@ -135,69 +138,69 @@ class Envio_correo_recuperacion_acceso
                                     <tbody>
                                         <tr>
                                             <td style="border:1px solid #AAAAAA;">info@mqpseguros.com</td>
-                                            <td style="border:1px solid #AAAAAA;">Canal para conocer el estado de sus pólizas, cambios de plan, consultas en general.</td>
+                                            <td style="border:1px solid #AAAAAA;">' . $t('email.recuperar_password.info_email') . '</td>
                                         </tr>
                                         <tr>
                                             <td style="border:1px solid #AAAAAA;">reembolsos@mqpseguros.com</td>
                                             <td style="border:1px solid #AAAAAA;">
-                                                Canal para conocer el estado de sus reembolsos asistencia médica.</td>
+                                                ' . $t('email.recuperar_password.reimbursements_email') . '</td>
                                         </tr>
                                         <tr>
                                             <td style="border:1px solid #AAAAAA;">siniestros@mqpseguros.com</td>
-                                            <td style="border:1px solid #AAAAAA;">Canal para conocer el estado de sus siniestros vehiculares.</td>
+                                            <td style="border:1px solid #AAAAAA;">' . $t('email.recuperar_password.claims_email') . '</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </center>
 
                             <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                                <strong>Nota:</strong> Declaramos contar con el consentimiento explícito para llevar a cabo el trámite en beneficio del cliente.
+                                <strong>' . $t('email.recuperar_password.note') . '</strong>
                             </p>
 
                             <div class=WordSection1>
                                 <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                                         <o:p>&nbsp;</o:p>
                                     </span></p>
-                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Departamento Servicio al Cliente<o:p></o:p>
+                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.department') . '<o:p></o:p>
                                             </span></b></p>
                                 <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                                         <o:p>&nbsp;</o:p>
                                     </span></p>
-                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Dirección:</span></b><span
+                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.address') . ':</span></b><span
                                         style="font-family:Arial,sans-serif"> <span style="color:#2F5496">Centro Empresarial Qworks - Quicentro Shopping, oficina 303
                                             <o:p></o:p></span></span></p>
                                 <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Código
                                             postal:</span></b><span style="font-family:Arial,sans-serif;color:#2F5496"> 170311</span><span
                                         style="font-family:Arial,sans-serif">
-                                        <o:p></o:p>
+                                        <o:p>&nbsp;</o:p>
                                     </span></p>
-                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Celular:</span></b><span
+                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.phone') . ':</span></b><span
                                         style="font-family:Arial,sans-serif"> <span style="color:#2F5496">59398 940 9581</span>
-                                        <o:p></o:p>
+                                        <o:p>&nbsp;</o:p>
                                     </span></p>
-                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Web:</span></b><span
+                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.web') . ':</span></b><span
                                         style="font-family:Arial,sans-serif"> <span style="color:#2F5496">https://<a
                                                 href=http://www.mqpseguros.com><span
                                                     style="color:#2F5496">www.mqpseguros.com</span></a></span>
-                                        <o:p></o:p>
+                                        <o:p>&nbsp;</o:p>
                                     </span></p>
-                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Credencial:</span></b><span
+                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.credential') . ':</span></b><span
                                         style="font-family:Arial,sans-serif"> <span style="color:#2F5496">1793190</span>
-                                        <o:p></o:p>
+                                        <o:p>&nbsp;</o:p>
                                     </span></p>
                                 <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                                         <o:p>&nbsp;</o:p>
                                     </span></p>
-                                <p class=MsoNormal><span style="font-size:12.0pt;font-family:Script MT Bold;color:#1F3864">“Su visión será
-                                        clara solo cuando mira a su corazón. El que mira hacia afuera, sueña.  El que mira hacia dentro,
-                                        despierta”<o:p></o:p></span></p>
+                                <p class=MsoNormal><span style="font-size:12.0pt;font-family:Script MT Bold;color:#1F3864">"Su visión será
+                                        clara solo cuando mira a su corazón. El que mira hacia afuera, sueña.  El que mira hacia dentro,
+                                        despierta"<o:p></o:p></span></p>
                                 <p class=MsoNormal><span style="font-size:12.0pt;font-family:Script MT Bold;color:#1F3864">Carl Jung<o:p>
                                         </o:p></span></p>
                                 <p class=MsoNormal><span style="font-size:10.0pt;font-family:Verdana,sans-serif"><img border=0 width=200
                                             height=87 style="width:2.0833in;height:.9062in" id=Imagen_x0020_1
                                             src=cid:image001.png@01D88E03.4839E730></span><span
                                         style="font-family:Script MT Bold;color:#1F3864">
-                                        <o:p></o:p>
+                                        <o:p>&nbsp;</o:p>
                                     </span></p>
                             </div>
 

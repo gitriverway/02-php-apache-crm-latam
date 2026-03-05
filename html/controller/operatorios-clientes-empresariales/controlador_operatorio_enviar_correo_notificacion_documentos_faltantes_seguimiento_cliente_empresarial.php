@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
+$t = function ($key, $params = null) {
+    return Modelo_Idioma::t($key, $params);
 };
 
 require '../../extensiones/PHPMailer/src/Exception.php';
@@ -15,6 +15,7 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_operatorio_empr
 
     function realizar_envio_correo_notificacion_documentos_faltantes_seguimiento_operatorio_empresarial($idOperatorio, $idContrato)
     {
+        global $t;
 
         $MU = new Modelo_Operatorio_Cliente_Empresarial();
 
@@ -115,7 +116,7 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_operatorio_empr
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'IMPORTANTE: DOCUMENTOS SOLICITADOS POR ASEGURADORA PARA CRÉDITO HOSPITALARIO Número ' . $Ticket . ' - ASISTENCIA MÉDICA';
+            $mail->Subject = $t('email_operatorio_documentos_faltantes_seguimiento_cliente.subject', ['ticket' => $Ticket]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -123,9 +124,8 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_operatorio_empr
 
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
-                <h3 style="font-weight:100; color:#999; padding:0px 20px;">Estimado Cliente: ' . $nombre . '</h3>
-                <h3 style="font-weight:100; color:#999; padding:0px 20px;">Favor de completar los documentos marcados como
-                    <strong>SI</strong>
+                <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email_operatorio_documentos_faltantes_seguimiento_cliente.dear_client') . ': ' . $nombre . '</h3>
+                <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email_operatorio_documentos_faltantes_seguimiento_cliente.documents_requested') . '
                 </h3>
                 <center>
                     <h2 style="font-weight:100; color:#999;">LISTA DOCUMENTOS SOLICITA ASEGURADORA PARA PEDIDO OPERATORIO</h2>

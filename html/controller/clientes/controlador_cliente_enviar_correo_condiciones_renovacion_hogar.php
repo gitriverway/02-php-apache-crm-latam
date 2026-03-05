@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
+$t = function ($key, $params = null) {
+    return Modelo_Idioma::t($key, $params);
 };
 
 
@@ -12,6 +12,7 @@ class Envio_correo_condiciones_renovacion_hogar
 
     function realizar_envio_correo_condiciones_renovacion_hogar($nombre, $email, $listaCondiciones, $ruta_condiciones, $fecha_fin)
     {
+        global $t;
 
         $lista = json_decode($listaCondiciones, true);
         $listado_documentos = "";
@@ -32,7 +33,7 @@ class Envio_correo_condiciones_renovacion_hogar
 
         if ($listado_documentos == "") {
             $listado_documentos = '<tr>
-                <td style="border: 1px solid #AAAAAA;padding: 3px 2px;font-size: 13px; text-align: center;">SIN REGISTROS</td>
+                <td style="border: 1px solid #AAAAAA;padding: 3px 2px;font-size: 13px; text-align: center;">' . $t('email_renovacion_hogar.no_records') . '</td>
                 </tr>';
         }
 
@@ -81,7 +82,7 @@ class Envio_correo_condiciones_renovacion_hogar
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'IMPORTANTE: RENOVACIÓN DEL SEGURO DE HOGAR CON ' . $aseguradora . ' - ' . $nombre;
+            $mail->Subject = $t('email_renovacion_hogar.subject', ['aseguradora' => $aseguradora, 'nombre' => $nombre]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -89,39 +90,39 @@ class Envio_correo_condiciones_renovacion_hogar
 
                     <div style="position:relative; margin:auto; width:800px; background:white; padding-top:20px; padding-bottom:20px">
                 
-                        <h4 style="font-weight:100; color:#999; padding:0px 20px; color: #000000;">Apreciado Cliente: ' . $nombre . '</h4>
-                        <h4 style="font-weight:100; color:#999; padding:0px 20px; color: #000000; text-align: justify"> Agradecemos la confianza depositada durante este año, ratificamos nuestro compromiso para seguirle acompañando, brindado la tranquilidad y confianza para que usted y su familia estén siempre protegidos. Nos permitimos informarle que está próximo a la renovación de su póliza de vehículo, para lo cual ponemos a su disposición las condiciones y cambios que aplicarán para su plan actual.
+                        <h4 style="font-weight:100; color:#999; padding:0px 20px; color: #000000;">' . $t('email_renovacion_hogar.dear_client') . ': ' . $nombre . '</h4>
+                        <h4 style="font-weight:100; color:#999; padding:0px 20px; color: #000000; text-align: justify">' . $t('email_renovacion_hogar.renewal_message') . '
                         </h4>
                 
-                        <h4 style="font-weight:100; color:#999; padding:0px 20px; color: #000000;">Fecha renovación:' . $fecha_fin . '
+                        <h4 style="font-weight:100; color:#999; padding:0px 20px; color: #000000;">' . $t('email_renovacion_hogar.renewal_date') . ': ' . $fecha_fin . '
                         </h4>
                         <center>
                             <table style=" border: 1px solid #1C6EA4;background-color: #EEEEEE;width: 60%;text-align: left;border-collapse: collapse;">
                                 <thead style="background: #1C6EA4;background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);border-bottom: 2px solid #444444;">
-                                    <th style="font-size: 15px;font-weight: bold;color: #000000;border-left: 2px solid #D0E4F5; border:1px solid #AAAAAA;padding: 3px 2px;">ASEGURADORA ACTUAL</th>
+                                    <th style="font-size: 15px;font-weight: bold;color: #000000;border-left: 2px solid #D0E4F5; border:1px solid #AAAAAA;padding: 3px 2px;">' . $t('email_renovacion_hogar.table_header_aseguradora') . '</th>
                                     <th style="font-size: 15px;font-weight: bold;color: #000000;border-left: 2px solid #D0E4F5; border:1px solid #AAAAAA;padding: 3px 2px;">
-                                        HOGAR</th>
+                                        ' . $t('email_renovacion_hogar.table_header_condiciones') . '</th>
                                     <th style="font-size: 15px;font-weight: bold;color: #000000;border-left: 2px solid #D0E4F5; border:1px solid #AAAAAA;padding: 3px 2px;">
-                                    TASA</th>
+                                    ' . $t('email_renovacion_hogar.table_header_tasa') . '</th>
                                     <th style="font-size: 15px;font-weight: bold;color: #000000;border-left: 2px solid #D0E4F5; border:1px solid #AAAAAA;padding: 3px 2px;">
-                                    VALOR ASEGURADO USD</th>
+                                    ' . $t('email_renovacion_hogar.table_header_valor') . '</th>
                                 </thead>
                                 <tbody>
                                     ' . $listado_documentos . '
                                 </tbody>
                             </table>
                         </center>
-                        <h4 style="font-weight:100; color:#999; padding:0px 20px; color: #000000;">Así mismo, adjuntamos un cuadro comparador con otras aseguradoras.</h4>
-                        <h4 style="font-weight:100; color:#999; padding:0px 20px; color: #000000;">Sin más por el momento, quedo de usted.</h4>
+                        <h4 style="font-weight:100; color:#999; padding:0px 20px; color: #000000;">' . $t('email_renovacion_transporte.comparer_message') . '</h4>
+                        <h4 style="font-weight:100; color:#999; padding:0px 20px; color: #000000;">' . $t('email_renovacion_hogar.closing') . '</h4>
 
                         <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                            <strong>Nota:</strong> Declaramos contar con el consentimiento explícito para llevar a cabo el trámite en beneficio del cliente.
+                            <strong>' . $t('email_renovacion_hogar.note') . '</strong>
                         </p>
                         
                         <div class=WordSection1>
-                        <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Saludos cordiales,<o:p></o:p>
+                        <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email_renovacion_hogar.regards') . ',<o:p></o:p>
                                 </span></p>
-                            <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Departamento Servicio al Cliente<o:p></o:p>
+                            <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email_renovacion_hogar.customer_service_dept') . '<o:p></o:p>
                                     </span></b></p>
                             <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                                     <o:p>&nbsp;</o:p>

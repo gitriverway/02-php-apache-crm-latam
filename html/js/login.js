@@ -306,8 +306,8 @@ function recuperar_contrasena() {
         Swal.fire(t('messages.confirmation', 'Confirmation Message'), respuesta, "error");
       } else {
         Swal.fire(
-          "Mensaje De Confirmacion",
-          "La nueva contraseña ha sido enviada a su correo",
+          t('module.login.title', 'Confirmation Message'),
+          t('module.login.password_sent', 'The new password has been sent to your email'),
           "success"
         ).then((value) => {
           window.location = "login";

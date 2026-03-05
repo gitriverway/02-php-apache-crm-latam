@@ -2,7 +2,9 @@ version: "3.8"
 
 services:
   apache-php:
-    image: php:7.4-apache
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: apache-php74
     ports:
       - "80:80"

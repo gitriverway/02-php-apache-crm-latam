@@ -4,6 +4,25 @@ $(document).on("hidden.bs.modal", function (event) {
   }
 });
 
+// Helper function para traducciones en JavaScript
+function t(key, defaultValue) {
+  if (
+    typeof translations !== "undefined" &&
+    translations.form &&
+    translations.form[key]
+  ) {
+    return translations.form[key];
+  }
+  if (
+    typeof translations !== "undefined" &&
+    translations.form_labels &&
+    translations.form_labels[key]
+  ) {
+    return translations.form_labels[key];
+  }
+  return defaultValue || key;
+}
+
 //  function lista1(){
 
 //   var f=new Date();
@@ -512,7 +531,7 @@ $("#tabla-listar-operatorios-asistencia-medica-individual").on(
                 ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
                 numObservacion +
                 '" style="padding-right:0px">' +
-                "<label>Fecha Registro</label>" +
+                "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
                 "</div>" +
                 '<div class="col-6 order-md-3 my-1" style="padding-right:0px">' +
                 '<div class="input-group">' +
@@ -531,7 +550,7 @@ $("#tabla-listar-operatorios-asistencia-medica-individual").on(
                 ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
                 numObservacion +
                 '">' +
-                "<label>Observaci&oacute;n</label>" +
+                "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
                 "</div>" +
                 '<div class="col-6 order-md-4 my-1">' +
                 '<label class="observacion" id="observacion' +

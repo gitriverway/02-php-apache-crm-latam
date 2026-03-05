@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
+$t = function ($key, $params = null) {
+    return Modelo_Idioma::t($key, $params);
 };
 
 
@@ -12,6 +12,7 @@ class Envio_correo_notificacion_acceso
 
     function realizar_envio_correo_notificacion_acceso($idCliente, $cedula, $estado_bayer)
     {
+        global $t;
 
         $MC = new Modelo_Cliente();
 
@@ -76,7 +77,7 @@ class Envio_correo_notificacion_acceso
 
                 //Content
                 $mail->isHTML(true);                                  //Set email format to HTML
-                $mail->Subject = 'BIENVENIDO A MQP ASESORES: INSTRUCCIONES DE ACCESO AL PORTAL';
+                $mail->Subject = $t('email_acceso_bienvenido_subject');
                 //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
                 //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 

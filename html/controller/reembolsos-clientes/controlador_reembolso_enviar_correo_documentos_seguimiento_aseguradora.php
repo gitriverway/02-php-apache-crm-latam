@@ -7,11 +7,16 @@ $t = function ($key) {
 
 use PHPMailer\PHPMailer\PHPMailer;
 
+$t = function ($key, $params = null) {
+    return Modelo_Idioma::t($key, $params);
+};
+
 class Envio_correo_documentos_seguimiento_reembolso
 {
 
     function realizar_envio_correo_documentos_seguimiento_reembolso($idReembolso, $idContrato)
     {
+        global $t;
 
         $MU = new Modelo_Reembolso_Cliente();
 
@@ -111,7 +116,7 @@ class Envio_correo_documentos_seguimiento_reembolso
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'REEMBOLSO DE SEGURO - ' . $fechaActual . ' - ' . $nombre . ' - DOCUMENTOS ADICIONALES NECESARIOS';
+            $mail->Subject = $t('email.reembolso_seguimiento_aseguradora.subject', ['fecha' => $fechaActual, 'nombre' => $nombre]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -119,29 +124,29 @@ class Envio_correo_documentos_seguimiento_reembolso
 
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Estimados Colegas,</h3>
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Adjunto sírvase encontrar, documentos adicionales solicitados para el reembolso:</h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_seguimiento_aseguradora.dear_colleagues') . '</h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_seguimiento_aseguradora.attached_documents') . '</h3>
     
-            <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Número de Contrato: ' . $numero_contrato . '
+            <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_seguimiento_aseguradora.contract_number') . ': ' . $numero_contrato . '
                 </h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Nombre del Titular: ' . $nombre . '
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_seguimiento_aseguradora.holder_name') . ': ' . $nombre . '
                 </h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Nombre Paciente: ' . $nombre_paciente . '</h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Diagnóstico: ' . $diagnostico . '</h4>
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_seguimiento_aseguradora.patient_name') . ': ' . $nombre_paciente . '</h4>
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_seguimiento_aseguradora.diagnosis') . ': ' . $diagnostico . '</h4>
     
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Valor presentado: $' . $valor_presentado . '</h4>
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_seguimiento_aseguradora.presented_value') . ': $' . $valor_presentado . '</h4>
 
                 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                    <strong>Nota:</strong> Declaramos contar con el consentimiento explícito para llevar a cabo el trámite en beneficio del cliente.
+                    <strong>' . $t('email.reembolso_seguimiento_aseguradora.note') . '</strong>
                 </p>
         
                 <div class=WordSection1>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Saludos cordiales,<o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.reembolso_seguimiento_aseguradora.regards') . ',<o:p>
                                 </o:p></span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Departamento Servicio al Cliente<o:p></o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.reembolso_seguimiento_aseguradora.department') . '<o:p></o:p>
                                 </span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>

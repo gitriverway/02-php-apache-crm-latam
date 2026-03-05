@@ -6,7 +6,7 @@ EXPOSE 80
 EXPOSE 443
 
 # Habilitar módulos de Apache comúnmente necesarios
-RUN a2enmod rewrite headers ssl
+RUN a2enmod mime rewrite headers ssl
 
 # Establecer directorio de trabajo
 WORKDIR /var/www/html
@@ -19,6 +19,9 @@ COPY ./html /var/www/html
 # Asegurar permisos correctos
 RUN chown -R www-data:www-data /var/www/html && \
     chmod -R 755 /var/www/html
+
+# Configurar AllowOverride All para /var/www/html
+RUN sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 
 # (Opcional) Instalar extensiones PHP comunes
 RUN docker-php-ext-install mysqli pdo pdo_mysql

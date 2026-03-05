@@ -1,3 +1,22 @@
+// Helper function para traducciones en JavaScript
+function t(key, defaultValue) {
+  if (
+    typeof translations !== "undefined" &&
+    translations.form &&
+    translations.form[key]
+  ) {
+    return translations.form[key];
+  }
+  if (
+    typeof translations !== "undefined" &&
+    translations.form_labels &&
+    translations.form_labels[key]
+  ) {
+    return translations.form_labels[key];
+  }
+  return defaultValue || key;
+}
+
 // function lista1(){
 
 //     $.ajax({
@@ -426,7 +445,7 @@ $(".btnAgregarColaborador").click(function () {
       ' etiquetaTipoColaborador" id = "etiquetaTipoColaborador' +
       numProspecto +
       '" style="padding-right:0px">' +
-      "<label>Parentesco</label>" +
+      "<label>" + t('form_labels.parentesco', 'Parentesco') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
@@ -443,7 +462,7 @@ $(".btnAgregarColaborador").click(function () {
       ' etiquetaNombreColaborador" id = "etiquetaNombreColaborador' +
       numProspecto +
       '">' +
-      "<label>Nombre</label>" +
+      "<label>" + t('form_labels.nombre', 'Nombre') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-3 order-md-8 my-1">' +
       '<div class="input-group">' +
@@ -462,7 +481,7 @@ $(".btnAgregarColaborador").click(function () {
       ' etiquetaGeneroColaborador" id = "etiquetaGeneroColaborador' +
       numProspecto +
       '">' +
-      "<label>Genero</label>" +
+      "<label>" + t('form_labels.genero', 'Género') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-9 my-1">' +
       '<select class="form-control generoColaborador" id="generoColaborador' +
@@ -483,7 +502,7 @@ $(".btnAgregarColaborador").click(function () {
       ' etiquetaFechaColaborador" id = "etiquetaFechaColaborador' +
       numProspecto +
       '" style="padding-left:0px">' +
-      "<label>Fecha Nacimiento</label>" +
+      "<label>" + t('form_labels.fecha_nacimiento', 'Fecha Nacimiento') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-3 order-md-10 my-1" style="padding-left:0px">' +
       '<div class="input-group">' +
@@ -500,7 +519,7 @@ $(".btnAgregarColaborador").click(function () {
       ' etiquetaAgregarDependiente" id = "etiquetaAgregarDependiente' +
       numProspecto +
       '" style="padding-left:0px">' +
-      "<label>Dependientes</label>" +
+      "<label>" + t('form_labels.dependientes', 'Dependientes') + "</label>" +
       "</div>" +
       '<div class="col-12 col-md-1 order-md-11 my-1" style="padding-left:0px">' +
       '<button type="button" class="form-control btn btn-primary AgregarDependiente" idColaborador="' +
@@ -603,7 +622,7 @@ function auto_agregar_familiares_dependientes(lista) {
         ' etiquetaTipoFamiliar" id = "etiquetaTipoFamiliar' +
         numSubProspecto +
         '" style="padding-right:0px">' +
-        "<label>Parentesco</label>" +
+        "<label>" + t('form_labels.parentesco', 'Parentesco') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-6 my-1" style="padding-right:0px">' +
         '<div class="input-group">' +
@@ -628,7 +647,7 @@ function auto_agregar_familiares_dependientes(lista) {
         ' etiquetaNombreFamiliar" id = "etiquetaNombreFamiliar' +
         numSubProspecto +
         '">' +
-        "<label>Nombre</label>" +
+        "<label>" + t('form_labels.nombre', 'Nombre') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-4 order-md-7 my-1">' +
         '<div class="input-group">' +
@@ -649,7 +668,7 @@ function auto_agregar_familiares_dependientes(lista) {
         ' etiquetaGeneroFamiliar" id = "etiquetaGeneroFamiliar' +
         numSubProspecto +
         '">' +
-        "<label>Genero</label>" +
+        "<label>" + t('form_labels.genero', 'Género') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-8 my-1">' +
         '<select class="form-control generoFamiliar" id="generoFamiliar' +
@@ -670,7 +689,7 @@ function auto_agregar_familiares_dependientes(lista) {
         ' etiquetaFechaNacimiento" id = "etiquetaFechaNacimiento' +
         numSubProspecto +
         '" style="padding-left:0px">' +
-        "<label>Fecha Nacimiento</label>" +
+        "<label>" + t('form_labels.fecha_nacimiento', 'Fecha Nacimiento') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-3 order-md-9 my-1" style="padding-left:0px">' +
         '<div class="input-group">' +
@@ -746,7 +765,7 @@ $("#modalListarDependientesColaborador").on(
         ' etiquetaTipoFamiliar" id = "etiquetaTipoFamiliar' +
         numSubProspecto +
         '" style="padding-right:0px">' +
-        "<label>Parentesco</label>" +
+        "<label>" + t('form_labels.parentesco', 'Parentesco') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-6 my-1" style="padding-right:0px">' +
         '<div class="input-group">' +
@@ -771,7 +790,7 @@ $("#modalListarDependientesColaborador").on(
         ' etiquetaNombreFamiliar" id = "etiquetaNombreFamiliar' +
         numSubProspecto +
         '">' +
-        "<label>Nombre</label>" +
+        "<label>" + t('form_labels.nombre', 'Nombre') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-4 order-md-7 my-1">' +
         '<div class="input-group">' +
@@ -790,7 +809,7 @@ $("#modalListarDependientesColaborador").on(
         ' etiquetaGeneroFamiliar" id = "etiquetaGeneroFamiliar' +
         numSubProspecto +
         '">' +
-        "<label>Genero</label>" +
+        "<label>" + t('form_labels.genero', 'Género') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-8 my-1">' +
         '<select class="form-control generoFamiliar" id="generoFamiliar' +
@@ -811,7 +830,7 @@ $("#modalListarDependientesColaborador").on(
         ' etiquetaFechaNacimiento" id = "etiquetaFechaNacimiento' +
         numSubProspecto +
         '" style="padding-left:0px">' +
-        "<label>Fecha Nacimiento</label>" +
+        "<label>" + t('form_labels.fecha_nacimiento', 'Fecha Nacimiento') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-3 order-md-9 my-1" style="padding-left:0px">' +
         '<div class="input-group">' +
@@ -1092,7 +1111,7 @@ function agregarNuevaObservacion() {
       ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
       numObservacion +
       '" style="padding-right:0px">' +
-      "<label>Fecha Registro</label>" +
+      "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-4 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
@@ -1111,7 +1130,7 @@ function agregarNuevaObservacion() {
       ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
       numObservacion +
       '">' +
-      "<label>Observaci&oacute;n</label>" +
+      "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-5 my-1">' +
       '<label class="observacion" id="observacion' +
@@ -1720,7 +1739,7 @@ function agregar_auto_Colaboradores() {
           ' etiquetaTipoColaborador" id = "etiquetaTipoColaborador' +
           numProspecto +
           '" style="padding-right:0px">' +
-          "<label>Parentesco</label>" +
+          "<label>" + t('form_labels.parentesco', 'Parentesco') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
@@ -1737,7 +1756,7 @@ function agregar_auto_Colaboradores() {
           ' etiquetaNombreColaborador" id = "etiquetaNombreColaborador' +
           numProspecto +
           '">' +
-          "<label>Nombre</label>" +
+          "<label>" + t('form_labels.nombre', 'Nombre') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-3 order-md-8 my-1">' +
           '<div class="input-group">' +
@@ -1758,7 +1777,7 @@ function agregar_auto_Colaboradores() {
           ' etiquetaGeneroColaborador" id = "etiquetaGeneroColaborador' +
           numProspecto +
           '">' +
-          "<label>Genero</label>" +
+          "<label>" + t('form_labels.genero', 'Género') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-9 my-1">' +
           '<select class="form-control generoColaborador" id="generoColaborador' +
@@ -1779,7 +1798,7 @@ function agregar_auto_Colaboradores() {
           ' etiquetaFechaColaborador" id = "etiquetaFechaColaborador' +
           numProspecto +
           '" style="padding-left:0px">' +
-          "<label>Fecha Nacimiento</label>" +
+          "<label>" + t('form_labels.fecha_nacimiento', 'Fecha Nacimiento') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-3 order-md-10 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -1798,7 +1817,7 @@ function agregar_auto_Colaboradores() {
           ' etiquetaAgregarDependiente" id = "etiquetaAgregarDependiente' +
           numProspecto +
           '" style="padding-left:0px">' +
-          "<label>Dependientes</label>" +
+          "<label>" + t('form_labels.dependientes', 'Dependientes') + "</label>" +
           "</div>" +
           '<div class="col-12 col-md-1 order-md-11 my-1" style="padding-left:0px">' +
           '<button type="button" class="form-control btn btn-primary AgregarDependiente" idColaborador="' +
@@ -1890,7 +1909,7 @@ function agregar_auto_observaciones() {
               ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
               numObservacion +
               '" style="padding-right:0px">' +
-              "<label>Fecha Registro</label>" +
+              "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
               "</div>" +
               '<div class="col-6 col-md-4 order-md-4 my-1" style="padding-right:0px">' +
               '<div class="input-group">' +
@@ -1909,7 +1928,7 @@ function agregar_auto_observaciones() {
               ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
               numObservacion +
               '">' +
-              "<label>Observaci&oacute;n</label>" +
+              "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
               "</div>" +
               '<div class="col-6 col-md-4 order-md-5 my-1">' +
               '<label class="observacion" id="observacion' +

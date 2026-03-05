@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
+$t = function ($key, $params = null) {
+    return Modelo_Idioma::t($key, $params);
 };
 
 // require '../../extensiones/PHPMailer/src/Exception.php';
@@ -15,6 +15,7 @@ class Envio_correo_notificacion_documentos_faltantes_operatorio
 
     function realizar_envio_correo_notificacion_documentos_faltantes_operatorio($idOperatorio, $idContrato)
     {
+        global $t;
 
         $MU = new Modelo_Operatorio_Cliente();
 
@@ -114,7 +115,7 @@ class Envio_correo_notificacion_documentos_faltantes_operatorio
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'IMPORTANTE: DOCUMENTOS FALTANTES EN CRÉDITO HOSPITALARIO Número ' . $Ticket . ' - ASISTENCIA MÉDICA';
+            $mail->Subject = $t('email_operatorio_documentos_faltantes_cliente.subject', ['ticket' => $Ticket]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -122,12 +123,11 @@ class Envio_correo_notificacion_documentos_faltantes_operatorio
 
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Estimado Cliente: ' . $nombre . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Favor completar los documentos marcados
-                    <strong>NO</strong>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_operatorio_documentos_faltantes_cliente.dear_client') . ': ' . $nombre . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_operatorio_documentos_faltantes_cliente.documents_missing') . '
                 </h3>
                 <center>
-                    <h2 style="font-weight:100; color:#000000;">LISTA DOCUMENTOS FALTANTES</h2>
+                    <h2 style="font-weight:100; color:#000000;">' . $t('email_operatorio_documentos_faltantes_cliente.missing_documents_list') . '</h2>
                 </center>
         
                 <center>
@@ -153,22 +153,21 @@ class Envio_correo_notificacion_documentos_faltantes_operatorio
                         </tbody>
                     </table>
                 </center>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Observación: </strong> ' . $observacion_final . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Favor subir todo el reembolso en un solo
-                    <strong>PDF</strong> en el siguiente enlace <a href = "https://crm.mqpseguros.com">https://crm.mqpseguros.com</a>, incluyendo los documento marcados <strong>NO</strong>
+<h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email_operatorio_documentos_faltantes_cliente.observation') . ': </strong> ' . $observacion_final . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_operatorio_documentos_faltantes_cliente.upload_instructions', ['portal_url' => 'https://crm.mqpseguros.com']) . '
                 </h3>
 
-                <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                    <strong>Nota:</strong> Declaramos contar con el consentimiento explícito para llevar a cabo el trámite en beneficio del cliente.
+<p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
+                    <strong>' . $t('email_operatorio_documentos_faltantes_cliente.note') . '</strong>
                 </p>
         
                 <div class=WordSection1>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Saludos cordiales,<o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email_operatorio_documentos_faltantes_cliente.regards') . ',<o:p>
                                 </o:p></span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Departamento Servicio al Cliente<o:p></o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email_operatorio_documentos_faltantes_cliente.customer_service_dept') . '<o:p></o:p>
                                 </span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>

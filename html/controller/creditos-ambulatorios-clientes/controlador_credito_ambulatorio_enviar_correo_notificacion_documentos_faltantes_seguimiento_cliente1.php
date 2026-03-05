@@ -1,7 +1,8 @@
 <?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
+$t = function ($key, $params = null) {
+    global $t;
+    return Modelo_Idioma::t($key, $params);
 };
 
 require '../../extensiones/PHPMailer/src/Exception.php';
@@ -15,6 +16,7 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_credito_ambulat
 
     function realizar_envio_correo_notificacion_documentos_faltantes_seguimiento_credito_ambulatorio1($idCreditoAmbulatorio, $idContrato)
     {
+        global $t;
 
         $MU = new Modelo_Credito_Ambulatorio_Cliente();
 
@@ -113,7 +115,7 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_credito_ambulat
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'IMPORTANTE: DOCUMENTOS SOLICITADOS POR ASEGURADORA PARA CRÉDITO AMBULATORIO Número ' . $Ticket . ' - ASISTENCIA MÉDICA';
+            $mail->Subject = $t('email_credito_ambulatorio_documentos_faltantes_seguimiento_cliente.subject', ['ticket' => $Ticket]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -121,12 +123,11 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_credito_ambulat
 
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
-                <h3 style="font-weight:100; color:#999; padding:0px 20px;">Estimado Cliente: ' . $nombre . '</h3>
-                <h3 style="font-weight:100; color:#999; padding:0px 20px;">Favor de completar los documentos marcados como
-                    <strong>SI</strong>
+                <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email_credito_ambulatorio_documentos_faltantes_seguimiento_cliente.dear_client') . ': ' . $nombre . '</h3>
+                <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email_credito_ambulatorio_documentos_faltantes_seguimiento_cliente.documents_requested') . '
                 </h3>
                 <center>
-                    <h2 style="font-weight:100; color:#999;">LISTA DOCUMENTOS SOLICITA ASEGURADORA PARA PEDIDO CREDITO AMBULATORIO</h2>
+                    <h2 style="font-weight:100; color:#999;">' . $t('email.reembolso_seguimiento_documentos.documents_list_title') . '</h2>
                 </center>
         
                 <center>
@@ -150,22 +151,21 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_credito_ambulat
                         </tbody>
                     </table>
                 </center>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Observación: </strong> ' . $observacion_final . '</h3>
-                <h3 style="font-weight:100; color:#999; padding:0px 20px;">Favor enviar los documento en un solo
-                    <strong>PDF</strong>, Tiempo limite 72 Horas, al siguiente correo <strong>creditoambulatorio@mqpseguros.com</strong> con numero de Ticket: Número <strong>' . $Ticket . '</strong>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_documentos_faltantes.observation') . ': </strong> ' . $observacion_final . '</h3>
+                <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.reembolso_seguimiento_documentos.deadline_instructions', ['email' => 'creditoambulatorio@mqpseguros.com', 'ticket' => $Ticket]) . '
                 </h3>
 
                 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                    <strong>Nota:</strong> Declaramos contar con el consentimiento explícito para llevar a cabo el trámite en beneficio del cliente.
+                    <strong>' . $t('email_credito_ambulatorio_aseguradora.note') . '</strong>
                 </p>
         
                 <div class=WordSection1>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Saludos cordiales,<o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email_credito_ambulatorio_aseguradora.regards') . ',<o:p>
                                 </o:p></span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Departamento Servicio al Cliente<o:p></o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email_credito_ambulatorio_aseguradora.customer_service_dept') . '<o:p></o:p>
                                 </span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>

@@ -1,3 +1,22 @@
+// Helper function para traducciones en JavaScript
+function t(key, defaultValue) {
+  if (
+    typeof translations !== "undefined" &&
+    translations.form &&
+    translations.form[key]
+  ) {
+    return translations.form[key];
+  }
+  if (
+    typeof translations !== "undefined" &&
+    translations.form_labels &&
+    translations.form_labels[key]
+  ) {
+    return translations.form_labels[key];
+  }
+  return defaultValue || key;
+}
+
 // function lista1() {
 //   $.ajax({
 //     url: "/controller/clientes/controlador_cliente_listar_vehiculo_individual.php",
@@ -438,7 +457,7 @@ $(".listaAdicional").on("click", "button.btnAgregarVehiculo", function () {
             <div class="row gridMiembroFamiliares">
                 <!-- Tipo Vehiculo -->
                 <div class="col-6 col-md-2 order-md-1 my-1 ${estado} etiquetaTipoVehiculo" id="etiquetaTipoVehiculo${vehiculoId}" style="padding-right:0px">
-                    <label>Tipo Vehiculo</label>
+                    <label>${t('form_labels.tipo_vehiculo', 'Tipo Vehículo')}</label>
                 </div>
                 <div class="col-6 col-md-2 order-md-10 my-1" style="padding-right:0px">
                     <div class="input-group">
@@ -456,7 +475,7 @@ $(".listaAdicional").on("click", "button.btnAgregarVehiculo", function () {
                 
                 <!-- Marca -->
                 <div class="col-6 col-md-2 order-md-2 my-1 ${estado} etiquetaMarcaVehiculo" id="etiquetaMarcaVehiculo${vehiculoId}">
-                    <label>Marca</label>
+                    <label>${t('form_labels.marca', 'Marca')}</label>
                 </div>
                 <div class="col-6 col-md-2 order-md-11 my-1">
                     <div class="input-group">
@@ -466,7 +485,7 @@ $(".listaAdicional").on("click", "button.btnAgregarVehiculo", function () {
                 
                 <!-- Modelo -->
                 <div class="col-6 col-md-2 order-md-3 my-1 ${estado} etiquetaModeloVehiculo" id="etiquetaModeloVehiculo${vehiculoId}">
-                    <label>Modelo</label>
+                    <label>${t('form_labels.modelo', 'Modelo')}</label>
                 </div>
                 <div class="col-6 col-md-2 order-md-12 my-1">
                     <input type="text" class="form-control validarNumerosLetrasDecimal modeloVehiculo${valor}" id="modeloVehiculo${vehiculoId}" name="modeloVehiculo${vehiculoId}" placeholder="MODELO" autocomplete="off" style="text-transform: uppercase">
@@ -474,7 +493,7 @@ $(".listaAdicional").on("click", "button.btnAgregarVehiculo", function () {
                 
                 <!-- Color -->
                 <div class="col-6 col-md-1 order-md-4 my-1 ${estado} etiquetaColorVehiculo" id="etiquetaColorVehiculo${vehiculoId}" style="padding-left:0px">
-                    <label>Color</label>
+                    <label>${t('form_labels.color', 'Color')}</label>
                 </div>
                 <div class="col-6 col-md-1 order-md-13 my-1" style="padding-left:0px">
                     <div class="input-group">
@@ -484,7 +503,7 @@ $(".listaAdicional").on("click", "button.btnAgregarVehiculo", function () {
                 
                 <!-- Año -->
                 <div class="col-6 col-md-1 order-md-5 my-1 ${estado} etiquetaAnoVehiculo" id="etiquetaAnoVehiculo${vehiculoId}" style="padding-left:0px">
-                    <label>Año</label>
+                    <label>${t('form_labels.anno', 'Año')}</label>
                 </div>
                 <div class="col-6 col-md-1 order-md-14 my-1" style="padding-left:0px">
                     <div class="input-group">
@@ -494,7 +513,7 @@ $(".listaAdicional").on("click", "button.btnAgregarVehiculo", function () {
                 
                 <!-- Placa -->
                 <div class="col-6 col-md-1 order-md-6 my-1 ${estado} etiquetaPlacaVehiculo" id="etiquetaPlacaVehiculo${vehiculoId}" style="padding-left:0px">
-                    <label>Placa</label>
+                    <label>${t('form_labels.placa', 'Placa')}</label>
                 </div>
                 <div class="col-6 col-md-1 order-md-15 my-1" style="padding-left:0px">
                     <div class="input-group">
@@ -504,7 +523,7 @@ $(".listaAdicional").on("click", "button.btnAgregarVehiculo", function () {
                 
                 <!-- Monto -->
                 <div class="col-6 col-md-1 order-md-7 my-1 ${estado} etiquetaMontoVehiculo" id="etiquetaMontoVehiculo${vehiculoId}" style="padding-left:0px">
-                    <label>Monto</label>
+                    <label>${t('form_labels.monto', 'Monto')}</label>
                 </div>
                 <div class="col-6 col-md-1 order-md-16 my-1" style="padding-left:0px">
                     <div class="input-group">
@@ -514,7 +533,7 @@ $(".listaAdicional").on("click", "button.btnAgregarVehiculo", function () {
                 
                 <!-- Deducible -->
                 <div class="col-6 col-md-1 order-md-8 my-1 ${estado} etiquetaDeducibleVehiculo" id="etiquetaDeducibleVehiculo${vehiculoId}" style="padding-left:0px">
-                    <label>Deducible</label>
+                    <label>${t('form_labels.deducible', 'Deducible')}</label>
                 </div>
                 <div class="col-6 col-md-1 order-md-17 my-1" style="padding-left:0px">
                     <div class="input-group">
@@ -795,7 +814,7 @@ function agregarNuevaObservacion() {
       ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
       numObservacion +
       '" style="padding-right:0px">' +
-      "<label>Fecha Registro</label>" +
+      "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-4 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
@@ -814,7 +833,7 @@ function agregarNuevaObservacion() {
       ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
       numObservacion +
       '">' +
-      "<label>Observaci&oacute;n</label>" +
+      "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-5 my-1">' +
       '<label class="observacion" id="observacion' +
@@ -1338,7 +1357,7 @@ $(".listaAdicional").on(
           '<div class="my-1 col-12 col-md-2 order-md-1 ' +
           estado +
           '">' +
-          "<label>ASEGURADORA ACTUAL</label>" +
+          "<label>" + t('form_labels.aseguradora_actual', 'ASEGURADORA ACTUAL') + "</label>" +
           "</div>" +
           '<div class="my-1 col-12 col-md-2 order-md-7">' +
           '<div class="input-group">' +
@@ -1355,7 +1374,7 @@ $(".listaAdicional").on(
           '<div class="my-1 col-12 col-md-3 order-md-2 ' +
           estado +
           '">' +
-          "<label>VEHICULO</label>" +
+          "<label>" + t('form_labels.vehiculo', 'VEHÍCULO') + "</label>" +
           "</div>" +
           '<div class="my-1 col-12 col-md-3 order-md-8">' +
           '<div class="input-group">' +
@@ -1372,7 +1391,7 @@ $(".listaAdicional").on(
           '<div class="my-1 col-12 col-md-2 order-md-3 ' +
           estado +
           '">' +
-          "<label>TASA</label>" +
+          "<label>" + t('form_labels.tasa', 'TASA') + "</label>" +
           "</div>" +
           '<div class="my-1 col-12 col-md-2 order-md-9">' +
           '<div class="input-group">' +
@@ -1389,7 +1408,7 @@ $(".listaAdicional").on(
           '<div class="my-1 col-12 col-md-2 order-md-4 ' +
           estado +
           '">' +
-          "<label>VALOR AUTO USD</label>" +
+          "<label>" + t('form_labels.valor_auto_usd', 'VALOR AUTO USD') + "</label>" +
           "</div>" +
           '<div class="my-1 col-12 col-md-2 order-md-10">' +
           '<div class="input-group">' +
@@ -1406,7 +1425,7 @@ $(".listaAdicional").on(
           '<div class="my-1 col-12 col-md-2 order-md-5 ' +
           estado +
           '">' +
-          "<label>VALOR TOTAL USD</label>" +
+          "<label>" + t('form_labels.valor_total_usd', 'VALOR TOTAL USD') + "</label>" +
           "</div>" +
           '<div class="my-1 col-12 col-md-2 order-md-11">' +
           '<div class="input-group">' +
@@ -1787,7 +1806,7 @@ function agregar_auto_vehiculos(idValor) {
           ' etiquetaTipoVehiculo" id = "etiquetaTipoVehiculo' +
           numVehiculo +
           '" style="padding-right:0px">' +
-          "<label>Tipo Vehiculo</label>" +
+          "<label>" + t('form_labels.tipo_vehiculo', 'Tipo Vehículo') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
@@ -1814,7 +1833,7 @@ function agregar_auto_vehiculos(idValor) {
           ' etiquetaMarcaVehiculo" id = "etiquetaMarcaVehiculo' +
           numVehiculo +
           '">' +
-          "<label>Marca</label>" +
+          "<label>" + t('form_labels.marca', 'Marca') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-11 my-1">' +
           '<div class="input-group">' +
@@ -1835,7 +1854,7 @@ function agregar_auto_vehiculos(idValor) {
           ' etiquetaModeloVehiculo" id = "etiquetaModeloVehiculo' +
           numVehiculo +
           '">' +
-          "<label>Modelo</label>" +
+          "<label>" + t('form_labels.modelo', 'Modelo') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-12 my-1">' +
           '<input type="text" class="form-control validarNumerosLetras modeloVehiculo' +
@@ -1854,7 +1873,7 @@ function agregar_auto_vehiculos(idValor) {
           ' etiquetaColorVehiculo" id = "etiquetaColorVehiculo' +
           numVehiculo +
           '" style="padding-left:0px">' +
-          "<label>Color</label>" +
+          "<label>" + t('form_labels.color', 'Color') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-13 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -1875,7 +1894,7 @@ function agregar_auto_vehiculos(idValor) {
           ' etiquetaAnoVehiculo" id = "etiquetaAnoVehiculo' +
           numVehiculo +
           '" style="padding-left:0px">' +
-          "<label>Año</label>" +
+          "<label>" + t('form_labels.anno', 'Año') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-14 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -1896,7 +1915,7 @@ function agregar_auto_vehiculos(idValor) {
           ' etiquetaPlacaVehiculo" id = "etiquetaPlacaVehiculo' +
           numVehiculo +
           '" style="padding-left:0px">' +
-          "<label>Placa</label>" +
+          "<label>" + t('form_labels.placa', 'Placa') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-15 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -1917,7 +1936,7 @@ function agregar_auto_vehiculos(idValor) {
           ' etiquetaMontoVehiculo" id = "etiquetaMontoVehiculo' +
           numVehiculo +
           '" style="padding-left:0px">' +
-          "<label>Monto</label>" +
+          "<label>" + t('form_labels.monto', 'Monto') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-16 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -1938,7 +1957,7 @@ function agregar_auto_vehiculos(idValor) {
           ' etiquetaDeducibleVehiculo" id = "etiquetaDeducibleVehiculo' +
           numVehiculo +
           '" style="padding-left:0px">' +
-          "<label>Deducible</label>" +
+          "<label>" + t('form_labels.deducible', 'Deducible') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-17 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -2028,7 +2047,7 @@ function agregar_auto_observaciones() {
               ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
               numObservacion +
               '" style="padding-right:0px">' +
-              "<label>Fecha Registro</label>" +
+              "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
               "</div>" +
               '<div class="col-6 col-md-4 order-md-4 my-1" style="padding-right:0px">' +
               '<div class="input-group">' +
@@ -2047,7 +2066,7 @@ function agregar_auto_observaciones() {
               ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
               numObservacion +
               '">' +
-              "<label>Observaci&oacute;n</label>" +
+              "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
               "</div>" +
               '<div class="col-6 col-md-4 order-md-5 my-1">' +
               '<label class="observacion" id="observacion' +
@@ -2758,7 +2777,7 @@ function agregar_auto_cargar_condiciones_renovacion(listaCondiciones, valor) {
         '<div class="my-1 col-12 col-md-2 order-md-1 ' +
         estado +
         '">' +
-        "<label>ASEGURADORA ACTUAL</label>" +
+        "<label>" + t('form_labels.aseguradora_actual', 'ASEGURADORA ACTUAL') + "</label>" +
         "</div>" +
         '<div class="my-1 col-12 col-md-2 order-md-7">' +
         '<div class="input-group">' +
@@ -2777,7 +2796,7 @@ function agregar_auto_cargar_condiciones_renovacion(listaCondiciones, valor) {
         '<div class="my-1 col-12 col-md-2 order-md-2 ' +
         estado +
         '">' +
-        "<label>CONDICION REQUERIDO</label>" +
+        "<label>" + t('form_labels.condicion_requerido', 'CONDICIÓN REQUERIDO') + "</label>" +
         "</div>" +
         '<div class="my-1 col-12 col-md-2 order-md-8">' +
         '<div class="input-group">' +
@@ -2796,7 +2815,7 @@ function agregar_auto_cargar_condiciones_renovacion(listaCondiciones, valor) {
         '<div class="my-1 col-12 col-md-2 order-md-3 ' +
         estado +
         '">' +
-        "<label>TASA</label>" +
+        "<label>" + t('form_labels.tasa', 'TASA') + "</label>" +
         "</div>" +
         '<div class="my-1 col-12 col-md-2 order-md-9">' +
         '<div class="input-group">' +
@@ -2815,7 +2834,7 @@ function agregar_auto_cargar_condiciones_renovacion(listaCondiciones, valor) {
         '<div class="my-1 col-12 col-md-2 order-md-4 ' +
         estado +
         '">' +
-        "<label>VALOR AUTO USD</label>" +
+        "<label>" + t('form_labels.valor_auto_usd', 'VALOR AUTO USD') + "</label>" +
         "</div>" +
         '<div class="my-1 col-12 col-md-2 order-md-10">' +
         '<div class="input-group">' +
@@ -2834,7 +2853,7 @@ function agregar_auto_cargar_condiciones_renovacion(listaCondiciones, valor) {
         '<div class="my-1 col-12 col-md-2 order-md-5 ' +
         estado +
         '">' +
-        "<label>VALOR TOTAL USD</label>" +
+        "<label>" + t('form_labels.valor_total_usd', 'VALOR TOTAL USD') + "</label>" +
         "</div>" +
         '<div class="my-1 col-12 col-md-2 order-md-11">' +
         '<div class="input-group">' +

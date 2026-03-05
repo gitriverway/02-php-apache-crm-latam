@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
+$t = function ($key, $params = null) {
+    return Modelo_Idioma::t($key, $params);
 };
 
 
@@ -12,6 +12,7 @@ class Envio_correo_documentos_seguimiento_operatorio_empresarial
 
     function realizar_envio_correo_documentos_seguimiento_operatorio_empresarial($idOperatorio, $idContrato)
     {
+        global $t;
 
         $MU = new Modelo_Operatorio_Cliente_Empresarial();
 
@@ -111,7 +112,7 @@ class Envio_correo_documentos_seguimiento_operatorio_empresarial
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'PEDIDO DE CRÉDITO HOSPITALARIO - ' . $fechaActual . ' - ' . $nombre . ' - DOCUMENTOS ADICIONALES REQUERIDOS';
+            $mail->Subject = $t('email_operatorio_documentos_seguimiento_aseguradora.subject', ['fecha' => $fechaActual, 'nombre' => $nombre]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -119,13 +120,13 @@ class Envio_correo_documentos_seguimiento_operatorio_empresarial
 
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Estimados Colegas,</h3>
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Adjunto sírvase encontrar, documentos adicionales solicitados para el credito hospitalario:</h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_operatorio_documentos_seguimiento_aseguradora.dear_colleagues') . '</h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_operatorio_documentos_seguimiento_aseguradora.additional_documents') . '</h3>
     
             <!-- <center> -->
-            <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Número de Contrato: ' . $numero_contrato . '
+            <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_operatorio_aseguradora.contract_number') . ': ' . $numero_contrato . '
                 </h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Nombre del Titular: ' . $nombre . '
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_operatorio_aseguradora.holder_name') . ': ' . $nombre . '
                 </h4>
                 <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Nombre Paciente: ' . $nombre_paciente . '</h4>
                 <h4 style="font-weight:100; color:#000000; padding:0px 20px;">Diagnóstico: ' . $diagnostico . '</h4>

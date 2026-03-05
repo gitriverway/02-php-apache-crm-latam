@@ -3,6 +3,26 @@ $(document).on("hidden.bs.modal", function (event) {
     $("body").addClass("modal-open");
   }
 });
+
+// Helper function para traducciones en JavaScript
+function t(key, defaultValue) {
+  if (
+    typeof translations !== "undefined" &&
+    translations.form &&
+    translations.form[key]
+  ) {
+    return translations.form[key];
+  }
+  if (
+    typeof translations !== "undefined" &&
+    translations.form_labels &&
+    translations.form_labels[key]
+  ) {
+    return translations.form_labels[key];
+  }
+  return defaultValue || key;
+}
+
 //  function lista1(){
 
 //     $.ajax({
@@ -169,7 +189,7 @@ $("#tabla-listar-operatorios-asistencia-medica-individual").on(
                 ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
                 numObservacion +
                 '" style="padding-right:0px">' +
-                "<label>Fecha Registro</label>" +
+                "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
                 "</div>" +
                 '<div class="col-6 col-lg-3 order-md-3 my-1" style="padding-right:0px">' +
                 '<div class="input-group">' +
@@ -188,7 +208,7 @@ $("#tabla-listar-operatorios-asistencia-medica-individual").on(
                 ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
                 numObservacion +
                 '">' +
-                "<label>Observaci&oacute;n</label>" +
+                "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
                 "</div>" +
                 '<div class="col-6 col-lg-9 order-md-4 my-1">' +
                 '<label class="observacion" id="observacion' +
@@ -784,7 +804,7 @@ function cargar_auto_documentos_aseguradora() {
           '<div class="my-1 col-12 col-md-6 order-md-1 ' +
           estado +
           '">' +
-          "<label>Documento</label>" +
+          "<label>" + t('form_labels.documento', 'Documento') + "</label>" +
           "</div>" +
           '<div class="my-1 col-12 col-md-6 order-md-5">' +
           '<div class="input-group">' +
@@ -801,7 +821,7 @@ function cargar_auto_documentos_aseguradora() {
           '<div class="my-1 col-6 col-md-2 order-md-2 ' +
           estado +
           '">' +
-          "<label>SI</label>" +
+          "<label>" + t('form_labels.si', 'SI') + "</label>" +
           "</div>" +
           '<div class="my-1 col-6 col-md-2 order-md-6">' +
           '<div class="form-check">' +
@@ -816,7 +836,7 @@ function cargar_auto_documentos_aseguradora() {
           '<div class="my-1 col-6 col-md-2 order-md-3 ' +
           estado +
           '">' +
-          "<label>NO</label>" +
+          "<label>" + t('form_labels.no', 'NO') + "</label>" +
           "</div>" +
           '<div class="my-1 col-6 col-md-2 order-md-7">' +
           '<div class="form-check">' +
@@ -968,7 +988,7 @@ $(".btnAgregarDocumentoRequeridoAseguradora").click(function () {
       '<div class="my-1 col-12 col-md-6 order-md-1 ' +
       estado +
       '">' +
-      "<label>Documento</label>" +
+      "<label>" + t('form_labels.documento', 'Documento') + "</label>" +
       "</div>" +
       '<div class="my-1 col-12 col-md-6 order-md-5">' +
       '<div class="input-group">' +
@@ -983,7 +1003,7 @@ $(".btnAgregarDocumentoRequeridoAseguradora").click(function () {
       '<div class="my-1 col-6 col-md-2 order-md-2 ' +
       estado +
       '">' +
-      "<label>SI</label>" +
+      "<label>" + t('form_labels.si', 'SI') + "</label>" +
       "</div>" +
       '<div class="my-1 col-6 col-md-2 order-md-6">' +
       '<div class="form-check">' +
@@ -996,7 +1016,7 @@ $(".btnAgregarDocumentoRequeridoAseguradora").click(function () {
       '<div class="my-1 col-6 col-md-2 order-md-3 ' +
       estado +
       '">' +
-      "<label>NO</label>" +
+      "<label>" + t('form_labels.no', 'NO') + "</label>" +
       "</div>" +
       '<div class="my-1 col-6 col-md-2 order-md-7">' +
       '<div class="form-check">' +
@@ -2325,7 +2345,7 @@ function cargar_auto_documentos_aseguradora_1() {
           '<div class="my-1 col-12 col-md-6 order-md-1 ' +
           estado +
           '">' +
-          "<label>Documento</label>" +
+          "<label>" + t('form_labels.documento', 'Documento') + "</label>" +
           "</div>" +
           '<div class="my-1 col-12 col-md-6 order-md-5">' +
           '<div class="input-group">' +
@@ -2342,7 +2362,7 @@ function cargar_auto_documentos_aseguradora_1() {
           '<div class="my-1 col-6 col-md-2 order-md-2 ' +
           estado +
           '">' +
-          "<label>SI</label>" +
+          "<label>" + t('form_labels.si', 'SI') + "</label>" +
           "</div>" +
           '<div class="my-1 col-6 col-md-2 order-md-6">' +
           '<div class="form-check">' +
@@ -2357,7 +2377,7 @@ function cargar_auto_documentos_aseguradora_1() {
           '<div class="my-1 col-6 col-md-2 order-md-3 ' +
           estado +
           '">' +
-          "<label>NO</label>" +
+          "<label>" + t('form_labels.no', 'NO') + "</label>" +
           "</div>" +
           '<div class="my-1 col-6 col-md-2 order-md-7">' +
           '<div class="form-check">' +
@@ -2548,7 +2568,7 @@ $(".btnAgregarDocumentoRequeridoAseguradora1").click(function () {
       '<div class="my-1 col-12 col-md-6 order-md-1 ' +
       estado +
       '">' +
-      "<label>Documento</label>" +
+      "<label>" + t('form_labels.documento', 'Documento') + "</label>" +
       "</div>" +
       '<div class="my-1 col-12 col-md-6 order-md-5">' +
       '<div class="input-group">' +
@@ -2563,7 +2583,7 @@ $(".btnAgregarDocumentoRequeridoAseguradora1").click(function () {
       '<div class="my-1 col-6 col-md-2 order-md-2 ' +
       estado +
       '">' +
-      "<label>SI</label>" +
+      "<label>" + t('form_labels.si', 'SI') + "</label>" +
       "</div>" +
       '<div class="my-1 col-6 col-md-2 order-md-6">' +
       '<div class="form-check">' +
@@ -2576,7 +2596,7 @@ $(".btnAgregarDocumentoRequeridoAseguradora1").click(function () {
       '<div class="my-1 col-6 col-md-2 order-md-3 ' +
       estado +
       '">' +
-      "<label>NO</label>" +
+      "<label>" + t('form_labels.no', 'NO') + "</label>" +
       "</div>" +
       '<div class="my-1 col-6 col-md-2 order-md-7">' +
       '<div class="form-check">' +

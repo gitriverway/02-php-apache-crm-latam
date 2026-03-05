@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
+$t = function ($key, $params = null) {
+    return Modelo_Idioma::t($key, $params);
 };
 
 require '../../extensiones/PHPMailer/src/Exception.php';
@@ -15,6 +15,7 @@ class Envio_correo_observaciones_operatorio_empresarial
 
     function realizar_envio_correo_observaciones_operatorio_empresarial($idOperatorio, $idContrato)
     {
+        global $t;
 
 
         $MU = new Modelo_Operatorio_Cliente_Empresarial();
@@ -78,7 +79,7 @@ class Envio_correo_observaciones_operatorio_empresarial
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'CRÉDITO HOSPITALARIO Número ' . $Ticket . ' - HA SIDO MODIFICADO';
+            $mail->Subject = $t('email_operatorio_observaciones.subject', ['ticket' => $Ticket]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 

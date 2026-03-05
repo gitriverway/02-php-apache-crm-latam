@@ -74,9 +74,16 @@ class Modelo_Idioma
     /**
      * Obtiene una traducción por su clave
      * Ejemplo: t('common.login') o t('messages.warning')
+     * También soporta reemplazo de parámetros: t('email.subject', ['ticket' => 123])
      */
-    public static function t($key, $lang = null)
+    public static function t($key, $params = null, $lang = null)
     {
+        // Si el segundo parámetro es un string, es el idioma
+        if (is_string($params)) {
+            $lang = $params;
+            $params = null;
+        }
+
         $translations = self::loadTranslations($lang);
 
         $keys = explode('.', $key);
@@ -88,6 +95,13 @@ class Modelo_Idioma
             } else {
                 // Si no se encuentra la traducción, devolver la clave
                 return $key;
+            }
+        }
+
+        // Si hay parámetros, reemplazar los marcadores {clave} en la traducción
+        if ($params !== null && is_array($params)) {
+            foreach ($params as $paramKey => $paramValue) {
+                $value = str_replace('{' . $paramKey . '}', $paramValue, $value);
             }
         }
 

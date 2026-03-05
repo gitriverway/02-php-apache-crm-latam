@@ -1,3 +1,22 @@
+// Helper function para traducciones en JavaScript
+function t(key, defaultValue) {
+  if (
+    typeof translations !== "undefined" &&
+    translations.form &&
+    translations.form[key]
+  ) {
+    return translations.form[key];
+  }
+  if (
+    typeof translations !== "undefined" &&
+    translations.form_labels &&
+    translations.form_labels[key]
+  ) {
+    return translations.form_labels[key];
+  }
+  return defaultValue || key;
+}
+
 // function lista1(){
 
 //     $.ajax({
@@ -452,7 +471,7 @@ $(".listaAdicional").on("click", "button.btnAgregarHogar", function () {
         ' etiquetaTipoHogar" id ="etiquetaTipoHogar' +
         numHogar +
         '" style="padding-right:0px">' +
-        "<label>Tipo Hogar</label>" +
+        "<label>" + t('form_labels.tipo_hogar', 'Tipo Hogar') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-8 my-1" style="padding-right:0px">' +
         '<div class="input-group">' +
@@ -475,7 +494,7 @@ $(".listaAdicional").on("click", "button.btnAgregarHogar", function () {
         ' etiquetaDireccionHogar" id = "etiquetaDireccionHogar' +
         numHogar +
         '">' +
-        "<label>Dirección</label>" +
+        "<label>" + t('form_labels.direccion', 'Dirección') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-9 my-1">' +
         '<div class="input-group">' +
@@ -494,7 +513,7 @@ $(".listaAdicional").on("click", "button.btnAgregarHogar", function () {
         ' etiquetaAnoConstruccionHogar" id = "etiquetaAnoConstruccionHogar' +
         numHogar +
         '">' +
-        "<label>Año Construcción</label>" +
+        "<label>" + t('form_labels.anno_construccion', 'Año Construcción') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-10 my-1">' +
         '<input type="text" class="form-control validarNumerosLetrasDecimal anoConstruccionHogar' +
@@ -511,7 +530,7 @@ $(".listaAdicional").on("click", "button.btnAgregarHogar", function () {
         ' etiquetaValorViviendaHogar" id = "etiquetaValorViviendaHogar' +
         numHogar +
         '" style="padding-left:0px">' +
-        "<label>Valor Vivienda</label>" +
+        "<label>" + t('form_labels.valor_vivienda', 'Valor Vivienda') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-1 order-md-11 my-1" style="padding-left:0px">' +
         '<div class="input-group">' +
@@ -530,7 +549,7 @@ $(".listaAdicional").on("click", "button.btnAgregarHogar", function () {
         ' etiquetaValorOtrasCosasHogar" id = "etiquetaValorOtrasCosasHogar' +
         numHogar +
         '" style="padding-left:0px">' +
-        "<label>Valor Interior Contenido Vivienda</label>" +
+        "<label>" + t('form_labels.valor_interior_contenido', 'Valor Interior Contenido') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-12 my-1" style="padding-left:0px">' +
         '<div class="input-group">' +
@@ -549,7 +568,7 @@ $(".listaAdicional").on("click", "button.btnAgregarHogar", function () {
         ' etiquetaMontoHogar" id = "etiquetaMontoHogar' +
         numHogar +
         '" style="padding-left:0px">' +
-        "<label>Monto</label>" +
+        "<label>" + t('form_labels.monto', 'Monto') + "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-13 my-1" style="padding-left:0px">' +
         '<div class="input-group">' +
@@ -831,7 +850,7 @@ function agregarNuevaObservacion() {
       ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
       numObservacion +
       '" style="padding-right:0px">' +
-      "<label>Fecha Registro</label>" +
+      "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-4 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
@@ -850,7 +869,7 @@ function agregarNuevaObservacion() {
       ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
       numObservacion +
       '">' +
-      "<label>Observaci&oacute;n</label>" +
+      "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-5 my-1">' +
       '<label class="observacion" id="observacion' +
@@ -1376,7 +1395,7 @@ $(".listaAdicional").on(
           '<div class="my-1 col-12 col-md-3 order-md-1 ' +
           estado +
           '">' +
-          "<label>ASEGURADORA ACTUAL</label>" +
+          "<label>" + t('form_labels.aseguradora_actual', 'ASEGURADORA ACTUAL') + "</label>" +
           "</div>" +
           '<div class="my-1 col-12 col-md-3 order-md-6">' +
           '<div class="input-group">' +
@@ -1393,7 +1412,7 @@ $(".listaAdicional").on(
           '<div class="my-1 col-12 col-md-3 order-md-2 ' +
           estado +
           '">' +
-          "<label>HOGAR</label>" +
+          "<label>" + t('form_labels.hogar', 'HOGAR') + "</label>" +
           "</div>" +
           '<div class="my-1 col-12 col-md-3 order-md-7">' +
           '<div class="input-group">' +
@@ -1410,7 +1429,7 @@ $(".listaAdicional").on(
           '<div class="my-1 col-12 col-md-2 order-md-3 ' +
           estado +
           '">' +
-          "<label>TASA</label>" +
+          "<label>" + t('form_labels.tasa', 'TASA') + "</label>" +
           "</div>" +
           '<div class="my-1 col-12 col-md-2 order-md-8">' +
           '<div class="input-group">' +
@@ -1427,7 +1446,7 @@ $(".listaAdicional").on(
           '<div class="my-1 col-12 col-md-3 order-md-4 ' +
           estado +
           '">' +
-          "<label>VALOR USD</label>" +
+          "<label>" + t('form_labels.valor_usd', 'VALOR USD') + "</label>" +
           "</div>" +
           '<div class="my-1 col-12 col-md-3 order-md-9">' +
           '<div class="input-group">' +
@@ -1806,7 +1825,7 @@ function agregar_auto_hogares(idValor) {
           ' etiquetaTipoHogar" id = "etiquetaTipoHogar' +
           numHogar +
           '" style="padding-right:0px">' +
-          "<label>Tipo Hogar</label>" +
+          "<label>" + t('form_labels.tipo_hogar', 'Tipo Hogar') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-8 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
@@ -1829,7 +1848,7 @@ function agregar_auto_hogares(idValor) {
           ' etiquetaDireccionHogar" id = "etiquetaDireccionHogar' +
           numHogar +
           '">' +
-          "<label>Direccion</label>" +
+          "<label>" + t('form_labels.direccion', 'Dirección') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-9 my-1">' +
           '<div class="input-group">' +
@@ -1850,7 +1869,7 @@ function agregar_auto_hogares(idValor) {
           ' etiquetaAnoConstruccionHogar" id = "etiquetaAnoConstruccionHogar' +
           numHogar +
           '">' +
-          "<label>Año Construcción</label>" +
+          "<label>" + t('form_labels.anno_construccion', 'Año Construcción') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-10 my-1">' +
           '<input type="text" class="form-control validarNumerosLetras anoConstruccionHogar' +
@@ -1869,7 +1888,7 @@ function agregar_auto_hogares(idValor) {
           ' etiquetaValorViviendaHogar" id = "etiquetaValorViviendaHogar' +
           numHogar +
           '" style="padding-left:0px">' +
-          "<label>Valor Vivienda</label>" +
+          "<label>" + t('form_labels.valor_vivienda', 'Valor Vivienda') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-11 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -1890,7 +1909,7 @@ function agregar_auto_hogares(idValor) {
           ' etiquetaValorOtrasCosasHogar" id = "etiquetaValorOtrasCosasHogar' +
           numHogar +
           '" style="padding-left:0px">' +
-          "<label>Valor Interior Contenido Vivienda</label>" +
+          "<label>" + t('form_labels.valor_interior_contenido', 'Valor Interior Contenido') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-12 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -1911,7 +1930,7 @@ function agregar_auto_hogares(idValor) {
           ' etiquetaMontoHogar" id = "etiquetaMontoHogar' +
           numHogar +
           '" style="padding-left:0px">' +
-          "<label>Monto</label>" +
+          "<label>" + t('form_labels.monto', 'Monto') + "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-13 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -2004,7 +2023,7 @@ function agregar_auto_observaciones() {
               ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
               numObservacion +
               '" style="padding-right:0px">' +
-              "<label>Fecha Registro</label>" +
+              "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
               "</div>" +
               '<div class="col-6 col-md-4 order-md-4 my-1" style="padding-right:0px">' +
               '<div class="input-group">' +
@@ -2023,7 +2042,7 @@ function agregar_auto_observaciones() {
               ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
               numObservacion +
               '">' +
-              "<label>Observaci&oacute;n</label>" +
+              "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
               "</div>" +
               '<div class="col-6 col-md-4 order-md-5 my-1">' +
               '<label class="observacion" id="observacion' +
@@ -2735,7 +2754,7 @@ function agregar_auto_cargar_condiciones_renovacion(listaCondiciones, valor) {
         '<div class="my-1 col-12 col-md-3 order-md-1 ' +
         estado +
         '">' +
-        "<label>ASEGURADORA ACTUAL</label>" +
+        "<label>" + t('form_labels.aseguradora_actual', 'ASEGURADORA ACTUAL') + "</label>" +
         "</div>" +
         '<div class="my-1 col-12 col-md-3 order-md-6">' +
         '<div class="input-group">' +
@@ -2754,7 +2773,7 @@ function agregar_auto_cargar_condiciones_renovacion(listaCondiciones, valor) {
         '<div class="my-1 col-12 col-md-3 order-md-2 ' +
         estado +
         '">' +
-        "<label>CONDICION REQUERIDO</label>" +
+        "<label>" + t('form_labels.condicion_requerido', 'CONDICIÓN REQUERIDO') + "</label>" +
         "</div>" +
         '<div class="my-1 col-12 col-md-3 order-md-7">' +
         '<div class="input-group">' +
@@ -2773,7 +2792,7 @@ function agregar_auto_cargar_condiciones_renovacion(listaCondiciones, valor) {
         '<div class="my-1 col-12 col-md-2 order-md-3 ' +
         estado +
         '">' +
-        "<label>TASA</label>" +
+        "<label>" + t('form_labels.tasa', 'TASA') + "</label>" +
         "</div>" +
         '<div class="my-1 col-12 col-md-2 order-md-8">' +
         '<div class="input-group">' +
@@ -2792,7 +2811,7 @@ function agregar_auto_cargar_condiciones_renovacion(listaCondiciones, valor) {
         '<div class="my-1 col-12 col-md-3 order-md-4 ' +
         estado +
         '">' +
-        "<label>VALOR USD</label>" +
+        "<label>" + t('form_labels.valor_usd', 'VALOR USD') + "</label>" +
         "</div>" +
         '<div class="my-1 col-12 col-md-3 order-md-9">' +
         '<div class="input-group">' +

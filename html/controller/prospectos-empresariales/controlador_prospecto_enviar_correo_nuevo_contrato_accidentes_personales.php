@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
+$t = function ($key, $params = null) {
+    return Modelo_Idioma::t($key, $params);
 };
 
 // require '../../extensiones/PHPMailer/src/Exception.php';
@@ -15,6 +15,7 @@ class Envio_correo_notificacion_nuevo_contrato_accidentes_personales
 
     function realizar_envio_correo_notificacion_nuevo_contrato_accidentes_personales($idBayer)
     {
+        global $t;
 
         $MU = new Modelo_Bayer_Persona_Empresarial();
         $consulta = $MU->TraerDatosBayerContrato($idBayer);
@@ -52,7 +53,7 @@ class Envio_correo_notificacion_nuevo_contrato_accidentes_personales
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'NOTIFICACIÓN DE NUEVO CONTRATO - ASISTENCIA MÉDICA PYMES';
+            $mail->Subject = $t('email_prospecto_nuevo_contrato.subject_pymes');
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -60,21 +61,21 @@ class Envio_correo_notificacion_nuevo_contrato_accidentes_personales
 
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Estimado Colega: </h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Se acaba de registrar un nuevo contrato, para el cliente: <strong>' . $nombre . '</strong>, por favor proceda con la finalización.
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_prospecto_nuevo_contrato.dear_colleague') . ': </h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_prospecto_nuevo_contrato.new_contract_notification') . ' <strong>' . $nombre . '</strong>
                 </h3>
 
                 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                    <strong>Nota:</strong> Declaramos contar con el consentimiento explícito para llevar a cabo el trámite en beneficio del cliente.
+                    <strong>' . $t('email_prospecto_nuevo_contrato.contract_details') . ':</strong>
                 </p>
         
                 <div class=WordSection1>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Saludos cordiales,<o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email_prospecto_nuevo_contrato.regards') . ',<o:p>
                                 </o:p></span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Departamento de venta<o:p></o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email_prospecto_nuevo_contrato.sales_dept') . '<o:p></o:p>
                                 </span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
