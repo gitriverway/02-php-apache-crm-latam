@@ -1,13 +1,7 @@
 <?php
 
-if ($_SESSION["S_ROL"] != "ADMINISTRADOR" && $_SESSION["S_ROL"] != "GERENTE" && $_SESSION["S_ROL"] != "VENDEDOR") {
-
-    echo '<script>
-
-  window.location = "inicio";
-
-</script>';
-
+if ($_SESSION["S_ROL"] == "CLIENTE") {
+    echo '<script>window.location = "inicio";</script>';
     return;
 }
 

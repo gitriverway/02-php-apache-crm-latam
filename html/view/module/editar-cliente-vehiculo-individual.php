@@ -1,18 +1,8 @@
 <?php
 
-switch ($_SESSION["S_ROL"]) {
-    case 'GERENTE':
-        # code...
-        break;
-
-    case 'SERVICIO CLIENTE':
-        # code...
-        break;
-
-    default:
-        echo '<script>window.location = "inicio";</script>';
-        return;
-        break;
+if ($_SESSION["S_ROL"] == "CLIENTE") {
+    echo '<script>window.location = "inicio";</script>';
+    return;
 }
 
 require_once __DIR__ . '/../../model/modelo_idioma.php';
