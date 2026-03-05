@@ -693,7 +693,7 @@ $t = function ($key) {
                             <font color="red"> *</font>
                         </label>
                         <textarea class="form-control validarNumerosLetrasDecimal" id="txt_observacion"
-                            name="txt_observacion" cols="20" rows="5" placeholder="<?php echo $t('messages.enter_observation'); ?>></textarea>
+                            name="txt_observacion" cols="20" rows="5" placeholder="<?php echo $t('messages.enter_observation'); ?>"></textarea>
                     </div>
                 </div>
                 <div class=" modal-footer">
