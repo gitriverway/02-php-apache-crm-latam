@@ -89,7 +89,7 @@ MODAL REGISTRO USUARIO
                     <div class="box-body">
                         <!-- ENTRADA PARA EL USUARIO -->
                         <div class="form-group">
-                            <label for="txt_usu" class="control-label" style="text-align: right;">USUARIO
+                            <label for="txt_usu" class="control-label" style="text-align: right;"><?php echo $t('usuarios.user'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -100,7 +100,7 @@ MODAL REGISTRO USUARIO
 
                         <!-- ENTRADA PARA CONTRASEÑA -->
                         <div class="form-group">
-                            <label for="txt_con1" class="control-label" style="text-align: right;">CONTRASE&Ntilde;A
+                            <label for="txt_con1" class="control-label" style="text-align: right;"><?php echo $t('usuarios.password'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -111,9 +111,7 @@ MODAL REGISTRO USUARIO
 
                         <!-- ENTRADA PARA REPETIR CONTRASEÑA -->
                         <div class="form-group">
-                            <label for="txt_con2" class="control-label" style="text-align: right;">REPITA
-                                LA
-                                CONTRASE&Ntilde;A<font color="red"> *</font></label>
+                            <label for="txt_con2" class="control-label" style="text-align: right;"><?php echo $t('usuarios.repeat_password'); ?><font color="red"> *</font></label>
                             <div class="input-group">
                                 <input type="password" class="form-control validarNumerosLetras" id="txt_con2" placeholder="<?php echo $t('messages.repeat_password'); ?>" maxlength="30">
                                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
@@ -122,7 +120,7 @@ MODAL REGISTRO USUARIO
 
                         <!-- ENTRADA PARA EMAIL -->
                         <div class="form-group">
-                            <label for="txt_con2" class="control-label" style="text-align: right;">EMAIL
+                            <label for="txt_con2" class="control-label" style="text-align: right;"><?php echo $t('usuarios.email'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -133,7 +131,7 @@ MODAL REGISTRO USUARIO
 
                         <!-- ENTRADA PARA SELECCIONAR EMPLEADO -->
                         <div class="form-group">
-                            <label for="cbm_empleado" class="control-label" style="text-align: right;">EMPLEADO
+                            <label for="cbm_empleado" class="control-label" style="text-align: right;"><?php echo $t('usuarios.employee'); ?>
                             </label>
                             <div class="input-group">
                                 <select class="form-control cbm_empleado js-example-basic-single" name="state" id="cbm_empleado" style="width:100%;">
@@ -143,7 +141,7 @@ MODAL REGISTRO USUARIO
 
                         <!-- ENTRADA PARA SELECCIONAR ROL -->
                         <div class="form-group">
-                            <label for="cbm_rol" class="control-label" style="text-align: right;">ROL
+                            <label for="cbm_rol" class="control-label" style="text-align: right;"><?php echo $t('usuarios.role'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -155,8 +153,8 @@ MODAL REGISTRO USUARIO
 
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-info pull-left" onclick="Registrar_Usuario()"><i class="fa fa-save"><b>&nbsp;REGISTRAR</b></i></button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"><b>&nbsp;CERRAR</b></i></button>
+                    <button class="btn btn-info pull-left" onclick="Registrar_Usuario()"><i class="fa fa-save"><b>&nbsp;<?php echo $t('usuarios.register'); ?></b></i></button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"><b>&nbsp;<?php echo $t('usuarios.close'); ?></b></i></button>
                 </div>
             </form>
         </div>
@@ -186,7 +184,7 @@ CUERPO DEL MODAL
                         <input type="hidden" id="txtidusuario">
                         <!-- ENTRADA PARA EL USUARIO -->
                         <div class="form-group">
-                            <label for="txtusu_editar" class="control-label" style="text-align: right;">USUARIO
+                            <label for="txtusu_editar" class="control-label" style="text-align: right;"><?php echo $t('usuarios.user'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -207,7 +205,7 @@ CUERPO DEL MODAL
 
                         <!-- ENTRADA PARA EMAIL -->
                         <div class="form-group">
-                            <label for="txtusu_email" class="control-label" style="text-align: right;">EMAIL
+                            <label for="txtusu_email" class="control-label" style="text-align: right;"><?php echo $t('usuarios.email'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -227,7 +225,7 @@ CUERPO DEL MODAL
 
                         <!-- ENTRADA PARA SELECCIONAR ROL -->
                         <div class="form-group">
-                            <label for="cbm_rol" class="control-label" style="text-align: right;">ROL
+                            <label for="cbm_rol" class="control-label" style="text-align: right;"><?php echo $t('usuarios.role'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -239,8 +237,8 @@ CUERPO DEL MODAL
                 </div>
 
                 <div class="modal-footer">
-                    <button class="btn btn-info pull-left" onclick="Modificar_Usuario()"><i class="fa fa-save"><b>&nbsp;ACTUALIZAR</b></i></button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"><b>&nbsp;CERRAR</b></i></button>
+                    <button class="btn btn-info pull-left" onclick="Modificar_Usuario()"><i class="fa fa-save"><b>&nbsp;<?php echo $t('usuarios.update'); ?></b></i></button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"><b>&nbsp;<?php echo $t('usuarios.close'); ?></b></i></button>
                 </div>
             </div>
         </div>

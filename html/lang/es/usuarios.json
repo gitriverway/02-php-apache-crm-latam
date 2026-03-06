@@ -6,6 +6,10 @@
     "user_data": "Datos del Usuario",
     "username": "Nombre de Usuario",
     "enter_username": "Ingresar Nombre de Usuario",
+    "password": "Contraseña",
+    "enter_password": "Ingresar Contraseña",
+    "repeat_password": "Repetir Contraseña",
+    "new_password": "Nueva Contraseña",
     "email": "Correo Electrónico",
     "enter_email": "Ingresar Correo Electrónico",
     "role": "Rol",
@@ -18,5 +22,15 @@
     "active": "Activo",
     "inactive": "Inactivo",
     "user_status_changed": "Usuario {status} exitosamente",
-    "new_user_registered": "Nuevo usuario registrado exitosamente"
+    "new_user_registered": "Nuevo usuario registrado exitosamente",
+    "employee": "Empleado",
+    "select_employee": "Seleccionar Empleado",
+    "user_registration": "Registro de Usuario",
+    "edit_user_data": "Editar Datos del Usuario",
+    "register": "REGISTRAR",
+    "update": "ACTUALIZAR",
+    "close": "CERRAR",
+    "cancel": "CANCELAR",
+    "save": "GUARDAR",
+    "exit": "SALIR"
 }

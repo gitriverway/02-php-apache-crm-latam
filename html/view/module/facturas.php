@@ -92,43 +92,41 @@ MODAL NUEVA FACTURA
                     <div class="row">
                         <!-- ENTRADA PARA EL NOMBRE -->
                         <div class="form-group col-12 col-md-6">
-                            <label for="txt_documento" class="control-label" style="text-align: right;">CEDULA/RUC
+                            <label for="txt_documento" class="control-label" style="text-align: right;"><?php echo $t('common.id_card'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="text" class="form-control" id="txt_documento" name="txt_documento"
-                                placeholder="CEDULA/RUC">
+                                placeholder="<?php echo $t('common.enter_id_card'); ?>">
                         </div>
                         <div class="form-group col-12 col-md-6">
-                            <label for="txt_nombre" class="control-label" style="text-align: right;">NOMBRE
+                            <label for="txt_nombre" class="control-label" style="text-align: right;"><?php echo $t('common.name'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="text" class="form-control" id="txt_nombre" name="txt_nombre"
-                                placeholder="NOMBRE" style="text-transform: uppercase">
+                                placeholder="<?php echo $t('common.enter_name'); ?>" style="text-transform: uppercase">
                         </div>
                         <div class="form-group col-12 col-md-6">
-                            <label for="txt_numero_factura" class="control-label" style="text-align: right;">NUMERO
-                                FACTURA
+                            <label for="txt_numero_factura" class="control-label" style="text-align: right;"><?php echo $t('common.invoice_number'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="text" class="form-control" id="txt_numero_factura" name="txt_numero_factura"
-                                placeholder="NUMERO FACTURA">
+                                placeholder="<?php echo $t('common.invoice_number'); ?>">
                         </div>
                         <div class="form-group col-12 col-md-6">
-                            <label for="txt_fecha_emision" class="control-label" style="text-align: right;">FECHA
-                                EMISION
+                            <label for="txt_fecha_emision" class="control-label" style="text-align: right;"><?php echo $t('common.emission_date'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="date" class="form-control" id="txt_fecha_emision" name="txt_fecha_emision">
                         </div>
                         <div class="form-group col-12 col-md-6">
-                            <label for="txt_valor" class="control-label" style="text-align: right;">VALOR FACTURA
+                            <label for="txt_valor" class="control-label" style="text-align: right;"><?php echo $t('common.invoice_value'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="number" class="form-control validarNumerosDecimal" id="txt_valor" name="txt_valor" min="0"
                                 placeholder="0">
                         </div>
                         <div class="form-group col-12 col-md-6">
-                            <label for="txt_numero_factura" class="control-label" style="text-align: right;">FORMA PAGO
+                            <label for="txt_numero_factura" class="control-label" style="text-align: right;"><?php echo $t('common.payment_method'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
@@ -140,8 +138,8 @@ MODAL NUEVA FACTURA
                             </select>
                         </div>
                         <div class="form-group col-12">
-                            <label for="txt_factura_documento" class="control-label" style="text-align: right;">FACTURA
-                                DOCUMENTO
+                            <label for="txt_factura_documento" class="control-label" style="text-align: right;"><?php echo $t('common.invoice'); ?>
+                                <?php echo $t('common.document'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control" id="txt_factura_documento"
@@ -152,10 +150,10 @@ MODAL NUEVA FACTURA
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal"><i
-                            class="fa fa-times"><b>&nbsp;CERRAR</b></i></button>
+                            class="fa fa-times"><b>&nbsp;<?php echo $t('buttons.close'); ?></b></i></button>
 
                     <button type="button" class="btn btn-primary" onclick="agregarNuevaFactura()"><i
-                            class="fa fa-save"><b>&nbsp;REGISTRAR</b></i></button>
+                            class="fa fa-save"><b>&nbsp;<?php echo $t('buttons.register'); ?></b></i></button>
                 </div>
             </form>
         </div>

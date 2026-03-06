@@ -61,7 +61,7 @@
                         <div class="card-body">
                             <!-- ENTRADA PARA CONTRASEÑA -->
                             <div class="form-group">
-                                <label for="txt_con1" class="control-label" style="text-align: right;">CONTRASE&Ntilde;A
+                                <label for="txt_con1" class="control-label" style="text-align: right;"><?php echo $t('usuarios.password'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <div class="input-group">
@@ -74,9 +74,7 @@
 
                             <!-- ENTRADA PARA REPETIR CONTRASEÑA -->
                             <div class="form-group">
-                                <label for="txt_con2" class="control-label" style="text-align: right;">REPITA
-                                    LA
-                                    CONTRASE&Ntilde;A<font color="red"> *</font></label>
+                                <label for="txt_con2" class="control-label" style="text-align: right;"><?php echo $t('usuarios.repeat_password'); ?><font color="red"> *</font></label>
                                 <div class="input-group">
                                     <input type="password" class="form-control validarNumerosLetras" id="txt_con2" placeholder="<?php echo $t('messages.repeat_password'); ?>" maxlength="30">
                                     <div class="input-group-append">
@@ -87,7 +85,7 @@
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
-                            <button class="btn btn-primary btn-block" onclick="Actualizar_password()"><i class="fa fa-save"><b>&nbsp;ACTUALIZAR</b></i></button>
+                            <button class="btn btn-primary btn-block" onclick="Actualizar_password()"><i class="fa fa-save"><b>&nbsp;<?php echo $t('usuarios.update'); ?></b></i></button>
                         </div>
                     </div>
                     <!-- /.card -->

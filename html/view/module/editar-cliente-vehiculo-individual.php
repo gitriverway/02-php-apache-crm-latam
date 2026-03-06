@@ -90,7 +90,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA LA ASEGURADORA-->
                                 <div class="form-group">
                                     <label for="cbm_proveedor" class=" control-label"
-                                        style="text-align: right;">ASEGURADORA
+                                        style="text-align: right;"><?php echo $t('common.provider'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_proveedor" name="state" id="cbm_proveedor">
@@ -100,8 +100,7 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA PLAN DE SEGURO-->
                                 <div class="form-group">
-                                    <label for="cbm_proveedor" class=" control-label" style="text-align: right;">PLAN
-                                        SEGURO
+                                    <label for="cbm_proveedor" class=" control-label" style="text-align: right;"><?php echo $t('common.insurance_plan'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <div class="input-group">
@@ -114,8 +113,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA VALOR ASEGURADO -->
                                 <div class="form-group">
                                     <label for="txt_valor_asegurado" class="control-label"
-                                        style="text-align: right;">VALOR
-                                        ASEGURADO
+                                        style="text-align: right;"><?php echo $t('common.sum_insured'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <div class="input-group">
@@ -133,8 +131,7 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA PRIMA NETA -->
                                 <div class="form-group">
-                                    <label for="txt_prima_neta" class="control-label" style="text-align: right;">PRIMA
-                                        NETA
+                                    <label for="txt_prima_neta" class="control-label" style="text-align: right;"><?php echo $t('common.net_premium'); ?>
                                     </label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -151,7 +148,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA PRIMA COMISIONABLE -->
                                 <div class="form-group">
                                     <label for="txt_prima_comisionable" class="control-label"
-                                        style="text-align: right;">PRIMA COMISIONABLE
+                                        style="text-align: right;"><?php echo $t('common.commissionable_premium'); ?>
                                     </label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -167,8 +164,7 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA PRIMA TOTAL -->
                                 <div class="form-group">
-                                    <label for="txt_prima_total" class="control-label" style="text-align: right;">PRIMA
-                                        TOTAL<font color="red"> *</font>
+                                    <label for="txt_prima_total" class="control-label" style="text-align: right;"><?php echo $t('common.total_premium'); ?><font color="red"> *</font>
                                     </label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -190,46 +186,41 @@ $t = function ($key) {
                                     <select class="form-control cbm_tipo_pago" name="state" id="cbm_tipo_pago"
                                         style="width:100%;">
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                        <option value="MENSUAL">MENSUAL</option>
-                                        <option value="TRIMESTRAL">TRIMESTRAL</option>
-                                        <option value="SEMESTRAL">SEMESTRAL</option>
-                                        <option value="ANUAL">ANUAL</option>
+                                        <option value="MENSUAL"><?php echo $t('common.monthly'); ?></option>
+                                        <option value="TRIMESTRAL"><?php echo $t('common.quarterly'); ?></option>
+                                        <option value="SEMESTRAL"><?php echo $t('common.semi_annual'); ?></option>
+                                        <option value="ANUAL"><?php echo $t('common.annual'); ?></option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA SELECCIONAR FORMA DE PAGO -->
                                 <div class="form-group">
-                                    <label for="cbm_forma_pago" class="control-label" style="text-align: right;">FORMA
-                                        DE
-                                        PAGO<font color="red"> *</font></label>
+                                    <label for="cbm_forma_pago" class="control-label" style="text-align: right;"><?php echo $t('common.payment_method'); ?><font color="red"> *</font></label>
                                     <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                         style="width:100%;">
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                        <option value="DEBITO BANCARIO">DEBITO BANCARIO</option>
-                                        <option value="TRANSFERENCIA BANCARIO">TRANSFERENCIA BANCARIO</option>
-                                        <option value="TARJETA DE CREDITO">TARJETA DE CREDITO</option>
+                                        <option value="DEBITO BANCARIO"><?php echo $t('common.bank_debit'); ?></option>
+                                        <option value="TRANSFERENCIA BANCARIO"><?php echo $t('common.bank_transfer'); ?></option>
+                                        <option value="TARJETA DE CREDITO"><?php echo $t('common.credit_card'); ?></option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- /.card-body -->
                 </div>
-                <!-- /.card -->
             </div>
             <div class="col-md-6">
-                <!-- Default box -->
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Informaci&oacute;n Personal</h3>
+                        <h3 class="card-title"><?php echo $t('titles.information_personal'); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12 col-md-5">
                                 <!-- ENTRADA PARA EL DOCUMENTO -->
                                 <div class="form-group">
-                                    <label for="txt_documento" class="control-label" style="text-align: right;">CEDULA
+                                    <label for="txt_documento" class="control-label" style="text-align: right;"><?php echo $t('common.id_card'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <div class="input-group">
@@ -247,7 +238,7 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-7">
                                 <!-- ENTRADA PARA NOMBRE -->
                                 <div class="form-group">
-                                    <label for="txt_nombre" class="control-label" style="text-align: right;">NOMBRE
+                                    <label for="txt_nombre" class="control-label" style="text-align: right;"><?php echo $t('common.name'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_nombre"
@@ -258,7 +249,7 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA GENERO-->
                                 <div class="form-group">
-                                    <label class="control-label" style="text-align: right;">GENERO
+                                    <label class="control-label" style="text-align: right;"><?php echo $t('common.gender'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select id="genero" name="genero" class="form-control genero" required>
@@ -271,17 +262,15 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA ESTADO CIVIL -->
                                 <div class="form-group">
-                                    <label for="estado_civil" class="control-label" style="text-align: right;">ESTADO
-                                        CIVIL<font color="red"> *
-                                        </font>
+                                    <label for="estado_civil" class="control-label" style="text-align: right;"><?php echo $t('common.civil_status'); ?><font color="red"> *</font>
                                     </label>
                                     <select id="estado_civil" name="estado_civil" class="form-control" required>
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                        <option value="SOLTERO">SOLTERO/A</option>
-                                        <option value="CASADO">CASADO/A</option>
-                                        <option value="DIVORCIADO">DIVORCIADO/A</option>
-                                        <option value="VIUDO">VIUDO/A</option>
-                                        <option value="UNIÓN LIBRE">UNIÓN LIBRE</option>
+                                        <option value="SOLTERO"><?php echo $t('common.single'); ?></option>
+                                        <option value="CASADO"><?php echo $t('common.married'); ?></option>
+                                        <option value="DIVORCIADO"><?php echo $t('common.divorced'); ?></option>
+                                        <option value="VIUDO"><?php echo $t('common.widowed'); ?></option>
+                                        <option value="UNIÓN LIBRE"><?php echo $t('common.common_law'); ?></option>
                                     </select>
                                 </div>
                             </div>
@@ -289,7 +278,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA FECHA DE NACIMIENTO -->
                                 <div class="form-group">
                                     <label for="txt_fecha_nacimiento" class="control-label"
-                                        style="text-align: right;">F.NACIMIENTO
+                                        style="text-align: right;"><?php echo $t('common.birth_date'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="date" class="form-control" id="txt_fecha_nacimiento"
@@ -331,7 +320,46 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA TELEFONO -->
                                 <div class="form-group">
-                                    <label for="txt_telefono" class="control-label" style="text-align: right;">TELEFONO
+                                    <label for="txt_telefono" class="control-label" style="text-align: right;"><?php echo $t('common.phone'); ?>
+                                        <font color="red"> *</font>
+                                    </label>
+                                    <input type="text" class="form-control validarNumerosLetras" id="txt_telefono"
+                                        placeholder="<?php echo $t('common.enter_phone'); ?>" maxlength="50"
+                                        autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="txt_telefono_opcional" class="control-label"
+                                        style="text-align: right;"><?php echo $t('common.phone'); ?> (<?php echo $t('common.optional'); ?>)
+                                    </label>
+                                    <input type="text" class="form-control validarNumerosLetras"
+                                        id="txt_telefono_opcional" placeholder="<?php echo $t('common.enter_phone'); ?>"
+                                        maxlength="50" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="cbm_provincia" class="control-label"
+                                        style="text-align: right;"><?php echo $t('common.province'); ?><font color="red"> *</font></label>
+                                    <select class="form-control cbm_provincia" name="state" id="cbm_provincia">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="txt_ciudad" class="control-label" style="text-align: right;"><?php echo $t('common.city'); ?>
+                                        <font color="red"> *</font>
+                                    </label>
+                                    <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
+                                        placeholder="<?php echo $t('common.enter_city'); ?>" maxlength="100"
+                                        autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="txt_direccion" class="control-label"
+                                        style="text-align: right;"><?php echo $t('common.address'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_telefono"
@@ -429,7 +457,7 @@ $t = function ($key) {
                 <!-- Default box -->
                 <div class="card card-primary" id="cardDocumento">
                     <div class="card-header">
-                        <h3 class="card-title">Informaci&oacute;n Documentos</h3>
+                        <h3 class="card-title"><?php echo $t('titles.information_documents'); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -520,7 +548,7 @@ $t = function ($key) {
                 <!-- Default box -->
                 <div class="card card-primary" id="cardSeguimiento">
                     <div class="card-header">
-                        <h3 class="card-title">Informaci&oacute;n Seguimiento</h3>
+                        <h3 class="card-title"><?php echo $t('titles.information_follow_up'); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -579,10 +607,10 @@ $t = function ($key) {
                         <div class="row pb-3">
                             <div class="col-12">
                                 <a href="clientes-vehiculo-individual"><button type="button" class="btn btn-default"
-                                        data-dismiss="modal">CANCELAR</button></a>
+                                        data-dismiss="modal"><?php echo $t('buttons.cancel'); ?></button></a>
                                 <button type="submit" class="btn btn-primary float-right"
                                     onclick="Modificar_Cliente()"><i
-                                        class="fa fa-save"><b>&nbsp;GUARDAR</b></i></button>
+                                        class="fa fa-save"><b>&nbsp;<?php echo $t('buttons.save'); ?></b></i></button>
                             </div>
                         </div>
                     </div>
@@ -632,7 +660,7 @@ $t = function ($key) {
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR OBSERVACI&Oacute;N</h5>
+                    <h5 class="modal-title"><?php echo $t('titles.add_observation'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -651,7 +679,9 @@ $t = function ($key) {
                 <div class=" modal-footer">
                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-                    <button type="submit" class="btn btn-primary" onclick="agregarNuevaObservacion()">AGREGAR</button>
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal"><?php echo $t('buttons.exit'); ?></button>
+
+                    <button type="submit" class="btn btn-primary" onclick="agregarNuevaObservacion()"><?php echo $t('buttons.add'); ?></button>
                 </div>
             </form>
         </div>
@@ -667,7 +697,7 @@ MODAL LISTAR CONTRATOS
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
 
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">Lista de Documentos</h5>
+                    <h5 class="modal-title"><?php echo $t('messages.list_documents'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

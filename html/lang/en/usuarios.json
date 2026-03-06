@@ -6,6 +6,10 @@
     "user_data": "User Data",
     "username": "Username",
     "enter_username": "Enter Username",
+    "password": "Password",
+    "enter_password": "Enter Password",
+    "repeat_password": "Repeat Password",
+    "new_password": "New Password",
     "email": "Email",
     "enter_email": "Enter Email",
     "role": "Role",
@@ -18,5 +22,15 @@
     "active": "Active",
     "inactive": "Inactive",
     "user_status_changed": "User {status} successfully",
-    "new_user_registered": "New user registered successfully"
+    "new_user_registered": "New user registered successfully",
+    "employee": "Employee",
+    "select_employee": "Select Employee",
+    "user_registration": "User Registration",
+    "edit_user_data": "Edit User Data",
+    "register": "REGISTER",
+    "update": "UPDATE",
+    "close": "CLOSE",
+    "cancel": "CANCEL",
+    "save": "SAVE",
+    "exit": "EXIT"
 }
