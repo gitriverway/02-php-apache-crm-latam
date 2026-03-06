@@ -6,7 +6,7 @@ $t = function ($key) {
 
 // Establecer idioma por defecto si no existe
 if (!isset($_SESSION['S_IDIOMA'])) {
-  $_SESSION['S_IDIOMA'] = 'en';
+  $_SESSION['S_IDIOMA'] = 'pt-BR';
 }
 $currentLang = Modelo_Idioma::getCurrentLanguage();
 ?>

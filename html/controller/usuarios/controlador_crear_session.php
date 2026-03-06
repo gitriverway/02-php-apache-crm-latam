@@ -40,7 +40,7 @@ $_SESSION["S_ULTIMOACCESO"]= $fechaActual;
 INICIALIZAR IDIOMA POR DEFECTO (INGLÉS)
 =============================================*/
 if (!isset($_SESSION['S_IDIOMA'])) {
-    $_SESSION['S_IDIOMA'] = 'en';
+    $_SESSION['S_IDIOMA'] = 'pt-BR';
 }
 
 echo $_SESSION["S_SESION"];

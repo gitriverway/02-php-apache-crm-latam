@@ -3,7 +3,7 @@
 class Modelo_Idioma
 {
     private static $translations = null;
-    private static $currentLang = 'en';
+    private static $currentLang = 'pt-BR';
     private static $moduleFiles = [
         'common',
         'login',
@@ -37,7 +37,7 @@ class Modelo_Idioma
             return $_SESSION['S_IDIOMA'];
         }
 
-        return 'en';
+        return 'pt-BR';
     }
 
     /**
