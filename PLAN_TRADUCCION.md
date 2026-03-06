@@ -156,16 +156,16 @@
 
 | Fecha | Archivo | Descripción |
 |-------|---------|-------------|
-| 2026-03-05 | usuarios.php | Traducidos labels, botones y placeholders |
-| 2026-03-05 | perfil.php | Traducidos labels y botón actualizar |
-| 2026-03-05 | facturas.php | Traducidos labels, placeholders y botones |
+| 2026-03-05 | usuarios.php | COMPLETO |
+| 2026-03-05 | perfil.php | COMPLETO |
+| 2026-03-05 | facturas.php | COMPLETO |
 | 2026-03-05 | editar-cliente-asistencia-medica-individual.php | COMPLETO |
 | 2026-03-05 | editar-cliente-vehiculo-individual.php | COMPLETO |
 | 2026-03-05 | editar-cliente-hogar-individual.php | COMPLETO |
 | 2026-03-05 | editar-cliente-accidentes-personales-individual.php | COMPLETO |
+| 2026-03-05 | editar-cliente-responsabilidad-civil-individual.php | COMPLETO |
 
 ## Estadísticas
 
-- Archivos completados: 7
-- Archivos en progreso: 0
-- Total textos traducidos: ~140+
+- Archivos completados: 8
+- Total textos traducidos: ~160+
