@@ -17,13 +17,13 @@ $t = function ($key) {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
-                    <h1>Editar Emisi&oacute;n Responsabilidad Civil Individual<?php echo $_SESSION["S_ROL"] ?>
+                    <h1><?php echo $t('common.edit_emission_civil_liability_individual'); ?>
                     </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
-                        <li class="breadcrumb-item active">Editar Emisi&oacute;n Responsabilidad Civil Individual</li>
+                        <li class="breadcrumb-item active"><?php echo $t('common.edit_emission_civil_liability_individual'); ?></li>
                     </ol>
                 </div>
             </div>

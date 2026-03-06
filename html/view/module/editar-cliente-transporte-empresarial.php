@@ -17,13 +17,13 @@ $t = function ($key) {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
-                    <h1>Editar Emisi&oacute;n Transporte Empresarial
+                    <h1><?php echo $t('common.edit_emission_transport_empresarial'); ?>
                     </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
-                        <li class="breadcrumb-item active">Editar Emisi&oacute;n Transporte Empresarial</li>
+                        <li class="breadcrumb-item active"><?php echo $t('common.edit_emission_transport_empresarial'); ?></li>
                     </ol>
                 </div>
             </div>

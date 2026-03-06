@@ -24,13 +24,13 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Crédito Hospiltalario Asistencia Medica Individual
+                    <h1><?php echo $t('common.hospital_credit_medical_individual'); ?>
                     </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
-                        <li class="breadcrumb-item active">Crédito Hospiltalario Asistencia Medica Individual</li>
+                        <li class="breadcrumb-item active"><?php echo $t('common.hospital_credit_medical_individual'); ?></li>
                     </ol>
                 </div>
             </div>
