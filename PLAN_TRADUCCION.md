@@ -168,11 +168,12 @@
 | 2026-03-05 | editar-cliente-accidentes-personales-individual-empresarial.php | COMPLETO |
 | 2026-03-05 | editar-cliente-incendio-empresarial.php | COMPLETO |
 | 2026-03-05 | editar-cliente-transporte-empresarial.php | COMPLETO |
+| 2026-03-05 | editar-cliente-asistencia-medica-individual-empresarial.php | COMPLETO |
 
 ## Estadísticas
 
-- Archivos completados: 12
-- Total textos traducidos: ~240+
+- Archivos completados: 13
+- Total textos traducidos: ~260+
 ## Estadísticas
 
 - Archivos completados: 8
