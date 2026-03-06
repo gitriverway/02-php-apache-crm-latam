@@ -1,0 +1,16 @@
+{
+    "credits": "Credits",
+    "credit": "Credit",
+    "credit_number": "Credit Number",
+    "outpatient_credit": "Outpatient Credit",
+    "hospital_credit": "Hospital Credit",
+    "credit_data": "Credit Data",
+    "credit_type": "Credit Type",
+    "credit_request": "Credit Request",
+    "exam_request": "Exam Request",
+    "rehabilitation_request": "Rehabilitation Request",
+    "exam_type": "Exam Type",
+    "authorized_value": "Authorized Value",
+    "used_value": "Used Value",
+    "available_balance": "Available Balance"
+}

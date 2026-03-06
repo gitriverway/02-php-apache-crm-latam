@@ -4,6 +4,22 @@ class Modelo_Idioma
 {
     private static $translations = null;
     private static $currentLang = 'en';
+    private static $moduleFiles = [
+        'common',
+        'login',
+        'menu',
+        'clientes',
+        'prospectos',
+        'contratos',
+        'siniestros',
+        'reembolsos',
+        'operatorios',
+        'creditos',
+        'usuarios',
+        'empleados',
+        'proveedores',
+        'facturas'
+    ];
 
     /**
      * Obtiene el idioma actual desde la sesión o usa el idioma por defecto
@@ -20,7 +36,7 @@ class Modelo_Idioma
             return $_SESSION['S_IDIOMA'];
         }
 
-        return 'en'; // Idioma por defecto: inglés
+        return 'en';
     }
 
     /**
@@ -38,6 +54,7 @@ class Modelo_Idioma
         if (in_array($lang, $allowedLanguages)) {
             $_SESSION['S_IDIOMA'] = $lang;
             self::$currentLang = $lang;
+            self::$translations = null;
             return true;
         }
 
@@ -45,7 +62,7 @@ class Modelo_Idioma
     }
 
     /**
-     * Carga las traducciones desde el archivo JSON
+     * Carga las traducciones desde los archivos JSON modulares
      */
     private static function loadTranslations($lang = null)
     {
@@ -57,15 +74,35 @@ class Modelo_Idioma
             return self::$translations;
         }
 
-        $langFile = __DIR__ . '/../lang/' . $lang . '.json';
+        $translations = [];
 
-        if (!file_exists($langFile)) {
-            // Si el archivo no existe, usar inglés por defecto
-            $langFile = __DIR__ . '/../lang/en.json';
+        $moduleLangDir = __DIR__ . '/../lang/' . $lang;
+
+        if (is_dir($moduleLangDir)) {
+            foreach (self::$moduleFiles as $module) {
+                $moduleFile = $moduleLangDir . '/' . $module . '.json';
+                if (file_exists($moduleFile)) {
+                    $moduleContent = json_decode(file_get_contents($moduleFile), true);
+                    if ($moduleContent) {
+                        $translations[$module] = $moduleContent;
+                    }
+                }
+            }
         }
 
-        $jsonContent = file_get_contents($langFile);
-        self::$translations = json_decode($jsonContent, true);
+        $legacyLangFile = __DIR__ . '/../lang/' . $lang . '.json';
+        if (file_exists($legacyLangFile)) {
+            $legacyContent = json_decode(file_get_contents($legacyLangFile), true);
+            if ($legacyContent) {
+                $translations = array_merge($translations, $legacyContent);
+            }
+        }
+
+        if (empty($translations) && $lang !== 'en') {
+            $translations = self::loadTranslations('en');
+        }
+
+        self::$translations = $translations;
         self::$currentLang = $lang;
 
         return self::$translations;
@@ -73,12 +110,11 @@ class Modelo_Idioma
 
     /**
      * Obtiene una traducción por su clave
-     * Ejemplo: t('common.login') o t('messages.warning')
+     * Ejemplo: t('common.login') o t('clientes.list_clients')
      * También soporta reemplazo de parámetros: t('email.subject', ['ticket' => 123])
      */
     public static function t($key, $params = null, $lang = null)
     {
-        // Si el segundo parámetro es un string, es el idioma
         if (is_string($params)) {
             $lang = $params;
             $params = null;
@@ -93,12 +129,10 @@ class Modelo_Idioma
             if (isset($value[$k])) {
                 $value = $value[$k];
             } else {
-                // Si no se encuentra la traducción, devolver la clave
                 return $key;
             }
         }
 
-        // Si hay parámetros, reemplazar los marcadores {clave} en la traducción
         if ($params !== null && is_array($params)) {
             foreach ($params as $paramKey => $paramValue) {
                 $value = str_replace('{' . $paramKey . '}', $paramValue, $value);
@@ -114,5 +148,13 @@ class Modelo_Idioma
     public static function getAllTranslations($lang = null)
     {
         return self::loadTranslations($lang);
+    }
+
+    /**
+     * Obtiene la lista de módulos disponibles
+     */
+    public static function getAvailableModules()
+    {
+        return self::$moduleFiles;
     }
 }

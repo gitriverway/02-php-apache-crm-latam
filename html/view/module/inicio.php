@@ -63,34 +63,6 @@
 
             <!-- Main row -->
             <div class="row">
-                <?php
-
-                switch ($_SESSION["S_ROL"]) {
-                    case 'ADMINISTRADOR':
-                        // include "reportes/grafico-aseguradoras-vendidas.php";
-                        break;
-                    case 'GERENTE':
-                        // include "reportes/grafico-aseguradoras-vendidas.php";
-                        break;
-                    case 'GERENTE 1':
-                        // include "reportes/grafico-aseguradoras-vendidas.php";
-                        break;
-                    case 'VENDEDOR':
-                        // include "reportes/grafico-aseguradoras-vendidas.php";
-                        break;
-
-                    default:
-                        # code...
-                        break;
-                }
-
-                //                 if($_SESSION["S_ROL"] =="ADMINISTRADOR" || $_SESSION["S_ROL"] =="GERENTE" || $_SESSION["S_ROL"] =="VENDEDOR"){
-
-                //                 include "reportes/grafico-aseguradoras-vendidas.php";
-
-                //                 }
-
-                ?>
             </div>
             <!-- /.row (main row) -->
         </div>

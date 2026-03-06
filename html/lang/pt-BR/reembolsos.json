@@ -1,0 +1,19 @@
+{
+    "reimbursements": "Reembolsos",
+    "reimbursement": "Reembolso",
+    "reimbursement_number": "Número do Reembolso",
+    "report_reimbursement": "Reportar Reembolso",
+    "reimbursement_data": "Dados do Reembolso",
+    "attention_date": "Data de Atendimento",
+    "patient": "Paciente",
+    "diagnosis": "Diagnóstico",
+    "presented_expense": "Despesa Apresentada",
+    "insurance_requirement_2": "Requerimento Seguradora 2",
+    "insurance_requirement_submission_2": "Envio Requerimento Seguradora 2",
+    "presented_real_value": "Valor Apresentado Real",
+    "deductible_charged": "Valor da Franquia Cobrado",
+    "not_covered_value": "Valor Não Coberto",
+    "copayment_value": "Valor Coparticipação",
+    "reimbursed_value": "Valor Reembolsado",
+    "deductible_balance": "Saldo da Franquia"
+}

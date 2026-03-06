@@ -1,0 +1,23 @@
+{
+    "providers": "Providers",
+    "provider": "Provider",
+    "create_provider": "Create Provider",
+    "edit_provider": "Edit Provider",
+    "provider_data": "Provider Data",
+    "provider_name": "Provider Name",
+    "enter_provider_name": "Enter Provider Name",
+    "ruc": "RUC",
+    "enter_ruc": "Enter RUC",
+    "email": "Email",
+    "enter_email": "Enter Email",
+    "phone": "Phone",
+    "enter_phone": "Enter Phone",
+    "address": "Address",
+    "enter_address": "Enter Address",
+    "contact_person": "Contact Person",
+    "enter_contact_person": "Enter Contact Person",
+    "active": "Active",
+    "inactive": "Inactive",
+    "provider_status_changed": "Provider {status} successfully",
+    "new_provider_registered": "New provider registered successfully"
+}

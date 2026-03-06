@@ -1,0 +1,22 @@
+{
+    "users": "Users",
+    "user": "User",
+    "create_user": "Create User",
+    "edit_user": "Edit User",
+    "user_data": "User Data",
+    "username": "Username",
+    "enter_username": "Enter Username",
+    "email": "Email",
+    "enter_email": "Enter Email",
+    "role": "Role",
+    "select_role": "Select Role",
+    "administrator": "Administrator",
+    "manager": "Manager",
+    "seller": "Seller",
+    "customer_service": "Customer Service",
+    "client": "Client",
+    "active": "Active",
+    "inactive": "Inactive",
+    "user_status_changed": "User {status} successfully",
+    "new_user_registered": "New user registered successfully"
+}

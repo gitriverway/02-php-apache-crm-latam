@@ -1,0 +1,23 @@
+{
+    "providers": "Fornecedores",
+    "provider": "Fornecedor",
+    "create_provider": "Criar Fornecedor",
+    "edit_provider": "Editar Fornecedor",
+    "provider_data": "Dados do Fornecedor",
+    "provider_name": "Nome do Fornecedor",
+    "enter_provider_name": "Digite o Nome do Fornecedor",
+    "ruc": "CNPJ",
+    "enter_ruc": "Digite o CNPJ",
+    "email": "E-mail",
+    "enter_email": "Digite o E-mail",
+    "phone": "Telefone",
+    "enter_phone": "Digite o Telefone",
+    "address": "Endereço",
+    "enter_address": "Digite o Endereço",
+    "contact_person": "Pessoa de Contato",
+    "enter_contact_person": "Digite a Pessoa de Contato",
+    "active": "Ativo",
+    "inactive": "Inativo",
+    "provider_status_changed": "Fornecedor {status} com sucesso",
+    "new_provider_registered": "Novo fornecedor registrado com sucesso"
+}

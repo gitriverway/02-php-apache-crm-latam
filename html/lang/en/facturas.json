@@ -1,0 +1,20 @@
+{
+    "invoices": "Invoices",
+    "invoice": "Invoice",
+    "create_invoice": "Create Invoice",
+    "edit_invoice": "Edit Invoice",
+    "invoice_data": "Invoice Data",
+    "invoice_number": "Invoice Number",
+    "enter_invoice_number": "Enter Invoice Number",
+    "emission_date": "Emission Date",
+    "due_date": "Due Date",
+    "invoice_value": "Invoice Value",
+    "enter_invoice_value": "Enter Invoice Value",
+    "invoice_balance": "Invoice Balance",
+    "payment_status": "Payment Status",
+    "paid": "Paid",
+    "pending": "Pending",
+    "overdue": "Overdue",
+    "client": "Client",
+    "select_client": "Select Client"
+}

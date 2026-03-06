@@ -1,0 +1,20 @@
+{
+    "invoices": "Facturas",
+    "invoice": "Factura",
+    "create_invoice": "Crear Factura",
+    "edit_invoice": "Editar Factura",
+    "invoice_data": "Datos de Factura",
+    "invoice_number": "Número de Factura",
+    "enter_invoice_number": "Ingresar Número de Factura",
+    "emission_date": "Fecha de Emisión",
+    "due_date": "Fecha de Vencimiento",
+    "invoice_value": "Valor Factura",
+    "enter_invoice_value": "Ingresar Valor Factura",
+    "invoice_balance": "Saldo Factura",
+    "payment_status": "Estado de Pago",
+    "paid": "Pagado",
+    "pending": "Pendiente",
+    "overdue": "Vencido",
+    "client": "Cliente",
+    "select_client": "Seleccionar Cliente"
+}

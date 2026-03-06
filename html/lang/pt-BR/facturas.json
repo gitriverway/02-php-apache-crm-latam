@@ -1,0 +1,20 @@
+{
+    "invoices": "Faturas",
+    "invoice": "Fatura",
+    "create_invoice": "Criar Fatura",
+    "edit_invoice": "Editar Fatura",
+    "invoice_data": "Dados da Fatura",
+    "invoice_number": "Número da Fatura",
+    "enter_invoice_number": "Digite o Número da Fatura",
+    "emission_date": "Data de Emissão",
+    "due_date": "Data de Vencimento",
+    "invoice_value": "Valor da Fatura",
+    "enter_invoice_value": "Digite o Valor da Fatura",
+    "invoice_balance": "Saldo da Fatura",
+    "payment_status": "Status de Pagamento",
+    "paid": "Pago",
+    "pending": "Pendente",
+    "overdue": "Vencido",
+    "client": "Cliente",
+    "select_client": "Selecionar Cliente"
+}

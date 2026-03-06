@@ -1,0 +1,10 @@
+{
+    "login_title": "MQP Seguros | CRM",
+    "login_subtitle": "Digite suas credenciais",
+    "remember_me": "Lembrar-me",
+    "forgot_password": "Esqueceu sua senha?",
+    "login_button": "Entrar",
+    "invalid_credentials": "Usuário e/ou senha incorretos",
+    "user_inactive": "Usuário está inativo, contacte o administrador",
+    "session_expired": "Sessão expirada, por favor entre novamente"
+}

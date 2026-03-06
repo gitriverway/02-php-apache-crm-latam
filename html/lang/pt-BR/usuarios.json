@@ -1,0 +1,22 @@
+{
+    "users": "Usuários",
+    "user": "Usuário",
+    "create_user": "Criar Usuário",
+    "edit_user": "Editar Usuário",
+    "user_data": "Dados do Usuário",
+    "username": "Nome de Usuário",
+    "enter_username": "Digite o Nome de Usuário",
+    "email": "E-mail",
+    "enter_email": "Digite o E-mail",
+    "role": "Função",
+    "select_role": "Selecionar Função",
+    "administrator": "Administrador",
+    "manager": "Gerente",
+    "seller": "Vendedor",
+    "customer_service": "Atendimento ao Cliente",
+    "client": "Cliente",
+    "active": "Ativo",
+    "inactive": "Inativo",
+    "user_status_changed": "Usuário {status} com sucesso",
+    "new_user_registered": "Novo usuário registrado com sucesso"
+}

@@ -1,0 +1,16 @@
+{
+    "credits": "Créditos",
+    "credit": "Crédito",
+    "credit_number": "Número de Crédito",
+    "outpatient_credit": "Crédito Ambulatorio",
+    "hospital_credit": "Crédito Hospitalario",
+    "credit_data": "Datos del Crédito",
+    "credit_type": "Tipo de Crédito",
+    "credit_request": "Solicitud de Crédito",
+    "exam_request": "Pedido de Examen",
+    "rehabilitation_request": "Pedido de Rehabilitación",
+    "exam_type": "Tipo de Examen",
+    "authorized_value": "Valor Autorizado",
+    "used_value": "Valor Usado",
+    "available_balance": "Saldo Disponible"
+}

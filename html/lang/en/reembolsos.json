@@ -1,0 +1,19 @@
+{
+    "reimbursements": "Reimbursements",
+    "reimbursement": "Reimbursement",
+    "reimbursement_number": "Reimbursement Number",
+    "report_reimbursement": "Report Reimbursement",
+    "reimbursement_data": "Reimbursement Data",
+    "attention_date": "Attention Date",
+    "patient": "Patient",
+    "diagnosis": "Diagnosis",
+    "presented_expense": "Presented Expense",
+    "insurance_requirement_2": "Insurance Requirement 2",
+    "insurance_requirement_submission_2": "Insurance Requirement Submission 2",
+    "presented_real_value": "Presented Real Value",
+    "deductible_charged": "Deductible Charged",
+    "not_covered_value": "Not Covered Value",
+    "copayment_value": "Copayment Value",
+    "reimbursed_value": "Reimbursed Value",
+    "deductible_balance": "Deductible Balance"
+}

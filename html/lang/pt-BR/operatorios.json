@@ -1,0 +1,18 @@
+{
+    "procedures": "Procedimentos",
+    "procedure": "Procedimento",
+    "procedure_number": "Número do Procedimento",
+    "report_procedure": "Reportar Procedimento",
+    "procedure_data": "Dados do Procedimento",
+    "procedure_date": "Data do Procedimento",
+    "procedure_place": "Local do Procedimento",
+    "hospitalization_place": "Local de Internação",
+    "authorization": "Autorização",
+    "authorization_number": "Número da Autorização",
+    "authorized_date": "Data da Autorização",
+    "status": "Status",
+    "pending": "Pendente",
+    "authorized": "Autorizado",
+    "rejected": "Rejeitado",
+    "observation": "Observação"
+}

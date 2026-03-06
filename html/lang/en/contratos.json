@@ -1,0 +1,13 @@
+{
+    "contracts": "Contracts",
+    "contract": "Contract",
+    "contract_number": "Contract Number",
+    "create_contract": "Create Contract",
+    "edit_contract": "Edit Contract",
+    "contract_data": "Contract Data",
+    "effective_date": "Effective Date",
+    "expiration_date": "Expiration Date",
+    "anniversary_date": "Anniversary Date",
+    "renewal": "Renewal",
+    "renewal_date": "Renewal Date"
+}
