@@ -122,7 +122,19 @@ class Modelo_Idioma
             if (isset($value[$k])) {
                 $value = $value[$k];
             } else {
-                return $key;
+                // Buscar en todos los submódulos si no encuentra la clave
+                $found = false;
+                foreach ($translations as $module => $moduleContent) {
+                    if (is_array($moduleContent) && isset($moduleContent[$k])) {
+                        $value = $moduleContent[$k];
+                        $found = true;
+                        break;
+                    }
+                }
+                if (!$found) {
+                    return $key;
+                }
+                break;
             }
         }
 
