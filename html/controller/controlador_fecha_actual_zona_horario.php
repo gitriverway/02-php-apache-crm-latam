@@ -1,13 +1,9 @@
 <?php
-require_once __DIR__ . '/../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
-};
+class ControladorFechaActualZonaHorario
+{
 
-
-class ControladorFechaActualZonaHorario{
-
-	static public function traer_fecha_actual_zona_horario(){
+    static public function traer_fecha_actual_zona_horario()
+    {
 
         date_default_timezone_set("America/Guayaquil");
         $fecha = date('Y-m-d');
@@ -15,8 +11,8 @@ class ControladorFechaActualZonaHorario{
         $fechaActual = $fecha;
 
         echo $fechaActual;
-	}
+    }
 }
 
 $fecha_actual = new ControladorFechaActualZonaHorario();
-$fecha_actual -> traer_fecha_actual_zona_horario();
+$fecha_actual->traer_fecha_actual_zona_horario();
