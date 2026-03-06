@@ -62,7 +62,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <th style="text-align:center; width:10px"><?php echo $t('medical_credits.initial_document'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('medical_credits.insurance_submission'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('common.observations'); ?></th>
-                            <th style="text-align:center; width:10px"><?php echo $t('common.status'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('common.status_label'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('medical_credits.follow_up_date'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('medical_credits.insurance_follow_up'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('medical_credits.insurance_requirement'); ?></th>

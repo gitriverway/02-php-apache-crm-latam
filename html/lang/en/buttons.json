@@ -1,0 +1,10 @@
+{
+    "add": "ADD",
+    "cancel": "CANCEL",
+    "exit": "EXIT",
+    "save": "SAVE",
+    "update": "UPDATE",
+    "register": "REGISTER",
+    "close": "CLOSE",
+    "new_record": "NEW RECORD"
+}

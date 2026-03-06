@@ -95,12 +95,12 @@ MODAL REGISTRO USUARIO
                             <!-- ENTRADA PARA EL NOMBRE DEL PROVEEDOR -->
                             <div class="form-group col-12">
                                 <label for="txt_proveedor" class="control-label"
-                                    style="text-align: right;"><?php echo $t('form.name'); ?>
+                                    style="text-align: right;"><?php echo $t('forms.name'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <div class="input-group">
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_proveedor"
-                                        placeholder="<?php echo $t('form.enter_name'); ?>" autocomplete="off"
+                                        placeholder="<?php echo $t('forms.enter_name'); ?>" autocomplete="off"
                                         style="text-transform: uppercase">
                                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                                 </div>
@@ -169,7 +169,7 @@ CUERPO DEL MODAL
                             <!-- ENTRADA PARA EL PROVEEDOR -->
                             <div class="form-group col-12">
                                 <label for="txt_proveedor_editar" class="control-label"
-                                    style="text-align: right;"><?php echo $t('form.name'); ?>
+                                    style="text-align: right;"><?php echo $t('forms.name'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <div class="input-group">

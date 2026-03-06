@@ -77,7 +77,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title"><?php echo $t('form.edit_client'); ?></h5>
+                    <h5 class="modal-title"><?php echo $t('forms.edit_client'); ?></h5>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -85,12 +85,12 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <!-- ENTRADA PARA EL DOCUMENTO -->
                             <div class="form-group">
                                 <label for="txt_documento" class="control-label"
-                                    style="text-align: right;"><?php echo $t('form.id_card'); ?>
+                                    style="text-align: right;"><?php echo $t('forms.id_card'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <div class="input-group">
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_documento"
-                                        placeholder="<?php echo $t('form.enter_id_card'); ?>" autocomplete="off"
+                                        placeholder="<?php echo $t('forms.enter_id_card'); ?>" autocomplete="off"
                                         style="text-transform: uppercase">
                                 </div>
                             </div>
@@ -99,24 +99,24 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <!-- ENTRADA PARA NOMBRE -->
                             <div class="form-group">
                                 <label for="txt_nombre" class="control-label"
-                                    style="text-align: right;"><?php echo $t('form.name'); ?>
+                                    style="text-align: right;"><?php echo $t('forms.name'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <input type="text" class="form-control validarNumerosLetras" id="txt_nombre"
-                                    placeholder="<?php echo $t('form.enter_name'); ?>" maxlength="50" autocomplete="off"
+                                    placeholder="<?php echo $t('forms.enter_name'); ?>" maxlength="50" autocomplete="off"
                                     style="text-transform: uppercase">
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <!-- ENTRADA PARA GENERO-->
                             <div class="form-group">
-                                <label class="control-label" style="text-align: right;"><?php echo $t('form.gender'); ?>
+                                <label class="control-label" style="text-align: right;"><?php echo $t('forms.gender'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <select id="genero" name="genero" class="form-control genero" required>
                                     <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
-                                    <option value="masculino"><?php echo $t('form.male'); ?></option>
-                                    <option value="femenino"><?php echo $t('form.female'); ?></option>
+                                    <option value="masculino"><?php echo $t('forms.male'); ?></option>
+                                    <option value="femenino"><?php echo $t('forms.female'); ?></option>
                                 </select>
                             </div>
                         </div>
@@ -124,7 +124,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <!-- ENTRADA PARA FECHA DE NACIMIENTO -->
                             <div class="form-group">
                                 <label for="txt_fecha_nacimiento" class="control-label"
-                                    style="text-align: right;"><?php echo $t('form.birth_date'); ?>
+                                    style="text-align: right;"><?php echo $t('forms.birth_date'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <input type="date" class="form-control" id="txt_fecha_nacimiento" autocomplete="off">
@@ -134,11 +134,11 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <!-- ENTRADA PARA EMAIl -->
                             <div class="form-group">
                                 <label for="txt_email" class="control-label"
-                                    style="text-align: right;"><?php echo $t('form.email'); ?>
+                                    style="text-align: right;"><?php echo $t('forms.email'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <input type="text" class="form-control validarNumerosLetrasDecimal" id="txt_email"
-                                    placeholder="<?php echo $t('form.enter_email'); ?>" maxlength="50"
+                                    placeholder="<?php echo $t('forms.enter_email'); ?>" maxlength="50"
                                     autocomplete="off">
                             </div>
                         </div>
@@ -146,11 +146,11 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <!-- ENTRADA PARA TELEFONO -->
                             <div class="form-group">
                                 <label for="txt_telefono" class="control-label"
-                                    style="text-align: right;"><?php echo $t('form.phone'); ?>
+                                    style="text-align: right;"><?php echo $t('forms.phone'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <input type="text" class="form-control validarNumerosLetras" id="txt_telefono"
-                                    placeholder="<?php echo $t('form.enter_phone'); ?>" maxlength="50"
+                                    placeholder="<?php echo $t('forms.enter_phone'); ?>" maxlength="50"
                                     autocomplete="off">
                             </div>
                         </div>
@@ -158,7 +158,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <!-- ENTRADA PARA SELECCIONAR PROVINCIA -->
                             <div class="form-group">
                                 <label for="cbm_provincia" class="control-label"
-                                    style="text-align: right;"><?php echo $t('form.province'); ?>
+                                    style="text-align: right;"><?php echo $t('forms.province'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <select class="form-control cbm_provincia" name="state" id="cbm_provincia">
@@ -169,11 +169,11 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <!-- ENTRADA PARA SELECCIONAR CIUDAD -->
                             <div class="form-group">
                                 <label for="txt_ciudad" class="control-label"
-                                    style="text-align: right;"><?php echo $t('form.city'); ?>
+                                    style="text-align: right;"><?php echo $t('forms.city'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
-                                    placeholder="<?php echo $t('form.enter_city'); ?>" maxlength="100"
+                                    placeholder="<?php echo $t('forms.enter_city'); ?>" maxlength="100"
                                     autocomplete="off" style="text-transform: uppercase">
                             </div>
                         </div>
@@ -181,11 +181,11 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <!-- ENTRADA PARA DIRECCION -->
                             <div class="form-group">
                                 <label for="txt_direccion" class="control-label"
-                                    style="text-align: right;"><?php echo $t('form.address'); ?>
+                                    style="text-align: right;"><?php echo $t('forms.address'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <input type="text" class="form-control validarNumerosLetras" id="txt_direccion"
-                                    placeholder="<?php echo $t('form.enter_address'); ?>" maxlength="50"
+                                    placeholder="<?php echo $t('forms.enter_address'); ?>" maxlength="50"
                                     autocomplete="off" style="text-transform: uppercase">
                             </div>
                         </div>
@@ -193,11 +193,11 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <!-- ENTRADA PARA OCUPACION -->
                             <div class="form-group">
                                 <label for="txt_ocupacion" class="control-label"
-                                    style="text-align: right;"><?php echo $t('form.profession'); ?>
+                                    style="text-align: right;"><?php echo $t('forms.profession'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <input type="text" class="form-control validarNumerosLetras" id="txt_ocupacion"
-                                    placeholder="<?php echo $t('form.enter_occupation'); ?>" maxlength="50"
+                                    placeholder="<?php echo $t('forms.enter_occupation'); ?>" maxlength="50"
                                     autocomplete="off" style="text-transform: uppercase">
                             </div>
                         </div>
@@ -206,16 +206,16 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <!-- ENTRADA PARA INGRESOS -->
                             <div class="form-group">
                                 <label for="cbm_ingreso_mensual" class="control-label"
-                                    style="text-align: right;"><?php echo $t('form.income'); ?>
+                                    style="text-align: right;"><?php echo $t('forms.income'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <select class="form-control cbm_ingreso_mensual" name="state" id="cbm_ingreso_mensual"
                                     style="width:100%;">
                                     <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
-                                    <option value="0 a 1000"><?php echo $t('form.0_to_1000'); ?></option>
-                                    <option value="1000 a 3000"><?php echo $t('form.1000_to_3000'); ?></option>
-                                    <option value="3000 a 5000"><?php echo $t('form.3000_to_5000'); ?></option>
-                                    <option value="5000 en adelante"><?php echo $t('form.more_than_5000'); ?></option>
+                                    <option value="0 a 1000"><?php echo $t('forms.0_to_1000'); ?></option>
+                                    <option value="1000 a 3000"><?php echo $t('forms.1000_to_3000'); ?></option>
+                                    <option value="3000 a 5000"><?php echo $t('forms.3000_to_5000'); ?></option>
+                                    <option value="5000 en adelante"><?php echo $t('forms.more_than_5000'); ?></option>
                                 </select>
                             </div>
                         </div>

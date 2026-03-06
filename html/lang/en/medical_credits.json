@@ -1,0 +1,19 @@
+{
+    "ambulatory_request": "Ambulatory Request",
+    "application_number": "Application Number",
+    "authorization_date": "Authorization Date",
+    "authorization_document": "Authorization Document",
+    "diagnosis": "Diagnosis",
+    "exam_requests": "Exam Requests",
+    "expense_presented": "Expense Presented",
+    "follow_up_date": "Follow-up Date",
+    "initial_document": "Initial Document",
+    "insurance_follow_up": "Insurance Follow-up",
+    "insurance_requirement": "Insurance Requirement",
+    "insurance_requirement_2": "Insurance Requirement 2",
+    "insurance_submission": "Insurance Submission",
+    "rehabilitation_requests": "Rehabilitation Requests",
+    "requirement_submission": "Requirement Submission",
+    "requirement_submission_2": "Requirement Submission 2",
+    "validate_ambulatory_credit_documents": "Validate Ambulatory Credit Documents"
+}

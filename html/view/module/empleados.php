@@ -95,7 +95,7 @@ MODAL REGISTRO USUARIO
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control validateAlpha" id="txt_nombre_empleado"
-                                    placeholder="<?php echo $t('form.enter_name'); ?>" maxlength="100"
+                                    placeholder="<?php echo $t('forms.enter_name'); ?>" maxlength="100"
                                     autocomplete="off" style="text-transform: uppercase">
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>
@@ -109,7 +109,7 @@ MODAL REGISTRO USUARIO
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control validateAlpha" id="txt_apellido_empleado"
-                                    placeholder="<?php echo $t('form.enter_last_name'); ?>" maxlength="100"
+                                    placeholder="<?php echo $t('forms.enter_last_name'); ?>" maxlength="100"
                                     autocomplete="off" style="text-transform: uppercase">
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>
@@ -137,7 +137,7 @@ MODAL REGISTRO USUARIO
                             <div class="input-group">
                                 <textarea class="form-control validateAlphaNumeric" id="txt_direccion_empleado"
                                     name="txt_direccion_empleado" cols="20" rows="3"
-                                    placeholder="<?php echo $t('form.enter_address'); ?>"></textarea>
+                                    placeholder="<?php echo $t('forms.enter_address'); ?>"></textarea>
                                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                             </div>
                         </div>
@@ -183,7 +183,7 @@ BODY DEL MODAL
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control validateAlpha" id="txt_nombre_editar"
-                                    placeholder="<?php echo $t('form.enter_name'); ?>" autocomplete="off"
+                                    placeholder="<?php echo $t('forms.enter_name'); ?>" autocomplete="off"
                                     style="text-transform: uppercase">
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>
@@ -197,7 +197,7 @@ BODY DEL MODAL
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control validateAlpha" id="txt_apellido_editar"
-                                    placeholder="<?php echo $t('form.enter_last_name'); ?>" autocomplete="off"
+                                    placeholder="<?php echo $t('forms.enter_last_name'); ?>" autocomplete="off"
                                     style="text-transform: uppercase">
                                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                             </div>

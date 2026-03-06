@@ -125,7 +125,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                                 id="txt_fecha_credito_ambulatorio" name="txt_fecha_credito_ambulatorio">
                         </div>
                         <div class="form-group col-12 col-lg-4">
-                            <label for="txt_contrato_aplicar" class="control-label" style="text-align: right;"><?php echo $t('form.contract'); ?>
+                            <label for="txt_contrato_aplicar" class="control-label" style="text-align: right;"><?php echo $t('forms.contract'); ?>
                                 APLICAR
                                 <font color="red"> *</font>
                             </label>
@@ -142,7 +142,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                             </div>
                         </div>
                         <div class="form-group col-12 col-lg-4">
-                            <label for="cbm_nombre_colaborador" class="control-label" style="text-align: right;"><?php echo $t('form.name'); ?>
+                            <label for="cbm_nombre_colaborador" class="control-label" style="text-align: right;"><?php echo $t('forms.name'); ?>
                                 COLABORADOR
                                 <font color="red"> *</font>
                             </label>
@@ -153,7 +153,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                             <input type="hidden" id="lista_colaboradores" name="lista_colaboradores">
                         </div>
                         <div class="form-group col-12 col-lg-4">
-                            <label for="txt_nombre_paciente" class="control-label" style="text-align: right;"><?php echo $t('form.patient_name'); ?>
+                            <label for="txt_nombre_paciente" class="control-label" style="text-align: right;"><?php echo $t('forms.patient_name'); ?>
                                 PACIENTE
                                 <font color="red"> *</font>
                             </label>
@@ -221,7 +221,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                             </label>
                             <input type="file" class="form-control" id="txt_documento_credito_ambulatorio"
                                 name="txt_documento_credito_ambulatorio" accept=".pdf">
-                            <p class="help-block"><?php echo $t('form.max_document_size'); ?> <?php echo $t('form.document_mb_25'); ?></p>
+                            <p class="help-block"><?php echo $t('forms.max_document_size'); ?> <?php echo $t('forms.document_mb_25'); ?></p>
                         </div>
                         <input type="hidden" id="listaDatosCreditoAmbulatorio">
                     </div>

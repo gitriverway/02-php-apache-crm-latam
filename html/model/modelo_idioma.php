@@ -6,6 +6,19 @@ class Modelo_Idioma
     private static $currentLang = 'pt-BR';
     private static $moduleFiles = [
         'common',
+        'forms',
+        'titles',
+        'buttons',
+        'messages',
+        'list_tables',
+        'list_modal',
+        'modal',
+        'options',
+        'status',
+        'table',
+        'document_names',
+        'edit_forms',
+        'medical_credits',
         'login',
         'menu',
         'clientes',
@@ -142,6 +155,10 @@ class Modelo_Idioma
             foreach ($params as $paramKey => $paramValue) {
                 $value = str_replace('{' . $paramKey . '}', $paramValue, $value);
             }
+        }
+
+        if (is_array($value)) {
+            return $key;
         }
 
         return $value;

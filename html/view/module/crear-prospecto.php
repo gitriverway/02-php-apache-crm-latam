@@ -43,7 +43,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
             <div class="col-md-6">
                 <div class="card card-primary" id="cardBayer">
                     <div class="card-header">
-                        <h3 class="card-title"><?php echo $t('form.bayer_person_data'); ?></h3>
+                        <h3 class="card-title"><?php echo $t('forms.bayer_person_data'); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -226,7 +226,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                 <!-- Default box -->
                 <div class="card card-primary" id="cardPersonal">
                     <div class="card-header">
-                        <h3 class="card-title"><?php echo $t('form.personal_information'); ?></h3>
+                        <h3 class="card-title"><?php echo $t('forms.personal_information'); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -234,12 +234,12 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <!-- ENTRADA PARA EL DOCUMENTO -->
                                 <div class="form-group">
                                     <label for="txt_documento" class="control-label"
-                                        style="text-align: right;"><?php echo $t('form.id_card'); ?></label>
+                                        style="text-align: right;"><?php echo $t('forms.id_card'); ?></label>
                                     <font color="red"> *</font>
                                     </label>
                                     <div class="input-group">
                                         <input type="text" class="form-control validarNumerosLetras" id="txt_documento"
-                                            placeholder="<?php echo $t('form.enter_id_card'); ?>" autocomplete="off"
+                                            placeholder="<?php echo $t('forms.enter_id_card'); ?>" autocomplete="off"
                                             style="text-transform: uppercase">
                                         <input type="hidden" id="txt_idCliente">
                                         <!-- <div class="input-group-append">
@@ -357,7 +357,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
-                                        placeholder="<?php echo $t('form.enter_city'); ?>" maxlength="100"
+                                        placeholder="<?php echo $t('forms.enter_city'); ?>" maxlength="100"
                                         autocomplete="off" style="text-transform: uppercase">
                                 </div>
                             </div>
@@ -369,7 +369,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         DOMICILIO
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_direccion"
-                                        placeholder="<?php echo $t('form.enter_address'); ?>" autocomplete="off"
+                                        placeholder="<?php echo $t('forms.enter_address'); ?>" autocomplete="off"
                                         style="text-transform: uppercase">
                                 </div>
                             </div>
@@ -380,7 +380,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         style="text-align: right;"><?php echo $t('list_tables.profession'); ?><font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ocupacion"
-                                        placeholder="<?php echo $t('form.enter_occupation'); ?>" maxlength="50"
+                                        placeholder="<?php echo $t('forms.enter_occupation'); ?>" maxlength="50"
                                         autocomplete="off" style="text-transform: uppercase">
                                 </div>
                             </div>
@@ -395,10 +395,10 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         id="cbm_ingreso_mensual" style="width:100%;">
                                         <option value=""><?php echo $t('messages.select_option', 'Select..'); ?>
                                         </option>
-                                        <option value="0 a 1000"><?php echo $t('form.0_to_1000'); ?></option>
-                                        <option value="1000 a 3000"><?php echo $t('form.1000_to_3000'); ?></option>
-                                        <option value="3000 a 5000"><?php echo $t('form.3000_to_5000'); ?></option>
-                                        <option value="5000 en adelante"><?php echo $t('form.more_than_5000'); ?>
+                                        <option value="0 a 1000"><?php echo $t('forms.0_to_1000'); ?></option>
+                                        <option value="1000 a 3000"><?php echo $t('forms.1000_to_3000'); ?></option>
+                                        <option value="3000 a 5000"><?php echo $t('forms.3000_to_5000'); ?></option>
+                                        <option value="5000 en adelante"><?php echo $t('forms.more_than_5000'); ?>
                                         </option>
                                     </select>
                                 </div>

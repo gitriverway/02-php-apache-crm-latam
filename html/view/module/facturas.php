@@ -132,9 +132,9 @@ MODAL NUEVA FACTURA
                             <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                 style="width:100%;">
                                 <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
-                                <option value="DEBITO BANCARIO"><?php echo $t('form.bank_debit'); ?></option>
-                                <option value="TRANSFERENCIA BANCARIO"><?php echo $t('form.bank_transfer'); ?></option>
-                                <option value="TARJETA DE CREDITO"><?php echo $t('form.credit_card'); ?></option>
+                                <option value="DEBITO BANCARIO"><?php echo $t('forms.bank_debit'); ?></option>
+                                <option value="TRANSFERENCIA BANCARIO"><?php echo $t('forms.bank_transfer'); ?></option>
+                                <option value="TARJETA DE CREDITO"><?php echo $t('forms.credit_card'); ?></option>
                             </select>
                         </div>
                         <div class="form-group col-12">
@@ -144,7 +144,7 @@ MODAL NUEVA FACTURA
                             </label>
                             <input type="file" class="form-control" id="txt_factura_documento"
                                 name="txt_factura_documento" accept=".pdf">
-                            <p class="help-block"><?php echo $t('form.max_image_size'); ?> <?php echo $t('form.image_mb_5'); ?></p>
+                            <p class="help-block"><?php echo $t('forms.max_image_size'); ?> <?php echo $t('forms.image_mb_5'); ?></p>
                         </div>
                     </div>
                 </div>

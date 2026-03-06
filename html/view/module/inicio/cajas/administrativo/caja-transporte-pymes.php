@@ -29,9 +29,9 @@ $t = function ($key) {
                     <div class="modal-body">
                         <div class="row">
                             <?php
-                            include "transporte-pymes/caja-emision.php";
+                            include __DIR__ . "/transporte-pymes/caja-emision.php";
                             if ($_SESSION["S_ROL"] == 'GERENTE') {
-                                include "transporte-pymes/caja-siniestro.php";
+                                include __DIR__ . "/transporte-pymes/caja-siniestro.php";
                             }
                             ?>
                         </div>

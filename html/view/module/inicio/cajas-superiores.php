@@ -13,19 +13,19 @@ $t = function ($key) {
             <div class="row">
                 <?php
                 if ($_SESSION["S_ROL"] == 'GERENTE') {
-                    include "cajas/administrativo/caja-prospecto-web-individual.php";
+                    include __DIR__ . "/cajas/administrativo/caja-prospecto-web-individual.php";
                 }
                 if ($_SESSION["S_ROL"] == 'GERENTE' || $_SESSION["S_ROL"] == 'VENDEDOR') {
-                    include "cajas/administrativo/caja-prospecto-individual.php";
+                    include __DIR__ . "/cajas/administrativo/caja-prospecto-individual.php";
                 }
 
                 if ($_SESSION["S_ROL"] == 'GERENTE' || $_SESSION["S_ROL"] == 'SERVICIO CLIENTE') {
-                    // include "cajas/administrativo/caja-vida-individual.php";
-                    include "cajas/administrativo/caja-asistencia-medica-individual.php";
-                    // include "cajas/administrativo/caja-vehiculo-individual.php";
-                    // include "cajas/administrativo/caja-accidentes-personales-individual.php";
-                    // include "cajas/administrativo/caja-hogar-individual.php";
-                    // include "cajas/administrativo/caja-responsabilidad-civil-individual.php";
+                    // include __DIR__ . "/cajas/administrativo/caja-vida-individual.php";
+                    include __DIR__ . "/cajas/administrativo/caja-asistencia-medica-individual.php";
+                    // include __DIR__ . "/cajas/administrativo/caja-vehiculo-individual.php";
+                    // include __DIR__ . "/cajas/administrativo/caja-accidentes-personales-individual.php";
+                    // include __DIR__ . "/cajas/administrativo/caja-hogar-individual.php";
+                    // include __DIR__ . "/cajas/administrativo/caja-responsabilidad-civil-individual.php";
                 }
                 ?>
 
@@ -43,16 +43,16 @@ $t = function ($key) {
             <div class="row">
                 <?php
                 if ($_SESSION["S_ROL"] == 'GERENTE' || $_SESSION["S_ROL"] == 'VENDEDOR') {
-                    include "cajas/administrativo/caja-prospecto-pymes.php";
+                    include __DIR__ . "/cajas/administrativo/caja-prospecto-pymes.php";
                 }
 
                 if ($_SESSION["S_ROL"] == 'GERENTE' || $_SESSION["S_ROL"] == 'SERVICIO CLIENTE') {
-                    // include "cajas/administrativo/caja-vida-pymes.php";
-                    include "cajas/administrativo/caja-asistencia-medica-pymes.php";
-                    // include "cajas/administrativo/caja-accidentes-personales-pymes.php";
-                    // include "cajas/administrativo/caja-responsabilidad-civil-pymes.php";
-                    // include "cajas/administrativo/caja-incendio-pymes.php";
-                    // include "cajas/administrativo/caja-transporte-pymes.php";
+                    // include __DIR__ . "/cajas/administrativo/caja-vida-pymes.php";
+                    include __DIR__ . "/cajas/administrativo/caja-asistencia-medica-pymes.php";
+                    // include __DIR__ . "/cajas/administrativo/caja-accidentes-personales-pymes.php";
+                    // include __DIR__ . "/cajas/administrativo/caja-responsabilidad-civil-pymes.php";
+                    // include __DIR__ . "/cajas/administrativo/caja-incendio-pymes.php";
+                    // include __DIR__ . "/cajas/administrativo/caja-transporte-pymes.php";
                 }
 
                 ?>

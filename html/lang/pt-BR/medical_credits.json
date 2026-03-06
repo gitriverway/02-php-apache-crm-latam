@@ -1,0 +1,19 @@
+{
+    "ambulatory_request": "Solicitação Ambulatorial",
+    "application_number": "Número da Solicitação",
+    "authorization_date": "Data de Autorização",
+    "authorization_document": "Documento de Autorização",
+    "diagnosis": "Diagnóstico",
+    "exam_requests": "Solicitação de Exames",
+    "expense_presented": "Despesa Apresentada",
+    "follow_up_date": "Data de Acompanhamento",
+    "initial_document": "Documento Inicial",
+    "insurance_follow_up": "Acompanhamento do Seguro",
+    "insurance_requirement": "Requisito do Seguro",
+    "insurance_requirement_2": "Requisito do Seguro 2",
+    "insurance_submission": "Envio do Seguro",
+    "rehabilitation_requests": "Solicitações de Reabilitação",
+    "requirement_submission": "Envio de Requisitos",
+    "requirement_submission_2": "Envio de Requisitos 2",
+    "validate_ambulatory_credit_documents": "Validar Documentos de Crédito Ambulatorial"
+}

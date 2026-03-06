@@ -1,10 +1,10 @@
 {
     "login_title": "MQP Seguros | CRM",
     "login_subtitle": "Ingrese sus credenciales",
-    "remember_me": "Remember me",
-    "forgot_password": "Forgot your password?",
-    "login_button": "Sign In",
-    "invalid_credentials": "Invalid username and/or password",
-    "user_inactive": "User is inactive, contact administrator",
-    "session_expired": "Session expired, please login again"
+    "remember_me": "Recordarme",
+    "forgot_password": "¿Olvidó su contraseña?",
+    "login_button": "Iniciar Sesión",
+    "invalid_credentials": "Usuario y/o contraseña incorrecta",
+    "user_inactive": "El usuario se encuentra inactivo, comuníquese con el administrador",
+    "session_expired": "Sesión expirada, por favor ingrese nuevamente"
 }

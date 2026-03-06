@@ -1,0 +1,8 @@
+{
+    "action": "Acción",
+    "client": "Cliente",
+    "document": "Documento",
+    "employee": "Empleado",
+    "registration_date": "Fecha de Registro",
+    "status": "Estado"
+}

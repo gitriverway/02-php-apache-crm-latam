@@ -1,0 +1,22 @@
+{
+    "origin_mqp": "MQP",
+    "origin_friend": "FRIEND",
+    "origin_chat": "CHAT",
+    "origin_others": "OTHERS",
+    "seller": "Seller",
+    "id_card": "ID CARD",
+    "name": "NAME",
+    "province": "PROVINCE",
+    "city": "CITY",
+    "phone": "PHONE",
+    "email": "EMAIL",
+    "provider": "PROVIDER",
+    "branch": "BRANCH",
+    "employee": "EMPLOYEE",
+    "profession": "PROFESSION",
+    "income": "INCOME",
+    "contract_number": "CONTRACT NUMBER",
+    "effective_date": "EFFECTIVE DATE",
+    "status": "STATUS",
+    "actions": "ACTIONS"
+}

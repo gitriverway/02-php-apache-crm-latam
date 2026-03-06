@@ -1,0 +1,22 @@
+{
+    "origin_mqp": "MQP",
+    "origin_friend": "AMIGO",
+    "origin_chat": "CHAT",
+    "origin_others": "OUTROS",
+    "seller": "Vendedor",
+    "id_card": "CPF/CNPJ",
+    "name": "NOME",
+    "province": "ESTADO",
+    "city": "CIDADE",
+    "phone": "TELEFONE",
+    "email": "EMAIL",
+    "provider": "FORNECEDOR",
+    "branch": "RAMO",
+    "employee": "FUNCIONÁRIO",
+    "profession": "PROFISSÃO",
+    "income": "RENDA",
+    "contract_number": "NÚMERO CONTRATO",
+    "effective_date": "DATA VIGÊNCIA",
+    "status": "STATUS",
+    "actions": "AÇÕES"
+}

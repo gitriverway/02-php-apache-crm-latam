@@ -29,11 +29,11 @@ $t = function ($key) {
                     <div class="modal-body">
                         <div class="row">
                             <?php
-                            include "asistencia-medica-individual/caja-emision.php";
+                            include __DIR__ . "/asistencia-medica-individual/caja-emision.php";
                             if ($_SESSION["S_ROL"] == 'GERENTE') {
-                                include "asistencia-medica-individual/caja-reembolsos.php";
-                                include "asistencia-medica-individual/caja-credito-hospitalario.php";
-                                include "asistencia-medica-individual/caja-credito-ambulatorio.php";
+                                include __DIR__ . "/asistencia-medica-individual/caja-reembolsos.php";
+                                include __DIR__ . "/asistencia-medica-individual/caja-credito-hospitalario.php";
+                                include __DIR__ . "/asistencia-medica-individual/caja-credito-ambulatorio.php";
                             }
 
                             ?>

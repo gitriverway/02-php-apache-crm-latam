@@ -51,7 +51,7 @@ $t = function ($key) {
                                 <!-- ENTRADA VENDEDOR -->
                                 <div class="form-group">
                                     <label for="txt_vendedor" class="control-label"
-                                        style="text-align: right;"><?php echo $t('form.seller'); ?></label>
+                                        style="text-align: right;"><?php echo $t('forms.seller'); ?></label>
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="txt_vendedor" autocomplete="off"
                                             style="text-transform: uppercase" readonly>
@@ -70,7 +70,7 @@ $t = function ($key) {
                                 <input type="hidden" id="txt_idProspecto" value="<?php echo $_GET["idProspecto"]; ?>">
                                 <!-- ENTRADA PARA EL ORIGEN CLIENTE -->
                                 <div class="form-group">
-                                    <label for="cbm_origen" class=" control-label" style="text-align: right;"><?php echo $t('form.origin'); ?>
+                                    <label for="cbm_origen" class=" control-label" style="text-align: right;"><?php echo $t('forms.origin'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen"
@@ -86,7 +86,7 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA EL NUEVO RAMO -->
                                 <div class="form-group">
-                                    <label for="txt_origen_web" class="control-label" style="text-align: right;"><?php echo $t('form.origin'); ?>
+                                    <label for="txt_origen_web" class="control-label" style="text-align: right;"><?php echo $t('forms.origin'); ?>
                                         WEB
                                         <font color="red"> *</font>
                                     </label>
@@ -97,7 +97,7 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA LOS RAMOS -->
                                 <div class="form-group">
-                                    <label for="cbm_categoria" class=" control-label" style="text-align: right;"><?php echo $t('form.categories'); ?>
+                                    <label for="cbm_categoria" class=" control-label" style="text-align: right;"><?php echo $t('forms.categories'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_categoria" name="state" id="cbm_categoria">
@@ -275,7 +275,7 @@ $t = function ($key) {
                                     <label for="txt_nombre" class="control-label" style="text-align: right;">NOMBRE
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_nombre"
-                                        placeholder="<?php echo $t('form.enter_name'); ?>" maxlength="50" autocomplete="off"
+                                        placeholder="<?php echo $t('forms.enter_name'); ?>" maxlength="50" autocomplete="off"
                                         style="text-transform: uppercase">
                                 </div>
                             </div>

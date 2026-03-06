@@ -12,7 +12,7 @@ $t = function ($key) {
         <div class="card-body">
             <div class="row">
                 <?php
-                include "cajas/administrativo/caja-prospecto-individual.php";
+                include __DIR__ . "/cajas/administrativo/caja-prospecto-individual.php";
                 ?>
             </div>
         </div>
@@ -26,7 +26,7 @@ $t = function ($key) {
         <div class="card-body">
             <div class="row">
                 <?php
-                include "cajas/administrativo/caja-prospecto-pymes.php";
+                include __DIR__ . "/cajas/administrativo/caja-prospecto-pymes.php";
                 ?>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../model/modelo_idioma.php';
+require_once __DIR__ . '/../../model/modelo_idioma.php';
 $t = function ($key) {
     return Modelo_Idioma::t($key);
 };
@@ -86,45 +86,45 @@ for ($i = 0; $i < count($consulta); $i++) {
 
 if ($vida_individual > 0) {
 
-    include "cajas/cliente/caja-cliente-vida-individual.php";
+    include __DIR__ . "/cajas/cliente/caja-cliente-vida-individual.php";
 }
 
 if ($asistencia_medica_individual > 0) {
-    include "cajas/cliente/caja-cliente-asistencia-medica-individual.php";
+    include __DIR__ . "/cajas/cliente/caja-cliente-asistencia-medica-individual.php";
 }
 
 if ($vehiculo_individual > 0) {
-    include "cajas/cliente/caja-cliente-vehiculo-individual.php";
+    include __DIR__ . "/cajas/cliente/caja-cliente-vehiculo-individual.php";
 }
 
 if ($accidentes_personales > 0) {
-    include "cajas/cliente/caja-cliente-accidentes-personales-individual.php";
+    include __DIR__ . "/cajas/cliente/caja-cliente-accidentes-personales-individual.php";
 }
 
 if ($hogar_individual > 0) {
-    include "cajas/cliente/caja-cliente-hogar-individual.php";
+    include __DIR__ . "/cajas/cliente/caja-cliente-hogar-individual.php";
 }
 
 if ($vida_empresarial > 0) {
-    include "cajas/cliente/caja-cliente-vida-pymes.php";
+    include __DIR__ . "/cajas/cliente/caja-cliente-vida-pymes.php";
 }
 
 if ($asistencia_medica_empresarial > 0) {
-    include "cajas/cliente/caja-cliente-asistencia-medica-pymes.php";
+    include __DIR__ . "/cajas/cliente/caja-cliente-asistencia-medica-pymes.php";
 }
 
 if ($accidentes_personales_empresarial > 0) {
-    include "cajas/cliente/caja-cliente-accidentes-personales-pymes.php";
+    include __DIR__ . "/cajas/cliente/caja-cliente-accidentes-personales-pymes.php";
 }
 
 if ($responsabilidad_civil > 0) {
-    include "cajas/cliente/caja-cliente-responsabilidad-civil.php";
+    include __DIR__ . "/cajas/cliente/caja-cliente-responsabilidad-civil.php";
 }
 if ($incendios_pymes > 0) {
-    include "cajas/cliente/caja-cliente-incendios-pymes.php";
+    include __DIR__ . "/cajas/cliente/caja-cliente-incendios-pymes.php";
 }
 if ($transporte_pymes > 0) {
-    include "cajas/cliente/caja-cliente-transporte-pymes.php";
+    include __DIR__ . "/cajas/cliente/caja-cliente-transporte-pymes.php";
 }
 
 ?>
