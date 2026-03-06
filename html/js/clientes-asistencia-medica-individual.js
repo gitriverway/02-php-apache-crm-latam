@@ -493,7 +493,9 @@ $(".listaAdicional").on("click", "button.btnAgregarDependiente", function () {
         ' etiquetaTipoFamiliar" id = "etiquetaTipoFamiliar' +
         numProspecto +
         '" style="padding-right:0px">' +
-        "<label>" + t('form_labels.parentesco', 'Parentesco') + "</label>" +
+        "<label>" +
+        t("form_labels.parentesco", "Parentesco") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-1 order-md-7 my-1" style="padding-right:0px">' +
         '<div class="input-group">' +
@@ -519,7 +521,9 @@ $(".listaAdicional").on("click", "button.btnAgregarDependiente", function () {
         ' etiquetaNombreFamiliar" id = "etiquetaNombreFamiliar' +
         numProspecto +
         '">' +
-        "<label>" + t('form_labels.nombre', 'Nombre') + "</label>" +
+        "<label>" +
+        t("form_labels.nombre", "Nombre") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-4 order-md-8 my-1">' +
         '<div class="input-group">' +
@@ -540,7 +544,9 @@ $(".listaAdicional").on("click", "button.btnAgregarDependiente", function () {
         ' etiquetaGeneroFamiliar" id = "etiquetaGeneroFamiliar' +
         numProspecto +
         '">' +
-        "<label>" + t('form_labels.genero', 'Género') + "</label>" +
+        "<label>" +
+        t("form_labels.genero", "Género") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-9 my-1">' +
         '<select class="form-control generoFamiliar' +
@@ -561,7 +567,9 @@ $(".listaAdicional").on("click", "button.btnAgregarDependiente", function () {
         ' etiquetaFechaNacimiento" id = "etiquetaFechaNacimiento' +
         numProspecto +
         '" style="padding-left:0px">' +
-        "<label>" + t('form_labels.fecha_nacimiento', 'Fecha Nacimiento') + "</label>" +
+        "<label>" +
+        t("form_labels.fecha_nacimiento", "Fecha Nacimiento") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-left:0px">' +
         '<div class="input-group">' +
@@ -580,7 +588,9 @@ $(".listaAdicional").on("click", "button.btnAgregarDependiente", function () {
         ' etiquetaDeducibleFamiliar" id = "etiquetaDeducibleFamiliar' +
         numProspecto +
         '">' +
-        "<label>" + t('form_labels.deducible', 'Deducible') + "</label>" +
+        "<label>" +
+        t("form_labels.deducible", "Deducible") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-11 my-1">' +
         '<div class="input-group">' +
@@ -841,7 +851,9 @@ function agregarNuevaObservacion() {
       ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
       numObservacion +
       '" style="padding-right:0px">' +
-      "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
+      "<label>" +
+      t("form_labels.fecha_registro", "Fecha Registro") +
+      "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-4 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
@@ -860,7 +872,9 @@ function agregarNuevaObservacion() {
       ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
       numObservacion +
       '">' +
-      "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
+      "<label>" +
+      t("form_labels.observacion", "Observación") +
+      "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-5 my-1">' +
       '<label class="observacion" id="observacion' +
@@ -1020,7 +1034,9 @@ $(".listaAdicional").on(
           '<div class="my-1 col-12 col-md-6 order-md-1 ' +
           estado +
           '">' +
-          "<label>" + t('form_labels.formas_pago', 'FORMAS DE PAGO') + "</label>" +
+          "<label>" +
+          t("form_labels.formas_pago", "FORMAS DE PAGO") +
+          "</label>" +
           "</div>" +
           '<div class="my-1 col-12 col-md-6 order-md-5">' +
           '<div class="input-group">' +
@@ -1037,7 +1053,9 @@ $(".listaAdicional").on(
           '<div class="my-1 col-12 col-md-4 order-md-2 ' +
           estado +
           '">' +
-          "<label>" + t('form_labels.valor_usd', 'VALOR USD') + "</label>" +
+          "<label>" +
+          t("form_labels.valor_usd", "VALOR USD") +
+          "</label>" +
           "</div>" +
           '<div class="my-1 col-12 col-md-4 order-md-6">' +
           '<div class="input-group">' +
@@ -1914,7 +1932,9 @@ function agregar_auto_cargar_condiciones_renovacion(listaCondiciones, valor) {
         '<div class="my-1 col-12 col-md-6 order-md-1 ' +
         estado +
         '">' +
-        "<label>" + t('form_labels.formas_pago', 'FORMAS DE PAGO') + "</label>" +
+        "<label>" +
+        t("form_labels.formas_pago", "FORMAS DE PAGO") +
+        "</label>" +
         "</div>" +
         '<div class="my-1 col-12 col-md-6 order-md-5">' +
         '<div class="input-group">' +
@@ -1933,7 +1953,9 @@ function agregar_auto_cargar_condiciones_renovacion(listaCondiciones, valor) {
         '<div class="my-1 col-12 col-md-4 order-md-2 ' +
         estado +
         '">' +
-        "<label>" + t('form_labels.valor_usd', 'VALOR USD') + "</label>" +
+        "<label>" +
+        t("form_labels.valor_usd", "VALOR USD") +
+        "</label>" +
         "</div>" +
         '<div class="my-1 col-12 col-md-4 order-md-6">' +
         '<div class="input-group">' +
@@ -2009,7 +2031,9 @@ function agregar_auto_familiares(idValor) {
           ' etiquetaTipoFamiliar" id = "etiquetaTipoFamiliar' +
           numProspecto +
           '" style="padding-right:0px">' +
-          "<label>" + t('form_labels.parentesco', 'Parentesco') + "</label>" +
+          "<label>" +
+          t("form_labels.parentesco", "Parentesco") +
+          "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-7 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
@@ -2035,7 +2059,9 @@ function agregar_auto_familiares(idValor) {
           ' etiquetaNombreFamiliar" id = "etiquetaNombreFamiliar' +
           numProspecto +
           '">' +
-          "<label>" + t('form_labels.nombre', 'Nombre') + "</label>" +
+          "<label>" +
+          t("form_labels.nombre", "Nombre") +
+          "</label>" +
           "</div>" +
           '<div class="col-6 col-md-4 order-md-8 my-1">' +
           '<div class="input-group">' +
@@ -2056,7 +2082,9 @@ function agregar_auto_familiares(idValor) {
           ' etiquetaGeneroFamiliar" id = "etiquetaGeneroFamiliar' +
           numProspecto +
           '">' +
-          "<label>" + t('form_labels.genero', 'Género') + "</label>" +
+          "<label>" +
+          t("form_labels.genero", "Género") +
+          "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-9 my-1">' +
           '<select class="form-control generoFamiliar' +
@@ -2077,7 +2105,9 @@ function agregar_auto_familiares(idValor) {
           ' etiquetaFechaNacimiento" id = "etiquetaFechaNacimiento' +
           numProspecto +
           '" style="padding-left:0px">' +
-          "<label>" + t('form_labels.fecha_nacimiento', 'Fecha Nacimiento') + "</label>" +
+          "<label>" +
+          t("form_labels.fecha_nacimiento", "Fecha Nacimiento") +
+          "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -2096,7 +2126,9 @@ function agregar_auto_familiares(idValor) {
           ' etiquetaDeducibleFamiliar" id = "etiquetaDeducibleFamiliar' +
           numProspecto +
           '">' +
-          "<label>" + t('form_labels.deducible', 'Deducible') + "</label>" +
+          "<label>" +
+          t("form_labels.deducible", "Deducible") +
+          "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-11 my-1">' +
           '<div class="input-group">' +
@@ -2156,6 +2188,7 @@ function agregar_auto_observaciones() {
     contentType: false,
     processData: false,
     success: function (respuesta) {
+      console.log(respuesta);
       var data = JSON.parse(respuesta);
 
       if (data.length > 0) {
@@ -2186,7 +2219,9 @@ function agregar_auto_observaciones() {
               ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
               numObservacion +
               '" style="padding-right:0px">' +
-              "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
+              "<label>" +
+              t("form_labels.fecha_registro", "Fecha Registro") +
+              "</label>" +
               "</div>" +
               '<div class="col-6 col-md-4 order-md-4 my-1" style="padding-right:0px">' +
               '<div class="input-group">' +
@@ -2205,7 +2240,9 @@ function agregar_auto_observaciones() {
               ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
               numObservacion +
               '">' +
-              "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
+              "<label>" +
+              t("form_labels.observacion", "Observación") +
+              "</label>" +
               "</div>" +
               '<div class="col-6 col-md-4 order-md-5 my-1">' +
               '<label class="observacion" id="observacion' +
