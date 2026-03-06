@@ -127,7 +127,7 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_credito_ambulat
                 <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email_credito_ambulatorio_documentos_faltantes_seguimiento_cliente.documents_requested') . '
                 </h3>
                 <center>
-                    <h2 style="font-weight:100; color:#999;">' . $t('email.reembolso_seguimiento_documentos.documents_list_title') . '</h2>
+                    <h2 style="font-weight:100; color:#999;">' . $t('emails.reembolso_seguimiento_documentos.documents_list_title') . '</h2>
                 </center>
         
                 <center>
@@ -151,8 +151,8 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_credito_ambulat
                         </tbody>
                     </table>
                 </center>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_documentos_faltantes.observation') . ': </strong> ' . $observacion_final . '</h3>
-                <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.reembolso_seguimiento_documentos.deadline_instructions', ['email' => 'creditoambulatorio@mqpseguros.com', 'ticket' => $Ticket]) . '
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('emails.reembolso_documentos_faltantes.observation') . ': </strong> ' . $observacion_final . '</h3>
+                <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('emails.reembolso_seguimiento_documentos.deadline_instructions', ['email' => 'creditoambulatorio@mqpseguros.com', 'ticket' => $Ticket]) . '
                 </h3>
 
                 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">

@@ -130,7 +130,7 @@ class Envio_correo_notificacion_documentos_faltantes_credito_ambulatorio
                 <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_credito_ambulatorio_documentos_faltantes_cliente.documents_missing') . '
                 </h3>
                 <center>
-                    <h2 style="font-weight:100; color:#000000;">' . $t('email.reembolso_documentos_faltantes.missing_documents_list') . '</h2>
+                    <h2 style="font-weight:100; color:#000000;">' . $t('emails.reembolso_documentos_faltantes.missing_documents_list') . '</h2>
                 </center>
         
                 <center>
@@ -156,8 +156,8 @@ class Envio_correo_notificacion_documentos_faltantes_credito_ambulatorio
                         </tbody>
                     </table>
                 </center>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_documentos_faltantes.observation') . ': </strong> ' . $observacion_final . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_documentos_faltantes.upload_instructions', ['portal_url' => 'https://crm.mqpseguros.com']) . '
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('emails.reembolso_documentos_faltantes.observation') . ': </strong> ' . $observacion_final . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_documentos_faltantes.upload_instructions', ['portal_url' => 'https://crm.mqpseguros.com']) . '
                 </h3>
 
                 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">

@@ -117,7 +117,7 @@ class Envio_correo_documentos_seguimiento_reembolso_empresarial
 
             //Conten
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = $t('email.reembolso_empresarial_seguimiento_aseguradora.subject', ['fecha' => $fechaActual, 'nombre' => $nombre]);
+            $mail->Subject = $t('emails.reembolso_empresarial_seguimiento_aseguradora.subject', ['fecha' => $fechaActual, 'nombre' => $nombre]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -125,20 +125,20 @@ class Envio_correo_documentos_seguimiento_reembolso_empresarial
 
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_empresarial_seguimiento_aseguradora.dear_colleagues') . '</h3>
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_empresarial_seguimiento_aseguradora.attached_documents') . '</h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_empresarial_seguimiento_aseguradora.dear_colleagues') . '</h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_empresarial_seguimiento_aseguradora.attached_documents') . '</h3>
     
-            <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_empresarial_seguimiento_aseguradora.contract_number') . ': ' . $numero_contrato . '
+            <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_empresarial_seguimiento_aseguradora.contract_number') . ': ' . $numero_contrato . '
                 </h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_empresarial_seguimiento_aseguradora.holder_name') . ': ' . $nombre . '
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_empresarial_seguimiento_aseguradora.holder_name') . ': ' . $nombre . '
                 </h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_empresarial_seguimiento_aseguradora.patient_name') . ': ' . $nombre_paciente . '</h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_empresarial_seguimiento_aseguradora.diagnosis') . ': ' . $diagnostico . '</h4>
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_empresarial_seguimiento_aseguradora.patient_name') . ': ' . $nombre_paciente . '</h4>
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_empresarial_seguimiento_aseguradora.diagnosis') . ': ' . $diagnostico . '</h4>
     
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_empresarial_seguimiento_aseguradora.presented_value') . ': $' . $valor_presentado . '</h4>
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_empresarial_seguimiento_aseguradora.presented_value') . ': $' . $valor_presentado . '</h4>
 
                 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                    <strong>' . $t('email.reembolso_empresarial_seguimiento_aseguradora.note') . '</strong>
+                    <strong>' . $t('emails.reembolso_empresarial_seguimiento_aseguradora.note') . '</strong>
                 </p>
         
                 <div class=WordSection1>

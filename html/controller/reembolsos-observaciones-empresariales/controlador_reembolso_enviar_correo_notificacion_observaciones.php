@@ -77,7 +77,7 @@ class Envio_correo_notificacion_observaciones_reembolsos_empresarial
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = $t('email.reembolso_observaciones.subject', ['ticket' => $Ticket]);
+            $mail->Subject = $t('emails.reembolso_observaciones.subject', ['ticket' => $Ticket]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 

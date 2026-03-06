@@ -104,7 +104,7 @@ class Envio_correo_notificacion_liquidacion_reembolso
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = $t('email.reembolso_liquidacion.subject', ['ticket' => $Ticket]);
+            $mail->Subject = $t('emails.reembolso_liquidacion.subject', ['ticket' => $Ticket]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -112,32 +112,32 @@ class Envio_correo_notificacion_liquidacion_reembolso
 
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_liquidacion.dear_client') . ': ' . $nombre . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . str_replace('{aseguradora}', $aseguradora, str_replace('{ticket}', $Ticket, $t('email.reembolso_liquidacion.settlement_attached'))) . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_liquidacion.contract_number') . ': </strong>' . $numero_contrato . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_liquidacion.holder_name') . ': </strong> ' . $nombre . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_liquidacion.patient_name') . ': </strong> ' . $nombre_paciente . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_liquidacion.diagnosis') . ': </strong> ' . $diagnostico . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_liquidacion.presented_value') . ': </strong> ' . $valor_presentado . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_liquidacion.observation') . ': </strong> ' . $observacion_final . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_liquidacion.dear_client') . ': ' . $nombre . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . str_replace('{aseguradora}', $aseguradora, str_replace('{ticket}', $Ticket, $t('emails.reembolso_liquidacion.settlement_attached'))) . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('emails.reembolso_liquidacion.contract_number') . ': </strong>' . $numero_contrato . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('emails.reembolso_liquidacion.holder_name') . ': </strong> ' . $nombre . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('emails.reembolso_liquidacion.patient_name') . ': </strong> ' . $nombre_paciente . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('emails.reembolso_liquidacion.diagnosis') . ': </strong> ' . $diagnostico . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('emails.reembolso_liquidacion.presented_value') . ': </strong> ' . $valor_presentado . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('emails.reembolso_liquidacion.observation') . ': </strong> ' . $observacion_final . '</h3>
 
                 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                    <strong>' . $t('email.reembolso_liquidacion.note') . '</strong>
+                    <strong>' . $t('emails.reembolso_liquidacion.note') . '</strong>
                 </p>
                 
         
                 <div class=WordSection1>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.reembolso_liquidacion.regards') . ',<o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.reembolso_liquidacion.regards') . ',<o:p>
                                 </o:p></span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.reembolso_liquidacion.department') . '<o:p></o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.reembolso_liquidacion.department') . '<o:p></o:p>
                                 </span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.address') . ':</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.address') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">Centro Empresarial Qworks - Quicentro Shopping, oficina 303
                                 <o:p></o:p></span></span></p>
                     <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Código
@@ -145,17 +145,17 @@ class Envio_correo_notificacion_liquidacion_reembolso
                             style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.phone') . ':</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.phone') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">59398 940 9581</span>
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.web') . ':</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.web') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">https://<a
                                     href=http://www.mqpseguros.com><span
                                         style="color:#2F5496">www.mqpseguros.com</span></a></span>
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.credential') . ':</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.credential') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">1793190</span>
                             <o:p>&nbsp;</o:p>
                         </span></p>

@@ -80,34 +80,34 @@ class Envio_correo_notificacion_observaciones_reembolsos
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = $t('email.reembolso_observaciones.subject', ['ticket' => $Ticket]);
+            $mail->Subject = $t('emails.reembolso_observaciones.subject', ['ticket' => $Ticket]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->msgHTML('<div style="width:100%; background:#eee; position:relative; font-family:sans-serif; padding-bottom:40px">
 
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_observaciones.dear_client') . ': <strong>' . $nombre . '</strong></h3>
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . str_replace('{ticket}', $Ticket, $t('email.reembolso_observaciones.new_information')) . '</h3>
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_observaciones.observation') . ': </strong> ' . $observacion_final . '</h3>
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_observaciones.please_login') . ' </strong><a href="' . $t('email.recuperar_password.portal_url') . '">' . $t('email.recuperar_password.portal_url') . '</a></h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_observaciones.dear_client') . ': <strong>' . $nombre . '</strong></h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . str_replace('{ticket}', $Ticket, $t('emails.reembolso_observaciones.new_information')) . '</h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('emails.reembolso_observaciones.observation') . ': </strong> ' . $observacion_final . '</h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('emails.reembolso_observaciones.please_login') . ' </strong><a href="' . $t('emails.recuperar_password.portal_url') . '">' . $t('emails.recuperar_password.portal_url') . '</a></h3>
 
             <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                    <strong>' . $t('email.reembolso_observaciones.note') . '</strong>
+                    <strong>' . $t('emails.reembolso_observaciones.note') . '</strong>
                 </p>
                 
                 <div class=WordSection1>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.reembolso_observaciones.regards') . ',<o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.reembolso_observaciones.regards') . ',<o:p>
                                 </o:p></span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.reembolso_observaciones.department') . '<o:p></o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.reembolso_observaciones.department') . '<o:p></o:p>
                                 </span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.address') . ':</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.address') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">Centro Empresarial Qworks - Quicentro Shopping, oficina 303
                                 <o:p></o:p></span></span></p>
                     <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Código
@@ -115,17 +115,17 @@ class Envio_correo_notificacion_observaciones_reembolsos
                             style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.phone') . ':</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.phone') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">59398 940 9581</span>
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.web') . ':</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.web') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">https://<a
                                     href=http://www.mqpseguros.com><span
                                         style="color:#2F5496">www.mqpseguros.com</span></a></span>
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.credential') . ':</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.credential') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">1793190</span>
                             <o:p></o:p>
                         </span></p>

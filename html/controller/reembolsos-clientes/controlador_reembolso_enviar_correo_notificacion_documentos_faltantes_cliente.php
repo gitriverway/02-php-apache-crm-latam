@@ -136,7 +136,7 @@ class Envio_correo_notificacion_documentos_faltantes_reembolso
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = $t('email.reembolso_documentos_faltantes.subject', ['ticket' => $Ticket]);
+            $mail->Subject = $t('emails.reembolso_documentos_faltantes.subject', ['ticket' => $Ticket]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -144,22 +144,22 @@ class Envio_correo_notificacion_documentos_faltantes_reembolso
 
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_documentos_faltantes.dear_client') . ': ' . $nombre . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_documentos_faltantes.dear_client') . ': ' . $nombre . '</h3>
 
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_documentos_faltantes.contract_number') . ': ' . $numero_contrato . '
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_documentos_faltantes.contract_number') . ': ' . $numero_contrato . '
                 </h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_documentos_faltantes.holder_name') . ': ' . $nombre . '
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_documentos_faltantes.holder_name') . ': ' . $nombre . '
                 </h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_documentos_faltantes.patient_name') . ': ' . $nombre_paciente . '</h4>
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_documentos_faltantes.diagnosis') . ': ' . $diagnostico . '</h4>
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_documentos_faltantes.patient_name') . ': ' . $nombre_paciente . '</h4>
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_documentos_faltantes.diagnosis') . ': ' . $diagnostico . '</h4>
     
-                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_documentos_faltantes.presented_value') . ': $' . $valor_presentado . '</h4>
+                <h4 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_documentos_faltantes.presented_value') . ': $' . $valor_presentado . '</h4>
 
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email.reembolso_documentos_faltantes.complete_documents') . '
-                    <strong>' . $t('email.reembolso_documentos_faltantes.no') . '</strong>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('emails.reembolso_documentos_faltantes.complete_documents') . '
+                    <strong>' . $t('emails.reembolso_documentos_faltantes.no') . '</strong>
                 </h3>
                 <center>
-                    <h2 style="font-weight:100; color:#000000;">' . $t('email.reembolso_documentos_faltantes.missing_documents_list') . '</h2>
+                    <h2 style="font-weight:100; color:#000000;">' . $t('emails.reembolso_documentos_faltantes.missing_documents_list') . '</h2>
                 </center>
         
                 <center>
@@ -169,16 +169,16 @@ class Envio_correo_notificacion_documentos_faltantes_reembolso
                             style="background: #1C6EA4;background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);border-bottom: 2px solid #444444;">
                             <th
                                 style="font-size: 15px;font-weight: bold;color: #000000;border-left: 2px solid #D0E4F5; border:1px solid #AAAAAA;padding: 3px 2px;">
-                                ' . $t('email.reembolso_documentos_faltantes.documents') . '</th>
+                                ' . $t('emails.reembolso_documentos_faltantes.documents') . '</th>
                             <th
                                 style="font-size: 15px;font-weight: bold;color: #000000;border-left: 2px solid #D0E4F5; border:1px solid #AAAAAA;padding: 3px 2px;">
-                                ' . $t('email.reembolso_documentos_faltantes.yes') . '</th>
+                                ' . $t('emails.reembolso_documentos_faltantes.yes') . '</th>
                             <th
                                 style="font-size: 15px;font-weight: bold;color: #000000;border-left: 2px solid #D0E4F5; border:1px solid #AAAAAA;padding: 3px 2px;">
-                                ' . $t('email.reembolso_documentos_faltantes.no') . '</th>
+                                ' . $t('emails.reembolso_documentos_faltantes.no') . '</th>
                             <th
                                 style="font-size: 15px;font-weight: bold;color: #000000;border-left: 2px solid #D0E4F5; border:1px solid #AAAAAA;padding: 3px 2px;">
-                                ' . $t('email.reembolso_documentos_faltantes.not_applicable') . '</th>
+                                ' . $t('emails.reembolso_documentos_faltantes.not_applicable') . '</th>
                         </thead>
                         <tbody>
                             ' . $listado_documentos . '
@@ -186,27 +186,27 @@ class Envio_correo_notificacion_documentos_faltantes_reembolso
                     </table>
                 </center>
 
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_documentos_faltantes.observation') . ': </strong> ' . $observacion_final . '</h3>
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('emails.reembolso_documentos_faltantes.observation') . ': </strong> ' . $observacion_final . '</h3>
                 
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . str_replace('{portal_url}', '<a href="' . $t('email.recuperar_password.portal_url') . '">' . $t('email.recuperar_password.portal_url') . '</a>', $t('email.reembolso_documentos_faltantes.upload_instructions')) . '
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . str_replace('{portal_url}', '<a href="' . $t('emails.recuperar_password.portal_url') . '">' . $t('emails.recuperar_password.portal_url') . '</a>', $t('emails.reembolso_documentos_faltantes.upload_instructions')) . '
                 </h3>
 
                 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                    <strong>' . $t('email.recuperar_password.note') . '</strong>
+                    <strong>' . $t('emails.recuperar_password.note') . '</strong>
                 </p>
         
                 <div class=WordSection1>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.reembolso_documentos_faltantes.regards') . ',<o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.reembolso_documentos_faltantes.regards') . ',<o:p>
                                 </o:p></span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.department') . '<o:p></o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.department') . '<o:p></o:p>
                                 </span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.address') . ':</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.address') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">Centro Empresarial Qworks - Quicentro Shopping, oficina 303
                                 <o:p></o:p></span></span></p>
                     <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Código
@@ -214,17 +214,17 @@ class Envio_correo_notificacion_documentos_faltantes_reembolso
                             style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.phone') . ':</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.phone') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">59398 940 9581</span>
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.web') . ':</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.web') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">https://<a
                                     href=http://www.mqpseguros.com><span
                                         style="color:#2F5496">www.mqpseguros.com</span></a></span>
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.credential') . ':</span></b><span
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.credential') . ':</span></b><span
                             style="font-family:Arial,sans-serif"> <span style="color:#2F5496">1793190</span>
                             <o:p>&nbsp;</o:p>
                         </span></p>

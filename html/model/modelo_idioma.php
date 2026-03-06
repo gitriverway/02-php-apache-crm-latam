@@ -18,7 +18,8 @@ class Modelo_Idioma
         'usuarios',
         'empleados',
         'proveedores',
-        'facturas'
+        'facturas',
+        'emails'
     ];
 
     /**
@@ -87,14 +88,6 @@ class Modelo_Idioma
                         $translations[$module] = $moduleContent;
                     }
                 }
-            }
-        }
-
-        $legacyLangFile = __DIR__ . '/../lang/' . $lang . '.json';
-        if (file_exists($legacyLangFile)) {
-            $legacyContent = json_decode(file_get_contents($legacyLangFile), true);
-            if ($legacyContent) {
-                $translations = array_merge($translations, $legacyContent);
             }
         }
 

@@ -125,7 +125,7 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_reembolso
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = $t('email.reembolso_seguimiento_documentos.subject', ['ticket' => $Ticket]);
+            $mail->Subject = $t('emails.reembolso_seguimiento_documentos.subject', ['ticket' => $Ticket]);
             //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -133,12 +133,12 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_reembolso
 
             <div style="position:relative; margin:auto; width:600px; background:white; padding-bottom:20px">
         
-                <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.reembolso_seguimiento_documentos.dear_client') . ': ' . $nombre . '</h3>
-                <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.reembolso_seguimiento_documentos.complete_documents') . '
-                    <strong>' . $t('email.reembolso_seguimiento_documentos.yes') . '</strong>
+                <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('emails.reembolso_seguimiento_documentos.dear_client') . ': ' . $nombre . '</h3>
+                <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('emails.reembolso_seguimiento_documentos.complete_documents') . '
+                    <strong>' . $t('emails.reembolso_seguimiento_documentos.yes') . '</strong>
                 </h3>
                 <center>
-                    <h2 style="font-weight:100; color:#999;">' . $t('email.reembolso_seguimiento_documentos.documents_list_title') . '</h2>
+                    <h2 style="font-weight:100; color:#999;">' . $t('emails.reembolso_seguimiento_documentos.documents_list_title') . '</h2>
                 </center>
         
                 <center>
@@ -148,13 +148,13 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_reembolso
                             style="background: #1C6EA4;background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);border-bottom: 2px solid #444444;">
                             <th
                                 style="font-size: 15px;font-weight: bold;color: #FFFFFF;border-left: 2px solid #D0E4F5; border:1px solid #AAAAAA;padding: 3px 2px;">
-                                ' . $t('email.reembolso_seguimiento_documentos.documents') . '</th>
+                                ' . $t('emails.reembolso_seguimiento_documentos.documents') . '</th>
                             <th
                                 style="font-size: 15px;font-weight: bold;color: #FFFFFF;border-left: 2px solid #D0E4F5; border:1px solid #AAAAAA;padding: 3px 2px;">
-                                ' . $t('email.reembolso_seguimiento_documentos.yes') . '</th>
+                                ' . $t('emails.reembolso_seguimiento_documentos.yes') . '</th>
                             <th
                                 style="font-size: 15px;font-weight: bold;color: #FFFFFF;border-left: 2px solid #D0E4F5; border:1px solid #AAAAAA;padding: 3px 2px;">
-                                ' . $t('email.reembolso_seguimiento_documentos.no') . '
+                                ' . $t('emails.reembolso_seguimiento_documentos.no') . '
                             </th>
                         </thead>
                         <tbody>
@@ -162,21 +162,21 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_reembolso
                         </tbody>
                     </table>
                 </center>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email.reembolso_seguimiento_documentos.observation') . ': </strong> ' . $observacion_final . '</h3>
-                <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . str_replace(['{email}', '{ticket}'], ['reembolsos@mqpseguros.com', $Ticket], $t('email.reembolso_seguimiento_documentos.deadline_instructions')) . '
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('emails.reembolso_seguimiento_documentos.observation') . ': </strong> ' . $observacion_final . '</h3>
+                <h3 style="font-weight:100; color:#999; padding:0px 20px;">' . str_replace(['{email}', '{ticket}'], ['reembolsos@mqpseguros.com', $Ticket], $t('emails.reembolso_seguimiento_documentos.deadline_instructions')) . '
                 </h3>
 
                 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                    <strong>' . $t('email.reembolso_seguimiento_documentos.note') . '</strong>
+                    <strong>' . $t('emails.reembolso_seguimiento_documentos.note') . '</strong>
                 </p>
         
                 <div class=WordSection1>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.reembolso_seguimiento_documentos.regards') . ',<o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.reembolso_seguimiento_documentos.regards') . ',<o:p>
                                 </o:p></span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>
                         </span></p>
-                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.reembolso_seguimiento_documentos.department') . '<o:p></o:p>
+                    <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.reembolso_seguimiento_documentos.department') . '<o:p></o:p>
                                 </span></b></p>
                     <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                             <o:p>&nbsp;</o:p>

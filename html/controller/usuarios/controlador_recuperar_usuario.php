@@ -103,7 +103,7 @@ class Envio_correo_recuperacion_acceso
 
                 //Content
                 $mail->isHTML(true);                                  //Set email format to HTML
-                $mail->Subject = $t('email.recuperar_password.subject');
+                $mail->Subject = $t('emails.recuperar_password.subject');
                 //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
                 //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -114,17 +114,17 @@ class Envio_correo_recuperacion_acceso
                                 <img style="padding:20px; width:15%" src="https://crm.mqpseguros.com/view/img/icon-email.png">
                             </center>
 
-                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.recuperar_password.welcome') . ' ' . $nombre . '</h4>
-                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.recuperar_password.credentials_title') . '
+                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('emails.recuperar_password.welcome') . ' ' . $nombre . '</h4>
+                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('emails.recuperar_password.credentials_title') . '
                             </h4>
-                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.recuperar_password.link') . ': <a href="' . $t('email.recuperar_password.portal_url') . '"><strong>' . $t('email.recuperar_password.portal_url') . '</strong></a>
+                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('emails.recuperar_password.link') . ': <a href="' . $t('emails.recuperar_password.portal_url') . '"><strong>' . $t('emails.recuperar_password.portal_url') . '</strong></a>
                             </h4>
-                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.recuperar_password.username_label') . ': <strong>' . $cedula . '</strong>
+                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('emails.recuperar_password.username_label') . ': <strong>' . $cedula . '</strong>
                             </h4>
-                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.recuperar_password.password_label') . ': <strong>' . $cadena . '</strong>
+                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('emails.recuperar_password.password_label') . ': <strong>' . $cadena . '</strong>
                             </h4>
 
-                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('email.recuperar_password.channels_info') . '
+                            <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('emails.recuperar_password.channels_info') . '
                             </h4>
 
                             <center>
@@ -138,35 +138,35 @@ class Envio_correo_recuperacion_acceso
                                     <tbody>
                                         <tr>
                                             <td style="border:1px solid #AAAAAA;">info@mqpseguros.com</td>
-                                            <td style="border:1px solid #AAAAAA;">' . $t('email.recuperar_password.info_email') . '</td>
+                                            <td style="border:1px solid #AAAAAA;">' . $t('emails.recuperar_password.info_email') . '</td>
                                         </tr>
                                         <tr>
                                             <td style="border:1px solid #AAAAAA;">reembolsos@mqpseguros.com</td>
                                             <td style="border:1px solid #AAAAAA;">
-                                                ' . $t('email.recuperar_password.reimbursements_email') . '</td>
+                                                ' . $t('emails.recuperar_password.reimbursements_email') . '</td>
                                         </tr>
                                         <tr>
                                             <td style="border:1px solid #AAAAAA;">siniestros@mqpseguros.com</td>
-                                            <td style="border:1px solid #AAAAAA;">' . $t('email.recuperar_password.claims_email') . '</td>
+                                            <td style="border:1px solid #AAAAAA;">' . $t('emails.recuperar_password.claims_email') . '</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </center>
 
                             <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
-                                <strong>' . $t('email.recuperar_password.note') . '</strong>
+                                <strong>' . $t('emails.recuperar_password.note') . '</strong>
                             </p>
 
                             <div class=WordSection1>
                                 <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                                         <o:p>&nbsp;</o:p>
                                     </span></p>
-                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.department') . '<o:p></o:p>
+                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.department') . '<o:p></o:p>
                                             </span></b></p>
                                 <p class=MsoNormal><span style="font-family:Arial,sans-serif">
                                         <o:p>&nbsp;</o:p>
                                     </span></p>
-                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.address') . ':</span></b><span
+                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.address') . ':</span></b><span
                                         style="font-family:Arial,sans-serif"> <span style="color:#2F5496">Centro Empresarial Qworks - Quicentro Shopping, oficina 303
                                             <o:p></o:p></span></span></p>
                                 <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">Código
@@ -174,17 +174,17 @@ class Envio_correo_recuperacion_acceso
                                         style="font-family:Arial,sans-serif">
                                         <o:p>&nbsp;</o:p>
                                     </span></p>
-                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.phone') . ':</span></b><span
+                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.phone') . ':</span></b><span
                                         style="font-family:Arial,sans-serif"> <span style="color:#2F5496">59398 940 9581</span>
                                         <o:p>&nbsp;</o:p>
                                     </span></p>
-                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.web') . ':</span></b><span
+                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.web') . ':</span></b><span
                                         style="font-family:Arial,sans-serif"> <span style="color:#2F5496">https://<a
                                                 href=http://www.mqpseguros.com><span
                                                     style="color:#2F5496">www.mqpseguros.com</span></a></span>
                                         <o:p>&nbsp;</o:p>
                                     </span></p>
-                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('email.recuperar_password.credential') . ':</span></b><span
+                                <p class=MsoNormal><b><span style="font-family:Arial,sans-serif;color:#1F3864">' . $t('emails.recuperar_password.credential') . ':</span></b><span
                                         style="font-family:Arial,sans-serif"> <span style="color:#2F5496">1793190</span>
                                         <o:p>&nbsp;</o:p>
                                     </span></p>
