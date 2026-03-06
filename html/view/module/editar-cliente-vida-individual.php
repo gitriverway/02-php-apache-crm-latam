@@ -194,14 +194,13 @@ $t = function ($key) {
                             <div class="col-sm-12">
                                 <!-- ENTRADA PARA SELECCIONAR FORMA DE PAGO -->
                                 <div class="form-group">
-                                    <label for="cbm_forma_pago" class="control-label" style="text-align: right;">FORMA
-                                        DE
-                                        PAGO<font color="red"> *</font></label>
+                                    <label for="cbm_forma_pago" class="control-label" style="text-align: right;"><?php echo $t('common.payment_method'); ?><font color="red"> *</font></label>
                                     <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                         style="width:100%;">
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                        <option value="DEBITO BANCARIO"><?php echo $t('form.bank_debit'); ?></option>
-                                        <option value="TRANSFERENCIA BANCARIO"><?php echo $t('form.bank_transfer'); ?></option>
+                                        <option value="DEBITO BANCARIO"><?php echo $t('common.bank_debit'); ?></option>
+                                        <option value="TRANSFERENCIA BANCARIO"><?php echo $t('common.bank_transfer'); ?></option>
+                                        <option value="TARJETA DE CREDITO"><?php echo $t('common.credit_card'); ?></option>
                                         <option value="TARJETA DE CREDITO"><?php echo $t('form.credit_card'); ?></option>
                                     </select>
                                 </div>
@@ -423,7 +422,7 @@ $t = function ($key) {
                 <!-- Default box -->
                 <div class="card card-primary" id="cardDocumento">
                     <div class="card-header">
-                        <h3 class="card-title">Informaci&oacute;n Documentos</h3>
+                        <h3 class="card-title"><?php echo $t('titles.information_documents'); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -561,7 +560,7 @@ $t = function ($key) {
                 <!-- Default box -->
                 <div class="card card-primary" id="cardSeguimiento">
                     <div class="card-header">
-                        <h3 class="card-title">Informaci&oacute;n Seguimiento</h3>
+                        <h3 class="card-title"><?php echo $t('titles.information_follow_up'); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">

@@ -164,7 +164,14 @@
 | 2026-03-05 | editar-cliente-hogar-individual.php | COMPLETO |
 | 2026-03-05 | editar-cliente-accidentes-personales-individual.php | COMPLETO |
 | 2026-03-05 | editar-cliente-responsabilidad-civil-individual.php | COMPLETO |
+| 2026-03-05 | editar-cliente-vida-individual.php | COMPLETO (parcial) |
+| 2026-03-05 | editar-cliente-accidentes-personales-individual-empresarial.php | COMPLETO |
+| 2026-03-05 | editar-cliente-incendio-empresarial.php | COMPLETO |
 
+## Estadísticas
+
+- Archivos completados: 11
+- Total textos traducidos: ~220+
 ## Estadísticas
 
 - Archivos completados: 8
