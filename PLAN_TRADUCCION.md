@@ -159,11 +159,13 @@
 | 2026-03-05 | usuarios.php | Traducidos labels, botones y placeholders |
 | 2026-03-05 | perfil.php | Traducidos labels y botón actualizar |
 | 2026-03-05 | facturas.php | Traducidos labels, placeholders y botones |
-| 2026-03-05 | editar-cliente-asistencia-medica-individual.php | COMPLETO - 40+ textos traducidos |
-| 2026-03-05 | editar-cliente-vehiculo-individual.php | EN PROGRESO - ~25% |
+| 2026-03-05 | editar-cliente-asistencia-medica-individual.php | COMPLETO |
+| 2026-03-05 | editar-cliente-vehiculo-individual.php | COMPLETO |
+| 2026-03-05 | editar-cliente-hogar-individual.php | COMPLETO |
+| 2026-03-05 | editar-cliente-accidentes-personales-individual.php | COMPLETO |
 
 ## Estadísticas
 
-- Archivos completados: 4
-- Archivos en progreso: 1
-- Total textos traducidos: ~60+
+- Archivos completados: 7
+- Archivos en progreso: 0
+- Total textos traducidos: ~140+
