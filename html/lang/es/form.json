@@ -77,5 +77,9 @@
     "document_mb_50": "50MB",
     "document_mb_25": "25MB",
     "enter_deductible": "INGRESE DEDUCIBLE",
-    "required_document": "DOCUMENTO REQUERIDO"
+    "required_document": "DOCUMENTO REQUERIDO",
+    "0_to_1000": "0 a 1000",
+    "1000_to_3000": "1000 a 3000",
+    "3000_to_5000": "3000 a 5000",
+    "more_than_5000": "5000 en adelante"
 }

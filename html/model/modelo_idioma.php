@@ -129,6 +129,13 @@ class Modelo_Idioma
         $translations = self::loadTranslations($lang);
 
         $keys = explode('.', $key);
+        $module = $keys[0];
+        
+        if ($module === 'forms' && isset($translations['form'])) {
+            $module = 'form';
+            $keys[0] = 'form';
+        }
+        
         $value = $translations;
 
         foreach ($keys as $k) {
