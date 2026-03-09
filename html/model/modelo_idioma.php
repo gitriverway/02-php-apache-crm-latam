@@ -6,7 +6,7 @@ class Modelo_Idioma
     private static $currentLang = 'pt-BR';
     private static $moduleFiles = [
         'common',
-        'forms',
+        'form',
         'titles',
         'buttons',
         'messages',
