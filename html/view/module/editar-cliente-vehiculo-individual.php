@@ -421,7 +421,7 @@ $t = function ($key) {
                                 </div>
                             </div>
 
-                            <div class="col-sm-12 col-md-6">
+                            <div class="col-sm-12 col-md-6 d-none">
                                 <!-- ENTRADA PARA INGRESOS -->
                                 <div class="form-group">
                                     <label for="cbm_ingreso_mensual" class="control-label"
@@ -753,17 +753,17 @@ MODAL LISTAR CONTRATOS
 <script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
 <script type="text/javascript" src="/js/clientes-vehiculo-individual.js?rev=<?php echo time(); ?>"></script>
 <script>
-$(document).ready(function() {
-    listar_empleados_para_seleccionar();
-    listar_clientes_para_seleccionar();
-    listar_combo_categoria();
-    listar_combo_aseguradora();
-    listar_combo_provincia();
-    $("#modalAgregarObservacion").on('shown.bs.modal', function() {
-        $("#txt_observacion").focus();
+    $(document).ready(function() {
+        listar_empleados_para_seleccionar();
+        listar_clientes_para_seleccionar();
+        listar_combo_categoria();
+        listar_combo_aseguradora();
+        listar_combo_provincia();
+        $("#modalAgregarObservacion").on('shown.bs.modal', function() {
+            $("#txt_observacion").focus();
+        });
+        setTimeout(function() {
+            cargar_datos_cliente();
+        }, 1500);
     });
-    setTimeout(function() {
-        cargar_datos_cliente();
-    }, 1500);
-});
 </script>

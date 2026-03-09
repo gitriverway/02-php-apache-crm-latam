@@ -351,7 +351,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 </div>
                             </div>
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-12 d-none">
                                 <!-- ENTRADA PARA INGRESOS -->
                                 <div class="form-group">
                                     <label for="cbm_ingreso_mensual" class="control-label"
@@ -359,8 +359,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                     </label>
                                     <select class="form-control cbm_ingreso_mensual" name="state"
                                         id="cbm_ingreso_mensual" style="width:100%;">
-                                        <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                        <option value="0 a 1000">0 a 1000</option>
+                                        <option value="0 a 1000" selected>0 a 1000</option>
                                         <option value="1000 a 3000">1000 a 3000</option>
                                         <option value="3000 a 5000">3000 a 5000</option>
                                         <option value="5000 en adelante">5000 en adelante</option>

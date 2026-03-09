@@ -320,7 +320,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 </div>
                             </div>
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-12 d-none">
                                 <!-- ENTRADA PARA INGRESOS -->
                                 <div class="form-group">
                                     <label for="cbm_ingreso_mensual" class="control-label"
