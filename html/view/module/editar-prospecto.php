@@ -70,13 +70,12 @@ $t = function ($key) {
                                 <input type="hidden" id="txt_idProspecto" value="<?php echo $_GET["idProspecto"]; ?>">
                                 <!-- ENTRADA PARA EL ORIGEN CLIENTE -->
                                 <div class="form-group">
-                                    <label for="cbm_origen" class=" control-label" style="text-align: right;"><?php echo $t('forms.origin'); ?>
-                                        <font color="red"> *</font>
+                                    <label for="cbm_origen" class=" control-label"
+                                        style="text-align: right;"><?php echo $t('forms.origin'); ?>
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen"
                                         <?php echo ($_SESSION["S_ROL"] == "VENDEDOR") ? "disabled" : ""; ?>>
-                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
-                                        <option value="MQP"><?php echo $t('options.mqp'); ?></option>
+                                        <option value="MQP" selected><?php echo $t('options.mqp'); ?></option>
                                         <option value="AMIGO"><?php echo $t('options.friend'); ?></option>
                                         <option value="CHAT"><?php echo $t('options.chat'); ?></option>
                                         <option value="OTROS"><?php echo $t('options.others'); ?></option>
@@ -86,7 +85,8 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA EL NUEVO RAMO -->
                                 <div class="form-group">
-                                    <label for="txt_origen_web" class="control-label" style="text-align: right;"><?php echo $t('forms.origin'); ?>
+                                    <label for="txt_origen_web" class="control-label"
+                                        style="text-align: right;"><?php echo $t('forms.origin'); ?>
                                         WEB
                                         <font color="red"> *</font>
                                     </label>
@@ -97,8 +97,8 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA LOS RAMOS -->
                                 <div class="form-group">
-                                    <label for="cbm_categoria" class=" control-label" style="text-align: right;"><?php echo $t('forms.categories'); ?>
-                                        <font color="red"> *</font>
+                                    <label for="cbm_categoria" class=" control-label"
+                                        style="text-align: right;"><?php echo $t('forms.categories'); ?>
                                     </label>
                                     <select class="form-control cbm_categoria" name="state" id="cbm_categoria">
                                     </select>
@@ -109,7 +109,6 @@ $t = function ($key) {
                                 <div class="form-group">
                                     <label for="txt_nuevo_categoria" class="control-label"
                                         style="text-align: right;">NUEVO RAMO
-                                        <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras"
                                         id="txt_nuevo_categoria" autocomplete="off" style="text-transform: uppercase"
@@ -215,8 +214,7 @@ $t = function ($key) {
                                         PAGO</label>
                                     <select class="form-control cbm_tipo_pago" name="state" id="cbm_tipo_pago"
                                         style="width:100%;">
-                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
-                                        <option value="MENSUAL">MENSUAL</option>
+                                        <option value="MENSUAL" selected>MENSUAL</option>
                                         <option value="TRIMESTRAL">TRIMESTRAL</option>
                                         <option value="SEMESTRAL">SEMESTRAL</option>
                                         <option value="ANUAL">ANUAL</option>
@@ -231,8 +229,7 @@ $t = function ($key) {
                                         PAGO</label>
                                     <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                         style="width:100%;">
-                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
-                                        <option value="DEBITO BANCARIO">DEBITO BANCARIO</option>
+                                        <option value="DEBITO BANCARIO" selected>DEBITO BANCARIO</option>
                                         <option value="TRANSFERENCIA BANCARIO">TRANSFERENCIA BANCARIO</option>
                                         <option value="TARJETA DE CREDITO">TARJETA DE CREDITO</option>
                                     </select>
@@ -275,8 +272,8 @@ $t = function ($key) {
                                     <label for="txt_nombre" class="control-label" style="text-align: right;">NOMBRE
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_nombre"
-                                        placeholder="<?php echo $t('forms.enter_name'); ?>" maxlength="50" autocomplete="off"
-                                        style="text-transform: uppercase">
+                                        placeholder="<?php echo $t('forms.enter_name'); ?>" maxlength="50"
+                                        autocomplete="off" style="text-transform: uppercase">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -284,9 +281,8 @@ $t = function ($key) {
                                 <div class="form-group">
                                     <label class="control-label" style="text-align: right;">GENERO
                                     </label>
-                                    <select id="genero" name="genero" class="form-control genero" required>
-                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
-                                        <option value="masculino">Masculino</option>
+                                    <select id="genero" name="genero" class="form-control genero">
+                                        <option value="masculino" selected>Masculino</option>
                                         <option value="femenino">Femenino</option>
                                     </select>
                                 </div>
@@ -295,12 +291,9 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA ESTADO CIVIL -->
                                 <div class="form-group">
                                     <label for="estado_civil" class="control-label" style="text-align: right;">ESTADO
-                                        CIVIL<font color="red"> *
-                                        </font>
-                                    </label>
-                                    <select id="estado_civil" name="estado_civil" class="form-control" required>
-                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
-                                        <option value="SOLTERO">SOLTERO/A</option>
+                                        CIVIL</label>
+                                    <select id="estado_civil" name="estado_civil" class="form-control">
+                                        <option value="SOLTERO" selected>SOLTERO/A</option>
                                         <option value="CASADO">CASADO/A</option>
                                         <option value="DIVORCIADO">DIVORCIADO/A</option>
                                         <option value="VIUDO">VIUDO/A</option>
@@ -335,7 +328,8 @@ $t = function ($key) {
                                     <label for="txt_email" class="control-label" style="text-align: right;">EMAIL
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetrasDecimal" id="txt_email"
-                                        placeholder="<?php echo $t('messages.enter_email'); ?>" maxlength="50" autocomplete="off">
+                                        placeholder="<?php echo $t('messages.enter_email'); ?>" maxlength="50"
+                                        autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -344,7 +338,8 @@ $t = function ($key) {
                                     <label for="txt_telefono" class="control-label" style="text-align: right;">TELEFONO
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_telefono"
-                                        placeholder="<?php echo $t('messages.enter_phone'); ?>" maxlength="50" autocomplete="off">
+                                        placeholder="<?php echo $t('messages.enter_phone'); ?>" maxlength="50"
+                                        autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -362,8 +357,8 @@ $t = function ($key) {
                                     <label for="txt_ciudad" class="control-label" style="text-align: right;">CIUDAD
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
-                                        placeholder="<?php echo $t('messages.enter_city'); ?>" maxlength="100" autocomplete="off"
-                                        style="text-transform: uppercase">
+                                        placeholder="<?php echo $t('messages.enter_city'); ?>" maxlength="100"
+                                        autocomplete="off" style="text-transform: uppercase">
                                 </div>
                             </div>
                             <div class="col-sm-12">
@@ -385,8 +380,8 @@ $t = function ($key) {
                                         style="text-align: right;">PROFESI&Oacute;N
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ocupacion"
-                                        placeholder="<?php echo $t('messages.enter_occupation'); ?>" maxlength="50" autocomplete="off"
-                                        style="text-transform: uppercase">
+                                        placeholder="<?php echo $t('messages.enter_occupation'); ?>" maxlength="50"
+                                        autocomplete="off" style="text-transform: uppercase">
                                 </div>
                             </div>
 
@@ -398,8 +393,7 @@ $t = function ($key) {
                                     </label>
                                     <select class="form-control cbm_ingreso_mensual" name="state"
                                         id="cbm_ingreso_mensual" style="width:100%;">
-                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
-                                        <option value="0 a 1000">0 a 1000</option>
+                                        <option value="0 a 1000" selected>0 a 1000</option>
                                         <option value="1000 a 3000">1000 a 3000</option>
                                         <option value="3000 a 5000">3000 a 5000</option>
                                         <option value="5000 en adelante">5000 en adelante</option>
@@ -444,7 +438,7 @@ $t = function ($key) {
                                         <!--=====================================
                                 BOTÓN PARA AGREGAR VEHICULO
                                 ======================================-->
-                                        <div class="form-group row">
+                                        <div class="form-group row d-none">
                                             <button type="button" class="btn btn-default btnAgregarVehiculo">Agregar
                                                 Vehiculo</button>
                                             <input type="hidden" id="listaVehiculos" name="listaVehiculos">
@@ -463,7 +457,7 @@ $t = function ($key) {
                                         <!--=====================================
                                 BOTÓN PARA AGREGAR HOGAR
                                 ======================================-->
-                                        <div class="form-group row">
+                                        <div class="form-group row d-none">
                                             <button type="button" class="btn btn-default btnAgregarHogar">Agregar
                                                 Hogar</button>
                                             <input type="hidden" id="listaHogares" name="listaHogares">
@@ -507,13 +501,10 @@ $t = function ($key) {
                                         <!-- ENTRADA PARA SELECCIONAR ESTADO BAYER -->
                                         <div class="form-group">
                                             <label for="cbm_estado_bayer" class="control-label"
-                                                style="text-align: right;">ESTATUS<font color="red"> *</font>
-                                            </label>
+                                                style="text-align: right;">ESTATUS</label>
                                             <select class="form-control cbm_estado_bayer" name="state"
                                                 id="cbm_estado_bayer" style="width:100%;">
-                                                <option value=""><?php echo $t('messages.select_option', 'Select..'); ?></option>
-                                                <option value="ABIERTO">ABIERTO</option>
-                                                <!-- <option value="NO CONTESTA">NO CONTESTA</option> -->
+                                                <option value="ABIERTO" selected>ABIERTO</option>
                                                 <option value="NO INTERESADO">NO INTERESADO</option>
                                                 <option value="INTERESADO">INTERESADO</option>
                                                 <option value="INTERESADO ALTO">INTERESADO ALTO</option>

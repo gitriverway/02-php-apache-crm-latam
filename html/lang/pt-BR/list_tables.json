@@ -1,8 +1,8 @@
 {
-    "origin_mqp": "MQP",
-    "origin_friend": "AMIGO",
-    "origin_chat": "CHAT",
-    "origin_others": "OUTROS",
+    "origin_mqp": "Redes Sociais",
+    "origin_friend": "Indicação",
+    "origin_chat": "Whatsapp",
+    "origin_others": "Outro",
     "seller": "Vendedor",
     "id_card": "CPF/CNPJ",
     "name": "NOME",

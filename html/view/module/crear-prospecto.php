@@ -56,9 +56,8 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                     <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen">
-                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?>
+                                        <option value="MQP" selected><?php echo $t('list_tables.origin_mqp'); ?>
                                         </option>
-                                        <option value="MQP"><?php echo $t('list_tables.origin_mqp'); ?></option>
                                         <option value="AMIGO"><?php echo $t('list_tables.origin_friend'); ?></option>
                                         <option value="CHAT"><?php echo $t('list_tables.origin_chat'); ?></option>
                                         <option value="OTROS"><?php echo $t('list_tables.origin_others'); ?></option>
@@ -189,9 +188,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         style="text-align: right;"><?php echo $t("form.payment_frequency"); ?></label>
                                     <select class="form-control cbm_tipo_pago" name="state" id="cbm_tipo_pago"
                                         style="width:100%;">
-                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?>
-                                        </option>
-                                        <option value="MENSUAL"><?php echo $t("form.month"); ?></option>
+                                        <option value="MENSUAL" selected><?php echo $t("form.month"); ?></option>
                                         <option value="TRIMESTRAL"><?php echo $t("form.quarterly"); ?></option>
                                         <option value="SEMESTRAL"><?php echo $t("form.semi_annual"); ?></option>
                                         <option value="ANUAL"><?php echo $t("form.annual"); ?></option>
@@ -205,14 +202,11 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         style="text-align: right;"><?php echo $t("form.payment_method"); ?></label>
                                     <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                         style="width:100%;">
-                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?>
+                                        <option value="DEBITO BANCARIO" selected><?php echo $t("form.bank_debit"); ?>
                                         </option>
-                                        <option value="DEBITO BANCARIO"><?php echo $t("form.bank_debit"); ?></option>
                                         <option value="TRANSFERENCIA BANCARIO"><?php echo $t("form.bank_transfer"); ?>
                                         </option>
-                                        </option>
                                         <option value="TARJETA DE CREDITO"><?php echo $t("form.credit_card"); ?>
-                                        </option>
                                         </option>
                                     </select>
                                 </div>
@@ -235,8 +229,6 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <div class="form-group">
                                     <label for="txt_documento" class="control-label"
                                         style="text-align: right;"><?php echo $t('forms.id_card'); ?></label>
-                                    <font color="red"> *</font>
-                                    </label>
                                     <div class="input-group">
                                         <input type="text" class="form-control validarNumerosLetras" id="txt_documento"
                                             placeholder="<?php echo $t('forms.enter_id_card'); ?>" autocomplete="off"
@@ -265,13 +257,10 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <!-- ENTRADA PARA GENERO-->
                                 <div class="form-group">
                                     <label for="genero" class="control-label" style="text-align: right;">
-                                        <?php echo $t("form.gender"); ?> <font color="red"> *
-                                        </font>
+                                        <?php echo $t("form.gender"); ?>
                                     </label>
-                                    <select id="genero" name="genero" class="form-control genero" required>
-                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?>
-                                        </option>
-                                        <option value="masculino"><?php echo $t("form.male"); ?></option>
+                                    <select id="genero" name="genero" class="form-control genero">
+                                        <option value="masculino" selected><?php echo $t("form.male"); ?></option>
                                         <option value="femenino"><?php echo $t("form.female"); ?></option>
                                     </select>
                                 </div>
@@ -280,14 +269,9 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <!-- ENTRADA PARA ESTADO CIVIL -->
                                 <div class="form-group">
                                     <label for="estado_civil" class="control-label"
-                                        style="text-align: right;"><?php echo $t("form.civil_status"); ?><font
-                                            color="red"> *
-                                        </font>
-                                    </label>
-                                    <select id="estado_civil" name="estado_civil" class="form-control" required>
-                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?>
-                                        </option>
-                                        <option value="SOLTERO"><?php echo $t("form.single"); ?></option>
+                                        style="text-align: right;"><?php echo $t("form.civil_status"); ?></label>
+                                    <select id="estado_civil" name="estado_civil" class="form-control">
+                                        <option value="SOLTERO" selected><?php echo $t("form.single"); ?></option>
                                         <option value="CASADO"><?php echo $t("form.married"); ?></option>
                                         <option value="DIVORCIADO"><?php echo $t("form.divorced"); ?></option>
                                         <option value="VIUDO"><?php echo $t("form.widowed"); ?></option>
@@ -345,7 +329,8 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <!-- ENTRADA PARA SELECCIONAR PROVINCIA -->
                                 <div class="form-group">
                                     <label for="cbm_provincia" class="control-label"
-                                        style="text-align: right;"><?php echo $t('list_tables.province'); ?><font color="red"> *</font></label>
+                                        style="text-align: right;"><?php echo $t('list_tables.province'); ?><font
+                                            color="red"> *</font></label>
                                     <select class="form-control cbm_provincia" name="state" id="cbm_provincia">
                                     </select>
                                 </div>
@@ -377,8 +362,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <!-- ENTRADA PARA OCUPACION -->
                                 <div class="form-group">
                                     <label for="txt_ocupacion" class="control-label"
-                                        style="text-align: right;"><?php echo $t('list_tables.profession'); ?><font color="red"> *</font>
-                                    </label>
+                                        style="text-align: right;"><?php echo $t('list_tables.profession'); ?></label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ocupacion"
                                         placeholder="<?php echo $t('forms.enter_occupation'); ?>" maxlength="50"
                                         autocomplete="off" style="text-transform: uppercase">
@@ -389,13 +373,10 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <!-- ENTRADA PARA INGRESOS -->
                                 <div class="form-group">
                                     <label for="cbm_ingreso_mensual" class="control-label"
-                                        style="text-align: right;"><?php echo $t('list_tables.income'); ?><font color="red"> *</font>
-                                    </label>
+                                        style="text-align: right;"><?php echo $t('list_tables.income'); ?></label>
                                     <select class="form-control cbm_ingreso_mensual" name="state"
                                         id="cbm_ingreso_mensual" style="width:100%;">
-                                        <option value=""><?php echo $t('messages.select_option', 'Select..'); ?>
-                                        </option>
-                                        <option value="0 a 1000"><?php echo $t('forms.0_to_1000'); ?></option>
+                                        <option value="0 a 1000" selected><?php echo $t('forms.0_to_1000'); ?></option>
                                         <option value="1000 a 3000"><?php echo $t('forms.1000_to_3000'); ?></option>
                                         <option value="3000 a 5000"><?php echo $t('forms.3000_to_5000'); ?></option>
                                         <option value="5000 en adelante"><?php echo $t('forms.more_than_5000'); ?>
@@ -442,7 +423,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <!--=====================================
                                 BOTÓN PARA AGREGAR VEHICULO
                                 ======================================-->
-                                        <div class="form-group row">
+                                        <div class="form-group row d-none">
                                             <button type="button"
                                                 class="btn btn-default btnAgregarVehiculo"><?php echo $t("form.add_vehicle"); ?></button>
                                             <input type="hidden" id="listaVehiculos" name="listaVehiculos">
@@ -461,7 +442,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <!--=====================================
                                 BOTÓN PARA AGREGAR HOGAR
                                 ======================================-->
-                                        <div class="form-group row">
+                                        <div class="form-group row d-none">
                                             <button type="button"
                                                 class="btn btn-default btnAgregarHogar"><?php echo $t("form.add_home"); ?></button>
                                             <input type="hidden" id="listaHogares" name="listaHogares">
@@ -480,7 +461,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <!--=====================================
                                 BOTÓN PARA AGREGAR OBSERACIONES
                                 ======================================-->
-                                        <div class="form-group row">
+                                        <div class="form-group row d-none">
                                             <button type="button"
                                                 class="btn btn-default btnAgregarObservacion"><?php echo $t("form.add_observation"); ?></button>
                                             <input type="hidden" id="listaObservaciones" name="listaObservaciones">
@@ -505,15 +486,10 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <!-- ENTRADA PARA SELECCIONAR ESTADO BAYER -->
                                         <div class="form-group">
                                             <label for="cbm_estado_bayer" class="control-label"
-                                                style="text-align: right;"><?php echo $t("form.status"); ?><font
-                                                    color="red"> *</font>
-                                            </label>
+                                                style="text-align: right;"><?php echo $t("form.status"); ?></label>
                                             <select class="form-control cbm_estado_bayer" name="state"
                                                 id="cbm_estado_bayer" style="width:100%;">
-                                                <option value=""><?php echo $t('messages.select_option', 'Select..'); ?>
-                                                </option>
-                                                <option value="ABIERTO"><?php echo $t("form.open"); ?></option>
-                                                <!-- <option value="NO CONTESTA">NO CONTESTA</option> -->
+                                                <option value="ABIERTO" selected><?php echo $t("form.open"); ?></option>
                                                 <option value="NO INTERESADO"><?php echo $t("form.no_interested"); ?>
                                                 </option>
                                                 <option value="INTERESADO"><?php echo $t("form.interested"); ?></option>

@@ -71,7 +71,8 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <input type="hidden" id="txt_idProspecto" value="<?php echo $_GET["idProspecto"]; ?>">
                                 <!-- ENTRADA PARA EL ORIGEN CLIENTE -->
                                 <div class="form-group">
-                                    <label for="cbm_origen" class=" control-label" style="text-align: right;"><?php echo $t('forms.origin'); ?>
+                                    <label for="cbm_origen" class=" control-label"
+                                        style="text-align: right;"><?php echo $t('forms.origin'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen"
@@ -87,7 +88,8 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA EL NUEVO RAMO -->
                                 <div class="form-group">
-                                    <label for="txt_origen_web" class="control-label" style="text-align: right;"><?php echo $t('forms.origin'); ?>
+                                    <label for="txt_origen_web" class="control-label"
+                                        style="text-align: right;"><?php echo $t('forms.origin'); ?>
                                         WEB
                                         <font color="red"> *</font>
                                     </label>
@@ -98,7 +100,8 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA LOS RAMOS -->
                                 <div class="form-group">
-                                    <label for="cbm_categoria" class=" control-label" style="text-align: right;"><?php echo $t('forms.categories'); ?>
+                                    <label for="cbm_categoria" class=" control-label"
+                                        style="text-align: right;"><?php echo $t('forms.categories'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_categoria" name="state" id="cbm_categoria">
@@ -289,7 +292,8 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetrasDecimal" id="txt_email"
-                                        placeholder="<?php echo $t('forms.enter_email'); ?>" maxlength="50" autocomplete="off">
+                                        placeholder="<?php echo $t('forms.enter_email'); ?>" maxlength="50"
+                                        autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -299,7 +303,8 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_telefono"
-                                        placeholder="<?php echo $t('forms.enter_phone'); ?>" maxlength="50" autocomplete="off">
+                                        placeholder="<?php echo $t('forms.enter_phone'); ?>" maxlength="50"
+                                        autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -318,8 +323,8 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
-                                        placeholder="<?php echo $t('forms.enter_city'); ?>" maxlength="100" autocomplete="off"
-                                        style="text-transform: uppercase">
+                                        placeholder="<?php echo $t('forms.enter_city'); ?>" maxlength="100"
+                                        autocomplete="off" style="text-transform: uppercase">
                                 </div>
                             </div>
                             <div class="col-sm-12">
@@ -403,7 +408,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <!--=====================================
                                 BOTÓN PARA AGREGAR VEHICULO
                                 ======================================-->
-                                        <div class="form-group row">
+                                        <div class="form-group row d-none">
                                             <input type="hidden" id="listaVehiculos" name="listaVehiculos">
                                         </div>
                                         <!--=====================================

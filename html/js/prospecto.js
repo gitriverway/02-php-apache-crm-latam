@@ -1335,17 +1335,6 @@ function Registrar_Cliente() {
     );
   }
 
-  if (genero.length == 0) {
-    return Swal.fire(
-      t("messages.warning", "Warning Message"),
-      t(
-        "messages.fill_field_prospect_gender",
-        "Fill in the prospect gender field",
-      ),
-      "warning",
-    );
-  }
-
   if (provincia < 1) {
     return Swal.fire(
       t("messages.warning", "Warning Message"),
