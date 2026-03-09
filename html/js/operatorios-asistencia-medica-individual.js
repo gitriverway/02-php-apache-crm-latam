@@ -292,18 +292,18 @@ $(".subirDocumento").change(function () {
 
     Swal.fire({
       icon: "error",
-      title: "Error al subir el documento",
-      text: "¡El documento debe estar en formato PDF!",
-      confirmButtonText: "¡Cerrar!",
+      title: t("messages.error_uploading_document", "Error uploading document"),
+      text: t("messages.document_must_be_pdf", "The document must be in PDF format!"),
+      confirmButtonText: t("messages.close", "Close"),
     });
   } else if (documento["size"] > maxSizeBytes) {
     $(".subirDocumento").val("");
 
     Swal.fire({
       icon: "error",
-      title: "Error al subir el documento",
-      text: "¡El documento no debe pesar más de " + maxSizeMB + "MB!",
-      confirmButtonText: "¡Cerrar!",
+      title: t("messages.error_uploading_document", "Error uploading document"),
+      text: t("messages.document_exceeds_max_size", "The document must not exceed {size}MB!").replace('{size}', maxSizeMB),
+      confirmButtonText: t("messages.close", "Close"),
     });
   }
 });
@@ -2028,18 +2028,18 @@ $("#txt_documento_operatorio").change(function () {
 
     Swal.fire({
       icon: "error",
-      title: "Error al subir el documento",
-      text: "¡El documento debe estar en formato PDF!",
-      confirmButtonText: "¡Cerrar!",
+      title: t("messages.error_uploading_document", "Error uploading document"),
+      text: t("messages.document_must_be_pdf", "The document must be in PDF format!"),
+      confirmButtonText: t("messages.close", "Close"),
     });
   } else if (documento["size"] > 25000000) {
     $("#txt_documento_operatorio").val("");
 
     Swal.fire({
       icon: "error",
-      title: "Error al subir el documento",
-      text: "¡El documento no debe pesar más de 50MB!",
-      confirmButtonText: "¡Cerrar!",
+      title: t("messages.error_uploading_document", "Error uploading document"),
+      text: t("messages.document_exceeds_max_size", "The document must not exceed {size}MB!").replace('{size}', '50'),
+      confirmButtonText: t("messages.close", "Close"),
     });
   }
 });

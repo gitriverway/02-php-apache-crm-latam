@@ -98,5 +98,22 @@
     "welcome_employee_content": "Welcome Employee Content",
     "welcome_ip_blocking_content": "Welcome IP Blocking Content",
     "welcome_user_content": "Welcome User Content",
-    "year": "Year"
+    "year": "Year",
+    "eliminated": "Deleted!",
+    "oops": "Oops...!",
+    "document_deleted": "The Document has been deleted.",
+    "document_not_deleted": "The Document could not be deleted.",
+    "error_uploading_document": "Error uploading document",
+    "error_changing_language": "Error changing language",
+    "success": "success",
+    "warning": "warning",
+    "error": "error",
+    "document_must_be_pdf": "The document must be in PDF format!",
+    "document_exceeds_max_size": "The document must not exceed {size}MB!",
+    "close": "Close",
+    "are_you_sure": "Are you sure?",
+    "you_want_to_delete": "Are you sure you want to delete this item?",
+    "you_wont_be_able_to_revert": "You won't be able to revert this!",
+    "yes_delete": "Yes, delete it!",
+    "yes_change_state": "Yes, change state!"
 }

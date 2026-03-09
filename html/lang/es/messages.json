@@ -98,5 +98,22 @@
     "welcome_employee_content": "Bienvenido Contenido Empleado",
     "welcome_ip_blocking_content": "Bienvenido Contenido Bloqueo IP",
     "welcome_user_content": "Bienvenido Contenido Usuario",
-    "year": "Año"
+    "year": "Año",
+    "eliminated": "¡Eliminado!",
+    "oops": "¡Oops...!",
+    "document_deleted": "El Documento ha sido eliminado.",
+    "document_not_deleted": "El Documento no pudo ser eliminado.",
+    "error_uploading_document": "Error al subir el documento",
+    "error_changing_language": "Error al cambiar el idioma",
+    "success": "success",
+    "warning": "warning",
+    "error": "error",
+    "document_must_be_pdf": "¡El documento debe estar en formato PDF!",
+    "document_exceeds_max_size": "¡El documento no debe pesar más de {size}MB!",
+    "close": "¡Cerrar!",
+    "are_you_sure": "¿Está seguro?",
+    "you_want_to_delete": "¿Está seguro de que desea eliminar este elemento?",
+    "you_wont_be_able_to_revert": "¡No podrás revertir esto!",
+    "yes_delete": "¡Sí, eliminarlo!",
+    "yes_change_state": "¡Sí, cambiar estado!"
 }

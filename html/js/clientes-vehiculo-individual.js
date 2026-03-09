@@ -221,13 +221,13 @@ $("#tabla_lista_contratos").on(
     var documentoRuta = $(this).attr("documentoRuta");
 
     Swal.fire({
-      title: "Estas Seguro?",
-      text: "No podrás revertir esto!",
+      title: t("messages.are_you_sure", "Are you sure?"),
+      text: t("messages.you_wont_be_able_to_revert", "You won't be able to revert this!"),
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Si, eliminarlo!",
+      confirmButtonText: t("messages.yes_delete", "Yes, delete it!"),
     }).then((result) => {
       if (result.isConfirmed) {
         eliminar_documento_emision(
@@ -262,10 +262,10 @@ function eliminar_documento_emision(
     processData: false,
     success: function (respuesta) {
       if (respuesta == 1) {
-        Swal.fire("Eliminado!", "El Documento ha sido eliminado.", "success");
+        Swal.fire(t("messages.eliminated", "Eliminated!"), t("messages.document_deleted", "The Document has been deleted."), t("messages.success", "success"));
         table_documentos.ajax.reload();
       } else {
-        Swal.fire("Oops...!", "El Documento no pudo ser eliminado.", "error");
+        Swal.fire(t("messages.oops", "Oops...!"), t("messages.document_not_deleted", "The Document could not be deleted."), t("messages.error", "error"));
       }
       return respuesta;
     },
@@ -2111,7 +2111,7 @@ $('#agregarContrato [type="file"]').on("change", function () {
 
     Swal.fire({
       icon: "error",
-      title: "Error al subir el documento",
+      title: t("messages.error_uploading_document", "Error uploading document"),
       text: "¡El documento debe estar en formato PDF!",
       confirmButtonText: "¡Cerrar!",
     });
@@ -2120,7 +2120,7 @@ $('#agregarContrato [type="file"]').on("change", function () {
 
     Swal.fire({
       icon: "error",
-      title: "Error al subir el documento",
+      title: t("messages.error_uploading_document", "Error uploading document"),
       text: "¡El documento no debe pesar más de " + maxSizeMB + "MB!",
       confirmButtonText: "¡Cerrar!",
     });

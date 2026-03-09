@@ -158,18 +158,18 @@ $(".subirDocumento").change(function () {
 
     Swal.fire({
       icon: "error",
-      title: "Error al subir el documento",
-      text: "¡El documento debe estar en formato PDF!",
-      confirmButtonText: "¡Cerrar!",
+      title: t("messages.error_uploading_document", "Error uploading document"),
+      text: t("messages.document_must_be_pdf", "The document must be in PDF format!"),
+      confirmButtonText: t("messages.close", "Close"),
     });
   } else if (documento["size"] > maxSizeBytes) {
     $(".subirDocumento").val("");
 
     Swal.fire({
       icon: "error",
-      title: "Error al subir el documento",
-      text: "¡El documento no debe pesar más de " + maxSizeMB + "MB!",
-      confirmButtonText: "¡Cerrar!",
+      title: t("messages.error_uploading_document", "Error uploading document"),
+      text: t("messages.document_exceeds_max_size", "The document must not exceed {size}MB!").replace('{size}', maxSizeMB),
+      confirmButtonText: t("messages.close", "Close"),
     });
   }
 });
@@ -375,13 +375,13 @@ $("#tabla-listar-reembolsos-asistencia-medica-individual").on(
 
 function reactivarReembolsoAnulado(idReembolso, estado) {
   Swal.fire({
-    title: "Está seguro?",
-    text: "No podrás revertir esto.!",
+    title: t("messages.are_you_sure", "Are you sure?"),
+    text: t("messages.you_wont_be_able_to_revert", "You won't be able to revert this!"),
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Si, desea cambiar estado!",
+    confirmButtonText: t("messages.yes_change_state", "Yes, change state!"),
   }).then((result) => {
     if (result.isConfirmed) {
       var datos = new FormData();

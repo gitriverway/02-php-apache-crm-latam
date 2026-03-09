@@ -98,5 +98,22 @@
     "welcome_employee_content": "Bem-vindo Conteúdo Funcionário",
     "welcome_ip_blocking_content": "Bem-vindo Conteúdo Bloqueio IP",
     "welcome_user_content": "Bem-vindo Conteúdo Usuário",
-    "year": "Ano"
+    "year": "Ano",
+    "eliminated": "Excluído!",
+    "oops": "Oops...!",
+    "document_deleted": "O Documento foi excluído.",
+    "document_not_deleted": "O Documento não pôde ser excluído.",
+    "error_uploading_document": "Erro ao enviar o documento",
+    "error_changing_language": "Erro ao alterar o idioma",
+    "success": "success",
+    "warning": "warning",
+    "error": "error",
+    "document_must_be_pdf": "O documento deve estar em formato PDF!",
+    "document_exceeds_max_size": "O documento não deve pesar mais de {size}MB!",
+    "close": "Fechar",
+    "are_you_sure": "Tem certeza?",
+    "you_want_to_delete": "Tem certeza de que deseja excluir este item?",
+    "you_wont_be_able_to_revert": "Você não podrá reverter isso!",
+    "yes_delete": "Sim, excluir!",
+    "yes_change_state": "Sim, mudar estado!"
 }
