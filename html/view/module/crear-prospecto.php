@@ -386,6 +386,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                 </div>
                 <!-- /.card -->
             </div>
+
             <div class="col-sm-12">
                 <!-- Default box -->
                 <div class="card card-primary" id="cardDependientes">
@@ -453,6 +454,25 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         </div>
 
                                     </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card -->
+            </div>
+
+            <div class="col-sm-12">
+                <!-- Default box -->
+                <div class="card card-primary" id="cardSeguimiento">
+                    <div class="card-header">
+                        <h3 class="card-title"><?php echo $t('titles.information_follow_up'); ?></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
 
                                     <div class="col-sm-12">
                                         <!--=====================================
