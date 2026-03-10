@@ -149,7 +149,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
         <div class="modal-content" id="modalValidarDocumentosSiniestro">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">VALIDAR DOCUMENTOS SINIESTRO - <span
+                    <h5 class="modal-title">VALIDAR <?php echo $t('form.documents'); ?> SINIESTRO - <span
                             id="modalModificarSiniestroTransporte"></span>
                     </h5>
                 </div>
@@ -360,7 +360,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             </label>
                             <textarea class="form-control observaciones_siniestro validarNumerosLetrasDecimal"
                                 id="txt_observaciones_siniestro" name="txt_observaciones_siniestro" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                         </div>
                         <input type="hidden" id="listaValidarDatosSiniestro">
                         <input type="hidden" id="listaObservacionesDatosSiniestro">
@@ -411,7 +411,7 @@ MODAL AGREGAR OBSERVACION ADICIONAL SINIESTRO
                                 class="form-control observaciones_adicionales_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_adicionales_seguimiento_siniestro"
                                 name="txt_observaciones_adicionales_seguimiento_siniestro" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesAdicionalesSeguimientosSiniestro">
                             <input type="hidden" id="listaObservacionesAdicionalesSeguimientosSiniestroAnterior">
                         </div>
@@ -462,13 +462,13 @@ MODAL AGREGAR SEGUIMIENTO SINIESTRO
                             <textarea class="form-control observaciones_ajuste_autorizacion validarNumerosLetrasDecimal"
                                 id="txt_observaciones_ajuste_autorizacion_siniestro"
                                 name="txt_observaciones_ajuste_autorizacion_siniestro" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesAjusteAutorizacionSiniestro">
                             <input type="hidden" id="listaObservacionesAjusteAutorizacionSiniestroAnterior">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_siniestro_ajuste_autorizacion" class="control-label"
-                                style="text-align: right;">DOCUMENTOS REQUERIDOS
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> REQUERIDOS
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -542,13 +542,13 @@ MODAL AGREGAR SEGUIMIENTO SINIESTRO
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_seguimiento_siniestro"
                                 name="txt_observaciones_seguimiento_siniestro" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesSeguimientosSiniestro">
                             <input type="hidden" id="listaObservacionesSeguimientosSiniestroAnterior">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_siniestro_requerimiento_documento_seguimiento"
-                                class="control-label" style="text-align: right;">DOCUMENTOS REQUERIDOS
+                                class="control-label" style="text-align: right;"><?php echo $t('form.documents'); ?> REQUERIDOS
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -603,13 +603,13 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO SINIESTRO
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_documento_seguimiento_siniestro"
                                 name="txt_observaciones_documento_seguimiento_siniestro" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesDocumentoSeguimientosSiniestro">
                             <input type="hidden" id="listaObservacionesDocumentoSeguimientosSiniestroAnterior">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_siniestro_documento_seguimiento" class="control-label"
-                                style="text-align: right;">DOCUMENTOS ADICIONALES
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> ADICIONALES
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -673,8 +673,8 @@ MODAL AGREGAR LIQUIDACION SINIESTRO
                             </div>
                         </div>
                         <div class="form-group col-12 col-lg-4">
-                            <label for="txt_valor_deducible" class="control-label" style="text-align: right;">VALOR
-                                DEDUCIBLE
+                            <label for="txt_valor_deducible" class="control-label" style="text-align: right;"><?php echo $t('form.value'); ?>
+                                <?php echo $t('form.deductible'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -749,13 +749,13 @@ MODAL AGREGAR LIQUIDACION SINIESTRO
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_liquidacion_siniestro"
                                 name="txt_observaciones_liquidacion_siniestro" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesLiquidacionSiniestro">
                             <input type="hidden" id="listaObservacionesLiquidacionSiniestroAnterior">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_siniestro_documento_liquidacion" class="control-label"
-                                style="text-align: right;">DOCUMENTOS LIQUIDACI&Oacute;N
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> LIQUIDACI&Oacute;N
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -798,7 +798,7 @@ MODAL AGREGAR OBSERVACION ANULACION SINIESTRO
                             </label>
                             <textarea class="form-control observaciones_anulacion validarNumerosLetrasDecimal"
                                 id="txt_observaciones_anulacion_siniestro" name="txt_observaciones_anulacion_siniestro"
-                                cols="20" rows="4" placeholder="Ingresar Comentarios"></textarea>
+                                cols="20" rows="4" placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesAnulacionSiniestro">
                             <input type="hidden" id="listaObservacionesAnulacionSiniestroAnterior">
                         </div>
@@ -845,7 +845,7 @@ MODAL INGRESAR NUEVO SINIESTRO
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="txt_contrato_aplicar"
-                                    name="txt_contrato_aplicar" placeholder="CONTRATO" style="text-transform: uppercase"
+                                    name="txt_contrato_aplicar" placeholder="<?php echo $t('form.contract'); ?>" style="text-transform: uppercase"
                                     disabled>
                                 <input type="hidden" id="txt_idBayer">
                                 <input type="hidden" id="txt_idContrato">
@@ -871,7 +871,7 @@ MODAL INGRESAR NUEVO SINIESTRO
                             <div class="input-group">
                                 <input type="text" class="form-control lugar_siniestro validarNumerosLetrasDecimal"
                                     id="txt_lugar_siniestro" name="txt_lugar_siniestro"
-                                    placeholder="LUGAR DEL SINIESTRO" style="text-transform: uppercase">
+                                    placeholder="<?php echo $t('form.claim_place'); ?>" style="text-transform: uppercase">
                             </div>
                         </div>
                         <div class="form-group col-12">
@@ -881,12 +881,12 @@ MODAL INGRESAR NUEVO SINIESTRO
                             </label>
                             <textarea class="form-control detalle_siniestro validarNumerosLetrasDecimal"
                                 id="txt_detalle_siniestro" name="txt_detalle_siniestro" cols="20" rows="4"
-                                placeholder="Ingresar Diagnostico" style="text-transform: uppercase"></textarea>
+                                placeholder="<?php echo $t('form.enter_diagnosis'); ?>" style="text-transform: uppercase"></textarea>
                         </div>
 
                         <div class="form-group col-12">
                             <label for="txt_documento_siniestro" class="control-label"
-                                style="text-align: right;">DOCUMENTOS
+                                style="text-align: right;"><?php echo $t('form.documents'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control" id="txt_documento_siniestro"

@@ -131,7 +131,7 @@ MODAL INGRESAR NUEVO OPERATORIO
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="txt_contrato_aplicar"
-                                    name="txt_contrato_aplicar" placeholder="CONTRATO" style="text-transform: uppercase"
+                                    name="txt_contrato_aplicar" placeholder="<?php echo $t('form.contract'); ?>" style="text-transform: uppercase"
                                     disabled>
                                 <input type="hidden" id="txt_idBayer">
                                 <input type="hidden" id="txt_idContrato">
@@ -164,7 +164,7 @@ MODAL INGRESAR NUEVO OPERATORIO
                         </div>
                         <div class="form-group col-12 col-lg-6">
                             <label for="txt_lugar_hospitalario_operatorio" class="control-label"
-                                style="text-align: right;">LUGAR DE HOSPITALIZACIÓN
+                                style="text-align: right;"><?php echo $t('form.hospitalization_place'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -185,25 +185,25 @@ MODAL INGRESAR NUEVO OPERATORIO
                         </div> -->
                         <div class="form-group col-12">
                             <label for="txt_diagnostico_operatorio" class="control-label"
-                                style="text-align: right;">DIAGNÓSTICO
+                                style="text-align: right;"><?php echo $t('form.diagnosis'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <textarea class="form-control diagnostico_operatorio validarNumerosLetrasDecimal"
                                 id="txt_diagnostico_operatorio" name="txt_diagnostico_operatorio" cols="20" rows="2"
-                                placeholder="Ingresar Diagnostico"></textarea>
+                                placeholder="<?php echo $t('form.enter_diagnosis'); ?>"></textarea>
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_lugar_procedimiento_operatorio" class="control-label"
-                                style="text-align: right;">LUGAR DEL PROCEDIMIENTO
+                                style="text-align: right;"><?php echo $t('form.procedure_place'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <textarea class="form-control lugar_procedimiento_operatorio validarNumerosLetrasDecimal"
                                 id="txt_lugar_procedimiento_operatorio" name="txt_lugar_procedimiento_operatorio"
-                                cols="20" rows="2" placeholder="Ingresar el lugar del procedimiento"></textarea>
+                                cols="20" rows="2" placeholder="<?php echo $t('form.procedure_place'); ?>"></textarea>
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_fecha_procedimiento_operatorio" class="control-label"
-                                style="text-align: right;">FECHA DEL PROCEDIMIENTO
+                                style="text-align: right;"><?php echo $t('form.procedure_date'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="date" class="form-control fecha_procedimiento_operatorio"
@@ -211,7 +211,7 @@ MODAL INGRESAR NUEVO OPERATORIO
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_operatorio" class="control-label"
-                                style="text-align: right;">DOCUMENTOS
+                                style="text-align: right;"><?php echo $t('form.documents'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control" id="txt_documento_operatorio"

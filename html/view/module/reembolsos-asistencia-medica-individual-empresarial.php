@@ -126,7 +126,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
         <div class="modal-content" id="modalValidarDocumentosReembolso">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">VALIDAR DOCUMENTOS REEMBOLSO - <span id="validarNombrePaciente"></span></h5>
+                    <h5 class="modal-title">VALIDAR <?php echo $t('form.documents'); ?> REEMBOLSO - <span id="validarNombrePaciente"></span></h5>
                 </div>
                 <div class="modal-body">
                     <div class="row validarDatosReembolso">
@@ -477,7 +477,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             </label>
                             <textarea class="form-control observaciones_reembolso validarNumerosLetrasDecimal"
                                 id="txt_observaciones_reembolso" name="txt_observaciones_reembolso" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                         </div>
                         <input type="hidden" id="listaValidarDatosReembolso">
                         <input type="hidden" id="listaObservacionesDatosReembolso">
@@ -528,7 +528,7 @@ MODAL AGREGAR OBSERVACION ADICIONAL REEMBOLSO
                                 class="form-control observaciones_adicionales_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_adicionales_seguimiento_reembolso"
                                 name="txt_observaciones_adicionales_seguimiento_reembolso" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesAdicionalesSeguimientosReembolso">
                             <input type="hidden" id="listaObservacionesAdicionalesSeguimientosReembolsoAnterior">
                         </div>
@@ -607,13 +607,13 @@ MODAL AGREGAR SEGUIMIENTO REEMBOLSO
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_seguimiento_reembolso"
                                 name="txt_observaciones_seguimiento_reembolso" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesSeguimientosReembolso">
                             <input type="hidden" id="listaObservacionesSeguimientosReembolsoAnterior">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_reembolso_documento_pedido_aseguradora" class="control-label"
-                                style="text-align: right;">DOCUMENTOS ADICIONALES
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> ADICIONALES
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -691,13 +691,13 @@ MODAL AGREGAR SEGUIMIENTO REEMBOLSO
                             <textarea class="form-control observaciones_seguimiento_1 validarNumerosLetrasDecimal"
                                 id="txt_observaciones_seguimiento_reembolso_1"
                                 name="txt_observaciones_seguimiento_reembolso_1" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesSeguimientosReembolso_1">
                             <input type="hidden" id="listaObservacionesSeguimientosReembolsoAnterior_1">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_reembolso_documento_pedido_aseguradora_1" class="control-label"
-                                style="text-align: right;">DOCUMENTOS ADICIONALES
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> ADICIONALES
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -753,13 +753,13 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO REEMBOLSO
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_documento_seguimiento_reembolso"
                                 name="txt_observaciones_documento_seguimiento_reembolso" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesDocumentoSeguimientosReembolso">
                             <input type="hidden" id="listaObservacionesDocumentoSeguimientosReembolsoAnterior">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_reembolso_documento_seguimiento" class="control-label"
-                                style="text-align: right;">DOCUMENTOS ADICIONALES
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> ADICIONALES
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -813,13 +813,13 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO REEMBOLSO
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_documento_seguimiento_reembolso_1"
                                 name="txt_observaciones_documento_seguimiento_reembolso_1" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesDocumentoSeguimientosReembolso_1">
                             <input type="hidden" id="listaObservacionesDocumentoSeguimientosReembolsoAnterior_1">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_reembolso_documento_seguimiento_1" class="control-label"
-                                style="text-align: right;">DOCUMENTOS ADICIONALES
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> ADICIONALES
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -882,7 +882,7 @@ MODAL AGREGAR LIQUIDACION REEMBOLSO
                         </div>
                         <div class="form-group col-12 col-lg-6">
                             <label for="txt_deducible_contrato_dependiente" class="control-label"
-                                style="text-align: right;">DEDUCIBLE CONTRATADO
+                                style="text-align: right;"><?php echo $t('form.deductible_contracted'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -895,8 +895,8 @@ MODAL AGREGAR LIQUIDACION REEMBOLSO
                             </div>
                         </div>
                         <div class="form-group col-12 col-lg-6">
-                            <label for="txt_saldo_deducible" class="control-label" style="text-align: right;">SALDO
-                                DEDUCIBLE
+                            <label for="txt_saldo_deducible" class="control-label"                                 style="text-align: right;"><?php echo $t('form.balance'); ?>
+                                <?php echo $t('form.deductible'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -937,7 +937,7 @@ MODAL AGREGAR LIQUIDACION REEMBOLSO
                         </div>
 
                         <div class="form-group col-12 col-lg-4">
-                            <label for="txt_valor_deducible" class="control-label" style="text-align: right;">DEDUCIBLE
+                            <label for="txt_valor_deducible" class="control-label" style="text-align: right;"><?php echo $t('form.deductible'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -950,7 +950,7 @@ MODAL AGREGAR LIQUIDACION REEMBOLSO
                         </div>
 
                         <div class="form-group col-12 col-lg-4">
-                            <label for="txt_valor_copago" class="control-label" style="text-align: right;">VALOR COPAGO
+                            <label for="txt_valor_copago" class="control-label" style="text-align: right;"><?php echo $t('form.copay_value'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -982,13 +982,13 @@ MODAL AGREGAR LIQUIDACION REEMBOLSO
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_liquidacion_reembolso"
                                 name="txt_observaciones_liquidacion_reembolso" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesLiquidacionReembolso">
                             <input type="hidden" id="listaObservacionesLiquidacionReembolsoAnterior">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_reembolso_documento_liquidacion" class="control-label"
-                                style="text-align: right;">DOCUMENTOS LIQUIDACI&Oacute;N
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> LIQUIDACI&Oacute;N
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -1030,7 +1030,7 @@ MODAL AGREGAR OBSERVACION ANULACION REEMBOLSO
                             </label>
                             <textarea class="form-control observaciones_anulacion validarNumerosLetrasDecimal"
                                 id="txt_observaciones_anulacion_reembolso" name="txt_observaciones_anulacion_reembolso"
-                                cols="20" rows="4" placeholder="Ingresar Comentarios"></textarea>
+                                cols="20" rows="4" placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesAnulacionReembolso">
                             <input type="hidden" id="listaObservacionesAnulacionReembolsoAnterior">
                         </div>
@@ -1078,7 +1078,7 @@ MODAL INGRESAR NUEVO REEMBOLSO
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="txt_contrato_aplicar"
-                                    name="txt_contrato_aplicar" placeholder="CONTRATO" style="text-transform: uppercase"
+                                    name="txt_contrato_aplicar" placeholder="<?php echo $t('form.contract'); ?>" style="text-transform: uppercase"
                                     disabled>
                                 <input type="hidden" id="txt_idBayer">
                                 <input type="hidden" id="txt_idContrato">
@@ -1123,17 +1123,17 @@ MODAL INGRESAR NUEVO REEMBOLSO
                             </div>
                         </div>
                         <div class="form-group col-12">
-                            <label for="txt_diagnostico" class="control-label" style="text-align: right;">DIAGNÓSTICO
+                            <label for="txt_diagnostico" class="control-label" style="text-align: right;"><?php echo $t('form.diagnosis'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <textarea class="form-control diagnostico_reembolso validarNumerosLetrasDecimal"
                                 id="txt_diagnostico" name="txt_diagnostico" cols="20" rows="4"
-                                placeholder="Ingresar Diagnostico"></textarea>
+                                placeholder="<?php echo $t('form.enter_diagnosis'); ?>"></textarea>
                         </div>
 
                         <div class="form-group col-12">
                             <label for="txt_documento_reembolso" class="control-label"
-                                style="text-align: right;">DOCUMENTOS
+                                style="text-align: right;"><?php echo $t('form.documents'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control" id="txt_documento_reembolso"

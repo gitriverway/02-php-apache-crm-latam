@@ -263,7 +263,7 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA EMAIl -->
                                 <div class="form-group">
-                                    <label for="txt_email" class="control-label" style="text-align: right;">EMAIL
+                                    <label for="txt_email" class="control-label" style="text-align: right;"><?php echo $t('form.email'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetrasDecimal" id="txt_email"
@@ -275,7 +275,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA EMAIl -->
                                 <div class="form-group">
                                     <label for="txt_email_opcional" class="control-label"
-                                        style="text-align: right;">EMAIL (OPCIONAL)
+                                        style="text-align: right;"><?php echo $t('form.email'); ?> (OPCIONAL)
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetrasDecimal"
                                         id="txt_email_opcional" placeholder="<?php echo $t('forms.enter_email'); ?>"
@@ -344,7 +344,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA OCUPACION -->
                                 <div class="form-group">
                                     <label for="txt_ocupacion" class="control-label"
-                                        style="text-align: right;">PROFESI&Oacute;N
+                                        style="text-align: right;"><?php echo $t('form.profesion'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ocupacion"
@@ -506,7 +506,7 @@ $t = function ($key) {
                                         <!-- ENTRADA PARA SELECCIONAR ESTADO BAYER -->
                                         <div class="form-group">
                                             <label for="txt_fecha_seguimiento" class="control-label"
-                                                style="text-align: right;">SEGUIMIENTO SATIFACI&Oacute;N
+                                                style="text-align: right;"><?php echo $t('form.satisfaction_follow_up'); ?>
                                                 CLIENTE</label>
                                             <input type="date" class="form-control" id="txt_fecha_seguimiento"
                                                 id="txt_fecha_seguimiento">
@@ -600,7 +600,7 @@ $t = function ($key) {
                 <div class="modal-body">
                     <!-- ENTRADA PARA EL NOMBRE -->
                     <div class="form-group">
-                        <label for="txt_observacion" class="control-label" style="text-align: right;">OBSERVACI&Oacute;N
+                        <label for="txt_observacion" class="control-label" style="text-align: right;"><?php echo $t('form.observation'); ?>
                             <font color="red"> *</font>
                         </label>
                         <textarea class="form-control validarNumerosLetrasDecimal" id="txt_observacion"

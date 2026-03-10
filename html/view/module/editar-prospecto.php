@@ -314,7 +314,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA EDAD NACIMIENTO -->
                                 <div class="form-group">
                                     <label for="txt_edad_nacimiento" class="control-label"
-                                        style="text-align: right;">EDAD
+                                        style="text-align: right;"><?php echo $t('form.age'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="number" min="0" class="form-control" id="txt_edad_nacimiento"
@@ -324,7 +324,7 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA EMAIl -->
                                 <div class="form-group">
-                                    <label for="txt_email" class="control-label" style="text-align: right;">EMAIL
+                                    <label for="txt_email" class="control-label" style="text-align: right;"><?php echo $t('form.email'); ?>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetrasDecimal" id="txt_email"
                                         placeholder="<?php echo $t('messages.enter_email'); ?>" maxlength="50"
@@ -373,7 +373,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA OCUPACION -->
                                 <div class="form-group">
                                     <label for="txt_ocupacion" class="control-label"
-                                        style="text-align: right;">PROFESI&Oacute;N
+                                        style="text-align: right;"><?php echo $t('form.profesion'); ?>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ocupacion"
                                         placeholder="<?php echo $t('messages.enter_occupation'); ?>" maxlength="50"
@@ -580,7 +580,7 @@ $t = function ($key) {
                 <div class="modal-body">
                     <!-- ENTRADA PARA EL NOMBRE -->
                     <div class="form-group">
-                        <label for="txt_observacion" class="control-label" style="text-align: right;">OBSERVACI&Oacute;N
+                        <label for="txt_observacion" class="control-label" style="text-align: right;"><?php echo $t('form.observation'); ?>
                             <font color="red"> *</font>
                         </label>
                         <textarea class="form-control validarNumerosLetrasDecimal" id="txt_observacion"

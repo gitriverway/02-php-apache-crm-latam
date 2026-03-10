@@ -138,7 +138,7 @@ MODAL INGRESAR NUEVO SINIESTRO
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="txt_contrato_aplicar"
-                                    name="txt_contrato_aplicar" placeholder="CONTRATO" style="text-transform: uppercase"
+                                    name="txt_contrato_aplicar" placeholder="<?php echo $t('form.contract'); ?>" style="text-transform: uppercase"
                                     disabled>
                                 <input type="hidden" id="txt_idBayer">
                                 <input type="hidden" id="txt_idContrato">
@@ -164,7 +164,7 @@ MODAL INGRESAR NUEVO SINIESTRO
                             <div class="input-group">
                                 <input type="text" class="form-control lugar_siniestro validarNumerosLetrasDecimal"
                                     id="txt_lugar_siniestro" name="txt_lugar_siniestro"
-                                    placeholder="LUGAR DEL SINIESTRO" style="text-transform: uppercase">
+                                    placeholder="<?php echo $t('form.claim_place'); ?>" style="text-transform: uppercase">
                             </div>
                         </div>
 
@@ -175,12 +175,12 @@ MODAL INGRESAR NUEVO SINIESTRO
                             </label>
                             <textarea class="form-control detalle_siniestro validarNumerosLetrasDecimal"
                                 id="txt_detalle_siniestro" name="txt_detalle_siniestro" cols="20" rows="4"
-                                placeholder="Ingresar Diagnostico" style="text-transform: uppercase"></textarea>
+                                placeholder="<?php echo $t('form.enter_diagnosis'); ?>" style="text-transform: uppercase"></textarea>
                         </div>
 
                         <div class="form-group col-12">
                             <label for="txt_documento_siniestro" class="control-label"
-                                style="text-align: right;">DOCUMENTOS
+                                style="text-align: right;"><?php echo $t('form.documents'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control" id="txt_documento_siniestro"

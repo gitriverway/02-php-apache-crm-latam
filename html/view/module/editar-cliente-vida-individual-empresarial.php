@@ -328,7 +328,7 @@ $t = function ($key) {
                         <div class="col-sm-12 col-md-6">
                             <!-- ENTRADA PARA EMAIl -->
                             <div class="form-group">
-                                <label for="txt_email" class="control-label" style="text-align: right;">EMAIL
+                                <label for="txt_email" class="control-label" style="text-align: right;"><?php echo $t('form.email'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <input type="text" class="form-control validarNumerosLetrasDecimal" id="txt_email"
@@ -339,7 +339,7 @@ $t = function ($key) {
                             <!-- ENTRADA PARA EMAIl -->
                             <div class="form-group">
                                 <label for="txt_email_opcional" class="control-label"
-                                    style="text-align: right;">EMAIL (OPCIONAL)
+                                    style="text-align: right;"><?php echo $t('form.email'); ?> (OPCIONAL)
                                 </label>
                                 <input type="text" class="form-control validarNumerosLetrasDecimal"
                                     id="txt_email_opcional" placeholder="<?php echo $t('forms.enter_email'); ?>" maxlength="50"
@@ -472,7 +472,7 @@ $t = function ($key) {
                                         </div>
                                         <div class="form-group col-12 col-md-4">
                                             <label for="txt_documento_11" class="control-label"
-                                                style="text-align: right;">COTIZACI&Oacute;N<font color="red"> *
+                                                style="text-align: right;"<?php echo $t('form.quotation'); ?>font color="red"> *
                                                 </font>
                                             </label>
                                             <input type="file" class="form-control" id="txt_documento_11"
@@ -742,7 +742,7 @@ $t = function ($key) {
                 <div class="modal-body">
                     <!-- ENTRADA PARA EL NOMBRE -->
                     <div class="form-group">
-                        <label for="txt_observacion" class="control-label" style="text-align: right;">OBSERVACI&Oacute;N
+                        <label for="txt_observacion" class="control-label" style="text-align: right;"><?php echo $t('form.observation'); ?>
                             <font color="red"> *</font>
                         </label>
                         <textarea class="form-control validarNumerosLetrasDecimal" id="txt_observacion"

@@ -119,7 +119,7 @@ MODAL VALIDAR MODIFICAR OPERATORIO
         <div class="modal-content" id="modalValidarDocumentosOperatorio">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">VALIDAR DOCUMENTOS CRÉDITO HOSPITALARIO PYMES - <span
+                    <h5 class="modal-title">VALIDAR <?php echo $t('form.documents'); ?> <?php echo $t('form.credit_hospital_pymes'); ?> <span
                             id="modificarOperatorioPaciente"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -147,9 +147,7 @@ MODAL VALIDAR MODIFICAR OPERATORIO
                                 value="SOLICITUD HOSPITALARIO">
                         </div>
                         <div class="form-group col-12 col-lg-4 col-md-6">
-                            <label for="radio_resultado_examenes" class="control-label">RESULTADOS DE EXAMENES<font
-                                    color="red"> *</font>
-                            </label>
+                            <label for="radio_resultado_examenes" class="control-label"><?php echo $t('form.exam_results'); ?></label>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_2"
                                     id="radio_resultado_examenes_1" value="SI">
@@ -205,7 +203,7 @@ MODAL VALIDAR MODIFICAR OPERATORIO
                             </label>
                             <textarea class="form-control observaciones_operatorio validarNumerosLetrasDecimal"
                                 id="txt_observaciones_operatorio" name="txt_observaciones_operatorio" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                         </div>
                         <input type="hidden" id="listaValidarDatosOperatorio">
                         <input type="hidden" id="listaObservacionesDatosOperatorio">
@@ -232,7 +230,7 @@ MODAL AGREGAR OBSERVACION ADICIONAL OPERATORIO
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR OBSERVACIONES AL CRÉDITO HOSPITALARIO PYMES - <span
+                    <h5 class="modal-title"><?php echo $t('form.add_observations_credit'); ?> <span
                             id="agregarObservacionAdicionalOperatorioPaciente"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -255,7 +253,7 @@ MODAL AGREGAR OBSERVACION ADICIONAL OPERATORIO
                                 class="form-control observaciones_adicionales_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_adicionales_seguimiento_operatorio"
                                 name="txt_observaciones_adicionales_seguimiento_operatorio" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesAdicionalesSeguimientosOperatorio">
                             <input type="hidden" id="listaObservacionesAdicionalesSeguimientosOperatorioAnterior">
                         </div>
@@ -285,7 +283,7 @@ MODAL AGREGAR SEGUIMIENTO OPERATORIO
         <div class="modal-content" id="modalSeguimientoOperatorio">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR SEGUIMIENTO AL CRÉDITO HOSPITALARIO PYMES - <span
+                    <h5 class="modal-title"><?php echo $t('form.add_follow_up_credit'); ?> <span
                             id="agregarSeguimientoOperatorioPaciente"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -334,13 +332,13 @@ MODAL AGREGAR SEGUIMIENTO OPERATORIO
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_seguimiento_operatorio"
                                 name="txt_observaciones_seguimiento_operatorio" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesSeguimientosOperatorio">
                             <input type="hidden" id="listaObservacionesSeguimientosOperatorioAnterior">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_operatorio_documento_pedido_aseguradora" class="control-label"
-                                style="text-align: right;">DOCUMENTOS ADICIONALES
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> ADICIONALES
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -371,7 +369,7 @@ MODAL AGREGAR SEGUIMIENTO OPERATORIO
         <div class="modal-content" id="modalSeguimientoOperatorio1">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR SEGUIMIENTO AL CRÉDITO HOSPITALARIO PYMES - <span
+                    <h5 class="modal-title"><?php echo $t('form.add_follow_up_credit'); ?> <span
                             id="agregarSeguimientoOperatorioPaciente1"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -420,13 +418,13 @@ MODAL AGREGAR SEGUIMIENTO OPERATORIO
                             <textarea class="form-control observaciones_seguimiento1 validarNumerosLetrasDecimal"
                                 id="txt_observaciones_seguimiento_operatorio1"
                                 name="txt_observaciones_seguimiento_operatorio1" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesSeguimientosOperatorio1">
                             <input type="hidden" id="listaObservacionesSeguimientosOperatorioAnterior1">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_operatorio_documento_pedido_aseguradora1" class="control-label"
-                                style="text-align: right;">DOCUMENTOS ADICIONALES
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> ADICIONALES
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -458,7 +456,7 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO OPERATORIO
         <div class="modal-content" id="modalDocumentoSeguimientoOperatorio">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR DOCUMENTO ADICIONALES AL CRÉDITO HOSPITALARIO PYMES - <span
+                    <h5 class="modal-title"><?php echo $t('form.add_additional_documents_credit'); ?> <span
                             id="agregarDocumentoOperatorioPaciente"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -481,13 +479,13 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO OPERATORIO
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_documento_seguimiento_operatorio"
                                 name="txt_observaciones_documento_seguimiento_operatorio" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesDocumentoSeguimientosOperatorio">
                             <input type="hidden" id="listaObservacionesDocumentoSeguimientosOperatorioAnterior">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_operatorio_documento_seguimiento" class="control-label"
-                                style="text-align: right;">DOCUMENTOS ADICIONALES
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> ADICIONALES
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -518,7 +516,7 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO OPERATORIO 1
         <div class="modal-content" id="modalDocumentoSeguimientoOperatorio1">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR DOCUMENTO ADICIONALES AL CRÉDITO HOSPITALARIO PYMES - <span
+                    <h5 class="modal-title"><?php echo $t('form.add_additional_documents_credit'); ?> <span
                             id="agregarDocumentoOperatorioPaciente"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -541,13 +539,13 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO OPERATORIO 1
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_documento_seguimiento_operatorio1"
                                 name="txt_observaciones_documento_seguimiento_operatorio1" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesDocumentoSeguimientosOperatorio1">
                             <input type="hidden" id="listaObservacionesDocumentoSeguimientosOperatorioAnterior1">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_operatorio_documento_seguimiento1" class="control-label"
-                                style="text-align: right;">DOCUMENTOS ADICIONALES
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> ADICIONALES
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -579,7 +577,7 @@ MODAL AGREGAR AUTORIZACION PEDIDO OPERATORIO
         <div class="modal-content" id="modalDocumentoAutorizacionReembolso">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR DOCUMENTO AUTORIZACI&Oacute;N - CRÉDITO HOSPITALARIO PYMES - <span
+                    <h5 class="modal-title"><?php echo $t('form.add_authorization'); ?> <span
                             id="agregarDocumentoAutorizacionOperatorioPaciente"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -588,7 +586,7 @@ MODAL AGREGAR AUTORIZACION PEDIDO OPERATORIO
                         <input type="hidden" id="listaDependientes">
                         <div class="form-group col-12">
                             <label for="txt_paciente_reembolso" class="control-label"
-                                style="text-align: right;">PACIENTE OPERATORIO
+                                style="text-align: right;"><?php echo $t('form.patient'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -605,13 +603,13 @@ MODAL AGREGAR AUTORIZACION PEDIDO OPERATORIO
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_autorizacion_operatorio"
                                 name="txt_observaciones_autorizacion_operatorio" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesAutorizacionOperatorio">
                             <input type="hidden" id="listaObservacionesAutorizacionOperatorioAnterior">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_operatorio_documento_autorizacion" class="control-label"
-                                style="text-align: right;">DOCUMENTOS AUTORIZACI&Oacute;N
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> AUTORIZACI&Oacute;N
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -642,7 +640,7 @@ MODAL AGREGAR OBSERVACION ANULACION OPERATORIO
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR ANULACIÓN AL CRÉDITO HOSPITALARIO PYMES - <span
+                    <h5 class="modal-title"><?php echo $t('form.add_cancellation_credit'); ?> <span
                             id="agregarObservacionAnulacionOperatorioPaciente"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -655,7 +653,7 @@ MODAL AGREGAR OBSERVACION ANULACION OPERATORIO
                             <textarea class="form-control observaciones_anulacion validarNumerosLetrasDecimal"
                                 id="txt_observaciones_anulacion_operatorio"
                                 name="txt_observaciones_anulacion_operatorio" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesAnulacionOperatorio">
                             <input type="hidden" id="listaObservacionesAnulacionOperatorioAnterior">
                         </div>
@@ -702,7 +700,7 @@ MODAL INGRESAR NUEVO OPERATORIO
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="txt_contrato_aplicar"
-                                    name="txt_contrato_aplicar" placeholder="CONTRATO" style="text-transform: uppercase"
+                                    name="txt_contrato_aplicar" placeholder="<?php echo $t('form.contract'); ?>" style="text-transform: uppercase"
                                     disabled>
                                 <input type="hidden" id="txt_idBayer">
                                 <input type="hidden" id="txt_idContrato">
@@ -735,7 +733,7 @@ MODAL INGRESAR NUEVO OPERATORIO
                         </div>
                         <div class="form-group col-12 col-lg-6">
                             <label for="txt_lugar_hospitalario_operatorio" class="control-label"
-                                style="text-align: right;">LUGAR DE HOSPITALIZACIÓN
+                                style="text-align: right;"><?php echo $t('form.hospitalization_place'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -756,25 +754,25 @@ MODAL INGRESAR NUEVO OPERATORIO
                         </div> -->
                         <div class="form-group col-12">
                             <label for="txt_diagnostico_operatorio" class="control-label"
-                                style="text-align: right;">DIAGNÓSTICO
+                                style="text-align: right;"><?php echo $t('form.diagnosis'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <textarea class="form-control diagnostico_operatorio validarNumerosLetrasDecimal"
                                 id="txt_diagnostico_operatorio" name="txt_diagnostico_operatorio" cols="20" rows="2"
-                                placeholder="Ingresar Diagnostico"></textarea>
+                                placeholder="<?php echo $t('form.enter_diagnosis'); ?>"></textarea>
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_lugar_procedimiento_operatorio" class="control-label"
-                                style="text-align: right;">LUGAR DEL PROCEDIMIENTO
+                                style="text-align: right;"><?php echo $t('form.procedure_place'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <textarea class="form-control lugar_procedimiento_operatorio validarNumerosLetrasDecimal"
                                 id="txt_lugar_procedimiento_operatorio" name="txt_lugar_procedimiento_operatorio"
-                                cols="20" rows="2" placeholder="Ingresar el lugar del procedimiento"></textarea>
+                                cols="20" rows="2" placeholder="<?php echo $t('form.procedure_place'); ?>"></textarea>
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_fecha_procedimiento_operatorio" class="control-label"
-                                style="text-align: right;">FECHA DEL PROCEDIMIENTO
+                                style="text-align: right;"><?php echo $t('form.procedure_date'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="date" class="form-control fecha_procedimiento_operatorio"
@@ -782,7 +780,7 @@ MODAL INGRESAR NUEVO OPERATORIO
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_operatorio" class="control-label"
-                                style="text-align: right;">DOCUMENTOS
+                                style="text-align: right;"><?php echo $t('form.documents'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control" id="txt_documento_operatorio"

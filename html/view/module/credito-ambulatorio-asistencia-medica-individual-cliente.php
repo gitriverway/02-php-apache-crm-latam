@@ -112,13 +112,13 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
         <div class="modal-content" id="modalNuevoCreditoAmbulatorio">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">NUEVO CRÉDITO AMBULATORIO</h5>
+                    <h5 class="modal-title"><?php echo $t('form.new_ambulatory_credit'); ?></h5>
                 </div>
                 <div class="modal-body">
                     <div class="row nuevoDatosCreditoAmbulatorio">
                         <div class="form-group col-12 col-lg-6">
                             <label for="txt_fecha_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">FECHA DEL PEDIDO
+                                style="text-align: right;"><?php echo $t('form.order_date'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="date" class="form-control fecha_credito_ambulatorio"
@@ -131,7 +131,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="txt_contrato_aplicar"
-                                    name="txt_contrato_aplicar" placeholder="CONTRATO" style="text-transform: uppercase"
+                                    name="txt_contrato_aplicar" placeholder="<?php echo $t('form.contract'); ?>" style="text-transform: uppercase"
                                     disabled>
                                 <input type="hidden" id="txt_idBayer">
                                 <input type="hidden" id="txt_idContrato">
@@ -167,16 +167,16 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                         </div> -->
                         <div class="form-group col-12">
                             <label for="txt_diagnostico_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">DIAGNÓSTICO
+                                style="text-align: right;"><?php echo $t('form.diagnosis'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <textarea class="form-control diagnostico_credito_ambulatorio validarNumerosLetrasDecimal"
                                 id="txt_diagnostico_credito_ambulatorio" name="txt_diagnostico_credito_ambulatorio"
-                                cols="20" rows="2" placeholder="Ingresar Diagnostico"></textarea>
+                                cols="20" rows="2" placeholder="<?php echo $t('form.enter_diagnosis'); ?>"></textarea>
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_tipo_examen_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">TIPO DE EXAMEN
+                                style="text-align: right;"><?php echo $t('form.exam_type'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <textarea class="form-control tipo_examen_credito_ambulatorio validarNumerosLetrasDecimal"
@@ -185,7 +185,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_lugar_procedimiento_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">LUGAR DEL PROCEDIMIENTO
+                                style="text-align: right;"><?php echo $t('form.procedure_place'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <textarea
@@ -196,7 +196,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_fecha_procedimiento_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">FECHA DEL PROCEDIMIENTO
+                                style="text-align: right;"><?php echo $t('form.procedure_date'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="date" class="form-control fecha_procedimiento_credito_ambulatorio"
@@ -205,7 +205,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">DOCUMENTOS
+                                style="text-align: right;"><?php echo $t('form.documents'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control" id="txt_documento_credito_ambulatorio"

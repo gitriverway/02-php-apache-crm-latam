@@ -83,19 +83,16 @@ MODAL INGRESAR NUEVO REEMBOLSO
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">NUEVO REEMBOLSO - VIDA INDIVIDUAL</h5>
+                    <h5 class="modal-title"><?php echo $t('form.life_refund'); ?></h5>
                 </div>
                 <div class="modal-body">
                     <div class="row nuevoDatosReembolso">
                         <!-- ENTRADA PARA EL NOMBRE -->
                         <div class="form-group col-12 col-lg-6">
-                            <label for="txt_contrato_aplicar" class="control-label" style="text-align: right;">CONTRATO
-                                APLICAR
-                                <font color="red"> *</font>
-                            </label>
+                            <label for="txt_contrato_aplicar" class="control-label" style="text-align: right;"><?php echo $t('form.contract_apply'); ?>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="txt_contrato_aplicar"
-                                    name="txt_contrato_aplicar" placeholder="CONTRATO" style="text-transform: uppercase"
+                                    name="txt_contrato_aplicar" placeholder="<?php echo $t('form.contract'); ?>" style="text-transform: uppercase"
                                     disabled>
                                 <input type="hidden" id="txt_idBayer">
                                 <div class="input-group-append">
@@ -144,17 +141,17 @@ MODAL INGRESAR NUEVO REEMBOLSO
                                 style="text-transform: uppercase">
                         </div>
                         <div class="form-group col-12">
-                            <label for="txt_diagnostico" class="control-label" style="text-align: right;">DIAGNOSTICO
+                            <label for="txt_diagnostico" class="control-label" style="text-align: right;"><?php echo $t('form.diagnosis'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <textarea class="form-control diagnostico_reembolso validarNumerosLetrasDecimal"
                                 id="txt_diagnostico" name="txt_diagnostico" cols="20" rows="3"
-                                placeholder="Ingresar Diagnostico"></textarea>
+                                placeholder="<?php echo $t('form.enter_diagnosis'); ?>"></textarea>
                         </div>
 
                         <div class="form-group col-12">
                             <label for="txt_documento_reembolso" class="control-label"
-                                style="text-align: right;">DOCUMENTOS
+                                style="text-align: right;"><?php echo $t('form.documents'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control" id="txt_documento_reembolso"

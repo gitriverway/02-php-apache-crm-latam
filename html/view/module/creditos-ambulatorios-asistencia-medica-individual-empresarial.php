@@ -119,13 +119,13 @@ MODAL VALIDAR MODIFICAR CREDITO AMBULATORIO
         <div class="modal-content" id="modalValidarDocumentosCreditoAmbulatorio">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">REVISAR DOCUMENTOS CRÉDITO AMBULATORIOS PYMES - <span
+                    <h5 class="modal-title">REVISAR <?php echo $t('form.documents'); ?> CRÉDITO AMBULATORIOS PYMES - <span
                             id="modificarCreditoAmbulatorioPaciente"></span></h5>
                 </div>
                 <div class="modal-body">
                     <div class="row validarDatosCreditoAmbulatorio">
                         <div class="form-group col-12 col-lg-4 col-md-6">
-                            <label for="radio_solicitud" class="control-label">SOLICITUD AMBULATORIO
+                            <label for="radio_solicitud" class="control-label"><?php echo $t('form.ambulatory_request'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="form-check">
@@ -144,12 +144,10 @@ MODAL VALIDAR MODIFICAR CREDITO AMBULATORIO
                                 <label class="form-check-label">N/A</label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar1"
-                                value="SOLICITUD AMBULATORIO">
+                                value="<?php echo $t('form.ambulatory_request'); ?>">
                         </div>
                         <div class="form-group col-12 col-lg-4 col-md-6">
-                            <label for="radio_pedido_examenes" class="control-label">PEDIDOS DE EXAMENES<font
-                                    color="red"> *</font>
-                            </label>
+                            <label for="radio_pedido_examenes" class="control-label"><?php echo $t('form.exam_requests'); ?></label>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_2"
                                     id="radio_pedido_examenes_1" value="SI">
@@ -206,7 +204,7 @@ MODAL VALIDAR MODIFICAR CREDITO AMBULATORIO
                             </label>
                             <textarea class="form-control observaciones_credito_ambulatorio validarNumerosLetrasDecimal"
                                 id="txt_observaciones_credito_ambulatorio" name="txt_observaciones_credito_ambulatorio"
-                                cols="20" rows="4" placeholder="Ingresar Comentarios"></textarea>
+                                cols="20" rows="4" placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                         </div>
                         <input type="hidden" id="listaValidarDatosCreditoAmbulatorio">
                         <input type="hidden" id="listaObservacionesDatosCreditoAmbulatorio">
@@ -256,7 +254,7 @@ MODAL AGREGAR OBSERVACION ADICIONAL CREDITO AMBULATORIO
                                 class="form-control observaciones_adicionales_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_adicionales_seguimiento_credito_ambulatorio"
                                 name="txt_observaciones_adicionales_seguimiento_credito_ambulatorio" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesAdicionalesSeguimientosCreditoAmbulatorio">
                             <input type="hidden"
                                 id="listaObservacionesAdicionalesSeguimientosCreditoAmbulatorioAnterior">
@@ -287,7 +285,7 @@ MODAL AGREGAR SEGUIMIENTO CREDITO AMBULATORIO
         <div class="modal-content" id="modalSeguimientoCreditoAmbulatorio">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR SEGUIMIENTO AL CRÉDITO AMBULATORIO PYMES - <span
+                    <h5 class="modal-title"><?php echo $t('form.add_follow_up_credit'); ?> - <span
                             id="agregarSeguimientoCreditoAmbulatorioPaciente"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -336,13 +334,13 @@ MODAL AGREGAR SEGUIMIENTO CREDITO AMBULATORIO
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_seguimiento_credito_ambulatorio"
                                 name="txt_observaciones_seguimiento_credito_ambulatorio" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesSeguimientosCreditoAmbulatorio">
                             <input type="hidden" id="listaObservacionesSeguimientosCreditoAmbulatorioAnterior">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_credito_ambulatorio_documento_pedido_aseguradora"
-                                class="control-label" style="text-align: right;">DOCUMENTOS ADICIONALES
+                                class="control-label" style="text-align: right;"><?php echo $t('form.documents'); ?> ADICIONALES
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -373,7 +371,7 @@ MODAL AGREGAR SEGUIMIENTO CREDITO AMBULATORIO 1
         <div class="modal-content" id="modalSeguimientoCreditoAmbulatorio1">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR SEGUIMIENTO AL CRÉDITO AMBULATORIO PYMES - <span
+                    <h5 class="modal-title"><?php echo $t('form.add_follow_up_credit'); ?> - <span
                             id="agregarSeguimientoCreditoAmbulatorioPaciente1"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -422,13 +420,13 @@ MODAL AGREGAR SEGUIMIENTO CREDITO AMBULATORIO 1
                             <textarea class="form-control observaciones_seguimiento1 validarNumerosLetrasDecimal"
                                 id="txt_observaciones_seguimiento_credito_ambulatorio1"
                                 name="txt_observaciones_seguimiento_credito_ambulatorio1" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesSeguimientosCreditoAmbulatorio1">
                             <input type="hidden" id="listaObservacionesSeguimientosCreditoAmbulatorioAnterior1">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_credito_ambulatorio_documento_pedido_aseguradora1"
-                                class="control-label" style="text-align: right;">DOCUMENTOS ADICIONALES
+                                class="control-label" style="text-align: right;"><?php echo $t('form.documents'); ?> ADICIONALES
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -459,7 +457,7 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO CREDITO AMBULATORIO
         <div class="modal-content" id="modalDocumentoSeguimientoCreditoAmbulatorio">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR DOCUMENTO ADICIONALES AL CRÉDITO AMBULATORIO PYMES - <span
+                    <h5 class="modal-title"><?php echo $t('form.add_additional_documents_credit'); ?> - <span
                             id="agregarDocumentoSeguimientoCreditoAmbulatorioPaciente"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -482,13 +480,13 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO CREDITO AMBULATORIO
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_documento_seguimiento_credito_ambulatorio"
                                 name="txt_observaciones_documento_seguimiento_credito_ambulatorio" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesDocumentoSeguimientosCreditoAmbulatorio">
                             <input type="hidden" id="listaObservacionesDocumentoSeguimientosCreditoAmbulatorioAnterior">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_credito_ambulatorio_documento_seguimiento" class="control-label"
-                                style="text-align: right;">DOCUMENTOS ADICIONALES
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> ADICIONALES
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -519,7 +517,7 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO CREDITO AMBULATORIO 1
         <div class="modal-content" id="modalDocumentoSeguimientoCreditoAmbulatorio1">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR DOCUMENTO ADICIONALES AL CRÉDITO AMBULATORIO PYMES - <span
+                    <h5 class="modal-title"><?php echo $t('form.add_additional_documents_credit'); ?> - <span
                             id="agregarDocumentoSeguimientoCreditoAmbulatorioPaciente1"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -542,14 +540,14 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO CREDITO AMBULATORIO 1
                             <textarea class="form-control observaciones_seguimiento1 validarNumerosLetrasDecimal"
                                 id="txt_observaciones_documento_seguimiento_credito_ambulatorio1"
                                 name="txt_observaciones_documento_seguimiento_credito_ambulatorio1" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesDocumentoSeguimientosCreditoAmbulatorio1">
                             <input type="hidden"
                                 id="listaObservacionesDocumentoSeguimientosCreditoAmbulatorioAnterior1">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_credito_ambulatorio_documento_seguimiento1" class="control-label"
-                                style="text-align: right;">DOCUMENTOS ADICIONALES
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> ADICIONALES
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -580,7 +578,7 @@ MODAL AGREGAR AUTORIZACION PEDIDO CREDITO AMBULATORIO
         <div class="modal-content" id="modalDocumentoAutorizacionCreditoAmbulatorio">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR DOCUMENTO AUTORIZACI&Oacute;N - CRÉDITO AMBULATORIO PYMES - <span
+                    <h5 class="modal-title"><?php echo $t('form.add_authorization'); ?> - <span
                             id="agregarDocumentoAutorizacionCreditoAmbulatorioPaciente"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -589,7 +587,7 @@ MODAL AGREGAR AUTORIZACION PEDIDO CREDITO AMBULATORIO
                         <input type="hidden" id="listaDependientes">
                         <div class="form-group col-12">
                             <label for="txt_paciente_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">PACIENTE CRÉDITO AMBULATORIO
+                                style="text-align: right;"><?php echo $t('form.patient_credit'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -607,13 +605,13 @@ MODAL AGREGAR AUTORIZACION PEDIDO CREDITO AMBULATORIO
                             <textarea class="form-control observaciones_seguimiento validarNumerosLetrasDecimal"
                                 id="txt_observaciones_autorizacion_credito_ambulatorio"
                                 name="txt_observaciones_autorizacion_credito_ambulatorio" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesAutorizacionCreditoAmbulatorio">
                             <input type="hidden" id="listaObservacionesAutorizacionCreditoAmbulatorioAnterior">
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_credito_ambulatorio_documento_autorizacion" class="control-label"
-                                style="text-align: right;">DOCUMENTOS AUTORIZACI&Oacute;N
+                                style="text-align: right;"><?php echo $t('form.documents'); ?> AUTORIZACI&Oacute;N
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control subirDocumento"
@@ -644,7 +642,7 @@ MODAL AGREGAR OBSERVACION ANULACION AMBULATORIO
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">AGREGAR ANULACIÓN AL CRÉDITO AMBULATORIO PYMES - <span
+                    <h5 class="modal-title"><?php echo $t('form.add_cancellation_credit'); ?> - <span
                             id="agregarObservacionAnulacionAmbulatorioPaciente"></span></h5>
                 </div>
                 <div class="modal-body">
@@ -657,7 +655,7 @@ MODAL AGREGAR OBSERVACION ANULACION AMBULATORIO
                             <textarea class="form-control observaciones_anulacion validarNumerosLetrasDecimal"
                                 id="txt_observaciones_anulacion_ambulatorio"
                                 name="txt_observaciones_anulacion_ambulatorio" cols="20" rows="4"
-                                placeholder="Ingresar Comentarios"></textarea>
+                                placeholder="<?php echo $t('form.enter_comments'); ?>"></textarea>
                             <input type="hidden" id="listaObservacionesAnulacionAmbulatorio">
                             <input type="hidden" id="listaObservacionesAnulacionAmbulatorioAnterior">
                         </div>
@@ -685,13 +683,13 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
         <div class="modal-content" id="modalNuevoCreditoAmbulatorio">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">NUEVO CRÉDITO AMBULATORIO</h5>
+                    <h5 class="modal-title"><?php echo $t('form.new_ambulatory_credit'); ?></h5>
                 </div>
                 <div class="modal-body">
                     <div class="row nuevoDatosCreditoAmbulatorio">
                         <div class="form-group col-12 col-lg-4">
                             <label for="txt_fecha_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">FECHA DEL PEDIDO
+                                style="text-align: right;"><?php echo $t('form.order_date'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="date" class="form-control fecha_credito_ambulatorio"
@@ -704,7 +702,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                             </label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="txt_contrato_aplicar"
-                                    name="txt_contrato_aplicar" placeholder="CONTRATO" style="text-transform: uppercase"
+                                    name="txt_contrato_aplicar" placeholder="<?php echo $t('form.contract'); ?>" style="text-transform: uppercase"
                                     disabled>
                                 <input type="hidden" id="txt_idBayer">
                                 <input type="hidden" id="txt_idContrato">
@@ -737,7 +735,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                         </div>
                         <!-- <div class="form-group col-12 col-lg-6">
                             <label for="txt_valor_presentado_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">VALOR AMBULATORIO
+                                style="text-align: right;"><?php echo $t('form.ambulatory_value'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -751,16 +749,16 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                         </div> -->
                         <div class="form-group col-12">
                             <label for="txt_diagnostico_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">DIAGNÓSTICO
+                                style="text-align: right;"><?php echo $t('form.diagnosis'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <textarea class="form-control diagnostico_credito_ambulatorio validarNumerosLetrasDecimal"
                                 id="txt_diagnostico_credito_ambulatorio" name="txt_diagnostico_credito_ambulatorio"
-                                cols="20" rows="2" placeholder="Ingresar Diagnostico"></textarea>
+                                cols="20" rows="2" placeholder="<?php echo $t('form.enter_diagnosis'); ?>"></textarea>
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_tipo_examen_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">TIPO DE EXAMEN
+                                style="text-align: right;"><?php echo $t('form.exam_type'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <textarea class="form-control tipo_examen_credito_ambulatorio validarNumerosLetrasDecimal"
@@ -769,7 +767,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_lugar_procedimiento_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">LUGAR DEL PROCEDIMIENTO
+                                style="text-align: right;"><?php echo $t('form.procedure_place'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <textarea
@@ -780,7 +778,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_fecha_procedimiento_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">FECHA DEL PROCEDIMIENTO
+                                style="text-align: right;"><?php echo $t('form.procedure_date'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="date" class="form-control fecha_procedimiento_credito_ambulatorio"
@@ -789,7 +787,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                         </div>
                         <div class="form-group col-12">
                             <label for="txt_documento_credito_ambulatorio" class="control-label"
-                                style="text-align: right;">DOCUMENTOS
+                                style="text-align: right;"><?php echo $t('form.documents'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control" id="txt_documento_credito_ambulatorio"
