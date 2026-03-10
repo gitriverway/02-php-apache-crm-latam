@@ -496,7 +496,7 @@ $t = function ($key) {
                             <div class="col-sm-12">
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <button type="button" class="btn btn-primary btnListaContratos"
+                                        <button type="button" class="btn btn-primary btnListaContratos "
                                             style="padding-left: 25px; padding-right: 25px;" id="btnListaContratos"><i
                                                 class='fa fa-edit'></i> &nbsp;Listar Documentos</button>
                                     </div>

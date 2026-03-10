@@ -3446,21 +3446,10 @@ function listar_documentos(idCliente) {
 }
 
 /*********************************
- ABRI MODAL LISTAR CONTRATOS
- *********************************/
-$("#tabla_cliente").on("click", ".btnListaContratos", function () {
-  var idCliente = $(this).attr("idCliente");
-
-  $("#modal_listar_contratos").modal({ backdrop: "static", keyboard: false });
-  $("#modal_listar_contratos").modal("show");
-  listar_documentos(idCliente);
-});
-
-/*********************************
  ABRI MODAL LISTAR CONTRATOS EDITAR
  *********************************/
 $("#cardDocumento").on("click", ".btnListaContratos", function () {
-  var idCliente = $("#txt_idBayer").val();
+  var idCliente = $("#txt_idCliente").val();
 
   $("#modal_listar_contratos").modal({ backdrop: "static", keyboard: false });
   $("#modal_listar_contratos").modal("show");
