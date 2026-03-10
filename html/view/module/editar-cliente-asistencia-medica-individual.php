@@ -422,11 +422,10 @@ $t = function ($key) {
                                     <select class="form-control cbm_ingreso_mensual" name="state"
                                         id="cbm_ingreso_mensual" style="width:100%;">
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                        <option value="0 a 1000"><?php echo $t('common.0_to_1000'); ?></option>
-                                        <option value="1000 a 3000"><?php echo $t('common.1000_to_3000'); ?></option>
-                                        <option value="3000 a 5000"><?php echo $t('common.3000_to_5000'); ?></option>
-                                        <option value="5000 en adelante"><?php echo $t('common.more_than_5000'); ?>
-                                        </option>
+                                        <option value="0 a 1000"><?php echo $t('forms.0_to_1000'); ?></option>
+                                        <option value="1000 a 3000"><?php echo $t('forms.1000_to_3000'); ?></option>
+                                        <option value="3000 a 5000"><?php echo $t('forms.3000_to_5000'); ?></option>
+                                        <option value="5000 en adelante"><?php echo $t('forms.more_than_5000'); ?></option>
                                     </select>
                                 </div>
                             </div>

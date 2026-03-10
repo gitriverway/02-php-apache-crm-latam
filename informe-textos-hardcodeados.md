@@ -543,3 +543,82 @@ Los siguientes grupos de archivos aún requieren cambios:
 5. **Encabezados de tablas (th)** con "#" hardcodeado
 6. **Opciones de select** con rangos de ingresos
 7. **Labels "N/A"**, "Enviar Email", "Estado Caducado"
+
+---
+
+## VITACORA DE CAMBIOS REALIZADOS - 10 de Marzo 2026
+
+### 1. ARCHIVOS DE TRADUCCIONES ACTUALIZADOS
+
+#### `html/lang/es/form.json`
+Se agregaron las siguientes claves de traducción:
+- enter_observation, enter_procedure_type, observation, procedure_type
+- contract, value, diagnosis, send_email, expired_status
+- refund_number, sender_insurer_2, client_payment_value
+- number, contract_number, provider_plan
+- document, employee, table_action, table_client, table_document
+- max_document_weight, max_image_weight
+
+#### `html/lang/es/buttons.json`
+Se agregó: exit_button: "Salir"
+
+### 2. PROSPECTOS (COMPLETADO)
+
+#### editar-prospecto.php
+- Placeholders valores: INGRESOS VALOR ASEGURADO/NETA/COMISIONABLE/TOTAL
+- Placeholder observación
+- Botón Salir
+- Options género: Masculino/Femenino
+- Options estado civil: SOLTERO/A, CASADO/A, etc.
+- Options frecuencia/forma pago corregidos (formato mal cerrado)
+- Options estados corregidos
+
+#### crear-prospecto.php
+- States seguimiento corregidos
+
+#### editar-prospecto-empresarial.php
+- Placeholder observación
+- Botón Salir
+- Options rangos ingresos
+- Options estados
+
+### 3. EDITAR CLIENTE (COMPLETADO)
+
+Archivos modificados (12):
+1. editar-cliente-vida-individual-empresarial.php - botón duplicado, rangos ingresos
+2. editar-cliente-vehiculo-individual.php - botón duplicado, rangos ingresos
+3. editar-cliente-transporte-empresarial.php - botón duplicado, rangos ingresos
+4. editar-cliente-responsabilidad-civil-individual.php - botón duplicado, rangos ingresos
+5. editar-cliente-hogar-individual.php - botón duplicado, rangos ingresos
+6. editar-cliente-asistencia-medica-individual-empresarial.php - botón duplicado, rangos ingresos
+7. editar-cliente-asistencia-medica-corporativo-empresarial.php - botón duplicado, rangos ingresos
+8. editar-cliente-accidentes-personales-individual.php - botón duplicado, rangos ingresos
+9. editar-cliente-accidentes-personales-individual-empresarial.php - botón duplicado, rangos ingresos
+10. editar-cliente-vida-individual.php - rangos ingresos
+11. editar-cliente-incendio-empresarial.php - rangos ingresos
+12. editar-cliente-responsabilidad-civil-empresarial.php - rangos ingresos
+
+### RESUMEN
+
+| Categoría | Cantidad |
+|-----------|----------|
+| Archivos PHP modificados | 23 |
+| Archivos JSON modificados | 2 |
+| Opciones corregidas (rangos ingresos) | ~50 |
+| Botones corregidos | ~12 |
+| Options mal闭合 corregidos | ~40 |
+
+### PENDIENTE
+
+| Módulo | Estado |
+|--------|--------|
+| Prospectos | COMPLETADO |
+| editar-cliente | COMPLETADO |
+| Reembolsos | PENDIENTE |
+| Siniestros | PENDIENTE |
+| Créditos | PENDIENTE |
+| Operatorios | PENDIENTE |
+| Placeholders "0.00" | PENDIENTE |
+| Textos peso documento | PENDIENTE |
+| Labels N/A, Email, Estado | PENDIENTE |
+| Encabezados th (#) | PENDIENTE

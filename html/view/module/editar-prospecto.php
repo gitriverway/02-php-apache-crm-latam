@@ -214,10 +214,10 @@ $t = function ($key) {
                                         PAGO</label>
                                     <select class="form-control cbm_tipo_pago" name="state" id="cbm_tipo_pago"
                                         style="width:100%;">
-                                        <option value="MENSUAL" selected<?php echo $t("form.monthly"); ?>/option>
-                                        <option value="TRIMESTRAL" <?php echo $t("form.quarterly"); ?>/option>
-                                        <option value="SEMESTRAL" <?php echo $t("form.semiannual"); ?>/option>
-                                        <option value="ANUAL" <?php echo $t("form.annual"); ?>/option>
+                                        <option value="MENSUAL" selected><?php echo $t("form.monthly"); ?></option>
+                                        <option value="TRIMESTRAL"><?php echo $t("form.quarterly"); ?></option>
+                                        <option value="SEMESTRAL"><?php echo $t("form.semiannual"); ?></option>
+                                        <option value="ANUAL"><?php echo $t("form.annual"); ?></option>
                                     </select>
                                 </div>
                             </div>
@@ -229,10 +229,9 @@ $t = function ($key) {
                                         PAGO</label>
                                     <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                         style="width:100%;">
-                                        <option value="DEBITO BANCARIO" selected<?php echo $t("form.debit"); ?>/option>
-                                        <option value="TRANSFERENCIA BANCARIO"
-                                            <?php echo $t("form.transfer"); ?>/option>
-                                        <option value="TARJETA DE CREDITO" <?php echo $t("form.credit_card"); ?>/option>
+                                        <option value="DEBITO BANCARIO" selected><?php echo $t("form.debit"); ?></option>
+                                        <option value="TRANSFERENCIA BANCARIO"><?php echo $t("form.transfer"); ?></option>
+                                        <option value="TARJETA DE CREDITO"><?php echo $t("form.credit_card"); ?></option>
                                     </select>
                                 </div>
                             </div>
@@ -283,8 +282,8 @@ $t = function ($key) {
                                     <label class="control-label" style="text-align: right;">GENERO
                                     </label>
                                     <select id="genero" name="genero" class="form-control genero">
-                                        <option value="masculino" selected>Masculino</option>
-                                        <option value="femenino">Femenino</option>
+                                        <option value="masculino" selected><?php echo $t('form.male'); ?></option>
+                                        <option value="femenino"><?php echo $t('form.female'); ?></option>
                                     </select>
                                 </div>
                             </div>
@@ -294,11 +293,11 @@ $t = function ($key) {
                                     <label for="estado_civil" class="control-label" style="text-align: right;">ESTADO
                                         CIVIL</label>
                                     <select id="estado_civil" name="estado_civil" class="form-control">
-                                        <option value="SOLTERO" selected>SOLTERO/A</option>
-                                        <option value="CASADO">CASADO/A</option>
-                                        <option value="DIVORCIADO">DIVORCIADO/A</option>
-                                        <option value="VIUDO">VIUDO/A</option>
-                                        <option value="UNIÓN LIBRE">UNIÓN LIBRE</option>
+                                        <option value="SOLTERO" selected><?php echo $t('form.single'); ?></option>
+                                        <option value="CASADO"><?php echo $t('form.married'); ?></option>
+                                        <option value="DIVORCIADO"><?php echo $t('form.divorced'); ?></option>
+                                        <option value="VIUDO"><?php echo $t('form.widowed'); ?></option>
+                                        <option value="UNIÓN LIBRE"><?php echo $t('form.common_law'); ?></option>
                                     </select>
                                 </div>
                             </div>
@@ -565,24 +564,15 @@ $t = function ($key) {
                                                 style="text-align: right;" <?php echo $t("form.status"); ?>/label>
                                                 <select class="form-control cbm_estado_bayer" name="state"
                                                     id="cbm_estado_bayer" style="width:100%;">
-                                                    <option value="ABIERTO" selected><?php echo $t('form.open'); ?>
-                                                    </option>
-                                                    <option value="NO INTERESADO"
-                                                        <?php echo $t("form.not_interested"); ?>/option>
-                                                    <option value="INTERESADO"><?php echo $t('status.interested'); ?>
-                                                    </option>
-                                                    <option value="INTERESADO ALTO"
-                                                        <?php echo $t("form.interested_alto"); ?>/option>
-                                                    <option value="INTERESADO MEDIO"
-                                                        <?php echo $t("form.interested_medium"); ?>/option>
-                                                    <option value="INTERESADO BAJO"
-                                                        <?php echo $t("form.interested_low"); ?>/option>
-                                                    <option value="CONTRATADO"><?php echo $t('status.contracted'); ?>
-                                                    </option>
-                                                    <option value="DUPLICADO"><?php echo $t('form.duplicated'); ?>
-                                                    </option>
-                                                    <option value="NO RECUPERADO"
-                                                        <?php echo $t("form.not_recovered"); ?>/option>
+                                                    <option value="ABIERTO" selected><?php echo $t('form.open'); ?></option>
+                                                    <option value="NO INTERESADO"><?php echo $t("form.not_interested"); ?></option>
+                                                    <option value="INTERESADO"><?php echo $t('status.interested'); ?></option>
+                                                    <option value="INTERESADO ALTO"><?php echo $t("form.interested_alto"); ?></option>
+                                                    <option value="INTERESADO MEDIO"><?php echo $t("form.interested_medium"); ?></option>
+                                                    <option value="INTERESADO BAJO"><?php echo $t("form.interested_low"); ?></option>
+                                                    <option value="CONTRATADO"><?php echo $t('status.contracted'); ?></option>
+                                                    <option value="DUPLICADO"><?php echo $t('form.duplicated'); ?></option>
+                                                    <option value="NO RECUPERADO"><?php echo $t("form.not_recovered"); ?></option>
                                                 </select>
                                         </div>
                                     </div>

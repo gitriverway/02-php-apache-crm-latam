@@ -550,19 +550,14 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                             <select class="form-control cbm_estado_bayer" name="state"
                                                 id="cbm_estado_bayer" style="width:100%;">
                                                 <option value="ABIERTO" selected><?php echo $t("form.open"); ?></option>
-                                                <option value="NO INTERESADO"><?php echo $t("form.no_interested"); ?>
-                                                </option>
+                                                <option value="NO INTERESADO"><?php echo $t("form.no_interested"); ?></option>
                                                 <option value="INTERESADO"><?php echo $t("form.interested"); ?></option>
-                                                <option value="INTERESADO ALTO">
-                                                    <?php echo $t("form.highly_interested"); ?></option>
-                                                <option value="INTERESADO MEDIO">
-                                                    <?php echo $t("form.medium_interested"); ?></option>
-                                                <option value="INTERESADO BAJO"><?php echo $t("form.low_interested"); ?>
-                                                </option>
+                                                <option value="INTERESADO ALTO"><?php echo $t("form.highly_interested"); ?></option>
+                                                <option value="INTERESADO MEDIO"><?php echo $t("form.medium_interested"); ?></option>
+                                                <option value="INTERESADO BAJO"><?php echo $t("form.low_interested"); ?></option>
                                                 <option value="CONTRATADO"><?php echo $t("form.contracted"); ?></option>
                                                 <option value="DUPLICADO"><?php echo $t("form.duplicated"); ?></option>
-                                                <option value="NO RECUPERADO"><?php echo $t("form.not_recovered"); ?>
-                                                </option>
+                                                <option value="NO RECUPERADO"><?php echo $t("form.not_recovered"); ?></option>
                                             </select>
                                         </div>
                                     </div>

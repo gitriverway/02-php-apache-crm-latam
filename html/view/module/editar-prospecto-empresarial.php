@@ -220,10 +220,10 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                     <select class="form-control cbm_tipo_pago" name="state" id="cbm_tipo_pago"
                                         style="width:100%;">
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                        <option value="MENSUAL"<?php echo $t("form.monthly"); ?>/option>
-                                        <option value="TRIMESTRAL"<?php echo $t("form.quarterly"); ?>/option>
-                                        <option value="SEMESTRAL"<?php echo $t("form.semiannual"); ?>/option>
-                                        <option value="ANUAL"<?php echo $t("form.annual"); ?>/option>
+                                        <option value="MENSUAL"><?php echo $t("form.monthly"); ?></option>
+                                        <option value="TRIMESTRAL"><?php echo $t("form.quarterly"); ?></option>
+                                        <option value="SEMESTRAL"><?php echo $t("form.semiannual"); ?></option>
+                                        <option value="ANUAL"><?php echo $t("form.annual"); ?></option>
                                     </select>
                                 </div>
                             </div>
@@ -236,9 +236,9 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                     <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                         style="width:100%;">
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                        <option value="DEBITO BANCARIO"<?php echo $t("form.debit"); ?>/option>
-                                        <option value="TRANSFERENCIA BANCARIO"<?php echo $t("form.transfer"); ?>/option>
-                                        <option value="TARJETA DE CREDITO"<?php echo $t("form.credit_card"); ?>/option>
+                                        <option value="DEBITO BANCARIO"><?php echo $t("form.debit"); ?></option>
+                                        <option value="TRANSFERENCIA BANCARIO"><?php echo $t("form.transfer"); ?></option>
+                                        <option value="TARJETA DE CREDITO"><?php echo $t("form.credit_card"); ?></option>
                                     </select>
                                 </div>
                             </div>
@@ -355,10 +355,10 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                     </label>
                                     <select class="form-control cbm_ingreso_mensual" name="state"
                                         id="cbm_ingreso_mensual" style="width:100%;">
-                                        <option value="0 a 1000" selected>0 a 1000</option>
-                                        <option value="1000 a 3000">1000 a 3000</option>
-                                        <option value="3000 a 5000">3000 a 5000</option>
-                                        <option value="5000 en adelante">5000 en adelante</option>
+                                        <option value="0 a 1000" selected><?php echo $t('forms.0_to_1000'); ?></option>
+                                        <option value="1000 a 3000"><?php echo $t('forms.1000_to_3000'); ?></option>
+                                        <option value="3000 a 5000"><?php echo $t('forms.3000_to_5000'); ?></option>
+                                        <option value="5000 en adelante"><?php echo $t('forms.more_than_5000'); ?></option>
                                     </select>
                                 </div>
                             </div>
@@ -451,15 +451,15 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                                 id="cbm_estado_bayer" style="width:100%;">
                                                 <option value=""><?php echo $t('messages.select_option'); ?></option>
                                                 <option value="ABIERTO"><?php echo $t('form.open'); ?></option>
-                                                <!-- <option value="NO CONTESTA"<?php echo $t("form.no_answer"); ?>/option> -->
-                                                <option value="NO INTERESADO"<?php echo $t("form.not_interested"); ?>/option>
+                                                <!-- <option value="NO CONTESTA"><?php echo $t("form.no_answer"); ?></option> -->
+                                                <option value="NO INTERESADO"><?php echo $t("form.not_interested"); ?></option>
                                                 <option value="INTERESADO"><?php echo $t('status.interested'); ?></option>
-                                                <option value="INTERESADO ALTO"<?php echo $t("form.interested_alto"); ?>/option>
-                                                <option value="INTERESADO MEDIO"<?php echo $t("form.interested_medium"); ?>/option>
-                                                <option value="INTERESADO BAJO"<?php echo $t("form.interested_low"); ?>/option>
+                                                <option value="INTERESADO ALTO"><?php echo $t("form.interested_alto"); ?></option>
+                                                <option value="INTERESADO MEDIO"><?php echo $t("form.interested_medium"); ?></option>
+                                                <option value="INTERESADO BAJO"><?php echo $t("form.interested_low"); ?></option>
                                                 <option value="CONTRATADO"><?php echo $t('status.contracted'); ?></option>
                                                 <option value="DUPLICADO"><?php echo $t('form.duplicated'); ?></option>
-                                                <option value="NO RECUPERADO"<?php echo $t("form.not_recovered"); ?>/option>
+                                                <option value="NO RECUPERADO"><?php echo $t("form.not_recovered"); ?></option>
                                             </select>
                                         </div>
                                     </div>
