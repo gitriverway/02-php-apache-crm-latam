@@ -391,7 +391,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                 <!-- Default box -->
                 <div class="card card-primary" id="cardDependientes">
                     <div class="card-header">
-                        <h3 class="card-title"><?php echo $t("form.collaborators_information"); ?></h3>
+                        <h3 class="card-title"><?php echo $t("form.dependents_information"); ?></h3>
                     </div>
                     <div class="card-body">
                         <div class="row">

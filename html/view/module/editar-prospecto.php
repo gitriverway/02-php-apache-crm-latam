@@ -473,13 +473,73 @@ $t = function ($key) {
 
                                     </div>
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <!-- Default box -->
+                <div class="card card-primary" id="cardDocumento">
+                    <div class="card-header">
+                        <h3 class="card-title"><?php echo $t('titles.information_documents'); ?></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <button type="button" class="btn btn-primary btnListaContratos"
+                                            style="padding-left: 25px; padding-right: 25px;" id="btnListaContratos"><i
+                                                class='fa fa-edit'></i> &nbsp;Listar Documentos</button>
+                                    </div>
+                                    <div class="col-sm-12" id="agregarContrato">
+                                        <!--=====================================
+                                ENTRADA PARA AGREGAR DOCUMENTOS
+                                ======================================-->
+                                        <div class="form-group row" id="grupo_file">
+
+                                            <div class="form-group col-12 col-md-4">
+                                                <label for="txt_documento_2" class="control-label"
+                                                    style="text-align: right;" <?php echo $t('form.quotation'); ?>font
+                                                    color="red"> *
+                                                    </font>
+                                                </label>
+                                                <input type="file" class="form-control" id="txt_documento_2"
+                                                    name="txt_documento_2" class="subirDocumento" accept=".pdf">
+                                                <p class="help-block">Peso máximo del documento 50MB</p>
+                                            </div>
+
+                                            <input type="hidden" id="cantidadDocumentos" name="cantidadDocumentos">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <div class="col-sm-12">
+                <div class="card card-primary" id="cardSeguimiento">
+                    <div class="card-header">
+                        <h3 class="card-title"><?php echo $t('titles.information_follow_up'); ?></h3>
+                    </div>
+                    <!-- Default box -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+
                                     <div class="col-sm-12">
                                         <!--=====================================
                                 BOTÓN PARA AGREGAR OBSERACIONES
                                 ======================================-->
                                         <div class="form-group row">
-                                            <button type="button" class="btn btn-default btnAgregarObservacion">Agregar
-                                                Observaci&oacute;n</button>
+                                            <button type="button"
+                                                class="btn btn-default btnAgregarObservacion"><?php echo $t("form.add_observation"); ?></button>
                                             <input type="hidden" id="listaObservaciones" name="listaObservaciones">
                                         </div>
                                         <!--=====================================
@@ -537,7 +597,7 @@ $t = function ($key) {
                                         data-dismiss="modal"><?php echo $t('form.cancel'); ?></button></a>
                                 <button type="submit" class="btn btn-primary float-right"
                                     onclick="Modificar_Prospecto()"><i
-                                        class="fa fa-save"><b>&nbsp;GUARDAR</b></i></button>
+                                        class="fa fa-save"><b><?php echo $t("common.save"); ?></b></i></button>
                             </div>
                         </div>
                     </div>
