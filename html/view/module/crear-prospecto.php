@@ -338,7 +338,8 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA SELECCIONAR CIUDAD -->
                                 <div class="form-group">
-                                    <label for="txt_ciudad" class="control-label" style="text-align: right;"><?php echo $t('list_tables.city'); ?></label>
+                                    <label for="txt_ciudad" class="control-label"
+                                        style="text-align: right;"><?php echo $t('list_tables.city'); ?></label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
                                         placeholder="<?php echo $t('forms.enter_city'); ?>" maxlength="100"
                                         autocomplete="off" style="text-transform: uppercase">
@@ -457,7 +458,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <!--=====================================
                                 BOTÓN PARA AGREGAR OBSERACIONES
                                 ======================================-->
-                                        <div class="form-group row d-none">
+                                        <div class="form-group row">
                                             <button type="button"
                                                 class="btn btn-default btnAgregarObservacion"><?php echo $t("form.add_observation"); ?></button>
                                             <input type="hidden" id="listaObservaciones" name="listaObservaciones">
