@@ -9,6 +9,7 @@ require '../../extensiones/PHPMailer/src/PHPMailer.php';
 require '../../extensiones/PHPMailer/src/SMTP.php';
 require '../../model/modelo_bayer_persona.php';
 require 'controlador_prospecto_enviar_correo_nuevo_contrato_asistencia_medica.php';
+require '../../model/modelo_contrato_cliente_documento.php';
 
 
 session_start();
@@ -54,21 +55,79 @@ $listaObservaciones = $_POST['listaObservaciones'];
 $idUsuario = $_SESSION['S_IDUSUARIO'];
 $contra = password_hash($_POST['cedula'], PASSWORD_DEFAULT, ['cost' => 12]);
 $fecha_seguimiento = htmlspecialchars($_POST['fecha_seguimiento'], ENT_QUOTES, 'UTF-8');
+$cantidad = htmlspecialchars($_POST['cantidad'], ENT_QUOTES, 'UTF-8');
 $idEmpleado  = htmlspecialchars($_POST['idEmpleado'], ENT_QUOTES, 'UTF-8');
 
 $MU = new Modelo_Bayer_Persona();
 $consulta = $MU->Modificar_Prospecto($idBayer, $origen, $categoria, $cedula, $nombre_prospecto, $fecha_nacimiento, $genero, $estado_civil, $telefono, $email, $provincia, $ciudad, $direccion, $ocupacion, $valor_ingreso, $valor_asegurado, $prima_total, $tipo_pago, $forma_pago, $listaObservaciones, $idUsuario, $estado_bayer, $idProducto, $fechaActual, $proveedor, $contra, $fecha_seguimiento, $idCliente, $prima_comisionable, $prima_neta, $nueva_categoria, $idDependiente, $listaFamiliares, $listaVehiculos, $idEmpleado, $listaHogares);
 
-if ($estado_bayer == "CONTRATADO") {
-    /*=============================================
-        CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LOS ARCHIVOS DEL CONTRATO
-        =============================================*/
 
-    $directorio = "../../view/contratos/" . $idBayer;
+/**==================================================================================================
+ * CREAMOS UN NUEVO DIRECTORIO POR LA FECHA Y CLIENTE, DONDE VAMOS A GUARDAR LOS ARCHIVOS DEL CONTRATO
+     ===================================================================================================*/
+
+$directorio_raiz = "../../view/contratos";
+
+if (!is_dir($directorio_raiz)) {
+    mkdir($directorio_raiz, 0755);
+}
+
+$ano = date('Y');
+$mes = date('m');
+$dia = date('d');
+$hora = date('H');
+$minuto = date('i');
+$segundo = date('s');
+
+$directorio3 = "view/contratos/" . $idBayer;
+
+$directorio2 = "../../view/contratos/" . $idBayer;
+
+if (!is_dir($directorio2)) {
+    mkdir($directorio2, 0755);
+}
+
+$ano1 = date('Y');
+$mes1 = date('m');
+$dia1 = date('d');
+$hora1 = date('H');
+$minuto1 = date('i');
+$segundo1 = date('s');
+
+if ($cantidad > 0) {
+
+    $carpetaDocumento = $ano . $mes . $dia . $hora . $minuto . $cedula;
+    $directorio = "../../view/contratos/" . $idBayer . "/" . $carpetaDocumento;
+    $directorio1 = "view/contratos/" . $idBayer . "/" . $carpetaDocumento;
 
     if (!is_dir($directorio)) {
         mkdir($directorio, 0755);
     }
+
+    for ($i = 1; $i <= $cantidad; $i++) {
+        if (isset($_FILES["documento_" . $i])) {
+
+            switch ($i) {
+                case '2':
+                    $nombreArchivo = "COTIZACIÓN";
+                    $rutaArchivo = $directorio1 . "/COTIZACION" . $ano1 . $mes1 . $dia1 . $hora1 . $minuto1 . $segundo1 . $cedula . "." . $_POST["extension_" . $i];
+                    $archivo = $_FILES["documento_" . $i]["tmp_name"];
+                    $dato = move_uploaded_file($archivo, "../../" . $rutaArchivo);
+                    break;
+
+
+                default:
+                    # code...
+                    break;
+            }
+
+            $MCCD = new Modelo_Contrato_Cliente_Documento();
+            $consulta1 = $MCCD->Registrar_contrato_cliente_documento($idBayer, $nombreArchivo, $carpetaDocumento, $rutaArchivo, $fechaActual);
+        }
+    }
+}
+
+if ($estado_bayer == "CONTRATADO") {
 
     switch ($categoria) {
         case '3':

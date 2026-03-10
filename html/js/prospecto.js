@@ -562,7 +562,10 @@ $(".btnAgregarDependiente").click(function () {
       numProspecto +
       '" style="padding-left:0px">' +
       "<label>" +
-      t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
+      t(
+        "form_labels.fecha_nacimiento",
+        t("form_labels.birth_date", "Data de Nascimento"),
+      ) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-left:0px">' +
@@ -1287,6 +1290,7 @@ function Registrar_Cliente() {
   listarFamiliares();
   listarVehiculos();
   listarHogares();
+  listarDocumentos();
 
   var origen = $("#cbm_origen").val();
   var categoria = $("#cbm_categoria").val();
@@ -1319,6 +1323,13 @@ function Registrar_Cliente() {
   var listaHogares = $("#listaHogares").val();
   var listaObservaciones = $("#listaObservaciones").val();
   var fecha_seguimiento = $("#txt_fecha_seguimiento").val().trim();
+
+  /**============================
+   BLOQUE PARA CARGAR DOCUMENTOS
+   * ============================
+   */
+  var documento_2;
+  var cantidad = $("#cantidadDocumentos").val();
 
   var cont_bayerpersonas = 0;
   var cont = 0;
@@ -1527,6 +1538,11 @@ function Registrar_Cliente() {
     );
   }
 
+  var nombre_documento_2 = $("#txt_nombre_documento_2").val();
+  var archivo2 = $("#txt_documento_2").val();
+  var extension_2 = archivo2.split(".").pop();
+  documento_2 = $("#txt_documento_2")[0].files[0];
+
   crear_overlay_prospecto();
 
   var datos = new FormData();
@@ -1563,6 +1579,16 @@ function Registrar_Cliente() {
   datos.append("listaObservaciones", listaObservaciones);
   datos.append("fecha_seguimiento", fecha_seguimiento);
 
+  /**======================================
+   * ===DOCUMNETO ADJUNTOS AL CONTRATO=====
+   ========================================*/
+
+  datos.append("nombre_documento_2", nombre_documento_2);
+  datos.append("documento_2", documento_2);
+  datos.append("extension_2", extension_2);
+
+  datos.append("cantidad", cantidad);
+
   $.ajax({
     url: "/controller/prospectos/controlador_prospecto_registro.php",
     method: "POST",
@@ -1585,7 +1611,10 @@ function Registrar_Cliente() {
       } else {
         Swal.fire(
           t("messages.error_message", "Mensagem de Erro"),
-          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
+          t(
+            "messages.registration_error",
+            "Desculpe, nÃ£o foi possÃ­vel concluir o registro",
+          ),
           "error",
         );
       }
@@ -1800,7 +1829,10 @@ function agregar_auto_familiares() {
           numProspecto +
           '" style="padding-right:0px">' +
           "<label>" +
-          t("form_labels.parentesco", t("form_labels.relationship", "Parentesco")) +
+          t(
+            "form_labels.parentesco",
+            t("form_labels.relationship", "Parentesco"),
+          ) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-6 my-1" style="padding-right:0px">' +
@@ -1868,7 +1900,10 @@ function agregar_auto_familiares() {
           numProspecto +
           '" style="padding-left:0px">' +
           "<label>" +
-          t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
+          t(
+            "form_labels.fecha_nacimiento",
+            t("form_labels.birth_date", "Data de Nascimento"),
+          ) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-left:0px">' +
@@ -2232,6 +2267,18 @@ function agregar_auto_observaciones() {
   });
 }
 
+function listarDocumentos() {
+  var cantidad = 0;
+
+  var documento = $('#grupo_file [type="file"]');
+
+  for (var i = 0; i < documento.length; i++) {
+    cantidad += 1;
+  }
+
+  $("#cantidadDocumentos").val(cantidad);
+}
+
 /*********************************
    MODIFICAR DATOS PROSPECTO
    *********************************/
@@ -2239,6 +2286,7 @@ function Modificar_Prospecto() {
   listarFamiliares();
   listarVehiculos();
   listarHogares();
+  listarDocumentos();
 
   var idProspecto = $("#txt_idProspecto").val();
   var origen = $("#cbm_origen").val();
@@ -2274,6 +2322,13 @@ function Modificar_Prospecto() {
   var listaObservaciones = $("#listaObservaciones").val();
   var fecha_seguimiento = $("#txt_fecha_seguimiento").val().trim();
   var idEmpleado = $("#txt_idEmpleado").val();
+
+  /**============================
+   BLOQUE PARA CARGAR DOCUMENTOS
+   * ============================
+   */
+  var documento_2;
+  var cantidad = $("#cantidadDocumentos").val();
 
   var cont_bayerpersonas = 0;
   var cont = 0;
@@ -2501,6 +2556,11 @@ function Modificar_Prospecto() {
     );
   }
 
+  var nombre_documento_2 = $("#txt_nombre_documento_2").val();
+  var archivo2 = $("#txt_documento_2").val();
+  var extension_2 = archivo2.split(".").pop();
+  documento_2 = $("#txt_documento_2")[0].files[0];
+
   crear_overlay_prospecto();
 
   var datos = new FormData();
@@ -2540,6 +2600,16 @@ function Modificar_Prospecto() {
   datos.append("fecha_seguimiento", fecha_seguimiento);
   datos.append("idEmpleado", idEmpleado);
 
+  /**======================================
+   * ===DOCUMNETO ADJUNTOS AL CONTRATO=====
+   ========================================*/
+
+  datos.append("nombre_documento_2", nombre_documento_2);
+  datos.append("documento_2", documento_2);
+  datos.append("extension_2", extension_2);
+
+  datos.append("cantidad", cantidad);
+
   $.ajax({
     url: "/controller/prospectos/controlador_prospecto_modificar.php",
     method: "POST",
@@ -2560,7 +2630,10 @@ function Modificar_Prospecto() {
       } else {
         Swal.fire(
           t("messages.error_message", "Mensagem de Erro"),
-          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
+          t(
+            "messages.registration_error",
+            "Desculpe, nÃ£o foi possÃ­vel concluir o registro",
+          ),
           "error",
         );
       }

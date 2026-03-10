@@ -575,13 +575,13 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                         </label>
                         <textarea class="form-control validarNumerosLetrasDecimal" id="txt_observacion"
                             name="txt_observacion" cols="20" rows="5"
-                            placeholder="Ingresar Observaci&oacute;n"></textarea>
+                            placeholder="<?php echo $t('form.enter_observation'); ?>"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal"><?php echo $t('buttons.exit_button'); ?></button>
 
-                    <button type="submit" class="btn btn-primary" onclick="agregarNuevaObservacion()"<?php echo $t("form.add"); ?>/button>
+                    <button type="submit" class="btn btn-primary" onclick="agregarNuevaObservacion()"><?php echo $t("form.add"); ?></button>
                 </div>
             </form>
         </div>

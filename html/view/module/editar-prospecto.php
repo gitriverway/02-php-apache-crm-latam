@@ -150,7 +150,7 @@ $t = function ($key) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_valor_asegurado" placeholder="INGRESOS VALOR ASEGURADO" value="0"
+                                            id="txt_valor_asegurado" placeholder="<?php echo $t('form.enter_sum_insured'); ?>" value="0"
                                             maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
@@ -167,7 +167,7 @@ $t = function ($key) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_prima_neta" placeholder="INGRESOS PRIMA NETA" value="0"
+                                            id="txt_prima_neta" placeholder="<?php echo $t('form.enter_net_premium'); ?>" value="0"
                                             maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
@@ -184,7 +184,7 @@ $t = function ($key) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_prima_comisionable" placeholder="INGRESOS PRIMA COMISIONABLE"
+                                            id="txt_prima_comisionable" placeholder="<?php echo $t('form.enter_commissionable_premium'); ?>"
                                             value="0" maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
@@ -201,7 +201,7 @@ $t = function ($key) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_prima_total" placeholder="INGRESOS PRIMA TOTAL" value="0"
+                                            id="txt_prima_total" placeholder="<?php echo $t('form.enter_total_premium'); ?>" value="0"
                                             maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
@@ -663,14 +663,13 @@ $t = function ($key) {
                         </label>
                         <textarea class="form-control validarNumerosLetrasDecimal" id="txt_observacion"
                             name="txt_observacion" cols="20" rows="5"
-                            placeholder="Ingresar Observaci&oacute;n"></textarea>
+                            placeholder="<?php echo $t('form.enter_observation'); ?>"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal"><?php echo $t('buttons.exit_button'); ?></button>
 
-                    <button type="submit" class="btn btn-primary" onclick="agregarNuevaObservacion()"
-                        <?php echo $t("form.add"); ?>/button>
+                    <button type="submit" class="btn btn-primary" onclick="agregarNuevaObservacion()"><?php echo $t("form.add"); ?></button>
                 </div>
             </form>
         </div>
