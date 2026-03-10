@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
 $t = function ($key) {
     return Modelo_Idioma::t($key);
@@ -50,7 +50,7 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
                             <th style="text-align:center; width:10px">#</th>
                             <th style="text-align:center; width:10px">Número Contrato</th>
                             <th style="text-align:center; width:10px">Proveedor/Plan</th>
-                            <th style="text-align:center; width:10px">Reporte de siniestro</th>
+                            <th style="text-align:center; width:10px"<?php echo $t("form.claim_report"); ?>/th>
                             <th style="text-align:center; width:10px">Estado</th>
                         </tr>
                     </thead>

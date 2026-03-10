@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
 $t = function ($key) {
     return Modelo_Idioma::t($key);
@@ -121,7 +121,7 @@ MODAL INGRESAR NUEVO SINIESTRO
         <div class="modal-content" id="modalNuevoSiniestro">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">NUEVO SINIESTRO</h5>
+                    <h5 class="modal-title"<?php echo $t('form.new_claim'); ?></h5>
                 </div>
                 <div class="modal-body">
                     <div class="row nuevoDatosSiniestro">
@@ -156,7 +156,7 @@ MODAL INGRESAR NUEVO SINIESTRO
                             </label>
                             <select class="form-control cbm_vehiculo js-example-basic-single" name="state"
                                 id="cbm_vehiculo" style="width:100%;">
-                                <option value="">SIN REGISTROS</option>
+                                <option value=""><?php echo $t('titles.no_records'); ?></option>
                             </select>
                         </div>
                         <div class="form-group col-12 col-lg-8">
@@ -177,19 +177,19 @@ MODAL INGRESAR NUEVO SINIESTRO
                                 <div class="form-check-inline">
                                     <input class="form-check-input radio_danos_tercero" type="radio"
                                         name="radio_danos_tercero" id="radio_danos_terceros_1" value="SI">
-                                    <label class="form-check-label">SI</label>
+                                    <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                                 </div>
                                 <div class="form-check-inline">
                                     <input class="form-check-input radio_danos_tercero" type="radio"
                                         name="radio_danos_tercero" id="radio_danos_terceros_2" value="NO" checked>
-                                    <label class="form-check-label">NO</label>
+                                    <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 d-none" id="datosTerceros">
                             <div class="card card-primary" id="cardDatosTerceros">
                                 <div class="card-header">
-                                    <h3 class="card-title">DATOS TERCEROS AFECTADOS</h3>
+                                    <h3 class="card-title"<?php echo $t("form.third_party_data"); ?>/h3>
                                 </div>
                                 <!-- Default box -->
                                 <div class="card-body">
@@ -268,7 +268,7 @@ MODAL LISTAR CONTRATOS CLIENTE
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">LISTA CONTRATOS</h5>
+                    <h5 class="modal-title"><?php echo $t('titles.contract_list'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

@@ -131,12 +131,12 @@ MODAL VALIDAR MODIFICAR OPERATORIO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_1"
                                     id="radio_solicitud_1" value="SI">
-                                <label class="form-check-label">SI</label>
+                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_1"
                                     id="radio_solicitud_2" value="NO" checked>
-                                <label class="form-check-label">NO</label>
+                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_1"
@@ -153,12 +153,12 @@ MODAL VALIDAR MODIFICAR OPERATORIO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_2"
                                     id="radio_resultado_examenes_1" value="SI">
-                                <label class="form-check-label">SI</label>
+                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_2"
                                     id="radio_resultado_examenes_2" value="NO" checked>
-                                <label class="form-check-label">NO</label>
+                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_2"
@@ -175,12 +175,12 @@ MODAL VALIDAR MODIFICAR OPERATORIO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_3"
                                     id="radio_historia_clinica_1" value="SI">
-                                <label class="form-check-label">SI</label>
+                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_3"
                                     id="radio_historia_clinica_2" value="NO" checked>
-                                <label class="form-check-label">NO</label>
+                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_3"
@@ -683,7 +683,7 @@ MODAL INGRESAR NUEVO OPERATORIO
         <div class="modal-content" id="modalNuevoOperatorio">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">NUEVO CRÉDITO HOSPITALARIO</h5>
+                    <h5 class="modal-title"><?php echo $t('form.new_hospital_credit'); ?></h5>
                 </div>
                 <div class="modal-body">
                     <div class="row nuevoDatosOperatorio">
@@ -719,7 +719,7 @@ MODAL INGRESAR NUEVO OPERATORIO
                             </label>
                             <select class="form-control cbm_nombre_colaborador js-example-basic-single" name="state"
                                 id="cbm_nombre_colaborador" style="width:100%;">
-                                <option value="">SIN REGISTROS</option>
+                                <option value=""><?php echo $t('titles.no_records'); ?></option>
                             </select>
                             <input type="hidden" id="lista_colaboradores" name="lista_colaboradores">
                         </div>
@@ -730,7 +730,7 @@ MODAL INGRESAR NUEVO OPERATORIO
                             </label>
                             <select class="form-control cbm_nombre_paciente js-example-basic-single" name="state"
                                 id="cbm_nombre_paciente" style="width:100%;">
-                                <option value="">SIN REGISTROS</option>
+                                <option value=""><?php echo $t('titles.no_records'); ?></option>
                             </select>
                         </div>
                         <div class="form-group col-12 col-lg-6">
@@ -813,7 +813,7 @@ MODAL LISTAR CONTRATOS CLIENTE
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">LISTA CONTRATOS</h5>
+                    <h5 class="modal-title"><?php echo $t('titles.contract_list'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

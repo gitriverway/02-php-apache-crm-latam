@@ -300,7 +300,7 @@ $t = function ($key) {
                         <div class="col-sm-12 col-md-5">
                             <!-- ENTRADA PARA EL DOCUMENTO -->
                             <div class="form-group">
-                                <label for="txt_documento" class="control-label" style="text-align: right;">CEDULA
+                                <label for="txt_documento" class="control-label" style="text-align: right;"><?php echo $t('common.id_card'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <div class="input-group">
@@ -372,7 +372,7 @@ $t = function ($key) {
                             <!-- ENTRADA PARA SELECCIONAR PROVINCIA -->
                             <div class="form-group">
                                 <label for="cbm_provincia" class="control-label"
-                                    style="text-align: right;">PROVINCIA<font color="red"> *</font></label>
+                                    style="text-align: right;"><?php echo $t('list_tables.province'); ?><font color="red"> *</font></label>
                                 <select class="form-control cbm_provincia" name="state" id="cbm_provincia">
                                 </select>
                             </div>
@@ -380,7 +380,7 @@ $t = function ($key) {
                         <div class="col-sm-12 col-md-6">
                             <!-- ENTRADA PARA SELECCIONAR CIUDAD -->
                             <div class="form-group">
-                                <label for="txt_ciudad" class="control-label" style="text-align: right;">CIUDAD
+                                <label for="txt_ciudad" class="control-label" style="text-align: right;"><?php echo $t('list_tables.city'); ?>
                                     <font color="red"> *</font>
                                 </label>
                                 <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
@@ -391,7 +391,7 @@ $t = function ($key) {
                             <!-- ENTRADA PARA DIRECCION -->
                             <div class="form-group">
                                 <label for="txt_direccion" class="control-label"
-                                    style="text-align: right;">DIRECCION
+                                    style="text-align: right;"><?php echo $t('common.address'); ?>
                                     DOMICILIO<font color="red"> *</font>
                                 </label>
                                 <input type="text" class="form-control validarNumerosLetras" id="txt_direccion"
@@ -484,7 +484,7 @@ $t = function ($key) {
                                         </div>
                                         <div class="form-group col-12 col-md-4">
                                             <label for="txt_documento_2" class="control-label"
-                                                style="text-align: right;">CONTRATO<font color="red"> *</font>
+                                                style="text-align: right;"><?php echo $t('form.contract'); ?><font color="red"> *</font>
                                             </label>
                                             <input type="file" class="form-control" id="txt_documento_2"
                                                 name="txt_documento_2" class="subirDocumento" accept=".pdf">
@@ -492,7 +492,7 @@ $t = function ($key) {
                                         </div>
                                         <div class="form-group col-12 col-md-4">
                                             <label for="txt_documento_3" class="control-label"
-                                                style="text-align: right;">FACTURA<font color="red"> *</font>
+                                                style="text-align: right;"><?php echo $t('form.invoice'); ?><font color="red"> *</font>
                                             </label>
                                             <input type="file" class="form-control" id="txt_documento_3"
                                                 name="txt_documento_3" class="subirDocumento" accept=".pdf">
@@ -628,11 +628,11 @@ $t = function ($key) {
                                         <select class="form-control cbm_estado_bayer" name="state"
                                             id="cbm_estado_bayer" style="width:100%;">
                                             <option value=""><?php echo $t('forms.select_option'); ?></option>
-                                            <option value="ABIERTO">ABIERTO</option>
+                                            <option value="ABIERTO"><?php echo $t('status.open'); ?></option>
                                             <option value="NO INTERESADO"><?php echo $t('common.not_interested'); ?></option>
-                                            <option value="INTERESADO">INTERESADO</option>
-                                            <option value="CONTRATADO">CONTRATADO</option>
-                                            <option value="CANCELADO">CANCELADO</option>
+                                            <option value="INTERESADO"><?php echo $t('status.interested'); ?></option>
+                                            <option value="CONTRATADO"><?php echo $t('status.contracted'); ?></option>
+                                            <option value="CANCELADO"><?php echo $t('status.cancelled'); ?></option>
                                         </select>
                                     </div>
                                 </div>
@@ -645,7 +645,7 @@ $t = function ($key) {
                     <div class="row pb-3">
                         <div class="col-12">
                             <a href="clientes-asistencia-medica-individual-empresarial"><button type="button"
-                                    class="btn btn-default" data-dismiss="modal">CANCELAR</button></a>
+                                    class="btn btn-default" data-dismiss="modal"><?php echo $t('form.cancel'); ?></button></a>
                             <button type="submit" class="btn btn-primary float-right"
                                 onclick="Modificar_Cliente()"><i
                                     class="fa fa-save"><b>&nbsp;GUARDAR</b></i></button>

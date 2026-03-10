@@ -481,7 +481,7 @@ $t = function ($key) {
                                         </div>
                                         <div class="form-group col-12 col-md-4">
                                             <label for="txt_documento_2" class="control-label"
-                                                style="text-align: right;">CONTRATO<font color="red"> *</font>
+                                                style="text-align: right;"><?php echo $t('form.contract'); ?><font color="red"> *</font>
                                             </label>
                                             <input type="file" class="form-control" id="txt_documento_2"
                                                 name="txt_documento_2" class="subirDocumento" accept=".pdf">
@@ -489,7 +489,7 @@ $t = function ($key) {
                                         </div>
                                         <div class="form-group col-12 col-md-4">
                                             <label for="txt_documento_3" class="control-label"
-                                                style="text-align: right;">FACTURA<font color="red"> *</font>
+                                                style="text-align: right;"><?php echo $t('form.invoice'); ?><font color="red"> *</font>
                                             </label>
                                             <input type="file" class="form-control" id="txt_documento_3"
                                                 name="txt_documento_3" class="subirDocumento" accept=".pdf">
@@ -625,11 +625,11 @@ $t = function ($key) {
                                         <select class="form-control cbm_estado_bayer" name="state"
                                             id="cbm_estado_bayer" style="width:100%;">
                                             <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                            <option value="ABIERTO">ABIERTO</option>
+                                            <option value="ABIERTO"><?php echo $t('status.open'); ?></option>
                                             <option value="NO INTERESADO"><?php echo $t('common.not_interested'); ?></option>
-                                            <option value="INTERESADO">INTERESADO</option>
-                                            <option value="CONTRATADO">CONTRATADO</option>
-                                            <option value="CANCELADO">CANCELADO</option>
+                                            <option value="INTERESADO"><?php echo $t('status.interested'); ?></option>
+                                            <option value="CONTRATADO"><?php echo $t('status.contracted'); ?></option>
+                                            <option value="CANCELADO"><?php echo $t('status.cancelled'); ?></option>
                                         </select>
                                     </div>
                                 </div>

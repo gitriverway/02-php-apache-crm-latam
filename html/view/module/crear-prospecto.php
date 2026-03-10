@@ -338,9 +338,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA SELECCIONAR CIUDAD -->
                                 <div class="form-group">
-                                    <label for="txt_ciudad" class="control-label" style="text-align: right;">CIUDAD
-                                        <font color="red"> *</font>
-                                    </label>
+                                    <label for="txt_ciudad" class="control-label" style="text-align: right;"><?php echo $t('list_tables.city'); ?></label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
                                         placeholder="<?php echo $t('forms.enter_city'); ?>" maxlength="100"
                                         autocomplete="off" style="text-transform: uppercase">
@@ -350,9 +348,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <!-- ENTRADA PARA DIRECCION -->
                                 <div class="form-group">
                                     <label for="txt_direccion" class="control-label"
-                                        style="text-align: right;">DIRECCION
-                                        DOMICILIO
-                                    </label>
+                                        style="text-align: right;"><?php echo $t('common.address'); ?></label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_direccion"
                                         placeholder="<?php echo $t('forms.enter_address'); ?>" autocomplete="off"
                                         style="text-transform: uppercase">

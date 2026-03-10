@@ -472,11 +472,11 @@ $t = function ($key) {
                                         <select class="form-control cbm_estado_bayer" name="state"
                                             id="cbm_estado_bayer" style="width:100%;">
                                             <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                            <option value="ABIERTO">ABIERTO</option>
+                                            <option value="ABIERTO"><?php echo $t('status.open'); ?></option>
                                             <option value="NO INTERESADO"><?php echo $t('common.not_interested'); ?></option>
-                                            <option value="INTERESADO">INTERESADO</option>
-                                            <option value="CONTRATADO">CONTRATADO</option>
-                                            <option value="CANCELADO">CANCELADO</option>
+                                            <option value="INTERESADO"><?php echo $t('status.interested'); ?></option>
+                                            <option value="CONTRATADO"><?php echo $t('status.contracted'); ?></option>
+                                            <option value="CANCELADO"><?php echo $t('status.cancelled'); ?></option>
                                         </select>
                                     </div>
                                 </div>

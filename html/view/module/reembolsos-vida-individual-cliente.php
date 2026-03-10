@@ -181,7 +181,7 @@ MODAL INGRESAR NUEVO REEMBOLSO
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">LISTA CONTRATOS</h5>
+                    <h5 class="modal-title"><?php echo $t('titles.contract_list'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

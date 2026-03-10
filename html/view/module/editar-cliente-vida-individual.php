@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 if ($_SESSION["S_ROL"] == "CLIENTE") {
     echo '<script>window.location = "inicio";</script>';
@@ -368,7 +368,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA SELECCIONAR PROVINCIA -->
                                 <div class="form-group">
                                     <label for="cbm_provincia" class="control-label"
-                                        style="text-align: right;">PROVINCIA<font color="red"> *</font></label>
+                                        style="text-align: right;"><?php echo $t('list_tables.province'); ?><font color="red"> *</font></label>
                                     <select class="form-control cbm_provincia" name="state" id="cbm_provincia">
                                     </select>
                                 </div>
@@ -376,7 +376,7 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA SELECCIONAR CIUDAD -->
                                 <div class="form-group">
-                                    <label for="txt_ciudad" class="control-label" style="text-align: right;">CIUDAD
+                                    <label for="txt_ciudad" class="control-label" style="text-align: right;"><?php echo $t('list_tables.city'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
@@ -388,7 +388,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA DIRECCION -->
                                 <div class="form-group">
                                     <label for="txt_direccion" class="control-label"
-                                        style="text-align: right;">DIRECCION
+                                        style="text-align: right;"><?php echo $t('common.address'); ?>
                                         DOMICILIO<font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_direccion"
@@ -413,7 +413,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA INGRESOS -->
                                 <div class="form-group">
                                     <label for="cbm_ingreso_mensual" class="control-label"
-                                        style="text-align: right;">INGRESOS
+                                        style="text-align: right;"><?php echo $t('form.income'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_ingreso_mensual" name="state"
@@ -481,7 +481,7 @@ $t = function ($key) {
                                             </div>
                                             <div class="form-group col-12 col-md-4">
                                                 <label for="txt_documento_2" class="control-label"
-                                                    style="text-align: right;">CONTRATO<font color="red"> *</font>
+                                                    style="text-align: right;"><?php echo $t('form.contract'); ?><font color="red"> *</font>
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_2"
                                                     name="txt_documento_2" class="subirDocumento" accept=".pdf">
@@ -489,7 +489,7 @@ $t = function ($key) {
                                             </div>
                                             <div class="form-group col-12 col-md-4 d-none">
                                                 <label for="txt_documento_3" class="control-label"
-                                                    style="text-align: right;">FACTURA<font color="red"> *</font>
+                                                    style="text-align: right;"><?php echo $t('form.invoice'); ?><font color="red"> *</font>
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_3"
                                                     name="txt_documento_3" class="subirDocumento" accept=".pdf">
@@ -507,7 +507,7 @@ $t = function ($key) {
                                             </div>
                                             <div class="form-group col-12 col-md-4  d-none">
                                                 <label for="txt_documento_5" class="control-label"
-                                                    style="text-align: right;">CARTA NOMBRAMIENTO<font color="red">
+                                                    style="text-align: right;"<?php echo $t("form.nomination_letter"); ?>font color="red">
                                                         *</font>
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_5"
@@ -534,7 +534,7 @@ $t = function ($key) {
                                             </div>
                                             <div class="form-group col-12 col-md-4  d-none">
                                                 <label for="txt_documento_8" class="control-label"
-                                                    style="text-align: right;">DEBITO BANCARIO ACTUAL<font color="red">
+                                                    style="text-align: right;"><?php echo $t('form.current_debit'); ?><font color="red">
                                                         *</font>
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_8"
@@ -543,7 +543,7 @@ $t = function ($key) {
                                             </div>
                                             <div class="form-group col-12 col-md-4  d-none">
                                                 <label for="txt_documento_12" class="control-label"
-                                                    style="text-align: right;">FORMULARIO CAMBIO FORMA PAGO<font
+                                                    style="text-align: right;"><?php echo $t('form.form_payment_change'); ?><font
                                                         color="red"> *</font>
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_12"
@@ -552,7 +552,7 @@ $t = function ($key) {
                                             </div>
                                             <div class="form-group col-12 col-md-4  d-none">
                                                 <label for="txt_documento_9" class="control-label"
-                                                    style="text-align: right;">OBSEQUIO BMI<font color="red"> *
+                                                    style="text-align: right;"><?php echo $t('form.bmi_gift'); ?><font color="red"> *
                                                     </font>
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_9"
@@ -561,7 +561,7 @@ $t = function ($key) {
                                             </div>
                                             <div class="form-group col-12 col-md-4  d-none">
                                                 <label for="txt_documento_10" class="control-label"
-                                                    style="text-align: right;">ALCANCE DE REEMBOLSO<font color="red"> *
+                                                    style="text-align: right;"><?php echo $t('form.refund_reach'); ?><font color="red"> *
                                                     </font>
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_10"
@@ -620,7 +620,7 @@ $t = function ($key) {
                                         <!-- ENTRADA PARA SELECCIONAR ESTADO BAYER -->
                                         <div class="form-group">
                                             <label for="cbm_estado_bayer" class="control-label"
-                                                style="text-align: right;">ESTATUS<font color="red"> *</font>
+                                                style="text-align: right;"<?php echo $t("form.status"); ?>font color="red"> *</font>
                                             </label>
                                             <select class="form-control cbm_estado_bayer" name="state"
                                                 id="cbm_estado_bayer" style="width:100%;">

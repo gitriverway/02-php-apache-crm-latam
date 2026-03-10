@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 if ($_SESSION["S_ROL"] == "CLIENTE") {
 
@@ -160,16 +160,16 @@ MODAL MODIFICAR ESTADO BAYER PERSONA
                             </label>
                             <select class="form-control cbm_estado_bayer js-example-basic-single" name="state"
                                 id="cbm_estado_bayer" style="width:100%;">
-                                <option value="ABIERTO">ABIERTO</option>
-                                <!-- <option value="NO CONTESTA">NO CONTESTA</option> -->
-                                <option value="NO INTERESADO">NO INTERESADO</option>
-                                <option value="INTERESADO">INTERESADO</option>
-                                <option value="INTERESADO ALTO">INTERESADO ALTO</option>
-                                <option value="INTERESADO MEDIO">INTERESADO MEDIO</option>
-                                <option value="INTERESADO BAJO">INTERESADO BAJO</option>
-                                <option value="CONTRATADO">CONTRATADO</option>
-                                <option value="DUPLICADO">DUPLICADO</option>
-                                <option value="NO RECUPERADO">NO RECUPERADO</option>
+                                <option value="ABIERTO"><?php echo $t('form.open'); ?></option>
+                                <!-- <option value="NO CONTESTA"<?php echo $t("form.no_answer"); ?>/option> -->
+                                <option value="NO INTERESADO"<?php echo $t("form.not_interested"); ?>/option>
+                                <option value="INTERESADO"><?php echo $t('status.interested'); ?></option>
+                                <option value="INTERESADO ALTO"<?php echo $t("form.interested_alto"); ?>/option>
+                                <option value="INTERESADO MEDIO"<?php echo $t("form.interested_medium"); ?>/option>
+                                <option value="INTERESADO BAJO"<?php echo $t("form.interested_low"); ?>/option>
+                                <option value="CONTRATADO"><?php echo $t('status.contracted'); ?></option>
+                                <option value="DUPLICADO"><?php echo $t('form.duplicated'); ?></option>
+                                <option value="NO RECUPERADO"<?php echo $t("form.not_recovered"); ?>/option>
                             </select>
                         </div>
                     </div>

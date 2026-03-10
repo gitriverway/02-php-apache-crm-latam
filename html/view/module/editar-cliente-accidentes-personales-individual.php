@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 if ($_SESSION["S_ROL"] == "CLIENTE") {
     echo '<script>window.location = "inicio";</script>';
@@ -411,7 +411,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA INGRESOS -->
                                 <div class="form-group">
                                     <label for="cbm_ingreso_mensual" class="control-label"
-                                        style="text-align: right;">INGRESOS
+                                        style="text-align: right;"><?php echo $t('form.income'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_ingreso_mensual" name="state"
@@ -469,9 +469,7 @@ $t = function ($key) {
                                             </div>
                                             <div class="form-group col-12 col-md-4">
                                                 <label for="txt_documento_2" class="control-label"
-                                                    style="text-align: right;">RUC<font color="red"> *
-                                                    </font>
-                                                </label>
+                                                    style="text-align: right;"><?php echo $t('form.ruc'); ?></label>
                                                 <input type="file" class="form-control" id="txt_documento_2"
                                                     name="txt_documento_2" class="subirDocumento" accept=".pdf">
                                                 <p class="help-block">Peso máximo del documento 50MB</p>
@@ -487,7 +485,7 @@ $t = function ($key) {
                                             </div>
                                             <div class="form-group col-12 col-md-4">
                                                 <label for="txt_documento_4" class="control-label"
-                                                    style="text-align: right;">CONTRATO<font color="red"> *</font>
+                                                    style="text-align: right;"><?php echo $t('form.contract'); ?><font color="red"> *</font>
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_4"
                                                     name="txt_documento_4" class="subirDocumento" accept=".pdf">
@@ -495,7 +493,7 @@ $t = function ($key) {
                                             </div>
                                             <div class="form-group col-12 col-md-4">
                                                 <label for="txt_documento_5" class="control-label"
-                                                    style="text-align: right;">FACTURA<font color="red"> *</font>
+                                                    style="text-align: right;"><?php echo $t('form.invoice'); ?><font color="red"> *</font>
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_5"
                                                     name="txt_documento_5" class="subirDocumento" accept=".pdf">
@@ -503,7 +501,7 @@ $t = function ($key) {
                                             </div>
                                             <div class="form-group col-12 col-md-4">
                                                 <label for="txt_documento_6" class="control-label"
-                                                    style="text-align: right;">LISTA PERSONAL<font color="red"> *
+                                                    style="text-align: right;"><?php echo $t('form.personal_list'); ?><font color="red"> *
                                                     </font>
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_6"
@@ -521,7 +519,7 @@ $t = function ($key) {
                                             </div>
                                             <div class="form-group col-12 col-md-4">
                                                 <label for="txt_documento_8" class="control-label"
-                                                    style="text-align: right;">CARTA NOMBRAMIENTO<font color="red">
+                                                    style="text-align: right;"<?php echo $t("form.nomination_letter"); ?>font color="red">
                                                         *</font>
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_8"
@@ -580,16 +578,16 @@ $t = function ($key) {
                                         <!-- ENTRADA PARA SELECCIONAR ESTADO BAYER -->
                                         <div class="form-group">
                                             <label for="cbm_estado_bayer" class="control-label"
-                                                style="text-align: right;">ESTATUS<font color="red"> *</font>
+                                                style="text-align: right;"<?php echo $t("form.status"); ?>font color="red"> *</font>
                                             </label>
                                             <select class="form-control cbm_estado_bayer" name="state"
                                                 id="cbm_estado_bayer" style="width:100%;">
                                                 <option value=""><?php echo $t('forms.select_option'); ?></option>
-                                                <option value="ABIERTO">ABIERTO</option>
-                                                <option value="NO INTERESADO">NO INTERESADO</option>
-                                                <option value="INTERESADO">INTERESADO</option>
-                                                <option value="CONTRATADO">CONTRATADO</option>
-                                                <option value="CANCELADO">CANCELADO</option>
+                                                <option value="ABIERTO"><?php echo $t('status.open'); ?></option>
+                                                <option value="NO INTERESADO"<?php echo $t("form.not_interested"); ?>/option>
+                                                <option value="INTERESADO"><?php echo $t('status.interested'); ?></option>
+                                                <option value="CONTRATADO"><?php echo $t('status.contracted'); ?></option>
+                                                <option value="CANCELADO"><?php echo $t('status.cancelled'); ?></option>
                                             </select>
                                         </div>
                                     </div>
@@ -724,7 +722,7 @@ MODAL LISTAR CONTRATOS
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">LISTA EMPLEADOS</h5>
+                    <h5 class="modal-title"<?php echo $t('form.employee_list'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

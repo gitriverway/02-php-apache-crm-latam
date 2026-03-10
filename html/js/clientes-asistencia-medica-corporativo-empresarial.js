@@ -1,6 +1,10 @@
 // Helper function para traducciones en JavaScript
 function t(key, defaultValue) {
-  if (typeof translations !== 'undefined' && translations.form && translations.form[key]) {
+  if (
+    typeof translations !== "undefined" &&
+    translations.form &&
+    translations.form[key]
+  ) {
     return translations.form[key];
   }
   if (
@@ -206,7 +210,10 @@ $("#tabla_lista_contratos").on(
 
     Swal.fire({
       title: t("messages.are_you_sure", "Are you sure?"),
-      text: t("messages.you_wont_be_able_to_revert", "You won't be able to revert this!"),
+      text: t(
+        "messages.you_wont_be_able_to_revert",
+        "You won't be able to revert this!",
+      ),
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -218,18 +225,18 @@ $("#tabla_lista_contratos").on(
           idCliente,
           idDocumentoEmision,
           carpetaDocumento,
-          documentoRuta
+          documentoRuta,
         );
       }
     });
-  }
+  },
 );
 
 function eliminar_documento_emision(
   idCliente,
   idDocumentoEmision,
   carpetaDocumento,
-  documentoRuta
+  documentoRuta,
 ) {
   var datos = new FormData();
   datos.append("idCliente", idCliente);
@@ -246,10 +253,21 @@ function eliminar_documento_emision(
     processData: false,
     success: function (respuesta) {
       if (respuesta == 1) {
-        Swal.fire(t("messages.eliminated", "Eliminated!"), t("messages.document_deleted", "The Document has been deleted."), t("messages.success", "success"));
+        Swal.fire(
+          t("messages.eliminated", "Eliminated!"),
+          t("messages.document_deleted", "The Document has been deleted."),
+          t("messages.success", "success"),
+        );
         table_documentos.ajax.reload();
       } else {
-        Swal.fire(t("messages.oops", "Oops...!"), t("messages.document_not_deleted", "The Document could not be deleted."), t("messages.error", "error"));
+        Swal.fire(
+          t("messages.oops", "Oops...!"),
+          t(
+            "messages.document_not_deleted",
+            "The Document could not be deleted.",
+          ),
+          t("messages.error", "error"),
+        );
       }
       return respuesta;
     },
@@ -287,7 +305,7 @@ $("#tabla_lista_vendedores").on("click", ".btnAsignarVendedor", function () {
         Swal.fire(
           "Mensaje De Confirmacion",
           "El vendedor a sido asignado",
-          "success"
+          "success",
         ).then((value) => {
           $("#modal_asignar_vendedor").modal("hide");
           tabla_cliente_pymes.ajax.reload();
@@ -333,7 +351,7 @@ function listar_combo_categoria() {
             data[i]["categoria_nombre"] +
             "</option>";
         }
-        cadena += "<option value='0'>OTROS</option>";
+        // cadena += "<option value='0'>OTROS</option>";
       } else {
         cadena += "<option value=''>NO SE ENCONTRARON REGISTROS</option>";
       }
@@ -439,7 +457,7 @@ $(".nuevoColaborador").on(
   "input.fecha_nacimiento_colaborador",
   function () {
     listarColaboradores();
-  }
+  },
 );
 
 $(".nuevoColaborador").on("keyup", "input.deducibleColaborador", function () {
@@ -475,7 +493,9 @@ $(".btnAgregarColaborador").click(function () {
       ' etiquetaTipoColaborador" id = "etiquetaTipoColaborador' +
       numProspecto +
       '" style="padding-right:0px">' +
-      "<label>" + t('form_labels.parentesco', 'Parentesco') + "</label>" +
+      "<label>" +
+      t("form_labels.parentesco", "Parentesco") +
+      "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-8 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
@@ -492,7 +512,9 @@ $(".btnAgregarColaborador").click(function () {
       ' etiquetaNombreColaborador" id = "etiquetaNombreColaborador' +
       numProspecto +
       '">' +
-      "<label>" + t('form_labels.nombre', 'Nombre') + "</label>" +
+      "<label>" +
+      t("form_labels.nombre", "Nombre") +
+      "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-9 my-1">' +
       '<div class="input-group">' +
@@ -500,7 +522,9 @@ $(".btnAgregarColaborador").click(function () {
       numProspecto +
       '" name="nombreColaborador' +
       numProspecto +
-      ' placeholder="' + t('enter_name', 'INGRESE NOMBRE') + '" autocomplete="off" style="text-transform: uppercase"></input>' +
+      ' placeholder="' +
+      t("enter_name", "INGRESE NOMBRE") +
+      '" autocomplete="off" style="text-transform: uppercase"></input>' +
       "</div>" +
       "</div>" +
       "<!-- Genero -->" +
@@ -509,7 +533,9 @@ $(".btnAgregarColaborador").click(function () {
       ' etiquetaGeneroColaborador" id = "etiquetaGeneroColaborador' +
       numProspecto +
       '">' +
-      "<label>" + t('form_labels.genero', 'Género') + "</label>" +
+      "<label>" +
+      t("form_labels.genero", "Género") +
+      "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-10 my-1">' +
       '<select class="form-control generoColaborador" id="generoColaborador' +
@@ -528,7 +554,9 @@ $(".btnAgregarColaborador").click(function () {
       ' etiquetaFechaColaborador" id = "etiquetaFechaColaborador' +
       numProspecto +
       '" style="padding-left:0px">' +
-      "<label>" + t('form_labels.fecha_nacimiento', 'Fecha Nacimiento') + "</label>" +
+      "<label>" +
+      t("form_labels.fecha_nacimiento", "Fecha Nacimiento") +
+      "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-11 my-1" style="padding-left:0px">' +
       '<div class="input-group">' +
@@ -545,7 +573,9 @@ $(".btnAgregarColaborador").click(function () {
       ' etiquetaDeducibleColaborador" id = "etiquetaDeducibleColaborador' +
       numProspecto +
       '">' +
-      "<label>" + t('form_labels.deducible', 'Deducible') + "</label>" +
+      "<label>" +
+      t("form_labels.deducible", "Deducible") +
+      "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-12 my-1">' +
       '<div class="input-group">' +
@@ -562,7 +592,9 @@ $(".btnAgregarColaborador").click(function () {
       ' etiquetaAgregarDependiente" id = "etiquetaAgregarDependiente' +
       numProspecto +
       '" style="padding-left:0px">' +
-      "<label>" + t('form_labels.dependientes', 'Dependientes') + "</label>" +
+      "<label>" +
+      t("form_labels.dependientes", "Dependientes") +
+      "</label>" +
       "</div>" +
       '<div class="col-12 col-md-1 order-md-13 my-1" style="padding-left:0px">' +
       '<button type="button" class="form-control btn btn-primary AgregarDependiente" idColaborador="' +
@@ -593,7 +625,7 @@ $(".btnAgregarColaborador").click(function () {
       '"><i class="fa fa-times"></i></button>' +
       "</div>" +
       "</div>" +
-      "</div>"
+      "</div>",
   );
 });
 
@@ -659,7 +691,9 @@ function auto_agregar_familiares_dependientes(lista) {
         ' etiquetaTipoFamiliar" id = "etiquetaTipoFamiliar' +
         numSubProspecto +
         '" style="padding-right:0px">' +
-        "<label>" + t('form_labels.parentesco', 'Parentesco') + "</label>" +
+        "<label>" +
+        t("form_labels.parentesco", "Parentesco") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
         '<div class="input-group">' +
@@ -682,7 +716,9 @@ function auto_agregar_familiares_dependientes(lista) {
         ' etiquetaNombreFamiliar" id = "etiquetaNombreFamiliar' +
         numSubProspecto +
         '">' +
-        "<label>" + t('form_labels.nombre', 'Nombre') + "</label>" +
+        "<label>" +
+        t("form_labels.nombre", "Nombre") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-3 order-md-8 my-1">' +
         '<div class="input-group">' +
@@ -690,7 +726,9 @@ function auto_agregar_familiares_dependientes(lista) {
         numSubProspecto +
         '" name="nombreFamiliar' +
         numSubProspecto +
-          ' placeholder="' + t('enter_name', 'INGRESE NOMBRE') + '" autocomplete="off" style="text-transform: uppercase" value = "' +
+        ' placeholder="' +
+        t("enter_name", "INGRESE NOMBRE") +
+        '" autocomplete="off" style="text-transform: uppercase" value = "' +
         data[i]["nombre"] +
         '"></input>' +
         "</div>" +
@@ -701,7 +739,9 @@ function auto_agregar_familiares_dependientes(lista) {
         ' etiquetaGeneroFamiliar" id = "etiquetaGeneroFamiliar' +
         numSubProspecto +
         '">' +
-        "<label>" + t('form_labels.genero', 'Género') + "</label>" +
+        "<label>" +
+        t("form_labels.genero", "Género") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-9 my-1">' +
         '<select class="form-control generoFamiliar" id="generoFamiliar' +
@@ -720,7 +760,9 @@ function auto_agregar_familiares_dependientes(lista) {
         ' etiquetaFechaNacimiento" id = "etiquetaFechaNacimiento' +
         numSubProspecto +
         '" style="padding-left:0px">' +
-        "<label>" + t('form_labels.fecha_nacimiento', 'Fecha Nacimiento') + "</label>" +
+        "<label>" +
+        t("form_labels.fecha_nacimiento", "Fecha Nacimiento") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-left:0px">' +
         '<div class="input-group">' +
@@ -739,7 +781,9 @@ function auto_agregar_familiares_dependientes(lista) {
         ' etiquetaDeducibleFamiliar" id = "etiquetaDeducibleFamiliar' +
         numSubProspecto +
         '">' +
-        "<label>" + t('form_labels.deducible', 'Deducible') + "</label>" +
+        "<label>" +
+        t("form_labels.deducible", "Deducible") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-11 my-1">' +
         '<div class="input-group">' +
@@ -747,7 +791,9 @@ function auto_agregar_familiares_dependientes(lista) {
         numSubProspecto +
         '" name="deducibleFamiliar' +
         numSubProspecto +
-        ' placeholder="' + t('enter_deductible', 'INGRESE DEDUCIBLE') + '" autocomplete="off"></input>' +
+        ' placeholder="' +
+        t("enter_deductible", "INGRESE DEDUCIBLE") +
+        '" autocomplete="off"></input>' +
         "</div>" +
         "</div>" +
         "<!-- Eliminar -->" +
@@ -764,7 +810,7 @@ function auto_agregar_familiares_dependientes(lista) {
         '"><i class="fa fa-times"></i></button>' +
         "</div>" +
         "</div>" +
-        "</div>"
+        "</div>",
     );
 
     $("#tipoFamiliar" + numSubProspecto)
@@ -809,7 +855,9 @@ $("#modalListarDependientesColaborador").on(
         ' etiquetaTipoFamiliar" id = "etiquetaTipoFamiliar' +
         numSubProspecto +
         '" style="padding-right:0px">' +
-        "<label>" + t('form_labels.parentesco', 'Parentesco') + "</label>" +
+        "<label>" +
+        t("form_labels.parentesco", "Parentesco") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
         '<div class="input-group">' +
@@ -832,7 +880,9 @@ $("#modalListarDependientesColaborador").on(
         ' etiquetaNombreFamiliar" id = "etiquetaNombreFamiliar' +
         numSubProspecto +
         '">' +
-        "<label>" + t('form_labels.nombre', 'Nombre') + "</label>" +
+        "<label>" +
+        t("form_labels.nombre", "Nombre") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-3 order-md-8 my-1">' +
         '<div class="input-group">' +
@@ -840,7 +890,9 @@ $("#modalListarDependientesColaborador").on(
         numSubProspecto +
         '" name="nombreFamiliar' +
         numSubProspecto +
-      ' placeholder="' + t('enter_name', 'INGRESE NOMBRE') + '" autocomplete="off" style="text-transform: uppercase"></input>' +
+        ' placeholder="' +
+        t("enter_name", "INGRESE NOMBRE") +
+        '" autocomplete="off" style="text-transform: uppercase"></input>' +
         "</div>" +
         "</div>" +
         "<!-- Genero -->" +
@@ -849,7 +901,9 @@ $("#modalListarDependientesColaborador").on(
         ' etiquetaGeneroFamiliar" id = "etiquetaGeneroFamiliar' +
         numSubProspecto +
         '">' +
-        "<label>" + t('form_labels.genero', 'Género') + "</label>" +
+        "<label>" +
+        t("form_labels.genero", "Género") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-9 my-1">' +
         '<select class="form-control generoFamiliar" id="generoFamiliar' +
@@ -868,7 +922,9 @@ $("#modalListarDependientesColaborador").on(
         ' etiquetaFechaNacimiento" id = "etiquetaFechaNacimiento' +
         numSubProspecto +
         '" style="padding-left:0px">' +
-        "<label>" + t('form_labels.fecha_nacimiento', 'Fecha Nacimiento') + "</label>" +
+        "<label>" +
+        t("form_labels.fecha_nacimiento", "Fecha Nacimiento") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-left:0px">' +
         '<div class="input-group">' +
@@ -885,7 +941,9 @@ $("#modalListarDependientesColaborador").on(
         ' etiquetaDeducibleFamiliar" id = "etiquetaDeducibleFamiliar' +
         numSubProspecto +
         '">' +
-        "<label>" + t('form_labels.deducible', 'Deducible') + "</label>" +
+        "<label>" +
+        t("form_labels.deducible", "Deducible") +
+        "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-11 my-1">' +
         '<div class="input-group">' +
@@ -893,7 +951,9 @@ $("#modalListarDependientesColaborador").on(
         numSubProspecto +
         '" name="deducibleFamiliar' +
         numSubProspecto +
-      ' placeholder="' + t('enter_deductible', 'INGRESE DEDUCIBLE') + '" autocomplete="off" value = "0"></input>' +
+        ' placeholder="' +
+        t("enter_deductible", "INGRESE DEDUCIBLE") +
+        '" autocomplete="off" value = "0"></input>' +
         "</div>" +
         "</div>" +
         "<!-- Eliminar -->" +
@@ -915,9 +975,9 @@ $("#modalListarDependientesColaborador").on(
         '"><i class="fa fa-times"></i></button>' +
         "</div>" +
         "</div>" +
-        "</div>"
+        "</div>",
     );
-  }
+  },
 );
 
 /*=============================================
@@ -1121,7 +1181,7 @@ function Registrar_Dependientes_Colaborador() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de familiares",
-      "warning"
+      "warning",
     );
   } else {
     $("#modalListarDependientesColaborador").modal("hide");
@@ -1146,7 +1206,7 @@ function agregarNuevaObservacion() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene la observaci&oacute;n",
-      "warning"
+      "warning",
     );
   }
   numObservacion++;
@@ -1173,7 +1233,9 @@ function agregarNuevaObservacion() {
       ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
       numObservacion +
       '" style="padding-right:0px">' +
-      "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
+      "<label>" +
+      t("form_labels.fecha_registro", "Fecha Registro") +
+      "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-4 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
@@ -1192,7 +1254,9 @@ function agregarNuevaObservacion() {
       ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
       numObservacion +
       '">' +
-      "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
+      "<label>" +
+      t("form_labels.observacion", "Observación") +
+      "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-5 my-1">' +
       '<label class="observacion" id="observacion' +
@@ -1216,7 +1280,7 @@ function agregarNuevaObservacion() {
       '"><i class="fa fa-times"></i></button>' +
       "</div>" +
       "</div>" +
-      "</div>"
+      "</div>",
   );
 
   $("#txt_observacion").val("");
@@ -1307,7 +1371,7 @@ $(".nuevaObservacion").on("click", "button.quitarObservacion", function () {
 
   localStorage.setItem(
     "quitarObservacion",
-    JSON.stringify(idQuitarObservacion)
+    JSON.stringify(idQuitarObservacion),
   );
 
   numProspecto--;
@@ -1365,7 +1429,7 @@ function cargar_datos_cliente() {
           $("#txt_valor_asegurado").val(data[0]["cliente_valor_asegurado"]);
           $("#txt_prima_neta").val(data[0]["cliente_prima_neta"]);
           $("#txt_prima_comisionable").val(
-            data[0]["cliente_prima_comisionable"]
+            data[0]["cliente_prima_comisionable"],
           );
           $("#txt_prima_total").val(data[0]["cliente_prima_total"]);
           $("#cbm_tipo_pago").val(data[0]["cliente_tipo_pago"]).change();
@@ -1444,7 +1508,9 @@ function agregar_auto_Colaboradores() {
           ' etiquetaTipoColaborador" id = "etiquetaTipoColaborador' +
           numProspecto +
           '" style="padding-right:0px">' +
-          "<label>" + t('form_labels.parentesco', 'Parentesco') + "</label>" +
+          "<label>" +
+          t("form_labels.parentesco", "Parentesco") +
+          "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
@@ -1461,7 +1527,9 @@ function agregar_auto_Colaboradores() {
           ' etiquetaNombreColaborador" id = "etiquetaNombreColaborador' +
           numProspecto +
           '">' +
-          "<label>" + t('form_labels.nombre', 'Nombre') + "</label>" +
+          "<label>" +
+          t("form_labels.nombre", "Nombre") +
+          "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-8 my-1">' +
           '<div class="input-group">' +
@@ -1469,7 +1537,9 @@ function agregar_auto_Colaboradores() {
           numProspecto +
           '" name="nombreColaborador' +
           numProspecto +
-        ' placeholder="' + t('enter_name', 'INGRESE NOMBRE') + '" autocomplete="off" style="text-transform: uppercase" value = "' +
+          ' placeholder="' +
+          t("enter_name", "INGRESE NOMBRE") +
+          '" autocomplete="off" style="text-transform: uppercase" value = "' +
           data[i]["nombre"] +
           '"></input>' +
           "</div>" +
@@ -1480,7 +1550,9 @@ function agregar_auto_Colaboradores() {
           ' etiquetaGeneroColaborador" id = "etiquetaGeneroColaborador' +
           numProspecto +
           '">' +
-          "<label>" + t('form_labels.genero', 'Género') + "</label>" +
+          "<label>" +
+          t("form_labels.genero", "Género") +
+          "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-9 my-1">' +
           '<select class="form-control generoColaborador" id="generoColaborador' +
@@ -1499,7 +1571,9 @@ function agregar_auto_Colaboradores() {
           ' etiquetaFechaColaborador" id = "etiquetaFechaColaborador' +
           numProspecto +
           '" style="padding-left:0px">' +
-          "<label>" + t('form_labels.fecha_nacimiento', 'Fecha Nacimiento') + "</label>" +
+          "<label>" +
+          t("form_labels.fecha_nacimiento", "Fecha Nacimiento") +
+          "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-left:0px">' +
           '<div class="input-group">' +
@@ -1518,7 +1592,9 @@ function agregar_auto_Colaboradores() {
           ' etiquetaDeducibleColaborador" id = "etiquetaDeducibleColaborador' +
           numProspecto +
           '">' +
-          "<label>" + t('form_labels.deducible', 'Deducible') + "</label>" +
+          "<label>" +
+          t("form_labels.deducible", "Deducible") +
+          "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-11 my-1">' +
           '<div class="input-group">' +
@@ -1535,7 +1611,9 @@ function agregar_auto_Colaboradores() {
           ' etiquetaAgregarDependiente" id = "etiquetaAgregarDependiente' +
           numProspecto +
           '" style="padding-left:0px">' +
-          "<label>" + t('form_labels.dependientes', 'Dependientes') + "</label>" +
+          "<label>" +
+          t("form_labels.dependientes", "Dependientes") +
+          "</label>" +
           "</div>" +
           '<div class="col-12 col-md-1 order-md-11 my-1" style="padding-left:0px">' +
           '<button type="button" class="form-control btn btn-primary AgregarDependiente" idColaborador="' +
@@ -1561,7 +1639,7 @@ function agregar_auto_Colaboradores() {
           '"><i class="fa fa-times"></i></button>' +
           "</div>" +
           "</div>" +
-          "</div>"
+          "</div>",
       );
 
       $("#tipoColaborador" + numProspecto).val(data[i]["tipo"]);
@@ -1619,7 +1697,9 @@ function agregar_auto_observaciones() {
               ' etiquetaFechaObservacion" id="etiquetaFechaObservacion' +
               numObservacion +
               '" style="padding-right:0px">' +
-              "<label>" + t('form_labels.fecha_registro', 'Fecha Registro') + "</label>" +
+              "<label>" +
+              t("form_labels.fecha_registro", "Fecha Registro") +
+              "</label>" +
               "</div>" +
               '<div class="col-6 col-md-4 order-md-4 my-1" style="padding-right:0px">' +
               '<div class="input-group">' +
@@ -1638,7 +1718,9 @@ function agregar_auto_observaciones() {
               ' etiquetaDescripcionObservacion" id="etiquetaDescripcionObservacion' +
               numObservacion +
               '">' +
-              "<label>" + t('form_labels.observacion', 'Observación') + "</label>" +
+              "<label>" +
+              t("form_labels.observacion", "Observación") +
+              "</label>" +
               "</div>" +
               '<div class="col-6 col-md-4 order-md-5 my-1">' +
               '<label class="observacion" id="observacion' +
@@ -1660,7 +1742,7 @@ function agregar_auto_observaciones() {
               // '<button type="button" class="form-control btn btn-default btn-xs idObservacion="' + numObservacion + '"><i class="fa fa-times"></i></button>'+
               "</div>" +
               "</div>" +
-              "</div>"
+              "</div>",
           );
         }
       }
@@ -1684,7 +1766,10 @@ $('.subirDocumento [type="file"]').on("change", function () {
     Swal.fire({
       icon: "error",
       title: t("messages.error_uploading_document", "Error uploading document"),
-      text: t("messages.document_must_be_pdf", "The document must be in PDF format!"),
+      text: t(
+        "messages.document_must_be_pdf",
+        "The document must be in PDF format!",
+      ),
       confirmButtonText: t("messages.close", "Close"),
     });
   } else if (documento["size"] > maxSizeBytes) {
@@ -1693,7 +1778,10 @@ $('.subirDocumento [type="file"]').on("change", function () {
     Swal.fire({
       icon: "error",
       title: t("messages.error_uploading_document", "Error uploading document"),
-      text: t("messages.document_exceeds_max_size", "The document must not exceed {size}MB!").replace('{size}', maxSizeMB),
+      text: t(
+        "messages.document_exceeds_max_size",
+        "The document must not exceed {size}MB!",
+      ).replace("{size}", maxSizeMB),
       confirmButtonText: t("messages.close", "Close"),
     });
   }
@@ -1722,16 +1810,16 @@ function listarDocumentos() {
 
 function crear_overlay_asistencia_medica() {
   $("#cardBayer").append(
-    '<div class="overlay dark" id="overlayBayer"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlayBayer"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
   $("#cardPersonal").append(
-    '<div class="overlay dark" id="overlayPersonal"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlayPersonal"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
   $("#cardDependientes").append(
-    '<div class="overlay dark" id="overlayDependientes"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlayDependientes"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
   $("#cardContrato").append(
-    '<div class="overlay dark" id="overlayContrato"><i class="fas fa-2x fa-sync fa-spin"></i></div>'
+    '<div class="overlay dark" id="overlayContrato"><i class="fas fa-2x fa-sync fa-spin"></i></div>',
   );
 }
 function eliminar_overlay_asistencia_medica() {
@@ -1826,7 +1914,7 @@ function Modificar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios de familiares",
-      "warning"
+      "warning",
     );
   }
 
@@ -1859,7 +1947,7 @@ function Modificar_Cliente() {
     return Swal.fire(
       "Mensaje De Advertencia",
       "Llene los campos vacios",
-      "warning"
+      "warning",
     );
   }
 
@@ -2019,7 +2107,7 @@ function Modificar_Cliente() {
           Swal.fire(
             "Mensaje De Confirmacion",
             "Datos correctamente, Actualizado Cliente",
-            "success"
+            "success",
           ).then((value) => {
             window.location =
               "clientes-asistencia-medica-corporativo-empresarial";
@@ -2028,14 +2116,14 @@ function Modificar_Cliente() {
           return Swal.fire(
             "Mensaje De Advertencia",
             "Lo sentimos, la cedula ya esta registrada en otro cliente",
-            "warning"
+            "warning",
           );
         }
       } else {
         Swal.fire(
           "Mensaje De Error",
           "Lo sentimos, no se pudo completar el registro",
-          "error"
+          "error",
         );
       }
       eliminar_overlay_asistencia_medica();

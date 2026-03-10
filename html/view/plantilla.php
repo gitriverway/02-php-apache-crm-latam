@@ -24,7 +24,7 @@ $htmlLang = isset($langMap[$currentLang]) ? $langMap[$currentLang] : 'en';
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MQP Seguros | CRM</title>
+  <title>Riverway Seguros | CRM</title>
 
   <link rel="icon" type="image/png" href="view/img/riverway.ico" />
 

@@ -171,12 +171,12 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_1" id="radio_formulario_siniestro_1" value="SI">
-                                                <label class="form-check-label">SI</label>
+                                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_1" id="radio_formulario_siniestro_2" value="NO" checked>
-                                                <label class="form-check-label">NO</label>
+                                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
@@ -193,12 +193,12 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_2" id="radio_cedula_dueno_auto_1" value="SI">
-                                                <label class="form-check-label">SI</label>
+                                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_2" id="radio_cedula_dueno_auto_2" value="NO" checked>
-                                                <label class="form-check-label">NO</label>
+                                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
@@ -209,18 +209,18 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                                 value="CEDULA DUENO AUTO">
                                         </div>
                                         <div class="form-group col-12 col-lg-3 col-md-4">
-                                            <label for="radio_licencia" class="control-label">LICENCIA CONDUCTOR<font
+                                            <label for="radio_licencia" class="control-label"<?php echo $t('form.license'); ?><font
                                                     color="red"> *</font>
                                             </label>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_3" id="radio_licencia_1" value="SI">
-                                                <label class="form-check-label">SI</label>
+                                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_3" id="radio_licencia_2" value="NO" checked>
-                                                <label class="form-check-label">NO</label>
+                                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
@@ -237,12 +237,12 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_4" id="radio_matricula_1" value="SI">
-                                                <label class="form-check-label">SI</label>
+                                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_4" id="radio_matricula_2" value="NO" checked>
-                                                <label class="form-check-label">NO</label>
+                                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
@@ -253,18 +253,18 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                                 value="MATRICULA">
                                         </div>
                                         <div class="form-group col-12 col-lg-3 col-md-4">
-                                            <label for="radio_parte_policial" class="control-label">PARTE POLICIAL<font
+                                            <label for="radio_parte_policial" class="control-label"<?php echo $t('form.police_report'); ?><font
                                                     color="red"> *</font>
                                             </label>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_5" id="radio_parte_policial_1" value="SI">
-                                                <label class="form-check-label">SI</label>
+                                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_5" id="radio_parte_policial_2" value="NO" checked>
-                                                <label class="form-check-label">NO</label>
+                                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
@@ -281,12 +281,12 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_6" id="radio_denuncia_fiscalia_1" value="SI">
-                                                <label class="form-check-label">SI</label>
+                                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_6" id="radio_denuncia_fiscalia_2" value="NO" checked>
-                                                <label class="form-check-label">NO</label>
+                                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
@@ -303,12 +303,12 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_7" id="radio_foto_auto_afectado_1" value="SI">
-                                                <label class="form-check-label">SI</label>
+                                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_7" id="radio_foto_auto_afectado_2" value="NO" checked>
-                                                <label class="form-check-label">NO</label>
+                                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
@@ -326,12 +326,12 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_8" id="radio_foto_auto_afectado_1" value="SI">
-                                                <label class="form-check-label">SI</label>
+                                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_8" id="radio_foto_auto_afectado_2" value="NO" checked>
-                                                <label class="form-check-label">NO</label>
+                                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
@@ -826,7 +826,7 @@ MODAL INGRESAR NUEVO SINIESTRO
         <div class="modal-content" id="modalNuevoSiniestro">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">NUEVO SINIESTRO TRANSPORTE</h5>
+                    <h5 class="modal-title"><?php echo $t('form.new_transport_claim'); ?></h5>
                 </div>
                 <div class="modal-body">
                     <div class="row nuevoDatosSiniestro">
@@ -861,7 +861,7 @@ MODAL INGRESAR NUEVO SINIESTRO
                             </label>
                             <select class="form-control cbm_transporte js-example-basic-single" name="state"
                                 id="cbm_transporte" style="width:100%;">
-                                <option value="">SIN REGISTROS</option>
+                                <option value=""><?php echo $t('titles.no_records'); ?></option>
                             </select>
                         </div>
                         <div class="form-group col-12">
@@ -916,7 +916,7 @@ MODAL LISTAR CONTRATOS CLIENTE
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">LISTA CONTRATOS</h5>
+                    <h5 class="modal-title"><?php echo $t('titles.contract_list'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

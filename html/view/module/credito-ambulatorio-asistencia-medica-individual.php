@@ -130,12 +130,12 @@ MODAL VALIDAR MODIFICAR CREDITO AMBULATORIO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_1"
                                     id="radio_solicitud_1" value="SI">
-                                <label class="form-check-label">SI</label>
+                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_1"
                                     id="radio_solicitud_2" value="NO" checked>
-                                <label class="form-check-label">NO</label>
+                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_1"
@@ -152,12 +152,12 @@ MODAL VALIDAR MODIFICAR CREDITO AMBULATORIO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_2"
                                     id="radio_pedido_examenes_1" value="SI">
-                                <label class="form-check-label">SI</label>
+                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_2"
                                     id="radio_pedido_examenes_2" value="NO" checked>
-                                <label class="form-check-label">NO</label>
+                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_2"
@@ -173,12 +173,12 @@ MODAL VALIDAR MODIFICAR CREDITO AMBULATORIO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_3"
                                     id="radio_pedido_rehabilitacion_1" value="SI">
-                                <label class="form-check-label">SI</label>
+                                <label class="form-check-label"><?php echo $t('form.yes'); ?></label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_3"
                                     id="radio_pedido_rehabilitacion_2" value="NO" checked>
-                                <label class="form-check-label">NO</label>
+                                <label class="form-check-label"><?php echo $t('form.no'); ?></label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_3"
@@ -684,7 +684,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
         <div class="modal-content" id="modalNuevoCreditoAmbulatorio">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">NUEVO CRÉDITO AMBULATORIO</h5>
+                    <h5 class="modal-title"><?php echo $t('form.new_ambulatory_credit'); ?></h5>
                 </div>
                 <div class="modal-body">
                     <div class="row nuevoDatosCreditoAmbulatorio">
@@ -720,7 +720,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                             </label>
                             <select class="form-control cbm_nombre_paciente js-example-basic-single" name="state"
                                 id="cbm_nombre_paciente" style="width:100%;">
-                                <option value="">SIN REGISTROS</option>
+                                <option value=""><?php echo $t('titles.no_records'); ?></option>
                             </select>
                         </div>
                         <!-- <div class="form-group col-12 col-lg-6">
@@ -808,7 +808,7 @@ MODAL LISTAR CONTRATOS CLIENTE
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title">LISTA CONTRATOS</h5>
+                    <h5 class="modal-title"><?php echo $t('titles.contract_list'); ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
