@@ -1,4 +1,4 @@
-$(document).on("hidden.bs.modal", function (event) {
+﻿$(document).on("hidden.bs.modal", function (event) {
   if ($(".modal:visible").length) {
     $("body").addClass("modal-open");
   }
@@ -228,9 +228,9 @@ function listar_combo_dependientes() {
           for (var i = 0; i < data.length; i++) {
             cadena +=
               "<option  value='" +
-              data[i]["nombre"] +
+              data[i][t("form_labels.name", "Nome")] +
               "'>" +
-              data[i]["nombre"] +
+              data[i][t("form_labels.name", "Nome")] +
               "</option>";
             $("#lista_colaboradores").val(JSON.stringify(data));
           }
@@ -257,21 +257,21 @@ function cargar_lista_pacientes() {
     if (data.length > 0) {
       cadena += "<option value=''>Seleccione..</option>";
       for (var i = 0; i < data.length; i++) {
-        if (data[i]["nombre"] == colaborador) {
+        if (data[i][t("form_labels.name", "Nome")] == colaborador) {
           cadena +=
             "<option  value='" +
-            data[i]["nombre"] +
+            data[i][t("form_labels.name", "Nome")] +
             "'>" +
-            data[i]["nombre"] +
+            data[i][t("form_labels.name", "Nome")] +
             "</option>";
           data1 = data[i]["lista_dependientes"];
           if (data1 != "") {
             for (var j = 0; j < data1.length; j++) {
               cadena +=
                 "<option  value='" +
-                data1[j]["nombre"] +
+                data1[j][t("form_labels.name", "Nome")] +
                 "'>" +
-                data1[j]["nombre"] +
+                data1[j][t("form_labels.name", "Nome")] +
                 "</option>";
             }
           }
@@ -487,7 +487,7 @@ function Registrar_Credito_Ambulatorio() {
 
   if (idBayer.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un contrato valido",
       "warning"
     );
@@ -495,7 +495,7 @@ function Registrar_Credito_Ambulatorio() {
 
   if (listaDatosCreditoAmbulatorio.length == 0 || cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene los campos vacios para la petición credito ambulatorio",
       "warning"
     );
@@ -503,7 +503,7 @@ function Registrar_Credito_Ambulatorio() {
 
   if ($("#txt_documento_credito_ambulatorio").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -535,7 +535,7 @@ function Registrar_Credito_Ambulatorio() {
 
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nuevo Petición Credito Ambulatorio Registrado",
           "success"
         ).then((value) => {
@@ -546,8 +546,8 @@ function Registrar_Credito_Ambulatorio() {
       } else {
         eliminar_overlay_credito_ambulatorio_cliente_asistencia_medica();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }

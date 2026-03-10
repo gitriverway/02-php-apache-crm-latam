@@ -1,4 +1,4 @@
-// Helper function para traducciones en JavaScript
+﻿// Helper function para traducciones en JavaScript
 function t(key, defaultValue) {
   if (
     typeof translations !== "undefined" &&
@@ -513,7 +513,7 @@ function Modificar_Validar_Reembolso() {
 
   if (listaValidarDatosReembolso.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones los distintos documentos",
       "warning"
     );
@@ -521,7 +521,7 @@ function Modificar_Validar_Reembolso() {
 
   if (fecha_seguimiento_validar.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -529,7 +529,7 @@ function Modificar_Validar_Reembolso() {
 
   if (cont1 == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -560,7 +560,7 @@ function Modificar_Validar_Reembolso() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Validar Reembolso Modificado Exitosamente",
           "success"
         ).then((value) => {
@@ -695,7 +695,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Reembolso() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -703,7 +703,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Reembolso() {
 
   if (observacion.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -729,7 +729,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Reembolso() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nueva Observación agregada",
           "success"
         ).then((value) => {
@@ -1431,8 +1431,8 @@ $(".seguimientoDatosReembolso").on(
   "click",
   "button.quitarDocumento",
   function () {
-    // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-    // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
     $(this).parent().parent().parent().remove();
 
     var idDocumento = $(this).attr("idDocumento");
@@ -1472,8 +1472,8 @@ $(".seguimientoDatosReembolso_1").on(
   "click",
   "button.quitarDocumento_1",
   function () {
-    // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-    // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
     $(this).parent().parent().parent().remove();
 
     var idDocumento = $(this).attr("idDocumento");
@@ -1637,7 +1637,7 @@ function Modificar_Seguimiento_Reembolso() {
 
   if (listaDocumentosSolicitadosAseguradora.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Agregue los documentos a solicitar",
       "warning"
     );
@@ -1645,7 +1645,7 @@ function Modificar_Seguimiento_Reembolso() {
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar la descripcion del Documento",
       "warning"
     );
@@ -1653,7 +1653,7 @@ function Modificar_Seguimiento_Reembolso() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -1661,7 +1661,7 @@ function Modificar_Seguimiento_Reembolso() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -1704,7 +1704,7 @@ function Modificar_Seguimiento_Reembolso() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Seguimiento Reembolso Modificado Exitosamente",
           "success"
         ).then((value) => {
@@ -1787,7 +1787,7 @@ function Modificar_Seguimiento_Reembolso_1() {
 
   if (listaDocumentosSolicitadosAseguradora.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Agregue los documentos a solicitar",
       "warning"
     );
@@ -1795,7 +1795,7 @@ function Modificar_Seguimiento_Reembolso_1() {
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar la descripcion del Documento",
       "warning"
     );
@@ -1803,7 +1803,7 @@ function Modificar_Seguimiento_Reembolso_1() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -1811,7 +1811,7 @@ function Modificar_Seguimiento_Reembolso_1() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -1854,7 +1854,7 @@ function Modificar_Seguimiento_Reembolso_1() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Seguimiento Reembolso Modificado Exitosamente",
           "success"
         ).then((value) => {
@@ -2120,7 +2120,7 @@ function Registrar_Documento_Seguimiento_Reembolso() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione una fecha de seguimento",
       "warning"
     );
@@ -2128,7 +2128,7 @@ function Registrar_Documento_Seguimiento_Reembolso() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -2136,7 +2136,7 @@ function Registrar_Documento_Seguimiento_Reembolso() {
 
   if ($("#txt_documento_reembolso_documento_seguimiento").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -2171,7 +2171,7 @@ function Registrar_Documento_Seguimiento_Reembolso() {
       var data = JSON.parse(respuesta);
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nuevo Documento Seguimiento Registrado",
           "success"
         ).then((value) => {
@@ -2182,8 +2182,8 @@ function Registrar_Documento_Seguimiento_Reembolso() {
       } else {
         eliminar_overlay_documento_seguimiento_reembolso_asistencia_medica();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }
@@ -2225,7 +2225,7 @@ function Registrar_Documento_Seguimiento_Reembolso_1() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione una fecha de seguimento",
       "warning"
     );
@@ -2233,7 +2233,7 @@ function Registrar_Documento_Seguimiento_Reembolso_1() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -2241,7 +2241,7 @@ function Registrar_Documento_Seguimiento_Reembolso_1() {
 
   if ($("#txt_documento_reembolso_documento_seguimiento_1").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -2276,7 +2276,7 @@ function Registrar_Documento_Seguimiento_Reembolso_1() {
       var data = JSON.parse(respuesta);
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nuevo Documento Seguimiento Registrado",
           "success"
         ).then((value) => {
@@ -2287,8 +2287,8 @@ function Registrar_Documento_Seguimiento_Reembolso_1() {
       } else {
         eliminar_overlay_documento_seguimiento_reembolso_asistencia_medica_1();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }
@@ -2370,7 +2370,7 @@ function cargar_deducible_dependiente_reembolso() {
           var deducible = 0;
 
           for (let j = 0; j < lista_dependiente.length; j++) {
-            var dependiente = lista_dependiente[j]["nombre"];
+            var dependiente = lista_dependiente[j][t("form_labels.name", "Nome")];
             var dependientes = lista_dependiente[j]["lista_dependientes"];
 
             if (dependiente == paciente) {
@@ -2379,7 +2379,7 @@ function cargar_deducible_dependiente_reembolso() {
               $("#txt_saldo_deducible").val(deducible);
             } else {
               for (let k = 0; k < dependientes.length; k++) {
-                var dependiente1 = dependientes[k]["nombre"];
+                var dependiente1 = dependientes[k][t("form_labels.name", "Nome")];
                 if (dependiente1 == paciente) {
                   deducible = dependientes[k]["valor_deducible"];
                   $("#txt_deducible_contrato_dependiente").val(deducible);
@@ -2491,10 +2491,10 @@ function actualizar_deducible_dependiente() {
     for (let i = 0; i < lista.length; i++) {
       var listar_dependientes = lista[i]["lista_dependientes"];
 
-      if (lista[i]["nombre"] == $("#txt_colaborador_reembolso").val()) {
+      if (lista[i][t("form_labels.name", "Nome")] == $("#txt_colaborador_reembolso").val()) {
         saldo = lista[i]["valor_deducible"];
 
-        if (lista[i]["nombre"] == $("#txt_paciente_reembolso").val()) {
+        if (lista[i][t("form_labels.name", "Nome")] == $("#txt_paciente_reembolso").val()) {
           saldo = $("#txt_saldo_deducible").val();
           lista_dependientes = lista[i]["lista_dependientes"];
         } else {
@@ -2502,7 +2502,7 @@ function actualizar_deducible_dependiente() {
             var saldo1 = 0;
             for (let j = 0; j < listar_dependientes.length; j++) {
               if (
-                listar_dependientes[j]["nombre"] ==
+                listar_dependientes[j][t("form_labels.name", "Nome")] ==
                 $("#txt_paciente_reembolso").val()
               ) {
                 saldo1 = $("#txt_saldo_deducible").val();
@@ -2512,7 +2512,7 @@ function actualizar_deducible_dependiente() {
 
               listaDependencia1.push({
                 tipo: listar_dependientes[j]["tipo"],
-                nombre: listar_dependientes[j]["nombre"],
+                nombre: listar_dependientes[j][t("form_labels.name", "Nome")],
                 genero: listar_dependientes[j]["genero"],
                 fecha_nacimiento: listar_dependientes[j]["fecha_nacimiento"],
                 edad: listar_dependientes[j]["edad"],
@@ -2529,7 +2529,7 @@ function actualizar_deducible_dependiente() {
 
       listaDependencia.push({
         tipo: lista[i]["tipo"],
-        nombre: lista[i]["nombre"],
+        nombre: lista[i][t("form_labels.name", "Nome")],
         genero: lista[i]["genero"],
         fecha_nacimiento: lista[i]["fecha_nacimiento"],
         edad: lista[i]["edad"],
@@ -2627,7 +2627,7 @@ function Registrar_Documento_Liquidacion_Reembolso() {
     valor_reembolsado.length == 0
   ) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingrese valores numericos en los campos vacios",
       "warning"
     );
@@ -2635,7 +2635,7 @@ function Registrar_Documento_Liquidacion_Reembolso() {
 
   if ($("#txt_documento_reembolso_documento_liquidacion").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -2678,7 +2678,7 @@ function Registrar_Documento_Liquidacion_Reembolso() {
     success: function (respuesta) {
       if (respuesta != "") {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nueva Liquidacion Registrado",
           "success"
         ).then((value) => {
@@ -2689,8 +2689,8 @@ function Registrar_Documento_Liquidacion_Reembolso() {
       } else {
         eliminar_overlay_documento_liquidacion_reembolso_asistencia_medica();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }
@@ -2801,7 +2801,7 @@ function Modificar_Observaciones_Anulacion_Reembolso() {
 
   if (observacion.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -2822,7 +2822,7 @@ function Modificar_Observaciones_Anulacion_Reembolso() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Anulado correctamente",
           "success"
         ).then((value) => {
@@ -2974,9 +2974,9 @@ function listar_combo_dependientes() {
           for (var i = 0; i < data.length; i++) {
             cadena +=
               "<option  value='" +
-              data[i]["nombre"] +
+              data[i][t("form_labels.name", "Nome")] +
               "'>" +
-              data[i]["nombre"] +
+              data[i][t("form_labels.name", "Nome")] +
               "</option>";
             $("#lista_colaboradores").val(JSON.stringify(data));
           }
@@ -3003,21 +3003,21 @@ function cargar_lista_pacientes() {
     if (data.length > 0) {
       cadena += "<option value=''>Seleccione..</option>";
       for (var i = 0; i < data.length; i++) {
-        if (data[i]["nombre"] == colaborador) {
+        if (data[i][t("form_labels.name", "Nome")] == colaborador) {
           cadena +=
             "<option  value='" +
-            data[i]["nombre"] +
+            data[i][t("form_labels.name", "Nome")] +
             "'>" +
-            data[i]["nombre"] +
+            data[i][t("form_labels.name", "Nome")] +
             "</option>";
           data1 = data[i]["lista_dependientes"];
           if (data1 != "") {
             for (var j = 0; j < data1.length; j++) {
               cadena +=
                 "<option  value='" +
-                data1[j]["nombre"] +
+                data1[j][t("form_labels.name", "Nome")] +
                 "'>" +
-                data1[j]["nombre"] +
+                data1[j][t("form_labels.name", "Nome")] +
                 "</option>";
             }
           }
@@ -3131,7 +3131,7 @@ function Registrar_Reembolso() {
 
   if (idBayer.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un contrato valido",
       "warning"
     );
@@ -3139,7 +3139,7 @@ function Registrar_Reembolso() {
 
   if (listaDatosReembolso.length == 0 || cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene los campos vacios para el Reembolso",
       "warning"
     );
@@ -3147,7 +3147,7 @@ function Registrar_Reembolso() {
 
   if ($("#txt_documento_reembolso").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -3155,7 +3155,7 @@ function Registrar_Reembolso() {
 
   if (cont_dias_validos > 90) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "La fecha del reembolso ingresado es mayor a los 90 dias permitidos por la aseguradora",
       "warning"
     );
@@ -3187,7 +3187,7 @@ function Registrar_Reembolso() {
 
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nuevo Reembolso Registrado",
           "success"
         ).then((value) => {
@@ -3196,8 +3196,8 @@ function Registrar_Reembolso() {
         });
       } else {
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }

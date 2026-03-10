@@ -54,26 +54,26 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">Número Reembolso</th>
-                            <th style="text-align:center; width:10px">Fecha Atenci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Fecha Creaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Paciente</th>
-                            <th style="text-align:center; width:10px">Diagnostico</th>
-                            <th style="text-align:center; width:10px">Gasto Presentado</th>
-                            <th style="text-align:center; width:10px">Estado</th>
-                            <th style="text-align:center; width:10px">Documento Inicial</th>
-                            <th style="text-align:center; width:10px">Documento Solicta Aseguradora</th>
-                            <th style="text-align:center; width:10px">Documento Solicta Aseguradora 2</th>
-                            <th style="text-align:center; width:10px">Envio Aseguradora</th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.attention_date'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.creation_date'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.patient'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.diagnosis'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.gasto_presentado'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.table_status'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.documento_inicial'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.requested_document'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.requested_document'); ?> 2</th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.envio_seguradora'); ?></th>
                             <th style="text-align:center; width:10px">Envio Aseguradora 2</th>
-                            <th style="text-align:center; width:10px">Observaciones</th>
-                            <th style="text-align:center; width:10px">Fecha Modificaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Valor Presentado Real</th>
-                            <th style="text-align:center; width:10px">Valor Deducible Cobrado</th>
-                            <th style="text-align:center; width:10px">Valor No Cubierto</th>
-                            <th style="text-align:center; width:10px">Valor Copago</th>
-                            <th style="text-align:center; width:10px">Valor Reembolsado</th>
-                            <th style="text-align:center; width:10px">Saldo Deducible</th>
-                            <th style="text-align:center; width:10px">Liquidaci&oacute;n</th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.observations'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.modification_date'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.presented_real_value'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.deductible_charged_value'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.not_covered_value'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.copay_value'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.refunded_value'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.deductible_balance'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.liquidation'); ?></th>
                         </tr>
                     </thead>
                 </table>
@@ -214,12 +214,12 @@ MODAL LISTAR CONTRATOS CLIENTE
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-                                    <th style="text-align:center; width:10px">Proveedor</th>
-                                    <th style="text-align:center; width:10px">Plan</th>
-                                    <th style="text-align:center; width:10px">Cedula/Ruc</th>
-                                    <th style="text-align:center; width:10px">Cliente</th>
-                                    <th style="text-align:center; width:10px">Contrato</th>
-                                    <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.provider'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.plan'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_document'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_client'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_contract'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
                                 </tr>
                             </thead>
                         </table>

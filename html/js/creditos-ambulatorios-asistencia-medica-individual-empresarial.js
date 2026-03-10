@@ -1,4 +1,4 @@
-$(document).on("hidden.bs.modal", function (event) {
+﻿$(document).on("hidden.bs.modal", function (event) {
   if ($(".modal:visible").length) {
     $("body").addClass("modal-open");
   }
@@ -483,7 +483,7 @@ function Modificar_Validar_Credito_Ambulatorio() {
 
   if (listaValidarDatosCreditoAmbulatorio.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones los distintos documentos",
       "warning"
     );
@@ -491,7 +491,7 @@ function Modificar_Validar_Credito_Ambulatorio() {
 
   if (fecha_seguimiento_validar.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -499,7 +499,7 @@ function Modificar_Validar_Credito_Ambulatorio() {
 
   if (cont1 == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -532,7 +532,7 @@ function Modificar_Validar_Credito_Ambulatorio() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Validar Credito Ambulatorio Modificado Exitosamente",
           "success"
         ).then((value) => {
@@ -681,7 +681,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Credito_Ambulatorio() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -689,7 +689,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Credito_Ambulatorio() {
 
   if (observacion.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -717,7 +717,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Credito_Ambulatorio() {
 
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nueva Observación agregada",
           "success"
         ).then((value) => {
@@ -1124,8 +1124,8 @@ $(".seguimientoDatosCreditoAmbulatorio").on(
   "click",
   "button.quitarDocumento",
   function () {
-    // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-    // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
     $(this).parent().parent().parent().remove();
 
     var idDocumento = $(this).attr("idDocumento");
@@ -1230,7 +1230,7 @@ function Modificar_Seguimiento_Credito_Ambulatorio() {
 
   if (listaDocumentosSolicitadosAseguradora.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Agregue los documentos a solicitar",
       "warning"
     );
@@ -1238,7 +1238,7 @@ function Modificar_Seguimiento_Credito_Ambulatorio() {
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar la descripcion del Documento",
       "warning"
     );
@@ -1246,7 +1246,7 @@ function Modificar_Seguimiento_Credito_Ambulatorio() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -1254,7 +1254,7 @@ function Modificar_Seguimiento_Credito_Ambulatorio() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -1298,7 +1298,7 @@ function Modificar_Seguimiento_Credito_Ambulatorio() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Seguimiento Credito Ambulatorio Modificado Exitosamente",
           "success"
         ).then((value) => {
@@ -1478,7 +1478,7 @@ function Registrar_Documento_Seguimiento_Credito_Ambulatorio() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione una fecha de seguimento",
       "warning"
     );
@@ -1486,7 +1486,7 @@ function Registrar_Documento_Seguimiento_Credito_Ambulatorio() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -1497,7 +1497,7 @@ function Registrar_Documento_Seguimiento_Credito_Ambulatorio() {
       .length == 0
   ) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -1535,7 +1535,7 @@ function Registrar_Documento_Seguimiento_Credito_Ambulatorio() {
       var data = JSON.parse(respuesta);
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nuevo Documento Seguimiento Registrado",
           "success"
         ).then((value) => {
@@ -1548,8 +1548,8 @@ function Registrar_Documento_Seguimiento_Credito_Ambulatorio() {
       } else {
         eliminar_overlay_documento_seguimiento_credito_ambulatorio_asistencia_medica();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }
@@ -1728,7 +1728,7 @@ function Registrar_Documento_Autorizacion_Credito_Ambulatorio() {
     $("#txt_observaciones_autorizacion_credito_ambulatorio").val().length == 0
   ) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingrese una observación para cargar la autorización del pedido credito ambulatorio",
       "warning"
     );
@@ -1739,7 +1739,7 @@ function Registrar_Documento_Autorizacion_Credito_Ambulatorio() {
       .length == 0
   ) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -1775,7 +1775,7 @@ function Registrar_Documento_Autorizacion_Credito_Ambulatorio() {
     success: function (respuesta) {
       if (respuesta == 1) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nueva Autorización Registrada",
           "success"
         ).then((value) => {
@@ -1788,8 +1788,8 @@ function Registrar_Documento_Autorizacion_Credito_Ambulatorio() {
       } else {
         eliminar_overlay_documento_autorizacion_credito_ambulatorio_asistencia_medica();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }
@@ -1911,7 +1911,7 @@ function Modificar_Observaciones_Anulacion_Credito_Ambulatorio() {
 
   if (observacion.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -1934,7 +1934,7 @@ function Modificar_Observaciones_Anulacion_Credito_Ambulatorio() {
       console.log(respuesta);
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nueva Observación agregada",
           "success"
         ).then((value) => {
@@ -2069,9 +2069,9 @@ function listar_combo_dependientes() {
           for (var i = 0; i < data.length; i++) {
             cadena +=
               "<option  value='" +
-              data[i]["nombre"] +
+              data[i][t("form_labels.name", "Nome")] +
               "'>" +
-              data[i]["nombre"] +
+              data[i][t("form_labels.name", "Nome")] +
               "</option>";
             $("#lista_colaboradores").val(JSON.stringify(data));
           }
@@ -2106,21 +2106,21 @@ function cargar_lista_pacientes() {
     if (data.length > 0) {
       cadena += "<option value=''>Seleccione..</option>";
       for (var i = 0; i < data.length; i++) {
-        if (data[i]["nombre"] == colaborador) {
+        if (data[i][t("form_labels.name", "Nome")] == colaborador) {
           cadena +=
             "<option  value='" +
-            data[i]["nombre"] +
+            data[i][t("form_labels.name", "Nome")] +
             "'>" +
-            data[i]["nombre"] +
+            data[i][t("form_labels.name", "Nome")] +
             "</option>";
           data1 = data[i]["lista_dependientes"];
           if (data1 != "") {
             for (var j = 0; j < data1.length; j++) {
               cadena +=
                 "<option  value='" +
-                data1[j]["nombre"] +
+                data1[j][t("form_labels.name", "Nome")] +
                 "'>" +
-                data1[j]["nombre"] +
+                data1[j][t("form_labels.name", "Nome")] +
                 "</option>";
             }
           }
@@ -2265,7 +2265,7 @@ function Registrar_Credito_Ambulatorio() {
 
   if (idBayer.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un contrato valido",
       "warning"
     );
@@ -2273,7 +2273,7 @@ function Registrar_Credito_Ambulatorio() {
 
   if (listaDatosCreditoAmbulatorio.length == 0 || cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene los campos vacios para la petición credito ambulatorio",
       "warning"
     );
@@ -2281,7 +2281,7 @@ function Registrar_Credito_Ambulatorio() {
 
   if ($("#txt_documento_credito_ambulatorio").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -2313,7 +2313,7 @@ function Registrar_Credito_Ambulatorio() {
 
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nuevo Petición Credito Ambulatorio Registrado",
           "success"
         ).then((value) => {
@@ -2324,8 +2324,8 @@ function Registrar_Credito_Ambulatorio() {
       } else {
         eliminar_overlay_credito_ambulatorio_cliente_asistencia_medica();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }
@@ -2705,8 +2705,8 @@ $(".seguimientoDatosCreditoAmbulatorio1").on(
   "click",
   "button.quitarDocumento1",
   function () {
-    // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-    // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
     $(this).parent().parent().parent().remove();
 
     var idDocumento = $(this).attr("idDocumento");
@@ -2815,7 +2815,7 @@ function Modificar_Seguimiento_Credito_Ambulatorio_1() {
 
   if (listaDocumentosSolicitadosAseguradora.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Agregue los documentos a solicitar",
       "warning"
     );
@@ -2823,7 +2823,7 @@ function Modificar_Seguimiento_Credito_Ambulatorio_1() {
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar la descripcion del Documento",
       "warning"
     );
@@ -2831,7 +2831,7 @@ function Modificar_Seguimiento_Credito_Ambulatorio_1() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -2839,7 +2839,7 @@ function Modificar_Seguimiento_Credito_Ambulatorio_1() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -2883,7 +2883,7 @@ function Modificar_Seguimiento_Credito_Ambulatorio_1() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Seguimiento Credito Ambulatorio Modificado Exitosamente",
           "success"
         ).then((value) => {
@@ -3063,7 +3063,7 @@ function Registrar_Documento_Seguimiento_Credito_Ambulatorio_1() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione una fecha de seguimento",
       "warning"
     );
@@ -3071,7 +3071,7 @@ function Registrar_Documento_Seguimiento_Credito_Ambulatorio_1() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -3082,7 +3082,7 @@ function Registrar_Documento_Seguimiento_Credito_Ambulatorio_1() {
       .length == 0
   ) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -3120,7 +3120,7 @@ function Registrar_Documento_Seguimiento_Credito_Ambulatorio_1() {
       var data = JSON.parse(respuesta);
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nuevo Documento Seguimiento Registrado",
           "success"
         ).then((value) => {
@@ -3133,8 +3133,8 @@ function Registrar_Documento_Seguimiento_Credito_Ambulatorio_1() {
       } else {
         eliminar_overlay_documento_seguimiento_credito_ambulatorio_asistencia_medica_1();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }

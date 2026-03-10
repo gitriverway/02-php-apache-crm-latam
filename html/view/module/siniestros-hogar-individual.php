@@ -48,25 +48,25 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-                            <th style="text-align:center; width:10px">Número Siniestro</th>
-                            <th style="text-align:center; width:10px">Fecha Siniestro</th>
-                            <th style="text-align:center; width:10px">Fecha Creaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Cliente</th>
-                            <th style="text-align:center; width:10px">Daños Terceros</th>
-                            <th style="text-align:center; width:10px">Documento Inicial</th>
-                            <th style="text-align:center; width:10px">Envio Aseguradora</th>
-                            <th style="text-align:center; width:10px">Observaciones</th>
-                            <th style="text-align:center; width:10px">Estado</th>
-                            <th style="text-align:center; width:10px">Fecha Seguimiento</th>
-                            <th style="text-align:center; width:10px">Seguimiento Aseguradora</th>
-                            <th style="text-align:center; width:10px">Requerimiento por la aseguradora</th>
-                            <th style="text-align:center; width:10px">Envio Requerimiento Aseguradora</th>
-                            <th style="text-align:center; width:10px">Valor Deducible</th>
-                            <th style="text-align:center; width:10px">Valor RASA</th>
-                            <th style="text-align:center; width:10px">Valor Cubierto</th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.claim_number'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.claim_date'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.creation_date'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.table_client'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.third_party_damages'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.documento_inicial'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.envio_seguradora'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.observations'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.table_status'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.fecha_seguimiento'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.insurer_follow_up'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.requerimiento'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.envio_seguradora'); ?> Requerimento</th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.deductible_value'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.rasa_value'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.covered_value'); ?></th>
                             <th style="text-align:center; width:10px">Valor Pago Cliente</th>
-                            <th style="text-align:center; width:10px">Fecha Liquidaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Liquidaci&oacute;n</th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.liquidation_date'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.liquidation'); ?></th>
                         </tr>
                     </thead>
                 </table>

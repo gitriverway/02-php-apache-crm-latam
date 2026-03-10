@@ -51,7 +51,7 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
                             <th style="text-align:center; width:10px">Número Contrato</th>
                             <th style="text-align:center; width:10px">Proveedor/Plan</th>
                             <th style="text-align:center; width:10px"<?php echo $t("form.claim_report"); ?>/th>
-                            <th style="text-align:center; width:10px">Estado</th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.table_status'); ?></th>
                         </tr>
                     </thead>
                 </table>

@@ -1,4 +1,4 @@
-// function lista1(){
+﻿// function lista1(){
 
 //     $.ajax({
 //         url: "/controller/clientes/controlador_cliente_listar.php",
@@ -213,7 +213,7 @@ function listar_cliente(){
     var datos = new FormData();
     datos.append("idCliente",idCliente);
     datos.append("cedula",cedula);
-    datos.append("nombre",nombre);
+    datos.append(t("form_labels.name", "Nome"),nombre);
     datos.append("genero",genero);
     datos.append("fecha_nacimiento",fecha_nacimiento);
     datos.append("telefono",telefono);

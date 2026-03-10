@@ -55,28 +55,28 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-                            <th style="text-align:center; width:10px">Número Siniestro</th>
-                            <th style="text-align:center; width:10px">Fecha Siniestro</th>
-                            <th style="text-align:center; width:10px">Fecha Creaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Cliente</th>
-                            <th style="text-align:center; width:10px">Documento Inicial</th>
-                            <th style="text-align:center; width:10px">Envio Aseguradora</th>
-                            <th style="text-align:center; width:10px">Detalle Siniestro</th>
-                            <th style="text-align:center; width:10px">Observaciones</th>
-                            <th style="text-align:center; width:10px">Estado</th>
-                            <th style="text-align:center; width:10px">Fecha Seguimiento</th>
-                            <th style="text-align:center; width:10px">Seguimiento Aseguradora</th>
-                            <th style="text-align:center; width:10px">Ajuste, Aceptación y Autorización</th>
-                            <th style="text-align:center; width:10px">Requerimiento por la aseguradora</th>
-                            <th style="text-align:center; width:10px">Envio Requerimiento Aseguradora</th>
-                            <th style="text-align:center; width:10px">Valor Siniestro</th>
-                            <th style="text-align:center; width:10px">Valor Deducible</th>
-                            <th style="text-align:center; width:10px">Valor RASA</th>
-                            <th style="text-align:center; width:10px">Valor Cubierto</th>
-                            <th style="text-align:center; width:10px">Valor Indemnizar</th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.claim_number'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.claim_date'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.creation_date'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.table_client'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.documento_inicial'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.envio_seguradora'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.claim_detail'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.observations'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.table_status'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.fecha_seguimiento'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.insurer_follow_up'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.adjustment_acceptance_authorization'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.requerimiento'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.envio_seguradora'); ?> Requerimento</th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.claim_value'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.deductible_value'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.rasa_value'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.covered_value'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.indemnify_value'); ?></th>
                             <th style="text-align:center; width:10px">Valor Pago Cliente</th>
-                            <th style="text-align:center; width:10px">Fecha Liquidaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Liquidaci&oacute;n</th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.liquidation_date'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.liquidation'); ?></th>
                         </tr>
                     </thead>
                 </table>
@@ -98,7 +98,7 @@ MODAL LISTAR DETALLE SINIESTRO
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Detalle Siniestro - <span id="modalDetalleSiniestroTransporte"></span>
+                <h4 class="modal-title"><?php echo $t('form.claim_detail'); ?> - <span id="modalDetalleSiniestroTransporte"></span>
                 </h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -928,12 +928,12 @@ MODAL LISTAR CONTRATOS CLIENTE
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-                                    <th style="text-align:center; width:10px">Proveedor</th>
-                                    <th style="text-align:center; width:10px">Plan</th>
-                                    <th style="text-align:center; width:10px">Cedula/Ruc</th>
-                                    <th style="text-align:center; width:10px">Cliente</th>
-                                    <th style="text-align:center; width:10px">Contrato</th>
-                                    <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.provider'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.plan'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_document'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_client'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_contract'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
                                 </tr>
                             </thead>
                         </table>

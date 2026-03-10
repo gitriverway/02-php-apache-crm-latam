@@ -1,4 +1,4 @@
-// Helper function para traducciones en JavaScript
+﻿// Helper function para traducciones en JavaScript
 function t(key, defaultValue) {
   if (
     typeof translations !== "undefined" &&
@@ -300,7 +300,7 @@ $("#tabla_lista_vendedores").on("click", ".btnAsignarVendedor", function () {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "El vendedor a sido asignado",
           "success",
         ).then((value) => {
@@ -448,7 +448,7 @@ $(".listaAdicional").on("click", "button.btnAgregarHogar", function () {
     estado1 = "";
   }
 
-  // $(this).parent().parent().parent().find(".idListaDependiente").css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().find(".idListaDependiente").css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
 
   let valor = $(this)
     .parent()
@@ -738,8 +738,8 @@ var idQuitarHogar = [];
 localStorage.removeItem("quitarHogar");
 
 $(".listaAdicional").on("click", "button.quitarHogar", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idHogar = $(this).attr("idHogar");
@@ -821,7 +821,7 @@ function agregarNuevaObservacion() {
   var observacion = $("#txt_observacion").val();
   if (observacion.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene la observaci&oacute;n",
       "warning",
     );
@@ -962,8 +962,8 @@ var idQuitarObservacion = [];
 localStorage.removeItem("quitarObservacion");
 
 $(".nuevaObservacion").on("click", "button.quitarObservacion", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idObservacion = $(this).attr("idObservacion");
@@ -1378,7 +1378,7 @@ $(".listaAdicional").on(
       estado = "";
     }
 
-    // $(this).parent().parent().find(".idCondiciones").css({"color": "red", "border": "2px solid red"});
+    // $(this).parent().parent().find(".idCondiciones").css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
 
     let valor = $(this).parent().parent().find(".idCondiciones").val();
 
@@ -1488,8 +1488,8 @@ $(".listaAdicional").on(
   "click",
   "button.quitarCondicionRenovacion",
   function () {
-    // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-    // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
     $(this).parent().parent().parent().remove();
 
     var idDocumento = $(this).attr("idDocumento");
@@ -1941,7 +1941,7 @@ function agregar_auto_hogares(idValor) {
           '" name="montoHogar' +
           numHogar +
           '" placeholder="MONTO HOGAR" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i]["monto"] +
+          data[i][t("form_labels.amount", "Valor")] +
           '"></input>' +
           "</div>" +
           "</div>" +
@@ -2220,23 +2220,23 @@ function Modificar_Cliente() {
 
   if (origen.length == 0 || origen == null) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene el campo origen",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_origin", "Preencha o campo origem"),
       "warning",
     );
   }
 
   if (categoria.length == 0 || categoria == null) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene el campo de Ramo",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_branch", "Preencha o campo ramo"),
       "warning",
     );
   }
 
   if (categoria == 0 && nuevo_categoria.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene el campo de nuevo Ramo",
       "warning",
     );
@@ -2244,7 +2244,7 @@ function Modificar_Cliente() {
 
   if (nombre.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene el campo  nombre cliente",
       "warning",
     );
@@ -2252,7 +2252,7 @@ function Modificar_Cliente() {
 
   if (genero.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene el campo genero cliente",
       "warning",
     );
@@ -2260,7 +2260,7 @@ function Modificar_Cliente() {
 
   if (provincia < 1) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene el campo de provincia",
       "warning",
     );
@@ -2268,7 +2268,7 @@ function Modificar_Cliente() {
 
   if (cedula.length < 10 && estado_bayer == "CONTRATADO") {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingrese numero de Cedula y/o Ruc valido",
       "warning",
     );
@@ -2276,7 +2276,7 @@ function Modificar_Cliente() {
 
   if (estado_bayer.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene el estado del cliente",
       "warning",
     );
@@ -2309,8 +2309,8 @@ function Modificar_Cliente() {
     estado_bayer.length == 0
   ) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_empty_fields", "Preencha os campos vazios"),
       "warning",
     );
   }
@@ -2373,7 +2373,7 @@ function Modificar_Cliente() {
   datos.append("idProducto", idProducto);
   datos.append("idCliente", idCliente);
   datos.append("cedula", cedula);
-  datos.append("nombre", nombre);
+  datos.append(t("form_labels.name", "Nome"), nombre);
   datos.append("genero", genero);
   datos.append("estado_civil", estado_civil);
   datos.append("fecha_nacimiento", fecha_nacimiento);
@@ -2448,7 +2448,7 @@ function Modificar_Cliente() {
       if (data.length > 0) {
         if (data[0]["valor"] == 1) {
           Swal.fire(
-            "Mensaje De Confirmacion",
+            t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
             "Datos correctamente, Actualizado Cliente",
             "success",
           ).then((value) => {
@@ -2456,15 +2456,15 @@ function Modificar_Cliente() {
           });
         } else {
           return Swal.fire(
-            "Mensaje De Advertencia",
+            t("messages.warning_message", "Mensaje de Aviso"),
             "Lo sentimos, la cedula ya esta registrada en otro cliente",
             "warning",
           );
         }
       } else {
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error",
         );
       }

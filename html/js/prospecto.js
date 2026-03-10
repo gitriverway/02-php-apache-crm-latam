@@ -1,4 +1,4 @@
-// Helper function para traducciones en JavaScript
+﻿// Helper function para traducciones en JavaScript
 function t(key, defaultValue) {
   if (
     typeof translations !== "undefined" &&
@@ -496,7 +496,7 @@ $(".btnAgregarDependiente").click(function () {
       numProspecto +
       '" style="padding-right:0px">' +
       "<label>" +
-      t("form_labels.parentesco", "Parentesco") +
+      t("form_labels.parentesco", t("form_labels.relationship", "Parentesco")) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-6 my-1" style="padding-right:0px">' +
@@ -507,11 +507,11 @@ $(".btnAgregarDependiente").click(function () {
       numProspecto +
       '" required>' +
       '<option value= "">Seleccione...</option>' +
-      '<option value= "Titular">Titular</option>' +
-      '<option value= "Conyuge">Conyuge</option>' +
-      '<option value= "Hijo/a">Hijo/a</option>' +
-      '<option value= "Otro">Otro</option>' +
-      '<option value= "Familiar">Familiar</option>' +
+      '<option value= t("form_labels.holder", "Titular")>Titular</option>' +
+      '<option value= t("form_labels.spouse", "CÃ´njuge")>Conyuge</option>' +
+      '<option value= t("form_labels.son_daughter", "Filho/a")>Hijo/a</option>' +
+      '<option value= t("form_labels.other", "Outro")>Otro</option>' +
+      '<option value= t("form_labels.relative", "Familiar")>Familiar</option>' +
       "</select>" +
       "</div>" +
       "</div>" +
@@ -522,7 +522,7 @@ $(".btnAgregarDependiente").click(function () {
       numProspecto +
       '">' +
       "<label>" +
-      t("form_labels.nombre", "Nombre") +
+      t("form_labels.nombre", t("form_labels.name", "Nome")) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-4 order-md-7 my-1">' +
@@ -562,7 +562,7 @@ $(".btnAgregarDependiente").click(function () {
       numProspecto +
       '" style="padding-left:0px">' +
       "<label>" +
-      t("form_labels.fecha_nacimiento", "Fecha Nacimiento") +
+      t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-left:0px">' +
@@ -681,8 +681,8 @@ var idQuitarFamiliar = [];
 localStorage.removeItem("quitarDependiente");
 
 $(".nuevoDependiente").on("click", "button.quitarDependiente", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idFamiliar = $(this).attr("idFamiliar");
@@ -771,7 +771,7 @@ $(".btnAgregarVehiculo").click(function () {
       numVehiculo +
       '">' +
       "<label>" +
-      t("form_labels.marca", "Marca") +
+      t("form_labels.marca", t("form_labels.brand", "Marca")) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-10 my-1">' +
@@ -790,7 +790,7 @@ $(".btnAgregarVehiculo").click(function () {
       numVehiculo +
       '">' +
       "<label>" +
-      t("form_labels.modelo", "Modelo") +
+      t("form_labels.modelo", t("form_labels.model", "Modelo")) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-11 my-1">' +
@@ -807,7 +807,7 @@ $(".btnAgregarVehiculo").click(function () {
       numVehiculo +
       '" style="padding-left:0px">' +
       "<label>" +
-      t("form_labels.color", "Color") +
+      t("form_labels.color", t("form_labels.color", "Cor")) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-12 my-1" style="padding-left:0px">' +
@@ -845,7 +845,7 @@ $(".btnAgregarVehiculo").click(function () {
       numVehiculo +
       '" style="padding-left:0px">' +
       "<label>" +
-      t("form_labels.placa", "Placa") +
+      t("form_labels.placa", t("form_labels.plate", "Placa")) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-1 order-md-14 my-1" style="padding-left:0px">' +
@@ -864,7 +864,7 @@ $(".btnAgregarVehiculo").click(function () {
       numVehiculo +
       '" style="padding-left:0px">' +
       "<label>" +
-      t("form_labels.monto", "Monto") +
+      t("form_labels.monto", t("form_labels.amount", "Valor")) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-1 order-md-15 my-1" style="padding-left:0px">' +
@@ -1010,8 +1010,8 @@ var idQuitarVehiculo = [];
 localStorage.removeItem("quitarVehiculo");
 
 $(".nuevoVehiculo").on("click", "button.quitarVehiculo", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idVehiculo = $(this).attr("idVehiculo");
@@ -1204,8 +1204,8 @@ var idQuitarObservacion = [];
 localStorage.removeItem("quitarObservacion");
 
 $(".nuevaObservacion").on("click", "button.quitarObservacion", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idObservacion = $(this).attr("idObservacion");
@@ -1446,13 +1446,13 @@ function Registrar_Cliente() {
       if (data1.length > 0) {
         for (var i = 0; i < data1.length; i++) {
           var tipo_vehiculo = data1[i]["tipo"];
-          var marca = data1[i]["marca"];
-          var modelo = data1[i]["modelo"];
-          var color = data1[i]["color"];
-          var placa = data1[i]["placa"];
+          var marca = data1[i][t("form_labels.brand", "Marca")];
+          var modelo = data1[i][t("form_labels.model", "Modelo")];
+          var color = data1[i][t("form_labels.color", "Cor")];
+          var placa = data1[i][t("form_labels.plate", "Placa")];
           var ano = data1[i]["ano"];
           var edad_vehiculo = data1[i]["edad"];
-          var monto = data1[i]["monto"];
+          var monto = data1[i][t("form_labels.amount", "Valor")];
 
           if (
             tipo_vehiculo.length == 0 ||
@@ -1479,7 +1479,7 @@ function Registrar_Cliente() {
           var ano_construccion = data2[i]["ano_construccion"];
           var valor_vivienda = data2[i]["valor_vivienda"];
           var valor_otras_cosas = data2[i]["valor_otras_cosas"];
-          var monto = data2[i]["monto"];
+          var monto = data2[i][t("form_labels.amount", "Valor")];
           if (
             tipo_hogar.length == 0 ||
             direccion.length == 0 ||
@@ -1497,32 +1497,32 @@ function Registrar_Cliente() {
 
   if (cont_bayerpersonas > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_empty_fields", "Preencha os campos vazios"),
       "warning",
     );
   }
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de familiares",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_family_fields", "Preencha os campos da famÃ­lia"),
       "warning",
     );
   }
 
   if (cont1 > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de vehiculos",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_vehicle_fields", "Preencha os campos de veÃ­culos"),
       "warning",
     );
   }
 
   if (cont2 > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de Hogares",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_home_fields", "Preencha os campos de residÃªncias"),
       "warning",
     );
   }
@@ -1576,16 +1576,16 @@ function Registrar_Cliente() {
 
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
-          "Datos correctamente, Nuevo Prospecto Registrado",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
+          t("messages.prospect_registered", "Prospecto Registrado com Sucesso"),
           "success",
         ).then((value) => {
           window.location = "prospecto-asignado";
         });
       } else {
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error",
         );
       }
@@ -1699,8 +1699,8 @@ function mensaje_cedula_duplicada(contador) {
   var existeCliente = contador > 0;
 
   Swal.fire(
-    "Mensaje De Advertencia",
-    "Cedula ya registrada en " +
+    t("messages.warning_message", "Mensaje de Aviso"),
+    t("messages.id_registered", "Documento já registrado") +
       contador +
       " contrato(s). Los campos de informaci&oacute;n personal han sido deshabilitados para evitar modificaciones.",
     "warning",
@@ -1800,7 +1800,7 @@ function agregar_auto_familiares() {
           numProspecto +
           '" style="padding-right:0px">' +
           "<label>" +
-          t("form_labels.parentesco", "Parentesco") +
+          t("form_labels.parentesco", t("form_labels.relationship", "Parentesco")) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-6 my-1" style="padding-right:0px">' +
@@ -1811,11 +1811,11 @@ function agregar_auto_familiares() {
           numProspecto +
           '" required>' +
           '<option value= "">Seleccione...</option>' +
-          '<option value= "Titular">Titular</option>' +
-          '<option value= "Conyuge">Conyuge</option>' +
-          '<option value= "Hijo/a">Hijo/a</option>' +
-          '<option value= "Otro">Otro</option>' +
-          '<option value= "Familiar">Familiar</option>' +
+          '<option value= t("form_labels.holder", "Titular")>Titular</option>' +
+          '<option value= t("form_labels.spouse", "CÃ´njuge")>Conyuge</option>' +
+          '<option value= t("form_labels.son_daughter", "Filho/a")>Hijo/a</option>' +
+          '<option value= t("form_labels.other", "Outro")>Otro</option>' +
+          '<option value= t("form_labels.relative", "Familiar")>Familiar</option>' +
           "</select>" +
           "</div>" +
           "</div>" +
@@ -1826,7 +1826,7 @@ function agregar_auto_familiares() {
           numProspecto +
           '">' +
           "<label>" +
-          t("form_labels.nombre", "Nombre") +
+          t("form_labels.nombre", t("form_labels.name", "Nome")) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-4 order-md-7 my-1">' +
@@ -1836,7 +1836,7 @@ function agregar_auto_familiares() {
           '" name="nombreFamiliar' +
           numProspecto +
           '" placeholder="INGRESE NOMBRE" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i]["nombre"] +
+          data[i][t("form_labels.name", "Nome")] +
           '"></input>' +
           "</div>" +
           "</div>" +
@@ -1868,7 +1868,7 @@ function agregar_auto_familiares() {
           numProspecto +
           '" style="padding-left:0px">' +
           "<label>" +
-          t("form_labels.fecha_nacimiento", "Fecha Nacimiento") +
+          t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-left:0px">' +
@@ -1980,7 +1980,7 @@ function agregar_auto_vehiculos() {
           numVehiculo +
           '">' +
           "<label>" +
-          t("form_labels.marca", "Marca") +
+          t("form_labels.marca", t("form_labels.brand", "Marca")) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-10 my-1">' +
@@ -1990,7 +1990,7 @@ function agregar_auto_vehiculos() {
           '" name="marcaVehiculo' +
           numVehiculo +
           '" placeholder="MARCA VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i]["marca"] +
+          data[i][t("form_labels.brand", "Marca")] +
           '"></input>' +
           "</div>" +
           "</div>" +
@@ -2001,7 +2001,7 @@ function agregar_auto_vehiculos() {
           numVehiculo +
           '">' +
           "<label>" +
-          t("form_labels.modelo", "Modelo") +
+          t("form_labels.modelo", t("form_labels.model", "Modelo")) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-11 my-1">' +
@@ -2010,7 +2010,7 @@ function agregar_auto_vehiculos() {
           '" name="modeloVehiculo' +
           numVehiculo +
           '" placeholder="MODELO VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i]["modelo"] +
+          data[i][t("form_labels.model", "Modelo")] +
           '"></input>' +
           "</div>" +
           "<!-- Color -->" +
@@ -2020,7 +2020,7 @@ function agregar_auto_vehiculos() {
           numVehiculo +
           '" style="padding-left:0px">' +
           "<label>" +
-          t("form_labels.color", "Color") +
+          t("form_labels.color", t("form_labels.color", "Cor")) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-12 my-1" style="padding-left:0px">' +
@@ -2030,7 +2030,7 @@ function agregar_auto_vehiculos() {
           '" name="colorVehiculo' +
           numVehiculo +
           '" placeholder="COLOR VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i]["color"] +
+          data[i][t("form_labels.color", "Cor")] +
           '"></input>' +
           "</div>" +
           "</div>" +
@@ -2062,7 +2062,7 @@ function agregar_auto_vehiculos() {
           numVehiculo +
           '" style="padding-left:0px">' +
           "<label>" +
-          t("form_labels.placa", "Placa") +
+          t("form_labels.placa", t("form_labels.plate", "Placa")) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-14 my-1" style="padding-left:0px">' +
@@ -2072,7 +2072,7 @@ function agregar_auto_vehiculos() {
           '" name="placaVehiculo' +
           numVehiculo +
           '" placeholder="PLACA VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i]["placa"] +
+          data[i][t("form_labels.plate", "Placa")] +
           '" maxlength="10"></input>' +
           "</div>" +
           "</div>" +
@@ -2083,7 +2083,7 @@ function agregar_auto_vehiculos() {
           numVehiculo +
           '" style="padding-left:0px">' +
           "<label>" +
-          t("form_labels.monto", "Monto") +
+          t("form_labels.monto", t("form_labels.amount", "Valor")) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-15 my-1" style="padding-left:0px">' +
@@ -2093,7 +2093,7 @@ function agregar_auto_vehiculos() {
           '" name="montoVehiculo' +
           numVehiculo +
           '" placeholder="MONTO VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i]["monto"] +
+          data[i][t("form_labels.amount", "Valor")] +
           '"></input>' +
           "</div>" +
           "</div>" +
@@ -2286,23 +2286,23 @@ function Modificar_Prospecto() {
 
   if (origen.length == 0 || origen == null) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene el campo origen",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_origin", "Preencha o campo origem"),
       "warning",
     );
   }
 
   if (categoria.length == 0 || categoria == null) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene el campo de Ramo",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_branch", "Preencha o campo ramo"),
       "warning",
     );
   }
 
   if (categoria == 0 && nuevo_categoria.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene el campo de nuevo Ramo",
       "warning",
     );
@@ -2310,7 +2310,7 @@ function Modificar_Prospecto() {
 
   if (nombre_prospecto.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene el campo  nombre prospecto",
       "warning",
     );
@@ -2318,15 +2318,15 @@ function Modificar_Prospecto() {
 
   if (genero.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene el campo genero prospecto",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_prospect_gender", "Preencha o gÃªnero do prospecto"),
       "warning",
     );
   }
 
   if (provincia.length < 1) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene el campo de provincia",
       "warning",
     );
@@ -2334,7 +2334,7 @@ function Modificar_Prospecto() {
 
   // if (cedula.length < 10 && estado_bayer == "CONTRATADO") {
   //   return Swal.fire(
-  //     "Mensaje De Advertencia",
+  //     t("messages.warning_message", "Mensaje de Aviso"),
   //     "Ingrese numero de Cedula y/o Ruc valido",
   //     "warning"
   //   );
@@ -2342,16 +2342,16 @@ function Modificar_Prospecto() {
 
   if (telefono.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene el campo telefono prospecto",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_prospect_phone", "Preencha o telefone do prospecto"),
       "warning",
     );
   }
 
   if (estado_bayer.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene el estado del prospecto",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_prospect_status", "Preencha o status do prospecto"),
       "warning",
     );
   }
@@ -2406,7 +2406,7 @@ function Modificar_Prospecto() {
       var listaFamiliaresTemp = [];
 
       listaFamiliaresTemp.push({
-        tipo: "Titular",
+        tipo: t("form_labels.holder", "Titular"),
         nombre: nombre_prospecto,
         genero: genero,
         fecha_nacimiento: fecha_nacimiento,
@@ -2421,13 +2421,13 @@ function Modificar_Prospecto() {
       if (data1.length > 0) {
         for (var i = 0; i < data1.length; i++) {
           var tipo_vehiculo = data1[i]["tipo"];
-          var marca = data1[i]["marca"];
-          var modelo = data1[i]["modelo"];
-          var color = data1[i]["color"];
-          var placa = data1[i]["placa"];
+          var marca = data1[i][t("form_labels.brand", "Marca")];
+          var modelo = data1[i][t("form_labels.model", "Modelo")];
+          var color = data1[i][t("form_labels.color", "Cor")];
+          var placa = data1[i][t("form_labels.plate", "Placa")];
           var ano = data1[i]["ano"];
           var edad_vehiculo = data1[i]["edad"];
-          var monto = data1[i]["monto"];
+          var monto = data1[i][t("form_labels.amount", "Valor")];
           if (
             tipo_vehiculo.length == 0 ||
             marca.length == 0 ||
@@ -2453,7 +2453,7 @@ function Modificar_Prospecto() {
           var ano_construccion = data2[i]["ano_construccion"];
           var valor_vivienda = data2[i]["valor_vivienda"];
           var valor_otras_cosas = data2[i]["valor_otras_cosas"];
-          var monto = data2[i]["monto"];
+          var monto = data2[i][t("form_labels.amount", "Valor")];
           if (
             tipo_hogar.length == 0 ||
             direccion.length == 0 ||
@@ -2471,32 +2471,32 @@ function Modificar_Prospecto() {
 
   if (cont_bayerpersonas > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_empty_fields", "Preencha os campos vazios"),
       "warning",
     );
   }
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de familiares",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_family_fields", "Preencha os campos da famÃ­lia"),
       "warning",
     );
   }
 
   if (cont1 > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de vehiculos",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_vehicle_fields", "Preencha os campos de veÃ­culos"),
       "warning",
     );
   }
 
   if (cont2 > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de Hogares",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_home_fields", "Preencha os campos de residÃªncias"),
       "warning",
     );
   }
@@ -2551,7 +2551,7 @@ function Modificar_Prospecto() {
       var data = JSON.parse(respuesta);
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Actualizado Prospecto",
           "success",
         ).then((value) => {
@@ -2559,8 +2559,8 @@ function Modificar_Prospecto() {
         });
       } else {
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error",
         );
       }
@@ -2985,7 +2985,7 @@ $(".btnAgregarHogar").click(function () {
       numHogar +
       '" style="padding-left:0px">' +
       "<label>" +
-      t("form_labels.monto", "Monto") +
+      t("form_labels.monto", t("form_labels.amount", "Valor")) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-13 my-1" style="padding-left:0px">' +
@@ -3121,8 +3121,8 @@ var idQuitarHogar = [];
 localStorage.removeItem("quitarHogar");
 
 $(".nuevoHogar").on("click", "button.quitarHogar", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idHogar = $(this).attr("idHogar");
@@ -3299,7 +3299,7 @@ function agregar_auto_hogares() {
           numHogar +
           '" style="padding-left:0px">' +
           "<label>" +
-          t("form_labels.monto", "Monto") +
+          t("form_labels.monto", t("form_labels.amount", "Valor")) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-13 my-1" style="padding-left:0px">' +
@@ -3309,7 +3309,7 @@ function agregar_auto_hogares() {
           '" name="montoHogar' +
           numHogar +
           '" placeholder="MONTO HOGAR" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i]["monto"] +
+          data[i][t("form_labels.amount", "Valor")] +
           '"></input>' +
           "</div>" +
           "</div>" +

@@ -66,7 +66,7 @@ $t = function ($key) {
                         ?>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-                            <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
                             <th style="text-align:center; width:10px">
                                 <div class="form-check">
                                     <!-- <input class="form-check-input chkSeleccionarTodoAsignar" id="chkSeleccionarTodoAsignar" name="chkSeleccionarTodoAsignar" type="checkbox"> -->

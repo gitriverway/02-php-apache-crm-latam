@@ -55,20 +55,20 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
                     style="width:100%">
                     <thead>
                         <tr>
-                            <th style="text-align:center; width:10px">Número Siniestro</th>
-                            <th style="text-align:center; width:10px">Fecha Siniestro</th>
-                            <th style="text-align:center; width:10px">Fecha Creaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Hogar</th>
-                            <th style="text-align:center; width:10px">Estado</th>
-                            <th style="text-align:center; width:10px">Documento Inicial</th>
-                            <th style="text-align:center; width:10px">Envio Aseguradora</th>
-                            <th style="text-align:center; width:10px">Observaciones</th>
-                            <th style="text-align:center; width:10px">Fecha Modificaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Valor Deducible</th>
-                            <th style="text-align:center; width:10px">Valor RASA</th>
-                            <th style="text-align:center; width:10px">Valor Cubierto</th>
-                            <th style="text-align:center; width:10px">Valor Paga Cliente</th>
-                            <th style="text-align:center; width:10px">Liquidaci&oacute;n</th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.claim_number'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.claim_date'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.creation_date'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.home'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.table_status'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.documento_inicial'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.envio_seguradora'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.observations'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.modification_date'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.deductible_value'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.rasa_value'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.covered_value'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.client_payment_value'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.liquidation'); ?></th>
                         </tr>
                     </thead>
                 </table>
@@ -269,12 +269,12 @@ MODAL LISTAR CONTRATOS CLIENTE
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-                                    <th style="text-align:center; width:10px">Proveedor</th>
-                                    <th style="text-align:center; width:10px">Plan</th>
-                                    <th style="text-align:center; width:10px">Cedula/Ruc</th>
-                                    <th style="text-align:center; width:10px">Cliente</th>
-                                    <th style="text-align:center; width:10px">Contrato</th>
-                                    <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.provider'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.plan'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_document'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_client'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_contract'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
                                 </tr>
                             </thead>
                         </table>

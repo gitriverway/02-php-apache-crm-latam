@@ -554,9 +554,9 @@ $t = function ($key) {
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-                                    <th style="text-align:center; width:10px">Cliente</th>
-                                    <th style="text-align:center; width:10px">Cedula/Ruc</th>
-                                    <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_client'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_document'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
                                 </tr>
                             </thead>
                         </table>
@@ -615,8 +615,8 @@ $t = function ($key) {
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-                                    <th style="text-align:center; width:10px">Empleado</th>
-                                    <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                                    <th style="text-align:center; width:10px"><?php echo $t('form.employee'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
                                 </tr>
                             </thead>
                         </table>

@@ -1,4 +1,4 @@
-$(document).on("hidden.bs.modal", function (event) {
+﻿$(document).on("hidden.bs.modal", function (event) {
   if ($(".modal:visible").length) {
     $("body").addClass("modal-open");
   }
@@ -268,7 +268,7 @@ $("#tabla-listar-siniestros-vehiculo-individual").on(
 
     $("#todoDetalleSiniestro").empty();
 
-    var nombre = $(this).attr("nombre");
+    var nombre = $(this).attr(t("form_labels.name", "Nome"));
     var telefono = $(this).attr("telefono");
 
     if (nombre.length > 0) {
@@ -499,7 +499,7 @@ function Modificar_Validar_Siniestro() {
 
   if (listaValidarDatosSiniestro.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones los distintos documentos",
       "warning"
     );
@@ -507,7 +507,7 @@ function Modificar_Validar_Siniestro() {
 
   if (fecha_seguimiento_validar.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -515,7 +515,7 @@ function Modificar_Validar_Siniestro() {
 
   if (cont1 == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -546,7 +546,7 @@ function Modificar_Validar_Siniestro() {
       // console.log(respuesta);
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Validar Siniestro Modificado Exitosamente",
           "success"
         ).then((value) => {
@@ -685,7 +685,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Siniestro() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -693,7 +693,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Siniestro() {
 
   if (observacion.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -719,7 +719,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Siniestro() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nueva Observación agregada",
           "success"
         ).then((value) => {
@@ -1094,8 +1094,8 @@ $(".seguimientoDatosSiniestro").on(
   "click",
   "button.quitarDocumento",
   function () {
-    // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-    // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
     $(this).parent().parent().parent().remove();
 
     var idDocumento = $(this).attr("idDocumento");
@@ -1220,7 +1220,7 @@ function Modificar_Seguimiento_Siniestro() {
 
   if (listaDocumentosSolicitadosAseguradora.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Agregue los documentos a solicitar",
       "warning"
     );
@@ -1228,7 +1228,7 @@ function Modificar_Seguimiento_Siniestro() {
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar la descripcion del Documento",
       "warning"
     );
@@ -1236,7 +1236,7 @@ function Modificar_Seguimiento_Siniestro() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -1244,7 +1244,7 @@ function Modificar_Seguimiento_Siniestro() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -1288,7 +1288,7 @@ function Modificar_Seguimiento_Siniestro() {
       // console.log(respuesta);
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Seguimiento Siniestro Modificado Exitosamente",
           "success"
         ).then((value) => {
@@ -1454,7 +1454,7 @@ function Registrar_Documento_Seguimiento_Siniestro() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione una fecha de seguimento",
       "warning"
     );
@@ -1462,7 +1462,7 @@ function Registrar_Documento_Seguimiento_Siniestro() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -1470,7 +1470,7 @@ function Registrar_Documento_Seguimiento_Siniestro() {
 
   if ($("#txt_documento_siniestro_documento_seguimiento").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -1505,7 +1505,7 @@ function Registrar_Documento_Seguimiento_Siniestro() {
       var data = JSON.parse(respuesta);
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nuevo Documento Seguimiento Registrado",
           "success"
         ).then((value) => {
@@ -1516,8 +1516,8 @@ function Registrar_Documento_Seguimiento_Siniestro() {
       } else {
         eliminar_overlay_documento_seguimiento_siniestro_vehiculo();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }
@@ -1751,7 +1751,7 @@ function Registrar_Documento_Liquidacion_Siniestro() {
     valor_paga_cliente.length == 0
   ) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingrese valores numericos en los campos vacios",
       "warning"
     );
@@ -1759,7 +1759,7 @@ function Registrar_Documento_Liquidacion_Siniestro() {
 
   if ($("#txt_documento_siniestro_documento_liquidacion").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -1800,7 +1800,7 @@ function Registrar_Documento_Liquidacion_Siniestro() {
     success: function (respuesta) {
       if (respuesta != "") {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nueva Liquidacion Registrado",
           "success"
         ).then((value) => {
@@ -1811,8 +1811,8 @@ function Registrar_Documento_Liquidacion_Siniestro() {
       } else {
         eliminar_overlay_documento_liquidacion_siniestro_vehiculo();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }
@@ -1934,7 +1934,7 @@ function Modificar_Observaciones_Anulacion_Siniestro() {
 
   if (observacion.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -1956,7 +1956,7 @@ function Modificar_Observaciones_Anulacion_Siniestro() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nueva Observación agregada",
           "success"
         ).then((value) => {
@@ -2110,15 +2110,15 @@ function listar_combo_vehiculos() {
           for (var i = 0; i < data.length; i++) {
             cadena +=
               "<option  value='marca: " +
-              data[i]["marca"] +
+              data[i][t("form_labels.brand", "Marca")] +
               " modelo: " +
-              data[i]["modelo"] +
+              data[i][t("form_labels.model", "Modelo")] +
               " año: " +
               data[i]["ano"] +
               "'>marca: " +
-              data[i]["marca"] +
+              data[i][t("form_labels.brand", "Marca")] +
               " modelo: " +
-              data[i]["modelo"] +
+              data[i][t("form_labels.model", "Modelo")] +
               " año: " +
               data[i]["ano"] +
               "</option>";
@@ -2243,7 +2243,7 @@ function Registrar_Siniestro() {
     var data1 = JSON.parse(listaDatosTerceroSiniestro);
     if (data1.length > 0) {
       for (var i = 0; i < data1.length; i++) {
-        var nombre_perjudicado = data1[i]["nombre"];
+        var nombre_perjudicado = data1[i][t("form_labels.name", "Nome")];
         var telefno_perjudicado = data1[i]["telefono"];
 
         if (nombre_perjudicado.length == 0 || telefno_perjudicado.length == 0) {
@@ -2255,7 +2255,7 @@ function Registrar_Siniestro() {
 
   if (idBayer.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un contrato valido",
       "warning"
     );
@@ -2263,7 +2263,7 @@ function Registrar_Siniestro() {
 
   if (listaDatosSiniestro.length == 0 || cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene los campos vacios para el Siniestro",
       "warning"
     );
@@ -2271,7 +2271,7 @@ function Registrar_Siniestro() {
 
   if (danos_tercero == "SI" && cont1 > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene los campos vacios para daños a terceros",
       "warning"
     );
@@ -2279,7 +2279,7 @@ function Registrar_Siniestro() {
 
   if ($("#txt_documento_siniestro").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -2312,7 +2312,7 @@ function Registrar_Siniestro() {
 
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nuevo Siniestro Registrado",
           "success"
         ).then((value) => {
@@ -2322,8 +2322,8 @@ function Registrar_Siniestro() {
         });
       } else {
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
         eliminar_overlay_siniestro_cliente_vehiculo();
@@ -2473,7 +2473,7 @@ function Modificar_Ajuste_Autorizacion_Siniestro() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -2481,7 +2481,7 @@ function Modificar_Ajuste_Autorizacion_Siniestro() {
 
   if (cont == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -2516,7 +2516,7 @@ function Modificar_Ajuste_Autorizacion_Siniestro() {
       // console.log(respuesta);
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Ajuste y Autorización de Siniestro Modificado Exitosamente",
           "success"
         ).then((value) => {
@@ -2681,7 +2681,7 @@ function Modificar_Ajuste_Autorizacion_Terceros_Siniestro() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -2689,7 +2689,7 @@ function Modificar_Ajuste_Autorizacion_Terceros_Siniestro() {
 
   if (cont == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -2727,7 +2727,7 @@ function Modificar_Ajuste_Autorizacion_Terceros_Siniestro() {
       // console.log(respuesta);
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Ajuste y Autorización de Siniestro Modificado Exitosamente",
           "success"
         ).then((value) => {

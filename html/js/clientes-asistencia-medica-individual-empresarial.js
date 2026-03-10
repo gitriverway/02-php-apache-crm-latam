@@ -1,4 +1,4 @@
-// Helper function para traducciones en JavaScript
+﻿// Helper function para traducciones en JavaScript
 function t(key, defaultValue) {
   // Buscar en translations.form
   if (
@@ -302,7 +302,7 @@ $("#tabla_lista_vendedores").on("click", ".btnAsignarVendedor", function () {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "El vendedor a sido asignado",
           "success",
         ).then((value) => {
@@ -479,7 +479,7 @@ $(".listaAdicional").on("click", "button.btnAgregarColaborador", function () {
     estado1 = "";
   }
 
-  // $(this).parent().parent().find(".idListaDependiente").css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().find(".idListaDependiente").css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
 
   let valor = $(this).parent().parent().find(".idListaDependiente").val();
 
@@ -702,10 +702,10 @@ function auto_agregar_familiares_dependientes(lista) {
         numSubProspecto +
         '" required>' +
         '<option value= "">' + t('form_labels.seleccione', 'Seleccione...') + '</option>' +
-        '<option value= "Conyuge">' + t('form_labels.conyuge', 'Conyuge') + '</option>' +
-        '<option value= "Hijo/a">' + t('form_labels.hijo', 'Hijo/a') + '</option>' +
-        '<option value= "Otro">' + t('form_labels.otro', 'Otro') + '</option>' +
-        '<option value= "Familiar">' + t('form_labels.familiar', 'Familiar') + '</option>' +
+        '<option value= t("form_labels.spouse", "CÃ´njuge")>' + t('form_labels.conyuge', 'Conyuge') + '</option>' +
+        '<option value= t("form_labels.son_daughter", "Filho/a")>' + t('form_labels.hijo', 'Hijo/a') + '</option>' +
+        '<option value= t("form_labels.other", "Outro")>' + t('form_labels.otro', 'Otro') + '</option>' +
+        '<option value= t("form_labels.relative", "Familiar")>' + t('form_labels.familiar', 'Familiar') + '</option>' +
         "</select>" +
         "</div>" +
         "</div>" +
@@ -724,7 +724,7 @@ function auto_agregar_familiares_dependientes(lista) {
         '" name="nombreFamiliar' +
         numSubProspecto +
         '" placeholder="' + t('form_labels.ingrese_nombre', 'INGRESE NOMBRE') + '" autocomplete="off" style="text-transform: uppercase" value = "' +
-        data[i]["nombre"] +
+        data[i][t("form_labels.name", "Nome")] +
         '"></input>' +
         "</div>" +
         "</div>" +
@@ -852,10 +852,10 @@ $("#modalListarDependientesColaborador").on(
         numSubProspecto +
         '" required>' +
         '<option value= "">' + t('form_labels.seleccione', 'Seleccione...') + '</option>' +
-        '<option value= "Conyuge">' + t('form_labels.conyuge', 'Conyuge') + '</option>' +
-        '<option value= "Hijo/a">' + t('form_labels.hijo', 'Hijo/a') + '</option>' +
-        '<option value= "Otro">' + t('form_labels.otro', 'Otro') + '</option>' +
-        '<option value= "Familiar">' + t('form_labels.familiar', 'Familiar') + '</option>' +
+        '<option value= t("form_labels.spouse", "CÃ´njuge")>' + t('form_labels.conyuge', 'Conyuge') + '</option>' +
+        '<option value= t("form_labels.son_daughter", "Filho/a")>' + t('form_labels.hijo', 'Hijo/a') + '</option>' +
+        '<option value= t("form_labels.other", "Outro")>' + t('form_labels.otro', 'Otro') + '</option>' +
+        '<option value= t("form_labels.relative", "Familiar")>' + t('form_labels.familiar', 'Familiar') + '</option>' +
         "</select>" +
         "</div>" +
         "</div>" +
@@ -1086,8 +1086,8 @@ var idColaborador = [];
 localStorage.removeItem("quitarColaborador");
 
 $(".listaAdicional").on("click", "button.quitarColaborador", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idColaborador = $(this).attr("idColaborador");
@@ -1212,8 +1212,8 @@ function Registrar_Dependientes_Colaborador() {
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de familiares",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_family_fields", "Preencha os campos da famÃ­lia"),
       "warning",
     );
   } else {
@@ -1237,7 +1237,7 @@ function agregarNuevaObservacion() {
   var observacion = $("#txt_observacion").val();
   if (observacion.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene la observaci&oacute;n",
       "warning",
     );
@@ -1378,8 +1378,8 @@ var idQuitarObservacion = [];
 localStorage.removeItem("quitarObservacion");
 
 $(".nuevaObservacion").on("click", "button.quitarObservacion", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idObservacion = $(this).attr("idObservacion");
@@ -1428,7 +1428,7 @@ $(".listaAdicional").on(
       estado = "";
     }
 
-    // $(this).parent().parent().find(".idCondiciones").css({"color": "red", "border": "2px solid red"});
+    // $(this).parent().parent().find(".idCondiciones").css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
 
     let valor = $(this).parent().parent().find(".idCondiciones").val();
 
@@ -1504,8 +1504,8 @@ $(".listaAdicional").on(
   "click",
   "button.quitarCondicionRenovacion",
   function () {
-    // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-    // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
     $(this).parent().parent().parent().remove();
 
     var idDocumento = $(this).attr("idDocumento");
@@ -2468,7 +2468,7 @@ function agregar_auto_Colaboradores(idValor) {
           '" name="nombreColaborador' +
           numProspecto +
           '" placeholder="' + t('form_labels.ingrese_nombre', 'INGRESE NOMBRE') + '" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i]["nombre"] +
+          data[i][t("form_labels.name", "Nome")] +
           '"></input>' +
           "</div>" +
           "</div>" +
@@ -2823,23 +2823,23 @@ function Modificar_Cliente() {
 
   if (origen.length == 0 || origen == null) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene el campo origen",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_origin", "Preencha o campo origem"),
       "warning",
     );
   }
 
   if (categoria.length == 0 || categoria == null) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene el campo de Ramo",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_branch", "Preencha o campo ramo"),
       "warning",
     );
   }
 
   if (categoria == 0 && nuevo_categoria.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene el campo de nuevo Ramo",
       "warning",
     );
@@ -2847,7 +2847,7 @@ function Modificar_Cliente() {
 
   if (nombre.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene el campo  nombre cliente",
       "warning",
     );
@@ -2855,7 +2855,7 @@ function Modificar_Cliente() {
 
   if (provincia < 1) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene el campo de provincia",
       "warning",
     );
@@ -2863,7 +2863,7 @@ function Modificar_Cliente() {
 
   // if (cedula.length < 10 && estado_bayer == "CONTRATADO") {
   //   return Swal.fire(
-  //     "Mensaje De Advertencia",
+  //     t("messages.warning_message", "Mensaje de Aviso"),
   //     "Ingrese numero de Cedula y/o Ruc valido",
   //     "warning"
   //   );
@@ -2871,7 +2871,7 @@ function Modificar_Cliente() {
 
   if (estado_bayer.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene el estado del cliente",
       "warning",
     );
@@ -2900,8 +2900,8 @@ function Modificar_Cliente() {
     estado_bayer.length == 0
   ) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_empty_fields", "Preencha os campos vazios"),
       "warning",
     );
   }
@@ -2991,7 +2991,7 @@ function Modificar_Cliente() {
   datos.append("idProducto", idProducto);
   datos.append("idCliente", idCliente);
   datos.append("cedula", cedula);
-  datos.append("nombre", nombre);
+  datos.append(t("form_labels.name", "Nome"), nombre);
   datos.append("telefono", telefono);
   datos.append("email", email);
   datos.append("telefono_opcional", telefono_opcional);
@@ -3077,7 +3077,7 @@ function Modificar_Cliente() {
       if (data.length > 0) {
         if (data[0]["valor"] == 1) {
           Swal.fire(
-            "Mensaje De Confirmacion",
+            t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
             "Datos correctamente, Actualizado Cliente",
             "success",
           ).then((value) => {
@@ -3086,15 +3086,15 @@ function Modificar_Cliente() {
           });
         } else {
           return Swal.fire(
-            "Mensaje De Advertencia",
+            t("messages.warning_message", "Mensaje de Aviso"),
             "Lo sentimos, la cedula ya esta registrada en otro cliente",
             "warning",
           );
         }
       } else {
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error",
         );
       }
@@ -3361,7 +3361,7 @@ $(".listaAdicional").on("change", ".txt_fecha_inicio_contrato", function () {
       String(fechaFinObj.getUTCDate()).padStart(2, "0"),
     ].join("-");
 
-    // $(this).parent().parent().parent().find(".txt_fecha_fin_contrato").css({"color": "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().find(".txt_fecha_fin_contrato").css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
 
     // Actualizar el campo
     $(this)

@@ -55,23 +55,23 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-                            <th style="text-align:center; width:10px">Número Solicitud Operatorio</th>
-                            <th style="text-align:center; width:10px">Fecha Creaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Paciente</th>
-                            <th style="text-align:center; width:10px">Diagnostico</th>
-                            <th style="text-align:center; width:10px">Gasto Presentado</th>
-                            <th style="text-align:center; width:10px">Documento Inicial</th>
-                            <th style="text-align:center; width:10px">Envio Aseguradora</th>
-                            <th style="text-align:center; width:10px">Observaciones</th>
-                            <th style="text-align:center; width:10px">Estado</th>
-                            <th style="text-align:center; width:10px">Fecha Seguimiento</th>
-                            <th style="text-align:center; width:10px">Seguimiento Aseguradora</th>
-                            <th style="text-align:center; width:10px">Requerimiento por la aseguradora</th>
-                            <th style="text-align:center; width:10px">Requerimiento por la aseguradora 2</th>
-                            <th style="text-align:center; width:10px">Envio Requerimiento Aseguradora</th>
-                            <th style="text-align:center; width:10px">Envio Requerimiento Aseguradora 2</th>
-                            <th style="text-align:center; width:10px">Fecha Autorizaci&oacute;n</th>
-                            <th style="text-align:center; width:10px">Documento Autorizaci&oacute;n</th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.title_request_number'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.creation_date'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.patient'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.diagnosis'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.gasto_presentado'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.documento_inicial'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.envio_seguradora'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.observations'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.table_status'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.fecha_seguimiento'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.insurer_follow_up'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.requerimiento'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.requerimiento'); ?> 2</th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.envio_seguradora'); ?> Requerimento</th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.envio_seguradora'); ?> Requerimento 2</th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.fecha_autorizacion'); ?></th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.documento_autorizacion'); ?></th>
                         </tr>
                     </thead>
                 </table>
@@ -823,12 +823,12 @@ MODAL LISTAR CONTRATOS CLIENTE
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-                                    <th style="text-align:center; width:10px">Proveedor</th>
-                                    <th style="text-align:center; width:10px">Plan</th>
-                                    <th style="text-align:center; width:10px">Cedula/Ruc</th>
-                                    <th style="text-align:center; width:10px">Cliente</th>
-                                    <th style="text-align:center; width:10px">Contrato</th>
-                                    <th style="text-align:center; width:10px">Acci&oacute;n</th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.provider'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.plan'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_document'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_client'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_contract'); ?></th>
+                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
                                 </tr>
                             </thead>
                         </table>

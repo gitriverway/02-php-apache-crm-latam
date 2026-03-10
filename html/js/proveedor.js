@@ -1,4 +1,4 @@
-/*********************************
+﻿/*********************************
  CARGAR LISTA DE EMPLEADO EN TABLA
  *********************************/
 function lista1() {
@@ -171,8 +171,8 @@ var idQuitarNuevoCorreo = [];
 localStorage.removeItem("quitarCorreo");
 
 $(".listaNuevosCorreos").on("click", "button.quitarCorreo", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idCorreo = $(this).attr("idCorreo");
@@ -487,7 +487,7 @@ function Registrar_Proveedor() {
   }
 
   var datos = new FormData();
-  datos.append("nombre", nombre);
+  datos.append(t("form_labels.name", "Nome"), nombre);
   datos.append("direccion", direccion);
   datos.append("listaCorreoReembolsos", listaCorreoReembolsos);
   datos.append("listaCorreoSiniestros", listaCorreoSiniestros);
@@ -778,8 +778,8 @@ var idQuitarEditarCorreo = [];
 localStorage.removeItem("quitarEditarCorreo");
 
 $(".listaEditarCorreos").on("click", "button.quitarEditarCorreo", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idCorreo = $(this).attr("idCorreo");
@@ -1036,7 +1036,7 @@ function Modificar_Proveedor() {
 
   if (listaCorreoReembolsos.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Debe crear correo para reembolsos",
       "warning",
     );
@@ -1044,7 +1044,7 @@ function Modificar_Proveedor() {
 
   if (listaCorreoSiniestros.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Debe crear correo para siniestros",
       "warning",
     );
@@ -1052,7 +1052,7 @@ function Modificar_Proveedor() {
 
   if (listaCorreoOperatorios.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Debe crear correo para credito hospitalario",
       "warning",
     );
@@ -1060,7 +1060,7 @@ function Modificar_Proveedor() {
 
   if (listaCorreoCreditoAmbulatorio.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Debe crear correo para credito ambulatorio",
       "warning",
     );
@@ -1068,7 +1068,7 @@ function Modificar_Proveedor() {
 
   if (listaCorreoSiniestrosHogar.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Debe crear correo para siniestros hogar",
       "warning",
     );
@@ -1082,7 +1082,7 @@ function Modificar_Proveedor() {
     cont_siniestro_hogar > 0
   ) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene los campos de correo vacios",
       "warning",
     );
@@ -1090,7 +1090,7 @@ function Modificar_Proveedor() {
 
   var datos = new FormData();
   datos.append("idProveedor", idProveedor);
-  datos.append("nombre", nombre);
+  datos.append(t("form_labels.name", "Nome"), nombre);
   datos.append("direccion", direccion);
   datos.append("listaCorreoReembolsos", listaCorreoReembolsos);
   datos.append("listaCorreoSiniestros", listaCorreoSiniestros);
@@ -1112,7 +1112,7 @@ function Modificar_Proveedor() {
         if (data["valor"] == 1) {
           $("#modal_editar").modal("hide");
           Swal.fire(
-            "Mensaje De Confirmacion",
+            t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
             "Datos Actualizados Correctamente",
             "success",
           ).then((value) => {
@@ -1120,15 +1120,15 @@ function Modificar_Proveedor() {
           });
         } else {
           return Swal.fire(
-            "Mensaje De Advertencia",
+            t("messages.warning_message", "Mensaje de Aviso"),
             "Lo sentimos, el proveedor ya se encuentra en nuestra base de datos",
             "warning",
           );
         }
       } else {
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error",
         );
       }

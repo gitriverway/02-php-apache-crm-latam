@@ -1,4 +1,4 @@
-/*********************************
+﻿/*********************************
  CARGAR LISTA DE EMPLEADO EN TABLA
  *********************************/
 //  function lista1(){
@@ -131,7 +131,7 @@ function agregarNuevaFactura() {
   var datos = new FormData();
 
   datos.append("cedula", cedula);
-  datos.append("nombre", nombre);
+  datos.append(t("form_labels.name", "Nome"), nombre);
   datos.append("numero_factura", numero_factura);
   datos.append("fecha_emision", fecha_emision);
   datos.append("valor_factura", valor_factura);

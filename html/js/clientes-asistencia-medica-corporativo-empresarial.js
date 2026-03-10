@@ -1,4 +1,4 @@
-// Helper function para traducciones en JavaScript
+﻿// Helper function para traducciones en JavaScript
 function t(key, defaultValue) {
   if (
     typeof translations !== "undefined" &&
@@ -303,7 +303,7 @@ $("#tabla_lista_vendedores").on("click", ".btnAsignarVendedor", function () {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "El vendedor a sido asignado",
           "success",
         ).then((value) => {
@@ -494,7 +494,7 @@ $(".btnAgregarColaborador").click(function () {
       numProspecto +
       '" style="padding-right:0px">' +
       "<label>" +
-      t("form_labels.parentesco", "Parentesco") +
+      t("form_labels.parentesco", t("form_labels.relationship", "Parentesco")) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-8 my-1" style="padding-right:0px">' +
@@ -503,7 +503,7 @@ $(".btnAgregarColaborador").click(function () {
       numProspecto +
       '" name="tipoColaborador' +
       numProspecto +
-      '" style="text-transform: uppercase" value="Titular" disabled></input>' +
+      '" style="text-transform: uppercase" value=t("form_labels.holder", "Titular") disabled></input>' +
       "</div>" +
       "</div>" +
       "<!-- Nombre -->" +
@@ -513,7 +513,7 @@ $(".btnAgregarColaborador").click(function () {
       numProspecto +
       '">' +
       "<label>" +
-      t("form_labels.nombre", "Nombre") +
+      t("form_labels.nombre", t("form_labels.name", "Nome")) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-9 my-1">' +
@@ -555,7 +555,7 @@ $(".btnAgregarColaborador").click(function () {
       numProspecto +
       '" style="padding-left:0px">' +
       "<label>" +
-      t("form_labels.fecha_nacimiento", "Fecha Nacimiento") +
+      t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-11 my-1" style="padding-left:0px">' +
@@ -692,7 +692,7 @@ function auto_agregar_familiares_dependientes(lista) {
         numSubProspecto +
         '" style="padding-right:0px">' +
         "<label>" +
-        t("form_labels.parentesco", "Parentesco") +
+        t("form_labels.parentesco", t("form_labels.relationship", "Parentesco")) +
         "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
@@ -703,10 +703,10 @@ function auto_agregar_familiares_dependientes(lista) {
         numSubProspecto +
         '" required>' +
         '<option value= "">Seleccione...</option>' +
-        '<option value= "Conyuge">Conyuge</option>' +
-        '<option value= "Hijo/a">Hijo/a</option>' +
-        '<option value= "Otro">Otro</option>' +
-        '<option value= "Familiar">Familiar</option>' +
+        '<option value= t("form_labels.spouse", "CÃ´njuge")>Conyuge</option>' +
+        '<option value= t("form_labels.son_daughter", "Filho/a")>Hijo/a</option>' +
+        '<option value= t("form_labels.other", "Outro")>Otro</option>' +
+        '<option value= t("form_labels.relative", "Familiar")>Familiar</option>' +
         "</select>" +
         "</div>" +
         "</div>" +
@@ -717,7 +717,7 @@ function auto_agregar_familiares_dependientes(lista) {
         numSubProspecto +
         '">' +
         "<label>" +
-        t("form_labels.nombre", "Nombre") +
+        t("form_labels.nombre", t("form_labels.name", "Nome")) +
         "</label>" +
         "</div>" +
         '<div class="col-6 col-md-3 order-md-8 my-1">' +
@@ -729,7 +729,7 @@ function auto_agregar_familiares_dependientes(lista) {
         ' placeholder="' +
         t("enter_name", "INGRESE NOMBRE") +
         '" autocomplete="off" style="text-transform: uppercase" value = "' +
-        data[i]["nombre"] +
+        data[i][t("form_labels.name", "Nome")] +
         '"></input>' +
         "</div>" +
         "</div>" +
@@ -761,7 +761,7 @@ function auto_agregar_familiares_dependientes(lista) {
         numSubProspecto +
         '" style="padding-left:0px">' +
         "<label>" +
-        t("form_labels.fecha_nacimiento", "Fecha Nacimiento") +
+        t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
         "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-left:0px">' +
@@ -856,7 +856,7 @@ $("#modalListarDependientesColaborador").on(
         numSubProspecto +
         '" style="padding-right:0px">' +
         "<label>" +
-        t("form_labels.parentesco", "Parentesco") +
+        t("form_labels.parentesco", t("form_labels.relationship", "Parentesco")) +
         "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
@@ -867,10 +867,10 @@ $("#modalListarDependientesColaborador").on(
         numSubProspecto +
         '" required>' +
         '<option value= "">Seleccione...</option>' +
-        '<option value= "Conyuge">Conyuge</option>' +
-        '<option value= "Hijo/a">Hijo/a</option>' +
-        '<option value= "Otro">Otro</option>' +
-        '<option value= "Familiar">Familiar</option>' +
+        '<option value= t("form_labels.spouse", "CÃ´njuge")>Conyuge</option>' +
+        '<option value= t("form_labels.son_daughter", "Filho/a")>Hijo/a</option>' +
+        '<option value= t("form_labels.other", "Outro")>Otro</option>' +
+        '<option value= t("form_labels.relative", "Familiar")>Familiar</option>' +
         "</select>" +
         "</div>" +
         "</div>" +
@@ -881,7 +881,7 @@ $("#modalListarDependientesColaborador").on(
         numSubProspecto +
         '">' +
         "<label>" +
-        t("form_labels.nombre", "Nombre") +
+        t("form_labels.nombre", t("form_labels.name", "Nome")) +
         "</label>" +
         "</div>" +
         '<div class="col-6 col-md-3 order-md-8 my-1">' +
@@ -923,7 +923,7 @@ $("#modalListarDependientesColaborador").on(
         numSubProspecto +
         '" style="padding-left:0px">' +
         "<label>" +
-        t("form_labels.fecha_nacimiento", "Fecha Nacimiento") +
+        t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
         "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-left:0px">' +
@@ -1085,8 +1085,8 @@ var idColaborador = [];
 localStorage.removeItem("quitarColaborador");
 
 $(".nuevoColaborador").on("click", "button.quitarColaborador", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idColaborador = $(this).attr("idColaborador");
@@ -1179,8 +1179,8 @@ function Registrar_Dependientes_Colaborador() {
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de familiares",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_family_fields", "Preencha os campos da famÃ­lia"),
       "warning",
     );
   } else {
@@ -1204,7 +1204,7 @@ function agregarNuevaObservacion() {
   var observacion = $("#txt_observacion").val();
   if (observacion.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene la observaci&oacute;n",
       "warning",
     );
@@ -1349,8 +1349,8 @@ var idQuitarObservacion = [];
 localStorage.removeItem("quitarObservacion");
 
 $(".nuevaObservacion").on("click", "button.quitarObservacion", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idObservacion = $(this).attr("idObservacion");
@@ -1509,7 +1509,7 @@ function agregar_auto_Colaboradores() {
           numProspecto +
           '" style="padding-right:0px">' +
           "<label>" +
-          t("form_labels.parentesco", "Parentesco") +
+          t("form_labels.parentesco", t("form_labels.relationship", "Parentesco")) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
@@ -1528,7 +1528,7 @@ function agregar_auto_Colaboradores() {
           numProspecto +
           '">' +
           "<label>" +
-          t("form_labels.nombre", "Nombre") +
+          t("form_labels.nombre", t("form_labels.name", "Nome")) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-8 my-1">' +
@@ -1540,7 +1540,7 @@ function agregar_auto_Colaboradores() {
           ' placeholder="' +
           t("enter_name", "INGRESE NOMBRE") +
           '" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i]["nombre"] +
+          data[i][t("form_labels.name", "Nome")] +
           '"></input>' +
           "</div>" +
           "</div>" +
@@ -1572,7 +1572,7 @@ function agregar_auto_Colaboradores() {
           numProspecto +
           '" style="padding-left:0px">' +
           "<label>" +
-          t("form_labels.fecha_nacimiento", "Fecha Nacimiento") +
+          t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-left:0px">' +
@@ -1912,8 +1912,8 @@ function Modificar_Cliente() {
   }
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de familiares",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_family_fields", "Preencha os campos da famÃ­lia"),
       "warning",
     );
   }
@@ -1945,8 +1945,8 @@ function Modificar_Cliente() {
     estado_bayer.length == 0
   ) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_empty_fields", "Preencha os campos vazios"),
       "warning",
     );
   }
@@ -2022,7 +2022,7 @@ function Modificar_Cliente() {
   datos.append("idProducto", idProducto);
   datos.append("idCliente", idCliente);
   datos.append("cedula", cedula);
-  datos.append("nombre", nombre);
+  datos.append(t("form_labels.name", "Nome"), nombre);
   datos.append("telefono", telefono);
   datos.append("email", email);
   datos.append("provincia", provincia);
@@ -2105,7 +2105,7 @@ function Modificar_Cliente() {
       if (data.length > 0) {
         if (data[0]["valor"] == 1) {
           Swal.fire(
-            "Mensaje De Confirmacion",
+            t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
             "Datos correctamente, Actualizado Cliente",
             "success",
           ).then((value) => {
@@ -2114,15 +2114,15 @@ function Modificar_Cliente() {
           });
         } else {
           return Swal.fire(
-            "Mensaje De Advertencia",
+            t("messages.warning_message", "Mensaje de Aviso"),
             "Lo sentimos, la cedula ya esta registrada en otro cliente",
             "warning",
           );
         }
       } else {
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error",
         );
       }

@@ -1,4 +1,4 @@
-// Helper function para traducciones en JavaScript
+﻿// Helper function para traducciones en JavaScript
 function t(key, defaultValue) {
   if (
     typeof translations !== "undefined" &&
@@ -453,7 +453,7 @@ $(".btnAgregarColaborador").click(function () {
       numProspecto +
       '" name="tipoColaborador' +
       numProspecto +
-      '" style="text-transform: uppercase" value="Titular" disabled></input>' +
+      '" style="text-transform: uppercase" value=t("form_labels.holder", "Titular") disabled></input>' +
       "</div>" +
       "</div>" +
       "<!-- Nombre -->" +
@@ -634,10 +634,10 @@ function auto_agregar_familiares_dependientes(lista) {
         '<option value= "">' +
         t("messages.select_option", "Select..") +
         "</option>" +
-        '<option value= "Conyuge">Conyuge</option>' +
-        '<option value= "Hijo/a">Hijo/a</option>' +
-        '<option value= "Otro">Otro</option>' +
-        '<option value= "Familiar">Familiar</option>' +
+        '<option value= t("form_labels.spouse", "CÃ´njuge")>Conyuge</option>' +
+        '<option value= t("form_labels.son_daughter", "Filho/a")>Hijo/a</option>' +
+        '<option value= t("form_labels.other", "Outro")>Otro</option>' +
+        '<option value= t("form_labels.relative", "Familiar")>Familiar</option>' +
         "</select>" +
         "</div>" +
         "</div>" +
@@ -658,7 +658,7 @@ function auto_agregar_familiares_dependientes(lista) {
         '" placeholder="' +
         t("form.enter_name", "ENTER NAME") +
         '" autocomplete="off" style="text-transform: uppercase" value = "' +
-        data[i]["nombre"] +
+        data[i][t("form_labels.name", "Nome")] +
         '"></input>' +
         "</div>" +
         "</div>" +
@@ -777,10 +777,10 @@ $("#modalListarDependientesColaborador").on(
         '<option value= "">' +
         t("messages.select_option", "Select..") +
         "</option>" +
-        '<option value= "Conyuge">Conyuge</option>' +
-        '<option value= "Hijo/a">Hijo/a</option>' +
-        '<option value= "Otro">Otro</option>' +
-        '<option value= "Familiar">Familiar</option>' +
+        '<option value= t("form_labels.spouse", "CÃ´njuge")>Conyuge</option>' +
+        '<option value= t("form_labels.son_daughter", "Filho/a")>Hijo/a</option>' +
+        '<option value= t("form_labels.other", "Outro")>Otro</option>' +
+        '<option value= t("form_labels.relative", "Familiar")>Familiar</option>' +
         "</select>" +
         "</div>" +
         "</div>" +
@@ -965,8 +965,8 @@ var idColaborador = [];
 localStorage.removeItem("quitarColaborador");
 
 $(".nuevoColaborador").on("click", "button.quitarColaborador", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idColaborador = $(this).attr("idColaborador");
@@ -1057,8 +1057,8 @@ function Registrar_Dependientes_Colaborador() {
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de familiares",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_family_fields", "Preencha os campos da famÃ­lia"),
       "warning",
     );
   } else {
@@ -1223,8 +1223,8 @@ var idQuitarObservacion = [];
 localStorage.removeItem("quitarObservacion");
 
 $(".nuevaObservacion").on("click", "button.quitarObservacion", function () {
-  // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-  // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+  // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
   $(this).parent().parent().parent().remove();
 
   var idObservacion = $(this).attr("idObservacion");
@@ -1451,11 +1451,11 @@ function Registrar_Cliente() {
       if (data1.length > 0) {
         for (var i = 0; i < data1.length; i++) {
           var tipo_vehiculo = data1[i]["tipo"];
-          var marca = data1[i]["marca"];
-          var modelo = data1[i]["modelo"];
+          var marca = data1[i][t("form_labels.brand", "Marca")];
+          var modelo = data1[i][t("form_labels.model", "Modelo")];
           var ano = data1[i]["ano"];
           var edad_vehiculo = data1[i]["edad"];
-          var monto = data1[i]["monto"];
+          var monto = data1[i][t("form_labels.amount", "Valor")];
           if (
             tipo_vehiculo.length == 0 ||
             marca.length == 0 ||
@@ -1473,24 +1473,24 @@ function Registrar_Cliente() {
 
   if (cont_bayerpersonas > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_empty_fields", "Preencha os campos vazios"),
       "warning",
     );
   }
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de familiares",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_family_fields", "Preencha os campos da famÃ­lia"),
       "warning",
     );
   }
 
   if (cont1 > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de vehiculos",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_vehicle_fields", "Preencha os campos de veÃ­culos"),
       "warning",
     );
   }
@@ -1551,8 +1551,8 @@ function Registrar_Cliente() {
         });
       } else {
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error",
         );
       }
@@ -1747,7 +1747,7 @@ function agregar_auto_Colaboradores() {
           numProspecto +
           '" name="tipoColaborador' +
           numProspecto +
-          '" style="text-transform: uppercase" value="Titular" disabled></input>' +
+          '" style="text-transform: uppercase" value=t("form_labels.holder", "Titular") disabled></input>' +
           "</div>" +
           "</div>" +
           "<!-- Nombre -->" +
@@ -1767,7 +1767,7 @@ function agregar_auto_Colaboradores() {
           '" placeholder="' +
           t("form.enter_name", "ENTER NAME") +
           '" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i]["nombre"] +
+          data[i][t("form_labels.name", "Nome")] +
           '"></input>' +
           "</div>" +
           "</div>" +
@@ -2114,11 +2114,11 @@ function Modificar_Prospecto() {
       if (data1.length > 0) {
         for (var i = 0; i < data1.length; i++) {
           var tipo_vehiculo = data1[i]["tipo"];
-          var marca = data1[i]["marca"];
-          var modelo = data1[i]["modelo"];
+          var marca = data1[i][t("form_labels.brand", "Marca")];
+          var modelo = data1[i][t("form_labels.model", "Modelo")];
           var ano = data1[i]["ano"];
           var edad_vehiculo = data1[i]["edad"];
-          var monto = data1[i]["monto"];
+          var monto = data1[i][t("form_labels.amount", "Valor")];
           if (
             tipo_vehiculo.length == 0 ||
             marca.length == 0 ||
@@ -2136,24 +2136,24 @@ function Modificar_Prospecto() {
 
   if (cont_bayerpersonas > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_empty_fields", "Preencha os campos vazios"),
       "warning",
     );
   }
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de familiares",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_family_fields", "Preencha os campos da famÃ­lia"),
       "warning",
     );
   }
 
   if (cont1 > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
-      "Llene los campos vacios de vehiculos",
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_vehicle_fields", "Preencha os campos de veÃ­culos"),
       "warning",
     );
   }
@@ -2215,8 +2215,8 @@ function Modificar_Prospecto() {
         });
       } else {
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error",
         );
       }

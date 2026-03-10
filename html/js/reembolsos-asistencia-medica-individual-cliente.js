@@ -1,4 +1,4 @@
-// let fecha1 = new Date("01/01/2022");
+﻿// let fecha1 = new Date("01/01/2022");
 // let fecha2 = new Date("12/24/2022");
 
 // let diferencia = fecha2.getTime() - fecha1.getTime();
@@ -360,9 +360,9 @@ function listar_combo_dependientes() {
           for (var i = 0; i < data.length; i++) {
             cadena +=
               "<option  value='" +
-              data[i]["nombre"] +
+              data[i][t("form_labels.name", "Nome")] +
               "'>" +
-              data[i]["nombre"] +
+              data[i][t("form_labels.name", "Nome")] +
               "</option>";
           }
         } else {
@@ -436,7 +436,7 @@ function Registrar_Reembolso() {
 
   if (idBayer.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un contrato valido",
       "warning"
     );
@@ -444,7 +444,7 @@ function Registrar_Reembolso() {
 
   if (listaDatosReembolso.length == 0 || cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene los campos vacios para el Reembolso",
       "warning"
     );
@@ -452,7 +452,7 @@ function Registrar_Reembolso() {
 
   if ($("#txt_documento_reembolso").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -460,7 +460,7 @@ function Registrar_Reembolso() {
 
   if (cont_dias_validos > 90) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "La fecha del reembolso ingresado es mayor a los 90 dias permitidos por la aseguradora",
       "warning"
     );
@@ -492,7 +492,7 @@ function Registrar_Reembolso() {
 
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nuevo Reembolso Registrado",
           "success"
         ).then((value) => {
@@ -501,8 +501,8 @@ function Registrar_Reembolso() {
         });
       } else {
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }

@@ -53,7 +53,7 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
                             <th style="text-align:center; width:10px">Solicitud Hospitalaria</th>
                             <th style="text-align:center; width:10px">Formulario Cambiar Forma Pago</th>
                             <th style="text-align:center; width:10px">Obsequio BMI</th>
-                            <th style="text-align:center; width:10px">Estado</th>
+                            <th style="text-align:center; width:10px"<?php echo $t('form.table_status'); ?></th>
                         </tr>
                     </thead>
                 </table>

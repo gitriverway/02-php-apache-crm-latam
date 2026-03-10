@@ -1,4 +1,4 @@
-$(document).on("hidden.bs.modal", function (event) {
+﻿$(document).on("hidden.bs.modal", function (event) {
   if ($(".modal:visible").length) {
     $("body").addClass("modal-open");
   }
@@ -478,7 +478,7 @@ function Modificar_Validar_Operatorio() {
 
   if (listaValidarDatosOperatorio.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones los distintos documentos",
       "warning"
     );
@@ -486,7 +486,7 @@ function Modificar_Validar_Operatorio() {
 
   if (fecha_seguimiento_validar.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -494,7 +494,7 @@ function Modificar_Validar_Operatorio() {
 
   if (cont1 == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -524,7 +524,7 @@ function Modificar_Validar_Operatorio() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Validar Operatorio Modificado Exitosamente",
           "success"
         ).then((value) => {
@@ -661,7 +661,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Operatorio() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -669,7 +669,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Operatorio() {
 
   if (observacion.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -695,7 +695,7 @@ function Modificar_Observaciones_adicionales_Seguimiento_Operatorio() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nueva Observación agregada",
           "success"
         ).then((value) => {
@@ -1097,8 +1097,8 @@ $(".seguimientoDatosOperatorio").on(
   "click",
   "button.quitarDocumento",
   function () {
-    // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-    // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
     $(this).parent().parent().parent().remove();
 
     var idDocumento = $(this).attr("idDocumento");
@@ -1201,7 +1201,7 @@ function Modificar_Seguimiento_Operatorio() {
 
   if (listaDocumentosSolicitadosAseguradora.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Agregue los documentos a solicitar",
       "warning"
     );
@@ -1209,7 +1209,7 @@ function Modificar_Seguimiento_Operatorio() {
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar la descripcion del Documento",
       "warning"
     );
@@ -1217,7 +1217,7 @@ function Modificar_Seguimiento_Operatorio() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -1225,7 +1225,7 @@ function Modificar_Seguimiento_Operatorio() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -1268,7 +1268,7 @@ function Modificar_Seguimiento_Operatorio() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Seguimiento Operatorio Modificado Exitosamente",
           "success"
         ).then((value) => {
@@ -1432,7 +1432,7 @@ function Registrar_Documento_Seguimiento_Operatorio() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione una fecha de seguimento",
       "warning"
     );
@@ -1440,7 +1440,7 @@ function Registrar_Documento_Seguimiento_Operatorio() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -1448,7 +1448,7 @@ function Registrar_Documento_Seguimiento_Operatorio() {
 
   if ($("#txt_documento_operatorio_documento_seguimiento").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -1483,7 +1483,7 @@ function Registrar_Documento_Seguimiento_Operatorio() {
       var data = JSON.parse(respuesta);
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nuevo Documento Seguimiento Registrado",
           "success"
         ).then((value) => {
@@ -1494,8 +1494,8 @@ function Registrar_Documento_Seguimiento_Operatorio() {
       } else {
         eliminar_overlay_documento_seguimiento_operatorio_asistencia_medica();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }
@@ -1668,7 +1668,7 @@ function Registrar_Documento_Autorizacion_Operatorio() {
 
   if ($("#txt_observaciones_autorizacion_operatorio").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingrese una observación para cargar la autorización del pedido operatorio",
       "warning"
     );
@@ -1676,7 +1676,7 @@ function Registrar_Documento_Autorizacion_Operatorio() {
 
   if ($("#txt_documento_operatorio_documento_autorizacion").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -1709,7 +1709,7 @@ function Registrar_Documento_Autorizacion_Operatorio() {
     success: function (respuesta) {
       if (respuesta == 1) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nueva Autorización Registrada",
           "success"
         ).then((value) => {
@@ -1720,8 +1720,8 @@ function Registrar_Documento_Autorizacion_Operatorio() {
       } else {
         eliminar_overlay_documento_autorizacion_operatorio_asistencia_medica();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }
@@ -1839,7 +1839,7 @@ function Modificar_Observaciones_Anulacion_Operatorio() {
 
   if (observacion.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -1861,7 +1861,7 @@ function Modificar_Observaciones_Anulacion_Operatorio() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Anulado correctamente",
           "success"
         ).then((value) => {
@@ -1994,9 +1994,9 @@ function listar_combo_dependientes() {
           for (var i = 0; i < data.length; i++) {
             cadena +=
               "<option  value='" +
-              data[i]["nombre"] +
+              data[i][t("form_labels.name", "Nome")] +
               "'>" +
-              data[i]["nombre"] +
+              data[i][t("form_labels.name", "Nome")] +
               "</option>";
             $("#lista_colaboradores").val(JSON.stringify(data));
           }
@@ -2031,21 +2031,21 @@ function cargar_lista_pacientes() {
     if (data.length > 0) {
       cadena += "<option value=''>Seleccione..</option>";
       for (var i = 0; i < data.length; i++) {
-        if (data[i]["nombre"] == colaborador) {
+        if (data[i][t("form_labels.name", "Nome")] == colaborador) {
           cadena +=
             "<option  value='" +
-            data[i]["nombre"] +
+            data[i][t("form_labels.name", "Nome")] +
             "'>" +
-            data[i]["nombre"] +
+            data[i][t("form_labels.name", "Nome")] +
             "</option>";
           data1 = data[i]["lista_dependientes"];
           if (data1 != "") {
             for (var j = 0; j < data1.length; j++) {
               cadena +=
                 "<option  value='" +
-                data1[j]["nombre"] +
+                data1[j][t("form_labels.name", "Nome")] +
                 "'>" +
-                data1[j]["nombre"] +
+                data1[j][t("form_labels.name", "Nome")] +
                 "</option>";
             }
           }
@@ -2180,7 +2180,7 @@ function Registrar_Operatorio() {
 
   if (idBayer.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un contrato valido",
       "warning"
     );
@@ -2188,7 +2188,7 @@ function Registrar_Operatorio() {
 
   if (listaDatosOperatorio.length == 0 || cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Llene los campos vacios para la petición operatorio",
       "warning"
     );
@@ -2196,7 +2196,7 @@ function Registrar_Operatorio() {
 
   if ($("#txt_documento_operatorio").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -2228,7 +2228,7 @@ function Registrar_Operatorio() {
 
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nueva Petición Operatorio Registrado",
           "success"
         ).then((value) => {
@@ -2239,8 +2239,8 @@ function Registrar_Operatorio() {
       } else {
         eliminar_overlay_operatorio_cliente_asistencia_medica();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }
@@ -2447,8 +2447,8 @@ $(".seguimientoDatosOperatorio1").on(
   "click",
   "button.quitarDocumento",
   function () {
-    // $(this).parent().parent().parent().parent().parent().css({"color": "red", "border": "2px solid red"});
-    // $(this).parent().parent().parent().css({"color": "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
+    // $(this).parent().parent().parent().css({t("form_labels.color", "Cor"): "red", "border": "2px solid red"});
     $(this).parent().parent().parent().remove();
 
     var idDocumento = $(this).attr("idDocumento");
@@ -2738,7 +2738,7 @@ function Modificar_Seguimiento_Operatorio_1() {
 
   if (listaDocumentosSolicitadosAseguradora.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Agregue los documentos a solicitar",
       "warning"
     );
@@ -2746,7 +2746,7 @@ function Modificar_Seguimiento_Operatorio_1() {
 
   if (cont > 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar la descripcion del Documento",
       "warning"
     );
@@ -2754,7 +2754,7 @@ function Modificar_Seguimiento_Operatorio_1() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Selecciones la fecha de seguimiento",
       "warning"
     );
@@ -2762,7 +2762,7 @@ function Modificar_Seguimiento_Operatorio_1() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -2805,7 +2805,7 @@ function Modificar_Seguimiento_Operatorio_1() {
     success: function (respuesta) {
       if (respuesta > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Seguimiento Operatorio Modificado Exitosamente",
           "success"
         ).then((value) => {
@@ -2970,7 +2970,7 @@ function Registrar_Documento_Seguimiento_Operatorio_1() {
 
   if (fecha_seguimiento.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione una fecha de seguimento",
       "warning"
     );
@@ -2978,7 +2978,7 @@ function Registrar_Documento_Seguimiento_Operatorio_1() {
 
   if (cont1 == 0 || observaciones.length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Ingresar una observaci&oacute;n",
       "warning"
     );
@@ -2986,7 +2986,7 @@ function Registrar_Documento_Seguimiento_Operatorio_1() {
 
   if ($("#txt_documento_operatorio_documento_seguimiento1").val().length == 0) {
     return Swal.fire(
-      "Mensaje De Advertencia",
+      t("messages.warning_message", "Mensaje de Aviso"),
       "Seleccione un documento a subir",
       "warning"
     );
@@ -3021,7 +3021,7 @@ function Registrar_Documento_Seguimiento_Operatorio_1() {
       var data = JSON.parse(respuesta);
       if (data.length > 0) {
         Swal.fire(
-          "Mensaje De Confirmacion",
+          t("messages.confirmation_message", "Mensagem de ConfirmaÃ§Ã£o"),
           "Datos correctamente, Nuevo Documento Seguimiento Registrado",
           "success"
         ).then((value) => {
@@ -3032,8 +3032,8 @@ function Registrar_Documento_Seguimiento_Operatorio_1() {
       } else {
         eliminar_overlay_documento_seguimiento_operatorio_asistencia_medica_1();
         Swal.fire(
-          "Mensaje De Error",
-          "Lo sentimos, no se pudo completar el registro",
+          t("messages.error_message", "Mensagem de Erro"),
+          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
           "error"
         );
       }

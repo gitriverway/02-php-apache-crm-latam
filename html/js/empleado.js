@@ -1,4 +1,4 @@
-/*********************************
+﻿/*********************************
  CARGAR LISTA DE EMPLEADO EN TABLA
  *********************************/
 //  function lista1(){
@@ -134,7 +134,7 @@ function Registrar_Empleado(){
     }
  
     var datos = new FormData();
-    datos.append("nombre", nombre);
+    datos.append(t("form_labels.name", "Nome"), nombre);
     datos.append("apellido", apellido);
     datos.append("provincia", provincia);
     datos.append("direccion", direccion);
@@ -229,7 +229,7 @@ function Modificar_Empleado(){
  
     var datos = new FormData();
     datos.append("idEmpleado", idEmpleado);
-    datos.append("nombre", nombre);
+    datos.append(t("form_labels.name", "Nome"), nombre);
     datos.append("apellido", apellido);
     datos.append("provincia", provincia);
     datos.append("direccion", direccion);
