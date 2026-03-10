@@ -184,7 +184,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_1" id="radio_formulario_siniestro_3" value="N/A">
-                                                <label class="form-check-label">N/A</label>
+                                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                                             </div>
                                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar1"
                                                 value="FORMULARIO SINIESTRO">
@@ -206,7 +206,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_2" id="radio_cedula_dueno_auto_3" value="N/A">
-                                                <label class="form-check-label">N/A</label>
+                                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                                             </div>
                                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar2"
                                                 value="CEDULA DUENO AUTO">
@@ -228,7 +228,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_3" id="radio_licencia_3" value="N/A">
-                                                <label class="form-check-label">N/A</label>
+                                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                                             </div>
                                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar3"
                                                 value="LICENCIA CONDUCTOR">
@@ -250,7 +250,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_4" id="radio_matricula_3" value="N/A">
-                                                <label class="form-check-label">N/A</label>
+                                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                                             </div>
                                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar4"
                                                 value="MATRICULA">
@@ -272,7 +272,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_5" id="radio_parte_policial_3" value="N/A">
-                                                <label class="form-check-label">N/A</label>
+                                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                                             </div>
                                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar5"
                                                 value="PARTE POLICIAL">
@@ -294,7 +294,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_6" id="radio_denuncia_fiscalia_3" value="N/A">
-                                                <label class="form-check-label">N/A</label>
+                                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                                             </div>
                                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar6"
                                                 value="DENUNCIA FISCALIA">
@@ -316,7 +316,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_7" id="radio_foto_auto_afectado_3" value="N/A">
-                                                <label class="form-check-label">N/A</label>
+                                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                                             </div>
                                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar7"
                                                 value="FOTOS AUTO AFECTADO">
@@ -339,7 +339,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_8" id="radio_foto_auto_afectado_3" value="N/A">
-                                                <label class="form-check-label">N/A</label>
+                                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                                             </div>
                                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar8"
                                                 value="PROFORMA DE DAÑOS">
@@ -372,7 +372,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_9" id="radio_licencia_terceros_3" value="N/A">
-                                                <label class="form-check-label">N/A</label>
+                                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                                             </div>
                                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar9"
                                                 value="LICENCIA TERCEROS">
@@ -394,7 +394,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_10" id="radio_matricula_terceros_3" value="N/A">
-                                                <label class="form-check-label">N/A</label>
+                                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                                             </div>
                                             <input type="hidden" class="etiquetaRadioValidar"
                                                 id="etiquetaRadioValidar10" value="MATRICULA TERCEROS">
@@ -416,7 +416,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_11" id="radio_fotos_auto_terceros_3" value="N/A">
-                                                <label class="form-check-label">N/A</label>
+                                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                                             </div>
                                             <input type="hidden" class="etiquetaRadioValidar"
                                                 id="etiquetaRadioValidar11" value="FOTOS AUTO TERCEROS">
@@ -441,7 +441,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                                             <div class="form-check">
                                                 <input class="form-check-input radio_validacion" type="radio"
                                                     name="radio_12" id="radio_foto_auto_afectado_3" value="N/A">
-                                                <label class="form-check-label">N/A</label>
+                                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                                             </div>
                                             <input type="hidden" class="etiquetaRadioValidar"
                                                 id="etiquetaRadioValidar12" value="PROFORMA DE DAÑOS TERCEROS">
@@ -580,7 +580,7 @@ MODAL AGREGAR SEGUIMIENTO SINIESTRO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_siniestro_ajuste_autorizacion"
                                 name="txt_documento_siniestro_ajuste_autorizacion" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
 
                     </div>
@@ -640,7 +640,7 @@ MODAL AGREGAR AJUSTES TERCEROS SINIESTRO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_siniestro_ajuste_autorizacion_terceros"
                                 name="txt_documento_siniestro_ajuste_autorizacion_terceros" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
 
                     </div>
@@ -721,7 +721,7 @@ MODAL AGREGAR SEGUIMIENTO SINIESTRO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_siniestro_requerimiento_documento_seguimiento"
                                 name="txt_documento_siniestro_requerimiento_documento_seguimiento" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
 
                     </div>
@@ -782,7 +782,7 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO SINIESTRO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_siniestro_documento_seguimiento"
                                 name="txt_documento_siniestro_documento_seguimiento" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -928,7 +928,7 @@ MODAL AGREGAR LIQUIDACION SINIESTRO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_siniestro_documento_liquidacion"
                                 name="txt_documento_siniestro_documento_liquidacion" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -1109,7 +1109,7 @@ MODAL INGRESAR NUEVO SINIESTRO
                             </label>
                             <input type="file" class="form-control" id="txt_documento_siniestro"
                                 name="txt_documento_siniestro" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
                         <input type="hidden" id="listaDatosSiniestro">
                         <!-- <div class="col-12 d-none" id="formularioZurich">

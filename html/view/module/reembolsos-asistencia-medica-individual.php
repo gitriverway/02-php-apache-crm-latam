@@ -147,7 +147,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_1"
                                     id="radio_solicitud_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar1"
                                 value="SOLICITUD DE REEMBOLSO">
@@ -170,7 +170,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_2"
                                     id="radio_factura_medica_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar2"
                                 value="FACTURAS MÉDICAS">
@@ -192,7 +192,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_3"
                                     id="radio_factura_medicina_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar3"
                                 value="FACTURAS DE MEDICINAS">
@@ -214,7 +214,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_4"
                                     id="radio_receta_medica_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar4"
                                 value="RECETAS MÉDICAS">
@@ -236,7 +236,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_5"
                                     id="radio_factura_laboratorio_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar5"
                                 value="FACTURAS DE LABORATORIO">
@@ -258,7 +258,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_6"
                                     id="radio_pedido_examenes_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar6"
                                 value="PEDIDOS DE EXÁMENES">
@@ -280,7 +280,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_7"
                                     id="radio_resultado_examenes_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar7"
                                 value="RESULTADOS DE EXÁMENES">
@@ -302,7 +302,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_8"
                                     id="radio_historia_clinica_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar8"
                                 value="HISTORIA CLÍNICA">
@@ -324,7 +324,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_9"
                                     id="radio_protocolo_operatorio_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar9"
                                 value="<?php echo $t('form.surgical_protocol'); ?>">
@@ -346,7 +346,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_10"
                                     id="radio_hoja_emergencia_008_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar10"
                                 value="HOJA EMERGENCIA 008">
@@ -368,7 +368,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_11"
                                     id="radio_factura_detallada_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar11"
                                 value="FACTURAS DEL HOSPITAL DETALLADAS">
@@ -390,7 +390,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_12"
                                     id="radio_estado_cuenta_hospital_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar12"
                                 value="ESTADO DE CUENTA HOSPITAL">
@@ -412,7 +412,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_13"
                                     id="radio_pedido_fisioterapia_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar13"
                                 value="PEDIDOS FISIOTERAPIA">
@@ -434,7 +434,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_14"
                                     id="radio_factura_fisioterapia_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar14"
                                 value="FACTURAS FISIOTERAPIA">
@@ -457,7 +457,7 @@ MODAL VALIDAR MODIFICAR REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_15"
                                     id="radio_bitacora_asistencia_fisioterapia_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar15"
                                 value="BITACORA ASISTENCIA FISIOTERAPIA">
@@ -581,7 +581,7 @@ MODAL AGREGAR SEGUIMIENTO REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input" id="enviarEmail" name="enviarEmail" type="checkbox"
                                     checked>
-                                <label class="form-check-label">Enviar Email</label>
+                                <label class="form-check-label"><?php echo $t('form.send_email'); ?></label>
                             </div>
                         </div>
                         <div class="form-group col-12">
@@ -596,7 +596,7 @@ MODAL AGREGAR SEGUIMIENTO REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input" id="estadoCaducado" name="estadoCaducado"
                                     type="checkbox">
-                                <label class="form-check-label">Estado Caducado</label>
+                                <label class="form-check-label"><?php echo $t('form.expired_status'); ?></label>
                             </div>
                         </div>
                         <div class="form-group col-12">
@@ -619,7 +619,7 @@ MODAL AGREGAR SEGUIMIENTO REEMBOLSO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_reembolso_documento_pedido_aseguradora"
                                 name="txt_documento_reembolso_documento_pedido_aseguradora" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 50MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_50mb'); ?></p>
                         </div>
 
                     </div>
@@ -665,7 +665,7 @@ MODAL AGREGAR SEGUIMIENTO REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input" id="enviarEmail_1" name="enviarEmail_1" type="checkbox"
                                     checked>
-                                <label class="form-check-label">Enviar Email</label>
+                                <label class="form-check-label"><?php echo $t('form.send_email'); ?></label>
                             </div>
                         </div>
                         <div class="form-group col-12">
@@ -680,7 +680,7 @@ MODAL AGREGAR SEGUIMIENTO REEMBOLSO
                             <div class="form-check">
                                 <input class="form-check-input" id="estadoCaducado_1" name="estadoCaducado_1"
                                     type="checkbox">
-                                <label class="form-check-label">Estado Caducado</label>
+                                <label class="form-check-label"><?php echo $t('form.expired_status'); ?></label>
                             </div>
                         </div>
                         <div class="form-group col-12">
@@ -703,7 +703,7 @@ MODAL AGREGAR SEGUIMIENTO REEMBOLSO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_reembolso_documento_pedido_aseguradora_1"
                                 name="txt_documento_reembolso_documento_pedido_aseguradora_1" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 50MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_50mb'); ?></p>
                         </div>
 
                     </div>
@@ -764,7 +764,7 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO REEMBOLSO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_reembolso_documento_seguimiento"
                                 name="txt_documento_reembolso_documento_seguimiento" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 50MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_50mb'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -824,7 +824,7 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO REEMBOLSO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_reembolso_documento_seguimiento_1"
                                 name="txt_documento_reembolso_documento_seguimiento_1" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 50MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_50mb'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -981,7 +981,7 @@ MODAL AGREGAR LIQUIDACION REEMBOLSO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_reembolso_documento_liquidacion"
                                 name="txt_documento_reembolso_documento_liquidacion" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 50MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_50mb'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -1116,7 +1116,7 @@ MODAL INGRESAR NUEVO REEMBOLSO
                             </label>
                             <input type="file" class="form-control" id="txt_documento_reembolso"
                                 name="txt_documento_reembolso" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 50MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_50mb'); ?></p>
                         </div>
                         <input type="hidden" id="listaDatosReembolso">
                     </div>

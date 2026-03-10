@@ -179,7 +179,7 @@ MODAL INGRESAR NUEVO REEMBOLSO
                                 <font color="red"> *</font>
                             </label>
                             <input type="file" class="form-control" id="txt_documento_reembolso" name="txt_documento_reembolso" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 50MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_50mb'); ?></p>
                         </div>
                         <input type="hidden" id="listaDatosReembolso">
                     </div>

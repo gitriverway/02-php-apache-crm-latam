@@ -156,7 +156,7 @@ MODAL INGRESAR NUEVO REEMBOLSO
                             </label>
                             <input type="file" class="form-control" id="txt_documento_reembolso"
                                 name="txt_documento_reembolso" accept=".pdf">
-                            <p class="help-block">Peso máximo de la imagen 5MB</p>
+                            <p class="help-block"><?php echo $t('form.max_image_5mb'); ?></p>
                         </div>
                         <input type="hidden" id="listaDatosReembolso">
                     </div>

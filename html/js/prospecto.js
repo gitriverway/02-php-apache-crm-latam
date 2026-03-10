@@ -3416,3 +3416,58 @@ function agregar_auto_hogares() {
     }
   }
 }
+
+var table_documentos;
+function listar_documentos(idCliente) {
+  table_documentos = $("#tabla_lista_contratos").DataTable({
+    ordering: false,
+    bLengthChange: true,
+    searching: { regex: false },
+    lengthMenu: [
+      [5, 10, 25, 50, 100, -1],
+      [5, 10, 25, 50, 100, "All"],
+    ],
+    pageLength: 5,
+    destroy: true,
+    async: false,
+    processing: true,
+    ajax:
+      "controller/contratos-clientes/controlador_contrato_listar_documento.php?idCliente=" +
+      idCliente,
+    fnRowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+      $($(nRow).find("td")[0]).css("text-align", "center");
+      $($(nRow).find("td")[1]).css("text-align", "center");
+      $($(nRow).find("td")[2]).css("text-align", "center");
+      $($(nRow).find("td")[3]).css("text-align", "center");
+      $($(nRow).find("td")[4]).css("text-align", "center");
+    },
+    language: translations.datatable || {},
+  });
+}
+
+/*********************************
+ ABRI MODAL LISTAR CONTRATOS
+ *********************************/
+$("#tabla_cliente").on("click", ".btnListaContratos", function () {
+  var idCliente = $(this).attr("idCliente");
+
+  $("#modal_listar_contratos").modal({ backdrop: "static", keyboard: false });
+  $("#modal_listar_contratos").modal("show");
+  listar_documentos(idCliente);
+});
+
+/*********************************
+ ABRI MODAL LISTAR CONTRATOS EDITAR
+ *********************************/
+$("#cardDocumento").on("click", ".btnListaContratos", function () {
+  var idCliente = $("#txt_idBayer").val();
+
+  $("#modal_listar_contratos").modal({ backdrop: "static", keyboard: false });
+  $("#modal_listar_contratos").modal("show");
+  listar_documentos(idCliente);
+});
+
+$("#tabla_lista_contratos").on("click", ".btnImprimirDocumento", function () {
+  var documentoRuta = $(this).attr("documentoRuta");
+  window.open(documentoRuta, "Documento Contrato", "width=1024,height=1024");
+});

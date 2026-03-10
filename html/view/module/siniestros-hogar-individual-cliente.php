@@ -231,7 +231,7 @@ MODAL INGRESAR NUEVO SINIESTRO
                             </label>
                             <input type="file" class="form-control" id="txt_documento_siniestro"
                                 name="txt_documento_siniestro" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 50MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_50mb'); ?></p>
                         </div>
                         <input type="hidden" id="listaDatosSiniestro">
                     </div>

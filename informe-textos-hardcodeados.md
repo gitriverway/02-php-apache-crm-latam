@@ -598,15 +598,52 @@ Archivos modificados (12):
 11. editar-cliente-incendio-empresarial.php - rangos ingresos
 12. editar-cliente-responsabilidad-civil-empresarial.php - rangos ingresos
 
+### 4. REEMBOLSOS (COMPLETADO)
+
+Archivos modificados (4):
+1. reembolsos-asistencia-medica-individual.php - N/A, Enviar Email, Estado Caducado, Peso máximo 50MB
+2. reembolsos-asistencia-medica-individual-empresarial.php - N/A, Enviar Email, Estado Caducado, Peso máximo 50MB
+3. reembolsos-asistencia-medica-individual-cliente.php - Peso máximo 50MB
+4. reembolsos-asistencia-medica-individual-cliente-empresarial.php - Peso máximo 50MB
+5. reembolsos-vida-individual-cliente.php - Peso máximo imagen 5MB
+
+### 5. SINIESTROS (COMPLETADO)
+
+Archivos modificados (6):
+1. siniestros-hogar-individual.php - N/A, Peso máximo 50MB
+2. siniestros-hogar-individual-cliente.php - Peso máximo 50MB
+3. siniestros-transporte-empresarial.php - N/A, Peso máximo 25MB
+4. siniestros-transporte-pymes-cliente.php - Peso máximo 25MB
+5. siniestros-vehiculo-individual.php - N/A, Peso máximo 25MB
+6. siniestros-vehiculo-individual-cliente.php - Peso máximo 25MB
+
+### 6. CRÉDITOS (COMPLETADO)
+
+Archivos modificados (3):
+1. creditos-ambulatorios-asistencia-medica-individual-empresarial.php - N/A, Enviar Email, Estado Caducado, Peso máximo 25MB
+2. credito-ambulatorio-asistencia-medica-individual.php - N/A, Enviar Email, Estado Caducado, Peso máximo 25MB
+3. credito-ambulatorio-asistencia-medica-individual-cliente.php - Peso máximo 25MB
+
+### 7. OPERATORIOS (COMPLETADO)
+
+Archivos modificados (4):
+1. operatorios-asistencia-medica-individual-empresarial.php - N/A, Enviar Email, Estado Caducado, Peso máximo 25MB
+2. operatorios-asistencia-medica-individual.php - N/A, Enviar Email, Estado Caducado, Peso máximo 25MB
+3. operatorios-asistencia-medica-individual-cliente.php - Peso máximo 25MB
+4. operatorios-asistencia-medica-individual-cliente-empresarial.php - Peso máximo 25MB
+
 ### RESUMEN
 
 | Categoría | Cantidad |
 |-----------|----------|
-| Archivos PHP modificados | 23 |
+| Archivos PHP modificados | 45 |
 | Archivos JSON modificados | 2 |
 | Opciones corregidas (rangos ingresos) | ~50 |
 | Botones corregidos | ~12 |
 | Options mal闭合 corregidos | ~40 |
+| Labels N/A corregidos | ~70 |
+| Labels Email/Estado corregidos | ~16 |
+| Textos peso máximo corregidos | ~38 |
 
 ### PENDIENTE
 
@@ -614,9 +651,10 @@ Archivos modificados (12):
 |--------|--------|
 | Prospectos | COMPLETADO |
 | editar-cliente | COMPLETADO |
-| Reembolsos | PENDIENTE |
-| Siniestros | PENDIENTE |
-| Créditos | PENDIENTE |
+| Reembolsos | COMPLETADO |
+| Siniestros | COMPLETADO |
+| Créditos | COMPLETADO |
+| Operatorios | COMPLETADO |
 | Operatorios | PENDIENTE |
 | Placeholders "0.00" | PENDIENTE |
 | Textos peso documento | PENDIENTE |

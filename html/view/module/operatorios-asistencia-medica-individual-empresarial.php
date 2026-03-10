@@ -141,7 +141,7 @@ MODAL VALIDAR MODIFICAR OPERATORIO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_1"
                                     id="radio_solicitud_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar1"
                                 value="SOLICITUD HOSPITALARIO">
@@ -161,7 +161,7 @@ MODAL VALIDAR MODIFICAR OPERATORIO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_2"
                                     id="radio_resultado_examenes_2" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar2"
                                 value="RESULTADOS DE EXÁMENES">
@@ -183,7 +183,7 @@ MODAL VALIDAR MODIFICAR OPERATORIO
                             <div class="form-check">
                                 <input class="form-check-input radio_validacion" type="radio" name="radio_3"
                                     id="radio_historia_clinica_3" value="N/A">
-                                <label class="form-check-label">N/A</label>
+                                <label class="form-check-label"><?php echo $t('form.na'); ?></label>
                             </div>
                             <input type="hidden" class="etiquetaRadioValidar" id="etiquetaRadioValidar3"
                                 value="HISTORIA CLÍNICA">
@@ -306,7 +306,7 @@ MODAL AGREGAR SEGUIMIENTO OPERATORIO
                             <div class="form-check">
                                 <input class="form-check-input" id="enviarEmail" name="enviarEmail" type="checkbox"
                                     checked>
-                                <label class="form-check-label">Enviar Email</label>
+                                <label class="form-check-label"><?php echo $t('form.send_email'); ?></label>
                             </div>
                         </div>
                         <div class="form-group col-12">
@@ -321,7 +321,7 @@ MODAL AGREGAR SEGUIMIENTO OPERATORIO
                             <div class="form-check">
                                 <input class="form-check-input" id="estadoCaducado" name="estadoCaducado"
                                     type="checkbox">
-                                <label class="form-check-label">Estado Caducado</label>
+                                <label class="form-check-label"><?php echo $t('form.expired_status'); ?></label>
                             </div>
                         </div>
                         <div class="form-group col-12">
@@ -344,7 +344,7 @@ MODAL AGREGAR SEGUIMIENTO OPERATORIO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_operatorio_documento_pedido_aseguradora"
                                 name="txt_documento_operatorio_documento_pedido_aseguradora" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
 
                     </div>
@@ -392,7 +392,7 @@ MODAL AGREGAR SEGUIMIENTO OPERATORIO
                             <div class="form-check">
                                 <input class="form-check-input" id="enviarEmail1" name="enviarEmail1" type="checkbox"
                                     checked>
-                                <label class="form-check-label">Enviar Email</label>
+                                <label class="form-check-label"><?php echo $t('form.send_email'); ?></label>
                             </div>
                         </div>
                         <div class="form-group col-12">
@@ -407,7 +407,7 @@ MODAL AGREGAR SEGUIMIENTO OPERATORIO
                             <div class="form-check">
                                 <input class="form-check-input" id="estadoCaducado1" name="estadoCaducado1"
                                     type="checkbox">
-                                <label class="form-check-label">Estado Caducado</label>
+                                <label class="form-check-label"><?php echo $t('form.expired_status'); ?></label>
                             </div>
                         </div>
                         <div class="form-group col-12">
@@ -430,7 +430,7 @@ MODAL AGREGAR SEGUIMIENTO OPERATORIO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_operatorio_documento_pedido_aseguradora1"
                                 name="txt_documento_operatorio_documento_pedido_aseguradora1" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
 
                     </div>
@@ -491,7 +491,7 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO OPERATORIO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_operatorio_documento_seguimiento"
                                 name="txt_documento_operatorio_documento_seguimiento" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -551,7 +551,7 @@ MODAL AGREGAR DOCUMENTOS SEGUIMIENTO OPERATORIO 1
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_operatorio_documento_seguimiento1"
                                 name="txt_documento_operatorio_documento_seguimiento1" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -615,7 +615,7 @@ MODAL AGREGAR AUTORIZACION PEDIDO OPERATORIO
                             <input type="file" class="form-control subirDocumento"
                                 id="txt_documento_operatorio_documento_autorizacion"
                                 name="txt_documento_operatorio_documento_autorizacion" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -785,7 +785,7 @@ MODAL INGRESAR NUEVO OPERATORIO
                             </label>
                             <input type="file" class="form-control" id="txt_documento_operatorio"
                                 name="txt_documento_operatorio" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
                         <input type="hidden" id="listaDatosOperatorio">
                     </div>

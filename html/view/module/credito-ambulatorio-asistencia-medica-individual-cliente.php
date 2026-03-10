@@ -210,7 +210,7 @@ MODAL INGRESAR NUEVO CREDITO AMBULATORIO
                             </label>
                             <input type="file" class="form-control" id="txt_documento_credito_ambulatorio"
                                 name="txt_documento_credito_ambulatorio" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
                         <input type="hidden" id="listaDatosCreditoAmbulatorio">
                     </div>

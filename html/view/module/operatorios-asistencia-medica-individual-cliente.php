@@ -205,7 +205,7 @@ MODAL INGRESAR NUEVO OPERATORIO
                             </label>
                             <input type="file" class="form-control" id="txt_documento_operatorio"
                                 name="txt_documento_operatorio" accept=".pdf">
-                            <p class="help-block">Peso máximo del documento 25MB</p>
+                            <p class="help-block"><?php echo $t('form.max_doc_25mb'); ?></p>
                         </div>
                         <input type="hidden" id="listaDatosOperatorio">
                     </div>

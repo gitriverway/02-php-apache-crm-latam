@@ -472,11 +472,11 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="row">
-                                    <div class="col-sm-12">
+                                    <!-- <div class="col-sm-12">
                                         <button type="button" class="btn btn-primary btnListaContratos"
                                             style="padding-left: 25px; padding-right: 25px;" id="btnListaContratos"><i
                                                 class='fa fa-edit'></i> &nbsp;Listar Documentos</button>
-                                    </div>
+                                    </div> -->
                                     <div class="col-sm-12" id="agregarContrato">
                                         <!--=====================================
                                 ENTRADA PARA AGREGAR DOCUMENTOS
@@ -550,14 +550,19 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                             <select class="form-control cbm_estado_bayer" name="state"
                                                 id="cbm_estado_bayer" style="width:100%;">
                                                 <option value="ABIERTO" selected><?php echo $t("form.open"); ?></option>
-                                                <option value="NO INTERESADO"><?php echo $t("form.no_interested"); ?></option>
+                                                <option value="NO INTERESADO"><?php echo $t("form.no_interested"); ?>
+                                                </option>
                                                 <option value="INTERESADO"><?php echo $t("form.interested"); ?></option>
-                                                <option value="INTERESADO ALTO"><?php echo $t("form.highly_interested"); ?></option>
-                                                <option value="INTERESADO MEDIO"><?php echo $t("form.medium_interested"); ?></option>
-                                                <option value="INTERESADO BAJO"><?php echo $t("form.low_interested"); ?></option>
+                                                <option value="INTERESADO ALTO">
+                                                    <?php echo $t("form.highly_interested"); ?></option>
+                                                <option value="INTERESADO MEDIO">
+                                                    <?php echo $t("form.medium_interested"); ?></option>
+                                                <option value="INTERESADO BAJO"><?php echo $t("form.low_interested"); ?>
+                                                </option>
                                                 <option value="CONTRATADO"><?php echo $t("form.contracted"); ?></option>
                                                 <option value="DUPLICADO"><?php echo $t("form.duplicated"); ?></option>
-                                                <option value="NO RECUPERADO"><?php echo $t("form.not_recovered"); ?></option>
+                                                <option value="NO RECUPERADO"><?php echo $t("form.not_recovered"); ?>
+                                                </option>
                                             </select>
                                         </div>
                                     </div>
@@ -653,6 +658,41 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
         </div>
     </div>
 </div>
+
+<!--=====================================
+MODAL LISTAR CONTRATOS
+======================================-->
+<div id="modal_listar_contratos" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
+
+                <div class="modal-header" style="background:#3c8dbc; color:white">
+                    <h5 class="modal-title"><?php echo $t('messages.list_documents'); ?></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table id="tabla_lista_contratos" class="table table-bordered table-striped dt-responsive"
+                        style="width:100%">
+                        <thead>
+                            <tr>
+                                <th style="text-align:center; width:10px">#</th>
+                                <th style="text-align:center; width:10px">Documento</th>
+                                <th style="text-align:center; width:10px"
+                                    <?php echo $t('form.table_registration_date'); ?></th>
+                                <th style="text-align:center; width:10px" <?php echo $t('form.table_status'); ?></th>
+                                <th style="text-align:center; width:10px" <?php echo $t('form.table_action'); ?></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 <script type="text/javascript" src="/js/validaciones.js?rev=<?php echo time(); ?>"></script>
 <script type="text/javascript" src="/js/prospecto.js?rev=<?php echo time(); ?>"></script>

@@ -150,7 +150,8 @@ $t = function ($key) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_valor_asegurado" placeholder="<?php echo $t('form.enter_sum_insured'); ?>" value="0"
+                                            id="txt_valor_asegurado"
+                                            placeholder="<?php echo $t('form.enter_sum_insured'); ?>" value="0"
                                             maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
@@ -167,7 +168,8 @@ $t = function ($key) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_prima_neta" placeholder="<?php echo $t('form.enter_net_premium'); ?>" value="0"
+                                            id="txt_prima_neta"
+                                            placeholder="<?php echo $t('form.enter_net_premium'); ?>" value="0"
                                             maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
@@ -184,7 +186,8 @@ $t = function ($key) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_prima_comisionable" placeholder="<?php echo $t('form.enter_commissionable_premium'); ?>"
+                                            id="txt_prima_comisionable"
+                                            placeholder="<?php echo $t('form.enter_commissionable_premium'); ?>"
                                             value="0" maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
@@ -201,7 +204,8 @@ $t = function ($key) {
                                         </div>
                                         <input type="text"
                                             class="form-control validarNumerosDecimal input-lg valores_emision"
-                                            id="txt_prima_total" placeholder="<?php echo $t('form.enter_total_premium'); ?>" value="0"
+                                            id="txt_prima_total"
+                                            placeholder="<?php echo $t('form.enter_total_premium'); ?>" value="0"
                                             maxlength="30" autocomplete="off">
                                     </div>
                                 </div>
@@ -229,9 +233,12 @@ $t = function ($key) {
                                         PAGO</label>
                                     <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
                                         style="width:100%;">
-                                        <option value="DEBITO BANCARIO" selected><?php echo $t("form.debit"); ?></option>
-                                        <option value="TRANSFERENCIA BANCARIO"><?php echo $t("form.transfer"); ?></option>
-                                        <option value="TARJETA DE CREDITO"><?php echo $t("form.credit_card"); ?></option>
+                                        <option value="DEBITO BANCARIO" selected><?php echo $t("form.debit"); ?>
+                                        </option>
+                                        <option value="TRANSFERENCIA BANCARIO"><?php echo $t("form.transfer"); ?>
+                                        </option>
+                                        <option value="TARJETA DE CREDITO"><?php echo $t("form.credit_card"); ?>
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -564,15 +571,24 @@ $t = function ($key) {
                                                 style="text-align: right;" <?php echo $t("form.status"); ?>/label>
                                                 <select class="form-control cbm_estado_bayer" name="state"
                                                     id="cbm_estado_bayer" style="width:100%;">
-                                                    <option value="ABIERTO" selected><?php echo $t('form.open'); ?></option>
-                                                    <option value="NO INTERESADO"><?php echo $t("form.not_interested"); ?></option>
-                                                    <option value="INTERESADO"><?php echo $t('status.interested'); ?></option>
-                                                    <option value="INTERESADO ALTO"><?php echo $t("form.interested_alto"); ?></option>
-                                                    <option value="INTERESADO MEDIO"><?php echo $t("form.interested_medium"); ?></option>
-                                                    <option value="INTERESADO BAJO"><?php echo $t("form.interested_low"); ?></option>
-                                                    <option value="CONTRATADO"><?php echo $t('status.contracted'); ?></option>
-                                                    <option value="DUPLICADO"><?php echo $t('form.duplicated'); ?></option>
-                                                    <option value="NO RECUPERADO"><?php echo $t("form.not_recovered"); ?></option>
+                                                    <option value="ABIERTO" selected><?php echo $t('form.open'); ?>
+                                                    </option>
+                                                    <option value="NO INTERESADO">
+                                                        <?php echo $t("form.not_interested"); ?></option>
+                                                    <option value="INTERESADO"><?php echo $t('status.interested'); ?>
+                                                    </option>
+                                                    <option value="INTERESADO ALTO">
+                                                        <?php echo $t("form.interested_alto"); ?></option>
+                                                    <option value="INTERESADO MEDIO">
+                                                        <?php echo $t("form.interested_medium"); ?></option>
+                                                    <option value="INTERESADO BAJO">
+                                                        <?php echo $t("form.interested_low"); ?></option>
+                                                    <option value="CONTRATADO"><?php echo $t('status.contracted'); ?>
+                                                    </option>
+                                                    <option value="DUPLICADO"><?php echo $t('form.duplicated'); ?>
+                                                    </option>
+                                                    <option value="NO RECUPERADO">
+                                                        <?php echo $t("form.not_recovered"); ?></option>
                                                 </select>
                                         </div>
                                     </div>
@@ -657,9 +673,45 @@ $t = function ($key) {
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal"><?php echo $t('buttons.exit_button'); ?></button>
+                    <button type="button" class="btn btn-default pull-left"
+                        data-dismiss="modal"><?php echo $t('buttons.exit_button'); ?></button>
 
-                    <button type="submit" class="btn btn-primary" onclick="agregarNuevaObservacion()"><?php echo $t("form.add"); ?></button>
+                    <button type="submit" class="btn btn-primary"
+                        onclick="agregarNuevaObservacion()"><?php echo $t("form.add"); ?></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--=====================================
+MODAL LISTAR CONTRATOS
+======================================-->
+<div id="modal_listar_contratos" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
+
+                <div class="modal-header" style="background:#3c8dbc; color:white">
+                    <h5 class="modal-title"><?php echo $t('messages.list_documents'); ?></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table id="tabla_lista_contratos" class="table table-bordered table-striped dt-responsive"
+                        style="width:100%">
+                        <thead>
+                            <tr>
+                                <th style="text-align:center; width:10px">#</th>
+                                <th style="text-align:center; width:10px">Documento</th>
+                                <th style="text-align:center; width:10px"
+                                    <?php echo $t('form.table_registration_date'); ?></th>
+                                <th style="text-align:center; width:10px" <?php echo $t('form.table_status'); ?></th>
+                                <th style="text-align:center; width:10px" <?php echo $t('form.table_action'); ?></th>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
             </form>
         </div>

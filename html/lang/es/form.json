@@ -139,5 +139,9 @@
     "table_client": "CLIENTE",
     "table_document": "DOCUMENTO",
     "max_document_weight": "Peso máximo del documento",
-    "max_image_weight": "Peso máximo de la imagen"
+    "max_image_weight": "Peso máximo de la imagen",
+    "na": "N/A",
+    "max_doc_50mb": "Peso máximo del documento 50MB",
+    "max_doc_25mb": "Peso máximo del documento 25MB",
+    "max_image_5mb": "Peso máximo de la imagen 5MB"
 }
