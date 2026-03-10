@@ -3,5 +3,15 @@
     "contracted": "Contratado",
     "interested": "Interesado",
     "not_interested": "No Interesado",
-    "open": "Abierto"
+    "open": "Abierto",
+    "novo_lead": "Nuevo Lead",
+    "em_contacto": "En Contacto",
+    "aguardando_informacoes": "Esperando Información",
+    "cotacao_enviada": "Cotización Enviada",
+    "em_acompanhamiento": "En Seguimiento",
+    "duplicado": "Duplicado",
+    "em_contato": "En Contacto",
+    "em_acompanhamiento": "En Seguimiento",
+    "contratado": "Contratado",
+    "nao_interessado": "No Interesado"
 }

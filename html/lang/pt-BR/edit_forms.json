@@ -15,5 +15,11 @@
     "net_premium": "Prêmio líquido",
     "commissionable_premium": "Prêmio comissionável",
     "total_premium": "Prêmio total",
-    "widowed": "Viúvo"
+    "widowed": "Viúvo",
+    "insurer": "Seguradora",
+    "male": "Masculino",
+    "married": "Casado",
+    "payment_frequency": "Frequência de Pagamento",
+    "personal_information": "Informações Pessoais",
+    "single": "Solteiro"
 }

@@ -3,5 +3,15 @@
     "contracted": "Contracted",
     "interested": "Interested",
     "not_interested": "Not Interested",
-    "open": "Open"
+    "open": "Open",
+    "novo_lead": "New Lead",
+    "em_contacto": "In Contact",
+    "aguardando_informacoes": "Waiting for Information",
+    "cotacao_enviada": "Quote Sent",
+    "em_acompanhamiento": "In Follow-up",
+    "duplicado": "Duplicated",
+    "em_contato": "In Contact",
+    "em_acompanhamiento": "In Follow-up",
+    "contratado": "Contracted",
+    "nao_interessado": "Not Interested"
 }

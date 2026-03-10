@@ -6,5 +6,6 @@
     "update": "UPDATE",
     "register": "REGISTER",
     "close": "CLOSE",
-    "new_record": "NEW RECORD"
+    "new_record": "NEW RECORD",
+    "exit_button": "Exit"
 }

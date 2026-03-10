@@ -6,5 +6,6 @@
     "update": "ATUALIZAR",
     "register": "CADASTRAR",
     "close": "FECHAR",
-    "new_record": "NOVO REGISTRO"
+    "new_record": "NOVO REGISTRO",
+    "exit_button": "Sair"
 }

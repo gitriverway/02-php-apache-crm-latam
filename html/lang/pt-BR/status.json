@@ -3,12 +3,14 @@
     "em_contato": "Em contato",
     "aguardando_informacoes": "Aguardando informações",
     "cotacao_enviada": "Cotação enviada",
-    "em_acompanhamento": "Em acompanhamento",
     "contratado": "Contratado",
     "nao_interessado": "Não interessado",
     "duplicado": "Duplicado",
     "cancelled": "Cancelado",
     "interested": "Interessado",
     "not_interested": "Não Interessado",
-    "open": "Aberto"
+    "open": "Aberto",
+    "contracted": "Contratado",
+    "em_contacto": "Em contato",
+    "em_acompanhamiento": "Em acompanhamento"
 }

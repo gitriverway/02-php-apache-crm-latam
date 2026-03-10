@@ -6,5 +6,6 @@
     "information_contract": "CONTRACT INFORMATION",
     "add_observation": "ADD OBSERVATION",
     "observations": "OBSERVATIONS",
-    "no_records": "NO RECORDS"
+    "no_records": "NO RECORDS",
+    "contract_list": "CONTRACTS LIST"
 }

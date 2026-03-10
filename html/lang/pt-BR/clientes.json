@@ -124,5 +124,8 @@
     "delete_document": "Excluir Documento",
     "document_deleted": "Documento excluído com sucesso",
     "document_not_deleted": "O Documento não pôde ser excluído",
-    "error_uploading_document": "Erro ao enviar o documento"
+    "error_uploading_document": "Erro ao enviar o documento",
+    "enter_sum_insured": "Informe o Capital Segurado",
+    "enter_net_premium": "Informe o Prêmio Líquido",
+    "enter_commissionable_premium": "Informe o Prêmio Comissionável"
 }
