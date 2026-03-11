@@ -60,7 +60,7 @@ if ($_SESSION["S_ROL"] != "CLIENTE") {
                             <th style="text-align:center; width:10px"<?php echo $t('form.table_contract'); ?></th>
                             <th style="text-align:center; width:10px"<?php echo $t('form.table_registration_date'); ?></th>
                             <th style="text-align:center; width:10px"<?php echo $t('form.table_modification_date'); ?></th>
-                            <th style="text-align:center; width:10px"<?php echo $t('form.table_status'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.table_status'); ?></th>
                             <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
                         </tr>
                     </thead>

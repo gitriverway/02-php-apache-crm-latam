@@ -136,6 +136,17 @@ class Modelo_Idioma
             $keys[0] = 'form';
         }
         
+        // Si la clave no tiene prefijo de módulo, buscar en todos los módulos
+        if (!isset($translations[$module])) {
+            // Buscar en todos los submódulos
+            foreach ($translations as $moduleName => $moduleContent) {
+                if (is_array($moduleContent) && isset($moduleContent[$key])) {
+                    return $moduleContent[$key];
+                }
+            }
+            return $key;
+        }
+        
         $value = $translations;
 
         foreach ($keys as $k) {

@@ -708,7 +708,7 @@ MODAL LISTAR CONTRATOS
                                 <th style="text-align:center; width:10px">#</th>
                                 <th style="text-align:center; width:10px">Documento</th>
                                 <th style="text-align:center; width:10px"<?php echo $t('form.table_registration_date'); ?></th>
-                                <th style="text-align:center; width:10px"<?php echo $t('form.table_status'); ?></th>
+                                <th style="text-align:center; width:10px"><?php echo $t('form.table_status'); ?></th>
                                 <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
                             </tr>
                         </thead>

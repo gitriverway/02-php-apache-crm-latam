@@ -63,7 +63,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <th style="text-align:center; width:10px"<?php echo $t('form.envio_seguradora'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('form.claim_detail'); ?></th>
                             <th style="text-align:center; width:10px"<?php echo $t('form.observations'); ?></th>
-                            <th style="text-align:center; width:10px"<?php echo $t('form.table_status'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('form.table_status'); ?></th>
                             <th style="text-align:center; width:10px"<?php echo $t('form.fecha_seguimiento'); ?></th>
                             <th style="text-align:center; width:10px"<?php echo $t('form.insurer_follow_up'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('form.adjustment_acceptance_authorization'); ?></th>
