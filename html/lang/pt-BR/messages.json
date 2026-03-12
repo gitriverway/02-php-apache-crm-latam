@@ -107,7 +107,7 @@
     "error_changing_language": "Erro Ao Alterar O Idioma",
     "success": "Success",
     "warning": "Warning",
-    "error": "Error",
+    "error": "Erro",
     "document_must_be_pdf": "O Documento Deve Estar Em Formato Pdf!",
     "document_exceeds_max_size": "O Documento Não Deve Pesar Mais De {size}mb!",
     "close": "Fechar",
