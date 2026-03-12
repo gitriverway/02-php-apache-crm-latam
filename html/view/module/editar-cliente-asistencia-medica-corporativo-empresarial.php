@@ -121,7 +121,7 @@ $t = function ($key) {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
+                            <div class="col-sm-12 col-md-6 d-none">
                                 <div class="form-group">
                                     <label for="txt_prima_comisionable" class="control-label"
                                         style="text-align: right;"><?php echo $t('common.commissionable_premium'); ?>

@@ -177,7 +177,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
+                            <div class="col-sm-12 col-md-6 d-none">
                                 <!-- ENTRADA PARA PRIMA COMISIONABLE -->
                                 <div class="form-group">
                                     <label for="txt_prima_comisionable" class="control-label"
