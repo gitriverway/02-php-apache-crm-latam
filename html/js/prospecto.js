@@ -416,7 +416,7 @@ function listar_combo_provincia() {
           cadena +=
             "<option value='" +
             data[i]["provincia_id"] +
-            "'>" +
+            "' selected>" +
             data[i]["provincia_descripcion"] +
             "</option>";
         }

@@ -307,7 +307,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         autocomplete="off">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
+                            <div class="col-sm-12 col-md-6 d-none">
                                 <!-- ENTRADA PARA SELECCIONAR PROVINCIA -->
                                 <div class="form-group">
                                     <label for="cbm_provincia" class="control-label"

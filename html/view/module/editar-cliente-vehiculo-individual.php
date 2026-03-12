@@ -338,7 +338,7 @@ $t = function ($key) {
                                         maxlength="50" autocomplete="off">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
+                            <div class="col-sm-12 col-md-6 d-none">
                                 <div class="form-group">
                                     <label for="cbm_provincia" class="control-label"
                                         style="text-align: right;"><?php echo $t('common.province'); ?><font color="red"> *</font></label>

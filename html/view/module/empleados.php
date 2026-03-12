@@ -205,7 +205,8 @@ BODY DEL MODAL
 
                         <!-- ENTRADA PARA SELECCIONAR PROVINCIA -->
                         <div class="form-group">
-                            <label for="cbm_provincia_editar" class="control-label" style="text-align: right;"><?php echo $t('messages.province'); ?>
+                            <label for="cbm_provincia_editar" class="control-label"
+                                style="text-align: right;"><?php echo $t('messages.province'); ?>
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
@@ -222,9 +223,9 @@ BODY DEL MODAL
                                 <font color="red"> *</font>
                             </label>
                             <div class="input-group">
-                                <textarea class="form-control validateAlphaNumeric"
-                                    id="txt_direccion_empleado_editar" name="txt_direccion_empleado_editar" cols="20"
-                                    rows="3" placeholder="<?php echo $t('messages.enter_direction'); ?>"></textarea>
+                                <textarea class="form-control validateAlphaNumeric" id="txt_direccion_empleado_editar"
+                                    name="txt_direccion_empleado_editar" cols="20" rows="3"
+                                    placeholder="<?php echo $t('messages.enter_direction'); ?>"></textarea>
                                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                             </div>
                         </div>
