@@ -82,7 +82,7 @@ $t = function ($key) {
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
+                            <div class="col-sm-12 col-md-6 d-none">
                                 <!-- ENTRADA PARA EL NUEVO RAMO -->
                                 <div class="form-group">
                                     <label for="txt_origen_web" class="control-label"
@@ -705,7 +705,8 @@ MODAL LISTAR CONTRATOS
                             <tr>
                                 <th style="text-align:center; width:10px">#</th>
                                 <th style="text-align:center; width:10px">Documento</th>
-                                <th style="text-align:center; width:10px"><?php echo $t('form.table_registration_date'); ?></th>
+                                <th style="text-align:center; width:10px">
+                                    <?php echo $t('form.table_registration_date'); ?></th>
                                 <th style="text-align:center; width:10px"><?php echo $t('form.table_status'); ?></th>
                                 <th style="text-align:center; width:10px"><?php echo $t('form.table_action'); ?></th>
                             </tr>
