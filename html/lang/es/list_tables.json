@@ -1,7 +1,7 @@
 {
     "origin_mqp": "Redes Sociales",
     "origin_friend": "Amigo",
-    "origin_chat": "Chat",
+    "origin_chat": "WhatsApp",
     "origin_others": "Otros",
     "seller": "Vendedor",
     "id_card": "Cédula/ruc",
@@ -9,7 +9,7 @@
     "province": "Provincia",
     "country": "Pais",
     "phone": "Teléfono",
-    "email": "Email",
+    "email": "Correo Electrónico",
     "provider": "Proveedor",
     "branch": "Seguro",
     "employee": "Empleado",

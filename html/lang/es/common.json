@@ -21,7 +21,7 @@
     "id_card_table": "Cã©dula",
     "quotation": "Cotizaciã³n",
     "modify": "Modificar",
-    "chat": "Chat",
+    "chat": "WhatsApp",
     "check_email_format": "Favor De Revisar, Correo Mal Ingresado",
     "inactive": "Inactivo",
     "vehicle_forms": "Formularios Vehã­culo",
@@ -471,6 +471,6 @@
     "reimbursement_coverage": "Alcance De Reembolso",
     "patient": "Paciente",
     "dashboard": "Tablero",
-    "origin_chat": "Chat",
+    "origin_chat": "WhatsApp",
     "answer": "Respuesta:"
 }

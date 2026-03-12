@@ -1,14 +1,14 @@
 {
     "employees": "Empleados",
-    "employee": "Empleado",
+    "employee": "Employee",
     "create_employee": "Crear Empleado",
     "edit_employee": "Editar Empleado",
     "employee_data": "Datos Del Empleado",
     "id_card": "Cédula",
     "enter_id_card": "Ingresar Cédula",
-    "name": "Nombre",
+    "name": "Name",
     "enter_name": "Ingresar Nombre",
-    "last_name": "Apellido",
+    "last_name": "Last Name",
     "enter_last_name": "Ingresar Apellido",
     "email": "Correo Electrónico",
     "enter_email": "Ingresar Correo Electrónico",
@@ -20,8 +20,8 @@
     "enter_department": "Ingresar Departamento",
     "hire_date": "Fecha De Contratación",
     "salary": "Salario",
-    "active": "Activo",
-    "inactive": "Inactivo",
+    "active": "Active",
+    "inactive": "Inactive",
     "employee_status_changed": "Empleado {status} Exitosamente",
     "new_employee_registered": "Nuevo Empleado Registrado Exitosamente"
 }

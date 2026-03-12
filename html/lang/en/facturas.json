@@ -13,8 +13,8 @@
     "invoice_balance": "Saldo Factura",
     "payment_status": "Estado De Pago",
     "paid": "Pagado",
-    "pending": "Pendiente",
+    "pending": "Pending",
     "overdue": "Vencido",
-    "client": "Cliente",
+    "client": "Client",
     "select_client": "Seleccionar Cliente"
 }

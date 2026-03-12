@@ -1,6 +1,6 @@
 {
     "providers": "Proveedores",
-    "provider": "Proveedor",
+    "provider": "Provider",
     "create_provider": "Crear Proveedor",
     "edit_provider": "Editar Proveedor",
     "provider_data": "Datos Del Proveedor",
@@ -16,8 +16,8 @@
     "enter_address": "Ingresar Dirección",
     "contact_person": "Persona De Contacto",
     "enter_contact_person": "Ingresar Persona De Contacto",
-    "active": "Activo",
-    "inactive": "Inactivo",
+    "active": "Active",
+    "inactive": "Inactive",
     "provider_status_changed": "Proveedor {status} Exitosamente",
     "new_provider_registered": "Nuevo Proveedor Registrado Exitosamente"
 }

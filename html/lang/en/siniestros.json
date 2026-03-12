@@ -6,7 +6,7 @@
     "claim_data": "Datos Del Siniestro",
     "claim_date": "Fecha De Siniestro",
     "creation_date": "Fecha De Creación",
-    "client": "Cliente",
+    "client": "Client",
     "third_party_damages": "Daños A Terceros",
     "view_third_party_damages": "Ver Daños A Terceros",
     "initial_document": "Documento Inicial",

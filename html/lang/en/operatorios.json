@@ -11,7 +11,7 @@
     "authorization_number": "Número De Autorización",
     "authorized_date": "Fecha De Autorización",
     "status": "Estado",
-    "pending": "Pendiente",
+    "pending": "Pending",
     "authorized": "Autorizado",
     "rejected": "Rechazado",
     "observation": "Observación"
