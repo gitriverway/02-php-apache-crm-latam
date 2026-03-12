@@ -7,7 +7,7 @@
     "id_card": "ID CARD",
     "name": "NAME",
     "province": "PROVINCE",
-    "city": "COUNTRY",
+    "country": "COUNTRY",
     "phone": "PHONE",
     "email": "EMAIL",
     "provider": "PROVIDER",

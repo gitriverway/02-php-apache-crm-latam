@@ -376,11 +376,11 @@ $t = function ($key) {
                             <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA SELECCIONAR CIUDAD -->
                                 <div class="form-group">
-                                    <label for="txt_ciudad" class="control-label" style="text-align: right;"><?php echo $t('list_tables.city'); ?>
+                                    <label for="txt_ciudad" class="control-label" style="text-align: right;"><?php echo $t('list_tables.country'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
-                                        placeholder="<?php echo $t('forms.enter_city'); ?>" maxlength="100"
+                                        placeholder="<?php echo $t('forms.enter_country'); ?>" maxlength="100"
                                         autocomplete="off">
                                 </div>
                             </div>

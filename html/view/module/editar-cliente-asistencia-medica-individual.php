@@ -379,11 +379,11 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA SELECCIONAR CIUDAD -->
                                 <div class="form-group">
                                     <label for="txt_ciudad" class="control-label"
-                                        style="text-align: right;"><?php echo $t('common.city'); ?>
+                                        style="text-align: right;"><?php echo $t('common.country'); ?>
                                         <font color="red"> *</font>
                                     </label>
                                     <input type="text" class="form-control validarNumerosLetras" id="txt_ciudad"
-                                        placeholder="<?php echo $t('common.enter_city'); ?>" maxlength="100"
+                                        placeholder="<?php echo $t('common.enter_country'); ?>" maxlength="100"
                                         autocomplete="off">
                                 </div>
                             </div>
