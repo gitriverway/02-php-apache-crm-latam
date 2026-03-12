@@ -7,7 +7,7 @@
     "id_card": "CÉDULA/RUC",
     "name": "NOMBRE",
     "province": "PROVINCIA",
-    "city": "CIUDAD",
+    "city": "PAIS",
     "phone": "TELÉFONO",
     "email": "EMAIL",
     "provider": "PROVEEDOR",
