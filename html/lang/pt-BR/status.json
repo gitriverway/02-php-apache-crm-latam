@@ -1,16 +1,16 @@
 {
-    "novo_lead": "Novo lead",
-    "em_contato": "Em contato",
-    "aguardando_informacoes": "Aguardando informações",
-    "cotacao_enviada": "Cotação enviada",
+    "novo_lead": "Novo Lead",
+    "em_contato": "Em Contato",
+    "aguardando_informacoes": "Aguardando Informações",
+    "cotacao_enviada": "Cotação Enviada",
     "contratado": "Contratado",
-    "nao_interessado": "Não interessado",
+    "nao_interessado": "Não Interessado",
     "duplicado": "Duplicado",
     "cancelled": "Cancelado",
     "interested": "Interessado",
     "not_interested": "Não Interessado",
     "open": "Aberto",
     "contracted": "Contratado",
-    "em_contacto": "Em contato",
-    "em_acompanhamiento": "Em acompanhamento"
+    "em_contacto": "Em Contato",
+    "em_acompanhamiento": "Em Acompanhamento"
 }

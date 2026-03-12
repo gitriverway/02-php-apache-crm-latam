@@ -1,13 +1,13 @@
 {
     "contracts": "Contratos",
     "contract": "Contrato",
-    "contract_number": "Número de Contrato",
+    "contract_number": "Número De Contrato",
     "create_contract": "Crear Contrato",
     "edit_contract": "Editar Contrato",
-    "contract_data": "Datos del Contrato",
-    "effective_date": "Fecha de Vigencia",
-    "expiration_date": "Fecha de Vencimiento",
-    "anniversary_date": "Fecha de Aniversario",
+    "contract_data": "Datos Del Contrato",
+    "effective_date": "Fecha De Vigencia",
+    "expiration_date": "Fecha De Vencimiento",
+    "anniversary_date": "Fecha De Aniversario",
     "renewal": "Renovación",
-    "renewal_date": "Fecha de Renovación"
+    "renewal_date": "Fecha De Renovación"
 }

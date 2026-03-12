@@ -1,11 +1,11 @@
 {
-    "information_personal": "INFORMACIÓN PERSONAL",
-    "information_documents": "INFORMACIÓN DOCUMENTOS",
-    "information_follow_up": "INFORMACIÓN SEGUIMIENTO",
-    "information_dependents": "INFORMACIÓN DEPENDIENTES",
-    "information_contract": "INFORMACIÓN CONTRATO",
-    "add_observation": "AGREGAR OBSERVACIÓN",
-    "observations": "OBSERVACIONES",
-    "no_records": "SIN REGISTROS",
-    "contract_list": "LISTA CONTRATOS"
+    "information_personal": "Información Personal",
+    "information_documents": "Información Documentos",
+    "information_follow_up": "Información Seguimiento",
+    "information_dependents": "Información Dependientes",
+    "information_contract": "Información Contrato",
+    "add_observation": "Agregar Observación",
+    "observations": "Observaciones",
+    "no_records": "Sin Registros",
+    "contract_list": "Lista Contratos"
 }

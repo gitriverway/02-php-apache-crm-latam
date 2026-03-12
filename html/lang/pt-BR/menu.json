@@ -7,7 +7,7 @@
     "individual": "Clientes",
     "assigned_prospects": "Prospectos Atribuídos",
     "create_prospect": "Criar Prospecto",
-    "customer_service": "Atendimento ao Cliente",
+    "customer_service": "Atendimento Ao Cliente",
     "medical_assistance": "Assistência Médica",
     "emissions": "Emissões",
     "renewals": "Renovações",
@@ -15,7 +15,7 @@
     "hospital_credit": "Crédito Hospitalar",
     "outpatient_credit": "Crédito Ambulatorial",
     "vehicles": "Veículos",
-    "pymes": "PYMES",
+    "pymes": "Pymes",
     "employees": "Funcionários",
     "sales": "Vendas",
     "corporate_assigned_prospects": "Prospectos Atribuídos",
@@ -31,5 +31,5 @@
     "user_management": "Gestão Usuários",
     "user_list": "Lista Usuários",
     "configuration": "Configuração",
-    "system_settings": "Configuração do Sistema"
+    "system_settings": "Configuração Do Sistema"
 }

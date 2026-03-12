@@ -3,7 +3,7 @@
     "employee": "Empleado",
     "create_employee": "Crear Empleado",
     "edit_employee": "Editar Empleado",
-    "employee_data": "Datos del Empleado",
+    "employee_data": "Datos Del Empleado",
     "id_card": "Cédula",
     "enter_id_card": "Ingresar Cédula",
     "name": "Nombre",
@@ -18,10 +18,10 @@
     "enter_position": "Ingresar Cargo",
     "department": "Departamento",
     "enter_department": "Ingresar Departamento",
-    "hire_date": "Fecha de Contratación",
+    "hire_date": "Fecha De Contratación",
     "salary": "Salario",
     "active": "Activo",
     "inactive": "Inactivo",
-    "employee_status_changed": "Empleado {status} exitosamente",
-    "new_employee_registered": "Nuevo empleado registrado exitosamente"
+    "employee_status_changed": "Empleado {status} Exitosamente",
+    "new_employee_registered": "Nuevo Empleado Registrado Exitosamente"
 }

@@ -1,10 +1,10 @@
 {
-    "login_title": "RIVERWAY Seguros | CRM",
-    "login_subtitle": "Ingrese sus credenciales",
+    "login_title": "Riverway Seguros | Crm",
+    "login_subtitle": "Ingrese Sus Credenciales",
     "remember_me": "Recordarme",
-    "forgot_password": "¿Olvidó su contraseña?",
+    "forgot_password": "¿olvidó Su Contraseña?",
     "login_button": "Iniciar Sesión",
-    "invalid_credentials": "Usuario y/o contraseña incorrecta",
-    "user_inactive": "El usuario se encuentra inactivo, comuníquese con el administrador",
-    "session_expired": "Sesión expirada, por favor ingrese nuevamente"
+    "invalid_credentials": "Usuario Y/o Contraseña Incorrecta",
+    "user_inactive": "El Usuario Se Encuentra Inactivo, Comuníquese Con El Administrador",
+    "session_expired": "Sesión Expirada, Por Favor Ingrese Nuevamente"
 }

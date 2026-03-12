@@ -3,6 +3,6 @@
     "client": "Cliente",
     "document": "Documento",
     "employee": "Funcionário",
-    "registration_date": "Data de Cadastro",
+    "registration_date": "Data De Cadastro",
     "status": "Status"
 }

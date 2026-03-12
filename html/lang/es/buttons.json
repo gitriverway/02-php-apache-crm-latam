@@ -1,11 +1,11 @@
 {
-    "add": "AGREGAR",
-    "cancel": "CANCELAR",
-    "exit": "SALIR",
-    "save": "GUARDAR",
-    "update": "ACTUALIZAR",
-    "register": "REGISTRAR",
-    "close": "CERRAR",
-    "new_record": "NUEVO REGISTRO",
+    "add": "Agregar",
+    "cancel": "Cancelar",
+    "exit": "Salir",
+    "save": "Guardar",
+    "update": "Actualizar",
+    "register": "Registrar",
+    "close": "Cerrar",
+    "new_record": "Nuevo Registro",
     "exit_button": "Salir"
 }

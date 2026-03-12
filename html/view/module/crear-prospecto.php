@@ -336,6 +336,16 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
+                                <!-- ENTRADA PARA OCUPACION -->
+                                <div class="form-group">
+                                    <label for="txt_ocupacion" class="control-label"
+                                        style="text-align: right;"><?php echo $t('list_tables.profession'); ?></label>
+                                    <input type="text" class="form-control validarNumerosLetras" id="txt_ocupacion"
+                                        placeholder="<?php echo $t('forms.enter_occupation'); ?>" maxlength="50"
+                                        autocomplete="off" style="text-transform: uppercase">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
                                 <!-- ENTRADA PARA SELECCIONAR CIUDAD -->
                                 <div class="form-group">
                                     <label for="txt_ciudad" class="control-label"
@@ -355,16 +365,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         style="text-transform: uppercase">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <!-- ENTRADA PARA OCUPACION -->
-                                <div class="form-group">
-                                    <label for="txt_ocupacion" class="control-label"
-                                        style="text-align: right;"><?php echo $t('list_tables.profession'); ?></label>
-                                    <input type="text" class="form-control validarNumerosLetras" id="txt_ocupacion"
-                                        placeholder="<?php echo $t('forms.enter_occupation'); ?>" maxlength="50"
-                                        autocomplete="off" style="text-transform: uppercase">
-                                </div>
-                            </div>
+
 
                             <div class="col-sm-12 col-md-6 d-none">
                                 <!-- ENTRADA PARA INGRESOS -->

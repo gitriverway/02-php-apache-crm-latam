@@ -1,11 +1,11 @@
 {
-    "add": "ADICIONAR",
-    "cancel": "CANCELAR",
-    "exit": "SAIR",
-    "save": "SALVAR",
-    "update": "ATUALIZAR",
-    "register": "CADASTRAR",
-    "close": "FECHAR",
-    "new_record": "NOVO REGISTRO",
+    "add": "Adicionar",
+    "cancel": "Cancelar",
+    "exit": "Sair",
+    "save": "Salvar",
+    "update": "Atualizar",
+    "register": "Cadastrar",
+    "close": "Fechar",
+    "new_record": "Novo Registro",
     "exit_button": "Sair"
 }
