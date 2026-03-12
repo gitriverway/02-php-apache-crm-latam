@@ -156,7 +156,7 @@ class Envio_correo_notificacion_documentos_faltantes_operatorio_empresarial
                 </center>
                 <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Observación: </strong> ' . $observacion_final . '</h3>
                 <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Favor subir todo el crédito hospitalario en un solo
-                    <strong>PDF</strong> en el siguiente enlace <a href = "https://crm.mqpseguros.com">https://crm.mqpseguros.com</a>, incluyendo los documento marcados <strong>NO</strong>
+                    <strong>PDF</strong> en el siguiente enlace <a href = "https://crm-latam.riverway.cloud">https://crm-latam.riverway.cloud</a>, incluyendo los documento marcados <strong>NO</strong>
                 </h3>
 
                 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">

@@ -86,7 +86,7 @@ class Envio_correo_notificacion_acceso_plataforma
 
                         <tr>
                             <td align="center" style="padding: 30px 0 20px 0;">
-                                <img src="https://crm.mqpseguros.com/view/img/icon-email.png" alt="RIVERWAY Logo" width="100"
+                                <img src="https://crm-latam.riverway.cloud/view/img/icon-email.png" alt="RIVERWAY Logo" width="100"
                                     style="display: block; border:0;">
                             </td>
                         </tr>
@@ -125,8 +125,8 @@ class Envio_correo_notificacion_acceso_plataforma
 
                                             <p style="margin: 0 0 5px 0; font-size: 13px; color: #777;">URL de acceso
                                                 directo:</p>
-                                            <a href="https://crm.mqpseguros.com"
-                                                style="color: #1c6ea4; font-weight: bold; font-size: 15px; text-decoration: underline;">https://crm.mqpseguros.com</a>
+                                            <a href="https://crm-latam.riverway.cloud"
+                                                style="color: #1c6ea4; font-weight: bold; font-size: 15px; text-decoration: underline;">https://crm-latam.riverway.cloud</a>
                                         </td>
                                     </tr>
                                 </table>

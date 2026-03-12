@@ -91,7 +91,7 @@ class Envio_correo_notificacion_observaciones_credito_ambulatorio_empresarial
             <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Estimado/a cliente: <strong>' . $nombre . '</strong></h3>
             <h3 style="font-weight:100; color:#000000; padding:0px 20px;">Queremos informarle que hay nueva información disponible sobre el seguimiento de su solicitud. Crédito Ambulatorio con el Ticket Número <strong>' . $Ticket . '</strong></h3>
             <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Observación: </strong> ' . $observacion_final . '</h3>
-            <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Favor ingresar al link </strong><a href="https://crm.mqpseguros.com">https://crm.mqpseguros.com</a></h3>
+            <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>Favor ingresar al link </strong><a href="https://crm-latam.riverway.cloud">https://crm-latam.riverway.cloud</a></h3>
 
             <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">
                 <strong>Nota:</strong> Declaramos contar con el consentimiento explícito para llevar a cabo el trámite en beneficio del cliente.

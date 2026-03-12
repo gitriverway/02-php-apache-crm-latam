@@ -154,7 +154,7 @@ class Envio_correo_notificacion_documentos_faltantes_operatorio
                     </table>
                 </center>
 <h3 style="font-weight:100; color:#000000; padding:0px 20px;"><strong>' . $t('email_operatorio_documentos_faltantes_cliente.observation') . ': </strong> ' . $observacion_final . '</h3>
-                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_operatorio_documentos_faltantes_cliente.upload_instructions', ['portal_url' => 'https://crm.mqpseguros.com']) . '
+                <h3 style="font-weight:100; color:#000000; padding:0px 20px;">' . $t('email_operatorio_documentos_faltantes_cliente.upload_instructions', ['portal_url' => 'https://crm-latam.riverway.cloud']) . '
                 </h3>
 
 <p style="color:#000000; padding:15px 20px; font-size:14px; line-height:1.5;">

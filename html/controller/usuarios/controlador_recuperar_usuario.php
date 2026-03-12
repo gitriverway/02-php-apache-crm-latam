@@ -111,7 +111,7 @@ class Envio_correo_recuperacion_acceso
 
                         <div style="position:relative; margin:auto; width:800px; background:white; padding-top:20px; padding-bottom:20px">
                             <center>
-                                <img style="padding:20px; width:15%" src="https://crm.mqpseguros.com/view/img/icon-email.png">
+                                <img style="padding:20px; width:15%" src="https://crm-latam.riverway.cloud/view/img/icon-email.png">
                             </center>
 
                             <h4 style="font-weight:100; color:#999; padding:0px 20px;">' . $t('emails.recuperar_password.welcome') . ' ' . $nombre . '</h4>
