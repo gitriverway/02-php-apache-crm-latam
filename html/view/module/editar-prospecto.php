@@ -508,9 +508,8 @@ $t = function ($key) {
 
                                             <div class="form-group col-12 col-md-4">
                                                 <label for="txt_documento_2" class="control-label"
-                                                    style="text-align: right;" <?php echo $t('form.quotation'); ?>font
-                                                    color="red"> *
-                                                    </font>
+                                                    style="text-align: right;">
+                                                    <?php echo $t('form.quotation'); ?>
                                                 </label>
                                                 <input type="file" class="form-control" id="txt_documento_2"
                                                     name="txt_documento_2" class="subirDocumento" accept=".pdf">
