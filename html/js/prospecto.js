@@ -2723,7 +2723,7 @@ function buscar_cliente_id(idCliente) {
         $("#txt_ocupacion").val(data[0]["cliente_ocupacion"]);
         $("#cbm_ingreso_mensual").val(data[0]["cliente_ingreso"]).change();
       } else {
-        $("#cbm_origen").val("MQP").change();
+        $("#cbm_origen").val("RIVERWAY").change();
         $("#txt_idCliente").val("0");
         $("#txt_documento").val("");
         $("#txt_nombre").val("");

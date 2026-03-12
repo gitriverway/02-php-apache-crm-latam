@@ -61,16 +61,16 @@ class Envio_correo_notificacion_observaciones_credito_ambulatorio
             $mail->Password = 'Seguros2022,';
 
             //Recipients
-            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Reembolsos MQP Seguros');
+            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Reembolsos RIVERWAYERWAY Seguros');
             $mail->addAddress($correo, $nombre);
 
             if ($cliente_email_opcional) {
                 $mail->addAddress($cliente_email_opcional, $nombre . " opcional");
             }
 
-            $mail->addReplyTo('reembolsos@mqpseguros.com', 'Reembolsos MQP Seguros');     //Add a recipient
+            $mail->addReplyTo('reembolsos@mqpseguros.com', 'Reembolsos RIVERWAY Seguros');     //Add a recipient
             $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba MQP Seguros');
+            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba RIVERWAY Seguros');
 
             //Attachments
             // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments

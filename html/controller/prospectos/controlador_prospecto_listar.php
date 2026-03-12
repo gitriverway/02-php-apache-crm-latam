@@ -106,7 +106,7 @@ class Lista_prospecto
 
                 $botones =  "<button style='font-size:13px;' type='button' class='btnBayerPersona btn btn-primary' idProspecto='" . $consulta[$i]["bayer_id"] . "'><i class='fa fa-edit'></i></button>";
 
-                $cliente_origen = $consulta[$i]["cliente_origen"] == "MQP" ? "RIVERWAY" : $consulta[$i]["cliente_origen"];
+                $cliente_origen = $consulta[$i]["cliente_origen"] == "RIVERWAYERWAYERWAYERWAY" ? "RIVERWAY" : $consulta[$i]["cliente_origen"];
 
                 $origen_web = $consulta[$i]["origen_cotizador"] . "-" . $cliente_origen;
                 // $origen_web = $cliente_origen;

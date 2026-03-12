@@ -96,16 +96,16 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_operatorio_1
             $mail->Password = 'Seguros2022,';
 
             //Recipients
-            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Creditos Hospitalarios MQP Seguros');
+            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Creditos Hospitalarios RIVERWAY Seguros');
             $mail->addAddress($correo, $nombre);
 
             if ($cliente_email_opcional != "") {
                 $mail->addAddress($cliente_email_opcional, $nombre . " opcional");
             }
-            $mail->addReplyTo('creditohospitalario@mqpseguros.com', 'Credito Hospitalario MQP Seguros');
-            $mail->addCC('creditohospitalario@mqpseguros.com', 'Credito Hospitalario MQP Seguros');
+            $mail->addReplyTo('creditohospitalario@mqpseguros.com', 'Credito Hospitalario RIVERWAY Seguros');
+            $mail->addCC('creditohospitalario@mqpseguros.com', 'Credito Hospitalario RIVERWAY Seguros');
             $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba MQP Seguros');
+            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba RIVERWAY Seguros');
 
             //Attachments
             if ($documento_pedido_aseguradora != "") {

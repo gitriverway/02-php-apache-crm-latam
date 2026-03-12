@@ -56,17 +56,17 @@ class Envio_correo_notificacion_acceso
                 $mail->Password = 'Seguros2022,';
 
                 //Recipients
-                $mail->setFrom('info@mqpseguros.com', 'Servicios MQP Seguros');
+                $mail->setFrom('info@mqpseguros.com', 'Servicios RIVERWAY Seguros');
                 $mail->addAddress($correo, $nombre);
 
                 if ($cliente_email_opcional != "") {
                     $mail->addAddress($cliente_email_opcional, $nombre . " opcional");
                 }
 
-                $mail->addReplyTo('mireyaquintana@mqpseguros.com', 'Servicios MQP Seguros');
-                $mail->addCC('info@mqpseguros.com', 'Info MQP Seguros');     //Add a recipient
+                $mail->addReplyTo('mireyaquintana@mqpseguros.com', 'Servicios RIVERWAY Seguros');
+                $mail->addCC('info@mqpseguros.com', 'Info RIVERWAY Seguros');     //Add a recipient
                 $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-                $mail->addCC('faustoochoa@mqpseguros.com', 'Info MQP Seguros');     //Add a recipient
+                $mail->addCC('faustoochoa@mqpseguros.com', 'Info RIVERWAY Seguros');     //Add a recipient
 
                 //Attachments
                 // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
@@ -91,7 +91,7 @@ class Envio_correo_notificacion_acceso
 
                         <tr>
                             <td align="center" style="padding: 30px 0 20px 0;">
-                                <img src="https://crm.mqpseguros.com/view/img/icon-email.png" alt="MQP Logo" width="100"
+                                <img src="https://crm.mqpseguros.com/view/img/icon-email.png" alt="RIVERWAY Logo" width="100"
                                     style="display: block; border:0;">
                             </td>
                         </tr>
@@ -99,7 +99,7 @@ class Envio_correo_notificacion_acceso
                         <tr>
                             <td style="padding: 0 40px;">
                                 <h1 style="color: #1c6ea4; font-size: 22px; margin: 0 0 20px 0; text-align: center;">
-                                    ¡Bienvenido a MQP Asesores de Seguros!</h1>
+                                    ¡Bienvenido a RIVERWAY Asesores de Seguros!</h1>
                                 <p style="color: #555555; font-size: 15px; line-height: 24px; margin: 0 0 20px 0;">
                                     Estimado Cliente ' . $nombre . ',<br><br>
                                     Es un gusto saludarte. Hemos habilitado tu acceso a nuestra plataforma exclusiva
@@ -192,7 +192,7 @@ class Envio_correo_notificacion_acceso
                         <tr>
                             <td style="padding: 30px 40px; background-color: #fcfcfc; border-top: 1px solid #eeeeee;">
                                 <p style="margin: 0; color: #1f3864; font-weight: bold; font-size: 14px;">Servicio al
-                                    Cliente - MQP Asesores</p>
+                                    Cliente - RIVERWAY Asesores</p>
                                 <p style="margin: 5px 0; color: #666666; font-size: 12px; line-height: 18px;">
                                     Centro Empresarial Qworks - Quicentro Shopping, Of. 303<br>
                                     Celular: 593 98 940 9581 | <a href="https://www.mqpseguros.com"

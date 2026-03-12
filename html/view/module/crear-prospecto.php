@@ -56,7 +56,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                     <font color="red"> *</font>
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen">
-                                        <option value="MQP" selected><?php echo $t('list_tables.origin_mqp'); ?>
+                                        <option value="RIVERWAY" selected><?php echo $t('list_tables.origin_mqp'); ?>
                                         </option>
                                         <option value="AMIGO"><?php echo $t('list_tables.origin_friend'); ?></option>
                                         <option value="CHAT"><?php echo $t('list_tables.origin_chat'); ?></option>

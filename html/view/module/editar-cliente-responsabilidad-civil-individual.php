@@ -69,7 +69,7 @@ $t = function ($key) {
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen">
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                        <option value="MQP"><?php echo $t('list_tables.origin_mqp'); ?></option>
+                                        <option value="RIVERWAY"><?php echo $t('list_tables.origin_mqp'); ?></option>
                                         <option value="AMIGO"><?php echo $t('list_tables.origin_friend'); ?></option>
                                         <option value="CHAT"><?php echo $t('list_tables.origin_chat'); ?></option>
                                         <option value="OTROS"><?php echo $t('list_tables.origin_others'); ?></option>
@@ -296,9 +296,9 @@ $t = function ($key) {
         <select class="form-control cbm_forma_pago" name="state" id="cbm_forma_pago"
             style="width:100%;">
             <option value=""><?php echo $t('messages.select_option'); ?></option>
-            <option value="DEBITO BANCARIO"<?php echo $t("form.debit"); ?>/option>
-            <option value="TRANSFERENCIA BANCARIO"<?php echo $t("form.transfer"); ?>/option>
-            <option value="TARJETA DE CREDITO"<?php echo $t("form.credit_card"); ?>/option>
+            <option value="DEBITO BANCARIO" <?php echo $t("form.debit"); ?>/option>
+            <option value="TRANSFERENCIA BANCARIO" <?php echo $t("form.transfer"); ?>/option>
+            <option value="TARJETA DE CREDITO" <?php echo $t("form.credit_card"); ?>/option>
         </select>
     </div>
 </div>
@@ -546,7 +546,7 @@ $t = function ($key) {
                                 </div>
                                 <div class="form-group col-12 col-md-4">
                                     <label for="txt_documento_2" class="control-label"
-                                        style="text-align: right;"<?php echo $t('form.quotation'); ?>font color="red"> *
+                                        style="text-align: right;" <?php echo $t('form.quotation'); ?>font color="red"> *
                                         </font>
                                     </label>
                                     <input type="file" class="form-control" id="txt_documento_2"
@@ -572,7 +572,7 @@ $t = function ($key) {
 
                                 <div class="form-group col-12 col-md-4">
                                     <label for="txt_documento_5" class="control-label"
-                                        style="text-align: right;"<?php echo $t('form.affiliation_request'); ?>font color="red"> *
+                                        style="text-align: right;" <?php echo $t('form.affiliation_request'); ?>font color="red"> *
                                         </font>
                                     </label>
                                     <input type="file" class="form-control" id="txt_documento_5"
@@ -581,8 +581,8 @@ $t = function ($key) {
                                 </div>
                                 <div class="form-group col-12 col-md-4" hidden>
                                     <label for="txt_documento_6" class="control-label"
-                                        style="text-align: right;"<?php echo $t("form.nomination_letter"); ?>font color="red">
-                                            *</font>
+                                        style="text-align: right;" <?php echo $t("form.nomination_letter"); ?>font color="red">
+                                        *</font>
                                     </label>
                                     <input type="file" class="form-control" id="txt_documento_6"
                                         name="txt_documento_6" class="subirDocumento" accept=".pdf">
@@ -677,13 +677,13 @@ $t = function ($key) {
                             <!-- ENTRADA PARA SELECCIONAR ESTADO BAYER -->
                             <div class="form-group">
                                 <label for="cbm_estado_bayer" class="control-label"
-                                    style="text-align: right;"<?php echo $t("form.status"); ?>font color="red"> *</font>
+                                    style="text-align: right;" <?php echo $t("form.status"); ?>font color="red"> *</font>
                                 </label>
                                 <select class="form-control cbm_estado_bayer" name="state"
                                     id="cbm_estado_bayer" style="width:100%;">
                                     <option value=""><?php echo $t('messages.select_option'); ?></option>
                                     <option value="ABIERTO"><?php echo $t('status.open'); ?></option>
-                                    <option value="NO INTERESADO"<?php echo $t("form.not_interested"); ?>/option>
+                                    <option value="NO INTERESADO" <?php echo $t("form.not_interested"); ?>/option>
                                     <option value="INTERESADO"><?php echo $t('status.interested'); ?></option>
                                     <option value="CONTRATADO"><?php echo $t('status.contracted'); ?></option>
                                     <option value="CANCELADO"><?php echo $t('status.cancelled'); ?></option>
@@ -734,9 +734,9 @@ $t = function ($key) {
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_client'); ?></th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_document'); ?></th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_client'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_document'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_action'); ?></th>
                                 </tr>
                             </thead>
                         </table>
@@ -799,9 +799,9 @@ MODAL LISTAR CONTRATOS
                             <tr>
                                 <th style="text-align:center; width:10px">#</th>
                                 <th style="text-align:center; width:10px">Documento</th>
-                                <th style="text-align:center; width:10px"<?php echo $t('form.table_registration_date'); ?></th>
-                                <th style="text-align:center; width:10px"<?php echo $t('form.table_status'); ?></th>
-                                <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
+                                <th style="text-align:center; width:10px" <?php echo $t('form.table_registration_date'); ?></th>
+                                <th style="text-align:center; width:10px" <?php echo $t('form.table_status'); ?></th>
+                                <th style="text-align:center; width:10px" <?php echo $t('form.table_action'); ?></th>
                             </tr>
                         </thead>
                     </table>
@@ -816,10 +816,10 @@ MODAL LISTAR CONTRATOS
         <div class="modal-content">
             <form autocomplete="false" onsubmit="return false" enctype="multipart/form-data">
                 <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <h5 class="modal-title"<?php echo $t('form.employee_list'); ?></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="modal-title" <?php echo $t('form.employee_list'); ?></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
@@ -829,7 +829,7 @@ MODAL LISTAR CONTRATOS
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
                                     <th style="text-align:center; width:10px">Empleado</th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_action'); ?></th>
                                 </tr>
                             </thead>
                         </table>

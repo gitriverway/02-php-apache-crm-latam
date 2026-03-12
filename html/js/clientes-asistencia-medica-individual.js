@@ -214,7 +214,10 @@ $("#tabla_lista_contratos").on(
 
     Swal.fire({
       title: t("messages.are_you_sure", "Are you sure?"),
-      text: t("messages.you_want_to_delete", "You won't be able to revert this!"),
+      text: t(
+        "messages.you_want_to_delete",
+        "You won't be able to revert this!",
+      ),
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -254,10 +257,21 @@ function eliminar_documento_emision(
     processData: false,
     success: function (respuesta) {
       if (respuesta == 1) {
-        Swal.fire(t("messages.eliminated", "Eliminated!"), t("messages.document_deleted", "The Document has been deleted."), t("messages.success", "success"));
+        Swal.fire(
+          t("messages.eliminated", "Eliminated!"),
+          t("messages.document_deleted", "The Document has been deleted."),
+          t("messages.success", "success"),
+        );
         table_documentos.ajax.reload();
       } else {
-        Swal.fire(t("messages.oops", "Oops...!"), t("messages.document_not_deleted", "The Document could not be deleted."), t("messages.error", "error"));
+        Swal.fire(
+          t("messages.oops", "Oops...!"),
+          t(
+            "messages.document_not_deleted",
+            "The Document could not be deleted.",
+          ),
+          t("messages.error", "error"),
+        );
       }
       return respuesta;
     },
@@ -494,7 +508,10 @@ $(".listaAdicional").on("click", "button.btnAgregarDependiente", function () {
         numProspecto +
         '" style="padding-right:0px">' +
         "<label>" +
-        t("form_labels.parentesco", t("form_labels.relationship", "Parentesco")) +
+        t(
+          "form_labels.parentesco",
+          t("form_labels.relationship", "Parentesco"),
+        ) +
         "</label>" +
         "</div>" +
         '<div class="col-6 col-md-1 order-md-7 my-1" style="padding-right:0px">' +
@@ -568,7 +585,10 @@ $(".listaAdicional").on("click", "button.btnAgregarDependiente", function () {
         numProspecto +
         '" style="padding-left:0px">' +
         "<label>" +
-        t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
+        t(
+          "form_labels.fecha_nacimiento",
+          t("form_labels.birth_date", "Data de Nascimento"),
+        ) +
         "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-left:0px">' +
@@ -2031,7 +2051,10 @@ function agregar_auto_familiares(idValor) {
           numProspecto +
           '" style="padding-right:0px">' +
           "<label>" +
-          t("form_labels.parentesco", t("form_labels.relationship", "Parentesco")) +
+          t(
+            "form_labels.parentesco",
+            t("form_labels.relationship", "Parentesco"),
+          ) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-1 order-md-7 my-1" style="padding-right:0px">' +
@@ -2105,7 +2128,10 @@ function agregar_auto_familiares(idValor) {
           numProspecto +
           '" style="padding-left:0px">' +
           "<label>" +
-          t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
+          t(
+            "form_labels.fecha_nacimiento",
+            t("form_labels.birth_date", "Data de Nascimento"),
+          ) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-left:0px">' +
@@ -2160,7 +2186,9 @@ function agregar_auto_familiares(idValor) {
       $("#tipoFamiliar" + numProspecto)
         .val(data[i]["tipo"])
         .change();
-      $("#nombreFamiliar" + numProspecto).val(data[i][t("form_labels.name", "Nome")]);
+      $("#nombreFamiliar" + numProspecto).val(
+        data[i][t("form_labels.name", "Nome")],
+      );
       $("#generoFamiliar" + numProspecto)
         .val(data[i]["genero"])
         .change();
@@ -2287,7 +2315,10 @@ $('.subirDocumento [type="file"]').on("change", function () {
     Swal.fire({
       icon: "error",
       title: t("messages.error_uploading_document", "Error uploading document"),
-      text: t("messages.document_must_be_pdf", "The document must be in PDF format!"),
+      text: t(
+        "messages.document_must_be_pdf",
+        "The document must be in PDF format!",
+      ),
       confirmButtonText: t("messages.close", "Close"),
     });
   } else if (documento["size"] > maxSizeBytes) {
@@ -2296,7 +2327,10 @@ $('.subirDocumento [type="file"]').on("change", function () {
     Swal.fire({
       icon: "error",
       title: t("messages.error_uploading_document", "Error uploading document"),
-      text: t("messages.document_exceeds_max_size", "The document must not exceed {size}MB!").replace('{size}', maxSizeMB),
+      text: t(
+        "messages.document_exceeds_max_size",
+        "The document must not exceed {size}MB!",
+      ).replace("{size}", maxSizeMB),
       confirmButtonText: t("messages.close", "Close"),
     });
   }
@@ -2693,7 +2727,10 @@ function Modificar_Cliente() {
       } else {
         Swal.fire(
           t("messages.error_message", "Mensagem de Erro"),
-          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
+          t(
+            "messages.registration_error",
+            "Desculpe, nÃ£o foi possÃ­vel concluir o registro",
+          ),
           "error",
         );
       }
@@ -2780,7 +2817,7 @@ $("#tabla_lista_clientes").on("click", ".btnSeleccionarCliente", function () {
         $("#txt_ocupacion").val(data[0]["cliente_ocupacion"]);
         $("#cbm_ingreso_mensual").val(data[0]["cliente_ingreso"]).change();
       } else {
-        $("#cbm_origen").val("MQP").change();
+        $("#cbm_origen").val("RIVERWAY").change();
         $("#txt_idCliente").val("0");
         $("#txt_documento").val("");
         $("#txt_nombre").val("");

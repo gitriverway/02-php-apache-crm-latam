@@ -1,4 +1,4 @@
-# Plan de Traducción del Proyecto CRM MQP Seguros
+# Plan de Traducción del Proyecto CRM RIVERWAY Seguros
 
 ## Resumen Ejecutivo
 
@@ -9,18 +9,22 @@ El proyecto tiene un sistema de traducción reorganizado por módulos para facil
 ## 1. Estado Actual
 
 ### 1.1 Estructura de Archivos de Idioma
+
 - **Ubicación**: `/html/lang/`
 - **Estructura nueva**: `/html/lang/{en,es,pt-BR}/` con archivos modulares
 - **Compatibilidad**: Los archivos legacy (en.json, es.json, pt-BR.json) siguen funcionando
 
 ### 1.2 Módulos en /html/view/module/
+
 - **Total de archivos PHP**: 90 módulos
 
 ### 1.3 Controladores de Email
+
 - **Total de controladores de email**: 63 archivos
 - **Ubicación**: `/html/controller/**/*correo*.php`
 
 ### 1.4 Archivos JavaScript
+
 - **Total de archivos JS**: 44 archivos en `/html/js/`
 - **Estado**: Los archivos JS usan la variable global `translations` desde PHP
 
@@ -31,6 +35,7 @@ El proyecto tiene un sistema de traducción reorganizado por módulos para facil
 ### Fase 1: Reestructurar archivos de idioma por módulo ✅
 
 **Estructura creada**:
+
 ```
 /html/lang/
 ├── en/
@@ -64,22 +69,22 @@ El proyecto tiene un sistema de traducción reorganizado por módulos para facil
 
 **Archivos actualizados con todas las traducciones necesarias**:
 
-| Archivo | Traducciones | Estado |
-|---------|--------------|--------|
-| common.json | ~200+ | ✅ Completado |
-| clientes.json | ~100+ | ✅ Completado |
-| prospectos.json | ~60+ | ✅ Completado |
-| login.json | ~10 | ✅ Completado |
-| menu.json | ~40 | ✅ Completado |
-| contratos.json | ~15 | ✅ Completado |
-| siniestros.json | ~30 | ✅ Completado |
-| reembolsos.json | ~20 | ✅ Completado |
-| operatorios.json | ~20 | ✅ Completado |
-| creditos.json | ~15 | ✅ Completado |
-| usuarios.json | ~20 | ✅ Completado |
-| empleados.json | ~25 | ✅ Completado |
-| proveedores.json | ~20 | ✅ Completado |
-| facturas.json | ~20 | ✅ Completado |
+| Archivo          | Traducciones | Estado        |
+| ---------------- | ------------ | ------------- |
+| common.json      | ~200+        | ✅ Completado |
+| clientes.json    | ~100+        | ✅ Completado |
+| prospectos.json  | ~60+         | ✅ Completado |
+| login.json       | ~10          | ✅ Completado |
+| menu.json        | ~40          | ✅ Completado |
+| contratos.json   | ~15          | ✅ Completado |
+| siniestros.json  | ~30          | ✅ Completado |
+| reembolsos.json  | ~20          | ✅ Completado |
+| operatorios.json | ~20          | ✅ Completado |
+| creditos.json    | ~15          | ✅ Completado |
+| usuarios.json    | ~20          | ✅ Completado |
+| empleados.json   | ~25          | ✅ Completado |
+| proveedores.json | ~20          | ✅ Completado |
+| facturas.json    | ~20          | ✅ Completado |
 
 ### Fase 4: Revisar archivos JS ✅
 
@@ -96,9 +101,9 @@ El proyecto tiene un sistema de traducción reorganizado por módulos para facil
    - Estos textos están en español hardcodeado
 
 3. **Archivos afectados**:
-   - creditos-ambulatorios-*.js
-   - operatorios-*.js
-   - reembolsos-*.js
+   - creditos-ambulatorios-\*.js
+   - operatorios-\*.js
+   - reembolsos-\*.js
    - siniestros-vehiculo-individual.js
 
 ---
@@ -106,6 +111,7 @@ El proyecto tiene un sistema de traducción reorganizado por módulos para facil
 ## 3. Fases Pendientes
 
 ### Fase 5: Revisar traducciones de Emails ⏳
+
 - Revisar los 63 controladores de email
 - Verificar que todas las traducciones de emails estén disponibles
 
@@ -114,6 +120,7 @@ El proyecto tiene un sistema de traducción reorganizado por módulos para facil
 ## 4. Uso del Sistema de Traducción
 
 ### En archivos PHP
+
 ```php
 // El sistema mantiene compatibilidad hacia atrás
 $t('common.name');           // funciona
@@ -125,10 +132,11 @@ $t('messages.user_status_changed', ['status' => 'actualizado']);
 ```
 
 ### En archivos JavaScript
+
 ```javascript
 // Ya disponible globalmente
-t('common.save');              // "Guardar"
-t('messages.select_option');   // "Seleccione una opción..."
+t("common.save"); // "Guardar"
+t("messages.select_option"); // "Seleccione una opción..."
 ```
 
 ### Nueva estructura de claves por módulo
@@ -153,14 +161,17 @@ t('messages.select_option');   // "Seleccione una opción..."
 ## 5. Archivos Modificados/Creados
 
 ### Archivos JSON creados (42 total):
+
 - 14 archivos en `/html/lang/en/`
 - 14 archivos en `/html/lang/es/`
 - 14 archivos en `/html/lang/pt-BR/`
 
 ### Archivo PHP modificado:
+
 - `modelo_idioma.php` - Actualizado para cargar múltiples archivos
 
 ### Archivos JS con textos hardcodeados (recomendación):
+
 - Para usar traducciones en JS, usar: `t('clave', 'valor por defecto')`
 
 ---
@@ -183,15 +194,16 @@ Los textos en español hardcodeados en archivos JS pueden migrarse usando:
 alert("Seleccione un contrato válido");
 
 // Después (usando traducciones)
-alert(t('messages.select_valid_contract', 'Seleccione un contrato válido'));
+alert(t("messages.select_valid_contract", "Seleccione un contrato válido"));
 ```
 
 O agregar las claves correspondientes a los archivos JSON y luego usar:
+
 ```javascript
-t('js.select_valid_contract')
+t("js.select_valid_contract");
 ```
 
 ---
 
-*Última actualización: 2026-03-05*
-*Estado: Fases 1, 2, 3 y 4 completadas*
+_Última actualización: 2026-03-05_
+_Estado: Fases 1, 2, 3 y 4 completadas_

@@ -54,7 +54,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <?php echo $t("form.origin"); ?>
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen">
-                                        <option value="MQP" selected><?php echo $t('form.riverway'); ?></option>
+                                        <option value="RIVERWAY" selected><?php echo $t('form.riverway'); ?></option>
                                         <option value="AMIGO"><?php echo $t('list_tables.origin_friend'); ?></option>
                                         <option value="CHAT"><?php echo $t('list_tables.origin_chat'); ?></option>
                                         <option value="OTROS"><?php echo $t('list_tables.origin_others'); ?></option>

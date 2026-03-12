@@ -11,7 +11,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 class Envio_correo_aseguradora_con_documentos_credito_ambulatorio_empresarial
 {
 
-function realizar_envio_correo_aseguradora_con_documentos_credito_ambulatorio_empresarial($idCreditoAmbulatorio, $idContrato)
+    function realizar_envio_correo_aseguradora_con_documentos_credito_ambulatorio_empresarial($idCreditoAmbulatorio, $idContrato)
     {
         global $t;
 
@@ -85,7 +85,7 @@ function realizar_envio_correo_aseguradora_con_documentos_credito_ambulatorio_em
             $mail->Password = 'Seguros2022,';
 
             //Recipients
-            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Creditos Ambulatorios MQP Seguros');
+            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Creditos Ambulatorios RIVERWAY Seguros');
             foreach ($correo_aseguradora as $value) {
                 $mail->addAddress($value["correo"], $value["destinatario"]);
             }
@@ -95,10 +95,10 @@ function realizar_envio_correo_aseguradora_con_documentos_credito_ambulatorio_em
             if ($cliente_email_opcional != "") {
                 $mail->addAddress($cliente_email_opcional, $nombre . ' - Adicional');
             }
-            $mail->addReplyTo('creditoambulatorio@mqpseguros.com', 'Creditos Ambulatorios MQP Seguros');     //Add a recipient
-            $mail->addCC('creditoambulatorio@mqpseguros.com', 'Creditos Ambulatorios MQP Seguros');     //Add a recipient
+            $mail->addReplyTo('creditoambulatorio@mqpseguros.com', 'Creditos Ambulatorios RIVERWAY Seguros');     //Add a recipient
+            $mail->addCC('creditoambulatorio@mqpseguros.com', 'Creditos Ambulatorios RIVERWAY Seguros');     //Add a recipient
             $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-            $mail->addCC('faustoochoa@mqpseguros.com', 'Info MQP Seguros');
+            $mail->addCC('faustoochoa@mqpseguros.com', 'Info RIVERWAY Seguros');
 
 
             if ($documento != "") {

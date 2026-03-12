@@ -31,7 +31,7 @@
 
 ### 1.2 Mapeo de Dropdowns (Enums)
 
-- **Origen:** `List_tables.origin_MQP` → "Redes Sociais" / "Indicação", `List_tables.origin_chat` → "Whatsapp", `List_tables.origin_others` → "Outro".
+- **Origen:** `List_tables.origin_RIVERWAY` → "Redes Sociais" / "Indicação", `List_tables.origin_chat` → "Whatsapp", `List_tables.origin_others` → "Outro".
 - **Productos:** `ASISTENCIA MEDICA INDIVIDUAL` → "Saúde", `Miami` → "Travel", `Otros` → "Outros".
 
 ---

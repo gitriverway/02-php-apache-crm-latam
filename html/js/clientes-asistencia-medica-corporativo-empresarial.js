@@ -555,7 +555,10 @@ $(".btnAgregarColaborador").click(function () {
       numProspecto +
       '" style="padding-left:0px">' +
       "<label>" +
-      t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
+      t(
+        "form_labels.fecha_nacimiento",
+        t("form_labels.birth_date", "Data de Nascimento"),
+      ) +
       "</label>" +
       "</div>" +
       '<div class="col-6 col-md-2 order-md-11 my-1" style="padding-left:0px">' +
@@ -692,7 +695,10 @@ function auto_agregar_familiares_dependientes(lista) {
         numSubProspecto +
         '" style="padding-right:0px">' +
         "<label>" +
-        t("form_labels.parentesco", t("form_labels.relationship", "Parentesco")) +
+        t(
+          "form_labels.parentesco",
+          t("form_labels.relationship", "Parentesco"),
+        ) +
         "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
@@ -761,7 +767,10 @@ function auto_agregar_familiares_dependientes(lista) {
         numSubProspecto +
         '" style="padding-left:0px">' +
         "<label>" +
-        t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
+        t(
+          "form_labels.fecha_nacimiento",
+          t("form_labels.birth_date", "Data de Nascimento"),
+        ) +
         "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-left:0px">' +
@@ -856,7 +865,10 @@ $("#modalListarDependientesColaborador").on(
         numSubProspecto +
         '" style="padding-right:0px">' +
         "<label>" +
-        t("form_labels.parentesco", t("form_labels.relationship", "Parentesco")) +
+        t(
+          "form_labels.parentesco",
+          t("form_labels.relationship", "Parentesco"),
+        ) +
         "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
@@ -923,7 +935,10 @@ $("#modalListarDependientesColaborador").on(
         numSubProspecto +
         '" style="padding-left:0px">' +
         "<label>" +
-        t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
+        t(
+          "form_labels.fecha_nacimiento",
+          t("form_labels.birth_date", "Data de Nascimento"),
+        ) +
         "</label>" +
         "</div>" +
         '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-left:0px">' +
@@ -1509,7 +1524,10 @@ function agregar_auto_Colaboradores() {
           numProspecto +
           '" style="padding-right:0px">' +
           "<label>" +
-          t("form_labels.parentesco", t("form_labels.relationship", "Parentesco")) +
+          t(
+            "form_labels.parentesco",
+            t("form_labels.relationship", "Parentesco"),
+          ) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
@@ -1572,7 +1590,10 @@ function agregar_auto_Colaboradores() {
           numProspecto +
           '" style="padding-left:0px">' +
           "<label>" +
-          t("form_labels.fecha_nacimiento", t("form_labels.birth_date", "Data de Nascimento")) +
+          t(
+            "form_labels.fecha_nacimiento",
+            t("form_labels.birth_date", "Data de Nascimento"),
+          ) +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-left:0px">' +
@@ -2122,7 +2143,10 @@ function Modificar_Cliente() {
       } else {
         Swal.fire(
           t("messages.error_message", "Mensagem de Erro"),
-          t("messages.registration_error", "Desculpe, nÃ£o foi possÃ­vel concluir o registro"),
+          t(
+            "messages.registration_error",
+            "Desculpe, nÃ£o foi possÃ­vel concluir o registro",
+          ),
           "error",
         );
       }
@@ -2199,7 +2223,7 @@ $("#tabla_lista_clientes").on("click", ".btnSeleccionarCliente", function () {
         $("#txt_ocupacion").val(data[0]["cliente_ocupacion"]);
         $("#cbm_ingreso_mensual").val(data[0]["cliente_ingreso"]).change();
       } else {
-        $("#cbm_origen").val("MQP").change();
+        $("#cbm_origen").val("RIVERWAY").change();
         $("#txt_idCliente").val("0");
         $("#txt_documento").val("");
         $("#txt_nombre").val("");

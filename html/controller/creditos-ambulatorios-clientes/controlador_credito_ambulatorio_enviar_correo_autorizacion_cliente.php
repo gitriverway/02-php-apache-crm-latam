@@ -87,15 +87,15 @@ class Envio_correo_notificacion_autorizacion_credito_ambulatorio
             $mail->Password = 'Seguros2022,';
 
             //Recipients
-            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Creditos Ambulatorios MQP Seguros');
+            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Creditos Ambulatorios RIVERWAY Seguros');
             $mail->addAddress($correo, $nombre);
             if ($cliente_email_opcional != "") {
                 $mail->addAddress($cliente_email_opcional, $nombre . " opcional");
             }
-            $mail->addReplyTo('creditoambulatorio@mqpseguros.com', 'Creditos Ambulatorios MQP Seguros');     //Add a recipient
-            $mail->addCC('creditoambulatorio@mqpseguros.com', 'Creditos Ambulatorios MQP Seguros');     //Add a recipient
+            $mail->addReplyTo('creditoambulatorio@mqpseguros.com', 'Creditos Ambulatorios RIVERWAY Seguros');     //Add a recipient
+            $mail->addCC('creditoambulatorio@mqpseguros.com', 'Creditos Ambulatorios RIVERWAY Seguros');     //Add a recipient
             $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba MQP Seguros');
+            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba RIVERWAY Seguros');
 
             //Attachments
             //Attachments

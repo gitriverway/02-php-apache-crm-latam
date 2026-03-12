@@ -43,12 +43,12 @@ class Envio_correo_notificacion_nuevo_contrato_accidentes_personales
             $mail->Password = 'Seguros2022,';
 
             //Recipients
-            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Departamento de Ventas MQP Seguros'); // Add a recipient
+            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Departamento de Ventas RIVERWAY Seguros'); // Add a recipient
 
-            $mail->addAddress('info@mqpseguros.com', 'Servicios MQP Seguros');     //Add a recipient
-            $mail->addReplyTo('info@mqpseguros.com', 'Servicios MQP Seguros');     //Add a recipient
+            $mail->addAddress('info@mqpseguros.com', 'Servicios RIVERWAY Seguros');     //Add a recipient
+            $mail->addReplyTo('info@mqpseguros.com', 'Servicios RIVERWAY Seguros');     //Add a recipient
             $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba MQP Seguros');
+            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba RIVERWAY Seguros');
 
 
             //Content

@@ -68,14 +68,14 @@ class Envio_correo_condiciones_renovacion_vehiculo
             $mail->Password = 'Seguros2022,';
 
             //Recipients
-            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Servicios MQP Seguros');
+            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Servicios RIVERWAY Seguros');
 
             $mail->addAddress($email, $nombre);
-            $mail->addReplyTo('info@mqpseguros.com', 'Servicios MQP Seguros');     //Add a recipient
+            $mail->addReplyTo('info@mqpseguros.com', 'Servicios RIVERWAY Seguros');     //Add a recipient
             $mail->addReplyTo('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-            $mail->addCC('info@mqpseguros.com', 'Servicios MQP Seguros');     //Add a recipient
+            $mail->addCC('info@mqpseguros.com', 'Servicios RIVERWAY Seguros');     //Add a recipient
             $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-            $mail->addCC('faustoochoa@mqpseguros.com', 'Info MQP Seguros');
+            $mail->addCC('faustoochoa@mqpseguros.com', 'Info RIVERWAY Seguros');
 
             //Attachments
             if ($ruta_condiciones != "") {

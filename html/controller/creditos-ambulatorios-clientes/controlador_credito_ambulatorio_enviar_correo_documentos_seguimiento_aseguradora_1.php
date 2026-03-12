@@ -91,7 +91,7 @@ class Envio_correo_documentos_seguimiento_credito_ambulatorio_1
             $mail->Password = 'Seguros2022,';
 
             //Recipients
-            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Creditos Ambulatorios MQP Seguros');
+            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Creditos Ambulatorios RIVERWAY Seguros');
             foreach ($correo_aseguradora as $value) {
                 $mail->addAddress($value["correo"], $value["destinatario"]);
             }
@@ -101,10 +101,10 @@ class Envio_correo_documentos_seguimiento_credito_ambulatorio_1
             if ($cliente_email_opcional != "") {
                 $mail->addAddress($cliente_email_opcional, $nombre . ' - Adicional');
             }
-            $mail->addReplyTo('creditoambulatorio@mqpseguros.com', 'Creditos Ambulatorios MQP Seguros');
-            $mail->addCC('creditoambulatorio@mqpseguros.com', 'Creditos Ambulatorios MQP Seguros');
+            $mail->addReplyTo('creditoambulatorio@mqpseguros.com', 'Creditos Ambulatorios RIVERWAY Seguros');
+            $mail->addCC('creditoambulatorio@mqpseguros.com', 'Creditos Ambulatorios RIVERWAY Seguros');
             $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba MQP Seguros');
+            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba RIVERWAY Seguros');
 
             //Attachments
             // if ($documento != "") {

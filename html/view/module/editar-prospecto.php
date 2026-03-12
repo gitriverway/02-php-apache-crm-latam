@@ -75,7 +75,7 @@ $t = function ($key) {
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen"
                                         <?php echo ($_SESSION["S_ROL"] == "VENDEDOR") ? "disabled" : ""; ?>>
-                                        <option value="MQP" selected><?php echo $t('options.mqp'); ?></option>
+                                        <option value="RIVERWAY" selected><?php echo $t('options.mqp'); ?></option>
                                         <option value="AMIGO"><?php echo $t('options.friend'); ?></option>
                                         <option value="CHAT"><?php echo $t('options.chat'); ?></option>
                                         <option value="OTROS"><?php echo $t('options.others'); ?></option>

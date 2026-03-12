@@ -83,7 +83,7 @@ class Envio_correo_documentos_seguimiento_operatorio_empresarial
             $mail->Password = 'Seguros2022,';
 
             //Recipients
-            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Creditos Hospitalarios MQP Seguros');
+            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Creditos Hospitalarios RIVERWAY Seguros');
             foreach ($correo_aseguradora as $value) {
                 $mail->addAddress($value["correo"], $value["destinatario"]);
             }
@@ -93,10 +93,10 @@ class Envio_correo_documentos_seguimiento_operatorio_empresarial
             if ($cliente_email_opcional != "") {
                 $mail->addAddress($cliente_email_opcional, $nombre . ' - Adicional');
             }
-            $mail->addReplyTo('creditohospitalario@mqpseguros.com', 'Credito Hospitalario MQP Seguros');     //Add a recipient
-            $mail->addCC('creditohospitalario@mqpseguros.com', 'Credito Hospitalario MQP Seguros');     //Add a recipient
+            $mail->addReplyTo('creditohospitalario@mqpseguros.com', 'Credito Hospitalario RIVERWAY Seguros');     //Add a recipient
+            $mail->addCC('creditohospitalario@mqpseguros.com', 'Credito Hospitalario RIVERWAY Seguros');     //Add a recipient
             $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba MQP Seguros');
+            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba RIVERWAY Seguros');
             //Attachments
 
 

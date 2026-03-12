@@ -82,7 +82,7 @@ class Envio_correo_documentos_seguimiento_reembolso_empresarial_1
             $mail->Password = 'Seguros2022,';
 
             //Recipients
-            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Reembolsos MQP Seguros');
+            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Reembolsos RIVERWAYERWAYERWAY Seguros');
 
             foreach ($lista_correo_reembolso as $value) {
                 $mail->addAddress($value["correo"], $value["destinatario"]);
@@ -94,10 +94,10 @@ class Envio_correo_documentos_seguimiento_reembolso_empresarial_1
                 $mail->addAddress($cliente_email_opcional, $nombre . ' - Adicional');
             }
 
-            $mail->addReplyTo('reembolsos@mqpseguros.com', 'Reembolsos MQP Seguros');     //Add a recipient
-            $mail->addCC('reembolsos@mqpseguros.com', 'Reembolsos MQP Seguros');     //Add a recipient
+            $mail->addReplyTo('reembolsos@mqpseguros.com', 'Reembolsos RIVERWAYERWAY Seguros');     //Add a recipient
+            $mail->addCC('reembolsos@mqpseguros.com', 'Reembolsos RIVERWAY Seguros');     //Add a recipient
             $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba MQP Seguros');
+            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba RIVERWAY Seguros');
 
             //Attachments
             // if ($documento != "") {

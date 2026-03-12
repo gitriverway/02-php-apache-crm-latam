@@ -82,7 +82,7 @@ class Envio_correo_notificacion_liquidacion_reembolso
             $mail->Password = 'Seguros2022,';
 
             //Recipients
-            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Reembolsos MQP Seguros');
+            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Reembolsos RIVERWAY Seguros');
 
             $mail->addAddress($correo, $nombre);
 
@@ -90,10 +90,10 @@ class Envio_correo_notificacion_liquidacion_reembolso
                 $mail->addAddress($cliente_email_opcional, $nombre . " opcional");
             }
 
-            $mail->addReplyTo('reembolsos@mqpseguros.com', 'Reembolsos MQP Seguros');     //Add a recipient
-            $mail->addCC('reembolsos@mqpseguros.com', 'Reembolsos MQP Seguros');     //Add a recipient
+            $mail->addReplyTo('reembolsos@mqpseguros.com', 'Reembolsos RIVERWAY Seguros');     //Add a recipient
+            $mail->addCC('reembolsos@mqpseguros.com', 'Reembolsos RIVERWAY Seguros');     //Add a recipient
             $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-            $mail->addCC('faustoochoa@mqpseguros.com', 'Reembolsos MQP Seguros');     //Add a recipient
+            $mail->addCC('faustoochoa@mqpseguros.com', 'Reembolsos RIVERWAY Seguros');     //Add a recipient
 
             //Attachments
             if ($liquidacion != "") {

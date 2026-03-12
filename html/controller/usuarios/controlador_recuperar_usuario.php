@@ -87,13 +87,13 @@ class Envio_correo_recuperacion_acceso
                 $mail->Password = 'Seguros2022,';
 
                 //Recipients
-                $mail->setFrom('info@mqpseguros.com', 'Servicios MQP Seguros');
+                $mail->setFrom('info@mqpseguros.com', 'Servicios RIVERWAY Seguros');
 
                 $mail->addAddress($correo, $nombre);
 
-                // $mail->addCC('info@mqpseguros.com', 'Info MQP Seguros');     //Add a recipient
+                // $mail->addCC('info@mqpseguros.com', 'Info RIVERWAY Seguros');     //Add a recipient
                 // $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-                $mail->addCC('faustoochoa@mqpseguros.com', 'Info MQP Seguros');     //Add a recipient
+                $mail->addCC('faustoochoa@mqpseguros.com', 'Info RIVERWAY Seguros');     //Add a recipient
 
                 //Attachments
                 // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments

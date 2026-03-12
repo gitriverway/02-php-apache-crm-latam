@@ -50,7 +50,7 @@ $t = function ($key) {
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen">
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                        <option value="MQP"><?php echo $t('list_tables.origin_mqp'); ?></option>
+                                        <option value="RIVERWAY"><?php echo $t('list_tables.origin_mqp'); ?></option>
                                         <option value="AMIGO"><?php echo $t('list_tables.origin_friend'); ?></option>
                                         <option value="OTROS"><?php echo $t('list_tables.origin_others'); ?></option>
                                     </select>
@@ -692,9 +692,9 @@ $t = function ($key) {
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_client'); ?></th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_document'); ?></th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_client'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_document'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_action'); ?></th>
                                 </tr>
                             </thead>
                         </table>

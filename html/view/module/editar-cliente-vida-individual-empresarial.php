@@ -69,7 +69,7 @@ $t = function ($key) {
                                     </label>
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen">
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                        <option value="MQP"><?php echo $t('list_tables.origin_mqp'); ?></option>
+                                        <option value="RIVERWAY"><?php echo $t('list_tables.origin_mqp'); ?></option>
                                         <option value="AMIGO"><?php echo $t('list_tables.origin_friend'); ?></option>
                                         <option value="CHAT"><?php echo $t('list_tables.origin_chat'); ?></option>
                                         <option value="OTROS"><?php echo $t('list_tables.origin_others'); ?></option>
@@ -472,7 +472,7 @@ $t = function ($key) {
                                         </div>
                                         <div class="form-group col-12 col-md-4">
                                             <label for="txt_documento_11" class="control-label"
-                                                style="text-align: right;"<?php echo $t('form.quotation'); ?>font color="red"> *
+                                                style="text-align: right;" <?php echo $t('form.quotation'); ?>font color="red"> *
                                                 </font>
                                             </label>
                                             <input type="file" class="form-control" id="txt_documento_11"
@@ -677,9 +677,9 @@ $t = function ($key) {
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_client'); ?></th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_document'); ?></th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_client'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_document'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_action'); ?></th>
                                 </tr>
                             </thead>
                         </table>
@@ -781,9 +781,9 @@ MODAL LISTAR CONTRATOS
                             <tr>
                                 <th style="text-align:center; width:10px">#</th>
                                 <th style="text-align:center; width:10px">Documento</th>
-                                <th style="text-align:center; width:10px"<?php echo $t('form.table_registration_date'); ?></th>
+                                <th style="text-align:center; width:10px" <?php echo $t('form.table_registration_date'); ?></th>
                                 <th style="text-align:center; width:10px"><?php echo $t('form.table_status'); ?></th>
-                                <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
+                                <th style="text-align:center; width:10px" <?php echo $t('form.table_action'); ?></th>
                             </tr>
                         </thead>
                     </table>
@@ -811,7 +811,7 @@ MODAL LISTAR CONTRATOS
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
                                     <th style="text-align:center; width:10px">Empleado</th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_action'); ?></th>
                                 </tr>
                             </thead>
                         </table>

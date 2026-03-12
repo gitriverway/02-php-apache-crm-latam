@@ -78,7 +78,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                     <select class="form-control cbm_origen" name="state" id="cbm_origen"
                                         <?php echo ($_SESSION["S_ROL"] == "VENDEDOR") ? "disabled" : ""; ?>>
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
-                                        <option value="MQP"><?php echo $t('options.mqp'); ?></option>
+                                        <option value="RIVERWAY"><?php echo $t('options.mqp'); ?></option>
                                         <option value="AMIGO"><?php echo $t('options.friend'); ?></option>
                                         <option value="CHAT"><?php echo $t('options.chat'); ?></option>
                                         <option value="OTROS"><?php echo $t('options.others'); ?></option>
@@ -436,16 +436,16 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <!-- ENTRADA PARA FECHA DE SEGUIMIENTO -->
                                         <div class="form-group">
                                             <label for="txt_fecha_seguimiento" class="control-label"
-                                                style="text-align: right;"<?php echo $t("form.follow_up"); ?>/label>
-                                            <input type="date" class="form-control" id="txt_fecha_seguimiento"
-                                                id="txt_fecha_seguimiento">
+                                                style="text-align: right;" <?php echo $t("form.follow_up"); ?>/label>
+                                                <input type="date" class="form-control" id="txt_fecha_seguimiento"
+                                                    id="txt_fecha_seguimiento">
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-3">
                                         <!-- ENTRADA PARA SELECCIONAR ESTADO BAYER -->
                                         <div class="form-group">
                                             <label for="cbm_estado_bayer" class="control-label"
-                                                style="text-align: right;"<?php echo $t("form.status"); ?>font color="red"> *</font>
+                                                style="text-align: right;" <?php echo $t("form.status"); ?>font color="red"> *</font>
                                             </label>
                                             <select class="form-control cbm_estado_bayer" name="state"
                                                 id="cbm_estado_bayer" style="width:100%;">
@@ -505,9 +505,9 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <thead>
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_client'); ?></th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_document'); ?></th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_client'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_document'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_action'); ?></th>
                                 </tr>
                             </thead>
                         </table>
@@ -606,7 +606,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <tr>
                                     <th style="text-align:center; width:10px">#</th>
                                     <th style="text-align:center; width:10px">Empleado</th>
-                                    <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
+                                    <th style="text-align:center; width:10px" <?php echo $t('form.table_action'); ?></th>
                                 </tr>
                             </thead>
                         </table>

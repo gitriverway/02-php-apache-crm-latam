@@ -95,7 +95,7 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_reembolso_1
             $mail->Password = 'Seguros2022,';
 
             //Recipients
-            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Reembolsos MQP Seguros');
+            $mail->setFrom('mireyaquintana@mqpseguros.com', 'Reembolsos RIVERWAYERWAYERWAY Seguros');
 
             $mail->addAddress($correo, $nombre);
 
@@ -103,10 +103,10 @@ class Envio_correo_notificacion_documentos_faltantes_seguimiento_reembolso_1
                 $mail->addAddress($cliente_email_opcional, $nombre . " opcional");
             }
 
-            $mail->addReplyTo('reembolsos@mqpseguros.com', 'Reembolsos MQP Seguros');     //Add a recipient
-            $mail->addCC('reembolsos@mqpseguros.com', 'Reembolsos MQP Seguros');     //Add a recipient
+            $mail->addReplyTo('reembolsos@mqpseguros.com', 'Reembolsos RIVERWAYERWAY Seguros');     //Add a recipient
+            $mail->addCC('reembolsos@mqpseguros.com', 'Reembolsos RIVERWAY Seguros');     //Add a recipient
             $mail->addCC('nicolasparedes@mqpseguros.com', 'Nicolas Paredes');
-            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba MQP Seguros');
+            $mail->addCC('faustoochoa@mqpseguros.com', 'Prueba RIVERWAY Seguros');
 
             //Attachments
             // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments

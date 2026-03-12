@@ -93,7 +93,7 @@ class Lista_prospecto_web
 
                 $check =  "<div class='form-check'><input class='form-check-input chkSeleccionarAsignar' id='chkSeleccionarAsignar' name='chkSeleccionarAsignar' type='checkbox' idProspecto='" . $consulta[$i]["prospecto_web_id"] . "'></div>";
 
-                $cliente_origen = $consulta[$i]["cliente_origen"] == "MQP" ? "RIVERWAY" : $consulta[$i]["cliente_origen"];
+                $cliente_origen = $consulta[$i]["cliente_origen"] == "RIVERWAY" ? "RIVERWAY" : $consulta[$i]["cliente_origen"];
 
                 $origen_web = $consulta[$i]["origen_cotizador"] . "-" . $cliente_origen;
                 // $origen_web = $cliente_origen;
