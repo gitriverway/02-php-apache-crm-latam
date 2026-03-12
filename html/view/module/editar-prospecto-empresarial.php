@@ -80,7 +80,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
                                         <option value="RIVERWAY"><?php echo $t('options.mqp'); ?></option>
                                         <option value="AMIGO"><?php echo $t('options.friend'); ?></option>
-                                        <option value="CHAT"><?php echo $t('options.chat'); ?></option>
+                                        <option value=CHAT><?php echo $t('options.chat'); ?></option>
                                         <option value="OTROS"><?php echo $t('options.others'); ?></option>
                                     </select>
                                 </div>

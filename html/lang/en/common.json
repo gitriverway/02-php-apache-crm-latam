@@ -1,4 +1,4 @@
-﻿{
+{
     "edit_emission_transport_empresarial":  "Editar EmisiÃ³n Transporte Empresarial",
     "edit_emission_civil_liability_individual":  "Editar EmisiÃ³n Responsabilidad Civil Individual",
     "edit_emission_vida_collective_pymes":  "Editar EmisiÃ³n Vida Colectiva Pymes",
@@ -255,7 +255,7 @@
     "branches":  "Ramos",
     "products":  "Productos",
     "plans":  "Planes",
-    "chat":  "Chat",
+    "chat":  "CHAT",
     "web_chat":  "Chat Web",
     "bayer_status":  "Estado Bayer",
     "modify_bayer_status":  "Modificar estado Bayer",
@@ -317,10 +317,10 @@
     "list_clients":  "Lista de Clientes",
     "list_employees":  "Lista de Empleados",
     "list_dependents":  "Lista de Dependientes",
-    "add_dependents":  "Agregar Dependientes",
+    "add_dependents":  "Agregar",
     "dependents_list":  "Lista Dependientes",
     "documents_list":  "Lista de Documentos",
-    "add_dependence":  "Agregar Dependencia",
+    "add_dependence":  "Agregar",
     "add_vehicle":  "Agregar VehÃ­culo",
     "add_home":  "Agregar Hogar",
     "add_collaborators":  "Agregar Colaboradores",

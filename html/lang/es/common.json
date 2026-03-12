@@ -1,4 +1,4 @@
-﻿{
+{
     "category":  "Ramo",
     "list_sellers":  "Lista de Vendedores",
     "fecha_seguimiento":  "FECHA SEGUIMIENTO",
@@ -21,7 +21,7 @@
     "id_card_table":  "CÃ©dula",
     "quotation":  "CotizaciÃ³n",
     "modify":  "Modificar",
-    "chat":  "Chat",
+    "chat":  "CHAT",
     "check_email_format":  "Favor de revisar, correo mal ingresado",
     "inactive":  "Inactivo",
     "vehicle_forms":  "Formularios VehÃ­culo",
@@ -317,7 +317,7 @@
     "date":  "Fecha",
     "type":  "Tipo",
     "download_document":  "Descargar Documento",
-    "add_dependents":  "Agregar Dependientes",
+    "add_dependents":  "Agregar",
     "web_assignment":  "AsignaciÃ³n Web",
     "prospect_deleted":  "El Prospecto ha sido eliminado.",
     "origin_friend":  "AMIGO",

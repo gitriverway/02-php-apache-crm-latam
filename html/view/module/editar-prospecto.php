@@ -77,7 +77,7 @@ $t = function ($key) {
                                         <?php echo ($_SESSION["S_ROL"] == "VENDEDOR") ? "disabled" : ""; ?>>
                                         <option value="RIVERWAY" selected><?php echo $t('options.mqp'); ?></option>
                                         <option value="AMIGO"><?php echo $t('options.friend'); ?></option>
-                                        <option value="CHAT"><?php echo $t('options.chat'); ?></option>
+                                        <option value=CHAT><?php echo $t('options.chat'); ?></option>
                                         <option value="OTROS"><?php echo $t('options.others'); ?></option>
                                     </select>
                                 </div>
@@ -428,8 +428,8 @@ $t = function ($key) {
                                             BOTÓN PARA AGREGAR DEPENDIENTE
                                             ======================================-->
                                         <div class="form-group row">
-                                            <button type="button" class="btn btn-default btnAgregarDependiente">Agregar
-                                                Dependencia</button>
+                                            <button type="button"
+                                                class="btn btn-default btnAgregarDependiente"><?php echo $t("form.add_dependents"); ?></button>
                                             <input type="hidden" id="listaFamiliares" name="listaFamiliares">
                                         </div>
                                         <!--=====================================

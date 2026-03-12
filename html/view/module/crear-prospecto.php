@@ -59,7 +59,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <option value="RIVERWAY" selected><?php echo $t('list_tables.origin_mqp'); ?>
                                         </option>
                                         <option value="AMIGO"><?php echo $t('list_tables.origin_friend'); ?></option>
-                                        <option value="CHAT"><?php echo $t('list_tables.origin_chat'); ?></option>
+                                        <option value=CHAT><?php echo $t('list_tables.origin_chat'); ?></option>
                                         <option value="OTROS"><?php echo $t('list_tables.origin_others'); ?></option>
                                     </select>
                                 </div>

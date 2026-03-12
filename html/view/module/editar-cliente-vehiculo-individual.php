@@ -71,7 +71,7 @@ $t = function ($key) {
                                         <option value=""><?php echo $t('messages.select_option'); ?></option>
                                         <option value="RIVERWAY"><?php echo $t('list_tables.origin_mqp'); ?></option>
                                         <option value="AMIGO"><?php echo $t('list_tables.origin_friend'); ?></option>
-                                        <option value="CHAT"><?php echo $t('list_tables.origin_chat'); ?></option>
+                                        <option value=CHAT><?php echo $t('list_tables.origin_chat'); ?></option>
                                         <option value="OTROS"><?php echo $t('list_tables.origin_others'); ?></option>
                                     </select>
                                 </div>
