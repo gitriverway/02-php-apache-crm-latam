@@ -49,6 +49,7 @@ $forma_pago = htmlspecialchars($_POST['forma_pago'], ENT_QUOTES, 'UTF-8');
 $estado_bayer = htmlspecialchars($_POST['estado_bayer'], ENT_QUOTES, 'UTF-8');
 $listaFamiliares = $_POST['listaFamiliares'];
 $listaVehiculos = $_POST['listaVehiculos'];
+$listaViajes = $_POST['listaViajes'];
 $listaHogares = $_POST['listaHogares'];
 //$listaHogares = [];
 $listaObservaciones = $_POST['listaObservaciones'];
@@ -59,7 +60,7 @@ $cantidad = htmlspecialchars($_POST['cantidad'], ENT_QUOTES, 'UTF-8');
 $idEmpleado  = htmlspecialchars($_POST['idEmpleado'], ENT_QUOTES, 'UTF-8');
 
 $MU = new Modelo_Bayer_Persona();
-$consulta = $MU->Modificar_Prospecto($idBayer, $origen, $categoria, $cedula, $nombre_prospecto, $fecha_nacimiento, $genero, $estado_civil, $telefono, $email, $provincia, $ciudad, $direccion, $ocupacion, $valor_ingreso, $valor_asegurado, $prima_total, $tipo_pago, $forma_pago, $listaObservaciones, $idUsuario, $estado_bayer, $idProducto, $fechaActual, $proveedor, $contra, $fecha_seguimiento, $idCliente, $prima_comisionable, $prima_neta, $nueva_categoria, $idDependiente, $listaFamiliares, $listaVehiculos, $idEmpleado, $listaHogares);
+$consulta = $MU->Modificar_Prospecto($idBayer, $origen, $categoria, $cedula, $nombre_prospecto, $fecha_nacimiento, $genero, $estado_civil, $telefono, $email, $provincia, $ciudad, $direccion, $ocupacion, $valor_ingreso, $valor_asegurado, $prima_total, $tipo_pago, $forma_pago, $listaObservaciones, $idUsuario, $estado_bayer, $idProducto, $fechaActual, $proveedor, $contra, $fecha_seguimiento, $idCliente, $prima_comisionable, $prima_neta, $nueva_categoria, $idDependiente, $listaFamiliares, $listaVehiculos, $idEmpleado, $listaHogares, $listaViajes);
 
 
 /**==================================================================================================

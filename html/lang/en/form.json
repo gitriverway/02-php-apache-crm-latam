@@ -28,7 +28,7 @@
     "last_name": "Last Name",
     "email": "Email",
     "phone": "Phone",
-    "province": "Province",
+    "city": "City",
     "country": "Country",
     "address": "Address",
     "occupation": "Occupation",
@@ -324,5 +324,12 @@
     "claim_date": "Claim Date",
     "third_party_damages": "Third Party Damages",
     "deductible_value": "Deductible Value",
-    "rasa_value": "Rasa Value"
+    "rasa_value": "Rasa Value",
+    "travel_type": "Travel Type",
+    "unique_trip": "Unique Trip",
+    "annual_trip": "Annual Trip",
+    "travel_start_date": "Travel Start Date",
+    "travel_end_date": "Travel End Date",
+    "departure_country": "Departure Country",
+    "destination_country": "Destination Country"
 }

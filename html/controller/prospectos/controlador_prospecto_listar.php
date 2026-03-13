@@ -147,7 +147,7 @@ class Lista_prospecto
                             "' . $consulta[$i]["cliente_fecha_seguimiento"] . '",
                             "' . $consulta[$i]["categoria_nombre"] . '",
                             "' . $dependiente . '",
-                            "' . $consulta[$i]["provincia_descripcion"] . '",
+                            "' . $consulta[$i]["ciudad_id"] . '",
                             "' . $consulta[$i]["cliente_telefono"] . '",
                             "' . $consulta[$i]["proveedor_descripcion"] . '",
                             "' . $consulta[$i]["producto_id"] . '",

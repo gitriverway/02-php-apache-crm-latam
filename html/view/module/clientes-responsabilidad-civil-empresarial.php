@@ -57,7 +57,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             </th>
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.holder'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.id_card'); ?></th>
-                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.province'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('list_tables.city'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.country'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.phone'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('list_tables.email'); ?></th>

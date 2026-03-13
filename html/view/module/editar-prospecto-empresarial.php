@@ -311,7 +311,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <!-- ENTRADA PARA SELECCIONAR PROVINCIA -->
                                 <div class="form-group">
                                     <label for="cbm_provincia" class="control-label"
-                                        style="text-align: right;"><?php echo $t('list_tables.province'); ?></label>
+                                        style="text-align: right;"><?php echo $t('list_tables.city'); ?></label>
                                     <select class="form-control cbm_provincia" name="state" id="cbm_provincia">
                                     </select>
                                 </div>

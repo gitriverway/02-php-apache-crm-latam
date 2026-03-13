@@ -7,7 +7,7 @@ $t = function ($key) {
 
 require '../../model/modelo_notificaciones.php';
 
-class ControladorListaNotificacionesSeguimientoSiniestroVehiculo
+class ControladorListaNotificacionesSeguimientoSiniestro<?php echo $t('vehicle'); ?>
 {
 
         static public function traer_lista_notificaciones_seguimiento_siniestro_vehiculo()
@@ -43,13 +43,13 @@ class ControladorListaNotificacionesSeguimientoSiniestroVehiculo
                         // if ($_SESSION['S_ROL'] == "ADMINISTRADOR" || $_SESSION['S_ROL'] == "GERENTE"  || $_SESSION['S_ROL'] == "CLIENTE") {
                         //         $lista = "<a class='nav-link' data-toggle='dropdown' href='#'>
                         //         <span class='badge bg-success navbar-badge'>0</span>
-                        //         <i class='far fa-bell'><strong class='d-none d-sm-inline-block'>Reembolsos </br> Asistencia Medica</strong></i>        
+                        //         <i class='far fa-bell'><strong class='d-none d-sm-inline-block'><?php echo $t('refunds'); ?> </br> <?php echo $t('medical_assistance'); ?></strong></i>        
                         //         </a>
                         //         <div class='dropdown-menu dropdown-menu-lg dropdown-menu-left'>
-                        //                 <span class='dropdown-item dropdown-header'>0 Notificaciones</span>
-                        //                 <span class='dropdown-item dropdown-header'>LISTA REEMBOLSO</span>
+                        //                 <span class='dropdown-item dropdown-header'>0 <?php echo $t('notifications'); ?></span>
+                        //                 <span class='dropdown-item dropdown-header'><?php echo $t('list_refund'); ?></span>
                         //                 <div class='dropdown-divider'></div>
-                        //                         <span class='dropdown-item dropdown-header'>SIN REGISTROS</span>
+                        //                         <span class='dropdown-item dropdown-header'><?php echo $t('no_records'); ?></span>
                         //                 <div class='dropdown-divider'></div>
                         //         </div>";
                         // }else {
@@ -69,10 +69,10 @@ class ControladorListaNotificacionesSeguimientoSiniestroVehiculo
 
                                 if ($_SESSION['S_ROL'] == "ADMINISTRADOR" || $_SESSION['S_ROL'] == "GERENTE") {
                                         $lista1 .= "<a href='siniestros-vehiculo-individual' class='dropdown-item' idCategoria = '" . $consulta[$i]["categoria_id"] . "'><i class='fas fa-envelope mr-2'></i> " . $contar . " Siniestro seguimiento</br><i class='fas fa-user mr-2'></i> " . $consulta[$i]["cliente_nombre"] . " </br><i class='fas fa-calendar mr-2'></i> " . $consulta[$i]["siniestro_fecha_seguimiento"] . "</a>";
-                                        $lista2 = "<a href='siniestros-vehiculo-individual' class='dropdown-item dropdown-footer'>Ver todas las notificaciones</a>";
+                                        $lista2 = "<a href='siniestros-vehiculo-individual' class='dropdown-item dropdown-footer'><?php echo $t('view_all_notifications'); ?></a>";
                                 } elseif ($_SESSION['S_ROL'] == "CLIENTE") {
                                         $lista1 .= "<a href='siniestros-vehiculo-individual-cliente' class='dropdown-item' idCategoria = '" . $consulta[$i]["categoria_id"] . "'><i class='fas fa-envelope mr-2'></i> " . $contar . " Siniestro seguimiento</br><i class='fas fa-user mr-2'></i> " . $consulta[$i]["cliente_nombre"] . " </br><i class='fas fa-calendar mr-2'></i> " . $consulta[$i]["siniestro_fecha_seguimiento"] . "</a>";
-                                        $lista2 = "<a href='siniestros-vehiculo-individual-cliente' class='dropdown-item dropdown-footer'>Ver todas las notificaciones</a>";
+                                        $lista2 = "<a href='siniestros-vehiculo-individual-cliente' class='dropdown-item dropdown-footer'><?php echo $t('view_all_notifications'); ?></a>";
                                 } else {
 
                                         $lista1 .= "";
@@ -80,11 +80,11 @@ class ControladorListaNotificacionesSeguimientoSiniestroVehiculo
                         }
                         $lista = "<a class='nav-link' data-toggle='dropdown' href='#'>
                         <span class='badge bg-success navbar-badge'>" . $contar . "</span>
-                        <i class='far fa-bell'><strong class='d-none d-sm-inline-block'>Siniestros </br> Vehiculo</strong></i>                
+                        <i class='far fa-bell'><strong class='d-none d-sm-inline-block'><?php echo $t('claims'); ?> </br> <?php echo $t('vehicle'); ?></strong></i>                
                                 </a>
                                 <div class='dropdown-menu dropdown-menu-lg dropdown-menu-left scrollable-menu'>
-                                <span class='dropdown-item dropdown-header'>" . $contar . " Notificaciones</span>
-                                <span class='dropdown-item dropdown-header'>LISTA SINIESTRO</span>
+                                <span class='dropdown-item dropdown-header'>" . $contar . " <?php echo $t('notifications'); ?></span>
+                                <span class='dropdown-item dropdown-header'><?php echo $t('list_claims'); ?></span>
                                         <div class='dropdown-divider'></div>
                                         " . $lista1 . "
                                         <div class='dropdown-divider'></div>
@@ -97,5 +97,5 @@ class ControladorListaNotificacionesSeguimientoSiniestroVehiculo
         }
 }
 
-$lista_notificacion_seguimiento = new ControladorListaNotificacionesSeguimientoSiniestroVehiculo();
+$lista_notificacion_seguimiento = new ControladorListaNotificacionesSeguimientoSiniestro<?php echo $t('vehicle'); ?>();
 $lista_notificacion_seguimiento->traer_lista_notificaciones_seguimiento_siniestro_vehiculo();

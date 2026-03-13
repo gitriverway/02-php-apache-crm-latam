@@ -28,7 +28,7 @@
     "last_name": "Apellido",
     "email": "Correo Electrónico",
     "phone": "Teléfono",
-    "province": "Provincia",
+    "city": "Ciudad",
     "country": "Pais",
     "address": "Dirección",
     "occupation": "Ocupación",
@@ -324,5 +324,12 @@
     "claim_date": "Fecha Siniestro",
     "third_party_damages": "Daños Terceros",
     "deductible_value": "Valor Franquicia",
-    "rasa_value": "Valor Rasa"
+    "rasa_value": "Valor Rasa",
+    "travel_type": "Tipo De Viaje",
+    "unique_trip": "Viaje Único",
+    "annual_trip": "Viaje Anual",
+    "travel_start_date": "Fecha Inicio Viaje",
+    "travel_end_date": "Fecha Fin Viaje",
+    "departure_country": "País Salida",
+    "destination_country": "País Destino"
 }

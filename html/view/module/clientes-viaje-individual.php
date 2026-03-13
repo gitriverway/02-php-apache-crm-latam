@@ -1,4 +1,5 @@
 <?php
+
 require_once __DIR__ . '/../../model/modelo_idioma.php';
 $t = function ($key) {
     return Modelo_Idioma::t($key);
@@ -23,13 +24,12 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1><?php echo $t('common.emisions_transport_pymes'); ?></h1>
+                    <h1><?php echo $t('common.emisions_vehicle'); ?></h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a
-                                href="inicio"><?php echo $t('common.emisions_personal_accidents_pymes'); ?></a></li>
-                        <li class="breadcrumb-item active"><?php echo $t('common.emisions_transport_pymes'); ?></li>
+                        <li class="breadcrumb-item"><a href="inicio"><?php echo $t('common.home'); ?></a></li>
+                        <li class="breadcrumb-item active"><?php echo $t('common.emisions_vehicle'); ?></li>
                     </ol>
                 </div>
             </div>
@@ -42,7 +42,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
         <!-- Default box -->
         <div class="card">
             <div class="card-body">
-                <table id="tabla_cliente" class="table table-bordered table-striped dt-responsive" style="width:100%">
+                <table id="tabla_cliente" class="table table-bordered table-striped" style="width:100%">
                     <thead>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
@@ -156,10 +156,10 @@ MODAL LISTAR CONTRATOS
     </div>
 </div>
 
-<script type="text/javascript" src="/js/clientes-transporte-empresarial.js?rev=<?php echo time(); ?>"></script>
+<script type="text/javascript" src="/js/clientes-vehiculo-individual.js?rev=<?php echo time(); ?>"></script>
 <script>
-    $(document).ready(function() {
-        listar_cliente();
-        listar_vendedores();
-    });
+$(document).ready(function() {
+    listar_cliente();
+    listar_vendedores();
+});
 </script>

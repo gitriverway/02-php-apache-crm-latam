@@ -53,10 +53,10 @@ class ControladorListaNotificacionesSeguimientoCliente
 
                                 if ($_SESSION['S_ROL'] == "ADMINISTRADOR" || $_SESSION['S_ROL'] == "GERENTE") {
                                         $lista1 .= "<a href='credito-ambulatorio-asistencia-medica-individual' class='dropdown-item' idCategoria = '" . $consulta[$i]["categoria_id"] . "'><i class='fas fa-envelope mr-2'></i> " . $contar . " Credito Ambulatorio seguimiento</br><i class='fas fa-user mr-2'></i> " . $consulta[$i]["cliente_nombre"] . " </br><i class='fas fa-calendar mr-2'></i> " . $consulta[$i]["credito_ambulatorio_fecha_seguimiento"] . "</a>";
-                                        $lista2 = "<a href='credito-ambulatorio-asistencia-medica-individual' class='dropdown-item dropdown-footer'>Ver todas las notificaciones</a>";
+                                        $lista2 = "<a href='credito-ambulatorio-asistencia-medica-individual' class='dropdown-item dropdown-footer'><?php echo $t('view_all_notifications'); ?></a>";
                                 } elseif ($_SESSION['S_ROL'] == "CLIENTE") {
                                         $lista1 .= "<a href='credito-ambulatorio-asistencia-medica-individual-cliente' class='dropdown-item' idCategoria = '" . $consulta[$i]["categoria_id"] . "'><i class='fas fa-envelope mr-2'></i> " . $contar . " Credito Ambulatorio seguimiento</br><i class='fas fa-user mr-2'></i> " . $consulta[$i]["cliente_nombre"] . " </br><i class='fas fa-calendar mr-2'></i> " . $consulta[$i]["credito_ambulatorio_fecha_seguimiento"] . "</a>";
-                                        $lista2 = "<a href='credito-ambulatorio-asistencia-medica-individual-cliente' class='dropdown-item dropdown-footer'>Ver todas las notificaciones</a>";
+                                        $lista2 = "<a href='credito-ambulatorio-asistencia-medica-individual-cliente' class='dropdown-item dropdown-footer'><?php echo $t('view_all_notifications'); ?></a>";
                                 } else {
 
                                         $lista1 .= "";
@@ -64,11 +64,11 @@ class ControladorListaNotificacionesSeguimientoCliente
                         }
                         $lista = "<a class='nav-link' data-toggle='dropdown' href='#'>
                         <span class='badge bg-danger navbar-badge'>" . $contar . "</span>
-                        <i class='far fa-bell'><strong class='d-none d-sm-inline-block'>Creditos Ambulatorios </br> Asistencia Medica</strong>&nbsp;</i>                
+                        <i class='far fa-bell'><strong class='d-none d-sm-inline-block'><?php echo $t('ambulatory_credits'); ?> </br> <?php echo $t('medical_assistance'); ?></strong>&nbsp;</i>                
                                 </a>
                                 <div class='dropdown-menu dropdown-menu-lg dropdown-menu-left scrollable-menu'>
-                                <span class='dropdown-item dropdown-header'>" . $contar . " Notificaciones</span>
-                                <span class='dropdown-item dropdown-header'>LISTA CREDITO AMBULATORIO</span>
+                                <span class='dropdown-item dropdown-header'>" . $contar . " <?php echo $t('notifications'); ?></span>
+                                <span class='dropdown-item dropdown-header'><?php echo $t('list_credit_ambulatory'); ?></span>
                                         <div class='dropdown-divider'></div>
                                         " . $lista1 . "
                                         <div class='dropdown-divider'></div>

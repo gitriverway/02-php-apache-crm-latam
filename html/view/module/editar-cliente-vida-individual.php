@@ -368,7 +368,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA SELECCIONAR PROVINCIA -->
                                 <div class="form-group">
                                     <label for="cbm_provincia" class="control-label"
-                                        style="text-align: right;"><?php echo $t('list_tables.province'); ?><font color="red"> *</font></label>
+                                        style="text-align: right;"><?php echo $t('list_tables.city'); ?><font color="red"> *</font></label>
                                     <select class="form-control cbm_provincia" name="state" id="cbm_provincia">
                                     </select>
                                 </div>

@@ -7,7 +7,7 @@ $t = function ($key) {
 
 require '../../model/modelo_notificaciones.php';
 
-class ControladorListaNotificacionesSeguimientoRenovacionesVehiculoIndividual
+class ControladorListaNotificacionesSeguimientoRenovaciones<?php echo $t('vehicle'); ?>Individual
 {
 
         static public function traer_lista_notificaciones_seguimiento_renovaciones_vehiculo_individual()
@@ -42,13 +42,13 @@ class ControladorListaNotificacionesSeguimientoRenovacionesVehiculoIndividual
                         // if ($_SESSION['S_ROL'] == "ADMINISTRADOR" || $_SESSION['S_ROL'] == "GERENTE") {
                         //         $lista = "<a class='nav-link' data-toggle='dropdown' href='#'>
                         //                 <span class='badge badge-success navbar-badge'>0</span>
-                        //                 <i class='far fa-comments'><strong class='d-none d-sm-inline-block'>Renovación </br> Vehiculo Individual</strong></i>
+                        //                 <i class='far fa-comments'><strong class='d-none d-sm-inline-block'><?php echo $t('renewal'); ?> </br> <?php echo $t('vehicle'); ?> Individual</strong></i>
                         //                 </a>
                         //                 <div class='dropdown-menu dropdown-menu-lg'>
-                        //                         <span class='dropdown-item dropdown-header'>0 Notificaciones</span>
+                        //                         <span class='dropdown-item dropdown-header'>0 <?php echo $t('notifications'); ?></span>
                         //                         <span class='dropdown-item dropdown-header'>LISTA RENOVACIONES - VEHICULO INDIVIDUAL</span>
                         //                         <div class='dropdown-divider'></div>
-                        //                                 <span class='dropdown-item dropdown-header'>SIN REGISTROS</span>
+                        //                                 <span class='dropdown-item dropdown-header'><?php echo $t('no_records'); ?></span>
                         //                         <div class='dropdown-divider'></div>
                         //                 </div>";
                         // } else {
@@ -63,11 +63,11 @@ class ControladorListaNotificacionesSeguimientoRenovacionesVehiculoIndividual
                         $contar = 0;
                         for ($i = 0; $i < count($consulta); $i++) {
                                 $contar = $i + 1;
-                                $lista1 .= "<a href='#' class='dropdown-item notificacionEditarCliente' idCliente = '" . $consulta[$i]["bayer_id"] . "' idCategoria = '" . $consulta[$i]["categoria_id"] . "' tipo='" . $consulta[$i]["cliente_tipo"] . "'><i class='fas fa-envelope mr-2'></i> " . $contar . " Renovación seguimiento</br><i class='fas fa-user mr-2'></i> " . $consulta[$i]["cliente_nombre"] . " </br><i class='fas fa-calendar mr-2'></i> " . $consulta[$i]["contrato_fecha_fin"] . "</a>";
+                                $lista1 .= "<a href='#' class='dropdown-item notificacionEditarCliente' idCliente = '" . $consulta[$i]["bayer_id"] . "' idCategoria = '" . $consulta[$i]["categoria_id"] . "' tipo='" . $consulta[$i]["cliente_tipo"] . "'><i class='fas fa-envelope mr-2'></i> " . $contar . " <?php echo $t('renewal'); ?> seguimiento</br><i class='fas fa-user mr-2'></i> " . $consulta[$i]["cliente_nombre"] . " </br><i class='fas fa-calendar mr-2'></i> " . $consulta[$i]["contrato_fecha_fin"] . "</a>";
                         }
                         $lista = "<a class='nav-link' data-toggle='dropdown' href='#'>
                                 <span class='badge badge-success navbar-badge'>" . $contar . "</span>
-                                <i class='far fa-comments'><strong class='d-none d-sm-inline-block'>Renovación </br> Vehiculo Individual</strong></i>
+                                <i class='far fa-comments'><strong class='d-none d-sm-inline-block'><?php echo $t('renewal'); ?> </br> <?php echo $t('vehicle'); ?> Individual</strong></i>
                                 </a>
                                 <div class='dropdown-menu dropdown-menu-lg scrollable-menu'>
                                 <span class='dropdown-item dropdown-header'>" . $contar . " Renovaciones</span>
@@ -83,5 +83,5 @@ class ControladorListaNotificacionesSeguimientoRenovacionesVehiculoIndividual
         }
 }
 
-$lista_notificacion_seguimiento = new ControladorListaNotificacionesSeguimientoRenovacionesVehiculoIndividual();
+$lista_notificacion_seguimiento = new ControladorListaNotificacionesSeguimientoRenovaciones<?php echo $t('vehicle'); ?>Individual();
 $lista_notificacion_seguimiento->traer_lista_notificaciones_seguimiento_renovaciones_vehiculo_individual();

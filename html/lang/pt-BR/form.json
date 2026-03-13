@@ -324,5 +324,12 @@
     "contract_number": "Número Contrato",
     "provider_plan": "Fornecedor/plano",
     "document": "Documento",
-    "employee": "Funcionário"
+    "employee": "Funcionário",
+    "travel_type": "Tipo De Viagem",
+    "unique_trip": "Viagem Única",
+    "annual_trip": "Viagem Anual",
+    "travel_start_date": "Data Início Viagem",
+    "travel_end_date": "Data Fim Viagem",
+    "departure_country": "País Partida",
+    "destination_country": "País Destino"
 }

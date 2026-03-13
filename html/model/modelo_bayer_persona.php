@@ -319,12 +319,12 @@ class Modelo_Bayer_Persona extends conexionBD
     /***********************************
      *******CREAR NUEVO REGRISTRO PROSPECTO
      ***********************************/
-    function Registrar_Prospecto($origen, $categoria, $idCliente, $cedula, $nombre_prospecto, $fecha_nacimiento, $genero, $estado_civil, $telefono, $email, $provincia, $ciudad, $direccion, $ocupacion, $valor_ingreso, $valor_asegurado, $prima_total, $tipo_pago, $forma_pago, $listaObservaciones, $idUsuario, $estado_bayer, $idProducto, $fechaActual, $proveedor, $contra, $fecha_seguimiento, $prima_comisionable, $prima_neta, $nueva_categoria, $listaFamiliares, $listaVehiculos, $listaHogares)
+    function Registrar_Prospecto($origen, $categoria, $idCliente, $cedula, $nombre_prospecto, $fecha_nacimiento, $genero, $estado_civil, $telefono, $email, $provincia, $ciudad, $direccion, $ocupacion, $valor_ingreso, $valor_asegurado, $prima_total, $tipo_pago, $forma_pago, $listaObservaciones, $idUsuario, $estado_bayer, $idProducto, $fechaActual, $proveedor, $contra, $fecha_seguimiento, $prima_comisionable, $prima_neta, $nueva_categoria, $listaFamiliares, $listaVehiculos, $listaHogares, $listaViajes)
     {
 
         $c = conexionBD::conexionPDO();
 
-        $sql = 'CALL SP_CREAR_PROSPECTO(:origen,:categoria,:cedula,:nombre_prospecto,:fecha_nacimiento,:genero,:estado_civil,:telefono,:email,:provincia,:ciudad,:direccion,:ocupacion,:valor_ingreso,:valor_asegurado,:prima_total,:tipo_pago,:forma_pago,:lista_observacion,:idUsuario,:estado_bayer,:idProducto,:fecha_actual,:proveedor,:contra,:fecha_seguimiento,:idCliente,:prima_comisionable,:prima_neta,:nueva_categoria,:listaFamiliares,:listaVehiculos,:listaHogares)';
+        $sql = 'CALL SP_CREAR_PROSPECTO(:origen,:categoria,:cedula,:nombre_prospecto,:fecha_nacimiento,:genero,:estado_civil,:telefono,:email,:provincia,:ciudad,:direccion,:ocupacion,:valor_ingreso,:valor_asegurado,:prima_total,:tipo_pago,:forma_pago,:lista_observacion,:idUsuario,:estado_bayer,:idProducto,:fecha_actual,:proveedor,:contra,:fecha_seguimiento,:idCliente,:prima_comisionable,:prima_neta,:nueva_categoria,:listaFamiliares,:listaVehiculos,:listaHogares,:listaViajes)';
 
         $stmt = $c->prepare($sql);
 
@@ -361,6 +361,7 @@ class Modelo_Bayer_Persona extends conexionBD
         $stmt->bindParam(':listaFamiliares', $listaFamiliares, PDO::PARAM_STR);
         $stmt->bindParam(':listaVehiculos', $listaVehiculos, PDO::PARAM_STR);
         $stmt->bindParam(':listaHogares', $listaHogares, PDO::PARAM_STR);
+        $stmt->bindParam(':listaViajes', $listaViajes, PDO::PARAM_STR);
 
 
         $stmt->execute();
@@ -382,12 +383,12 @@ class Modelo_Bayer_Persona extends conexionBD
     /***********************************
      *******MODIFICAR PROSPECTO
      ***********************************/
-    function Modificar_Prospecto($idBayer, $origen, $categoria, $cedula, $nombre_prospecto, $fecha_nacimiento, $genero, $estado_civil, $telefono, $email, $provincia, $ciudad, $direccion, $ocupacion, $valor_ingreso, $valor_asegurado, $prima_total, $tipo_pago, $forma_pago, $listaObservaciones, $idUsuario, $estado_bayer, $idProducto, $fechaActual, $proveedor, $contra, $fecha_seguimiento, $idCliente, $prima_comisionable, $prima_neta, $nueva_categoria, $idDependiente, $listaFamiliares, $listaVehiculos, $idEmpleado, $listaHogares)
+    function Modificar_Prospecto($idBayer, $origen, $categoria, $cedula, $nombre_prospecto, $fecha_nacimiento, $genero, $estado_civil, $telefono, $email, $provincia, $ciudad, $direccion, $ocupacion, $valor_ingreso, $valor_asegurado, $prima_total, $tipo_pago, $forma_pago, $listaObservaciones, $idUsuario, $estado_bayer, $idProducto, $fechaActual, $proveedor, $contra, $fecha_seguimiento, $idCliente, $prima_comisionable, $prima_neta, $nueva_categoria, $idDependiente, $listaFamiliares, $listaVehiculos, $idEmpleado, $listaHogares, $listaViajes)
     {
 
         $c = conexionBD::conexionPDO();
 
-        $sql = 'CALL SP_MODIFICAR_PROSPECTO(:idBayer,:origen,:categoria,:cedula,:nombre_prospecto,:fecha_nacimiento,:genero,:estado_civil,:telefono,:email,:provincia,:ciudad,:direccion,:ocupacion,:valor_ingreso,:valor_asegurado,:prima_total,:tipo_pago,:forma_pago,:lista_observacion,:idUsuario,:estado_bayer,:idProducto,:fecha_actual,:proveedor,:contra,:fecha_seguimiento,:idCliente,:prima_comisionable,:prima_neta,:nueva_categoria,:idDependiente,:lista_familia,:lista_vehiculo,:idEmpleado,:listaHogares)';
+        $sql = 'CALL SP_MODIFICAR_PROSPECTO(:idBayer,:origen,:categoria,:cedula,:nombre_prospecto,:fecha_nacimiento,:genero,:estado_civil,:telefono,:email,:provincia,:ciudad,:direccion,:ocupacion,:valor_ingreso,:valor_asegurado,:prima_total,:tipo_pago,:forma_pago,:lista_observacion,:idUsuario,:estado_bayer,:idProducto,:fecha_actual,:proveedor,:contra,:fecha_seguimiento,:idCliente,:prima_comisionable,:prima_neta,:nueva_categoria,:idDependiente,:lista_familia,:lista_vehiculo,:idEmpleado,:listaHogares,:listaViajes)';
 
         $stmt = $c->prepare($sql);
 
@@ -427,6 +428,7 @@ class Modelo_Bayer_Persona extends conexionBD
         $stmt->bindParam(':lista_vehiculo', $listaVehiculos, PDO::PARAM_STR);
         $stmt->bindParam(':idEmpleado', $idEmpleado, PDO::PARAM_STR);
         $stmt->bindParam(':listaHogares', $listaHogares, PDO::PARAM_STR);
+        $stmt->bindParam(':listaViajes', $listaViajes, PDO::PARAM_STR);
 
         $stmt->execute();
 

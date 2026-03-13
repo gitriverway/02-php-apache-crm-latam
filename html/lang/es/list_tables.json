@@ -6,7 +6,7 @@
     "seller": "Vendedor",
     "id_card": "Cédula/ruc",
     "name": "Nombre",
-    "province": "Provincia",
+    "city": "Ciudad",
     "country": "Pais",
     "phone": "Teléfono",
     "email": "Correo Electrónico",

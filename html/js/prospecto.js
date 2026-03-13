@@ -1047,6 +1047,269 @@ $(".nuevoVehiculo").on("click", "button.quitarVehiculo", function () {
 });
 
 /*=============================================
+  AGREGANDO VIAJE
+  =============================================*/
+
+var numViaje = 0;
+
+$(".btnAgregarViaje").click(function () {
+  numViaje++;
+
+  var estado = "";
+  var estado1 = "";
+
+  if (numViaje > 1) {
+    estado = "d-md-none";
+    estado1 = "d-none";
+  } else {
+    estado = "";
+    estado1 = "";
+  }
+
+  $(".nuevoViaje").append(
+    '<div class="col-12 my-1">' +
+      '<div class="row gridMiembroViajes">' +
+      "<!-- Tipo Viaje -->" +
+      '<div class="col-6 col-md-2 order-md-1 my-1 ' +
+      estado +
+      ' etiquetaTipoViaje" id = "etiquetaTipoViaje' +
+      numViaje +
+      '" style="padding-right:0px">' +
+      "<label>" +
+      t("form_labels.travel_type", "Tipo De Viaje") +
+      "</label>" +
+      "</div>" +
+      '<div class="col-6 col-md-2 order-md-6 my-1" style="padding-right:0px">' +
+      '<div class="input-group">' +
+      '<select class="form-control tipoViaje" id="tipoViaje' +
+      numViaje +
+      '" name="tipoViaje' +
+      numViaje +
+      '" required>' +
+      '<option value="" disabled selected>Seleccione..</option>' +
+      '<option value="UNICO">' + t("form_labels.unique_trip", "Viaje Único") + '</option>' +
+      '<option value="ANUAL">' + t("form_labels.annual_trip", "Viaje Anual") + '</option>' +
+      "</select>" +
+      "</div>" +
+      "</div>" +
+      "<!-- Fecha Inicio -->" +
+      '<div class="col-6 col-md-2 order-md-2 my-1 ' +
+      estado +
+      ' etiquetaFechaInicioViaje" id = "etiquetaFechaInicioViaje' +
+      numViaje +
+      '" style="padding-right:0px">' +
+      "<label>" +
+      t("form_labels.travel_start_date", "Fecha Inicio Viaje") +
+      "</label>" +
+      "</div>" +
+      '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
+      '<div class="input-group">' +
+      '<input type="date" class="form-control fechaInicioViaje" id="fechaInicioViaje' +
+      numViaje +
+      '" name="fechaInicioViaje' +
+      numViaje +
+      '" required>' +
+      "</div>" +
+      "</div>" +
+      "<!-- Fecha Fin -->" +
+      '<div class="col-6 col-md-2 order-md-3 my-1 ' +
+      estado +
+      ' etiquetaFechaFinViaje" id = "etiquetaFechaFinViaje' +
+      numViaje +
+      '" style="padding-right:0px">' +
+      "<label>" +
+      t("form_labels.travel_end_date", "Fecha Fin Viaje") +
+      "</label>" +
+      "</div>" +
+      '<div class="col-6 col-md-2 order-md-8 my-1" style="padding-right:0px">' +
+      '<div class="input-group">' +
+      '<input type="date" class="form-control fechaFinViaje" id="fechaFinViaje' +
+      numViaje +
+      '" name="fechaFinViaje' +
+      numViaje +
+      '" required>' +
+      "</div>" +
+      "</div>" +
+      "<!-- País Salida -->" +
+      '<div class="col-6 col-md-2 order-md-4 my-1 ' +
+      estado +
+      ' etiquetaPaisSalidaViaje" id = "etiquetaPaisSalidaViaje' +
+      numViaje +
+      '" style="padding-right:0px">' +
+      "<label>" +
+      t("form_labels.departure_country", "País Salida") +
+      "</label>" +
+      "</div>" +
+      '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-right:0px">' +
+      '<div class="input-group">' +
+      '<input type="text" class="form-control paisSalidaViaje" id="paisSalidaViaje' +
+      numViaje +
+      '" name="paisSalidaViaje' +
+      numViaje +
+      '" placeholder="PAÍS SALIDA" autocomplete="off" style="text-transform: uppercase" required>' +
+      "</div>" +
+      "</div>" +
+      "<!-- País Destino -->" +
+      '<div class="col-6 col-md-2 order-md-5 my-1 ' +
+      estado +
+      ' etiquetaPaisDestinoViaje" id = "etiquetaPaisDestinoViaje' +
+      numViaje +
+      '" style="padding-right:0px">' +
+      "<label>" +
+      t("form_labels.destination_country", "País Destino") +
+      "</label>" +
+      "</div>" +
+      '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-right:0px">' +
+      '<div class="input-group">' +
+      '<input type="text" class="form-control paisDestinoViaje" id="paisDestinoViaje' +
+      numViaje +
+      '" name="paisDestinoViaje' +
+      numViaje +
+      '" placeholder="PAÍS DESTINO" autocomplete="off" style="text-transform: uppercase" required>' +
+      "</div>" +
+      "</div>" +
+      "<!-- Acciones -->" +
+      '<div class="col-6 col-md-2 order-md-11 my-1 ' +
+      estado1 +
+      ' etiquetaAccionesViaje" id = "etiquetaAccionesViaje' +
+      numViaje +
+      '" style="padding-right:0px">' +
+      "<label></label>" +
+      "</div>" +
+      '<div class="col-12 col-md-2 order-md-12 my-1" style="padding-right:0px">' +
+      '<button type="button" class="form-control btn btn-danger quitarViaje" idViaje="' +
+      numViaje +
+      '"><i class="fa fa-times"></i></button>' +
+      "</div>" +
+      "</div>" +
+      "</div>",
+  );
+});
+
+/*=============================================
+  RECARGAR ETIQUETAS LISTAR VIAJE
+  =============================================*/
+
+function recargarEtiquetaslistarViajes() {
+  var tipo = $(".etiquetaTipoViaje");
+  var fechaInicio = $(".etiquetaFechaInicioViaje");
+  var fechaFin = $(".etiquetaFechaFinViaje");
+  var paisSalida = $(".etiquetaPaisSalidaViaje");
+  var paisDestino = $(".etiquetaPaisDestinoViaje");
+  var acciones = $(".etiquetaAccionesViaje");
+
+  for (var i = 0; i < tipo.length; i++) {
+    let tipo1 = $(tipo[i]).attr("id");
+    let fechaInicio1 = $(fechaInicio[i]).attr("id");
+    let fechaFin1 = $(fechaFin[i]).attr("id");
+    let paisSalida1 = $(paisSalida[i]).attr("id");
+    let paisDestino1 = $(paisDestino[i]).attr("id");
+    let acciones1 = $(acciones[i]).attr("id");
+
+    if (i == 0) {
+      $("#" + tipo1).removeClass("d-md-none");
+      $("#" + fechaInicio1).removeClass("d-md-none");
+      $("#" + fechaFin1).removeClass("d-md-none");
+      $("#" + paisSalida1).removeClass("d-md-none");
+      $("#" + paisDestino1).removeClass("d-md-none");
+      $("#" + acciones1).removeClass("d-none");
+    } else {
+      $("#" + tipo1).removeClass("d-md-none");
+      $("#" + fechaInicio1).removeClass("d-md-none");
+      $("#" + fechaFin1).removeClass("d-md-none");
+      $("#" + paisSalida1).removeClass("d-md-none");
+      $("#" + paisDestino1).removeClass("d-md-none");
+      $("#" + acciones1).removeClass("d-none");
+
+      $("#" + tipo1).addClass("d-md-none");
+      $("#" + fechaInicio1).addClass("d-md-none");
+      $("#" + fechaFin1).addClass("d-md-none");
+      $("#" + paisSalida1).addClass("d-md-none");
+      $("#" + paisDestino1).addClass("d-md-none");
+      $("#" + acciones1).addClass("d-none");
+    }
+  }
+}
+
+/*=============================================
+  LISTAR VIAJES
+  =============================================*/
+
+function listarViajes() {
+  var listaViajes = [];
+
+  var tipo = $(".tipoViaje");
+  var fechaInicio = $(".fechaInicioViaje");
+  var fechaFin = $(".fechaFinViaje");
+  var paisSalida = $(".paisSalidaViaje");
+  var paisDestino = $(".paisDestinoViaje");
+
+  for (var i = 0; i < tipo.length; i++) {
+    listaViajes.push({
+      tipo: $(tipo[i]).val().trim(),
+      fecha_inicio: $(fechaInicio[i]).val(),
+      fecha_fin: $(fechaFin[i]).val(),
+      pais_salida: $(paisSalida[i]).val().trim().toUpperCase(),
+      pais_destino: $(paisDestino[i]).val().trim().toUpperCase(),
+    });
+  }
+
+  $("#listaViajes").val(JSON.stringify(listaViajes));
+}
+
+/*=============================================
+  QUITAR VIAJE
+  =============================================*/
+
+var idQuitarViaje = [];
+
+localStorage.removeItem("quitarViaje");
+
+$(".nuevoViaje").on("click", "button.quitarViaje", function () {
+  $(this).parent().parent().parent().remove();
+
+  var idViaje = $(this).attr("idViaje");
+
+  /*=============================================
+    ALMACENAR EN EL LOCALSTORAGE EL ID DEL PRODUCTO A QUITAR
+    =============================================*/
+
+  if (localStorage.getItem("quitarViaje") == null) {
+    idQuitarViaje = [];
+  } else {
+    idQuitarViaje.concat(localStorage.getItem("quitarViaje"));
+  }
+
+  idQuitarViaje.push({
+    idViaje: idViaje,
+  });
+
+  localStorage.setItem("quitarViaje", JSON.stringify(idQuitarViaje));
+
+  numViaje--;
+
+  if ($(".nuevoViaje").children().length == 0) {
+    $("#listaViajes").val("");
+  } else {
+    listarViajes();
+    recargarEtiquetaslistarViajes();
+  }
+});
+
+  localStorage.setItem("quitarViaje", JSON.stringify(idQuitarViaje));
+
+  numViaje--;
+
+  if ($(".nuevoViaje").children().length == 0) {
+    $("#listaViajes").val("");
+  } else {
+    // AGRUPAR FAMILIARES EN FORMATO JSON
+    listarViajes();
+    recargarEtiquetaslistarViajes();
+  }
+});
+
+/*=============================================
   AGREGANDO OBSERVACION
   =============================================*/
 
@@ -1251,6 +1514,7 @@ function LimpiarRegistro() {
   $(".nuevaObservacion").empty();
   $("#listaFamiliares").val("");
   $("#listaVehiculos").val("");
+  $("#listaViajes").val("");
   $("#listaObservaciones").val("");
   $("#cbm_origen").val("").change();
   $("#cbm_proveedor").val("").change();
@@ -1289,6 +1553,7 @@ function eliminar_overlay_prospecto() {
 function Registrar_Cliente() {
   listarFamiliares();
   listarVehiculos();
+  listarViajes();
   listarHogares();
   listarDocumentos();
 
@@ -1320,6 +1585,7 @@ function Registrar_Cliente() {
   var estado_bayer = $("#cbm_estado_bayer").val();
   var listaFamiliares = $("#listaFamiliares").val();
   var listaVehiculos = $("#listaVehiculos").val();
+  var listaViajes = $("#listaViajes").val();
   var listaHogares = $("#listaHogares").val();
   var listaObservaciones = $("#listaObservaciones").val();
   var fecha_seguimiento = $("#txt_fecha_seguimiento").val().trim();
@@ -1481,6 +1747,24 @@ function Registrar_Cliente() {
       }
     }
 
+    if (listaViajes.length > 0) {
+      var data = JSON.parse(listaViajes);
+      if (data.length > 0) {
+        for (var i = 0; i < data.length; i++) {
+          var tipo_dependiente = data[i]["tipo"];
+          var genero_dependiente = data[i]["genero"];
+          var edad_dependiente = data[i]["edad"];
+          if (
+            tipo_dependiente.length == 0 ||
+            genero_dependiente.length == 0 ||
+            edad_dependiente == null
+          ) {
+            cont++;
+          }
+        }
+      }
+    }
+
     if (listaHogares.length > 0) {
       var data2 = JSON.parse(listaHogares);
       if (data2.length > 0) {
@@ -1575,6 +1859,7 @@ function Registrar_Cliente() {
   datos.append("estado_bayer", estado_bayer);
   datos.append("listaFamiliares", listaFamiliares);
   datos.append("listaVehiculos", listaVehiculos);
+  datos.append("listaViajes", listaViajes);
   datos.append("listaHogares", listaHogares);
   datos.append("listaObservaciones", listaObservaciones);
   datos.append("fecha_seguimiento", fecha_seguimiento);
@@ -1690,6 +1975,7 @@ function cargar_datos_prospecto() {
         $("#txt_idDependiente").val(data[0]["bayer_dependiente_id"]);
         $("#listaFamiliares").val(data[0]["cliente_familiares"]);
         $("#listaVehiculos").val(data[0]["cliente_vehiculos"]);
+        $("#listaViajes").val(data[0]["cliente_viajes"]);
         $("#listaHogares").val(data[0]["cliente_hogares"]);
 
         // PONER FORMATO AL PRECIO DE LOS PRODUCTOS
@@ -1697,6 +1983,7 @@ function cargar_datos_prospecto() {
 
         agregar_auto_familiares();
         agregar_auto_vehiculos();
+        agregar_auto_viajes();
         agregar_auto_hogares();
         agregar_auto_observaciones();
         actualizar_edad_fecha_nacimiento();
@@ -2169,6 +2456,224 @@ function agregar_auto_vehiculos() {
   }
 }
 
+function agregar_auto_viajes() {
+  var lista = $("#listaViajes").val();
+
+  if (lista.length > 0) {
+    var data = JSON.parse(lista);
+
+    for (let i = 0; i < data.length; i++) {
+      numViaje++;
+
+      var estado = "";
+      var estado1 = "";
+      var valor = 0;
+
+      if (numViaje > 1) {
+        estado = "d-md-none";
+        estado1 = "d-none";
+      } else {
+        estado = "";
+        estado1 = "";
+      }
+
+      if (data[i]["valor_deducible"] > 0) {
+        valor = data[i]["valor_deducible"];
+      } else {
+        valor = 0;
+      }
+
+      $(".nuevoViaje").append(
+        '<div class="col-12 my-1">' +
+          '<div class="row gridMiembroViajes">' +
+          "<!-- Tipo Vehiculo -->" +
+          '<div class="col-6 col-md-2 order-md-1 my-1 ' +
+          estado +
+          ' etiquetaTipoVehiculos" id = "etiquetaTipoVehiculos' +
+          numViaje +
+          '" style="padding-right:0px">' +
+          "<label>" +
+          t("form_labels.tipo_vehiculo", "Tipo Vehículo") +
+          "</label>" +
+          "</div>" +
+          '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-right:0px">' +
+          '<div class="input-group">' +
+          '<select class="form-control tipoVehiculo" id="tipoVehiculo' +
+          numViaje +
+          '" name="tipoVehiculo' +
+          numViaje +
+          '" required>' +
+          '<option value="" disabled selected>Seleccione..</option>' +
+          '<option value="LIVIANO">LIVIANO</option>' +
+          '<option value="CAMIONETA">CAMIONETA</option>' +
+          '<option value="LIVIANO APLICACION">LIVIANO APLICACION</option>' +
+          '<option value="MOTOS">MOTOS</option>' +
+          '<option value="PESADO">PESADO</option>' +
+          '<option value="FURGONETA ESCOLAR">FURGONETA ESCOLAR Y TURISMO</option>' +
+          "</select>" +
+          "</div>" +
+          "</div>" +
+          "<!-- Marca -->" +
+          '<div class="col-6 col-md-2 order-md-2 my-1 ' +
+          estado +
+          ' etiquetaMarcaVehiculo" id = "etiquetaMarcaVehiculo' +
+          numViaje +
+          '">' +
+          "<label>" +
+          t("form_labels.marca", t("form_labels.brand", "Marca")) +
+          "</label>" +
+          "</div>" +
+          '<div class="col-6 col-md-2 order-md-10 my-1">' +
+          '<div class="input-group">' +
+          '<input type="text" class="form-control validarNumerosLetras marcaVehiculo" id="marcaVehiculo' +
+          numViaje +
+          '" name="marcaVehiculo' +
+          numViaje +
+          '" placeholder="MARCA VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
+          data[i][t("form_labels.brand", "Marca")] +
+          '"></input>' +
+          "</div>" +
+          "</div>" +
+          "<!-- Modelo -->" +
+          '<div class="col-6 col-md-2 order-md-3 my-1 ' +
+          estado +
+          ' etiquetaModeloVehiculo" id = "etiquetaModeloVehiculo' +
+          numViaje +
+          '">' +
+          "<label>" +
+          t("form_labels.modelo", t("form_labels.model", "Modelo")) +
+          "</label>" +
+          "</div>" +
+          '<div class="col-6 col-md-2 order-md-11 my-1">' +
+          '<input type="text" class="form-control validarNumerosLetras modeloVehiculo" id="modeloVehiculo' +
+          numViaje +
+          '" name="modeloVehiculo' +
+          numViaje +
+          '" placeholder="MODELO VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
+          data[i][t("form_labels.model", "Modelo")] +
+          '"></input>' +
+          "</div>" +
+          "<!-- Color -->" +
+          '<div class="col-6 col-md-2 order-md-4 my-1 ' +
+          estado +
+          ' etiquetaColorVehiculo" id = "etiquetaColorVehiculo' +
+          numViaje +
+          '" style="padding-left:0px">' +
+          "<label>" +
+          t("form_labels.color", t("form_labels.color", "Cor")) +
+          "</label>" +
+          "</div>" +
+          '<div class="col-6 col-md-2 order-md-12 my-1" style="padding-left:0px">' +
+          '<div class="input-group">' +
+          '<input type="text" class="form-control colorVehiculo" id="colorVehiculo' +
+          numViaje +
+          '" name="colorVehiculo' +
+          numViaje +
+          '" placeholder="COLOR VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
+          data[i][t("form_labels.color", "Cor")] +
+          '"></input>' +
+          "</div>" +
+          "</div>" +
+          "<!-- Año -->" +
+          '<div class="col-6 col-md-1 order-md-5 my-1 ' +
+          estado +
+          ' etiquetaAnoVehiculo" id = "etiquetaAnoVehiculo' +
+          numViaje +
+          '" style="padding-left:0px">' +
+          "<label>" +
+          t("form_labels.anno", "Año") +
+          "</label>" +
+          "</div>" +
+          '<div class="col-6 col-md-1 order-md-13 my-1" style="padding-left:0px">' +
+          '<div class="input-group">' +
+          '<input type="text" class="form-control validarNumerosLetras anoVehiculo" id="anoVehiculo' +
+          numViaje +
+          '" name="anoVehiculo' +
+          numViaje +
+          '" placeholder="AÑO VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
+          data[i]["ano"] +
+          '" maxlength="4"></input>' +
+          "</div>" +
+          "</div>" +
+          "<!-- Placa -->" +
+          '<div class="col-6 col-md-1 order-md-6 my-1 ' +
+          estado +
+          ' etiquetaPlacaVehiculo" id = "etiquetaPlacaVehiculo' +
+          numViaje +
+          '" style="padding-left:0px">' +
+          "<label>" +
+          t("form_labels.placa", t("form_labels.plate", "Placa")) +
+          "</label>" +
+          "</div>" +
+          '<div class="col-6 col-md-1 order-md-14 my-1" style="padding-left:0px">' +
+          '<div class="input-group">' +
+          '<input type="text" class="form-control validarNumerosLetras placaVehiculo" id="placaVehiculo' +
+          numViaje +
+          '" name="placaVehiculo' +
+          numViaje +
+          '" placeholder="PLACA VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
+          data[i][t("form_labels.plate", "Placa")] +
+          '" maxlength="10"></input>' +
+          "</div>" +
+          "</div>" +
+          "<!-- Monto -->" +
+          '<div class="col-6 col-md-1 order-md-7 my-1 ' +
+          estado +
+          ' etiquetaMontoVehiculo" id = "etiquetaMontoVehiculo' +
+          numViaje +
+          '" style="padding-left:0px">' +
+          "<label>" +
+          t("form_labels.monto", t("form_labels.amount", "Valor")) +
+          "</label>" +
+          "</div>" +
+          '<div class="col-6 col-md-1 order-md-15 my-1" style="padding-left:0px">' +
+          '<div class="input-group">' +
+          '<input type="text" class="form-control validarNumerosLetras montoVehiculo" id="montoVehiculo' +
+          numViaje +
+          '" name="montoVehiculo' +
+          numViaje +
+          '" placeholder="MONTO VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
+          data[i][t("form_labels.amount", "Valor")] +
+          '"></input>' +
+          "</div>" +
+          "</div>" +
+          "<!-- Acciones -->" +
+          '<div class="col-6 col-md-1 order-md-8 my-1 ' +
+          estado1 +
+          ' etiquetaAcciones" id = "etiquetaAcciones' +
+          numViaje +
+          '" style="padding-left:0px">' +
+          "<label></label>" +
+          "</div>" +
+          '<div class="col-12 col-md-1 order-md-16 my-1" style="padding-left:0px">' +
+          '<input type="hidden" class="valor_deducible_vehiculo" id="valor_deducible_vehiculo' +
+          numViaje +
+          '" name="valor_deducible_vehiculo' +
+          numViaje +
+          '" value="' +
+          valor +
+          '">' +
+          '<button type="button" class="form-control btn btn-danger quitarVehiculo idVehiculo="' +
+          numViaje +
+          '"><i class="fa fa-times"></i></button>' +
+          "</div>" +
+          "</div>" +
+          "</div>",
+      );
+
+      $("#tipoVehiculo" + numViaje)
+        .val(data[i]["tipo"])
+        .change();
+
+      $("#estadoCivil" + numViaje)
+        .val(
+          data[i]["estado_civil"] ? data[i]["estado_civil"].toUpperCase() : "",
+        )
+        .change();
+    }
+  }
+}
+
 function agregar_auto_observaciones() {
   var idProspecto = $("#txt_idProspecto").val();
 
@@ -2285,6 +2790,7 @@ function listarDocumentos() {
 function Modificar_Prospecto() {
   listarFamiliares();
   listarVehiculos();
+  listarViajes();
   listarHogares();
   listarDocumentos();
 
@@ -2318,6 +2824,7 @@ function Modificar_Prospecto() {
   var idDependiente = $("#txt_idDependiente").val();
   var listaFamiliares = $("#listaFamiliares").val();
   var listaVehiculos = $("#listaVehiculos").val();
+  var listaViajes = $("#listaViajes").val();
   var listaHogares = $("#listaHogares").val();
   var listaObservaciones = $("#listaObservaciones").val();
   var fecha_seguimiento = $("#txt_fecha_seguimiento").val().trim();
@@ -2499,6 +3006,34 @@ function Modificar_Prospecto() {
       }
     }
 
+    if (listaViajes.length > 0) {
+      var data1 = JSON.parse(listaViajes);
+      if (data1.length > 0) {
+        for (var i = 0; i < data1.length; i++) {
+          var tipo_vehiculo = data1[i]["tipo"];
+          var marca = data1[i][t("form_labels.brand", "Marca")];
+          var modelo = data1[i][t("form_labels.model", "Modelo")];
+          var color = data1[i][t("form_labels.color", "Cor")];
+          var placa = data1[i][t("form_labels.plate", "Placa")];
+          var ano = data1[i]["ano"];
+          var edad_vehiculo = data1[i]["edad"];
+          var monto = data1[i][t("form_labels.amount", "Valor")];
+          if (
+            tipo_vehiculo.length == 0 ||
+            marca.length == 0 ||
+            modelo.length == 0 ||
+            color.length == 0 ||
+            placa.length == 0 ||
+            ano.length == 0 ||
+            edad_vehiculo == null ||
+            monto.length == 0
+          ) {
+            cont1++;
+          }
+        }
+      }
+    }
+
     if (listaHogares.length > 0) {
       var data2 = JSON.parse(listaHogares);
       if (data2.length > 0) {
@@ -2595,6 +3130,7 @@ function Modificar_Prospecto() {
   datos.append("idDependiente", idDependiente);
   datos.append("listaFamiliares", listaFamiliares);
   datos.append("listaVehiculos", listaVehiculos);
+  datos.append("listaViajes", listaViajes);
   datos.append("listaHogares", listaHogares);
   datos.append("listaObservaciones", listaObservaciones);
   datos.append("fecha_seguimiento", fecha_seguimiento);

@@ -6,7 +6,7 @@
     "seller": "Vendedor",
     "id_card": "Cpf/cnpj",
     "name": "Nome",
-    "province": "Estado",
+    "city": "Ciudad",
     "country": "País De Residência",
     "phone": "Telefone",
     "email": "Email",

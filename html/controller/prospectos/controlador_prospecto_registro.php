@@ -47,6 +47,7 @@ $forma_pago = htmlspecialchars($_POST['forma_pago'], ENT_QUOTES, 'UTF-8');
 $estado_bayer = htmlspecialchars($_POST['estado_bayer'], ENT_QUOTES, 'UTF-8');
 $listaFamiliares = $_POST['listaFamiliares'];
 $listaVehiculos = $_POST['listaVehiculos'];
+$listaViajes = $_POST['listaViajes'];
 $listaHogares = $_POST['listaHogares'];
 //$listaHogares = [];
 $listaObservaciones = $_POST['listaObservaciones'];
@@ -58,7 +59,7 @@ $cantidad = htmlspecialchars($_POST['cantidad'], ENT_QUOTES, 'UTF-8');
 
 $MU = new Modelo_Bayer_Persona();
 
-$consulta = $MU->Registrar_Prospecto($origen, $categoria, $idCliente, $cedula, $nombre_prospecto, $fecha_nacimiento, $genero, $estado_civil, $telefono, $email, $provincia, $ciudad, $direccion, $ocupacion, $valor_ingreso, $valor_asegurado, $prima_total, $tipo_pago, $forma_pago, $listaObservaciones, $idUsuario, $estado_bayer, $idProducto, $fechaActual, $proveedor, $contra, $fecha_seguimiento, $prima_comisionable, $prima_neta, $nueva_categoria, $listaFamiliares, $listaVehiculos, $listaHogares);
+$consulta = $MU->Registrar_Prospecto($origen, $categoria, $idCliente, $cedula, $nombre_prospecto, $fecha_nacimiento, $genero, $estado_civil, $telefono, $email, $provincia, $ciudad, $direccion, $ocupacion, $valor_ingreso, $valor_asegurado, $prima_total, $tipo_pago, $forma_pago, $listaObservaciones, $idUsuario, $estado_bayer, $idProducto, $fechaActual, $proveedor, $contra, $fecha_seguimiento, $prima_comisionable, $prima_neta, $nueva_categoria, $listaFamiliares, $listaVehiculos, $listaHogares, $listaViajes);
 
 foreach ($consulta as $value) {
     $idBayer = $value["valor"];

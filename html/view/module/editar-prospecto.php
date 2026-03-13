@@ -354,7 +354,7 @@ $t = function ($key) {
                                 <!-- ENTRADA PARA SELECCIONAR PROVINCIA -->
                                 <div class="form-group">
                                     <label for="cbm_provincia" class="control-label"
-                                        style="text-align: right;"><?php echo $t('list_tables.province'); ?></label>
+                                        style="text-align: right;"><?php echo $t('list_tables.city'); ?></label>
                                     <select class="form-control cbm_provincia" name="state" id="cbm_provincia">
                                     </select>
                                 </div>
@@ -447,8 +447,8 @@ $t = function ($key) {
                                 BOTÓN PARA AGREGAR VEHICULO
                                 ======================================-->
                                         <div class="form-group row d-none">
-                                            <button type="button" class="btn btn-default btnAgregarVehiculo">Agregar
-                                                Vehiculo</button>
+                                            <button type="button"
+                                                class="btn btn-default btnAgregarVehiculo"><?php echo $t("form.add_vehicle"); ?></button>
                                             <input type="hidden" id="listaVehiculos" name="listaVehiculos">
                                         </div>
                                         <!--=====================================
@@ -463,11 +463,30 @@ $t = function ($key) {
 
                                     <div class="col-sm-12">
                                         <!--=====================================
+                                BOTÓN PARA AGREGAR VIAJE
+                                ======================================-->
+                                        <div class="form-group row">
+                                            <button type="button"
+                                                class="btn btn-default btnAgregarViaje"><?php echo $t("form.add_travel"); ?></button>
+                                            <input type="hidden" id="listaViajes" name="listaViajes">
+                                        </div>
+                                        <!--=====================================
+                                ENTRADA PARA AGREGAR VIAJE
+                                ======================================-->
+
+                                        <div class="form-group row nuevoViaje">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <!--=====================================
                                 BOTÓN PARA AGREGAR HOGAR
                                 ======================================-->
                                         <div class="form-group row d-none">
-                                            <button type="button" class="btn btn-default btnAgregarHogar">Agregar
-                                                Hogar</button>
+                                            <button type="button"
+                                                class="btn btn-default btnAgregarHogar"><?php echo $t("form.add_home"); ?></button>
                                             <input type="hidden" id="listaHogares" name="listaHogares">
                                         </div>
                                         <!--=====================================

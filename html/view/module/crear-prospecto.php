@@ -329,7 +329,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 <!-- ENTRADA PARA SELECCIONAR PROVINCIA -->
                                 <div class="form-group">
                                     <label for="cbm_provincia" class="control-label"
-                                        style="text-align: right;"><?php echo $t('list_tables.province'); ?><font
+                                        style="text-align: right;"><?php echo $t('list_tables.city'); ?><font
                                             color="red"> *</font></label>
                                     <select class="form-control cbm_provincia" name="state" id="cbm_provincia">
                                     </select>
@@ -432,6 +432,25 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                 ======================================-->
 
                                         <div class="form-group row nuevoVehiculo">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <!--=====================================
+                                BOTÓN PARA AGREGAR VIAJE
+                                ======================================-->
+                                        <div class="form-group row">
+                                            <button type="button"
+                                                class="btn btn-default btnAgregarViaje"><?php echo $t("form.add_travel"); ?></button>
+                                            <input type="hidden" id="listaViajes" name="listaViajes">
+                                        </div>
+                                        <!--=====================================
+                                ENTRADA PARA AGREGAR VIAJE
+                                ======================================-->
+
+                                        <div class="form-group row nuevoViaje">
 
                                         </div>
 

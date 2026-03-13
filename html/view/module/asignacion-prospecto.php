@@ -75,7 +75,7 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                             <th style="text-align:center; width:10px"><?php echo $t('messages.id_card_table'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('messages.branches'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('messages.products'); ?></th>
-                            <th style="text-align:center; width:10px"><?php echo $t('messages.province_table'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.city_table'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('messages.phone_table'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('messages.provider_table'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('messages.plans'); ?></th>

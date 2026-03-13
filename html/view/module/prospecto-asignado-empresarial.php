@@ -66,7 +66,7 @@ $t = function ($key) {
                         ?>
                         <tr>
                             <th style="text-align:center; width:10px">#</th>
-                            <th style="text-align:center; width:10px"<?php echo $t('form.table_action'); ?></th>
+                            <th style="text-align:center; width:10px" <?php echo $t('form.table_action'); ?></th>
                             <th style="text-align:center; width:10px">
                                 <div class="form-check">
                                     <!-- <input class="form-check-input chkSeleccionarTodoAsignar" id="chkSeleccionarTodoAsignar" name="chkSeleccionarTodoAsignar" type="checkbox"> -->
@@ -80,7 +80,7 @@ $t = function ($key) {
                             <th style="text-align:center; width:10px"><?php echo $t('messages.follow_up_date'); ?></th>
                             <th style="text-align:center; width:150px"><?php echo $t('messages.branches'); ?></th>
                             <th style="text-align:center; width:150px"><?php echo $t('messages.products'); ?></th>
-                            <th style="text-align:center; width:10px"><?php echo $t('messages.province_table'); ?></th>
+                            <th style="text-align:center; width:10px"><?php echo $t('messages.city_table'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('messages.phone_table'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('messages.provider_table'); ?></th>
                             <th style="text-align:center; width:10px"><?php echo $t('messages.plans'); ?></th>
@@ -158,14 +158,14 @@ MODAL MODIFICAR ESTADO BAYER PERSONA
                                 id="cbm_estado_bayer" style="width:100%;">
                                 <option value="ABIERTO"><?php echo $t('form.open'); ?></option>
                                 <!-- <option value="NO CONTESTA"<?php echo $t("form.no_answer"); ?>/option> -->
-                                <option value="NO INTERESADO"<?php echo $t("form.not_interested"); ?>/option>
+                                <option value="NO INTERESADO" <?php echo $t("form.not_interested"); ?>/option>
                                 <option value="INTERESADO"><?php echo $t('status.interested'); ?></option>
-                                <option value="INTERESADO ALTO"<?php echo $t("form.interested_alto"); ?>/option>
-                                <option value="INTERESADO MEDIO"<?php echo $t("form.interested_medium"); ?>/option>
-                                <option value="INTERESADO BAJO"<?php echo $t("form.interested_low"); ?>/option>
+                                <option value="INTERESADO ALTO" <?php echo $t("form.interested_alto"); ?>/option>
+                                <option value="INTERESADO MEDIO" <?php echo $t("form.interested_medium"); ?>/option>
+                                <option value="INTERESADO BAJO" <?php echo $t("form.interested_low"); ?>/option>
                                 <option value="CONTRATADO"><?php echo $t('status.contracted'); ?></option>
                                 <option value="DUPLICADO"><?php echo $t('form.duplicated'); ?></option>
-                                <option value="NO RECUPERADO"<?php echo $t("form.not_recovered"); ?>/option>
+                                <option value="NO RECUPERADO" <?php echo $t("form.not_recovered"); ?>/option>
                             </select>
                         </div>
                     </div>

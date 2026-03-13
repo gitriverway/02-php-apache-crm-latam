@@ -129,6 +129,42 @@ class Modelo_Bayer_Persona_Dependiente extends conexionBD
     /***********************************
      *******MODIFICAR DEPENDIENTES BAYER PERSONA
      ***********************************/
+    function Modificar_Dependientes_Viajes($idBayer, $idDependientes, $idContrato, $listaFamiliares, $listaViajes, $listaCondiciones, $contra_numero, $fecha_inicio, $fecha_fin, $estado_pago, $fechaActual, $estado_contrato, $envio_condiciones, $ruta_condiciones)
+    {
+
+        $c = conexionBD::conexionPDO();
+
+        $sql = 'CALL SP_MODIFICAR_BAYER_DEPENDIENTES_VIAJE(:idBayer,:idDependientes,:idContrato,:listaFamiliares,:listaViajes,:listaCondiciones,:contra_numero,:fecha_inicio,:fecha_fin,:estado_pago,:fechaActual,:estado_contrato,:envio_condiciones,:ruta_condiciones)';
+
+        $stmt = $c->prepare($sql);
+
+        $stmt->bindParam(':idBayer', $idBayer, PDO::PARAM_STR);
+        $stmt->bindParam(':idDependientes', $idDependientes, PDO::PARAM_STR);
+        $stmt->bindParam(':idContrato', $idContrato, PDO::PARAM_STR);
+        $stmt->bindParam(':listaFamiliares', $listaFamiliares, PDO::PARAM_STR);
+        $stmt->bindParam(':listaViajes', $listaViajes, PDO::PARAM_STR);
+        $stmt->bindParam(':listaCondiciones', $listaCondiciones, PDO::PARAM_STR);
+        $stmt->bindParam(':contra_numero', $contra_numero, PDO::PARAM_STR);
+        $stmt->bindParam(':fecha_inicio', $fecha_inicio, PDO::PARAM_STR);
+        $stmt->bindParam(':fecha_fin', $fecha_fin, PDO::PARAM_STR);
+        $stmt->bindParam(':estado_pago', $estado_pago, PDO::PARAM_STR);
+        $stmt->bindParam(':fechaActual', $fechaActual, PDO::PARAM_STR);
+        $stmt->bindParam(':estado_contrato', $estado_contrato, PDO::PARAM_STR);
+        $stmt->bindParam(':envio_condiciones', $envio_condiciones, PDO::PARAM_STR);
+        $stmt->bindParam(':ruta_condiciones', $ruta_condiciones, PDO::PARAM_STR);
+
+        if ($stmt->execute()) {
+            return 1;
+        } else {
+            return 0;
+        };
+
+        conexionBD::cerrar_conexion();
+    }
+
+    /***********************************
+     *******MODIFICAR DEPENDIENTES BAYER PERSONA
+     ***********************************/
     function Modificar_Dependientes_Vida_individual($idBayer, $idDependientes, $idContrato, $listaFamiliares, $listaVehiculos, $listaCondiciones, $contra_numero, $fecha_inicio, $fecha_fin, $estado_pago, $fechaActual, $estado_contrato, $envio_condiciones, $ruta_condiciones)
     {
 
