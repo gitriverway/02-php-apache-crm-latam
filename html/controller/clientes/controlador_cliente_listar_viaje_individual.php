@@ -27,7 +27,7 @@ class Lista_asignar_cliente
         // 5	ACCIDENTES PERSONALES
         // 6	SEGURO DE VIAJES
 
-        $idCategoria = "7";
+        $idCategoria = "17";
 
         switch ($_SESSION['S_ROL']) {
             case 'VENDEDOR':

@@ -933,7 +933,7 @@ function cargar_datos_cliente() {
       var data = JSON.parse(respuesta);
 
       if (data.length > 0) {
-        if (data[0]["categoria_id"] == 7) {
+        if (data[0]["categoria_id"] == 17) {
           $("#txt_idEmpleado").val(data[0]["empleado_id"]);
           $("#txt_vendedor").val(data[0]["empleado_nombre"]);
           $("#cbm_origen").val(data[0]["cliente_origen"]).change();
