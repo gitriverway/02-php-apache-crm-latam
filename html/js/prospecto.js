@@ -1877,7 +1877,7 @@ function Registrar_Cliente() {
     contentType: false,
     processData: false,
     success: function (respuesta) {
-      // console.log(respuesta);
+      console.log(respuesta);
       var data = JSON.parse(respuesta);
 
       if (data.length > 0) {
