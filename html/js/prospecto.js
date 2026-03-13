@@ -3273,7 +3273,7 @@ function buscar_cliente_cedula(cedula) {
         $("#txt_idCliente").val("0");
         $("#txt_nombre").val("");
         $("#genero").val("masculino").change();
-        $("#estado_civil").val("soltero").change();
+        $("#estado_civil").val("SOLTERO").change();
         $("#txt_fecha_nacimiento").val("");
         $("#txt_edad_nacimiento").val("");
         $("#txt_email").val("");
