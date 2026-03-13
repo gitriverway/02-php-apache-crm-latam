@@ -1660,7 +1660,7 @@ function Registrar_Cliente() {
       "warning",
     );
   }
-  if (cliente_fecha_seguimiento.length == 0) {
+  if (fecha_seguimiento.length == 0) {
     return Swal.fire(
       t("messages.warning", "Warning Message"),
       t("messages.follow_up_date", "Fill in the prospect follow up date"),
@@ -2861,7 +2861,7 @@ function Modificar_Prospecto() {
     );
   }
 
-  if (cliente_fecha_seguimiento.length == 0) {
+  if (fecha_seguimiento.length == 0) {
     return Swal.fire(
       t("messages.warning", "Warning Message"),
       t("messages.follow_up_date", "Fill in the prospect follow up date"),
