@@ -3942,7 +3942,6 @@ function listar_documentos(idCliente) {
 $("#cardDocumento").on("click", ".btnListaContratos", function () {
   var idCliente = $("#txt_idProspecto").val();
 
-  console.log(idCliente);
   $("#modal_listar_contratos").modal({ backdrop: "static", keyboard: false });
   $("#modal_listar_contratos").modal("show");
   listar_documentos(idCliente);
