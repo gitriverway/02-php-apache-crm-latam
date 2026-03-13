@@ -186,7 +186,8 @@ $htmlLang = isset($langMap[$currentLang]) ? $langMap[$currentLang] : 'en';
         $_GET["ruta"] == "credito-ambulatorio-asistencia-medica-individual" ||
         $_GET["ruta"] == "credito-ambulatorio-asistencia-medica-individual-cliente-empresarial" ||
         $_GET["ruta"] == "creditos-ambulatorios-asistencia-medica-individual-empresarial" ||
-
+        $_GET["ruta"] == "clientes-viaje-individual" ||
+        $_GET["ruta"] == "editar-cliente-viaje-individual" ||
         $_GET["ruta"] == "salir"
       ) {
 
