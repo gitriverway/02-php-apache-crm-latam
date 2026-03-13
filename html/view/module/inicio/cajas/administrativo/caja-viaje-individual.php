@@ -8,10 +8,10 @@ $t = function ($key) {
     <div class="small-box color-palette" style="background-color: #fcb7af;">
         <div class="inner">
             <h3 id="contadorContratoViajes1" class="contadorContratoViajes">0</h3>
-            <p><?php echo $t("common.vehicles"); ?></p>
+            <p><?php echo $t("common.travels"); ?></p>
         </div>
         <div class="icon">
-            <i class="fa fa-car"></i>
+            <i class="fa fa-plane"></i>
         </div>
         <a class="small-box-footer" href="#" data-toggle="modal" data-target="#modal-viaje-individual">
             <?php echo $t("common.more_info"); ?> <i class="fa fa-bars"></i>
@@ -21,7 +21,7 @@ $t = function ($key) {
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title"><?php echo $t("common.vehicles"); ?></h4>
+                        <h4 class="modal-title"><?php echo $t("common.travels"); ?></h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

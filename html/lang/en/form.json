@@ -331,5 +331,6 @@
     "travel_start_date": "Travel Start Date",
     "travel_end_date": "Travel End Date",
     "departure_country": "Departure Country",
-    "destination_country": "Destination Country"
+    "destination_country": "Destination Country",
+    "add_travel": "Add Travel"
 }

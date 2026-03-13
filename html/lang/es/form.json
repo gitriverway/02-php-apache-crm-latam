@@ -331,5 +331,6 @@
     "travel_start_date": "Fecha Inicio Viaje",
     "travel_end_date": "Fecha Fin Viaje",
     "departure_country": "País Salida",
-    "destination_country": "País Destino"
+    "destination_country": "País Destino",
+    "add_travel": "Agregar Viaje"
 }

@@ -32,7 +32,8 @@ class Modelo_Idioma
         'empleados',
         'proveedores',
         'facturas',
-        'emails'
+        'emails',
+        'notifications'
     ];
 
     /**

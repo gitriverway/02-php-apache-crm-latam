@@ -1173,7 +1173,7 @@ $(".btnAgregarViaje").click(function () {
       "</div>" +
       "</div>" +
       "<!-- Acciones -->" +
-      '<div class="col-6 col-md-2 order-md-11 my-1 ' +
+      '<div class="col-6 col-md-2 order-md-6 my-1 ' +
       estado1 +
       ' etiquetaAccionesViaje" id = "etiquetaAccionesViaje' +
       numViaje +
@@ -2492,8 +2492,12 @@ function agregar_auto_viajes() {
           numViaje +
           '" required>' +
           '<option value="" disabled selected>Seleccione..</option>' +
-          '<option value="UNICO">' + t("form_labels.unique_trip", "Viaje Único") + '</option>' +
-          '<option value="ANUAL">' + t("form_labels.annual_trip", "Viaje Anual") + '</option>' +
+          '<option value="UNICO">' +
+          t("form_labels.unique_trip", "Viaje Único") +
+          "</option>" +
+          '<option value="ANUAL">' +
+          t("form_labels.annual_trip", "Viaje Anual") +
+          "</option>" +
           "</select>" +
           "</div>" +
           "</div>" +
@@ -2513,7 +2517,9 @@ function agregar_auto_viajes() {
           numViaje +
           '" name="fechaInicioViaje' +
           numViaje +
-          '" value="' + (data[i]["fecha_inicio"] || "") + '" required>' +
+          '" value="' +
+          (data[i]["fecha_inicio"] || "") +
+          '" required>' +
           "</div>" +
           "</div>" +
           "<!-- Fecha Fin -->" +
@@ -2532,7 +2538,9 @@ function agregar_auto_viajes() {
           numViaje +
           '" name="fechaFinViaje' +
           numViaje +
-          '" value="' + (data[i]["fecha_fin"] || "") + '" required>' +
+          '" value="' +
+          (data[i]["fecha_fin"] || "") +
+          '" required>' +
           "</div>" +
           "</div>" +
           "<!-- País Salida -->" +
@@ -2551,7 +2559,9 @@ function agregar_auto_viajes() {
           numViaje +
           '" name="paisSalidaViaje' +
           numViaje +
-          '" placeholder="PAÍS SALIDA" autocomplete="off" style="text-transform: uppercase" value="' + (data[i]["pais_salida"] || "") + '" required>' +
+          '" placeholder="PAÍS SALIDA" autocomplete="off" style="text-transform: uppercase" value="' +
+          (data[i]["pais_salida"] || "") +
+          '" required>' +
           "</div>" +
           "</div>" +
           "<!-- País Destino -->" +
@@ -2570,7 +2580,9 @@ function agregar_auto_viajes() {
           numViaje +
           '" name="paisDestinoViaje' +
           numViaje +
-          '" placeholder="PAÍS DESTINO" autocomplete="off" style="text-transform: uppercase" value="' + (data[i]["pais_destino"] || "") + '" required>' +
+          '" placeholder="PAÍS DESTINO" autocomplete="off" style="text-transform: uppercase" value="' +
+          (data[i]["pais_destino"] || "") +
+          '" required>' +
           "</div>" +
           "</div>" +
           "<!-- Acciones -->" +
