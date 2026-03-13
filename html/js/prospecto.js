@@ -3940,7 +3940,7 @@ function listar_documentos(idCliente) {
  ABRI MODAL LISTAR CONTRATOS EDITAR
  *********************************/
 $("#cardDocumento").on("click", ".btnListaContratos", function () {
-  var idCliente = $("#txt_idCliente").val();
+  var idCliente = $("#txt_idProspecto").val();
 
   console.log(idCliente);
   $("#modal_listar_contratos").modal({ backdrop: "static", keyboard: false });
