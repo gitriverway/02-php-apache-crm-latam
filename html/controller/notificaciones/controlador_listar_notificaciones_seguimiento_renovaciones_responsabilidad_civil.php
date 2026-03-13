@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-require '../../modelo_notificaciones.php';
+require '../../model/modelo_notificaciones.php';
 class ControladorListaNotificacionesSeguimientoRenovacionesResponsabilidadCivil
 {
 
