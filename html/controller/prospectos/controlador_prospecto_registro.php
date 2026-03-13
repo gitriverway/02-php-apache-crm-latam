@@ -111,7 +111,7 @@ if ($cantidad > 0) {
         if (isset($_FILES["documento_" . $i])) {
 
             switch ($i) {
-                case '2':
+                case '1':
                     $nombreArchivo = "COTIZACIÓN";
                     $rutaArchivo = $directorio1 . "/COTIZACION" . $ano1 . $mes1 . $dia1 . $hora1 . $minuto1 . $segundo1 . $cedula . "." . $_POST["extension_" . $i];
                     $archivo = $_FILES["documento_" . $i]["tmp_name"];

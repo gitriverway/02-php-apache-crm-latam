@@ -504,12 +504,12 @@ if ($_SESSION["S_ROL"] == "CLIENTE") {
                                         <div class="form-group row" id="grupo_file">
 
                                             <div class="form-group col-12 col-md-4">
-                                                <label for="txt_documento_2" class="control-label"
+                                                <label for="txt_documento_1" class="control-label"
                                                     style="text-align: right;">
                                                     <?php echo $t('form.quotation'); ?>
                                                 </label>
-                                                <input type="file" class="form-control" id="txt_documento_2"
-                                                    name="txt_documento_2" class="subirDocumento" accept=".pdf">
+                                                <input type="file" class="form-control" id="txt_documento_1"
+                                                    name="txt_documento_1" class="subirDocumento" accept=".pdf">
                                                 <p class="help-block">Peso máximo del documento 50MB</p>
                                             </div>
 

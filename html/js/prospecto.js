@@ -1585,7 +1585,7 @@ function Registrar_Cliente() {
    BLOQUE PARA CARGAR DOCUMENTOS
    * ============================
    */
-  var documento_2;
+  var documento_1;
   var cantidad = $("#cantidadDocumentos").val();
 
   var cont_bayerpersonas = 0;
@@ -1824,10 +1824,9 @@ function Registrar_Cliente() {
     );
   }
 
-  var nombre_documento_2 = $("#txt_nombre_documento_2").val();
-  var archivo2 = $("#txt_documento_2").val();
-  var extension_2 = archivo2.split(".").pop();
-  documento_2 = $("#txt_documento_2")[0].files[0];
+  var archivo1 = $("#txt_documento_1").val();
+  var extension_1 = archivo1.split(".").pop();
+  documento_1 = $("#txt_documento_1")[0].files[0];
 
   crear_overlay_prospecto();
 
@@ -1870,9 +1869,8 @@ function Registrar_Cliente() {
    * ===DOCUMNETO ADJUNTOS AL CONTRATO=====
    ========================================*/
 
-  datos.append("nombre_documento_2", nombre_documento_2);
-  datos.append("documento_2", documento_2);
-  datos.append("extension_2", extension_2);
+  datos.append("documento_1", documento_1);
+  datos.append("extension_1", extension_1);
 
   datos.append("cantidad", cantidad);
 
@@ -2776,7 +2774,7 @@ function Modificar_Prospecto() {
    BLOQUE PARA CARGAR DOCUMENTOS
    * ============================
    */
-  var documento_2;
+  var documento_1;
   var cantidad = $("#cantidadDocumentos").val();
 
   var cont_bayerpersonas = 0;
@@ -3050,10 +3048,9 @@ function Modificar_Prospecto() {
     );
   }
 
-  var nombre_documento_2 = $("#txt_nombre_documento_2").val();
-  var archivo2 = $("#txt_documento_2").val();
-  var extension_2 = archivo2.split(".").pop();
-  documento_2 = $("#txt_documento_2")[0].files[0];
+  var archivo1 = $("#txt_documento_1").val();
+  var extension_1 = archivo1.split(".").pop();
+  documento_1 = $("#txt_documento_1")[0].files[0];
 
   crear_overlay_prospecto();
 
@@ -3099,9 +3096,8 @@ function Modificar_Prospecto() {
    * ===DOCUMNETO ADJUNTOS AL CONTRATO=====
    ========================================*/
 
-  datos.append("nombre_documento_2", nombre_documento_2);
-  datos.append("documento_2", documento_2);
-  datos.append("extension_2", extension_2);
+  datos.append("documento_1", documento_1);
+  datos.append("extension_1", extension_1);
 
   datos.append("cantidad", cantidad);
 
