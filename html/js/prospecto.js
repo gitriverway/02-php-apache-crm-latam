@@ -2783,6 +2783,7 @@ function Modificar_Prospecto() {
   var cont = 0;
   var cont1 = 0;
   var cont2 = 0;
+  var cont3 = 0;
 
   if (idCliente.length == 0) {
     idCliente = 0;
@@ -2978,7 +2979,7 @@ function Modificar_Prospecto() {
             edad_vehiculo == null ||
             monto.length == 0
           ) {
-            cont1++;
+            cont3++;
           }
         }
       }
@@ -3037,6 +3038,14 @@ function Modificar_Prospecto() {
     return Swal.fire(
       t("messages.warning_message", "Mensaje de Aviso"),
       t("messages.fill_home_fields", "Preencha os campos de residÃªncias"),
+      "warning",
+    );
+  }
+
+  if (cont3 > 0) {
+    return Swal.fire(
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_travel_fields", "Preencha os campos de travel"),
       "warning",
     );
   }
