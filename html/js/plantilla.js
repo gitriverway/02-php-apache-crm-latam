@@ -24,7 +24,7 @@ $("#menuNotificacionesProspectosIndividual").on(
     var idCliente = $(this).attr("idCliente"); // Note: attribute name is idCliente, but it's used as idProspecto in the URL
     // var idCategoria = $(this).attr("idCategoria"); // Not used for prospects
     redirectToProspectEdit("individual", idCliente);
-  }
+  },
 );
 
 $("#menuNotificacionesProspectosAltoIndividual").on(
@@ -34,7 +34,7 @@ $("#menuNotificacionesProspectosAltoIndividual").on(
     var idCliente = $(this).attr("idCliente"); // Note: attribute name is idCliente, but it's used as idProspecto in the URL
     // var idCategoria = $(this).attr("idCategoria"); // Not used for prospects
     redirectToProspectEdit("individual", idCliente);
-  }
+  },
 );
 
 $("#menuNotificacionesProspectosMedioIndividual").on(
@@ -44,7 +44,7 @@ $("#menuNotificacionesProspectosMedioIndividual").on(
     var idCliente = $(this).attr("idCliente"); // Note: attribute name is idCliente, but it's used as idProspecto in the URL
     // var idCategoria = $(this).attr("idCategoria"); // Not used for prospects
     redirectToProspectEdit("individual", idCliente);
-  }
+  },
 );
 
 $("#menuNotificacionesProspectosBajoIndividual").on(
@@ -54,7 +54,7 @@ $("#menuNotificacionesProspectosBajoIndividual").on(
     var idCliente = $(this).attr("idCliente"); // Note: attribute name is idCliente, but it's used as idProspecto in the URL
     // var idCategoria = $(this).attr("idCategoria"); // Not used for prospects
     redirectToProspectEdit("individual", idCliente);
-  }
+  },
 );
 
 $("#menuNotificacionesProspectosPymes").on(
@@ -64,7 +64,7 @@ $("#menuNotificacionesProspectosPymes").on(
     var idCliente = $(this).attr("idCliente"); // Note: attribute name is idCliente, but it's used as idProspecto in the URL
     // var idCategoria = $(this).attr("idCategoria"); // Not used for prospects
     redirectToProspectEdit("empresarial", idCliente);
-  }
+  },
 );
 $("#menuNotificacionesProspectosAltoPymes").on(
   "click",
@@ -73,7 +73,7 @@ $("#menuNotificacionesProspectosAltoPymes").on(
     var idCliente = $(this).attr("idCliente"); // Note: attribute name is idCliente, but it's used as idProspecto in the URL
     // var idCategoria = $(this).attr("idCategoria"); // Not used for prospects
     redirectToProspectEdit("empresarial", idCliente);
-  }
+  },
 );
 
 $("#menuNotificacionesProspectosMedioPymes").on(
@@ -83,7 +83,7 @@ $("#menuNotificacionesProspectosMedioPymes").on(
     var idCliente = $(this).attr("idCliente"); // Note: attribute name is idCliente, but it's used as idProspecto in the URL
     // var idCategoria = $(this).attr("idCategoria"); // Not used for prospects
     redirectToProspectEdit("empresarial", idCliente);
-  }
+  },
 );
 
 $("#menuNotificacionesProspectosBajoPymes").on(
@@ -93,7 +93,7 @@ $("#menuNotificacionesProspectosBajoPymes").on(
     var idCliente = $(this).attr("idCliente"); // Note: attribute name is idCliente, but it's used as idProspecto in the URL
     // var idCategoria = $(this).attr("idCategoria"); // Not used for prospects
     redirectToProspectEdit("empresarial", idCliente);
-  }
+  },
 );
 
 /*********************************
@@ -116,7 +116,7 @@ const clientEditRoutes = {
     param: "idCliente",
   },
   7: {
-    route: "editar-cliente-accidentes-personales-individual",
+    route: "editar-cliente-viaje-individual",
     param: "idCliente",
   },
   8: {
@@ -155,7 +155,7 @@ $("#menuNotificacionesClientesIndividual").on(
     var idCategoria = $(this).attr("idCategoria");
     // console.log(idCategoria); // Removed for cleaner code, can be added back if needed for debugging
     redirectToClientEdit(idCategoria, idCliente);
-  }
+  },
 );
 
 $("#menuNotificacionesClientesPymes").on(
@@ -166,7 +166,7 @@ $("#menuNotificacionesClientesPymes").on(
     var idCategoria = $(this).attr("idCategoria");
     console.log(idCategoria); // Keeping this console.log as it was in the original code
     redirectToClientEdit(idCategoria, idCliente);
-  }
+  },
 );
 
 /*********************************
@@ -180,5 +180,5 @@ $(".menuNotificacionesRenovasiones").on(
     var idCategoria = $(this).attr("idCategoria");
     console.log(idCategoria); // Keeping this console.log as it was in the original code
     redirectToClientEdit(idCategoria, idCliente);
-  }
+  },
 );

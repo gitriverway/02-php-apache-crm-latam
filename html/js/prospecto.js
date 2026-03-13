@@ -1742,13 +1742,17 @@ function Registrar_Cliente() {
       var data = JSON.parse(listaViajes);
       if (data.length > 0) {
         for (var i = 0; i < data.length; i++) {
-          var tipo_dependiente = data[i]["tipo"];
-          var genero_dependiente = data[i]["genero"];
-          var edad_dependiente = data[i]["edad"];
+          var tipo = data[i]["tipo"];
+          var fecha_inicio = data[i]["fecha_inicio"];
+          var fecha_fin = data[i]["fecha_fin"];
+          var pais_salida = data[i]["pais_salida"];
+          var pais_destino = data[i]["pais_destino"];
           if (
-            tipo_dependiente.length == 0 ||
-            genero_dependiente.length == 0 ||
-            edad_dependiente == null
+            tipo.length == 0 ||
+            fecha_inicio.length == 0 ||
+            fecha_fin.length == 0 ||
+            pais_salida.length == 0 ||
+            pais_destino.length == 0
           ) {
             cont++;
           }
@@ -2458,7 +2462,6 @@ function agregar_auto_viajes() {
 
       var estado = "";
       var estado1 = "";
-      var valor = 0;
 
       if (numViaje > 1) {
         estado = "d-md-none";
@@ -2468,183 +2471,118 @@ function agregar_auto_viajes() {
         estado1 = "";
       }
 
-      if (data[i]["valor_deducible"] > 0) {
-        valor = data[i]["valor_deducible"];
-      } else {
-        valor = 0;
-      }
-
       $(".nuevoViaje").append(
         '<div class="col-12 my-1">' +
           '<div class="row gridMiembroViajes">' +
-          "<!-- Tipo Vehiculo -->" +
+          "<!-- Tipo Viaje -->" +
           '<div class="col-6 col-md-2 order-md-1 my-1 ' +
           estado +
-          ' etiquetaTipoVehiculos" id = "etiquetaTipoVehiculos' +
+          ' etiquetaTipoViaje" id="etiquetaTipoViaje' +
           numViaje +
           '" style="padding-right:0px">' +
           "<label>" +
-          t("form_labels.tipo_vehiculo", "Tipo Vehículo") +
+          t("form_labels.travel_type", "Tipo De Viaje") +
+          "</label>" +
+          "</div>" +
+          '<div class="col-6 col-md-2 order-md-6 my-1" style="padding-right:0px">' +
+          '<div class="input-group">' +
+          '<select class="form-control tipoViaje" id="tipoViaje' +
+          numViaje +
+          '" name="tipoViaje' +
+          numViaje +
+          '" required>' +
+          '<option value="" disabled selected>Seleccione..</option>' +
+          '<option value="UNICO">' + t("form_labels.unique_trip", "Viaje Único") + '</option>' +
+          '<option value="ANUAL">' + t("form_labels.annual_trip", "Viaje Anual") + '</option>' +
+          "</select>" +
+          "</div>" +
+          "</div>" +
+          "<!-- Fecha Inicio -->" +
+          '<div class="col-6 col-md-2 order-md-2 my-1 ' +
+          estado +
+          ' etiquetaFechaInicioViaje" id="etiquetaFechaInicioViaje' +
+          numViaje +
+          '" style="padding-right:0px">' +
+          "<label>" +
+          t("form_labels.travel_start_date", "Fecha Inicio Viaje") +
+          "</label>" +
+          "</div>" +
+          '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
+          '<div class="input-group">' +
+          '<input type="date" class="form-control fechaInicioViaje" id="fechaInicioViaje' +
+          numViaje +
+          '" name="fechaInicioViaje' +
+          numViaje +
+          '" value="' + (data[i]["fecha_inicio"] || "") + '" required>' +
+          "</div>" +
+          "</div>" +
+          "<!-- Fecha Fin -->" +
+          '<div class="col-6 col-md-2 order-md-3 my-1 ' +
+          estado +
+          ' etiquetaFechaFinViaje" id="etiquetaFechaFinViaje' +
+          numViaje +
+          '" style="padding-right:0px">' +
+          "<label>" +
+          t("form_labels.travel_end_date", "Fecha Fin Viaje") +
+          "</label>" +
+          "</div>" +
+          '<div class="col-6 col-md-2 order-md-8 my-1" style="padding-right:0px">' +
+          '<div class="input-group">' +
+          '<input type="date" class="form-control fechaFinViaje" id="fechaFinViaje' +
+          numViaje +
+          '" name="fechaFinViaje' +
+          numViaje +
+          '" value="' + (data[i]["fecha_fin"] || "") + '" required>' +
+          "</div>" +
+          "</div>" +
+          "<!-- País Salida -->" +
+          '<div class="col-6 col-md-2 order-md-4 my-1 ' +
+          estado +
+          ' etiquetaPaisSalidaViaje" id="etiquetaPaisSalidaViaje' +
+          numViaje +
+          '" style="padding-right:0px">' +
+          "<label>" +
+          t("form_labels.departure_country", "País Salida") +
           "</label>" +
           "</div>" +
           '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
-          '<select class="form-control tipoVehiculo" id="tipoVehiculo' +
+          '<input type="text" class="form-control paisSalidaViaje" id="paisSalidaViaje' +
           numViaje +
-          '" name="tipoVehiculo' +
+          '" name="paisSalidaViaje' +
           numViaje +
-          '" required>' +
-          '<option value="" disabled selected>Seleccione..</option>' +
-          '<option value="LIVIANO">LIVIANO</option>' +
-          '<option value="CAMIONETA">CAMIONETA</option>' +
-          '<option value="LIVIANO APLICACION">LIVIANO APLICACION</option>' +
-          '<option value="MOTOS">MOTOS</option>' +
-          '<option value="PESADO">PESADO</option>' +
-          '<option value="FURGONETA ESCOLAR">FURGONETA ESCOLAR Y TURISMO</option>' +
-          "</select>" +
+          '" placeholder="PAÍS SALIDA" autocomplete="off" style="text-transform: uppercase" value="' + (data[i]["pais_salida"] || "") + '" required>' +
           "</div>" +
           "</div>" +
-          "<!-- Marca -->" +
-          '<div class="col-6 col-md-2 order-md-2 my-1 ' +
+          "<!-- País Destino -->" +
+          '<div class="col-6 col-md-2 order-md-5 my-1 ' +
           estado +
-          ' etiquetaMarcaVehiculo" id = "etiquetaMarcaVehiculo' +
+          ' etiquetaPaisDestinoViaje" id="etiquetaPaisDestinoViaje' +
           numViaje +
-          '">' +
+          '" style="padding-right:0px">' +
           "<label>" +
-          t("form_labels.marca", t("form_labels.brand", "Marca")) +
+          t("form_labels.destination_country", "País Destino") +
           "</label>" +
           "</div>" +
-          '<div class="col-6 col-md-2 order-md-10 my-1">' +
+          '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
-          '<input type="text" class="form-control validarNumerosLetras marcaVehiculo" id="marcaVehiculo' +
+          '<input type="text" class="form-control paisDestinoViaje" id="paisDestinoViaje' +
           numViaje +
-          '" name="marcaVehiculo' +
+          '" name="paisDestinoViaje' +
           numViaje +
-          '" placeholder="MARCA VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i][t("form_labels.brand", "Marca")] +
-          '"></input>' +
-          "</div>" +
-          "</div>" +
-          "<!-- Modelo -->" +
-          '<div class="col-6 col-md-2 order-md-3 my-1 ' +
-          estado +
-          ' etiquetaModeloVehiculo" id = "etiquetaModeloVehiculo' +
-          numViaje +
-          '">' +
-          "<label>" +
-          t("form_labels.modelo", t("form_labels.model", "Modelo")) +
-          "</label>" +
-          "</div>" +
-          '<div class="col-6 col-md-2 order-md-11 my-1">' +
-          '<input type="text" class="form-control validarNumerosLetras modeloVehiculo" id="modeloVehiculo' +
-          numViaje +
-          '" name="modeloVehiculo' +
-          numViaje +
-          '" placeholder="MODELO VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i][t("form_labels.model", "Modelo")] +
-          '"></input>' +
-          "</div>" +
-          "<!-- Color -->" +
-          '<div class="col-6 col-md-2 order-md-4 my-1 ' +
-          estado +
-          ' etiquetaColorVehiculo" id = "etiquetaColorVehiculo' +
-          numViaje +
-          '" style="padding-left:0px">' +
-          "<label>" +
-          t("form_labels.color", t("form_labels.color", "Cor")) +
-          "</label>" +
-          "</div>" +
-          '<div class="col-6 col-md-2 order-md-12 my-1" style="padding-left:0px">' +
-          '<div class="input-group">' +
-          '<input type="text" class="form-control colorVehiculo" id="colorVehiculo' +
-          numViaje +
-          '" name="colorVehiculo' +
-          numViaje +
-          '" placeholder="COLOR VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i][t("form_labels.color", "Cor")] +
-          '"></input>' +
-          "</div>" +
-          "</div>" +
-          "<!-- Año -->" +
-          '<div class="col-6 col-md-1 order-md-5 my-1 ' +
-          estado +
-          ' etiquetaAnoVehiculo" id = "etiquetaAnoVehiculo' +
-          numViaje +
-          '" style="padding-left:0px">' +
-          "<label>" +
-          t("form_labels.anno", "Año") +
-          "</label>" +
-          "</div>" +
-          '<div class="col-6 col-md-1 order-md-13 my-1" style="padding-left:0px">' +
-          '<div class="input-group">' +
-          '<input type="text" class="form-control validarNumerosLetras anoVehiculo" id="anoVehiculo' +
-          numViaje +
-          '" name="anoVehiculo' +
-          numViaje +
-          '" placeholder="AÑO VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i]["ano"] +
-          '" maxlength="4"></input>' +
-          "</div>" +
-          "</div>" +
-          "<!-- Placa -->" +
-          '<div class="col-6 col-md-1 order-md-6 my-1 ' +
-          estado +
-          ' etiquetaPlacaVehiculo" id = "etiquetaPlacaVehiculo' +
-          numViaje +
-          '" style="padding-left:0px">' +
-          "<label>" +
-          t("form_labels.placa", t("form_labels.plate", "Placa")) +
-          "</label>" +
-          "</div>" +
-          '<div class="col-6 col-md-1 order-md-14 my-1" style="padding-left:0px">' +
-          '<div class="input-group">' +
-          '<input type="text" class="form-control validarNumerosLetras placaVehiculo" id="placaVehiculo' +
-          numViaje +
-          '" name="placaVehiculo' +
-          numViaje +
-          '" placeholder="PLACA VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i][t("form_labels.plate", "Placa")] +
-          '" maxlength="10"></input>' +
-          "</div>" +
-          "</div>" +
-          "<!-- Monto -->" +
-          '<div class="col-6 col-md-1 order-md-7 my-1 ' +
-          estado +
-          ' etiquetaMontoVehiculo" id = "etiquetaMontoVehiculo' +
-          numViaje +
-          '" style="padding-left:0px">' +
-          "<label>" +
-          t("form_labels.monto", t("form_labels.amount", "Valor")) +
-          "</label>" +
-          "</div>" +
-          '<div class="col-6 col-md-1 order-md-15 my-1" style="padding-left:0px">' +
-          '<div class="input-group">' +
-          '<input type="text" class="form-control validarNumerosLetras montoVehiculo" id="montoVehiculo' +
-          numViaje +
-          '" name="montoVehiculo' +
-          numViaje +
-          '" placeholder="MONTO VEHICULO" autocomplete="off" style="text-transform: uppercase" value = "' +
-          data[i][t("form_labels.amount", "Valor")] +
-          '"></input>' +
+          '" placeholder="PAÍS DESTINO" autocomplete="off" style="text-transform: uppercase" value="' + (data[i]["pais_destino"] || "") + '" required>' +
           "</div>" +
           "</div>" +
           "<!-- Acciones -->" +
-          '<div class="col-6 col-md-1 order-md-8 my-1 ' +
+          '<div class="col-6 col-md-2 order-md-11 my-1 ' +
           estado1 +
-          ' etiquetaAcciones" id = "etiquetaAcciones' +
+          ' etiquetaAccionesViaje" id="etiquetaAccionesViaje' +
           numViaje +
-          '" style="padding-left:0px">' +
+          '" style="padding-right:0px">' +
           "<label></label>" +
           "</div>" +
-          '<div class="col-12 col-md-1 order-md-16 my-1" style="padding-left:0px">' +
-          '<input type="hidden" class="valor_deducible_vehiculo" id="valor_deducible_vehiculo' +
-          numViaje +
-          '" name="valor_deducible_vehiculo' +
-          numViaje +
-          '" value="' +
-          valor +
-          '">' +
-          '<button type="button" class="form-control btn btn-danger quitarVehiculo idVehiculo="' +
+          '<div class="col-12 col-md-2 order-md-12 my-1" style="padding-right:0px">' +
+          '<button type="button" class="form-control btn btn-danger quitarViaje" idViaje="' +
           numViaje +
           '"><i class="fa fa-times"></i></button>' +
           "</div>" +
@@ -2652,14 +2590,8 @@ function agregar_auto_viajes() {
           "</div>",
       );
 
-      $("#tipoVehiculo" + numViaje)
+      $("#tipoViaje" + numViaje)
         .val(data[i]["tipo"])
-        .change();
-
-      $("#estadoCivil" + numViaje)
-        .val(
-          data[i]["estado_civil"] ? data[i]["estado_civil"].toUpperCase() : "",
-        )
         .change();
     }
   }
