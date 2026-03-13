@@ -1087,8 +1087,12 @@ $(".btnAgregarViaje").click(function () {
       numViaje +
       '" required>' +
       '<option value="" disabled selected>Seleccione..</option>' +
-      '<option value="UNICO">' + t("form_labels.unique_trip", "Viaje Único") + '</option>' +
-      '<option value="ANUAL">' + t("form_labels.annual_trip", "Viaje Anual") + '</option>' +
+      '<option value="UNICO">' +
+      t("form_labels.unique_trip", "Viaje Único") +
+      "</option>" +
+      '<option value="ANUAL">' +
+      t("form_labels.annual_trip", "Viaje Anual") +
+      "</option>" +
       "</select>" +
       "</div>" +
       "</div>" +
@@ -1291,19 +1295,6 @@ $(".nuevoViaje").on("click", "button.quitarViaje", function () {
   if ($(".nuevoViaje").children().length == 0) {
     $("#listaViajes").val("");
   } else {
-    listarViajes();
-    recargarEtiquetaslistarViajes();
-  }
-});
-
-  localStorage.setItem("quitarViaje", JSON.stringify(idQuitarViaje));
-
-  numViaje--;
-
-  if ($(".nuevoViaje").children().length == 0) {
-    $("#listaViajes").val("");
-  } else {
-    // AGRUPAR FAMILIARES EN FORMATO JSON
     listarViajes();
     recargarEtiquetaslistarViajes();
   }

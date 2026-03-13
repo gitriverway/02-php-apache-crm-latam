@@ -23,6 +23,7 @@ $t = function ($key) {
                     // include __DIR__ . "/cajas/administrativo/caja-vida-individual.php";
                     include __DIR__ . "/cajas/administrativo/caja-asistencia-medica-individual.php";
                     // include __DIR__ . "/cajas/administrativo/caja-vehiculo-individual.php";
+                    include __DIR__ . "/cajas/administrativo/caja-viaje-individual.php";
                     // include __DIR__ . "/cajas/administrativo/caja-accidentes-personales-individual.php";
                     // include __DIR__ . "/cajas/administrativo/caja-hogar-individual.php";
                     // include __DIR__ . "/cajas/administrativo/caja-responsabilidad-civil-individual.php";
@@ -61,8 +62,8 @@ $t = function ($key) {
     </div>
 </div>
 <script>
-$(document).ready(function() {
-    contadoresGenerales();
-    contadoresGeneralesServicios();
-})
+    $(document).ready(function() {
+        contadoresGenerales();
+        contadoresGeneralesServicios();
+    })
 </script>

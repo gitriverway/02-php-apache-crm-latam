@@ -637,12 +637,6 @@ function listarViajes() {
   }
 }
 
-    $("#listaViajes" + j).val(JSON.stringify(listaViajes));
-
-    console.log($("#listaViajes" + j).val());
-  }
-}
-
 /*=============================================
   QUITAR VEHICULO
   =============================================*/
