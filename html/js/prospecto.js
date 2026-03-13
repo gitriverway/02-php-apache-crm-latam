@@ -3274,7 +3274,7 @@ function buscar_cliente_cedula(cedula) {
         $("#txt_nombre").val("");
         $("#genero").val("masculino").change();
         $("#estado_civil").val("SOLTERO").change();
-        $("#txt_fecha_nacimiento").val("");
+        $("#txt_fecha_nacimiento").val(new Date());
         $("#txt_edad_nacimiento").val("");
         $("#txt_email").val("");
         $("#txt_telefono").val("");
