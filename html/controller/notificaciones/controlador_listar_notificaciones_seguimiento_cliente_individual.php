@@ -42,7 +42,7 @@ class ControladorListaNotificacionesSeguimientoClienteIndividual
                         $contar = 0;
                         for ($i = 0; $i < count($consulta); $i++) {
                                 $contar = $i + 1;
-                                $lista1 .= "<a href='#' class='dropdown-item notificacionEditarCliente' idCliente = '" . $consulta[$i]["bayer_id"] . "' idCategoria = '" . $consulta[$i]["categoria_id"] . "' tipo='" . $consulta[$i]["cliente_tipo"] . "'><i class='fas fa-envelope mr-2'></i> " . $contar . Modelo_Idioma::t('client_followup') . "</br><i class='fas fa-user mr-2'></i> " . $consulta[$i]["cliente_nombre"] . " </br><i class='fas fa-calendar mr-2'></i> " . $consulta[$i]["cliente_fecha_seguimiento"] . "</a>";
+                                $lista1 .= "<a href='#' class='dropdown-item notificacionEditarCliente' idCliente = '" . $consulta[$i]["bayer_id"] . "' idCategoria = '" . $consulta[$i]["categoria_id"] . "' tipo='" . $consulta[$i]["cliente_tipo"] . "'><i class='fas fa-envelope mr-2'></i> " . $contar . " " . Modelo_Idioma::t('client_followup') . "</br><i class='fas fa-user mr-2'></i> " . $consulta[$i]["cliente_nombre"] . " </br><i class='fas fa-calendar mr-2'></i> " . $consulta[$i]["cliente_fecha_seguimiento"] . "</a>";
                         }
                         $lista = "<a class='nav-link' data-toggle='dropdown' href='#'>
                         <span class='badge badge-success navbar-badge'>" . $contar . "</span>
