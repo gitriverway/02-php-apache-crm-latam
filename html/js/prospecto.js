@@ -1660,6 +1660,13 @@ function Registrar_Cliente() {
       "warning",
     );
   }
+  if (cliente_fecha_seguimiento.length == 0) {
+    return Swal.fire(
+      t("messages.warning", "Warning Message"),
+      t("messages.follow_up_date", "Fill in the prospect follow up date"),
+      "warning",
+    );
+  }
 
   if (estado_bayer == "CONTRATADO") {
     if (
@@ -2853,6 +2860,14 @@ function Modificar_Prospecto() {
     );
   }
 
+  if (cliente_fecha_seguimiento.length == 0) {
+    return Swal.fire(
+      t("messages.warning", "Warning Message"),
+      t("messages.follow_up_date", "Fill in the prospect follow up date"),
+      "warning",
+    );
+  }
+
   if (estado_bayer == "CONTRATADO") {
     if (
       origen.length == 0 ||
@@ -3275,7 +3290,7 @@ function buscar_cliente_cedula(cedula) {
         $("#genero").val("masculino").change();
         $("#estado_civil").val("SOLTERO").change();
         $("#txt_fecha_nacimiento").val(fechaISO);
-        $("#txt_edad_nacimiento").val("");
+        $("#txt_edad_nacimiento").val(0);
         $("#txt_email").val("");
         $("#txt_telefono").val("");
         $("#cbm_provincia").val("1").change();
