@@ -1250,7 +1250,7 @@ function listarViajes() {
 
   for (var i = 0; i < tipo.length; i++) {
     listaViajes.push({
-      tipo: $(tipo[i]).val().trim(),
+      tipo: $(tipo[i]).val(),
       fecha_inicio: $(fechaInicio[i]).val(),
       fecha_fin: $(fechaFin[i]).val(),
       pais_salida: $(paisSalida[i]).val().trim().toUpperCase(),
