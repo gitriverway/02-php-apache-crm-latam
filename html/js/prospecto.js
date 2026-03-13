@@ -1079,7 +1079,7 @@ $(".btnAgregarViaje").click(function () {
       t("form_labels.travel_type", "Tipo De Viaje") +
       "</label>" +
       "</div>" +
-      '<div class="col-6 col-md-2 order-md-6 my-1" style="padding-right:0px">' +
+      '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
       '<select class="form-control tipoViaje" id="tipoViaje' +
       numViaje +
@@ -1106,7 +1106,7 @@ $(".btnAgregarViaje").click(function () {
       t("form_labels.travel_start_date", "Fecha Inicio Viaje") +
       "</label>" +
       "</div>" +
-      '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
+      '<div class="col-6 col-md-2 order-md-8 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
       '<input type="date" class="form-control fechaInicioViaje" id="fechaInicioViaje' +
       numViaje +
@@ -1125,7 +1125,7 @@ $(".btnAgregarViaje").click(function () {
       t("form_labels.travel_end_date", "Fecha Fin Viaje") +
       "</label>" +
       "</div>" +
-      '<div class="col-6 col-md-2 order-md-8 my-1" style="padding-right:0px">' +
+      '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
       '<input type="date" class="form-control fechaFinViaje" id="fechaFinViaje' +
       numViaje +
@@ -1144,7 +1144,7 @@ $(".btnAgregarViaje").click(function () {
       t("form_labels.departure_country", "País Salida") +
       "</label>" +
       "</div>" +
-      '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-right:0px">' +
+      '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
       '<input type="text" class="form-control paisSalidaViaje" id="paisSalidaViaje' +
       numViaje +
@@ -1163,7 +1163,7 @@ $(".btnAgregarViaje").click(function () {
       t("form_labels.destination_country", "País Destino") +
       "</label>" +
       "</div>" +
-      '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-right:0px">' +
+      '<div class="col-6 col-md-2 order-md-11 my-1" style="padding-right:0px">' +
       '<div class="input-group">' +
       '<input type="text" class="form-control paisDestinoViaje" id="paisDestinoViaje' +
       numViaje +
@@ -2484,7 +2484,7 @@ function agregar_auto_viajes() {
           t("form_labels.travel_type", "Tipo De Viaje") +
           "</label>" +
           "</div>" +
-          '<div class="col-6 col-md-2 order-md-6 my-1" style="padding-right:0px">' +
+          '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
           '<select class="form-control tipoViaje" id="tipoViaje' +
           numViaje +
@@ -2511,7 +2511,7 @@ function agregar_auto_viajes() {
           t("form_labels.travel_start_date", "Fecha Inicio Viaje") +
           "</label>" +
           "</div>" +
-          '<div class="col-6 col-md-2 order-md-7 my-1" style="padding-right:0px">' +
+          '<div class="col-6 col-md-2 order-md-8 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
           '<input type="date" class="form-control fechaInicioViaje" id="fechaInicioViaje' +
           numViaje +
@@ -2532,7 +2532,7 @@ function agregar_auto_viajes() {
           t("form_labels.travel_end_date", "Fecha Fin Viaje") +
           "</label>" +
           "</div>" +
-          '<div class="col-6 col-md-2 order-md-8 my-1" style="padding-right:0px">' +
+          '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
           '<input type="date" class="form-control fechaFinViaje" id="fechaFinViaje' +
           numViaje +
@@ -2553,7 +2553,7 @@ function agregar_auto_viajes() {
           t("form_labels.departure_country", "País Salida") +
           "</label>" +
           "</div>" +
-          '<div class="col-6 col-md-2 order-md-9 my-1" style="padding-right:0px">' +
+          '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
           '<input type="text" class="form-control paisSalidaViaje" id="paisSalidaViaje' +
           numViaje +
@@ -2574,7 +2574,7 @@ function agregar_auto_viajes() {
           t("form_labels.destination_country", "País Destino") +
           "</label>" +
           "</div>" +
-          '<div class="col-6 col-md-2 order-md-10 my-1" style="padding-right:0px">' +
+          '<div class="col-6 col-md-2 order-md-11 my-1" style="padding-right:0px">' +
           '<div class="input-group">' +
           '<input type="text" class="form-control paisDestinoViaje" id="paisDestinoViaje' +
           numViaje +
@@ -2586,7 +2586,7 @@ function agregar_auto_viajes() {
           "</div>" +
           "</div>" +
           "<!-- Acciones -->" +
-          '<div class="col-6 col-md-2 order-md-11 my-1 ' +
+          '<div class="col-6 col-md-2 order-md-6 my-1 ' +
           estado1 +
           ' etiquetaAccionesViaje" id="etiquetaAccionesViaje' +
           numViaje +
