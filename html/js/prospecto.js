@@ -3272,17 +3272,17 @@ function buscar_cliente_cedula(cedula) {
       } else {
         $("#txt_idCliente").val("0");
         $("#txt_nombre").val("");
-        $("#genero").val("").change();
-        $("#estado_civil").val("").change();
+        $("#genero").val("masculino").change();
+        $("#estado_civil").val("soltero").change();
         $("#txt_fecha_nacimiento").val("");
         $("#txt_edad_nacimiento").val("");
         $("#txt_email").val("");
         $("#txt_telefono").val("");
-        $("#cbm_provincia").val("0").change();
-        $("#txt_ciudad").val("");
+        $("#cbm_provincia").val("1").change();
+        $("#txt_ciudad").val("LOCAL");
         $("#txt_direccion").val("");
         $("#txt_ocupacion").val("");
-        $("#cbm_ingreso_mensual").val("").change();
+        $("#cbm_ingreso_mensual").val("0 a 1000").change();
       }
     },
   });
