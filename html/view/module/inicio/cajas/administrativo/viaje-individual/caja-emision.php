@@ -11,7 +11,7 @@ $t = function ($key) {
             <p><?php echo $t('common.emisions'); ?></p>
         </div>
         <div class="icon">
-            <i class="fa fa-car"></i>
+            <i class="fa fa-plane"></i>
         </div>
         <a href="clientes-viaje-individual" class="small-box-footer"><?php echo $t('common.more_info'); ?>
             info <i class="fas fa-arrow-circle-right"></i></a>
