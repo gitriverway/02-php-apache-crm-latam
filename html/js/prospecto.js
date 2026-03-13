@@ -3247,7 +3247,7 @@ function buscar_cliente_cedula(cedula) {
     processData: false,
     success: function (respuesta) {
       var data = JSON.parse(respuesta);
-
+      const fechaISO = new Date().toISOString().split("T")[0];
       if (data.length > 0) {
         $("#cbm_origen").val(data[0]["cliente_origen"]).change();
         $("#txt_idCliente").val(data[0]["cliente_id"]);
@@ -3274,7 +3274,7 @@ function buscar_cliente_cedula(cedula) {
         $("#txt_nombre").val("");
         $("#genero").val("masculino").change();
         $("#estado_civil").val("SOLTERO").change();
-        $("#txt_fecha_nacimiento").val(new Date());
+        $("#txt_fecha_nacimiento").val(fechaISO);
         $("#txt_edad_nacimiento").val("");
         $("#txt_email").val("");
         $("#txt_telefono").val("");
