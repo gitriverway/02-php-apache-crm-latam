@@ -1,11 +1,5 @@
 <?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
-};
-
-
-require '../../model/modelo_notificaciones.php';
 
 class ControladorListaNotificacionesSeguimientoCliente
 {
@@ -40,21 +34,6 @@ class ControladorListaNotificacionesSeguimientoCliente
 
                 if (!$consulta) {
 
-                        // if ($_SESSION['S_ROL'] == "ADMINISTRADOR" || $_SESSION['S_ROL'] == "GERENTE"  || $_SESSION['S_ROL'] == "CLIENTE") {
-                        //         $lista = "<a class='nav-link' data-toggle='dropdown' href='#'>
-                        //         <span class='badge bg-success navbar-badge'>0</span>
-                        //         <i class='far fa-bell'><strong class='d-none d-sm-inline-block'><?php echo $t('ambulatory_credits'); ?> </br> <?php echo $t('medical_assistance'); ?> Pymes</strong></i>        
-                        //         </a>
-                        //         <div class='dropdown-menu dropdown-menu-lg dropdown-menu-left'>
-                        //                 <span class='dropdown-item dropdown-header'>0 <?php echo $t('notifications'); ?></span>
-                        //                 <span class='dropdown-item dropdown-header'><?php echo $t('list_credit_ambulatory'); ?></span>
-                        //                 <div class='dropdown-divider'></div>
-                        //                         <span class='dropdown-item dropdown-header'><?php echo $t('no_records'); ?></span>
-                        //                 <div class='dropdown-divider'></div>
-                        //         </div>";
-                        // }else {
-                        //         $lista = "";
-                        // }
 
                         $lista = "";
 
@@ -69,28 +48,34 @@ class ControladorListaNotificacionesSeguimientoCliente
 
                                 if ($_SESSION['S_ROL'] == "ADMINISTRADOR" || $_SESSION['S_ROL'] == "GERENTE") {
                                         $lista1 .= "<a href='creditos-ambulatorios-asistencia-medica-individual-empresarial' class='dropdown-item' idCategoria = '" . $consulta[$i]["categoria_id"] . "'><i class='fas fa-envelope mr-2'></i> " . $contar . " Credito Ambulatorio seguimiento</br><i class='fas fa-user mr-2'></i> " . $consulta[$i]["cliente_nombre"] . " </br><i class='fas fa-calendar mr-2'></i> " . $consulta[$i]["credito_ambulatorio_fecha_seguimiento"] . "</a>";
-                                        $lista2 = "<a href='creditos-ambulatorios-asistencia-medica-individual-empresarial' class='dropdown-item dropdown-footer'><?php echo $t('view_all_notifications'); ?></a>";
+                                        $lista2 = "<a href='creditos-ambulatorios-asistencia-medica-individual-empresarial' class='dropdown-item dropdown-footer'>" . Modelo_Idioma::t('view_all_notifications') . "</a>";
                                 } elseif ($_SESSION['S_ROL'] == "CLIENTE") {
-                                        $lista1 .= "<a href='credito-ambulatorio-asistencia-medica-individual-cliente-empresarial' class='dropdown-item' idCategoria = '" . $consulta[$i]["categoria_id"] . "'><i class='fas fa-envelope mr-2'></i> " . $contar . " Credito Ambulatorio seguimiento</br><i class='fas fa-user mr-2'></i> " . $consulta[$i]["cliente_nombre"] . " </br><i class='fas fa-calendar mr-2'></i> " . $consulta[$i]["credito_ambulatorio_fecha_seguimiento"] . "</a>";
-                                        $lista2 = "<a href='credito-ambulatorio-asistencia-medica-individual-cliente-empresarial' class='dropdown-item dropdown-footer'><?php echo $t('view_all_notifications'); ?></a>";
+                                        $lista1 .= "<a href='credito-ambulatorio-asistencia-medica-individual-cliente-empresarial' class='dropdown-item'
+    idCategoria='" . $consulta[$i]["categoria_id"] . "'><i class='fas fa-envelope mr-2'></i> " . $contar . " Credito
+    Ambulatorio seguimiento</br><i class='fas fa-user mr-2'></i> " . $consulta[$i]["cliente_nombre"] . " </br><i
+        class='fas fa-calendar mr-2'></i> " . $consulta[$i]["credito_ambulatorio_fecha_seguimiento"] . "</a>";
+                                        $lista2 = "<a href='credito-ambulatorio-asistencia-medica-individual-cliente-empresarial'
+    class='dropdown-item dropdown-footer'>" . Modelo_Idioma::t('view_all_notifications') . "</a>";
                                 } else {
 
                                         $lista1 .= "";
                                 }
                         }
                         $lista = "<a class='nav-link' data-toggle='dropdown' href='#'>
-                        <span class='badge bg-success navbar-badge'>" . $contar . "</span>
-                        <i class='far fa-bell'><strong class='d-none d-sm-inline-block'><?php echo $t('ambulatory_credits'); ?> </br> <?php echo $t('medical_assistance'); ?> Pymes</strong>&nbsp;</i>                
-                                </a>
-                                <div class='dropdown-menu dropdown-menu-lg dropdown-menu-left scrollable-menu'>
-                                <span class='dropdown-item dropdown-header'>" . $contar . " <?php echo $t('notifications'); ?></span>
-                                <span class='dropdown-item dropdown-header'><?php echo $t('list_credit_ambulatory'); ?> PYMES</span>
-                                        <div class='dropdown-divider'></div>
-                                        " . $lista1 . "
-                                        <div class='dropdown-divider'></div>
-                                        " . $lista2 . "
-                                </div>
-                                ";
+    <span class='badge bg-success navbar-badge'>" . $contar . "</span>
+    <i class='far fa-bell'><strong
+            class='d-none d-sm-inline-block'>" . Modelo_Idioma::t('ambulatory_credits') . " </br>
+            " . Modelo_Idioma::t('medical_assistance') . " Pymes</strong>&nbsp;</i>
+</a>
+<div class='dropdown-menu dropdown-menu-lg dropdown-menu-left scrollable-menu'>
+    <span class='dropdown-item dropdown-header'>" . $contar . " " . Modelo_Idioma::t('notifications') . "</span>
+    <span class='dropdown-item dropdown-header'>" . Modelo_Idioma::t('list_credit_ambulatory') . " PYMES</span>
+    <div class='dropdown-divider'></div>
+    " . $lista1 . "
+    <div class='dropdown-divider'></div>
+    " . $lista2 . "
+</div>
+";
 
                         echo $lista;
                 }

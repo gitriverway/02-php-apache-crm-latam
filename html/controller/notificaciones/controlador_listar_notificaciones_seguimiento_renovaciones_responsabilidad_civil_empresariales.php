@@ -1,11 +1,5 @@
 <?php
 require_once __DIR__ . '/../../model/modelo_idioma.php';
-$t = function ($key) {
-    return Modelo_Idioma::t($key);
-};
-
-
-require '../../model/modelo_notificaciones.php';
 
 class ControladorListaNotificacionesSeguimientoRenovacionesResponsabilidadCivilEmpresarial
 {
@@ -46,11 +40,11 @@ class ControladorListaNotificacionesSeguimientoRenovacionesResponsabilidadCivilE
                         $contar = 0;
                         for ($i = 0; $i < count($consulta); $i++) {
                                 $contar = $i + 1;
-                                $lista1 .= "<a href='#' class='dropdown-item notificacionEditarCliente' idCliente = '" . $consulta[$i]["bayer_id"] . "' idCategoria = '" . $consulta[$i]["categoria_id"] . "' tipo='" . $consulta[$i]["cliente_tipo"] . "'><i class='fas fa-envelope mr-2'></i> " . $contar . " <?php echo $t('renewal'); ?> seguimiento</br><i class='fas fa-user mr-2'></i> " . $consulta[$i]["cliente_nombre"] . " </br><i class='fas fa-calendar mr-2'></i> " . $consulta[$i]["contrato_fecha_fin"] . "</a>";
+                                $lista1 .= "<a href='#' class='dropdown-item notificacionEditarCliente' idCliente = '" . $consulta[$i]["bayer_id"] . "' idCategoria = '" . $consulta[$i]["categoria_id"] . "' tipo='" . $consulta[$i]["cliente_tipo"] . "'><i class='fas fa-envelope mr-2'></i> " . $contar . " " . Modelo_Idioma::t('renewal') . " seguimiento</br><i class='fas fa-user mr-2'></i> " . $consulta[$i]["cliente_nombre"] . " </br><i class='fas fa-calendar mr-2'></i> " . $consulta[$i]["contrato_fecha_fin"] . "</a>";
                         }
                         $lista = "<a class='nav-link' data-toggle='dropdown' href='#'>
                         <span class='badge badge-warning navbar-badge'>" . $contar . "</span>
-                        <i class='far fa-comments'><strong class='d-none d-sm-inline-block'><?php echo $t('renewal'); ?> </br> <?php echo $t('liability'); ?> Pymes</strong></i>                
+                        <i class='far fa-comments'><strong class='d-none d-sm-inline-block'>" . Modelo_Idioma::t('renewal') . " </br> " . Modelo_Idioma::t('liability') . " Pymes</strong></i>                
                                 </a>
                                 <div class='dropdown-menu dropdown-menu-lg dropdown-menu-left scrollable-menu'>
                                 <span class='dropdown-item dropdown-header'>" . $contar . " Renovaciones</span>
