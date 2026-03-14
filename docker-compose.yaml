@@ -5,10 +5,16 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: apache-php74
+    # container_name: apache-php74  <-- ELIMINADO para compatibilidad con Swarm
     ports:
       - "80:80"
       - "443:443"
     volumes:
       - ./html:/var/www/html
+    networks:
+      - dokploy-network # Red necesaria para que Dokploy/Traefik lo vea
     restart: unless-stopped
+
+networks:
+  dokploy-network:
+    external: true
