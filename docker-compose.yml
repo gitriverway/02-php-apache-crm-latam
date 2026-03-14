@@ -6,9 +6,10 @@ services:
       context: .
       dockerfile: Dockerfile
     # container_name: apache-php74  <-- ELIMINADO para compatibilidad con Swarm
-    ports:
-      - "80:80"
-      - "443:443"
+    # ELIMINA ESTO:
+    # ports:
+    #   - "80:80"
+    #   - "443:443"
     volumes:
       - ./html:/var/www/html
     networks:
