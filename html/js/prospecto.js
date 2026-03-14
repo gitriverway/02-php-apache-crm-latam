@@ -1592,6 +1592,7 @@ function Registrar_Cliente() {
   var cont = 0;
   var cont1 = 0;
   var cont2 = 0;
+  var cont3 = 0;
 
   if (idCliente.length == 0) {
     idCliente = 0;
@@ -1761,7 +1762,7 @@ function Registrar_Cliente() {
             pais_salida.length == 0 ||
             pais_destino.length == 0
           ) {
-            cont++;
+            cont3++;
           }
         }
       }
@@ -1820,6 +1821,14 @@ function Registrar_Cliente() {
     return Swal.fire(
       t("messages.warning_message", "Mensaje de Aviso"),
       t("messages.fill_home_fields", "Preencha os campos de residÃªncias"),
+      "warning",
+    );
+  }
+
+  if (cont3 > 0) {
+    return Swal.fire(
+      t("messages.warning_message", "Mensaje de Aviso"),
+      t("messages.fill_travel_fields", "Preencha os campos de travel"),
       "warning",
     );
   }
@@ -2956,26 +2965,20 @@ function Modificar_Prospecto() {
     }
 
     if (listaViajes.length > 0) {
-      var data1 = JSON.parse(listaViajes);
-      if (data1.length > 0) {
-        for (var i = 0; i < data1.length; i++) {
-          var tipo_vehiculo = data1[i]["tipo"];
-          var marca = data1[i][t("form_labels.brand", "Marca")];
-          var modelo = data1[i][t("form_labels.model", "Modelo")];
-          var color = data1[i][t("form_labels.color", "Cor")];
-          var placa = data1[i][t("form_labels.plate", "Placa")];
-          var ano = data1[i]["ano"];
-          var edad_vehiculo = data1[i]["edad"];
-          var monto = data1[i][t("form_labels.amount", "Valor")];
+      var data = JSON.parse(listaViajes);
+      if (data.length > 0) {
+        for (var i = 0; i < data.length; i++) {
+          var tipo = data[i]["tipo"];
+          var fecha_inicio = data[i]["fecha_inicio"];
+          var fecha_fin = data[i]["fecha_fin"];
+          var pais_salida = data[i]["pais_salida"];
+          var pais_destino = data[i]["pais_destino"];
           if (
-            tipo_vehiculo.length == 0 ||
-            marca.length == 0 ||
-            modelo.length == 0 ||
-            color.length == 0 ||
-            placa.length == 0 ||
-            ano.length == 0 ||
-            edad_vehiculo == null ||
-            monto.length == 0
+            tipo.length == 0 ||
+            fecha_inicio.length == 0 ||
+            fecha_fin.length == 0 ||
+            pais_salida.length == 0 ||
+            pais_destino.length == 0
           ) {
             cont3++;
           }
