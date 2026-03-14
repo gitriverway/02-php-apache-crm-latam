@@ -8,8 +8,8 @@ services:
     # container_name: apache-php74  <-- ELIMINADO para compatibilidad con Swarm
     # ELIMINA ESTO:
     ports:
-      - "8080:8080"
-    #   - "443:443"
+      - "80:80"
+      - "443:443"
     volumes:
       - ./html:/var/www/html
     networks:
