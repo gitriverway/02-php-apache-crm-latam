@@ -15,6 +15,11 @@ services:
     networks:
       - dokploy-network # Red necesaria para que Dokploy/Traefik lo vea
     restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mi-app-router.rule=Host(`riverwaycrm-crmlatam-1ukomz-6ee937-72-61-79-47.traefik.me`)"
+      - "traefik.http.routers.mi-app-router.entrypoints=web"
+      - "traefik.http.services.mi-app-service.loadbalancer.server.port=80"
 
 networks:
   dokploy-network:
