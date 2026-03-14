@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: apache-php
+    # container_name: apache-php
     # ELIMINA ESTO:
     # ports:
     #   - "80:80"
