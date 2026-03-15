@@ -7,11 +7,12 @@ services:
       dockerfile: Dockerfile
     # container_name: apache-php
     # ELIMINA ESTO:
-    # ports:
-    #   - "80:80"
-    #   - "443:443"
+    ports:
+      - "80:80"
+      - "443:443"
     volumes:
-      - ./html:/var/www/html
+      - ./html:/var/www/html:ro
+      - ./uploads:/var/www/html/view
     networks:
       - dokploy-network # Red necesaria para que Dokploy/Traefik lo vea
     restart: unless-stopped
